@@ -1,0 +1,15 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+/* TEAM */
+
+<name> -- <role> -- <twitter>
+
+/* SPECIAL THANKS */
+
+<name>
+
+/* SITE INFO */
+
+Standards: HTML5, CSS3
+Components: jQuery, Modernizr

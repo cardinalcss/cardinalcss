@@ -1,0 +1,1079 @@
+/* =======================================================================
+   HTML5 display definitions
+========================================================================== */
+
+/*
+ * Corrects `block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+    display: block;
+}
+
+/*
+ * Corrects `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+
+audio,
+canvas,
+video {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+/*
+ * 1. Prevents modern browsers from displaying `audio` without controls.
+ * 2. Remove excess height in iOS 5 devices.
+ */
+
+audio:not([controls]) {
+    display: none; /* 1 */
+    height: 0;     /* 2 */
+}
+
+/*
+ * Addresses styling for `hidden` attribute not present in IE 7/8/9, Firefox 3,
+ * and Safari 4.
+ * Known issue: no IE 6 support.
+ */
+
+[hidden] {
+    display: none;
+}
+
+/* =======================================================================
+   @font-face declarations
+   Info on how to define font-weight and style: http://cbrac.co/TMxZps
+   NOTE: paths starting with "../" do not work here
+========================================================================== */
+
+/* YourFontName: Normal
+@font-face {
+    font-family: "YourFontName";
+    src: url("/path/to/YourFont.eot");
+    src: url("/path/to/YourFont.eot?#iefix") format("embedded-opentype"),
+         url("/path/to/YourFont.woff") format("woff"),
+         url("/path/to/YourFont.ttf") format("truetype"),
+         url("/path/to/YourFont.svg#YourFontName") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}*/
+
+/* =======================================================================
+   Base styles
+========================================================================== */
+
+/*
+ * 1. Force vertical scrollbar in non-IE
+ *    http://clagnut.com/blog/348/#c790
+ * 2. Corrects text resizing oddly in IE6/7 when body font-size is set using em units
+ * 3. Prevents iOS text size adjust after orientation change, without disabling user zoom
+ *    http://456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
+ * 4. Use anti-aliasing in browsers that support it to smooth fonts
+ * 5. Make sure all fonts in the HTML document display in all its glory,
+      but avoid inadequate ligatures in class foo elements
+ */
+
+html {
+    overflow-y: scroll;                  /* 1 */
+    font-size: 100%;                     /* 2 */
+    -webkit-text-size-adjust: 100%;      /* 3 */
+    -ms-text-size-adjust:     100%;      /* 3 */
+    -webkit-font-smoothing: antialiased; /* 4 */
+    text-rendering: optimizeLegibility;  /* 5 */
+
+    /* Baseline grid! */
+    margin: 0;
+    padding: 1.5em 0;
+    background-image: -webkit-linear-gradient(hsla(0,0%,0%,0) 95%, hsla(0,25%,50%,.5) 95%);
+    background-image: -moz-linear-gradient(hsla(0,0%,0%,0) 95%, hsla(0,25%,50%,.5) 95%);
+    background-image: -ms-linear-gradient(hsla(0,0%,0%,0) 95%, hsla(0,25%,50%,.5) 95%);
+    background-image: -o-linear-gradient(hsla(0,0%,0%,0) 95%, hsla(0,25%,50%,.5) 95%);
+    background-image: linear-gradient(hsla(0,0%,0%,0) 95%, hsla(0,25%,50%,.5) 95%);
+    background-position: 50% 0;
+    background-size: 1.5em 1.5em;
+}
+
+/*
+ * 1. Consistent text color across different elements
+ * 2. Addresses `font-family` inconsistency between `textarea` and other form
+ * elements.
+ */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;             /* 1 */
+    font-family: sans-serif; /* 2 */
+}
+
+/*
+ * 1. Addresses margins handled incorrectly in IE6/7.
+ * 2. Establish initial font size and line height
+ * for the baseline grid
+ */
+
+body {
+    position: relative;
+    margin: 0;        /* 1 */
+    height: 100%;
+    font-size: 1em;   /* 2 */
+    line-height: 1.5; /* 2 */
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/* =======================================================================
+   Links
+========================================================================== */
+
+/*
+ * Addresses `outline` inconsistency between Chrome and other browsers.
+ */
+
+a:focus {
+    outline: thin dotted;
+}
+
+/*
+ * Improves readability when focused and also mouse hovered in all browsers.
+ * people.opera.com/patrickl/experiments/keyboard/test
+ */
+
+a:active,
+a:hover {
+    outline: 0;
+}
+
+/*
+ * Mobile tap highlight color
+ */
+
+a:link {
+    -webkit-tap-highlight-color: #b3d4fc; /* iOS 1.1.1+ */
+}
+
+/* =======================================================================
+   Typography
+========================================================================== */
+
+/*
+ * 1. Addresses styling not present in IE 7/8/9, Safari 5, and Chrome.
+ */
+
+abbr[title],
+abbr,
+acronym  {
+    border-bottom: 1px dotted; /* 1 */
+}
+
+abbr,
+acronym {
+    white-space: nowrap;
+    cursor: help;
+}
+
+address {
+    font-style: italic;
+}
+
+/*
+ * Addresses style set to `bolder` in Firefox 3+, Safari 4/5, and Chrome.
+ */
+
+b,
+strong {
+    font-weight: bold;
+}
+
+big {
+    font-size: 200%;
+}
+
+/*
+ * Addresses margins set differently in IE 6/7.
+ * Sets common typographic elements to the baseline grid.
+ */
+
+blockquote,
+dl,
+hr,
+menu,
+ol,
+p,
+pre,
+ul {
+    font-size: 1em;
+    margin: 0 0 1.5em;
+    line-height: 1.5;
+}​
+
+blockquote {
+    margin-left: 24px;
+}
+
+blockquote p {
+    margin: 0;
+}
+
+blockquote p + p {
+    margin-top: 1.5em;
+}
+
+/*
+ * Use <footer> tag instead of <cite>: html5doctor.com/blockquote-q-cite
+ */
+blockquote footer:before {
+    content: "\2014 \2009";
+}
+
+del {
+    text-decoration: line-through;
+}
+
+details {
+    cursor: pointer;
+}
+
+/*
+ * Addresses styling not present in Safari 5 and Chrome.
+ */
+
+dfn {
+    font-style: italic;
+}
+
+em,
+i,
+cite {
+    font-style: italic;
+}
+
+/*
+ * Headings that adhere to the baseline grid
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  color: inherit;
+  font-family: sans-serif;
+  font-weight: 700;
+}
+
+h1 {
+    font-size: 3em;
+    line-height: 1;
+    margin-bottom: .5em;
+}
+
+h2 {
+    font-size: 2.25em;
+    line-height: 1.333333333;
+    margin-bottom: 0.666666666em;
+}
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1;
+    margin-bottom: 1em;
+}
+
+h4 {
+    font-size: 1.3125em;
+    line-height: 1.142857142;
+    margin-bottom: 1.142857142em;
+}
+
+h5 {
+    font-size: 1.125em;
+    line-height: 1.333333333;
+    margin-bottom: 1.333333333em;
+}
+
+h6 {
+    font-size: 1em;
+    line-height: 1.5;
+    margin-bottom: 1.5em;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid white;
+}
+
+ins {
+    background: #ff9;
+    color: #000;
+    text-decoration: none;
+}
+
+/*
+ * Addresses styling not present in IE 6/7/8/9.
+ */
+
+mark {
+    background: #ff0;
+    color: #000;
+}
+
+/*
+ * Corrects font family set oddly in IE 6, Safari 4/5, and Chrome.
+ */
+
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace, serif;
+    _font-family: 'courier new', monospace;
+    font-size: 1em;
+}
+
+/*
+ * Improves readability of pre-formatted text in all browsers.
+ */
+
+pre {
+    white-space: pre;
+    white-space: pre-wrap;       /* CSS3 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+      word-wrap: break-word;     /* Internet Explorer 5.5+ */
+}
+
+/*
+ * Sets consistent quote types.
+ */
+
+q {
+    quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/*
+ * Addresses inconsistent and variable font size in all browsers.
+ */
+
+small {
+    font-size: 80%;
+}
+
+/*
+ * Prevents `sub` and `sup` affecting `line-height` in all browsers.
+ * gist.github.com/413930
+ */
+
+sub,
+sup {
+    position: relative;
+    font-size: 75%;
+    line-height: 0;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+/* =======================================================================
+   Lists
+========================================================================== */
+
+/*
+ * Addresses margins set differently in IE6/7.
+ */
+
+dd {
+    margin: 0 0 0 24px;
+}
+
+/*
+ * Addresses paddings set differently in IE6/7.
+ */
+
+menu,
+ol,
+ul {
+    padding: 0 0 0 24px;
+}
+
+/*
+ * Corrects list images handled incorrectly in IE7.
+ */
+
+nav ul,
+nav ol {
+    list-style: none;
+    list-style-image: none;
+}
+
+/*
+ * Nested list style types for ordered lists
+ */
+
+ol          { list-style: decimal; }
+ol ol       { list-style: upper-alpha; }
+ol ol ol    { list-style: lower-roman; }
+ol ol ol ol { list-style: lower-alpha; }
+
+/* =======================================================================
+   Figures
+========================================================================== */
+
+/*
+ * Addresses margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
+ */
+
+figure {
+    margin: 0;
+}
+
+/* =======================================================================
+   Embedded content
+========================================================================== */
+
+/*
+ * 1. Fluid-width images that keep their aspect ratio
+ * 2. Removes border when inside 'a' element in IE6/7/8/9, FF3
+ * 3. Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ * 4. Improves image quality when scaled in IE7
+ *    code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
+ */
+
+img {
+    width: auto\9;                   /* 1 */
+    max-width: 100%;                 /* 1 */
+    height: auto;                    /* 1 */
+    border: 0;                       /* 2 */
+    vertical-align: middle;          /* 3 */
+    -ms-interpolation-mode: bicubic; /* 4 */
+}
+
+/*
+ * Corrects overflow displayed oddly in IE9.
+ */
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+/* =======================================================================
+   Forms
+========================================================================== */
+
+/*
+ * Corrects margin displayed oddly in IE 6/7.
+ */
+
+form {
+    margin: 0;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+/*
+ * 1. Corrects alignment displayed oddly in IE 6/7.
+ * 2. Corrects color not being inherited in IE 6/7/8/9.
+ * 3. Corrects text not wrapping in Firefox 3.
+ */
+
+legend {
+    padding: 0;
+    *margin-left: -7px;  /* 1 */
+    border: 0;           /* 2 */
+    white-space: normal; /* 3 */
+}
+
+/*
+ * 1. Addresses margins set differently in IE 6/7, Firefox 3+, Safari 5,
+ *    and Chrome.
+ * 2. Corrects font size not being inherited in all browsers.
+ * 3. Improves appearance and consistency in all browsers.
+ */
+
+button,
+input,
+select,
+textarea {
+    margin: 0;                /* 1 */
+    font-size: 100%;          /* 2 */
+    vertical-align: baseline; /* 3 */
+    *vertical-align: middle;  /* 3 */
+}
+
+/*
+ * Addresses Firefox 3+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+
+button,
+input {
+    line-height: normal;
+}
+
+/*
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Removes inner spacing in IE 7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE 6.
+ * 3. Improves usability and consistency of cursor style between image-type
+ *    `input` and others.
+ * 4. Corrects inability to style clickable `input` types in iOS.
+ */
+
+button,
+html input[type="button"],      /* 1 */
+input[type="reset"],
+input[type="submit"] {
+    *overflow: visible;         /* 2 */
+    cursor: pointer;            /* 3 */
+    -webkit-appearance: button; /* 4 */
+}
+
+/*
+ * Reset default cursor for disabled elements.
+ */
+
+button[disabled],
+input[disabled] {
+    cursor: default;
+}
+
+/*
+ * 1. Addresses box sizing set to content-box in IE 8/9.
+ * 2. Removes excess padding in IE 8/9.
+ * 3. Removes excess padding in IE 7.
+ *    Known issue: excess padding remains in IE 6.
+ */
+
+input[type="checkbox"],
+input[type="radio"] {
+    -webkit-box-sizing: border-box; /* 1, ≤ iOS4, ≤ Android  2.3 */
+    -moz-box-sizing:    border-box; /* 1, Firefox 1+ */
+    box-sizing:         border-box; /* 1, Chrome, IE8+, Opera, Safari 5.1 */
+    padding: 0;                     /* 2 */
+    *width: 13px;                   /* 3 */
+    *height: 13px;                  /* 3 */
+}
+
+/*
+ * 1. Addresses `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ * 2. Addresses `appearance` set to `searchfield` in Safari 5 and Chrome.
+ */
+
+input[type="search"] {
+    -webkit-box-sizing: content-box; /* 1 */
+    -moz-box-sizing:    content-box;
+    box-sizing:         content-box;
+    -webkit-appearance: textfield;   /* 2 */
+}
+
+/*
+ * Removes inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+/*
+ * Removes inner padding and border in Firefox 3+.
+ */
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+/*
+ * 1. Removes default vertical scrollbar in IE6/7/8/9.
+ * 2. Improves readability and alignment in all browsers.
+ * 3. Restrict to vertical resizing only.
+ */
+
+textarea {
+    overflow: auto;      /* 1 */
+    vertical-align: top; /* 2 */
+    resize: vertical;    /* 3 */
+}
+
+/* ==========================================================================
+   Tables
+========================================================================== */
+
+/*
+ * Remove most spacing between table cells.
+ */
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*
+ * Ensure vertical top alignment for columns
+ */
+
+td {
+    vertical-align: top;
+}
+
+/* ==========================================================================
+   Tables
+========================================================================== */
+
+.wrapper {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Use this class if you want to add a border to the bottom of a column */
+.divide-bottom {
+    border-bottom: 1px solid #ccc;
+    margin-top: -1px; /* Maintains the baseline grid */
+    margin-bottom: 1.5em;
+}
+
+/* Use this class if you want a full-width column */
+.strip {
+    background: #891434;
+    color: #fff;
+    padding: 1em 5%;
+}
+
+.strip p {
+    text-align: left;
+    font-size: 1.2em;
+}
+
+/* Use this class if you want to make a column stand out */
+.island {
+    padding: 1.5em;
+    background-color: #ececec;
+}
+
+.island :last-child {
+    margin-bottom: 0;
+}
+
+/* Set up your grids */
+.grid-wrap {
+    margin-left: -3em;
+    overflow: hidden;
+    clear: both;
+}
+
+.grid-col {
+    float: left;
+    padding-left: 3em;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing:    border-box;
+    box-sizing:         border-box;
+}
+
+.half-gutter {
+    margin-left: -1.5em;
+}
+
+.half-gutter .grid-col {
+    padding-left: 1.5em;
+}
+
+/*
+ * Use these classes if you need columns
+ * in the initial layout
+ */
+
+.col-full {
+    width: 100%;
+}
+
+.col-one-half {
+    width: 50%;
+}
+
+.col-one-third {
+    width: 33.333%;
+}
+
+.col-two-thirds {
+    width: 66.666%;
+}
+
+.col-one-quarter {
+    width: 25%;
+}
+
+.col-three-quarters {
+    width: 75%;
+}
+
+/* =======================================================================
+   Chrome Frame & Javascript prompts
+========================================================================== */
+
+.chromeframe,
+.no-js .js-notice {
+    display: block;
+    padding: 0.5em 0;
+    margin: 0;
+    font-size: 0.8125em;
+    text-align: center;
+}
+
+.chromeframe {
+    border-bottom: 2px solid #d0d0d0;
+    background-color: #f5f5f5;
+}
+
+.js .js-notice {
+    display: none;
+}
+
+.no-js .js-notice {
+    border-bottom: 2px solid #fc6;
+    background-color: #ffffcc;
+}
+
+/* =======================================================================
+   Site structure & local styles
+========================================================================== */
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    overflow: hidden;
+    border: 0;
+    background-color: transparent;
+    *text-indent: -9999px; /* IE 6/7 fallback */
+}
+
+.ir:before {
+    display: block;
+    content: "";
+    width: 0;
+    height: 100%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    overflow: hidden;
+    position: absolute;
+    padding: 0;
+    margin: -1px;
+    width: 1px;
+    height: 1px;
+    border: 0;
+    clip: rect(0 0 0 0);
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    overflow: visible;
+    margin: 0;
+    position: static;
+    width: auto;
+    height: auto;
+    clip: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clear floats manually
+ * http://sonspring.com/journal/clearing-floats
+ */
+
+.clear {
+    display: block;
+    visibility: hidden;
+    overflow: hidden;
+    clear: both;
+    width: 0;
+    height: 0;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ * 2. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    display: table; /* 1 */
+    content: " ";   /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* =======================================================================
+   Media Queries
+========================================================================== */
+
+/* Breakpoint 1 (.bp1, ~ 480px) */
+@media only screen and (min-width: 30em) {
+    /* Grid system */
+    .bp1-col-full {
+        width: 100%;
+    }
+
+    .bp1-col-one-half {
+        width: 50%;
+    }
+
+    .bp1-col-one-third {
+        width: 33.333%;
+    }
+
+    .bp1-col-two-thirds {
+        width: 66.666%;
+    }
+
+    .bp1-col-one-quarter {
+        width: 25%;
+    }
+
+    .bp1-col-three-quarters {
+        width: 75%;
+    }
+}
+
+/* Breakpoint 2 (.bp2, ~ 768px) */
+@media only screen and (min-width: 48em) {
+    /* Grid System */
+    .bp2-col-full {
+        width: 100%;
+    }
+
+    .bp2-col-one-half {
+        width: 50%;
+    }
+
+    .bp2-col-one-third {
+        width: 33.333%;
+    }
+
+    .bp2-col-two-thirds {
+        width: 66.666%;
+    }
+
+    .bp2-col-one-quarter {
+        width: 25%;
+    }
+
+    .bp2-col-three-quarters {
+        width: 75%;
+    }
+}
+
+/* Breakpoint 3 (.bp3, ~960px) */
+@media only screen and (min-width: 60em) {
+    /* Grid System */
+    .bp3-col-full {
+        width: 100%;
+    }
+
+    .bp3-col-one-half {
+        width: 50%;
+    }
+
+    .bp3-col-one-third {
+        width: 33.333%;
+    }
+
+    .bp3-col-two-thirds {
+        width: 66.666%;
+    }
+
+    .bp3-col-one-quarter {
+        width: 25%;
+    }
+
+    .bp3-col-three-quarters {
+        width: 75%;
+    }
+}
+
+/* Style adjustments for high resolution devices */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
+
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+========================================================================== */
+
+@media print {
+    * {
+        box-shadow: none !important;
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
