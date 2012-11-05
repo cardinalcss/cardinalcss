@@ -1,4 +1,4 @@
 Cardinal
 ========
 
-A barbones, front-end development framework that includes all the shit that I need when starting a new project.
+A barebones collection of killer front-end code for starting web projects.

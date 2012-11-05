@@ -54,7 +54,8 @@ audio:not([controls]) {
 
 /* =======================================================================
    @font-face declarations
-   Info on how to define font-weight and style: http://cbrac.co/TMxZps
+   LINK: How to define font-weight and style - http://cbrac.co/TMxZps
+   LINK: Smoother @font-face rendering in Chrome - http://cbrac.co/U4mSbc
    NOTE: paths starting with "../" do not work here
 ========================================================================== */
 
@@ -63,9 +64,9 @@ audio:not([controls]) {
     font-family: "YourFontName";
     src: url("/path/to/YourFont.eot");
     src: url("/path/to/YourFont.eot?#iefix") format("embedded-opentype"),
+         url("/path/to/YourFont.svg#YourFontName") format("svg"),
          url("/path/to/YourFont.woff") format("woff"),
-         url("/path/to/YourFont.ttf") format("truetype"),
-         url("/path/to/YourFont.svg#YourFontName") format("svg");
+         url("/path/to/YourFont.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }*/
@@ -93,14 +94,17 @@ html {
     -webkit-font-smoothing: antialiased; /* 4 */
     text-rendering: optimizeLegibility;  /* 5 */
 
-    /* Baseline grid! */
-    margin: 0;
-    padding: 1.5em 0;
-    background-image: -webkit-linear-gradient(hsla(0,0%,0%,0) 95%, hsla(0,25%,50%,.5) 95%);
-    background-image: -moz-linear-gradient(hsla(0,0%,0%,0) 95%, hsla(0,25%,50%,.5) 95%);
-    background-image: -ms-linear-gradient(hsla(0,0%,0%,0) 95%, hsla(0,25%,50%,.5) 95%);
-    background-image: -o-linear-gradient(hsla(0,0%,0%,0) 95%, hsla(0,25%,50%,.5) 95%);
-    background-image: linear-gradient(hsla(0,0%,0%,0) 95%, hsla(0,25%,50%,.5) 95%);
+    /*
+     * Baseline grid!
+     * To be used as a guide during development
+     * Remove on production sites
+     */
+
+    background-image: -webkit-linear-gradient(hsla(0, 0%, 0%, 0) 95%, hsla(0, 25%, 50%, 0.25) 95%);
+    background-image: -moz-linear-gradient(hsla(0, 0%, 0%, 0) 95%, hsla(0, 25%, 50%, 0.25) 95%);
+    background-image: -ms-linear-gradient(hsla(0, 0%, 0%, 0) 95%, hsla(0, 25%, 50%, 0.25) 95%);
+    background-image: -o-linear-gradient(hsla(0, 0%, 0%, 0) 95%, hsla(0, 25%, 50%, 0.25) 95%);
+    background-image: linear-gradient(hsla(0, 0%, 0%, 0) 95%, hsla(0, 25%, 50%, 0.25) 95%);
     background-position: 50% 0;
     background-size: 1.5em 1.5em;
 }
@@ -180,8 +184,12 @@ a:link {
     -webkit-tap-highlight-color: #b3d4fc; /* iOS 1.1.1+ */
 }
 
+/* Custom link styles */
+a {  }
+a:hover { text-decoration: none; }
+
 /* =======================================================================
-   Typography
+   Typography (with opinionated defaults)
 ========================================================================== */
 
 /*
@@ -236,7 +244,7 @@ ul {
 }​
 
 blockquote {
-    margin-left: 24px;
+    margin-left: 40px;
 }
 
 blockquote p {
@@ -250,8 +258,28 @@ blockquote p + p {
 /*
  * Use <footer> tag instead of <cite>: html5doctor.com/blockquote-q-cite
  */
+
 blockquote footer:before {
     content: "\2014 \2009";
+}
+
+blockquote footer {
+    color: #686868;
+    font-style: italic;
+}
+
+/*
+ * Basic styling for inline code blocks
+ */
+
+code {
+    margin: 0 5px;
+    padding: 0 5px;
+    background-color: #f8f8f8;
+    border: 1px solid #eaeaea;
+    -webkit-border-radius: 3px; /* Safari 3-4, iOS 1-3.2, Android ≤ 1.6 */
+    -moz-border-radius:    3px; /* Firefox 1.0+ */
+    border-radius:         3px; /* Opera 10.5, IE9+, Safari 5, Chrome, Firefox 4+, iOS 4, Android 2.1+ */
 }
 
 del {
@@ -277,7 +305,7 @@ cite {
 }
 
 /*
- * Headings that adhere to the baseline grid
+ * Headings that adhere to a baseline grid
  */
 
 h1,
@@ -367,12 +395,29 @@ samp {
  */
 
 pre {
+    padding: 1.5em;
+    background: #333;
+    color: #d0d0d0;
+    -webkit-border-radius: 5px; /* Safari 3-4, iOS 1-3.2, Android ≤ 1.6 */
+    -moz-border-radius:    5px; /* Firefox 1.0+ */
+    border-radius:         5px; /* Opera 10.5, IE9+, Safari 5, Chrome, Firefox 4+, iOS 4, Android 2.1+ */
     white-space: pre;
     white-space: pre-wrap;       /* CSS3 */
     white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
     white-space: -pre-wrap;      /* Opera 4-6 */
     white-space: -o-pre-wrap;    /* Opera 7 */
       word-wrap: break-word;     /* Internet Explorer 5.5+ */
+}
+
+/*
+ * Remove above <code> styles when inside <pre> tags
+ */
+
+pre code {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border: none;
 }
 
 /*
@@ -431,7 +476,7 @@ dd {
 menu,
 ol,
 ul {
-    padding: 0 0 0 24px;
+    padding: 0 0 0 40px;
 }
 
 /*
@@ -668,7 +713,7 @@ td {
 }
 
 /* ==========================================================================
-   Tables
+   Grid system
 ========================================================================== */
 
 .wrapper {
@@ -686,31 +731,60 @@ td {
 
 /* Use this class if you want a full-width column */
 .strip {
-    background: #891434;
-    color: #fff;
-    padding: 1em 5%;
+    background: #efefef;
+    padding: 1.5em 0;
+    margin: 0 0 1.5em;
 }
 
-.strip p {
-    text-align: left;
-    font-size: 1.2em;
+.strip :last-child {
+    margin-bottom: 0;
 }
 
-/* Use this class if you want to make a column stand out */
+/* Use these classes if you want to make a column stand out */
 .island {
     padding: 1.5em;
-    background-color: #ececec;
+    background-color: #efefef;
+    background-color: hsla(0, 0%, 94%, 1);
+    border-color: #d5d5d5;
+    border: 1px solid hsla(0, 0%, 84%, 1);
+    -webkit-border-radius: 5px; /* Safari 3-4, iOS 1-3.2, Android ≤ 1.6 */
+    -moz-border-radius:    5px; /* Firefox 1.0+ */
+    border-radius:         5px; /* Opera 10.5, IE9+, Safari 5, Chrome, Firefox 4+, iOS 4, Android 2.1+ */
 }
 
-.island :last-child {
+.well {
+    padding: 1.5em;
+    background-color: #efefef;
+    background-color: hsla(0, 0%, 94%, 1);
+    -webkit-box-shadow: inset 0 0 5px hsla(0, 0%, 0%, 0.10); /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow:    inset 0 0 5px hsla(0, 0%, 0%, 0.10); /* Firefox 3.5+ */
+    box-shadow:         inset 0 0 5px hsla(0, 0%, 0%, 0.10); /* Opera 10.5, IE9+, Firefox 4+, Chrome 6+, iOS 5 */
+    border-color: #d5d5d5;
+    border: 1px solid hsla(0, 0%, 84%, 1);
+    -webkit-border-radius: 5px; /* Safari 3-4, iOS 1-3.2, Android ≤ 1.6 */
+    -moz-border-radius:    5px; /* Firefox 1.0+ */
+    border-radius:         5px; /* Opera 10.5, IE9+, Safari 5, Chrome, Firefox 4+, iOS 4, Android 2.1+ */
+}
+
+/* Fix to maintain baseline grid */
+.island,
+.well {
+    margin-top: -2px;
+}
+
+.island :last-child,
+.well :last-child {
     margin-bottom: 0;
+}
+
+.grid-col .island,
+.grid-col .well {
+    margin-bottom: 1.5em;
 }
 
 /* Set up your grids */
 .grid-wrap {
     margin-left: -3em;
-    overflow: hidden;
-    clear: both;
 }
 
 .grid-col {
@@ -760,6 +834,366 @@ td {
 }
 
 /* =======================================================================
+   CSS3 buttons
+========================================================================== */
+
+/*
+ * Style: minimal
+ * (global styles included)
+ */
+
+.btn {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    padding: 8px 9px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #c5c5c5;
+    border-color: hsla(0, 0%, 77%, 1);
+    -webkit-border-radius: 3px; /* Safari 3-4, iOS 1-3.2, Android ≤ 1.6 */
+    -moz-border-radius:    3px; /* Firefox 1.0+ */
+    border-radius:         3px; /* Opera 10.5, IE9+, Safari 5, Chrome, Firefox 4+, iOS 4, Android 2.1+ */
+    background: #e5e5e5;
+    -webkit-box-shadow: inset 0 0 1px 1px hsla(0, 0%, 96%, 1); /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow:    inset 0 0 1px 1px hsla(0, 0%, 96%, 1); /* Firefox 3.5+ */
+    box-shadow:         inset 0 0 1px 1px hsla(0, 0%, 96%, 1); /* Opera 10.5, IE9+, Firefox 4+, Chrome 6+, iOS 5 */
+    color: #333;
+    color: hsla(0, 0%, 20%, 1);
+    font-size: 14px;
+    text-align: center;
+    text-shadow: 0 1px 0 #fff;
+    text-shadow: 0 1px 0 hsla(0, 0%, 100%, 1);
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #ececec;
+    background: hsla(0, 0%, 93%, 1);
+    color: #222;
+    color: hsla(0, 0%, 13%, 1);
+    cursor: pointer;
+}
+
+.btn:active {
+    -webkit-box-shadow: inset 0 0 6px hsla(0, 0%, 0%, 0.10); /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow:    inset 0 0 6px hsla(0, 0%, 0%, 0.10); /* Firefox 3.5+ */
+    box-shadow:         inset 0 0 6px hsla(0, 0%, 0%, 0.10); /* Opera 10.5, IE9+, Firefox 4+, Chrome 6+, iOS 5 */
+    color: #000;
+    color: hsla(0, 0%, 0%, 1);
+}
+
+.btn:focus {
+    outline: thin dotted #333;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+
+.btn.mini {
+    padding: 2px 6px;
+    font-size: 11px;
+}
+
+.btn.small {
+    padding: 4px 9px;
+    font-size: 12px;
+}
+
+.btn.large {
+    padding: 9px 14px;
+    font-size: 16px;
+}
+
+.btn.disabled,
+.btn.disabled:hover,
+.btn.disabled:active,
+.btn[disabled] {
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow:    none !important;
+    box-shadow:         none !important;
+    background: #e6e6e6 !important;
+    background-image: none !important;
+    color: #505050 !important;
+    text-shadow: none !important;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=65)"; /* IE 8 */
+    filter: alpha(opacity=65); /* IE 5-7 */
+    opacity: 0.65;             /* Good browsers */
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled="false") !important; /* IE6-9 */
+    cursor: default !important;
+}
+
+/*
+ * Style: glossy
+ */
+
+.btn.glossy {
+    -webkit-border-radius: 5px; /* Safari 3-4, iOS 1-3.2, Android ≤ 1.6 */
+    -moz-border-radius:    5px; /* Firefox 1.0+ */
+    border-radius:         5px; /* Opera 10.5, IE9+, Safari 5, Chrome, Firefox 4+, iOS 4, Android 2.1+ */
+    background-image: -moz-linear-gradient(
+        top,
+        hsla(0, 0%, 100%, 1) 0%,
+        hsla(0, 0%, 95%, 1) 50%,
+        hsla(0, 0%, 88%, 1) 51%,
+        hsla(0, 0%, 96%, 1) 100%
+    ); /* FF3.6+ */
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0%, hsla(0, 0%, 100%, 1)),
+        color-stop(50%, hsla(0, 0%, 95%, 1)),
+        color-stop(51%, hsla(0, 0%, 88%, 1)),
+        color-stop(100%, hsla(0, 0%, 96%, 1))
+    ); /* Chrome, Safari4+ */
+    background-image: -webkit-linear-gradient(
+        top,
+        hsla(0, 0%, 100%, 1) 0%,
+        hsla(0, 0%, 95%, 1) 50%,
+        hsla(0, 0%, 88%, 1) 51%,
+        hsla(0, 0%, 96%, 1) 100%
+    ); /* Chrome10+, Safari5.1+ */
+    background-image: -o-linear-gradient(
+        top,
+        hsla(0, 0%, 100%, 1) 0%,
+        hsla(0, 0%, 95%, 1) 50%,
+        hsla(0, 0%, 88%, 1) 51%,
+        hsla(0, 0%, 96%, 1) 100%
+    ); /* Opera 11.10+ */
+    background-image: -ms-linear-gradient(
+        top,
+        hsla(0, 0%, 100%, 1) 0%,
+        hsla(0, 0%, 95%, 1) 50%,
+        hsla(0, 0%, 88%, 1) 51%,
+        hsla(0, 0%, 96%, 1) 100%
+    ); /* IE10+ */
+    background-image: linear-gradient(
+        to bottom,
+        hsla(0, 0%, 100%, 1) 0%,
+        hsla(0, 0%, 95%, 1) 50%,
+        hsla(0, 0%, 88%, 1) 51%,
+        hsla(0, 0%, 96%, 1) 100%
+    ); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(
+        startColorstr='#ffffff',
+        endColorstr='#f6f6f6',
+        GradientType=0
+    ); /* IE6-9 */
+}
+
+.btn.glossy:hover {
+    background-image: -moz-linear-gradient(
+        top,
+        hsla(0, 0%, 100%, 1) 0%,
+        hsla(0, 0%, 98%, 1) 50%,
+        hsla(0, 0%, 91%, 1) 51%,
+        hsla(0, 0%, 99%, 1) 100%
+    ); /* FF3.6+ */
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0%, hsla(0, 0%, 100%, 1)),
+        color-stop(50%, hsla(0, 0%, 98%, 1)),
+        color-stop(51%, hsla(0, 0%, 91%, 1)),
+        color-stop(100%, hsla(0, 0%, 99%, 1))
+    ); /* Chrome, Safari4+ */
+    background-image: -webkit-linear-gradient(
+        top,
+        hsla(0, 0%, 100%, 1) 0%,
+        hsla(0, 0%, 98%, 1) 50%,
+        hsla(0, 0%, 91%, 1) 51%,
+        hsla(0, 0%, 99%, 1) 100%
+    ); /* Chrome10+, Safari5.1+ */
+    background-image: -o-linear-gradient(
+        top,
+        hsla(0, 0%, 100%, 1) 0%,
+        hsla(0, 0%, 98%, 1) 50%,
+        hsla(0, 0%, 91%, 1) 51%,
+        hsla(0, 0%, 99%, 1) 100%
+    ); /* Opera 11.10+ */
+    background-image: -ms-linear-gradient(
+        top,
+        hsla(0, 0%, 100%, 1) 0%,
+        hsla(0, 0%, 98%, 1) 50%,
+        hsla(0, 0%, 91%, 1) 51%,
+        hsla(0, 0%, 99%, 1) 100%
+    ); /* IE10+ */
+    background-image: linear-gradient(
+        to bottom,
+        hsla(0, 0%, 100%, 1) 0%,
+        hsla(0, 0%, 98%, 1) 50%,
+        hsla(0, 0%, 91%, 1) 51%,
+        hsla(0, 0%, 99%, 1) 100%
+    ); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(
+        startColorstr='#ffffff',
+        endColorstr='#fafafa',
+        GradientType=0
+    ); /* IE6-9 */
+}
+
+/*
+ * Style: pill
+ */
+
+.btn.pill {
+    -webkit-border-radius: 20px; /* Safari 3-4, iOS 1-3.2, Android ≤ 1.6 */
+    -moz-border-radius:    20px; /* Firefox 1.0+ */
+    border-radius:         20px; /* Opera 10.5, IE9+, Safari 5, Chrome, Firefox 4+, iOS 4, Android 2.1+ */
+    background-image: -moz-linear-gradient(
+        top,
+        hsla(0, 0%, 99%, 1) 0%,
+        hsla(0, 0%, 92%, 1) 100%
+    ); /* FF3.6+ */
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0%, hsla(0, 0%, 99%, 1)),
+        color-stop(100%, hsla(0, 0%, 92%, 1))
+    ); /* Chrome, Safari4+ */
+    background-image: -webkit-linear-gradient(
+        top,
+        hsla(0, 0%, 99%, 1) 0%,
+        hsla(0, 0%, 92%, 1) 100%
+    ); /* Chrome10+, Safari5.1+ */
+    background-image: -o-linear-gradient(
+        top,
+        hsla(0, 0%, 99%, 1) 0%,
+        hsla(0, 0%, 92%, 1) 100%
+    ); /* Opera 11.10+ */
+    background-image: -ms-linear-gradient(
+        top,
+        hsla(0, 0%, 99%, 1) 0%,
+        hsla(0, 0%, 92%, 1) 100%
+    ); /* IE10+ */
+    background-image: linear-gradient(
+        to bottom,
+        hsla(0, 0%, 99%, 1) 0%,
+        hsla(0, 0%, 92%, 1) 100%
+    ); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(
+        startColorstr='#fcfcfc',
+        endColorstr='#ebebeb',
+        GradientType=0
+    ); /* IE6-9 */
+}
+
+.btn.pill:hover {
+    background-image: -moz-linear-gradient(
+        top,
+        hsla(0, 0%, 99%, 1) 0%,
+        hsla(0, 0%, 95%, 1) 100%
+    ); /* FF3.6+ */
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0%, hsla(0, 0%, 99%, 1)),
+        color-stop(100%, hsla(0, 0%, 95%, 1))
+    ); /* Chrome, Safari4+ */
+    background-image: -webkit-linear-gradient(
+        top,
+        hsla(0, 0%, 99%, 1) 0%,
+        hsla(0, 0%, 95%, 1) 100%
+    ); /* Chrome10+, Safari5.1+ */
+    background-image: -o-linear-gradient(
+        top,
+        hsla(0, 0%, 99%, 1) 0%,
+        hsla(0, 0%, 95%, 1) 100%
+    ); /* Opera 11.10+ */
+    background-image: -ms-linear-gradient(
+        top,
+        hsla(0, 0%, 99%, 1) 0%,
+        hsla(0, 0%, 95%, 1) 100%
+    ); /* IE10+ */
+    background-image: linear-gradient(
+        to bottom,
+        hsla(0, 0%, 99%, 1) 0%,
+        hsla(0, 0%, 95%, 1) 100%
+    ); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(
+        startColorstr='#fefefe',
+        endColorstr='#efefef',
+        GradientType=0
+    ); /* IE6-9 */
+}
+
+/*
+ * Style: chunky
+ */
+
+.btn.chunky {
+    position: relative;
+    border-bottom-width: 3px;
+    -webkit-border-radius: 5px; /* Safari 3-4, iOS 1-3.2, Android ≤ 1.6 */
+    -moz-border-radius:    5px; /* Firefox 1.0+ */
+    border-radius:         5px; /* Opera 10.5, IE9+, Safari 5, Chrome, Firefox 4+, iOS 4, Android 2.1+ */
+    -webkit-box-shadow: inset 0 0 1px 1px hsla(0, 0%, 100%, 1); /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow:    inset 0 0 1px 1px hsla(0, 0%, 100%, 1); /* Firefox 3.5+ */
+    box-shadow:         inset 0 0 1px 1px hsla(0, 0%, 100%, 1); /* Opera 10.5, IE9+, Firefox 4+, Chrome 6+, iOS 5 */
+    background: #f5f5f5;
+    background: hsla(0, 0%, 96%, 1);
+}
+
+.btn.chunky:hover {
+    background: #f9f9f9;
+    background: hsla(0, 0%, 98%, 1);
+}
+
+.btn.chunky:active {
+    top: 2px;
+    padding-bottom: 10px;
+    border-bottom-width: 1px;
+}
+
+.btn.chunky.mini {
+    border-bottom-width: 2px;
+}
+
+.btn.chunky.mini:active {
+    top: 2px;
+    padding-bottom: 3px;
+    border-bottom-width: 1px;
+}
+
+.btn.chunky.small:active {
+    top: 2px;
+    padding-bottom: 6px;
+}
+
+.btn.chunky.large:active {
+    top: 2px;
+    padding-bottom: 11px;
+}
+
+.btn.chunky.disabled,
+.btn.chunky.disabled:hover,
+.btn.chunky.disabled:active,
+.btn.chunky[disabled] {
+    position: static;
+    top: 0;
+    border-width: 1px;
+}
+
+.btn.chunky.disabled:active {
+    padding: 8px 9px;
+}
+
+.btn.chunky.mini.disabled:active {
+    padding: 2px 6px;
+}
+
+.btn.chunky.small.disabled:active {
+    padding: 4px 9px;
+}
+
+.btn.chunky.large.disabled:active {
+    padding: 9px 14px;
+}
+
+/* =======================================================================
    Chrome Frame & Javascript prompts
 ========================================================================== */
 
@@ -793,8 +1227,7 @@ td {
 
 
 
-
-
+/* YOUR CSS GOES HERE! */
 
 
 
@@ -1002,9 +1435,7 @@ td {
 }
 
 /* Style adjustments for high resolution devices */
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
-
-}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {}
 
 /* ==========================================================================
    Print styles.
