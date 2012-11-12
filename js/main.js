@@ -1,10 +1,9 @@
 jQuery(document).ready(function($) {
-
 	// Toggle baseline grid
-	$(".baseline").hide();
-
-	$(".btn-baseline button").on("click", function() {
-	    $(".baseline").toggle();
+	$(".bl-grid").hide();
+	$(".bl-grid-toggle .btn").on("click", function() {
+	    $("body").toggleClass("bl-grid-on");
+	    $(".bl-grid").toggle();
 	});
 
 	// Equal height columns

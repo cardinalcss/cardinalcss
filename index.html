@@ -12,275 +12,31 @@
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
+        <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
+
     <body>
         <!--[if lt IE 7]><p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p><![endif]-->
 
         <p class="js-notice">Javascript is currently disabled in your browser. This site requires Javascript to function correctly. Please <a href="http://enable-javascript.com/">enable Javascript in your browser</a>!</p>
 
         <!-- Baseline grid (for development only) -->
-        <div class="baseline"></div>
-        <div class="btn-baseline"><button class="btn">Toggle grid</button></div>
+        <div class="bl-grid"></div>
+        <div class="bl-grid-toggle"><button class="btn">Toggle grid</button></div>
 
-        <header class="strip">
-            <div class="wrapper">
-                <div class="grid-wrap clearfix">
-                    <div class="grid-col col-full">
-                        <h1>Cardinal Front-end Framework</h1>
-
-                        <p><strong>by <a href="http://cbracco.me" title="Chris Bracco">Chris Bracco</a></strong></p>
-
-                        <p>A barebones collection of killer front-end code for starting web projects. Includes some opinionated default styles, a typographic baseline grid, a fluid grid system inspired by <a href="https://github.com/mattberridge/Proportional-Grids" title="Proportional Grids">Proportional Grids</a>, and lots of code from <a href="https://github.com/h5bp/html5-boilerplate" title="HTML5 Boilerplate">HTML5 Boilerplate</a>, <a href="https://github.com/necolas/normalize.css/" title="normalize.css">normalize.css</a>, <a href="http://jquery.com/">jQuery</a>, <a href="http://modernizr.com/" title="Modernizr">Modernizr</a>, and more.</p>
-
-                        <p>Many thanks to all of the amazing people who helped build the above.</p>
-                    </div><!-- end .grid-col -->
-                </div><!-- end .grid-wrap -->
-            </div><!-- end .wrapper -->
-        </header><!-- end .strip -->
-
+        <!-- Start coding here, Hoss. -->
         <div class="wrapper">
-            <section class="divide-bottom">
-                <div class="grid-wrap clearfix">
-                    <div class="grid-col col-full">
-                        <h2>Full-width column</h2>
-
-                        <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec</a> <a href="#">non</a> <a href="#">enim</a> in turpis pulvinar facilisis. Ut felis.</p>
-
-                        <ol>
-                            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                            <li>Aliquam tincidunt mauris eu risus.</li>
-                        </ol>
-
-                        <h3>Heading Level 3</h3>
-
-                        <ul>
-                            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                            <li>Aliquam tincidunt mauris eu risus.</li>
-                        </ul>
-
-                        <pre><code>#header h1 a {
-    display: block;
-    width: 300px;
-    height: 80px;
-}</code></pre>
-
-                        <h4>Heading Level 4</h4>
-
-                        <blockquote>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p>
-
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-
-                            <footer>Lorem Ipsum</footer>
-                        </blockquote>
-                    </div><!-- end .grid-col -->
-                </div><!-- end .grid-wrap -->
-            </section><!-- end .divide-bottom -->
-
-            <section class="divide-bottom">
-                <div class="grid-wrap clearfix">
-                    <div class="grid-col col-one-half">
-                        <h2>Basic grid</h2>
-
-                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p>
-                    </div><!-- end .grid-col -->
-
-                    <div class="grid-col col-one-half">
-                        <h2>Basic grid</h2>
-
-                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p>
-                    </div><!-- end .grid-col -->
-                </div><!-- end .grid-wrap -->
-            </section><!-- end .divide-bottom -->
-
-            <section class="divide-bottom">
-                <div class="grid-wrap clearfix">
-                    <div class="grid-col bp1-col-one-half bp2-col-two-thirds">
-                        <h2>Grid with custom breakpoints</h2>
-
-                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-
-                        <div class="island">
-                            <h3>Island block</h3>
-
-                            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-                        </div>
-                    </div><!-- end .grid-col -->
-
-                    <div class="grid-col bp1-col-one-half bp2-col-one-third">
-                        <h2>Grid with custom breakpoints</h2>
-
-                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-                    </div><!-- end .grid-col -->
-                </div><!-- end .grid-wrap -->
-            </section><!-- end .divide-bottom -->
-
-            <section class="divide-bottom">
-                <div class="grid-wrap clearfix">
-                    <div class="grid-col bp1-col-one-half bp2-col-one-third">
-                        <h2>Jumping grid</h2>
-
-                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-                    </div><!-- end .grid-col -->
-
-                    <div class="grid-col bp1-col-one-half bp2-col-one-third">
-                        <h2>Jumping grid</h2>
-
-                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-                    </div><!-- end .grid-col -->
-
-                    <div class="grid-col bp2-col-one-third">
-                        <h2>Jumping grid</h2>
-
-                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-                    </div><!-- end .grid-col -->
-                </div><!-- end .grid-wrap -->
-            </section><!-- end .divide-bottom -->
-
-            <section class="divide-bottom">
-                <div class="grid-wrap clearfix">
-                    <div class="grid-col bp1-col-one-half">
-                        <h2>Parent grid</h2>
-
-                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-
-                        <div class="grid-wrap clearfix">
-                            <div class="grid-col bp2-col-one-half">
-                                <h3>Nested grid</h3>
-
-                                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-                            </div><!-- end .grid-col -->
-
-                            <div class="grid-col bp2-col-one-half">
-                                <h3>Nested grid</h3>
-
-                                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-                            </div><!-- end .grid-col -->
-                        </div><!-- end .grid-wrap -->
-                    </div><!-- end .grid-col -->
-
-                    <div class="grid-col bp1-col-one-half">
-                        <h2>Parent grid</h2>
-
-                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-
-                        <ul>
-                            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                            <li>Aliquam tincidunt mauris eu risus.</li>
-                        </ul>
-
-                        <div class="well">
-                            <h3>Well block</h3>
-
-                            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-                        </div>
-                    </div><!-- end .grid-col -->
-                </div><!-- end .grid-wrap -->
-            </section><!-- end .divide-bottom -->
-
-            <section class="divide-bottom">
-                <div class="grid-wrap half-gutter clearfix">
-                    <div class="grid-col bp2-col-one-third">
-                        <h2>Half-gutter grid</h2>
-
-                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-                    </div><!-- end .grid-col -->
-
-                    <div class="grid-col bp2-col-one-third">
-                        <h2>Half-gutter grid</h2>
-
-                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-                    </div><!-- end .grid-col -->
-
-                    <div class="grid-col bp2-col-one-third">
-                        <h2>Half-gutter grid</h2>
-
-                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-                    </div><!-- end .grid-col -->
-                </div><!-- end .grid-wrap -->
-            </section><!-- end .divide-bottom -->
-
-            <section class="divide-bottom">
-                <div class="grid-wrap clearfix">
-                    <div class="grid-col col-full">
-                        <h2>CSS3 Buttons</h2>
-                    </div>
-
-                    <div class="grid-col bp1-col-one-half bp3-col-one-quarter">
-                        <div class="well">
-                            <h4>Minimal buttons</h4>
-
-                            <p><button class="btn small">I'm a button, yo.</button></p>
-                            <p><button class="btn">I'm a button, yo.</button></p>
-                            <p><button class="btn large">I'm a button, yo.</button></p>
-
-                            <p><strong>Disabled state</strong></p>
-
-                            <p><button class="btn small disabled">I'm a button, yo.</button></p>
-                            <p><button class="btn disabled">I'm a button, yo.</button></p>
-                            <p><button class="btn large disabled">I'm a button, yo.</button></p>
-                        </div>
-                    </div><!-- end .grid-col -->
-
-                    <div class="grid-col bp1-col-one-half bp3-col-one-quarter">
-                        <div class="well">
-                            <h4>Glossy buttons</h4>
-
-                            <p><button class="btn glossy small">I'm a button, yo.</button></p>
-                            <p><button class="btn glossy">I'm a button, yo.</button></p>
-                            <p><button class="btn glossy large">I'm a button, yo.</button></p>
-
-                            <p><strong>Disabled state</strong></p>
-
-                            <p><button class="btn glossy small disabled">I'm a button, yo.</button></p>
-                            <p><button class="btn glossy disabled">I'm a button, yo.</button></p>
-                            <p><button class="btn glossy large disabled">I'm a button, yo.</button></p>
-                        </div>
-                    </div><!-- end .grid-col -->
-
-                    <div class="grid-col bp1-col-one-half bp3-col-one-quarter">
-                        <div class="well">
-                            <h4>Pill buttons</h4>
-
-                            <p><button class="btn pill small">I'm a button, yo.</button></p>
-                            <p><button class="btn pill">I'm a button, yo.</button></p>
-                            <p><button class="btn pill large">I'm a button, yo.</button></p>
-
-                            <p><strong>Disabled state</strong></p>
-
-                            <p><button class="btn pill small disabled">I'm a button, yo.</button></p>
-                            <p><button class="btn pill disabled">I'm a button, yo.</button></p>
-                            <p><button class="btn pill large disabled">I'm a button, yo.</button></p>
-                        </div>
-                    </div><!-- end .grid-col -->
-
-                    <div class="grid-col bp1-col-one-half bp3-col-one-quarter">
-                        <div class="well">
-                            <h4>Chunky buttons</h4>
-
-                            <p><button class="btn chunky small">I'm a button, yo.</button></p>
-                            <p><button class="btn chunky">I'm a button, yo.</button></p>
-                            <p><button class="btn chunky large">I'm a button, yo.</button></p>
-
-                            <p><strong>Disabled state</strong></p>
-
-                            <p><button class="btn chunky small disabled">I'm a button, yo.</button></p>
-                            <p><button class="btn chunky disabled">I'm a button, yo.</button></p>
-                            <p><button class="btn chunky large disabled">I'm a button, yo.</button></p>
-                        </div>
-                    </div><!-- end .grid-col -->
-                </div><!-- end .grid-wrap -->
-            </section><!-- end .grid-divide-bottom -->
-        </div><!-- end .wrapper -->
+            Get started, yo.
+        </div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
             var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
             (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];

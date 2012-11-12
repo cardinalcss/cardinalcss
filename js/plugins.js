@@ -27,11 +27,11 @@
  * Equal height columns
  * jQuery plugin
  * @author Luka Soppermann
- * https://github.com/lukasoppermann/fs-equal-height
+ * @source http://cbrac.co/QzjslB
  */
 
 (function($) {
-    $.fn.equalHeightColumns = function(){
+    $.fn.equalHeightColumns = function() {
         // create variables
         var _this, _column = $(this), position_top, row_divs = new Array(), current_tallest, current_row_start, current_div;
 
@@ -47,15 +47,12 @@
             position_top = _this.offset().top;
 
             // check for new row
-            if(current_row_start != position_top)
-            {
+            if(current_row_start != position_top) {
                 var len = row_divs.length;
 
-                if( len > 1)
-                {
+                if( len > 1) {
                     // set heights for completed row
-                    for(var current_div = 0; current_div < len; current_div++)
-                    {
+                    for(var current_div = 0; current_div < len; current_div++) {
                         row_divs[current_div].height(current_tallest);
                     }
                 }
@@ -67,8 +64,7 @@
                 row_divs.push(_this);
             }
 
-            else
-            {
+            else {
                  // add column
                  row_divs.push(_this);
                  current_tallest = Math.max(current_tallest, _this.height());
@@ -77,10 +73,8 @@
             // do the last row if more than 1 item in it
             var len = row_divs.length;
 
-            if( len > 1)
-            {
-                for(var current_div = 0; current_div < len; current_div++)
-                {
+            if( len > 1) {
+                for(var current_div = 0; current_div < len; current_div++) {
                      row_divs[current_div].height(current_tallest);
                 }
             }
@@ -95,13 +89,13 @@
  * Smart window resize
  * jQuery plugin
  * @author Paul Irish
- * http://paulirish.com/2009/throttled-smartresize-jquery-event-handler/
+ * @source http://cbrac.co/QzjwBI
  */
 
 (function($,sr) {
 
   // debouncing function from John Hann
-  // http://unscriptable.com/index.php/2009/03/20/debouncing-javascript-methods/
+  // http://cbrac.co/W1Ytok
   var debounce = function (func, threshold, execAsap) {
       var timeout;
 
@@ -124,4 +118,6 @@
     // smartresize
     jQuery.fn[sr] = function(fn){  return fn ? this.bind('resize', debounce(fn)) : this.trigger(sr); };
 
-})(jQuery,'smartresize');
+})(jQuery, 'smartresize');
+
+// Place your extra jQuery/helper plugins here
