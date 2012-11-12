@@ -1,6 +1,7 @@
 /**
  * Avoid `console` errors in browsers that lack a console.
  */
+
 (function() {
     var method;
     var noop = function noop() {};
@@ -23,13 +24,49 @@
     }
 }());
 
-/**
- * Baseline Align
+/*
+ * Baseline.js 1.0
  * jQuery plugin
- * @author Matt Wilcox
- * @source http://cbrac.co/ZqmFEi
+ * @author Daniel Eden
+ * @source http://cbrac.co/ZvVGHE
  */
 
-(function(a){var b={baselineAlign:function(b){var c=a.extend({container:false},b);return this.each(function(){var b=a(this);if(b.css("display")==="inline"){return}b.attr("style","");var d=Math.floor(b.height());if(b.is("img")){b.css("height",d)}var e=parseFloat(a("body").css("line-height").replace("px",""));var f=d;if(b.is("img")){if(c.container!==false&&b.parents(c.container).length>0){var g=b.parents(c.container);g.attr("style","");var h=Math.ceil(g.outerHeight());g.css("height",h);f=Math.floor(g.outerHeight(false))}}var i=parseFloat(f%e);var j=parseFloat(e-i);if(j<e/2){j=j+e}if(c.container===false){b.css("margin-bottom",j+"px");return}else if(b.parents(c.container).length>0){b.parents(c.container).css("margin-bottom",j+"px");return}b.css("margin-bottom",j+"px")})},init:function(){var c=false;var d=false;var e=this;var f=arguments;a(window).resize(function(){c=true});a(window).load(b.baselineAlign.apply(e,f));setInterval(function(){if(c){c=false;return b.baselineAlign.apply(e,f)}},500)}};a.fn.baselineAlign=function(c){if(b[c]){return b[c].apply(this,Array.prototype.slice.call(arguments,1))}else if(typeof c==="object"||!c){return b.init.apply(this,arguments)}else{a.error("Method "+c+" does not exist on jQuery.baselineAlign")}}})(jQuery)
+(function($) {
+    $.fn.baseline = function(breakpoints) {
+        // Set up our variables, like a good little developer
+        var tall, newHeight, base, old = 0;
+
+        return this.each(function(){
+            var $this = $(this); // Set the images as objects
+
+            var setbase = function(breakpoints) { // The fun starts here
+                // Check if a single value or multiple breakpoints are given
+                        if (typeof breakpoints === 'number') {
+                            base = breakpoints;
+                        } else if (typeof breakpoints === 'object') {
+                            // Loop through the breakpoints and check which baseline to apply
+                            for (key in breakpoints) {
+                                var current = parseInt(key);
+                                if (document.width > current && current >= old) {
+                                    base = breakpoints[key];
+                                    old = current;
+                                }
+                            }
+                        }
+
+                $this.css('maxHeight', 'none'); // Remove old max-height so that we can resize up as well as down
+                tall = $this.height(); // Grab the height
+                newHeight = Math.floor(tall / base) * base; // Make up a new height based on the baseline
+                $this.css('maxHeight', newHeight); // Set it!
+            }
+
+            setbase(breakpoints); // Call on load
+
+            $(window).resize(function(){ // And call again on resize.
+                setbase(breakpoints);
+            });
+        });
+    }
+}) (jQuery);
 
 // Place your extra jQuery/helper plugins here

@@ -45,14 +45,12 @@ textarea {
 }
 
 /*
- * 1. Allows baseline grid guide to span the full height of the document
- * 2. Establish initial font size and line height for the baseline grid
+ * Establish initial font size and line height for the baseline grid
  */
 
 body {
-    /*position: relative; /* 1 */
-    font-size: 1em;     /* 2 */
-    line-height: 1.5;   /* 2 */
+    font-size: 1.0000rem; /* 2 */
+    line-height: 1.5000;  /* 2 */
 }
 
 /*
@@ -93,30 +91,37 @@ a:hover {
    ========================================================================== */
 
 .bl-grid {
-    position: absolute;
+    display: none; /* Hide by default */
+    /*position: absolute;
     left: 0;
     top: 0;
     bottom: 0;
+    width: 100%;*/
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
     background-image: -webkit-linear-gradient(hsla(0, 0%, 0%, 0) 95%, hsla(0, 25%, 50%, 0.25) 95%);
     background-image: -moz-linear-gradient(hsla(0, 0%, 0%, 0) 95%, hsla(0, 25%, 50%, 0.25) 95%);
     background-image: -ms-linear-gradient(hsla(0, 0%, 0%, 0) 95%, hsla(0, 25%, 50%, 0.25) 95%);
     background-image: -o-linear-gradient(hsla(0, 0%, 0%, 0) 95%, hsla(0, 25%, 50%, 0.25) 95%);
     background-image: linear-gradient(hsla(0, 0%, 0%, 0) 95%, hsla(0, 25%, 50%, 0.25) 95%);
     background-position: 50% 0;
-    background-size: 1.5em 1.5em;
+    background-size: 1.5000rem 1.5000rem;
 }
 
 .bl-grid-toggle {
     position: fixed;
-    top: 1.5em;
+    top: 1.5000rem;
     right: 5%;
+    z-index: 9999;
 }
 
-.bl-grid-on {
+.bl-grid-on,
+.bl-grid-on .btn {
     position: relative;
 }
-
 
 /* ==========================================================================
    Typography
@@ -134,13 +139,13 @@ ol,
 p,
 pre,
 ul {
-    font-size: 1em;    /* 1 */
-    margin: 0 0 1.5em; /* 1 */
-    line-height: 1.5;  /* 1 */
+    font-size: 1.000rem;  /* 1 */
+    margin: 0 0 1.5000em; /* 1 */
+    line-height: 1.5000;  /* 1 */
 }​
 
 big {
-    font-size: 200%;
+    font-size: 2.0000rem;
 }
 
 blockquote {
@@ -152,7 +157,7 @@ blockquote p {
 }
 
 blockquote p + p {
-    margin-top: 1.5em;
+    margin-top: 1.5000rem;
 }
 
 /*
@@ -202,42 +207,37 @@ h6 {
   color: inherit;
   font-family: sans-serif;
   font-weight: 700;
+  margin-bottom: 1.5000rem;
 }
 
 h1 {
-    font-size: 3em;
+    font-size: 3.0000rem;
     line-height: 1;
-    margin-bottom: .5em;
 }
 
 h2 {
-    font-size: 2.25em;
+    font-size: 2.2500rem;
     line-height: 1.333333333;
-    margin-bottom: 0.666666666em;
 }
 
 h3 {
-    font-size: 1.5em;
+    font-size: 1.5000rem;
     line-height: 1;
-    margin-bottom: 1em;
 }
 
 h4 {
-    font-size: 1.3125em;
+    font-size: 1.3125rem;
     line-height: 1.142857142;
-    margin-bottom: 1.142857142em;
 }
 
 h5 {
-    font-size: 1.125em;
+    font-size: 1.1250rem;
     line-height: 1.333333333;
-    margin-bottom: 1.333333333em;
 }
 
 h6 {
-    font-size: 1em;
+    font-size: 1.0000rem;
     line-height: 1.5;
-    margin-bottom: 1.5em;
 }
 
 hr {
@@ -296,15 +296,26 @@ fieldset {
 }
 
 /*
- * 1. Fluid-width images that keep their aspect ratio
- * 2. Remove the gap between images and the bottom of their containers: http://cbrac.co/Q6smqV
+ * Fluid-width media that keep their aspect ratio
+ */
+
+audio,
+embed,
+iframe,
+img,
+object,
+video {
+    width: auto\9;
+    max-width: 100%;
+    height: auto;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: http://cbrac.co/Q6smqV
  */
 
 img {
-    width: auto\9;                   /* 1 */
-    max-width: 100%;                 /* 1 */
-    height: auto;                    /* 1 */
-    vertical-align: middle;          /* 2 */
+    vertical-align: middle;
 }
 
 /*
