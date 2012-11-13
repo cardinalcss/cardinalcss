@@ -22,14 +22,12 @@
    ========================================================================== */
 
 /*
- * 1. Force vertical scrollbar in non-IE: http://cbrac.co/QziGF5
- * 2. Make sure all fonts in the HTML document display in all its glory, but avoid inadequate ligatures in class foo elements
- * NOTE: Avoid the webkit anti-aliasing trap - http://cbrac.co/TAdhbH
+ * Force vertical scrollbar in non-IE: http://cbrac.co/QziGF5
+ * WARNING: Avoid the webkit anti-aliasing trap - http://cbrac.co/TAdhbH
  */
 
 html {
-    overflow-y: scroll;                 /* 1 */
-    text-rendering: optimizeLegibility; /* 2 */
+    overflow-y: scroll;
 }
 
 /*
@@ -49,8 +47,8 @@ textarea {
  */
 
 body {
-    font-size: 1.0000rem; /* 2 */
-    line-height: 1.5000;  /* 2 */
+    font-size: 1.000rem;
+    line-height: 1.500rem;
 }
 
 /*
@@ -86,44 +84,6 @@ a:hover {
 }
 
 /* ==========================================================================
-   Baseline grid guide!
-   (for development only, remove this on production sites)
-   ========================================================================== */
-
-.bl-grid {
-    display: none; /* Hide by default */
-    /*position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 100%;*/
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: -webkit-linear-gradient(hsla(0, 0%, 0%, 0) 95%, hsla(0, 25%, 50%, 0.25) 95%);
-    background-image: -moz-linear-gradient(hsla(0, 0%, 0%, 0) 95%, hsla(0, 25%, 50%, 0.25) 95%);
-    background-image: -ms-linear-gradient(hsla(0, 0%, 0%, 0) 95%, hsla(0, 25%, 50%, 0.25) 95%);
-    background-image: -o-linear-gradient(hsla(0, 0%, 0%, 0) 95%, hsla(0, 25%, 50%, 0.25) 95%);
-    background-image: linear-gradient(hsla(0, 0%, 0%, 0) 95%, hsla(0, 25%, 50%, 0.25) 95%);
-    background-position: 50% 0;
-    background-size: 1.5000rem 1.5000rem;
-}
-
-.bl-grid-toggle {
-    position: fixed;
-    top: 1.5000rem;
-    right: 5%;
-    z-index: 9999;
-}
-
-.bl-grid-on,
-.bl-grid-on .btn {
-    position: relative;
-}
-
-/* ==========================================================================
    Typography
    ========================================================================== */
 
@@ -140,12 +100,11 @@ p,
 pre,
 ul {
     font-size: 1.000rem;  /* 1 */
-    margin: 0 0 1.5000em; /* 1 */
-    line-height: 1.5000;  /* 1 */
+    margin: 0 0 1.500rem; /* 1 */
 }​
 
 big {
-    font-size: 2.0000rem;
+    font-size: 2.000rem;
 }
 
 blockquote {
@@ -207,43 +166,43 @@ h6 {
   color: inherit;
   font-family: sans-serif;
   font-weight: 700;
+  line-height: 1.500rem;
   margin-bottom: 1.5000rem;
+  text-rendering: optimizeLegibility; /* Use with care: http://cbrac.co/UkurL4 */
 }
 
-h1 {
-    font-size: 3.0000rem;
-    line-height: 1;
+h1,
+.t-xlarge {
+    font-size: 3.157rem;
+    line-height: 3.000rem;
 }
 
-h2 {
-    font-size: 2.2500rem;
-    line-height: 1.333333333;
+h2,
+.t-large {
+    font-size: 2.369rem;
+    line-height: 3.000rem;
 }
 
-h3 {
-    font-size: 1.5000rem;
-    line-height: 1;
+h3,
+.t-medium {
+    font-size: 1.333rem;
 }
 
-h4 {
-    font-size: 1.3125rem;
-    line-height: 1.142857142;
-}
-
-h5 {
-    font-size: 1.1250rem;
-    line-height: 1.333333333;
-}
-
-h6 {
-    font-size: 1.0000rem;
-    line-height: 1.5;
+h4,
+h5,
+h6,
+.t-normal {
+    font-size: 1.000rem;
 }
 
 hr {
     border: 0;
     border-top: 1px solid #e0e0e0;
     border-bottom: 1px solid white;
+}
+
+.huge {
+
 }
 
 ins {
@@ -253,7 +212,7 @@ ins {
 }
 
 pre {
-    padding: 1.5em;
+    padding: 1.500rem;
     -webkit-border-radius: 5px; /* Safari 3-4, iOS 1-3.2, Android ≤ 1.6 */
     -moz-border-radius:    5px; /* Firefox 1.0+ */
     border-radius:         5px; /* Opera 10.5, IE9+, Safari 5, Chrome, Firefox 4+, iOS 4, Android 2.1+ */
@@ -337,6 +296,39 @@ textarea {
 }
 
 /* ==========================================================================
+   Baseline grid guide!
+   (for development only, remove this on production sites)
+   ========================================================================== */
+
+.bl-grid {
+    display: none; /* Hide by default */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: -webkit-linear-gradient(hsla(0, 0%, 0%, 0) 95%, hsla(0, 25%, 50%, 0.25) 95%);
+    background-image: -moz-linear-gradient(hsla(0, 0%, 0%, 0) 95%, hsla(0, 25%, 50%, 0.25) 95%);
+    background-image: -ms-linear-gradient(hsla(0, 0%, 0%, 0) 95%, hsla(0, 25%, 50%, 0.25) 95%);
+    background-image: -o-linear-gradient(hsla(0, 0%, 0%, 0) 95%, hsla(0, 25%, 50%, 0.25) 95%);
+    background-image: linear-gradient(hsla(0, 0%, 0%, 0) 95%, hsla(0, 25%, 50%, 0.25) 95%);
+    background-position: 50% 0;
+    background-size: 1.500rem 1.500rem;
+}
+
+.bl-grid-toggle {
+    position: fixed;
+    top: 1.500rem;
+    right: 5%;
+    z-index: 9999;
+    margin-top: -1px;
+}
+
+.bl-grid-on {
+    position: relative;
+}
+
+/* ==========================================================================
    Grid system
    ========================================================================== */
 
@@ -350,14 +342,14 @@ textarea {
 .divide-bottom {
     border-bottom: 1px solid #ccc;
     margin-top: -1px; /* Maintains the baseline grid */
-    margin-bottom: 1.5em;
+    margin-bottom: 1.5rem;
 }
 
 /* Use this class if you want a full-width column */
 .strip {
     background: #efefef;
-    padding: 1.5em 0;
-    margin: 0 0 1.5em;
+    padding: 1.500rem 0;
+    margin: 0 0 1.500rem;
 }
 
 .strip :last-child {
@@ -366,7 +358,7 @@ textarea {
 
 /* Use these classes if you want to make a column stand out */
 .island {
-    padding: 1.5em;
+    padding: 1.500rem;
     background-color: #efefef;
     background-color: hsla(0, 0%, 94%, 1);
     -webkit-border-radius: 5px; /* Safari 3-4, iOS 1-3.2, Android ≤ 1.6 */
@@ -375,7 +367,7 @@ textarea {
 }
 
 .well {
-    padding: 1.5em;
+    padding: 1.500rem;
     background-color: #efefef;
     background-color: hsla(0, 0%, 94%, 1);
     -webkit-box-shadow: inset 0 0 5px hsla(0, 0%, 0%, 0.10); /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
@@ -393,17 +385,17 @@ textarea {
 
 .grid-col .island,
 .grid-col .well {
-    margin-bottom: 1.5em;
+    margin-bottom: 1.5rem;
 }
 
 /* Set up your grids */
 .grid-wrap {
-    margin-left: -3em;
+    margin-left: -3rem;
 }
 
 .grid-col {
     float: left;
-    padding-left: 3em;
+    padding-left: 3rem;
     width: 100%;
     -webkit-box-sizing: border-box;
     -moz-box-sizing:    border-box;
@@ -411,11 +403,11 @@ textarea {
 }
 
 .half-gutter {
-    margin-left: -1.5em;
+    margin-left: -1.5rem;
 }
 
 .half-gutter .grid-col {
-    padding-left: 1.5em;
+    padding-left: 1.5rem;
 }
 
 /*
@@ -450,11 +442,6 @@ textarea {
 /* ==========================================================================
    CSS3 Buttons
    ========================================================================== */
-
-/*
- * Style: minimal
- * (global styles included)
- */
 
 .btn {
     display: inline-block;
@@ -501,310 +488,6 @@ textarea {
     outline: thin dotted #333;
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px;
-}
-
-.btn.mini {
-    padding: 2px 6px;
-    font-size: 11px;
-}
-
-.btn.small {
-    padding: 4px 9px;
-    font-size: 12px;
-}
-
-.btn.large {
-    padding: 9px 14px;
-    font-size: 16px;
-}
-
-.btn.disabled,
-.btn.disabled:hover,
-.btn.disabled:active,
-.btn[disabled] {
-    -webkit-box-shadow: none !important;
-    -moz-box-shadow:    none !important;
-    box-shadow:         none !important;
-    background: #e6e6e6 !important;
-    background-image: none !important;
-    color: #505050 !important;
-    text-shadow: none !important;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=65)"; /* IE 8 */
-    filter: alpha(opacity=65); /* IE 5-7 */
-    opacity: 0.65;             /* Good browsers */
-    filter: progid:DXImageTransform.Microsoft.gradient(enabled="false") !important; /* IE6-9 */
-    cursor: default !important;
-}
-
-/*
- * Style: glossy
- */
-
-.btn.glossy {
-    -webkit-border-radius: 5px; /* Safari 3-4, iOS 1-3.2, Android ≤ 1.6 */
-    -moz-border-radius:    5px; /* Firefox 1.0+ */
-    border-radius:         5px; /* Opera 10.5, IE9+, Safari 5, Chrome, Firefox 4+, iOS 4, Android 2.1+ */
-    background-image: -moz-linear-gradient(
-        top,
-        hsla(0, 0%, 100%, 1) 0%,
-        hsla(0, 0%, 95%, 1) 50%,
-        hsla(0, 0%, 88%, 1) 51%,
-        hsla(0, 0%, 96%, 1) 100%
-    ); /* FF3.6+ */
-    background-image: -webkit-gradient(
-        linear,
-        left top,
-        left bottom,
-        color-stop(0%, hsla(0, 0%, 100%, 1)),
-        color-stop(50%, hsla(0, 0%, 95%, 1)),
-        color-stop(51%, hsla(0, 0%, 88%, 1)),
-        color-stop(100%, hsla(0, 0%, 96%, 1))
-    ); /* Chrome, Safari4+ */
-    background-image: -webkit-linear-gradient(
-        top,
-        hsla(0, 0%, 100%, 1) 0%,
-        hsla(0, 0%, 95%, 1) 50%,
-        hsla(0, 0%, 88%, 1) 51%,
-        hsla(0, 0%, 96%, 1) 100%
-    ); /* Chrome10+, Safari5.1+ */
-    background-image: -o-linear-gradient(
-        top,
-        hsla(0, 0%, 100%, 1) 0%,
-        hsla(0, 0%, 95%, 1) 50%,
-        hsla(0, 0%, 88%, 1) 51%,
-        hsla(0, 0%, 96%, 1) 100%
-    ); /* Opera 11.10+ */
-    background-image: -ms-linear-gradient(
-        top,
-        hsla(0, 0%, 100%, 1) 0%,
-        hsla(0, 0%, 95%, 1) 50%,
-        hsla(0, 0%, 88%, 1) 51%,
-        hsla(0, 0%, 96%, 1) 100%
-    ); /* IE10+ */
-    background-image: linear-gradient(
-        to bottom,
-        hsla(0, 0%, 100%, 1) 0%,
-        hsla(0, 0%, 95%, 1) 50%,
-        hsla(0, 0%, 88%, 1) 51%,
-        hsla(0, 0%, 96%, 1) 100%
-    ); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient(
-        startColorstr='#ffffff',
-        endColorstr='#f6f6f6',
-        GradientType=0
-    ); /* IE6-9 */
-}
-
-.btn.glossy:hover {
-    background-image: -moz-linear-gradient(
-        top,
-        hsla(0, 0%, 100%, 1) 0%,
-        hsla(0, 0%, 98%, 1) 50%,
-        hsla(0, 0%, 91%, 1) 51%,
-        hsla(0, 0%, 99%, 1) 100%
-    ); /* FF3.6+ */
-    background-image: -webkit-gradient(
-        linear,
-        left top,
-        left bottom,
-        color-stop(0%, hsla(0, 0%, 100%, 1)),
-        color-stop(50%, hsla(0, 0%, 98%, 1)),
-        color-stop(51%, hsla(0, 0%, 91%, 1)),
-        color-stop(100%, hsla(0, 0%, 99%, 1))
-    ); /* Chrome, Safari4+ */
-    background-image: -webkit-linear-gradient(
-        top,
-        hsla(0, 0%, 100%, 1) 0%,
-        hsla(0, 0%, 98%, 1) 50%,
-        hsla(0, 0%, 91%, 1) 51%,
-        hsla(0, 0%, 99%, 1) 100%
-    ); /* Chrome10+, Safari5.1+ */
-    background-image: -o-linear-gradient(
-        top,
-        hsla(0, 0%, 100%, 1) 0%,
-        hsla(0, 0%, 98%, 1) 50%,
-        hsla(0, 0%, 91%, 1) 51%,
-        hsla(0, 0%, 99%, 1) 100%
-    ); /* Opera 11.10+ */
-    background-image: -ms-linear-gradient(
-        top,
-        hsla(0, 0%, 100%, 1) 0%,
-        hsla(0, 0%, 98%, 1) 50%,
-        hsla(0, 0%, 91%, 1) 51%,
-        hsla(0, 0%, 99%, 1) 100%
-    ); /* IE10+ */
-    background-image: linear-gradient(
-        to bottom,
-        hsla(0, 0%, 100%, 1) 0%,
-        hsla(0, 0%, 98%, 1) 50%,
-        hsla(0, 0%, 91%, 1) 51%,
-        hsla(0, 0%, 99%, 1) 100%
-    ); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient(
-        startColorstr='#ffffff',
-        endColorstr='#fafafa',
-        GradientType=0
-    ); /* IE6-9 */
-}
-
-/*
- * Style: pill
- */
-
-.btn.pill {
-    -webkit-border-radius: 20px; /* Safari 3-4, iOS 1-3.2, Android ≤ 1.6 */
-    -moz-border-radius:    20px; /* Firefox 1.0+ */
-    border-radius:         20px; /* Opera 10.5, IE9+, Safari 5, Chrome, Firefox 4+, iOS 4, Android 2.1+ */
-    background-image: -moz-linear-gradient(
-        top,
-        hsla(0, 0%, 99%, 1) 0%,
-        hsla(0, 0%, 92%, 1) 100%
-    ); /* FF3.6+ */
-    background-image: -webkit-gradient(
-        linear,
-        left top,
-        left bottom,
-        color-stop(0%, hsla(0, 0%, 99%, 1)),
-        color-stop(100%, hsla(0, 0%, 92%, 1))
-    ); /* Chrome, Safari4+ */
-    background-image: -webkit-linear-gradient(
-        top,
-        hsla(0, 0%, 99%, 1) 0%,
-        hsla(0, 0%, 92%, 1) 100%
-    ); /* Chrome10+, Safari5.1+ */
-    background-image: -o-linear-gradient(
-        top,
-        hsla(0, 0%, 99%, 1) 0%,
-        hsla(0, 0%, 92%, 1) 100%
-    ); /* Opera 11.10+ */
-    background-image: -ms-linear-gradient(
-        top,
-        hsla(0, 0%, 99%, 1) 0%,
-        hsla(0, 0%, 92%, 1) 100%
-    ); /* IE10+ */
-    background-image: linear-gradient(
-        to bottom,
-        hsla(0, 0%, 99%, 1) 0%,
-        hsla(0, 0%, 92%, 1) 100%
-    ); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient(
-        startColorstr='#fcfcfc',
-        endColorstr='#ebebeb',
-        GradientType=0
-    ); /* IE6-9 */
-}
-
-.btn.pill:hover {
-    background-image: -moz-linear-gradient(
-        top,
-        hsla(0, 0%, 99%, 1) 0%,
-        hsla(0, 0%, 95%, 1) 100%
-    ); /* FF3.6+ */
-    background-image: -webkit-gradient(
-        linear,
-        left top,
-        left bottom,
-        color-stop(0%, hsla(0, 0%, 99%, 1)),
-        color-stop(100%, hsla(0, 0%, 95%, 1))
-    ); /* Chrome, Safari4+ */
-    background-image: -webkit-linear-gradient(
-        top,
-        hsla(0, 0%, 99%, 1) 0%,
-        hsla(0, 0%, 95%, 1) 100%
-    ); /* Chrome10+, Safari5.1+ */
-    background-image: -o-linear-gradient(
-        top,
-        hsla(0, 0%, 99%, 1) 0%,
-        hsla(0, 0%, 95%, 1) 100%
-    ); /* Opera 11.10+ */
-    background-image: -ms-linear-gradient(
-        top,
-        hsla(0, 0%, 99%, 1) 0%,
-        hsla(0, 0%, 95%, 1) 100%
-    ); /* IE10+ */
-    background-image: linear-gradient(
-        to bottom,
-        hsla(0, 0%, 99%, 1) 0%,
-        hsla(0, 0%, 95%, 1) 100%
-    ); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient(
-        startColorstr='#fefefe',
-        endColorstr='#efefef',
-        GradientType=0
-    ); /* IE6-9 */
-}
-
-/*
- * Style: chunky
- */
-
-.btn.chunky {
-    position: relative;
-    border-bottom-width: 3px;
-    -webkit-border-radius: 5px; /* Safari 3-4, iOS 1-3.2, Android ≤ 1.6 */
-    -moz-border-radius:    5px; /* Firefox 1.0+ */
-    border-radius:         5px; /* Opera 10.5, IE9+, Safari 5, Chrome, Firefox 4+, iOS 4, Android 2.1+ */
-    -webkit-box-shadow: inset 0 0 1px 1px hsla(0, 0%, 100%, 1); /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
-    -moz-box-shadow:    inset 0 0 1px 1px hsla(0, 0%, 100%, 1); /* Firefox 3.5+ */
-    box-shadow:         inset 0 0 1px 1px hsla(0, 0%, 100%, 1); /* Opera 10.5, IE9+, Firefox 4+, Chrome 6+, iOS 5 */
-    background: #f5f5f5;
-    background: hsla(0, 0%, 96%, 1);
-}
-
-.btn.chunky:hover {
-    background: #f9f9f9;
-    background: hsla(0, 0%, 98%, 1);
-}
-
-.btn.chunky:active {
-    top: 2px;
-    padding-bottom: 10px;
-    border-bottom-width: 1px;
-}
-
-.btn.chunky.mini {
-    border-bottom-width: 2px;
-}
-
-.btn.chunky.mini:active {
-    top: 2px;
-    padding-bottom: 3px;
-    border-bottom-width: 1px;
-}
-
-.btn.chunky.small:active {
-    top: 2px;
-    padding-bottom: 6px;
-}
-
-.btn.chunky.large:active {
-    top: 2px;
-    padding-bottom: 11px;
-}
-
-.btn.chunky.disabled,
-.btn.chunky.disabled:hover,
-.btn.chunky.disabled:active,
-.btn.chunky[disabled] {
-    position: static;
-    top: 0;
-    border-width: 1px;
-}
-
-.btn.chunky.disabled:active {
-    padding: 8px 9px;
-}
-
-.btn.chunky.mini.disabled:active {
-    padding: 2px 6px;
-}
-
-.btn.chunky.small.disabled:active {
-    padding: 4px 9px;
-}
-
-.btn.chunky.large.disabled:active {
-    padding: 9px 14px;
 }
 
 /* ==========================================================================
