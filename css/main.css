@@ -36,6 +36,7 @@ html {
 
 body {
     color: #222;
+    color: hsla(0, 0%, 13.3333%, 1.0);
     font-size: 1.000rem;
     line-height: 1.500rem;
 }
@@ -48,11 +49,13 @@ body {
 
 ::-moz-selection {
     background: #b3d4fc;
+    background: hsla(213, 92.4051%, 84.5098%, 1.0);
     text-shadow: none;
 }
 
 ::selection {
     background: #b3d4fc;
+    background: hsla(213, 92.4051%, 84.5098%, 1.0);
     text-shadow: none;
 }
 
@@ -66,6 +69,7 @@ body {
 
 a:link {
     -webkit-tap-highlight-color: #b3d4fc; /* 1 */
+    -webkit-tap-highlight-color: hsla(213, 92.4051%, 84.5098%, 1.0); /* 1 */
 }
 
 a:hover {
@@ -74,9 +78,18 @@ a:hover {
 
 /* ==========================================================================
    Typography
+   Baseline grid: 24px (1.5rem)
+   Modular scale: 16px @ 1:1.333 (Perfect fourth)
    http://modularscale.com/scale/?px1=16&px2=&ra1=1.333&ra2=0
-   16px @ 1:1.333 (Perfect fourth)
    ========================================================================== */
+
+abbr[title] {
+    cursor: help;
+}
+
+abbr a {
+    text-decoration: none;
+}
 
 /*
  * 1. Sets a consistent margin for common HTML elements
@@ -94,7 +107,7 @@ ul {
 }​
 
 big,
-.t-xxlarge {
+.t-xxl {
     font-size: 4.209rem;
     line-height: 4.500rem;
 }
@@ -121,14 +134,21 @@ blockquote footer:before {
 
 blockquote footer {
     color: #686868;
+    color: hsla(0, 0%, 40.7843%, 1.0);
     font-style: italic;
 }
 
+code,
+pre {
+    font: 0.8125rem/1.500rem Monaco, Menlo, Consolas, "Courier New", monospace;
+}
+
 code {
-    margin: 0 5px;
-    padding: 0 5px;
+    padding: 0.1rem 0.317rem;
     background-color: #f8f8f8;
+    background-color: hsla(0, 0%, 97.2549%, 1.0);
     border: 1px solid #eaeaea;
+    border: 1px solid hsla(0, 0%, 91.7647%, 1.0);
     -webkit-border-radius: 3px; /* Safari 3-4, iOS 1-3.2, Android ≤ 1.6 */
     -moz-border-radius:    3px; /* Firefox 1.0+ */
     border-radius:         3px; /* Opera 10.5, IE9+, Safari 5, Chrome, Firefox 4+, iOS 4, Android 2.1+ */
@@ -164,7 +184,7 @@ h6 {
 }
 
 h1,
-.t-xlarge {
+.t-xl {
     font-size: 3.157rem;
     line-height: 3.000rem;
 }
@@ -189,23 +209,41 @@ h6,
 
 hr {
     border: 0;
-    border-top: 1px solid #e0e0e0;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid #c0c0c0;
+    border-bottom: 1px solid hsla(0, 0%, 75.2941%, 1.0);
+    margin-top: -1px; /* Maintains the baseline grid */
 }
 
 ins {
     background: #ff9;
+    background: hsla(60, 100%, 80%, 1.0);
     color: #000;
+    color: hsla(0, 0%, 0%, 1.0);
     text-decoration: none;
 }
 
 pre {
-    padding: 1.500rem;
+    padding: 0;
+    overflow: auto;
+    position: relative;
     -webkit-border-radius: 5px; /* Safari 3-4, iOS 1-3.2, Android ≤ 1.6 */
     -moz-border-radius:    5px; /* Firefox 1.0+ */
     border-radius:         5px; /* Opera 10.5, IE9+, Safari 5, Chrome, Firefox 4+, iOS 4, Android 2.1+ */
     background: #333;
+    background: hsla(0, 0%, 20%, 1.0);
     color: #d0d0d0;
+    color: hsla(0, 0%, 81.5686%, 1.0);
+    white-space: pre;
+    word-wrap: normal;
+    -ms-word-break: normal;
+    word-break:     normal;
+    -moz-tab-size: 4;
+    -o-tab-size:   4;
+    tab-size:      4;
+    -webkit-hyphens: none;
+    -moz-hyphens:    none;
+    hyphens:         none;
+    -ms-hyphens:     none;
 }
 
 /*
@@ -214,9 +252,36 @@ pre {
 
 pre code {
     margin: 0;
-    padding: 0;
+    padding: 1.5rem;
     background-color: transparent;
     border: none;
+    -webkit-border-radius: 0; /* Safari 3-4, iOS 1-3.2, Android ≤ 1.6 */
+    -moz-border-radius:    0; /* Firefox 1.0+ */
+    border-radius:         0; /* Opera 10.5, IE9+, Safari 5, Chrome, Firefox 4+, iOS 4, Android 2.1+ */
+    white-space: pre;
+    overflow: auto;
+    display: block;
+}
+
+pre[rel] code {
+    padding: 4.500rem 1.5rem 1.5rem;
+}
+
+pre[rel]:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    background: #202020;
+    background: hsla(0, 0%, 12.5490%, 1.0);
+    color: #46fc3e;
+    color: hsla(117, 96.9388%, 61.5686%, 1.0);
+    content: attr(rel);
+    text-indent: 1.5rem;
+    letter-spacing: 0.1rem;
+    font-size: 1.333rem;
+    line-height: 3rem;
 }
 
 /*
@@ -233,6 +298,14 @@ ol ol ol ol { list-style: lower-alpha; }
    ========================================================================== */
 
 /*
+ * Fluid-width audio elements
+ */
+
+audio {
+    width: 100%;
+}
+
+/*
  * Remove fieldset styles from normalize.css
  */
 
@@ -243,26 +316,23 @@ fieldset {
 }
 
 /*
- * Fluid-width media that keep their aspect ratio
- */
-
-audio,
-embed,
-iframe,
-img,
-object,
-video {
-    width: auto\9;
-    max-width: 100%;
-    height: auto;
-}
-
-/*
- * Remove the gap between images and the bottom of their containers: http://cbrac.co/Q6smqV
+ * Remove the gap between images and the bottom of
+ * their containers: http://cbrac.co/Q6smqV
  */
 
 img {
     vertical-align: middle;
+}
+
+/*
+ * Fluid-width media that maintains their aspect ratios
+ */
+
+img,
+video {
+    width: auto\9;
+    max-width: 100%;
+    height: auto !important;
 }
 
 /*
@@ -306,12 +376,12 @@ textarea {
 }
 
 /* ==========================================================================
-   Baseline grid guide!
-   (for development only, remove this on production sites)
+   Baseline grid guide (.bl-*)
+   For development only, remove this on production sites
    ========================================================================== */
 
 .bl-grid {
-    display: none; /* Hide by default */
+    /*display: none;  Hide by default */
     position: absolute;
     top: 0;
     left: 0;
@@ -339,7 +409,17 @@ textarea {
 }
 
 /* ==========================================================================
-   Grid system
+   Grid system (.gs-*)
+
+   Usage:
+   <div class="wrapper">
+       <div class="gs-divider">
+           <div class="gs-wrapper">
+               <div class="gs-col gs-bp1-col-1-2">foo</div>
+               <div class="gs-col gs-bp1-col-1-2">bar</div>
+           </div>
+       </div>
+   </div>
    ========================================================================== */
 
 .wrapper {
@@ -348,16 +428,74 @@ textarea {
     margin: 0 auto;
 }
 
-/* Use this class if you want to add a border to the bottom of a column */
-.divide-bottom {
-    border-bottom: 1px solid #ccc;
+/*
+ * Use this class if you want to add a border to the bottom of a column
+ */
+
+.gs-divider {
+    border-bottom: 1px solid #c0c0c0;
+    border-bottom: 1px solid hsla(0, 0%, 75.2941%, 1.0);
     margin-top: -1px; /* Maintains the baseline grid */
     margin-bottom: 1.5rem;
 }
 
-/* Use this class if you want a full-width column */
+.gs-wrapper {
+    margin-left: -3rem;
+}
+
+.gs-col {
+    float: left;
+    padding-left: 3rem;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing:    border-box;
+    box-sizing:         border-box;
+}
+
+.gs-gutter-half {
+    margin-left: -1.5rem;
+}
+
+.gs-gutter-half .gs-col {
+    padding-left: 1.5rem;
+}
+
+/*
+ * Use these classes if you need columns
+ * in the initial layout
+ */
+
+.gs-col-1 {
+    width: 100%;
+}
+
+.gs-col-1-2 {
+    width: 50%;
+}
+
+.gs-col-1-3 {
+    width: 33.333%;
+}
+
+.gs-col-2-3 {
+    width: 66.666%;
+}
+
+.gs-col-1-4 {
+    width: 25%;
+}
+
+.gs-col-3-4 {
+    width: 75%;
+}
+
+/*
+ * Use this class if you want a full-width column
+ */
+
 .strip {
     background: #efefef;
+    background-color: hsla(0, 0%, 93.7255%, 1.0);
     padding: 1.500rem 0;
     margin: 0 0 1.500rem;
 }
@@ -366,11 +504,14 @@ textarea {
     margin-bottom: 0;
 }
 
-/* Use these classes if you want to make a column stand out */
+/*
+ * Use these classes if you want to make a column stand out
+ */
+
 .island {
     padding: 1.500rem;
     background-color: #efefef;
-    background-color: hsla(0, 0%, 94%, 1);
+    background-color: hsla(0, 0%, 93.7255%, 1.0);
     -webkit-border-radius: 5px; /* Safari 3-4, iOS 1-3.2, Android ≤ 1.6 */
     -moz-border-radius:    5px; /* Firefox 1.0+ */
     border-radius:         5px; /* Opera 10.5, IE9+, Safari 5, Chrome, Firefox 4+, iOS 4, Android 2.1+ */
@@ -379,7 +520,7 @@ textarea {
 .well {
     padding: 1.500rem;
     background-color: #efefef;
-    background-color: hsla(0, 0%, 94%, 1);
+    background-color: hsla(0, 0%, 93.7255%, 1.0);
     -webkit-box-shadow: inset 0 0 5px hsla(0, 0%, 0%, 0.10); /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
     -moz-box-shadow:    inset 0 0 5px hsla(0, 0%, 0%, 0.10); /* Firefox 3.5+ */
     box-shadow:         inset 0 0 5px hsla(0, 0%, 0%, 0.10); /* Opera 10.5, IE9+, Firefox 4+, Chrome 6+, iOS 5 */
@@ -393,60 +534,9 @@ textarea {
     margin-bottom: 0;
 }
 
-.grid-col .island,
-.grid-col .well {
+.gs-col .island,
+.gs-col .well {
     margin-bottom: 1.5rem;
-}
-
-/* Set up your grids */
-.grid-wrap {
-    margin-left: -3rem;
-}
-
-.grid-col {
-    float: left;
-    padding-left: 3rem;
-    width: 100%;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing:    border-box;
-    box-sizing:         border-box;
-}
-
-.half-gutter {
-    margin-left: -1.5rem;
-}
-
-.half-gutter .grid-col {
-    padding-left: 1.5rem;
-}
-
-/*
- * Use these classes if you need columns
- * in the initial layout
- */
-
-.col-full {
-    width: 100%;
-}
-
-.col-one-half {
-    width: 50%;
-}
-
-.col-one-third {
-    width: 33.333%;
-}
-
-.col-two-thirds {
-    width: 66.666%;
-}
-
-.col-one-quarter {
-    width: 25%;
-}
-
-.col-three-quarters {
-    width: 75%;
 }
 
 /* ==========================================================================
@@ -457,22 +547,24 @@ textarea {
     display: inline-block;
     *display: inline;
     *zoom: 1;
-    padding: 8px 9px;
+    padding: 0 12px;
     border-width: 1px;
     border-style: solid;
     border-color: #c5c5c5;
-    border-color: hsla(0, 0%, 77%, 1);
+    border-color: hsla(0, 0%, 77.2549%, 1.0);
     -webkit-border-radius: 3px; /* Safari 3-4, iOS 1-3.2, Android ≤ 1.6 */
     -moz-border-radius:    3px; /* Firefox 1.0+ */
     border-radius:         3px; /* Opera 10.5, IE9+, Safari 5, Chrome, Firefox 4+, iOS 4, Android 2.1+ */
     background: #e5e5e5;
+    background: hsla(0, 0%, 89.8039%, 1.0);
     -webkit-box-shadow: inset 0 0 1px 1px hsla(0, 0%, 96%, 1); /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
     -moz-box-shadow:    inset 0 0 1px 1px hsla(0, 0%, 96%, 1); /* Firefox 3.5+ */
     box-shadow:         inset 0 0 1px 1px hsla(0, 0%, 96%, 1); /* Opera 10.5, IE9+, Firefox 4+, Chrome 6+, iOS 5 */
     color: #333;
-    color: hsla(0, 0%, 20%, 1);
-    font-size: 14px;
+    color: hsla(0, 0%, 20%, 1.0);
+    line-height: 2.875rem; /* ≈ 46px to account for top and bottom borders */
     text-align: center;
+    text-decoration: none;
     text-shadow: 0 1px 0 #fff;
     text-shadow: 0 1px 0 hsla(0, 0%, 100%, 1);
     cursor: pointer;
@@ -480,9 +572,9 @@ textarea {
 
 .btn:hover {
     background: #ececec;
-    background: hsla(0, 0%, 93%, 1);
+    background: hsla(0, 0%, 92.5490%, 1.0);
     color: #222;
-    color: hsla(0, 0%, 13%, 1);
+    color: hsla(0, 0%, 13.3333%, 1.0);
     cursor: pointer;
 }
 
@@ -507,15 +599,17 @@ textarea {
 .chromeframe,
 .no-js .js-notice {
     display: block;
-    padding: 0.5em 0;
+    padding: 0.563em 0; /* ≈ 9px */
     margin: 0;
-    font-size: 0.8125em;
+    font-size: 0.75em; /* ≈ 12px */
     text-align: center;
 }
 
 .chromeframe {
     border-bottom: 2px solid #d0d0d0;
+    border-bottom: 2px solid hsla(0, 0%, 81.5686%, 1.0);
     background-color: #f5f5f5;
+    background-color: hsla(0, 0%, 96.0784%, 1.0);
 }
 
 .js .js-notice {
@@ -524,7 +618,9 @@ textarea {
 
 .no-js .js-notice {
     border-bottom: 2px solid #fc6;
+    border-bottom: 2px solid hsla(40, 100%, 70%, 1.0);
     background-color: #ffffcc;
+    background-color: hsla(60, 100%, 90%, 1.0);
 }
 
 /* ==========================================================================
@@ -569,7 +665,8 @@ textarea {
 }
 
 /*
- * Hide only visually, but have it available for screenreaders: http://cbrac.co/TUcUgH
+ * Hide only visually, but have it available
+ * for screenreaders: http://cbrac.co/TUcUgH
  */
 
 .visuallyhidden {
@@ -631,13 +728,16 @@ textarea {
  *    that receive the `clearfix` class.
  */
 
-.clearfix:before,
-.clearfix:after {
+.gs-wrapper:before,
+.gs-wrapper:after,
+.cf:before,
+.cf:after {
     display: table; /* 1 */
     content: " ";   /* 2 */
 }
 
-.clearfix:after {
+.gs-wrapper:after,
+.cf:after {
     clear: both;
 }
 
@@ -646,7 +746,8 @@ textarea {
  * Include this rule to trigger hasLayout and contain floats.
  */
 
-.clearfix {
+.gs-wrapper,
+.cf {
     *zoom: 1;
 }
 
@@ -654,92 +755,95 @@ textarea {
    Media queries
    ========================================================================== */
 
-/* Grid breakpoint 1 (.bp1-*, ~480px) */
+/* Grid breakpoint 1 (.bp1-*, ~ 480px) */
 @media only screen and (min-width: 30em) {
-    .bp1-col-full {
+    .gs-bp1-col-1 {
         width: 100%;
     }
 
-    .bp1-col-one-half {
+    .gs-bp1-col-1-2 {
         width: 50%;
     }
 
-    .bp1-col-one-third {
+    .gs-bp1-col-1-3 {
         width: 33.333%;
     }
 
-    .bp1-col-two-thirds {
+    .gs-bp1-col-2-3 {
         width: 66.666%;
     }
 
-    .bp1-col-one-quarter {
+    .gs-bp1-col-1-4 {
         width: 25%;
     }
 
-    .bp1-col-three-quarters {
+    .gs-bp1-col-3-4 {
         width: 75%;
     }
 }
 
-/* Grid breakpoint 2 (.bp2-*, ~768px) */
+/* Grid breakpoint 2 (.bp2-*, ~ 768px) */
 @media only screen and (min-width: 48em) {
-    .bp2-col-full {
+    .gs-bp2-col-1 {
         width: 100%;
     }
 
-    .bp2-col-one-half {
+    .gs-bp2-col-1-2 {
         width: 50%;
     }
 
-    .bp2-col-one-third {
+    .gs-bp2-col-1-3 {
         width: 33.333%;
     }
 
-    .bp2-col-two-thirds {
+    .gs-bp2-col-2-3 {
         width: 66.666%;
     }
 
-    .bp2-col-one-quarter {
+    .gs-bp2-col-1-4 {
         width: 25%;
     }
 
-    .bp2-col-three-quarters {
+    .gs-bp2-col-3-4 {
         width: 75%;
     }
 }
 
-/* Grid breakpoint 3 (.bp3-*, ~960px) */
+/* Grid breakpoint 3 (.bp3-*, ~ 960px) */
 @media only screen and (min-width: 60em) {
-    .bp3-col-full {
+    .gs-bp3-col-1 {
         width: 100%;
     }
 
-    .bp3-col-one-half {
+    .gs-bp3-col-1-2 {
         width: 50%;
     }
 
-    .bp3-col-one-third {
+    .gs-bp3-col-1-3 {
         width: 33.333%;
     }
 
-    .bp3-col-two-thirds {
+    .gs-bp3-col-2-3 {
         width: 66.666%;
     }
 
-    .bp3-col-one-quarter {
+    .gs-bp3-col-1-4 {
         width: 25%;
     }
 
-    .bp3-col-three-quarters {
+    .gs-bp3-col-3-4 {
         width: 75%;
     }
 }
 
 /* Style adjustments for high resolution devices
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {} */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min-resolution: 144dpi) {
+
+} */
 
 /* ==========================================================================
-   Print styles, inlined to avoid an extra HTTP connection: http://cbrac.co/VUjfe3
+   Print styles, inlined to avoid an HTTP request: http://cbrac.co/VUjfe3
    ========================================================================== */
 
 @media print {
