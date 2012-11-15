@@ -6,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
+        <title>Cardinal | build more with less.</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
 
@@ -14,6 +14,7 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/demo.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
 
@@ -26,183 +27,282 @@
         <div class="bl-grid"></div>
         <div class="bl-grid-toggle"><button class="btn">Toggle grid</button></div>
 
-        <header class="strip">
+        <header class="strip" role="banner">
             <div class="wrapper">
-                <div class="grid-wrap clearfix">
-                    <div class="grid-col col-full">
-                        <h1 class="t-xxlarge">Cardinal Front-end Framework</h1>
+                <div class="gs-wrapper">
+                    <div class="gs-col gs-col-1">
+                        <h1>Cardinal</h1>
+                        <p class="t-large">Build more with less.</p>
 
-                        <p><strong>by <a href="http://cbracco.me" title="Chris Bracco">Chris Bracco</a></strong></p>
-
-                        <p>A barebones collection of killer front-end code for quicker web development. Includes some opinionated default styles, a typographic baseline grid, a minimal fluid grid system inspired by <a href="https://github.com/mattberridge/Proportional-Grids" title="Proportional Grids">Proportional Grids</a>, and lots of code from <a href="https://github.com/h5bp/html5-boilerplate" title="HTML5 Boilerplate">HTML5 Boilerplate</a>, <a href="https://github.com/necolas/normalize.css/" title="normalize.css">normalize.css</a>, <a href="http://jquery.com/">jQuery</a>, <a href="http://modernizr.com/" title="Modernizr">Modernizr</a>, and more.</p>
-
-                        <p>Many thanks to all of the amazing people who helped build the above.</p>
-                    </div><!-- end .grid-col -->
-                </div><!-- end .grid-wrap -->
+                        <p>
+                            <a href="https://github.com/cbracco/Cardinal" title="View on GitHub" class="btn">View on GitHub</a>
+                            <a href="https://github.com/cbracco/Cardinal/archive/master.zip" title="Download" class="btn">Download</a>
+                        </p>
+                    </div><!-- end .gs-col -->
+                </div><!-- end .gs-wrapper -->
             </div><!-- end .wrapper -->
         </header><!-- end .strip -->
 
         <div class="wrapper">
-            <section class="divide-bottom">
-                <div class="grid-wrap clearfix">
-                    <div class="grid-col col-full">
-                        <h2>Full-width column</h2>
+            <section class="gs-divider">
+                <div class="gs-wrapper">
+                    <div class="gs-col gs-col-1">
+                        <h2>What gives?</h2>
 
-                        <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec</a> <a href="#">non</a> <a href="#">enim</a> in turpis pulvinar facilisis. Ut felis.</p>
+                        <p class="t-medium">Cardinal is a barebones, responsive front-end web development framework equipped with bare minimum styles, zoomable typography, and a simple fluid grid system.</p>
 
-                        <ol>
-                            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                            <li>Aliquam tincidunt mauris eu risus.</li>
-                        </ol>
+                        <p>This framework takes the "<a href="http://bradfrostweb.com/blog/mobile/the-many-faces-of-mobile-first/" title="The Many Faces of ‘Mobile First’">mobile first</a>" approach to front-end web development, pulling from incredible resources like <a href="http://html5boilerplate.com/" title="HTML5 Boilerplate">HTML5 Boilerplate</a>, <a href="http://necolas.github.com/normalize.css/" title="normalize.css">normalize.css</a>, <a href="http://jquery.com/" title="jQuery">jQuery</a>, <a href="http://modernizr.com/" title="Modernizr">Modernizr</a>, and <a href="#thanks">others</a> to provide an excellent base to start your web projects.</p>
+                    </div><!-- end .gs-col -->
 
-                        <h3>Heading Level 3</h3>
+                    <div class="gs-col gs-bp1-col-1-2 gs-bp2-col-1-3">
+                        <h3>Minimal styling</h3>
 
-                        <ul>
-                            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                            <li>Aliquam tincidunt mauris eu risus.</li>
-                        </ul>
+                        <p>While frameworks like <a href="http://twitter.github.com/bootstrap/" title="Bootstrap, by Twitter">Bootstrap</a> and <a href="http://foundation.zurb.com/" title="Foundation, by ZURB">Foundation</a> provide many useful tools, their detailed styles have become quite ubiquitous. Cardinal stays out of your way by only providing the bare minimum, leaving the creativity up to you.</p>
+                    </div><!-- end .gs-col -->
 
-                        <pre><code>#header h1 a {
-    display: block;
-    width: 300px;
-    height: 80px;
-}</code></pre>
+                    <div class="gs-col gs-bp1-col-1-2 gs-bp2-col-1-3">
+                        <h3>Rich typography</h3>
 
-                        <h4>Heading Level 4</h4>
+                        <p>Don't underestimate the importance of great type on the web. Cardinal combines the structure of a <a href="http://www.alistapart.com/articles/settingtypeontheweb/" title="Setting Type on the Web to a Baseline Grid">baseline grid</a> with the concept of <a href="http://www.alistapart.com/articles/more-meaningful-typography/" title="More Meaningful Typography">modular scale</a> to provide a strong vertical rhythm.</p>
+                    </div><!-- end .gs-col -->
 
-                        <blockquote>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p>
+                    <div class="gs-col gs-bp1-col-1 gs-bp2-col-1-3">
+                        <h3>Simple, fluid grid</h3>
 
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                        <p>Cardinal's dead simple, <a href="http://www.zurb.com/word/lorem-ipsum" title="Dummy text is for dummies.">content-driven</a> fluid grid system will have you creating awesome layouts in no time. Nesting is a cinch, too! </p>
+                    </div><!-- end .gs-col -->
+                </div><!-- end .gs-wrapper -->
+            </section><!-- end .gs-divider -->
 
-                            <footer>Lorem Ipsum</footer>
-                        </blockquote>
-                    </div><!-- end .grid-col -->
-                </div><!-- end .grid-wrap -->
-            </section><!-- end .divide-bottom -->
+            <section class="gs-divider">
+                <div class="gs-wrapper">
+                    <div class="gs-col gs-bp1-col-1-2">
+                        <h2>Grid system</h2>
 
-            <section class="divide-bottom">
-                <div class="grid-wrap clearfix">
-                    <div class="grid-col col-one-half">
-                        <h2>Basic grid</h2>
+                        <p>Based on the clever ideas of <a href="http://builtbyboon.com/blog/proportional-grids" title="Proportional Grids FTW!">Matt Berridge</a>, Cardinal's grid system uses the powerful CSS3 <code>box-sizing</code> property along with fluid (<a href="http://www.w3.org/TR/css3-values/#percentage-value" title="Percentage values">%</a>-based) column widths and fixed (<a href="http://www.w3.org/TR/css3-values/#rem-unit" title="The REM unit">rem</a>-based) column gutters. Nesting grid elements is a breeze, and make the grid work for your content by adding custom media query breakpoints and <abbr title="Cascading Style Sheets">CSS</abbr> classes to your columns.</p>
 
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p>
-                    </div><!-- end .grid-col -->
+                        <pre rel="HTML5"><code>&lt;section class=&quot;gs-divider&quot;&gt;
+    &lt;div class=&quot;gs-wrapper&quot;&gt;
+        &lt;div class=&quot;gs-col gs-bp1-col-1-4&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;gs-col gs-bp1-col-1-4&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;gs-col gs-bp1-col-1-4&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;gs-col gs-bp1-col-1-4&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/section&gt;</code></pre>
+                    </div>
 
-                    <div class="grid-col col-one-half">
-                        <h2>Basic grid</h2>
+                    <div class="gs-col gs-bp1-col-1-2">
+                        <h2>Usage</h2>
 
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p>
-                    </div><!-- end .grid-col -->
-                </div><!-- end .grid-wrap -->
-            </section><!-- end .divide-bottom -->
+                        <p>By default, the grid is split into <strong>four columns</strong>, or quarters. If you need more columns, simply add more classes to the system.</p>
 
-            <section class="divide-bottom">
-                <div class="grid-wrap clearfix">
-                    <div class="grid-col bp1-col-one-half bp2-col-two-thirds">
-                        <h2>Grid with custom breakpoints</h2>
+                        <h3>Required classes</h3>
 
-                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-
-                        <div class="island">
-                            <h3>Island block</h3>
-
-                            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-                        </div>
-                    </div><!-- end .grid-col -->
-
-                    <div class="grid-col bp1-col-one-half bp2-col-one-third">
-                        <h2>Grid with custom breakpoints</h2>
-
-                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-                    </div><!-- end .grid-col -->
-                </div><!-- end .grid-wrap -->
-            </section><!-- end .divide-bottom -->
-
-            <section class="divide-bottom">
-                <div class="grid-wrap clearfix">
-                    <div class="grid-col bp1-col-one-half bp2-col-one-third">
-                        <h2>Jumping grid</h2>
-
-                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-                    </div><!-- end .grid-col -->
-
-                    <div class="grid-col bp1-col-one-half bp2-col-one-third">
-                        <h2>Jumping grid</h2>
-
-                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-                    </div><!-- end .grid-col -->
-
-                    <div class="grid-col bp2-col-one-third">
-                        <h2>Jumping grid</h2>
-
-                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-                    </div><!-- end .grid-col -->
-                </div><!-- end .grid-wrap -->
-            </section><!-- end .divide-bottom -->
-
-            <section class="divide-bottom">
-                <div class="grid-wrap clearfix">
-                    <div class="grid-col bp1-col-one-half">
-                        <h2>Parent grid</h2>
-
-                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-
-                        <div class="grid-wrap clearfix">
-                            <div class="grid-col bp2-col-one-half">
-                                <h3>Nested grid</h3>
-
-                                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-                            </div><!-- end .grid-col -->
-
-                            <div class="grid-col bp2-col-one-half">
-                                <h3>Nested grid</h3>
-
-                                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-                            </div><!-- end .grid-col -->
-                        </div><!-- end .grid-wrap -->
-                    </div><!-- end .grid-col -->
-
-                    <div class="grid-col bp1-col-one-half">
-                        <h2>Parent grid</h2>
-
-                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+                        <p>Every column must have the <code>.gs-col</code> class, and a set of columns needs to be wrapped with a <code>&lt;div class=&quot;gs-wrapper&quot;&gt;</code> element.</p>
 
                         <ul>
-                            <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                            <li>Aliquam tincidunt mauris eu risus.</li>
+                            <li><code>.gs-wrapper</code> - contains a set of grid columns</li>
+                            <li><code>.gs-col</code> - designates an element as a column in the grid</li>
+                            <li><code>.gs-col-*</code> - determines a column's proportion (for example, "gs-col-1-3" sets a column to one-third the width of its container)</li>
                         </ul>
 
-                        <div class="well">
-                            <h3>Well block</h3>
+                        <h3>Optional classes</h3>
 
-                            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+                        <ul>
+                            <li><code>.gs-bp*-col-*</code> - splits a grid wrapper into columns based on the specified breakpoint (.bp1, .bp2, etc)</li>
+                            <li><code>.gs-divider</code> - adds a border to the bottom of a grid wrapper (.gs-wrapper)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="gs-wrapper">
+                    <div class="gs-col">
+                        <div class="gs-wrapper">
+                            <div class="gs-col demo-gs-example">
+                                <h3>Example: Simple grid, no breakpoints</h3>
+
+                                <p>Just need some fluid columns to work with? This is the simplest way to do it. No breakpoints considered, just fluid columns that keep their proportions at any viewport width.</p>
+
+                                <!-- Quarters -->
+                                <div class="gs-wrapper">
+                                    <div class="gs-col gs-col-1-4"><div class="island">.gs-col-1-4</div></div>
+                                    <div class="gs-col gs-col-1-4"><div class="island">.gs-col-1-4</div></div>
+                                    <div class="gs-col gs-col-1-4"><div class="island">.gs-col-1-4</div></div>
+                                    <div class="gs-col gs-col-1-4"><div class="island">.gs-col-1-4</div></div>
+                                </div>
+
+                                <!-- Thirds -->
+                                <div class="gs-wrapper">
+                                    <div class="gs-col gs-col-1-3"><div class="island">.gs-col-1-3</div></div>
+                                    <div class="gs-col gs-col-1-3"><div class="island">.gs-col-1-3</div></div>
+                                    <div class="gs-col gs-col-1-3"><div class="island">.gs-col-1-3</div></div>
+                                </div>
+
+                                <!-- Halves -->
+                                <div class="gs-wrapper">
+                                    <div class="gs-col gs-col-1-2"><div class="island">.gs-col-1-2</div></div>
+                                    <div class="gs-col gs-col-1-2"><div class="island">.gs-col-1-2</div></div>
+                                </div>
+
+                                <!-- Full -->
+                                <div class="gs-wrapper">
+                                    <div class="gs-col gs-col-1"><div class="island">.gs-col-1</div></div>
+                                </div>
+                            </div>
+
+                            <div class="gs-col demo-gs-example">
+                                <h3>Example: Simple grid, no breakpoints, half-size gutters</h3>
+
+                                <p>Same as above, except with gutters that are half the size.</p>
+
+                                <!-- Quarters -->
+                                <div class="gs-wrapper gs-gutter-half">
+                                    <div class="gs-col gs-col-1-4"><div class="island">.gs-col-1-4</div></div>
+                                    <div class="gs-col gs-col-1-4"><div class="island">.gs-col-1-4</div></div>
+                                    <div class="gs-col gs-col-1-4"><div class="island">.gs-col-1-4</div></div>
+                                    <div class="gs-col gs-col-1-4"><div class="island">.gs-col-1-4</div></div>
+                                </div>
+
+                                <!-- Thirds -->
+                                <div class="gs-wrapper gs-gutter-half">
+                                    <div class="gs-col gs-col-1-3"><div class="island">.gs-col-1-3</div></div>
+                                    <div class="gs-col gs-col-1-3"><div class="island">.gs-col-1-3</div></div>
+                                    <div class="gs-col gs-col-1-3"><div class="island">.gs-col-1-3</div></div>
+                                </div>
+
+                                <!-- Halves -->
+                                <div class="gs-wrapper gs-gutter-half">
+                                    <div class="gs-col gs-col-1-2"><div class="island">.gs-col-1-2</div></div>
+                                    <div class="gs-col gs-col-1-2"><div class="island">.gs-col-1-2</div></div>
+                                </div>
+
+                                <!-- Full -->
+                                <div class="gs-wrapper gs-gutter-half">
+                                    <div class="gs-col gs-col-1"><div class="island">.gs-col-1</div></div>
+                                </div>
+                            </div>
+
+                            <div class="gs-col demo-gs-example">
+                                <h3>Example: Simple grid, custom breakpoints</h3>
+
+                                <p>Now we're talking. This grid includes columns that are aware of the custom breakpoints defined in this project. For instance, using the <code>.gs-bp1-col-1-2</code> class on a column means that when the viewport reaches a minimum width equal to the first @media query breakpoint, change that column's proportion to one half. The <code>*-1-2</code> suffix in the class name stands for the proportion. In this case, it's one-half. Make sense?</p>
+
+                                <!-- Quarters -->
+                                <div class="gs-wrapper">
+                                    <div class="gs-col gs-bp1-col-1-2 gs-bp2-col-1-4"><div class="island">.gs-bp1-col-1-2<br>.gs-bp2-col-1-4</div></div>
+                                    <div class="gs-col gs-bp1-col-1-2 gs-bp2-col-1-4"><div class="island">.gs-bp1-col-1-2<br>.gs-bp2-col-1-4</div></div>
+                                    <div class="gs-col gs-bp1-col-1-2 gs-bp2-col-1-4"><div class="island">.gs-bp1-col-1-2<br>.gs-bp2-col-1-4</div></div>
+                                    <div class="gs-col gs-bp1-col-1-2 gs-bp2-col-1-4"><div class="island">.gs-bp1-col-1-2<br>.gs-bp2-col-1-4</div></div>
+                                </div>
+
+                                <!-- Thirds -->
+                                <div class="gs-wrapper">
+                                    <div class="gs-col gs-bp1-col-1-2 gs-bp2-col-1-3"><div class="island">.gs-bp1-col-1-2<br>.gs-bp2-col-1-3</div></div>
+                                    <div class="gs-col gs-bp1-col-1-2 gs-bp2-col-1-3"><div class="island">.gs-bp1-col-1-2<br>.gs-bp2-col-1-3</div></div>
+                                    <div class="gs-col gs-bp1-col-1 gs-bp2-col-1-3"><div class="island">.gs-bp1-col-1-2<br>.gs-bp2-col-1-3</div></div>
+                                </div>
+
+                                <!-- Halves -->
+                                <div class="gs-wrapper">
+                                    <div class="gs-col gs-bp2-col-1-2"><div class="island">.gs-bp2-col-1-2</div></div>
+                                    <div class="gs-col gs-bp2-col-1-2"><div class="island">.gs-bp2-col-1-2</div></div>
+                                </div>
+
+                                <!-- Full -->
+                                <div class="gs-wrapper">
+                                    <div class="gs-col gs-bp2-col-1"><div class="island">.gs-bp2-col-1</div></div>
+                                </div>
+                            </div>
+
+                            <div id="gs-ng-nbp" class="gs-col demo-gs-example">
+                                <h3>Example: Nested grid, no breakpoints</h3>
+
+                                <p>Yo dawg, I heard you like grids...that's great! Nesting grids with Cardinal is hassle-free. Simply define your parent column proportions (in this case its <code>.gs-col-1-2</code>), then keep adding grids within the parent grid.</p>
+
+                                <div class="demo-gs-example-parent">
+                                    <div class="gs-wrapper">
+                                        <div class="gs-col gs-col-1-2">
+                                            <div class="island">.gs-col-1-2</div>
+
+                                            <div class="gs-wrapper">
+                                                <div class="gs-col gs-col-1-2">
+                                                    <div class="island">.gs-col-1-2</div>
+                                                </div><!-- end .gs-col -->
+
+                                                <div class="gs-col gs-col-1-2">
+                                                    <div class="island">.gs-col-1-2</div>
+                                                </div><!-- end .gs-col -->
+                                            </div><!-- end .gs-wrapper -->
+                                        </div><!-- end .gs-col -->
+
+                                        <div class="gs-col gs-col-1-2">
+                                            <div class="island">.gs-col-1-2</div>
+                                        </div><!-- end .gs-col -->
+                                    </div><!-- end .gs-wrapper -->
+                                </div>
+                            </div>
+
+                            <div id="gs-ng-nbp" class="gs-col demo-gs-example">
+                                <h3>Example: Nested grid, custom breakpoints</h3>
+
+                                <p>Yes, you can even define custom breakpoints for your nested grids.</p>
+
+                                <div class="demo-gs-example-parent">
+                                    <div class="gs-wrapper gs-gutter-half">
+                                        <div class="gs-col gs-bp1-col-1-2">
+                                            <div class="island">.gs-col-1-2</div>
+
+                                            <div class="gs-wrapper gs-gutter-half">
+                                                <div class="gs-col gs-bp2-col-1-2">
+                                                    <div class="island">.gs-bp2-col-1-2</div>
+                                                </div><!-- end .gs-col -->
+
+                                                <div class="gs-col gs-bp2-col-1-2">
+                                                    <div class="island">.gs-bp2-col-1-2</div>
+                                                </div><!-- end .gs-col -->
+                                            </div><!-- end .gs-wrapper -->
+                                        </div><!-- end .gs-col -->
+
+                                        <div class="gs-col gs-bp1-col-1-2">
+                                            <div class="island">.gs-col-1-2</div>
+                                        </div><!-- end .gs-col -->
+                                    </div><!-- end .gs-wrapper -->
+                                </div>
+                            </div>
                         </div>
-                    </div><!-- end .grid-col -->
-                </div><!-- end .grid-wrap -->
-            </section><!-- end .divide-bottom -->
+                    </div><!-- end .gs-col -->
+                </div><!-- end .gs-wrapper -->
+            </section><!-- end .gs-divider -->
 
-            <section class="divide-bottom">
-                <div class="grid-wrap half-gutter clearfix">
-                    <div class="grid-col bp2-col-one-third">
-                        <h2>Half-gutter grid</h2>
+            <section id="thanks" class="gs-wrapper">
+                <div class="gs-col gs-bp2-col-1-3">
+                    <h2>Browser support</h2>
 
-                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-                    </div><!-- end .grid-col -->
+                    <p>The code used here should work fine in all modern browsers, as far back as IE8.</p>
 
-                    <div class="grid-col bp2-col-one-third">
-                        <h2>Half-gutter grid</h2>
+                    <ul>
+                        <li>Google Chrome</li>
+                        <li>Mozilla Firefox</li>
+                        <li>Safari</li>
+                        <li>Opera</li>
+                        <li>Internet Explorer 8+</li>
+                    </ul>
+                </div><!-- end .gs-col -->
 
-                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-                    </div><!-- end .grid-col -->
+                <div class="gs-col gs-bp2-col-1-3">
+                    <h2>Many thanks to...</h2>
 
-                    <div class="grid-col bp2-col-one-third">
-                        <h2>Half-gutter grid</h2>
+                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+                </div><!-- end .gs-col -->
 
-                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-                    </div><!-- end .grid-col -->
-                </div><!-- end .grid-wrap -->
-            </section><!-- end .divide-bottom -->
+                <div class="gs-col gs-bp2-col-1-3">
+                    <h2>No license</h2>
+
+                    <p>Cardinal is "licensed" under the <abbr title="Do What the Fuck You Want to Public License"><a href="http://en.wikipedia.org/wiki/WTFPL">WTFPL</a></abbr>, meaning please feel free to do whatever the f*ck you want with this.</p>
+
+                    <p>Use it, fork it, break it, re-make it.<br>Care, we do not.</p>
+                </div><!-- end .gs-col -->
+            </section><!-- end .gs-wrapper -->
         </div><!-- end .wrapper -->
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>

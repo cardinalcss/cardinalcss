@@ -31,22 +31,11 @@ html {
 }
 
 /*
- * 1. Consistent text color across different HTML elements
- */
-
-html,
-button,
-input,
-select,
-textarea {
-    color: #222; /* 1 */
-}
-
-/*
- * Establish initial font size and line height for the baseline grid
+ * Establish initial text color, font size, and line height
  */
 
 body {
+    color: #222;
     font-size: 1.000rem;
     line-height: 1.500rem;
 }
@@ -85,10 +74,12 @@ a:hover {
 
 /* ==========================================================================
    Typography
+   http://modularscale.com/scale/?px1=16&px2=&ra1=1.333&ra2=0
+   16px @ 1:1.333 (Perfect fourth)
    ========================================================================== */
 
 /*
- * 1. Sets common typographic elements to a baseline grid
+ * 1. Sets a consistent margin for common HTML elements
  */
 
 blockquote,
@@ -99,16 +90,17 @@ ol,
 p,
 pre,
 ul {
-    font-size: 1.000rem;  /* 1 */
-    margin: 0 0 1.500rem; /* 1 */
+    margin: 0 0 1.500rem;
 }​
 
-big {
-    font-size: 2.000rem;
+big,
+.t-xxlarge {
+    font-size: 4.209rem;
+    line-height: 4.500rem;
 }
 
 blockquote {
-    margin-left: 40px;
+    margin-left: 2.369rem;
 }
 
 blockquote p {
@@ -201,10 +193,6 @@ hr {
     border-bottom: 1px solid white;
 }
 
-.huge {
-
-}
-
 ins {
     background: #ff9;
     color: #000;
@@ -275,6 +263,28 @@ video {
 
 img {
     vertical-align: middle;
+}
+
+/*
+ * Inherit font styles from <body>
+ */
+
+input,
+select,
+textarea {
+    font-size: inherit;
+    font-family: inherit;
+    line-height: inherit;
+}
+
+/*
+ * Remove black outlines in IE7
+ */
+
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    filter: chroma(color=#000000);
 }
 
 /*

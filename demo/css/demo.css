@@ -1,0 +1,38 @@
+body {
+	position: relative;
+}
+
+.bl-grid {
+	background-image: -webkit-linear-gradient(hsla(0, 0%, 0%, 0) 95%, hsla(175, 69.8561%, 47.6574%, 0.75) 95%);
+    background-image: -moz-linear-gradient(hsla(0, 0%, 0%, 0) 95%, hsla(175, 69.8561%, 47.6574%, 0.75) 95%);
+    background-image: -ms-linear-gradient(hsla(0, 0%, 0%, 0) 95%, hsla(175, 69.8561%, 47.6574%, 0.75) 95%);
+    background-image: -o-linear-gradient(hsla(0, 0%, 0%, 0) 95%, hsla(175, 69.8561%, 47.6574%, 0.75) 95%);
+    background-image: linear-gradient(hsla(0, 0%, 0%, 0) 95%, hsla(175, 69.8561%, 47.6574%, 0.75) 95%);
+}
+
+header.strip {
+	color: #fff;
+	color: hsla(0, 0%, 100%, 1);
+	background-color: #c12222;
+	background-color: hsla(360, 70.0441%, 44.5098%, 1.0);
+}
+
+h2.tagline {
+	font-weight: 300;
+	text-transform: lowercase;
+}
+
+.demo-gs-example .island {
+	text-align: center;
+}
+
+.demo-gs-example .island:hover {
+	background-color: #e5e5e5;
+    background-color: hsla(0, 0%, 89.8039%, 1.0);
+}
+
+.demo-gs-example-parent {
+	margin-bottom: 1.500rem;
+	background-color: #d8d8d8;
+	background-color: hsla(0, 0%, 84.7059%, 1.0);
+}
