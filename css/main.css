@@ -122,7 +122,7 @@ ul {
 }​
 
 big,
-.text-xxl {
+.text_xxl {
     font-size: 4.209rem;
     line-height: 4.500rem;
 }
@@ -199,26 +199,26 @@ h6 {
 }
 
 h1,
-.text-xl {
+.text_xl {
     font-size: 3.157rem;
     line-height: 3.000rem;
 }
 
 h2,
-.text-large {
+.text_large {
     font-size: 2.369rem;
     line-height: 3.000rem;
 }
 
 h3,
-.text-medium {
+.text_medium {
     font-size: 1.333rem;
 }
 
 h4,
 h5,
 h6,
-.text-normal {
+.text_normal {
     font-size: 1.000rem;
 }
 
@@ -306,6 +306,11 @@ pre[rel]:before {
     letter-spacing: 0.1rem;
     font-size: 1.333rem;
     line-height: 3rem;
+}
+
+small,
+.text_small {
+    font-size: 0.844rem;
 }
 
 /* ==========================================================================
@@ -434,17 +439,17 @@ textarea {
 }
 
 /* ==========================================================================
-   Baseline grid guide (.bl-*)
+   Baseline grid guide (.baseline__*)
    For development only, remove this on production sites
    ========================================================================== */
 
-.bl-grid {
+.baseline {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 9999;
+    z-index: 1;
     background-image: -webkit-linear-gradient(hsla(0, 0%, 0%, 0) 95%, hsla(0, 25%, 50%, 0.25) 95%);
     background-image: -moz-linear-gradient(hsla(0, 0%, 0%, 0) 95%, hsla(0, 25%, 50%, 0.25) 95%);
     background-image: -ms-linear-gradient(hsla(0, 0%, 0%, 0) 95%, hsla(0, 25%, 50%, 0.25) 95%);
@@ -454,7 +459,7 @@ textarea {
     background-size: 1.500rem 1.500rem;
 }
 
-.bl-grid-toggle {
+.baseline__toggle {
     position: fixed;
     top: 1.500rem;
     right: 5%;
@@ -462,19 +467,19 @@ textarea {
     margin-top: -1px;
 }
 
-.bl-grid-on {
+.baseline_on {
     position: relative;
 }
 
 /* ==========================================================================
-   Grid system (.gs-*)
+   Grid system (.gs__*)
 
    Usage:
    <div class="wrapper">
-       <div class="gs-divider">
-           <div class="gs-wrapper">
-               <div class="gs-col gs-bp1-col-1-2">foo</div>
-               <div class="gs-col gs-bp1-col-1-2">bar</div>
+       <div class="gs__divider">
+           <div class="gs__wrapper">
+               <div class="gs__col gs__bp1__col-1-2">foo</div>
+               <div class="gs__col gs__bp1__col-1-2">bar</div>
            </div>
        </div>
    </div>
@@ -490,28 +495,28 @@ textarea {
  * Use this class if you want to add a border to the bottom of a column
  */
 
-.gs-divider {
-    border-bottom: 1px solid #c0c0c0;
-    border-bottom: 1px solid hsla(0, 0%, 75.2941%, 1.0);
+.gs__divider {
+    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid hsla(0, 0%, 87.8431%, 1.0);
     margin-top: -1px;  /* Maintains the baseline grid */
     margin-bottom: 1.500rem;
 }
 
-.gs-wrapper {
+.gs__wrapper {
     margin-left: -3.000rem;
 }
 
-.gs-col {
+.gs__col {
     float: left;
     padding-left: 3.000rem;
     width: 100%;
 }
 
-.gs-gutter-half {
+.gs__gutter-half {
     margin-left: -1.500rem;
 }
 
-.gs-gutter-half .gs-col {
+.gs__gutter-half .gs__col {
     padding-left: 1.500rem;
 }
 
@@ -520,27 +525,27 @@ textarea {
  * in the initial layout
  */
 
-.gs-col-1 {
+.gs__col-1 {
     width: 100%;
 }
 
-.gs-col-1-2 {
+.gs__col-1-2 {
     width: 50%;
 }
 
-.gs-col-1-3 {
+.gs__col-1-3 {
     width: 33.333%;
 }
 
-.gs-col-2-3 {
+.gs__col-2-3 {
     width: 66.666%;
 }
 
-.gs-col-1-4 {
+.gs__col-1-4 {
     width: 25%;
 }
 
-.gs-col-3-4 {
+.gs__col-3-4 {
     width: 75%;
 }
 
@@ -589,8 +594,8 @@ textarea {
     margin-bottom: 0;
 }
 
-.gs-col .island,
-.gs-col .well {
+.gs__col .island,
+.gs__col .well {
     margin-bottom: 1.500rem;
 }
 
@@ -598,8 +603,8 @@ textarea {
    Chrome Frame & Javascript prompts
    ========================================================================== */
 
-.chromeframe,
-.no-js .js-notice {
+.notice__chrome-frame,
+.no-js .notice__js {
     display: block;
     margin: 0;
     padding: 0.750rem 0;
@@ -607,16 +612,16 @@ textarea {
     font-size: 0.750rem;
 }
 
-.chromeframe {
+.notice__chrome-frame {
     background-color: #f5f5f5;
     background-color: hsla(0, 0%, 96.0784%, 1.0);
 }
 
-.js .js-notice {
+.js .notice__js {
     display: none;
 }
 
-.no-js .js-notice {
+.no-js .notice__js {
     background-color: #ffffcc;
     background-color: hsla(60, 100%, 90%, 1.0);
 }
@@ -642,14 +647,14 @@ textarea {
    ========================================================================== */
 
 /* Floats */
-.float-left  { float: left; }
-.float-right { float: right; }
-.float-none  { float: none; }
+.float_left  { float: left; }
+.float_right { float: right; }
+.float_none  { float: none; }
 
 /* Text alignment */
-.text-left   { text-align: left; }
-.text-right  { text-align: right; }
-.text-center { text-align: center; }
+.text_left   { text-align: left; }
+.text_right  { text-align: right; }
+.text_center { text-align: center; }
 
 /* Image replacement */
 .ir {
@@ -739,15 +744,15 @@ textarea {
  *    that receive the `clearfix` class.
  */
 
-.gs-wrapper:before,
-.gs-wrapper:after,
+.gs__wrapper:before,
+.gs__wrapper:after,
 .cf:before,
 .cf:after {
     display: table; /* 1 */
     content: " ";   /* 2 */
 }
 
-.gs-wrapper:after,
+.gs__wrapper:after,
 .cf:after {
     clear: both;
 }
@@ -757,7 +762,7 @@ textarea {
  * Include this rule to trigger hasLayout and contain floats.
  */
 
-.gs-wrapper,
+.gs__wrapper,
 .cf {
     *zoom: 1;
 }
@@ -766,83 +771,83 @@ textarea {
    Media queries
    ========================================================================== */
 
-/* Grid breakpoint 1 (.bp1-*, ≈ 480px) */
+/* Grid breakpoint 1 (.bp1__*, ≈ 480px) */
 @media only screen and (min-width: 30em) {
-    .gs-bp1-col-1 {
+    .gs__bp1__col-1 {
         width: 100%;
     }
 
-    .gs-bp1-col-1-2 {
+    .gs__bp1__col-1-2 {
         width: 50%;
     }
 
-    .gs-bp1-col-1-3 {
+    .gs__bp1__col-1-3 {
         width: 33.333%;
     }
 
-    .gs-bp1-col-2-3 {
+    .gs__bp1__col-2-3 {
         width: 66.666%;
     }
 
-    .gs-bp1-col-1-4 {
+    .gs__bp1__col-1-4 {
         width: 25%;
     }
 
-    .gs-bp1-col-3-4 {
+    .gs__bp1__col-3-4 {
         width: 75%;
     }
 }
 
-/* Grid breakpoint 2 (.bp2-*, ≈ 768px) */
+/* Grid breakpoint 2 (.bp2__*, ≈ 768px) */
 @media only screen and (min-width: 48em) {
-    .gs-bp2-col-1 {
+    .gs__bp2__col-1 {
         width: 100%;
     }
 
-    .gs-bp2-col-1-2 {
+    .gs__bp2__col-1-2 {
         width: 50%;
     }
 
-    .gs-bp2-col-1-3 {
+    .gs__bp2__col-1-3 {
         width: 33.333%;
     }
 
-    .gs-bp2-col-2-3 {
+    .gs__bp2__col-2-3 {
         width: 66.666%;
     }
 
-    .gs-bp2-col-1-4 {
+    .gs__bp2__col-1-4 {
         width: 25%;
     }
 
-    .gs-bp2-col-3-4 {
+    .gs__bp2__col-3-4 {
         width: 75%;
     }
 }
 
-/* Grid breakpoint 3 (.bp3-*, ≈ 960px) */
+/* Grid breakpoint 3 (.bp3__*, ≈ 960px) */
 @media only screen and (min-width: 60em) {
-    .gs-bp3-col-1 {
+    .gs__bp3__col-1 {
         width: 100%;
     }
 
-    .gs-bp3-col-1-2 {
+    .gs__bp3__col-1-2 {
         width: 50%;
     }
 
-    .gs-bp3-col-1-3 {
+    .gs__bp3__col-1-3 {
         width: 33.333%;
     }
 
-    .gs-bp3-col-2-3 {
+    .gs__bp3__col-2-3 {
         width: 66.666%;
     }
 
-    .gs-bp3-col-1-4 {
+    .gs__bp3__col-1-4 {
         width: 25%;
     }
 
-    .gs-bp3-col-3-4 {
+    .gs__bp3__col-3-4 {
         width: 75%;
     }
 }

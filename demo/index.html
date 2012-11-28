@@ -22,263 +22,263 @@
     </head>
 
     <body>
-        <!--[if lt IE 7]><p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p><![endif]-->
+        <!--[if lt IE 7]><p class="notice__chrome-frame">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p><![endif]-->
 
-        <p class="js-notice">Javascript is <strong>currently disabled</strong> in your browser. This site requires Javascript to function correctly. Please <a href="http://enable-javascript.com/">enable Javascript in your browser</a>!</p>
+        <p class="notice__js">Javascript is <strong>currently disabled</strong> in your browser. This site requires Javascript to function correctly. Please <a href="http://enable-javascript.com/">enable Javascript in your browser</a>!</p>
 
         <!-- Baseline grid (for development only) -->
-        <div class="bl-grid"></div>
-        <div class="bl-grid-toggle"><button class="btn">Toggle grid</button></div>
+        <div class="baseline"></div>
+        <div class="baseline__toggle"><button class="btn">Toggle grid</button></div>
 
         <header class="strip" role="banner">
             <div class="wrapper">
-                <div class="gs-wrapper">
-                    <div class="gs-col gs-col-1">
+                <div class="gs__wrapper">
+                    <div class="gs__col gs__col-1">
                         <h1>Cardinal</h1>
-                        <p class="text-medium">Build more with less.</p>
+                        <p class="text_medium">Build more with less.</p>
 
                         <p>
                             <a href="https://github.com/cbracco/Cardinal" title="View on GitHub" class="btn">View on GitHub</a>
                             <a href="https://github.com/cbracco/Cardinal/archive/master.zip" title="Download" class="btn">Download</a>
                         </p>
-                    </div><!-- end .gs-col -->
-                </div><!-- end .gs-wrapper -->
+                    </div><!-- end .gs__col -->
+                </div><!-- end .gs__wrapper -->
             </div><!-- end .wrapper -->
         </header><!-- end .strip -->
 
         <div class="wrapper">
-            <section class="gs-divider">
-                <div class="gs-wrapper">
-                    <div class="gs-col gs-col-1">
+            <section class="gs__divider">
+                <div class="gs__wrapper">
+                    <div class="gs__col gs__col-1">
                         <h2>What gives?</h2>
 
-                        <p class="t-medium">Cardinal is a barebones, responsive front-end web development framework equipped with bare minimum styles, zoomable typography, and a simple fluid grid system.</p>
+                        <p class="text_medium">Cardinal is a barebones, responsive front-end web development framework equipped with bare minimum styles, zoomable typography, and a simple fluid grid system.</p>
 
                         <p>This framework takes the "<a href="http://bradfrostweb.com/blog/mobile/the-many-faces-of-mobile-first/" title="The Many Faces of ‘Mobile First’">mobile first</a>" approach to front-end web development, pulling from incredible resources like <a href="http://html5boilerplate.com/" title="HTML5 Boilerplate">HTML5 Boilerplate</a>, <a href="http://necolas.github.com/normalize.css/" title="normalize.css">normalize.css</a>, <a href="http://jquery.com/" title="jQuery">jQuery</a>, <a href="http://modernizr.com/" title="Modernizr">Modernizr</a>, and <a href="#thanks">others</a> to provide an excellent base to start your web projects.</p>
-                    </div><!-- end .gs-col -->
+                    </div><!-- end .gs__col -->
 
-                    <div class="gs-col gs-bp1-col-1-2 gs-bp2-col-1-3">
+                    <div class="gs__col gs__bp1__col-1-2 gs__bp2__col-1-3">
                         <h3>Minimal styling</h3>
 
                         <p>While frameworks like <a href="http://twitter.github.com/bootstrap/" title="Bootstrap, by Twitter">Bootstrap</a> and <a href="http://foundation.zurb.com/" title="Foundation, by ZURB">Foundation</a> provide many useful tools and look beautiful, their signature styling has become quite ubiquitous. Cardinal tries to stay out of your way by only providing the bare minimum, leaving the creativity up to you.</p>
-                    </div><!-- end .gs-col -->
+                    </div><!-- end .gs__col -->
 
-                    <div class="gs-col gs-bp1-col-1-2 gs-bp2-col-1-3">
+                    <div class="gs__col gs__bp1__col-1-2 gs__bp2__col-1-3">
                         <h3>Rich typography</h3>
 
                         <p>Don't underestimate the importance of great type on the web. Cardinal combines the structure of a <a href="http://www.alistapart.com/articles/settingtypeontheweb/" title="Setting Type on the Web to a Baseline Grid">baseline grid</a> with the concept of <a href="http://www.alistapart.com/articles/more-meaningful-typography/" title="More Meaningful Typography">modular scale</a> to provide a strong vertical rhythm.</p>
-                    </div><!-- end .gs-col -->
+                    </div><!-- end .gs__col -->
 
-                    <div class="gs-col gs-bp1-col-1 gs-bp2-col-1-3">
+                    <div class="gs__col gs__bp1__col-1 gs__bp2__col-1-3">
                         <h3>Simple, fluid grid</h3>
 
                         <p>Cardinal's dead simple, <a href="http://www.zurb.com/word/lorem-ipsum" title="Dummy text is for dummies.">content-driven</a> fluid grid system will have you creating awesome layouts in no time. Nesting is a cinch, too! </p>
-                    </div><!-- end .gs-col -->
-                </div><!-- end .gs-wrapper -->
-            </section><!-- end .gs-divider -->
+                    </div><!-- end .gs__col -->
+                </div><!-- end .gs__wrapper -->
+            </section><!-- end .gs__divider -->
 
-            <section class="gs-divider">
-                <div class="gs-wrapper">
-                    <div class="gs-col gs-bp1-col-1-2">
+            <section class="gs__divider">
+                <div class="gs__wrapper">
+                    <div class="gs__col gs__bp1__col-1-2">
                         <h2>Grid system</h2>
 
                         <p>Based on the clever ideas of <a href="http://builtbyboon.com/blog/proportional-grids" title="Proportional Grids FTW!">Matt Berridge</a>, Cardinal's grid system uses the powerful CSS3 <code>box-sizing</code> property along with fluid (<a href="http://www.w3.org/TR/css3-values/#percentage-value" title="Percentage values">%</a>-based) column widths and fixed (<a href="http://www.w3.org/TR/css3-values/#em-unit" title="The EM unit">em</a>-based) column gutters. Nesting grid elements is a breeze, and you can dictate the grid's behavior by adding custom media query breakpoints and <abbr title="Cascading Style Sheets">CSS</abbr> classes to your columns.</p>
 
-                        <pre rel="HTML5"><code>&lt;section class=&quot;gs-divider&quot;&gt;
-    &lt;div class=&quot;gs-wrapper&quot;&gt;
-        &lt;div class=&quot;gs-col gs-bp1-col-1-4&quot;&gt;&lt;/div&gt;
-        &lt;div class=&quot;gs-col gs-bp1-col-1-4&quot;&gt;&lt;/div&gt;
-        &lt;div class=&quot;gs-col gs-bp1-col-1-4&quot;&gt;&lt;/div&gt;
-        &lt;div class=&quot;gs-col gs-bp1-col-1-4&quot;&gt;&lt;/div&gt;
+                        <pre rel="HTML5"><code>&lt;section class=&quot;gs__divider&quot;&gt;
+    &lt;div class=&quot;gs__wrapper&quot;&gt;
+        &lt;div class=&quot;gs__col gs__bp1__col-1-4&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;gs__col gs__bp1__col-1-4&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;gs__col gs__bp1__col-1-4&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;gs__col gs__bp1__col-1-4&quot;&gt;&lt;/div&gt;
     &lt;/div&gt;
 &lt;/section&gt;</code></pre>
                     </div>
 
-                    <div class="gs-col gs-bp1-col-1-2">
+                    <div class="gs__col gs__bp1__col-1-2">
                         <h2>Usage</h2>
 
                         <p>By default, the grid is split into <strong>four columns</strong>, or quarters. If you need more columns, simply add more classes to the system.</p>
 
                         <h3>Required classes</h3>
 
-                        <p>Every column must have the <code>.gs-col</code> class, and a set of columns needs to be wrapped with a <code>&lt;div class=&quot;gs-wrapper&quot;&gt;</code> element.</p>
+                        <p>Every column must have the <code>.gs__col</code> class, and a set of columns needs to be wrapped with a <code>&lt;div class=&quot;gs__wrapper&quot;&gt;</code> element.</p>
 
                         <ul>
-                            <li><code>.gs-wrapper</code> - contains a set of grid columns</li>
-                            <li><code>.gs-col</code> - designates an element as a column in the grid</li>
-                            <li><code>.gs-col-*</code> - determines a column's proportion (for example, "gs-col-1-3" sets a column to one-third the width of its container)</li>
+                            <li><code>.gs__wrapper</code> - contains a set of grid columns</li>
+                            <li><code>.gs__col</code> - designates an element as a column in the grid</li>
+                            <li><code>.gs__col-*</code> - determines a column's proportion (for example, "gs__col-1-3" sets a column to one-third the width of its container)</li>
                         </ul>
 
                         <h3>Optional classes</h3>
 
                         <ul>
-                            <li><code>.gs-bp*-col-*</code> - splits a grid wrapper into columns based on the specified breakpoint (.bp1, .bp2, etc)</li>
-                            <li><code>.gs-divider</code> - adds a border to the bottom of a grid wrapper (.gs-wrapper)</li>
+                            <li><code>.gs__bp*__col-*</code> - splits a grid wrapper into columns based on the specified breakpoint (.bp1, .bp2, etc)</li>
+                            <li><code>.gs__divider</code> - adds a border to the bottom of a grid wrapper (.gs__wrapper)</li>
                         </ul>
                     </div>
                 </div>
 
-                <div class="gs-wrapper">
-                    <div class="gs-col">
-                        <div class="gs-wrapper">
-                            <div class="gs-col demo-gs-example">
+                <div class="gs__wrapper">
+                    <div class="gs__col">
+                        <div class="gs__wrapper">
+                            <div class="gs__col gs__demo-example">
                                 <h3>Example: Simple grid, no breakpoints</h3>
 
                                 <p>Just need some fluid columns to work with? This is the simplest way to do it. No breakpoints considered, just fluid columns that keep their proportions at any viewport width.</p>
 
                                 <!-- Quarters -->
-                                <div class="gs-wrapper">
-                                    <div class="gs-col gs-col-1-4"><div class="island">.gs-col-1-4</div></div>
-                                    <div class="gs-col gs-col-1-4"><div class="island">.gs-col-1-4</div></div>
-                                    <div class="gs-col gs-col-1-4"><div class="island">.gs-col-1-4</div></div>
-                                    <div class="gs-col gs-col-1-4"><div class="island">.gs-col-1-4</div></div>
+                                <div class="gs__wrapper">
+                                    <div class="gs__col gs__col-1-4"><div class="island">.gs__col-1-4</div></div>
+                                    <div class="gs__col gs__col-1-4"><div class="island">.gs__col-1-4</div></div>
+                                    <div class="gs__col gs__col-1-4"><div class="island">.gs__col-1-4</div></div>
+                                    <div class="gs__col gs__col-1-4"><div class="island">.gs__col-1-4</div></div>
                                 </div>
 
                                 <!-- Thirds -->
-                                <div class="gs-wrapper">
-                                    <div class="gs-col gs-col-1-3"><div class="island">.gs-col-1-3</div></div>
-                                    <div class="gs-col gs-col-1-3"><div class="island">.gs-col-1-3</div></div>
-                                    <div class="gs-col gs-col-1-3"><div class="island">.gs-col-1-3</div></div>
+                                <div class="gs__wrapper">
+                                    <div class="gs__col gs__col-1-3"><div class="island">.gs__col-1-3</div></div>
+                                    <div class="gs__col gs__col-1-3"><div class="island">.gs__col-1-3</div></div>
+                                    <div class="gs__col gs__col-1-3"><div class="island">.gs__col-1-3</div></div>
                                 </div>
 
                                 <!-- Halves -->
-                                <div class="gs-wrapper">
-                                    <div class="gs-col gs-col-1-2"><div class="island">.gs-col-1-2</div></div>
-                                    <div class="gs-col gs-col-1-2"><div class="island">.gs-col-1-2</div></div>
+                                <div class="gs__wrapper">
+                                    <div class="gs__col gs__col-1-2"><div class="island">.gs__col-1-2</div></div>
+                                    <div class="gs__col gs__col-1-2"><div class="island">.gs__col-1-2</div></div>
                                 </div>
 
                                 <!-- Full -->
-                                <div class="gs-wrapper">
-                                    <div class="gs-col gs-col-1"><div class="island">.gs-col-1</div></div>
+                                <div class="gs__wrapper">
+                                    <div class="gs__col gs__col-1"><div class="island">.gs__col-1</div></div>
                                 </div>
                             </div>
 
-                            <div class="gs-col demo-gs-example">
+                            <div class="gs__col gs__demo-example">
                                 <h3>Example: Simple grid, no breakpoints, half-size gutters</h3>
 
                                 <p>Same as above, except with gutters that are half the size.</p>
 
                                 <!-- Quarters -->
-                                <div class="gs-wrapper gs-gutter-half">
-                                    <div class="gs-col gs-col-1-4"><div class="island">.gs-col-1-4</div></div>
-                                    <div class="gs-col gs-col-1-4"><div class="island">.gs-col-1-4</div></div>
-                                    <div class="gs-col gs-col-1-4"><div class="island">.gs-col-1-4</div></div>
-                                    <div class="gs-col gs-col-1-4"><div class="island">.gs-col-1-4</div></div>
+                                <div class="gs__wrapper gs__gutter-half">
+                                    <div class="gs__col gs__col-1-4"><div class="island">.gs__col-1-4</div></div>
+                                    <div class="gs__col gs__col-1-4"><div class="island">.gs__col-1-4</div></div>
+                                    <div class="gs__col gs__col-1-4"><div class="island">.gs__col-1-4</div></div>
+                                    <div class="gs__col gs__col-1-4"><div class="island">.gs__col-1-4</div></div>
                                 </div>
 
                                 <!-- Thirds -->
-                                <div class="gs-wrapper gs-gutter-half">
-                                    <div class="gs-col gs-col-1-3"><div class="island">.gs-col-1-3</div></div>
-                                    <div class="gs-col gs-col-1-3"><div class="island">.gs-col-1-3</div></div>
-                                    <div class="gs-col gs-col-1-3"><div class="island">.gs-col-1-3</div></div>
+                                <div class="gs__wrapper gs__gutter-half">
+                                    <div class="gs__col gs__col-1-3"><div class="island">.gs__col-1-3</div></div>
+                                    <div class="gs__col gs__col-1-3"><div class="island">.gs__col-1-3</div></div>
+                                    <div class="gs__col gs__col-1-3"><div class="island">.gs__col-1-3</div></div>
                                 </div>
 
                                 <!-- Halves -->
-                                <div class="gs-wrapper gs-gutter-half">
-                                    <div class="gs-col gs-col-1-2"><div class="island">.gs-col-1-2</div></div>
-                                    <div class="gs-col gs-col-1-2"><div class="island">.gs-col-1-2</div></div>
+                                <div class="gs__wrapper gs__gutter-half">
+                                    <div class="gs__col gs__col-1-2"><div class="island">.gs__col-1-2</div></div>
+                                    <div class="gs__col gs__col-1-2"><div class="island">.gs__col-1-2</div></div>
                                 </div>
 
                                 <!-- Full -->
-                                <div class="gs-wrapper gs-gutter-half">
-                                    <div class="gs-col gs-col-1"><div class="island">.gs-col-1</div></div>
+                                <div class="gs__wrapper gs__gutter-half">
+                                    <div class="gs__col gs__col-1"><div class="island">.gs__col-1</div></div>
                                 </div>
                             </div>
 
-                            <div class="gs-col demo-gs-example">
+                            <div class="gs__col gs__demo-example">
                                 <h3>Example: Simple grid, custom breakpoints</h3>
 
-                                <p>Now we're talking. This grid includes columns that are aware of the custom breakpoints defined in this project. For instance, using the <code>.gs-bp1-col-1-2</code> class on a column means that when the viewport reaches a minimum width equal to the first @media query breakpoint, change that column's proportion to one half. The <code>*-1-2</code> suffix in the class name stands for the proportion. In this case, it's one-half. Make sense?</p>
+                                <p>Now we're talking. This grid includes columns that are aware of the custom breakpoints defined in this project. For instance, using the <code>.gs__bp1__col-1-2</code> class on a column means that when the viewport reaches a minimum width equal to the first @media query breakpoint, change that column's proportion to one half. The <code>*-1-2</code> suffix in the class name stands for the proportion. In this case, it's one-half. Make sense?</p>
 
                                 <!-- Quarters -->
-                                <div class="gs-wrapper">
-                                    <div class="gs-col gs-bp1-col-1-2 gs-bp2-col-1-4"><div class="island">.gs-bp1-col-1-2<br>.gs-bp2-col-1-4</div></div>
-                                    <div class="gs-col gs-bp1-col-1-2 gs-bp2-col-1-4"><div class="island">.gs-bp1-col-1-2<br>.gs-bp2-col-1-4</div></div>
-                                    <div class="gs-col gs-bp1-col-1-2 gs-bp2-col-1-4"><div class="island">.gs-bp1-col-1-2<br>.gs-bp2-col-1-4</div></div>
-                                    <div class="gs-col gs-bp1-col-1-2 gs-bp2-col-1-4"><div class="island">.gs-bp1-col-1-2<br>.gs-bp2-col-1-4</div></div>
+                                <div class="gs__wrapper">
+                                    <div class="gs__col gs__bp1__col-1-2 gs__bp2__col-1-4"><div class="island">.gs__bp1__col-1-2<br>.gs__bp2__col-1-4</div></div>
+                                    <div class="gs__col gs__bp1__col-1-2 gs__bp2__col-1-4"><div class="island">.gs__bp1__col-1-2<br>.gs__bp2__col-1-4</div></div>
+                                    <div class="gs__col gs__bp1__col-1-2 gs__bp2__col-1-4"><div class="island">.gs__bp1__col-1-2<br>.gs__bp2__col-1-4</div></div>
+                                    <div class="gs__col gs__bp1__col-1-2 gs__bp2__col-1-4"><div class="island">.gs__bp1__col-1-2<br>.gs__bp2__col-1-4</div></div>
                                 </div>
 
                                 <!-- Thirds -->
-                                <div class="gs-wrapper">
-                                    <div class="gs-col gs-bp1-col-1-2 gs-bp2-col-1-3"><div class="island">.gs-bp1-col-1-2<br>.gs-bp2-col-1-3</div></div>
-                                    <div class="gs-col gs-bp1-col-1-2 gs-bp2-col-1-3"><div class="island">.gs-bp1-col-1-2<br>.gs-bp2-col-1-3</div></div>
-                                    <div class="gs-col gs-bp1-col-1 gs-bp2-col-1-3"><div class="island">.gs-bp1-col-1-2<br>.gs-bp2-col-1-3</div></div>
+                                <div class="gs__wrapper">
+                                    <div class="gs__col gs__bp1__col-1-2 gs__bp2__col-1-3"><div class="island">.gs__bp1__col-1-2<br>.gs__bp2__col-1-3</div></div>
+                                    <div class="gs__col gs__bp1__col-1-2 gs__bp2__col-1-3"><div class="island">.gs__bp1__col-1-2<br>.gs__bp2__col-1-3</div></div>
+                                    <div class="gs__col gs__bp1__col-1 gs__bp2__col-1-3"><div class="island">.gs__bp1__col-1-2<br>.gs__bp2__col-1-3</div></div>
                                 </div>
 
                                 <!-- Halves -->
-                                <div class="gs-wrapper">
-                                    <div class="gs-col gs-bp2-col-1-2"><div class="island">.gs-bp2-col-1-2</div></div>
-                                    <div class="gs-col gs-bp2-col-1-2"><div class="island">.gs-bp2-col-1-2</div></div>
+                                <div class="gs__wrapper">
+                                    <div class="gs__col gs__bp2__col-1-2"><div class="island">.gs__bp2__col-1-2</div></div>
+                                    <div class="gs__col gs__bp2__col-1-2"><div class="island">.gs__bp2__col-1-2</div></div>
                                 </div>
 
                                 <!-- Full -->
-                                <div class="gs-wrapper">
-                                    <div class="gs-col gs-bp2-col-1"><div class="island">.gs-bp2-col-1</div></div>
+                                <div class="gs__wrapper">
+                                    <div class="gs__col gs__bp2__col-1"><div class="island">.gs__bp2__col-1</div></div>
                                 </div>
                             </div>
 
-                            <div id="gs-ng-nbp" class="gs-col demo-gs-example">
+                            <div id="gs-ng-nbp" class="gs__col gs__demo-example">
                                 <h3>Example: Nested grid, no breakpoints</h3>
 
-                                <p>Nesting grids with Cardinal is hassle-free. Simply define your parent column proportions (in this case its <code>.gs-col-1-2</code>), then keep adding grids within the parent grid.</p>
+                                <p>Nesting grids with Cardinal is hassle-free. Simply define your parent column proportions (in this case its <code>.gs__col-1-2</code>), then keep adding grids within the parent grid.</p>
 
-                                <div class="demo-gs-example-parent">
-                                    <div class="gs-wrapper">
-                                        <div class="gs-col gs-col-1-2">
-                                            <div class="island">.gs-col-1-2</div>
+                                <div class="gs__demo-example-parent">
+                                    <div class="gs__wrapper">
+                                        <div class="gs__col gs__col-1-2">
+                                            <div class="island">.gs__col-1-2</div>
 
-                                            <div class="gs-wrapper">
-                                                <div class="gs-col gs-col-1-2">
-                                                    <div class="island">.gs-col-1-2</div>
-                                                </div><!-- end .gs-col -->
+                                            <div class="gs__wrapper">
+                                                <div class="gs__col gs__col-1-2">
+                                                    <div class="island">.gs__col-1-2</div>
+                                                </div><!-- end .gs__col -->
 
-                                                <div class="gs-col gs-col-1-2">
-                                                    <div class="island">.gs-col-1-2</div>
-                                                </div><!-- end .gs-col -->
-                                            </div><!-- end .gs-wrapper -->
-                                        </div><!-- end .gs-col -->
+                                                <div class="gs__col gs__col-1-2">
+                                                    <div class="island">.gs__col-1-2</div>
+                                                </div><!-- end .gs__col -->
+                                            </div><!-- end .gs__wrapper -->
+                                        </div><!-- end .gs__col -->
 
-                                        <div class="gs-col gs-col-1-2">
-                                            <div class="island">.gs-col-1-2</div>
-                                        </div><!-- end .gs-col -->
-                                    </div><!-- end .gs-wrapper -->
+                                        <div class="gs__col gs__col-1-2">
+                                            <div class="island">.gs__col-1-2</div>
+                                        </div><!-- end .gs__col -->
+                                    </div><!-- end .gs__wrapper -->
                                 </div>
                             </div>
 
-                            <div id="gs-ng-nbp" class="gs-col demo-gs-example">
+                            <div id="gs-ng-nbp" class="gs__col gs__demo-example">
                                 <h3>Example: Nested grid, custom breakpoints</h3>
 
                                 <p>Yes, you can even define custom breakpoints for your nested grids.</p>
 
-                                <div class="demo-gs-example-parent">
-                                    <div class="gs-wrapper gs-gutter-half">
-                                        <div class="gs-col gs-bp1-col-1-2">
-                                            <div class="island">.gs-col-1-2</div>
+                                <div class="gs__demo-example-parent">
+                                    <div class="gs__wrapper gs__gutter-half">
+                                        <div class="gs__col gs__bp1__col-1-2">
+                                            <div class="island">.gs__col-1-2</div>
 
-                                            <div class="gs-wrapper gs-gutter-half">
-                                                <div class="gs-col gs-bp2-col-1-2">
-                                                    <div class="island">.gs-bp2-col-1-2</div>
-                                                </div><!-- end .gs-col -->
+                                            <div class="gs__wrapper gs__gutter-half">
+                                                <div class="gs__col gs__bp2__col-1-2">
+                                                    <div class="island">.gs__bp2__col-1-2</div>
+                                                </div><!-- end .gs__col -->
 
-                                                <div class="gs-col gs-bp2-col-1-2">
-                                                    <div class="island">.gs-bp2-col-1-2</div>
-                                                </div><!-- end .gs-col -->
-                                            </div><!-- end .gs-wrapper -->
-                                        </div><!-- end .gs-col -->
+                                                <div class="gs__col gs__bp2__col-1-2">
+                                                    <div class="island">.gs__bp2__col-1-2</div>
+                                                </div><!-- end .gs__col -->
+                                            </div><!-- end .gs__wrapper -->
+                                        </div><!-- end .gs__col -->
 
-                                        <div class="gs-col gs-bp1-col-1-2">
-                                            <div class="island">.gs-col-1-2</div>
-                                        </div><!-- end .gs-col -->
-                                    </div><!-- end .gs-wrapper -->
+                                        <div class="gs__col gs__bp1__col-1-2">
+                                            <div class="island">.gs__col-1-2</div>
+                                        </div><!-- end .gs__col -->
+                                    </div><!-- end .gs__wrapper -->
                                 </div>
                             </div>
                         </div>
-                    </div><!-- end .gs-col -->
-                </div><!-- end .gs-wrapper -->
-            </section><!-- end .gs-divider -->
+                    </div><!-- end .gs__col -->
+                </div><!-- end .gs__wrapper -->
+            </section><!-- end .gs__divider -->
 
-            <section id="thanks" class="gs-wrapper">
-                <div class="gs-col gs-bp2-col-1-3">
+            <section id="thanks" class="gs__wrapper">
+                <div class="gs__col gs__bp2__col-1-3">
                     <h2>Browser support</h2>
 
                     <p>The code used here should work fine in all modern browsers, as far back as IE8.</p>
@@ -290,22 +290,22 @@
                         <li>Opera</li>
                         <li>Internet Explorer 8+</li>
                     </ul>
-                </div><!-- end .gs-col -->
+                </div><!-- end .gs__col -->
 
-                <div class="gs-col gs-bp2-col-1-3">
+                <div class="gs__col gs__bp2__col-1-3">
                     <h2>Many thanks to...</h2>
 
                     <p>Your Mom, Your Mom, Your Mom, Your Mom, Your Mom, Your Mom, Your Mom, Your Mom, Your Mom, Your Mom, Your Mom, Your Mom, Your Mom, Your Mom, Your Mom, Your Mom, Your Mom, Your Mom, Your Mom, Your Mom, and Your Mom.</p>
-                </div><!-- end .gs-col -->
+                </div><!-- end .gs__col -->
 
-                <div class="gs-col gs-bp2-col-1-3">
+                <div class="gs__col gs__bp2__col-1-3">
                     <h2>No license</h2>
 
                     <p>Cardinal is "licensed" under the <abbr title="Do What the Fuck You Want to Public License"><a href="http://en.wikipedia.org/wiki/WTFPL">WTFPL</a></abbr>, meaning please feel free to do whatever the f*ck you want with this.</p>
 
                     <p>Use it, fork it, break it, re-make it.<br>Care, we do not.</p>
-                </div><!-- end .gs-col -->
-            </section><!-- end .gs-wrapper -->
+                </div><!-- end .gs__col -->
+            </section><!-- end .gs__wrapper -->
         </div><!-- end .wrapper -->
 
         <!-- Scripts: before </body> -->

@@ -1,10 +1,10 @@
 // When the DOM is ready,
 jQuery(document).ready(function($) {
 	// Toggle baseline grid
-	$(".bl-grid").hide();
+	$(".baseline").hide();
 
-	$(".bl-grid-toggle .btn").on("click", function() {
-	    $("body").toggleClass("bl-grid-on");
-	    $(".bl-grid").fadeToggle(200);
+	$(".baseline__toggle .btn").on("click", function() {
+	    $("body").toggleClass("baseline_on");
+	    $(".baseline").fadeToggle(200);
 	});
 });
