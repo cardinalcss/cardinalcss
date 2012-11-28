@@ -50,9 +50,9 @@ html {
 body {
     color: #222;
     color: hsla(0, 0%, 13.3333%, 1.0);
-    font-size: 1em;
+    font-size: 1.000rem;
     font-family: sans-serif;
-    line-height: 1.5;
+    line-height: 1.500rem;
 }
 
 /*
@@ -118,20 +118,17 @@ ol,
 p,
 pre,
 ul {
-    margin: 0 0 1.5em;
-    font-size: 1em;
-    line-height: 1.5;
+    margin: 0 0 1.500rem;
 }​
 
 big,
 .text-xxl {
-    font-size: 4.209em;
-    line-height: 1.06913756;
-    margin: 0 0 0.35640565em;
+    font-size: 4.209rem;
+    line-height: 4.500rem;
 }
 
 blockquote {
-    margin-left: 2.665em;
+    margin-left: 2.369rem;
 }
 
 blockquote p {
@@ -139,7 +136,7 @@ blockquote p {
 }
 
 blockquote p + p {
-    margin-top: 1.5em;
+    margin-top: 1.500rem;
 }
 
 /*
@@ -158,18 +155,18 @@ blockquote footer {
 
 code,
 pre {
-    font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+    font: 0.8125rem/1.500rem Monaco, Menlo, Consolas, "Courier New", monospace;
 }
 
 code {
-    border: 1px solid #eaeaea;
-    border: 1px solid hsla(0, 0%, 91.7647%, 1.0);
-    -webkit-border-radius: 3px;
-    -moz-border-radius:    3px;
-    border-radius:         3px;
+    padding: 0.1rem 0.317rem;
     background-color: #f8f8f8;
     background-color: hsla(0, 0%, 97.2549%, 1.0);
-    vertical-align: top;
+    border: 1px solid #eaeaea;
+    border: 1px solid hsla(0, 0%, 91.7647%, 1.0);
+    -webkit-border-radius: 0.201rem;
+    -moz-border-radius:    0.201rem;
+    border-radius:         0.201rem;
 }
 
 del {
@@ -193,46 +190,43 @@ h4,
 h5,
 h6 {
     margin: 0;
+    margin-bottom: 1.500rem;
     color: inherit;
-    font-family: sans-serif;
     font-weight: 700;
+    font-family: sans-serif;
+    line-height: 1.500rem;
     text-rendering: optimizeLegibility; /* Use with care: http://cbrac.co/UkurL4 */
 }
 
 h1,
 .text-xl {
-    font-size: 2.665em; /* 24/42.645px */
-    line-height: 1.12557158; /* 48px */
-    margin: 0 0 0.56278579em;
+    font-size: 3.157rem;
+    line-height: 3.000rem;
 }
 
 h2,
 .text-large {
-    font-size: 2em; /* 31.992px */
-    line-height: 1.50037509; /* 48px */
-    margin: 0 0 0.75018755em;
+    font-size: 2.369rem;
+    line-height: 3.000rem;
 }
 
 h3,
 .text-medium {
-    font-size: 1.5em; /* 24px */
-    line-height: 1; /* 24px */
-    margin: 0 0 1em;
+    font-size: 1.333rem;
 }
 
 h4,
 h5,
 h6,
 .text-normal {
-    font-size: 1em;
-    line-height: 1.5;
-    margin: 0 0 1.5em;
+    font-size: 1.000rem;
 }
 
 hr {
     border: 0;
     border-bottom: 1px solid #c0c0c0;
     border-bottom: 1px solid hsla(0, 0%, 75.2941%, 1.0);
+    margin-top: -1px; /* Maintains the baseline grid */
 }
 
 ins {
@@ -256,9 +250,9 @@ pre {
     position: relative;
     overflow: auto;
     padding: 0;
-    -webkit-border-radius: 5px;
-    -moz-border-radius:    5px;
-    border-radius:         5px;
+    -webkit-border-radius: 0.317rem;
+    -moz-border-radius:    0.317rem;
+    border-radius:         0.317rem;
     background: #333;
     background: hsla(0, 0%, 20%, 1.0);
     color: #d0d0d0;
@@ -277,14 +271,14 @@ pre {
 }
 
 /*
- * Remove above <code> styles when inside <pre> tags
+ * Remove above <code> styles when nested inside <pre> tags
  */
 
 pre code {
     display: block;
     overflow: auto;
     margin: 0;
-    padding: 1.5em;
+    padding: 1.500rem;
     border: none;
     -webkit-border-radius: 0;
     -moz-border-radius:    0;
@@ -294,7 +288,7 @@ pre code {
 }
 
 pre[rel] code {
-    padding: 4.5em 1.5em 1.5em;
+    padding: 4.500rem 1.500rem 1.500rem;
 }
 
 pre[rel]:before {
@@ -303,18 +297,15 @@ pre[rel]:before {
     right: 0;
     left: 0;
     width: 100%;
-    -webkit-border-radius: 5px 5px 0 0;
-    -moz-border-radius:    5px 5px 0 0;
-    border-radius:         5px 5px 0 0;
     background: #202020;
     background: hsla(0, 0%, 12.5490%, 1.0);
     color: #46fc3e;
     color: hsla(117, 96.9388%, 61.5686%, 1.0);
     content: attr(rel);
-    text-indent: 1em;
-    letter-spacing: 0.1em;
-    font-size: 1.333em;
-    line-height: 2.25056264;
+    text-indent: 1.5rem;
+    letter-spacing: 0.1rem;
+    font-size: 1.333rem;
+    line-height: 3rem;
 }
 
 /* ==========================================================================
@@ -395,43 +386,43 @@ textarea {
 
 .btn {
     display: inline-block;
-    *display: inline;
-    *zoom: 1;
-    padding: 0 0.75em;
+    padding: 0 0.750rem;
     border-width: 1px;
     border-style: solid;
     border-color: #c5c5c5;
     border-color: hsla(0, 0%, 77.2549%, 1.0);
-    -webkit-border-radius: 3px;
-    -moz-border-radius:    3px;
-    border-radius:         3px;
-    background: #e5e5e5;
-    background: hsla(0, 0%, 89.8039%, 1.0);
+    -webkit-border-radius: 0.317rem;
+    -moz-border-radius:    0.317rem;
+    border-radius:         0.317rem;
+    background-color: #e5e5e5;
+    background-color: hsla(0, 0%, 89.8039%, 1.0);
     -webkit-box-shadow: inset 0 0 1px 1px hsla(0, 0%, 96%, 1);
     -moz-box-shadow:    inset 0 0 1px 1px hsla(0, 0%, 96%, 1);
     box-shadow:         inset 0 0 1px 1px hsla(0, 0%, 96%, 1);
     color: #333;
     color: hsla(0, 0%, 20%, 1.0);
-    line-height: 2.875em; /* ≈ 46px to account for top and bottom borders */
     text-align: center;
     text-decoration: none;
     text-shadow: 0 1px 0 #fff;
     text-shadow: 0 1px 0 hsla(0, 0%, 100%, 1);
+    line-height: 2.875rem;
     cursor: pointer;
+    *display: inline;
+    *zoom: 1;
 }
 
 .btn:hover {
-    background: #ececec;
-    background: hsla(0, 0%, 92.5490%, 1.0);
+    background-color: #ececec;
+    background-color: hsla(0, 0%, 92.5490%, 1.0);
     color: #222;
     color: hsla(0, 0%, 13.3333%, 1.0);
     cursor: pointer;
 }
 
 .btn:active {
-    -webkit-box-shadow: inset 0 0 6px hsla(0, 0%, 0%, 0.10); /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
-    -moz-box-shadow:    inset 0 0 6px hsla(0, 0%, 0%, 0.10); /* Firefox 3.5+ */
-    box-shadow:         inset 0 0 6px hsla(0, 0%, 0%, 0.10); /* Opera 10.5, IE9+, Firefox 4+, Chrome 6+, iOS 5 */
+    -webkit-box-shadow: inset 0 0 0.422rem hsla(0, 0%, 0%, 0.10);
+    -moz-box-shadow:    inset 0 0 0.422rem hsla(0, 0%, 0%, 0.10);
+    box-shadow:         inset 0 0 0.422rem hsla(0, 0%, 0%, 0.10);
     color: #000;
     color: hsla(0, 0%, 0%, 1);
 }
@@ -460,12 +451,12 @@ textarea {
     background-image: -o-linear-gradient(hsla(0, 0%, 0%, 0) 95%, hsla(0, 25%, 50%, 0.25) 95%);
     background-image: linear-gradient(hsla(0, 0%, 0%, 0) 95%, hsla(0, 25%, 50%, 0.25) 95%);
     background-position: 50% 0;
-    background-size: 1.5em 1.5em;
+    background-size: 1.500rem 1.500rem;
 }
 
 .bl-grid-toggle {
     position: fixed;
-    top: 1.5em;
+    top: 1.500rem;
     right: 5%;
     z-index: 9999;
     margin-top: -1px;
@@ -503,25 +494,25 @@ textarea {
     border-bottom: 1px solid #c0c0c0;
     border-bottom: 1px solid hsla(0, 0%, 75.2941%, 1.0);
     margin-top: -1px;  /* Maintains the baseline grid */
-    margin-bottom: 1.5em;
+    margin-bottom: 1.500rem;
 }
 
 .gs-wrapper {
-    margin-left: -3em;
+    margin-left: -3.000rem;
 }
 
 .gs-col {
     float: left;
-    padding-left: 3em;
+    padding-left: 3.000rem;
     width: 100%;
 }
 
 .gs-gutter-half {
-    margin-left: -1.5em;
+    margin-left: -1.500rem;
 }
 
 .gs-gutter-half .gs-col {
-    padding-left: 1.5em;
+    padding-left: 1.500rem;
 }
 
 /*
@@ -558,9 +549,10 @@ textarea {
  */
 
 .strip {
-    background: #efefef;
-    padding: 1.5em 0;
-    margin: 0 0 1.5em;
+    margin: 0 0 1.500rem;
+    padding: 1.500rem 0;
+    background-color: #efefef;
+    background-color: hsla(0, 0%, 93.7255%, 1.0);
 }
 
 .strip :last-child {
@@ -572,24 +564,24 @@ textarea {
  */
 
 .island {
-    padding: 1.5em;
+    padding: 1.500rem;
+    -webkit-border-radius: 0.317rem;
+    -moz-border-radius:    0.317rem;
+    border-radius:         0.317rem;
     background-color: #efefef;
     background-color: hsla(0, 0%, 93.7255%, 1.0);
-    -webkit-border-radius: 5px;
-    -moz-border-radius:    5px;
-    border-radius:         5px;
 }
 
 .well {
-    padding: 1.5em;
+    padding: 1.500rem;
+    -webkit-border-radius: 0.317rem;
+    -moz-border-radius:    0.317rem;
+    border-radius:         0.317rem;
     background-color: #efefef;
     background-color: hsla(0, 0%, 93.7255%, 1.0);
-    -webkit-box-shadow: inset 0 0 5px hsla(0, 0%, 0%, 0.10);
-    -moz-box-shadow:    inset 0 0 5px hsla(0, 0%, 0%, 0.10);
-    box-shadow:         inset 0 0 5px hsla(0, 0%, 0%, 0.10);
-    -webkit-border-radius: 5px;
-    -moz-border-radius:    5px;
-    border-radius:         5px;
+    -webkit-box-shadow: inset 0 0 0.317rem hsla(0, 0%, 0%, 0.10);
+    -moz-box-shadow:    inset 0 0 0.317rem hsla(0, 0%, 0%, 0.10);
+    box-shadow:         inset 0 0 0.317rem hsla(0, 0%, 0%, 0.10);
 }
 
 .island :last-child,
@@ -599,7 +591,7 @@ textarea {
 
 .gs-col .island,
 .gs-col .well {
-    margin-bottom: 1.5em;
+    margin-bottom: 1.500rem;
 }
 
 /* ==========================================================================
@@ -609,16 +601,17 @@ textarea {
 .chromeframe,
 .no-js .js-notice {
     display: block;
-    padding: 0;
     margin: 0;
-    font-size: 0.75em;
-    line-height: 2;
+    padding: 0.563rem 0;
     text-align: center;
+    font-size: 0.750rem;
 }
 
 .chromeframe {
-    background: #f5f5f5;
-    background: hsla(0, 0%, 96.0784%, 1.0);
+    border-bottom: 2px solid #d0d0d0;
+    border-bottom: 2px solid hsla(0, 0%, 81.5686%, 1.0);
+    background-color: #f5f5f5;
+    background-color: hsla(0, 0%, 96.0784%, 1.0);
 }
 
 .js .js-notice {
@@ -626,8 +619,10 @@ textarea {
 }
 
 .no-js .js-notice {
-    background: #ffffcc;
-    background: hsla(60, 100%, 90%, 1.0);
+    border-bottom: 2px solid #fc6;
+    border-bottom: 2px solid hsla(40, 100%, 70%, 1.0);
+    background-color: #ffffcc;
+    background-color: hsla(60, 100%, 90%, 1.0);
 }
 
 /* ==========================================================================
@@ -775,7 +770,7 @@ textarea {
    Media queries
    ========================================================================== */
 
-/* Grid breakpoint 1 (.bp1-*, ~ 480px) */
+/* Grid breakpoint 1 (.bp1-*, ≈ 480px) */
 @media only screen and (min-width: 30em) {
     .gs-bp1-col-1 {
         width: 100%;
@@ -802,7 +797,7 @@ textarea {
     }
 }
 
-/* Grid breakpoint 2 (.bp2-*, ~ 768px) */
+/* Grid breakpoint 2 (.bp2-*, ≈ 768px) */
 @media only screen and (min-width: 48em) {
     .gs-bp2-col-1 {
         width: 100%;
@@ -829,7 +824,7 @@ textarea {
     }
 }
 
-/* Grid breakpoint 3 (.bp3-*, ~ 960px) */
+/* Grid breakpoint 3 (.bp3-*, ≈ 960px) */
 @media only screen and (min-width: 60em) {
     .gs-bp3-col-1 {
         width: 100%;

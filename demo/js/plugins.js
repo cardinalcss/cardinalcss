@@ -154,4 +154,4 @@
     }
 })(window);
 
-// Place your extra Javascript/jQuery plugins here
+// Place your Javascript code and plugins here
