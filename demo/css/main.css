@@ -200,19 +200,26 @@ h6 {
 
 h1,
 .text_xl {
-    font-size: 3.157rem;
-    line-height: 3.000rem;
+    font-size: 3.553rem;
+    line-height: 4.500rem;
 }
 
 h2,
 .text_large {
-    font-size: 2.369rem;
+    font-size: 1.777rem;
     line-height: 3.000rem;
 }
 
 h3,
 .text_medium {
     font-size: 1.333rem;
+}
+
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom: 0;
 }
 
 h4,
@@ -487,7 +494,7 @@ textarea {
 
 .wrapper {
     width: 90%;
-    max-width: 1200px;
+    max-width: 75rem; /* ≈ 1200px */
     margin: 0 auto;
 }
 
