@@ -257,13 +257,16 @@ pre {
     position: relative;
     overflow: auto;
     padding: 0;
+    margin-top: -1px; /* Maintains baseline grid */
+    border: 1px solid #d7d7d7;
+    border: 1px solid hsla(0, 0%, 84%, 1.0);
     -webkit-border-radius: 0.317rem;
     -moz-border-radius:    0.317rem;
     border-radius:         0.317rem;
-    background: #333;
-    background: hsla(0, 0%, 20%, 1.0);
-    color: #d0d0d0;
-    color: hsla(0, 0%, 81.5686%, 1.0);
+    background: #fff;
+    background: hsla(0, 0%, 100%, 1.0);
+    color: #686868;
+    color: hsla(0, 0%, 41%, 1.0);
     white-space: pre;
     word-wrap: normal;
     -ms-word-break: normal;
@@ -304,12 +307,21 @@ pre[rel]:before {
     right: 0;
     left: 0;
     width: 100%;
-    background: #202020;
-    background: hsla(0, 0%, 12.5490%, 1.0);
-    color: #46fc3e;
-    color: hsla(117, 96.9388%, 61.5686%, 1.0);
+    border-bottom: 1px solid #d7d7d7;
+    border-bottom: 1px solid hsla(0, 0%, 84%, 1.0);
+    -webkit-border-radius: 0.317rem 0.317rem 0 0;
+    -moz-border-radius:    0.317rem 0.317rem 0 0;
+    border-radius:         0.317rem 0.317rem 0 0;
+    background: #f0f0f0;
+    background: hsla(0, 0%, 94%, 1);
+    -webkit-box-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.04);
+    -moz-box-shadow:    0 1px 3px hsla(0, 0%, 0%, 0.04);
+    box-shadow:         0 1px 3px hsla(0, 0%, 0%, 0.04);
+    /*color: #b7b7b7;
+    color: hsla(0, 0%, 72%, 1);*/
     content: attr(rel);
     text-indent: 1.5rem;
+    text-shadow: 0 0 15px #fff;
     letter-spacing: 0.1rem;
     font-size: 1.333rem;
     line-height: 3rem;
