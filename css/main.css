@@ -48,7 +48,7 @@ html {
  */
 
 body {
-    color: #222;
+    color: #444;
     color: hsla(0, 0%, 13.3333%, 1.0);
     font-size: 1.000rem;
     font-family: sans-serif;
@@ -191,7 +191,7 @@ h5,
 h6 {
     margin: 0;
     margin-bottom: 1.500rem;
-    color: inherit;
+    color: #222;
     font-weight: 700;
     font-family: sans-serif;
     line-height: 1.500rem;
