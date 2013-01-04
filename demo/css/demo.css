@@ -17,6 +17,15 @@ body {
 	background-color: hsla(360, 70.0441%, 44.5098%, 1.0);
 }
 
+.strip[role="banner"] h1,
+.strip[role="banner"] h2,
+.strip[role="banner"] h3,
+.strip[role="banner"] h4,
+.strip[role="banner"] h5,
+.strip[role="banner"] h6 {
+	color: #fff;
+}
+
 .tagline {
 	font-weight: 300;
 	text-transform: lowercase;
