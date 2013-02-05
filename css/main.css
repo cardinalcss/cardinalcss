@@ -50,7 +50,7 @@ html {
 body {
     color: #444;
     color: hsla(0, 0%, 13.3333%, 1.0);
-    font-size: 1.000rem;
+    font-size: 100%;
     font-family: sans-serif;
     line-height: 1.500rem;
 }
