@@ -24,6 +24,12 @@
     }
 }());
 
+
+// //
+// Place your Javascript code, plugins, etc here
+// //
+
+
 /**
  * REM unit polyfill
  * @author Chuck Carpenter
@@ -37,5 +43,3 @@ sheets[i].href;xhr(links[i],matchcss,i)}},matchcss=function(response,i){var clea
 4)callback(xhr,i);else;}},removeComments=function(css){var start=css.search(/\/\*/),end=css.search(/\*\//);if(start>-1&&end>start){css=css.substring(0,start)+css.substring(end+2);return removeComments(css)}else return css},getXMLHttpRequest=function(){if(window.XMLHttpRequest)return new XMLHttpRequest;else return new ActiveXObject("Microsoft.XMLHTTP")};if(!cssremunit()){var rules="",sheets=[],found=[],foundProps=[],css=[],body=document.getElementsByTagName("body")[0],fontSize="";if(body.currentStyle)if(body.currentStyle["fontSize"].indexOf("px")>=
 0)fontSize=body.currentStyle["fontSize"].replace("px","");else if(body.currentStyle["fontSize"].indexOf("em")>=0)fontSize=body.currentStyle["fontSize"].replace("em","");else if(body.currentStyle["fontSize"].indexOf("pt")>=0)fontSize=body.currentStyle["fontSize"].replace("pt","");else fontSize=body.currentStyle["fontSize"].replace("%","")/100*16;else if(window.getComputedStyle)fontSize=document.defaultView.getComputedStyle(body,null).getPropertyValue("font-size").replace("px","");processSheets()}else;
 })(window);
-
-// Place your Javascript code and plugins here

@@ -31,16 +31,16 @@ body {
 	text-transform: lowercase;
 }
 
-.gs__demo-example .island {
+.grid_demo .island {
 	text-align: center;
 }
 
-.gs__demo-example .island:hover {
+.grid_demo .island:hover {
 	background-color: #e5e5e5;
     background-color: hsla(0, 0%, 89.8039%, 1.0);
 }
 
-.gs__demo-example-parent {
+.grid_demo-parent {
 	margin-bottom: 1.5em;
 	background-color: #d8d8d8;
 	background-color: hsla(0, 0%, 84.7059%, 1.0);

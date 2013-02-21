@@ -456,17 +456,19 @@ textarea {
 }
 
 /* ==========================================================================
-   Baseline grid guide (.baseline__*)
+   Baseline grid guide (.baseline_*)
    For development only, remove this on production sites
    ========================================================================== */
 
 .baseline {
     position: absolute;
     top: 0;
+    right: 0;
+    bottom: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
+    z-index: 9999;
+    display: block;
+    pointer-events: none;
     background-image: -webkit-linear-gradient(hsla(0, 0%, 0%, 0) 95%, hsla(0, 25%, 50%, 0.25) 95%);
     background-image: -moz-linear-gradient(hsla(0, 0%, 0%, 0) 95%, hsla(0, 25%, 50%, 0.25) 95%);
     background-image: -ms-linear-gradient(hsla(0, 0%, 0%, 0) 95%, hsla(0, 25%, 50%, 0.25) 95%);
@@ -476,10 +478,10 @@ textarea {
     background-size: 1.500rem 1.500rem;
 }
 
-.baseline__toggle {
+.baseline_toggle {
     position: fixed;
     top: 1.500rem;
-    right: 5%;
+    right: 1.500rem;
     z-index: 9999;
     margin-top: -1px;
 }
@@ -489,14 +491,14 @@ textarea {
 }
 
 /* ==========================================================================
-   Grid system (.gs__*)
+   Grid system (.grid_*)
 
    Usage:
    <div class="wrapper">
-       <div class="gs__divider">
-           <div class="gs__wrapper">
-               <div class="gs__col gs__bp1__col-1-2">foo</div>
-               <div class="gs__col gs__bp1__col-1-2">bar</div>
+       <div class="grid_divider">
+           <div class="grid_wrapper">
+               <div class="grid_col grid_bp1_col-1-2">foo</div>
+               <div class="grid_col grid_bp1_col-1-2">bar</div>
            </div>
        </div>
    </div>
@@ -512,28 +514,28 @@ textarea {
  * Use this class if you want to add a border to the bottom of a column
  */
 
-.gs__divider {
+.grid_divider {
     border-bottom: 1px solid #e0e0e0;
     border-bottom: 1px solid hsla(0, 0%, 87.8431%, 1.0);
     margin-top: -1px;  /* Maintains the baseline grid */
     margin-bottom: 1.500rem;
 }
 
-.gs__wrapper {
+.grid_wrapper {
     margin-left: -3.000rem;
 }
 
-.gs__col {
+.grid_col {
     float: left;
     padding-left: 3.000rem;
     width: 100%;
 }
 
-.gs__gutter-half {
+.grid_gutter-half {
     margin-left: -1.500rem;
 }
 
-.gs__gutter-half .gs__col {
+.grid_gutter-half .grid_col {
     padding-left: 1.500rem;
 }
 
@@ -542,27 +544,27 @@ textarea {
  * in the initial layout
  */
 
-.gs__col-1 {
+.grid_col-full {
     width: 100%;
 }
 
-.gs__col-1-2 {
+.grid_col-one_half {
     width: 50%;
 }
 
-.gs__col-1-3 {
+.grid_col-one_third {
     width: 33.333%;
 }
 
-.gs__col-2-3 {
+.grid_col-two_thirds {
     width: 66.666%;
 }
 
-.gs__col-1-4 {
+.grid_col-one_fourth {
     width: 25%;
 }
 
-.gs__col-3-4 {
+.grid_col-three_fourths {
     width: 75%;
 }
 
@@ -611,8 +613,8 @@ textarea {
     margin-bottom: 0;
 }
 
-.gs__col .island,
-.gs__col .well {
+.grid_col .island,
+.grid_col .well {
     margin-bottom: 1.500rem;
 }
 
@@ -620,8 +622,8 @@ textarea {
    Chrome Frame & Javascript prompts
    ========================================================================== */
 
-.notice__chrome-frame,
-.no-js .notice__js {
+.notice-chrome_frame,
+.no-js .notice-js {
     display: block;
     margin: 0;
     padding: 0.750rem 0;
@@ -629,16 +631,16 @@ textarea {
     font-size: 0.750rem;
 }
 
-.notice__chrome-frame {
+.notice-chrome_frame {
     background-color: #f5f5f5;
     background-color: hsla(0, 0%, 96.0784%, 1.0);
 }
 
-.js .notice__js {
+.js .notice-js {
     display: none;
 }
 
-.no-js .notice__js {
+.no-js .notice-js {
     background-color: #ffffcc;
     background-color: hsla(60, 100%, 90%, 1.0);
 }
@@ -761,15 +763,15 @@ textarea {
  *    that receive the `clearfix` class.
  */
 
-.gs__wrapper:before,
-.gs__wrapper:after,
+.grid_wrapper:before,
+.grid_wrapper:after,
 .cf:before,
 .cf:after {
     display: table; /* 1 */
     content: " ";   /* 2 */
 }
 
-.gs__wrapper:after,
+.grid_wrapper:after,
 .cf:after {
     clear: both;
 }
@@ -779,7 +781,7 @@ textarea {
  * Include this rule to trigger hasLayout and contain floats.
  */
 
-.gs__wrapper,
+.grid_wrapper,
 .cf {
     *zoom: 1;
 }
@@ -788,83 +790,82 @@ textarea {
    Media queries
    ========================================================================== */
 
-/* Grid breakpoint 1 (.bp1__*, ≈ 480px) */
+/* Grid breakpoint 1 (.grid_bp1_col-*, 480px) */
 @media only screen and (min-width: 30em) {
-    .gs__bp1__col-1 {
+    .grid_bp1_col-full {
         width: 100%;
     }
 
-    .gs__bp1__col-1-2 {
+    .grid_bp1_col-one_half {
         width: 50%;
     }
 
-    .gs__bp1__col-1-3 {
+    .grid_bp1_col-one_third {
         width: 33.333%;
     }
 
-    .gs__bp1__col-2-3 {
+    .grid_bp1_col-two_thirds {
         width: 66.666%;
     }
 
-    .gs__bp1__col-1-4 {
+    .grid_bp1_col-one_fourth {
         width: 25%;
     }
 
-    .gs__bp1__col-3-4 {
+    .grid_bp1_col-three_fourths {
         width: 75%;
     }
 }
 
-/* Grid breakpoint 2 (.bp2__*, ≈ 768px) */
+/* Grid breakpoint 2 (.grid_bp2_col-*, 768px) */
 @media only screen and (min-width: 48em) {
-    .gs__bp2__col-1 {
+    .grid_bp2_col-full {
         width: 100%;
     }
 
-    .gs__bp2__col-1-2 {
+    .grid_bp2_col-one_half {
         width: 50%;
     }
 
-    .gs__bp2__col-1-3 {
+    .grid_bp2_col-one_third {
         width: 33.333%;
     }
 
-    .gs__bp2__col-2-3 {
+    .grid_bp2_col-two_thirds {
         width: 66.666%;
     }
 
-    .gs__bp2__col-1-4 {
+    .grid_bp2_col-one_fourth {
         width: 25%;
     }
-
-    .gs__bp2__col-3-4 {
+    .grid_bp2_col-three_fourths {
         width: 75%;
     }
 }
 
-/* Grid breakpoint 3 (.bp3__*, ≈ 960px) */
+/* Grid breakpoint 3 (.grid_bp3_col-*, 960px) */
 @media only screen and (min-width: 60em) {
-    .gs__bp3__col-1 {
+    .grid_bp3_col-full {
         width: 100%;
     }
 
-    .gs__bp3__col-1-2 {
+    .grid_bp3_col-one_half {
         width: 50%;
     }
 
-    .gs__bp3__col-1-3 {
+    .grid_bp3_col-one_third {
         width: 33.333%;
     }
 
-    .gs__bp3__col-2-3 {
+    .grid_bp3_col-two_thirds {
         width: 66.666%;
     }
 
-    .gs__bp3__col-1-4 {
+    .grid_bp3_col-one_fourth {
         width: 25%;
     }
 
-    .gs__bp3__col-3-4 {
+    .grid_bp3_col-three_fourths {
         width: 75%;
     }
 }
