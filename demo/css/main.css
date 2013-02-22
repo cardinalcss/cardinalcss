@@ -44,15 +44,15 @@ html {
 }
 
 /*
- * Establish initial text color, font size, and line height
+ * Establish base font size, color, and line height
  */
 
 body {
     color: #444;
     color: hsla(0, 0%, 13.3333%, 1.0);
-    font-size: 100%;
+    font-size: 100%; /* 16px */
     font-family: sans-serif;
-    line-height: 1.500rem;
+    line-height: 1.500rem; /* 24px */
 }
 
 /*
@@ -213,6 +213,7 @@ h2,
 h3,
 .text_medium {
     font-size: 1.333rem;
+    line-height: 1.500rem;
 }
 
 h3,
@@ -315,8 +316,6 @@ pre[rel]:before {
     -webkit-box-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.04);
     -moz-box-shadow:    0 1px 3px hsla(0, 0%, 0%, 0.04);
     box-shadow:         0 1px 3px hsla(0, 0%, 0%, 0.04);
-    /*color: #b7b7b7;
-    color: hsla(0, 0%, 72%, 1);*/
     content: attr(rel);
     text-indent: 1.5rem;
     text-shadow: 0 0 15px #fff;
