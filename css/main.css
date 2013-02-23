@@ -1,25 +1,25 @@
-/* =======================================================================
+/* =========================================================================
    @font-face declarations
    LINK: How to define font-weight and style     - http://cbrac.co/TMxZps
    LINK: Smoother @font-face rendering in Chrome - http://cbrac.co/U4mSbc
    WARNING: Be careful with relative paths "../" - http://cbrac.co/UKAJEg
-   ========================================================================== */
+   ========================================================================= */
 
 /* YourFontName: Normal
 @font-face {
-    font-family: "YourFontName";
-    src: url("/path/to/YourFont.eot");
-    src: url("/path/to/YourFont.eot?#iefix") format("embedded-opentype"),
-             url("/path/to/YourFont.svg#YourFontName") format("svg"),
-             url("/path/to/YourFont.woff") format("woff"),
-             url("/path/to/YourFont.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
+	font-family: "YourFontName";
+	src: url("/path/to/YourFont.eot");
+	src: url("/path/to/YourFont.eot?#iefix") format("embedded-opentype"),
+			 url("/path/to/YourFont.svg#YourFontName") format("svg"),
+			 url("/path/to/YourFont.woff") format("woff"),
+			 url("/path/to/YourFont.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
 }*/
 
-/* ==========================================================================
+/* =========================================================================
    Base styles
-   ========================================================================== */
+   ========================================================================= */
 
 /*
  * box-sizing: border-box
@@ -29,9 +29,9 @@
 *,
 *:before,
 *:after {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing:    border-box;
-    box-sizing:         border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing:    border-box;
+	box-sizing:         border-box;
 }
 
 /*
@@ -40,7 +40,7 @@
  */
 
 html {
-    overflow-y: scroll; /* http://cbrac.co/QziGF5 */
+	overflow-y: scroll; /* http://cbrac.co/QziGF5 */
 }
 
 /*
@@ -48,11 +48,11 @@ html {
  */
 
 body {
-    color: #444;
-    color: hsla(0, 0%, 13.3333%, 1.0);
-    font-size: 100%; /* 16px */
-    font-family: sans-serif;
-    line-height: 1.500rem; /* 24px */
+	color: #444;
+	color: hsla(0, 0%, 13.3333%, 1.0);
+	font-size: 100%; /* 16px */
+	font-family: sans-serif;
+	line-height: 1.500rem; /* 24px */
 }
 
 /*
@@ -62,52 +62,52 @@ body {
  */
 
 ::-moz-selection {
-    background: #b3d4fc;
-    background: hsla(213, 92.4051%, 84.5098%, 1.0);
-    text-shadow: none;
+	background: #b3d4fc;
+	background: hsla(213, 92.4051%, 84.5098%, 1.0);
+	text-shadow: none;
 }
 
 ::selection {
-    background: #b3d4fc;
-    background: hsla(213, 92.4051%, 84.5098%, 1.0);
-    text-shadow: none;
+	background: #b3d4fc;
+	background: hsla(213, 92.4051%, 84.5098%, 1.0);
+	text-shadow: none;
 }
 
-/* ==========================================================================
+/* =========================================================================
    Links
-   ========================================================================== */
+   ========================================================================= */
 
 /*
  * Define a mobile tap highlight color (iOS 1.1.1+)
  */
 
 a:link {
-    -webkit-tap-highlight-color: #b3d4fc;
-    -webkit-tap-highlight-color: hsla(213, 92.4051%, 84.5098%, 1.0);
+	-webkit-tap-highlight-color: #b3d4fc;
+	-webkit-tap-highlight-color: hsla(213, 92.4051%, 84.5098%, 1.0);
 }
 
 a:hover {
-    text-decoration: none;
+	text-decoration: none;
 }
 
-/* ==========================================================================
+/* =========================================================================
    Typography
    Baseline grid: 24px
    Modular scale: 16px @ 1:1.333 (Perfect fourth)
    http://modularscale.com/scale/?px1=16&px2=24&ra1=1.333&ra2=0
-   ========================================================================== */
+   ========================================================================= */
 
 abbr,
 acronym {
-    cursor: help;
+	cursor: help;
 }
 
 abbr a {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 acronym {
-    text-transform: uppercase;
+	text-transform: uppercase;
 }
 
 blockquote,
@@ -118,69 +118,70 @@ ol,
 p,
 pre,
 ul {
-    margin: 0 0 1.500rem;
+	margin: 0 0 1.500rem;
 }​
 
 big,
 .text_xxl {
-    font-size: 4.209rem;
-    line-height: 4.500rem;
+	font-size: 4.209rem;
+	line-height: 4.500rem;
 }
 
 blockquote {
-    margin-left: 2.369rem;
+	margin-left: 2.369rem;
 }
 
 blockquote p {
-    margin: 0;
+	margin: 0;
 }
 
 blockquote p + p {
-    margin-top: 1.500rem;
+	margin-top: 1.500rem;
 }
 
 /*
- * Use <footer> tag instead of <cite> inside blockquotes: http://cbrac.co/TCVK4P
+ * Use <footer> tag instead of <cite> inside blockquotes
+ * http://cbrac.co/TCVK4P
  */
 
 blockquote footer:before {
-    content: "\2014 \2009";
+	content: "\2014 \2009";
 }
 
 blockquote footer {
-    color: #686868;
-    color: hsla(0, 0%, 40.7843%, 1.0);
-    font-style: italic;
+	color: #686868;
+	color: hsla(0, 0%, 40.7843%, 1.0);
+	font-style: italic;
 }
 
 code,
 pre {
-    font: 0.8125rem/1.500rem Monaco, Menlo, Consolas, "Courier New", monospace;
+	font: 0.8125rem/1.500rem Monaco, Menlo, Consolas, "Courier New", monospace;
 }
 
 code {
-    padding: 0.1rem 0.317rem;
-    background-color: #f8f8f8;
-    background-color: hsla(0, 0%, 97.2549%, 1.0);
-    border: 1px solid #eaeaea;
-    border: 1px solid hsla(0, 0%, 91.7647%, 1.0);
-    -webkit-border-radius: 0.201rem;
-    -moz-border-radius:    0.201rem;
-    border-radius:         0.201rem;
+	padding: 0.1rem 0.317rem;
+	background-color: #f8f8f8;
+	background-color: hsla(0, 0%, 97.2549%, 1.0);
+	border: 1px solid #eaeaea;
+	border: 1px solid hsla(0, 0%, 91.7647%, 1.0);
+	-webkit-border-radius: 0.201rem;
+	-moz-border-radius:    0.201rem;
+	border-radius:         0.201rem;
 }
 
 del {
-    text-decoration: line-through;
+	text-decoration: line-through;
 }
 
 details {
-    cursor: pointer;
+	cursor: pointer;
 }
 
 em,
 i,
 cite {
-    font-style: italic;
+	font-style: italic;
 }
 
 h1,
@@ -189,60 +190,60 @@ h3,
 h4,
 h5,
 h6 {
-    margin: 0;
-    margin-bottom: 1.500rem;
-    color: #222;
-    font-weight: 700;
-    font-family: sans-serif;
-    line-height: 1.500rem;
-    text-rendering: optimizeLegibility; /* Use with care: http://cbrac.co/UkurL4 */
+	margin: 0;
+	margin-bottom: 1.500rem;
+	color: #222;
+	font-weight: 700;
+	font-family: sans-serif;
+	line-height: 1.500rem;
+	text-rendering: optimizeLegibility; /* Careful: http://cbrac.co/UkurL4 */
 }
 
 h1,
 .text_xl {
-    font-size: 3.553rem;
-    line-height: 4.500rem;
+	font-size: 3.553rem;
+	line-height: 4.500rem;
 }
 
 h2,
 .text_large {
-    font-size: 1.777rem;
-    line-height: 3.000rem;
+	font-size: 1.777rem;
+	line-height: 3.000rem;
 }
 
 h3,
 .text_medium {
-    font-size: 1.333rem;
-    line-height: 1.500rem;
+	font-size: 1.333rem;
+	line-height: 1.500rem;
 }
 
 h3,
 h4,
 h5,
 h6 {
-    margin-bottom: 0;
+	margin-bottom: 0;
 }
 
 h4,
 h5,
 h6,
 .text_normal {
-    font-size: 1.000rem;
+	font-size: 1.000rem;
 }
 
 hr {
-    border: 0;
-    border-bottom: 1px solid #c0c0c0;
-    border-bottom: 1px solid hsla(0, 0%, 75.2941%, 1.0);
-    margin-top: -1px; /* Maintains the baseline grid */
+	border: 0;
+	border-bottom: 1px solid #c0c0c0;
+	border-bottom: 1px solid hsla(0, 0%, 75.2941%, 1.0);
+	margin-top: -1px; /* Maintains the baseline grid */
 }
 
 ins {
-    background: #ff9;
-    background: hsla(60, 100%, 80%, 1.0);
-    color: #000;
-    color: hsla(0, 0%, 0%, 1.0);
-    text-decoration: none;
+	background: #ff9;
+	background: hsla(60, 100%, 80%, 1.0);
+	color: #000;
+	color: hsla(0, 0%, 0%, 1.0);
+	text-decoration: none;
 }
 
 /*
@@ -255,28 +256,28 @@ ol ol ol    { list-style: lower-roman; }
 ol ol ol ol { list-style: lower-alpha; }
 
 pre {
-    position: relative;
-    overflow: auto;
-    padding: 0;
-    margin-top: -1px; /* Maintains baseline grid */
-    border: 1px solid #d7d7d7;
-    border: 1px solid hsla(0, 0%, 84%, 1.0);
-    -webkit-border-radius: 0.317rem;
-    -moz-border-radius:    0.317rem;
-    border-radius:         0.317rem;
-    background: #fff;
-    background: hsla(0, 0%, 100%, 1.0);
-    white-space: pre;
-    word-wrap: normal;
-    -ms-word-break: normal;
-    word-break:     normal;
-    -moz-tab-size: 4;
-    -o-tab-size:   4;
-    tab-size:      4;
-    -webkit-hyphens: none;
-    -moz-hyphens:    none;
-    hyphens:         none;
-    -ms-hyphens:     none;
+	position: relative;
+	overflow: auto;
+	padding: 0;
+	margin-top: -1px; /* Maintains baseline grid */
+	border: 1px solid #d7d7d7;
+	border: 1px solid hsla(0, 0%, 84%, 1.0);
+	-webkit-border-radius: 0.317rem;
+	-moz-border-radius:    0.317rem;
+	border-radius:         0.317rem;
+	background: #fff;
+	background: hsla(0, 0%, 100%, 1.0);
+	white-space: pre;
+	word-wrap: normal;
+	-ms-word-break: normal;
+	word-break:     normal;
+	-moz-tab-size: 4;
+	-o-tab-size:   4;
+	tab-size:      4;
+	-webkit-hyphens: none;
+	-moz-hyphens:    none;
+	hyphens:         none;
+	-ms-hyphens:     none;
 }
 
 /*
@@ -284,61 +285,61 @@ pre {
  */
 
 pre code {
-    display: block;
-    overflow: auto;
-    margin: 0;
-    padding: 1.500rem;
-    border: none;
-    -webkit-border-radius: 0;
-    -moz-border-radius:    0;
-    border-radius:         0;
-    background-color: transparent;
-    white-space: pre;
+	display: block;
+	overflow: auto;
+	margin: 0;
+	padding: 1.500rem;
+	border: none;
+	-webkit-border-radius: 0;
+	-moz-border-radius:    0;
+	border-radius:         0;
+	background-color: transparent;
+	white-space: pre;
 }
 
 pre[rel] code {
-    padding: 4.500rem 1.500rem 1.500rem;
+	padding: 4.500rem 1.500rem 1.500rem;
 }
 
 pre[rel]:before {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    width: 100%;
-    border-bottom: 1px solid #d7d7d7;
-    border-bottom: 1px solid hsla(0, 0%, 84%, 1.0);
-    -webkit-border-radius: 0.317rem 0.317rem 0 0;
-    -moz-border-radius:    0.317rem 0.317rem 0 0;
-    border-radius:         0.317rem 0.317rem 0 0;
-    background: #f0f0f0;
-    background: hsla(0, 0%, 94%, 1);
-    -webkit-box-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.04);
-    -moz-box-shadow:    0 1px 3px hsla(0, 0%, 0%, 0.04);
-    box-shadow:         0 1px 3px hsla(0, 0%, 0%, 0.04);
-    content: attr(rel);
-    text-indent: 1.5rem;
-    text-shadow: 0 0 15px #fff;
-    letter-spacing: 0.1rem;
-    font-size: 1.333rem;
-    line-height: 3rem;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	width: 100%;
+	border-bottom: 1px solid #d7d7d7;
+	border-bottom: 1px solid hsla(0, 0%, 84%, 1.0);
+	-webkit-border-radius: 0.317rem 0.317rem 0 0;
+	-moz-border-radius:    0.317rem 0.317rem 0 0;
+	border-radius:         0.317rem 0.317rem 0 0;
+	background: #f0f0f0;
+	background: hsla(0, 0%, 94%, 1);
+	-webkit-box-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.04);
+	-moz-box-shadow:    0 1px 3px hsla(0, 0%, 0%, 0.04);
+	box-shadow:         0 1px 3px hsla(0, 0%, 0%, 0.04);
+	content: attr(rel);
+	text-indent: 1.5rem;
+	text-shadow: 0 0 15px #fff;
+	letter-spacing: 0.1rem;
+	font-size: 1.333rem;
+	line-height: 3rem;
 }
 
 small,
 .text_small {
-    font-size: 0.844rem;
+	font-size: 0.844rem;
 }
 
-/* ==========================================================================
+/* =========================================================================
    Non-texual elements
-   ========================================================================== */
+   ========================================================================= */
 
 /*
  * Fluid-width audio elements
  */
 
 audio {
-    width: 100%;
+	width: 100%;
 }
 
 /*
@@ -346,9 +347,9 @@ audio {
  */
 
 fieldset {
-    padding: 0;
-    margin: 0;
-    border: 0;
+	padding: 0;
+	margin: 0;
+	border: 0;
 }
 
 /*
@@ -357,7 +358,7 @@ fieldset {
  */
 
 img {
-    vertical-align: middle;
+	vertical-align: middle;
 }
 
 /*
@@ -366,9 +367,9 @@ img {
 
 img,
 video {
-    width: auto\9;
-    max-width: 100%;
-    height: auto !important;
+	width: auto\9;
+	max-width: 100%;
+	height: auto !important;
 }
 
 /*
@@ -378,9 +379,9 @@ video {
 input,
 select,
 textarea {
-    font-size: inherit;
-    font-family: inherit;
-    line-height: inherit;
+	font-size: inherit;
+	font-family: inherit;
+	line-height: inherit;
 }
 
 /*
@@ -390,7 +391,7 @@ textarea {
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-    filter: chroma(color=#000000);
+	filter: chroma(color=#000000);
 }
 
 /*
@@ -398,115 +399,135 @@ input[type="submit"] {
  */
 
 textarea {
-    resize: vertical;
+	resize: vertical;
 }
 
-/* ==========================================================================
+/* =========================================================================
    Buttons
-   ========================================================================== */
+   ========================================================================= */
 
 .btn {
-    display: inline-block;
-    padding: 0 0.750rem;
-    border-width: 1px;
-    border-style: solid;
-    border-color: #c5c5c5;
-    border-color: hsla(0, 0%, 77.2549%, 1.0);
-    -webkit-border-radius: 0.317rem;
-    -moz-border-radius:    0.317rem;
-    border-radius:         0.317rem;
-    background-color: #e5e5e5;
-    background-color: hsla(0, 0%, 89.8039%, 1.0);
-    -webkit-box-shadow: inset 0 0 1px 1px hsla(0, 0%, 96%, 1);
-    -moz-box-shadow:    inset 0 0 1px 1px hsla(0, 0%, 96%, 1);
-    box-shadow:         inset 0 0 1px 1px hsla(0, 0%, 96%, 1);
-    color: #333;
-    color: hsla(0, 0%, 20%, 1.0);
-    text-align: center;
-    text-decoration: none;
-    text-shadow: 0 1px 0 #fff;
-    text-shadow: 0 1px 0 hsla(0, 0%, 100%, 1);
-    line-height: 2.875rem;
-    cursor: pointer;
-    *display: inline;
-    *zoom: 1;
+	display: inline-block;
+	padding: 0 0.750rem;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #c5c5c5;
+	border-color: hsla(0, 0%, 77.2549%, 1.0);
+	-webkit-border-radius: 0.317rem;
+	-moz-border-radius:    0.317rem;
+	border-radius:         0.317rem;
+	background-color: #e5e5e5;
+	background-color: hsla(0, 0%, 89.8039%, 1.0);
+	-webkit-box-shadow: inset 0 0 1px 1px hsla(0, 0%, 96%, 1);
+	-moz-box-shadow:    inset 0 0 1px 1px hsla(0, 0%, 96%, 1);
+	box-shadow:         inset 0 0 1px 1px hsla(0, 0%, 96%, 1);
+	color: #333;
+	color: hsla(0, 0%, 20%, 1.0);
+	text-align: center;
+	text-decoration: none;
+	text-shadow: 0 1px 0 #fff;
+	text-shadow: 0 1px 0 hsla(0, 0%, 100%, 1);
+	line-height: 2.875rem;
+	cursor: pointer;
+	*display: inline;
+	*zoom: 1;
 }
 
 .btn:hover {
-    background-color: #ececec;
-    background-color: hsla(0, 0%, 92.5490%, 1.0);
-    color: #222;
-    color: hsla(0, 0%, 13.3333%, 1.0);
-    cursor: pointer;
+	background-color: #ececec;
+	background-color: hsla(0, 0%, 92.5490%, 1.0);
+	color: #222;
+	color: hsla(0, 0%, 13.3333%, 1.0);
+	cursor: pointer;
 }
 
 .btn:active {
-    -webkit-box-shadow: inset 0 0 0.422rem hsla(0, 0%, 0%, 0.10);
-    -moz-box-shadow:    inset 0 0 0.422rem hsla(0, 0%, 0%, 0.10);
-    box-shadow:         inset 0 0 0.422rem hsla(0, 0%, 0%, 0.10);
-    color: #000;
-    color: hsla(0, 0%, 0%, 1);
+	-webkit-box-shadow: inset 0 0 0.422rem hsla(0, 0%, 0%, 0.10);
+	-moz-box-shadow:    inset 0 0 0.422rem hsla(0, 0%, 0%, 0.10);
+	box-shadow:         inset 0 0 0.422rem hsla(0, 0%, 0%, 0.10);
+	color: #000;
+	color: hsla(0, 0%, 0%, 1);
 }
 
 .btn:focus {
-    outline: thin dotted #333;
-    outline: 5px auto -webkit-focus-ring-color;
-    outline-offset: -2px;
+	outline: thin dotted #333;
+	outline: 5px auto -webkit-focus-ring-color;
+	outline-offset: -2px;
 }
 
-/* ==========================================================================
+/* =========================================================================
    Baseline grid guide (.baseline_*)
    For development only, remove this on production sites
-   ========================================================================== */
+   ========================================================================= */
 
 .baseline {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 9999;
-    display: block;
-    pointer-events: none;
-    background-image: -webkit-linear-gradient(hsla(0, 0%, 0%, 0) 95%, hsla(0, 25%, 50%, 0.25) 95%);
-    background-image: -moz-linear-gradient(hsla(0, 0%, 0%, 0) 95%, hsla(0, 25%, 50%, 0.25) 95%);
-    background-image: -ms-linear-gradient(hsla(0, 0%, 0%, 0) 95%, hsla(0, 25%, 50%, 0.25) 95%);
-    background-image: -o-linear-gradient(hsla(0, 0%, 0%, 0) 95%, hsla(0, 25%, 50%, 0.25) 95%);
-    background-image: linear-gradient(hsla(0, 0%, 0%, 0) 95%, hsla(0, 25%, 50%, 0.25) 95%);
-    background-position: 50% 0;
-    background-size: 1.500rem 1.500rem;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 9999;
+	display: block;
+	pointer-events: none;
+	background-image:
+		-webkit-linear-gradient(
+			hsla(0, 0%, 0%, 0) 95%,
+			hsla(0, 25%, 50%, 0.25) 95%
+		);
+	background-image:
+		-moz-linear-gradient(
+			hsla(0, 0%, 0%, 0) 95%,
+			hsla(0, 25%, 50%, 0.25) 95%
+		);
+	background-image:
+		-ms-linear-gradient(
+			hsla(0, 0%, 0%, 0) 95%,
+			hsla(0, 25%, 50%, 0.25) 95%
+		);
+	background-image:
+		-o-linear-gradient(
+			hsla(0, 0%, 0%, 0) 95%,
+			hsla(0, 25%, 50%, 0.25) 95%
+		);
+	background-image:
+		linear-gradient(
+			hsla(0, 0%, 0%, 0) 95%,
+			hsla(0, 25%, 50%, 0.25) 95%
+		);
+	background-position: 50% 0;
+	background-size: 1.500rem 1.500rem;
 }
 
 .baseline_toggle {
-    position: fixed;
-    top: 1.500rem;
-    right: 1.500rem;
-    z-index: 9999;
-    margin-top: -1px;
+	position: fixed;
+	top: 1.500rem;
+	right: 1.500rem;
+	z-index: 9999;
+	margin-top: -1px;
 }
 
 .baseline_on {
-    position: relative;
+	position: relative;
 }
 
-/* ==========================================================================
+/* =========================================================================
    Grid system (.grid_*)
 
    Usage:
    <div class="wrapper">
-       <div class="grid_divider">
-           <div class="grid_wrapper">
-               <div class="grid_col grid_bp1_col-1-2">foo</div>
-               <div class="grid_col grid_bp1_col-1-2">bar</div>
-           </div>
-       </div>
+	   <div class="grid_divider">
+		   <div class="grid_wrapper">
+			   <div class="grid_col grid_bp1_col-1-2">foo</div>
+			   <div class="grid_col grid_bp1_col-1-2">bar</div>
+		   </div>
+	   </div>
    </div>
-   ========================================================================== */
+   ========================================================================= */
 
 .wrapper {
-    width: 90%;
-    max-width: 75rem; /* ≈ 1200px */
-    margin: 0 auto;
+	width: 90%;
+	max-width: 75rem; /* ≈ 1200px */
+	margin: 0 auto;
 }
 
 /*
@@ -514,28 +535,28 @@ textarea {
  */
 
 .grid_divider {
-    border-bottom: 1px solid #e0e0e0;
-    border-bottom: 1px solid hsla(0, 0%, 87.8431%, 1.0);
-    margin-top: -1px;  /* Maintains the baseline grid */
-    margin-bottom: 1.500rem;
+	border-bottom: 1px solid #e0e0e0;
+	border-bottom: 1px solid hsla(0, 0%, 87.8431%, 1.0);
+	margin-top: -1px;  /* Maintains the baseline grid */
+	margin-bottom: 1.500rem;
 }
 
 .grid_wrapper {
-    margin-left: -3.000rem;
+	margin-left: -3.000rem;
 }
 
 .grid_col {
-    float: left;
-    padding-left: 3.000rem;
-    width: 100%;
+	float: left;
+	padding-left: 3.000rem;
+	width: 100%;
 }
 
 .grid_gutter-half {
-    margin-left: -1.500rem;
+	margin-left: -1.500rem;
 }
 
 .grid_gutter-half .grid_col {
-    padding-left: 1.500rem;
+	padding-left: 1.500rem;
 }
 
 /*
@@ -544,27 +565,27 @@ textarea {
  */
 
 .grid_col-full {
-    width: 100%;
+	width: 100%;
 }
 
 .grid_col-one_half {
-    width: 50%;
+	width: 50%;
 }
 
 .grid_col-one_third {
-    width: 33.333%;
+	width: 33.333%;
 }
 
 .grid_col-two_thirds {
-    width: 66.666%;
+	width: 66.666%;
 }
 
 .grid_col-one_fourth {
-    width: 25%;
+	width: 25%;
 }
 
 .grid_col-three_fourths {
-    width: 75%;
+	width: 75%;
 }
 
 /*
@@ -572,14 +593,14 @@ textarea {
  */
 
 .strip {
-    margin: 0 0 1.500rem;
-    padding: 1.500rem 0;
-    background-color: #efefef;
-    background-color: hsla(0, 0%, 93.7255%, 1.0);
+	margin: 0 0 1.500rem;
+	padding: 1.500rem 0;
+	background-color: #efefef;
+	background-color: hsla(0, 0%, 93.7255%, 1.0);
 }
 
 .strip :last-child {
-    margin-bottom: 0;
+	margin-bottom: 0;
 }
 
 /*
@@ -587,82 +608,83 @@ textarea {
  */
 
 .island {
-    padding: 1.500rem;
-    -webkit-border-radius: 0.317rem;
-    -moz-border-radius:    0.317rem;
-    border-radius:         0.317rem;
-    background-color: #efefef;
-    background-color: hsla(0, 0%, 93.7255%, 1.0);
+	padding: 1.500rem;
+	-webkit-border-radius: 0.317rem;
+	-moz-border-radius:    0.317rem;
+	border-radius:         0.317rem;
+	background-color: #efefef;
+	background-color: hsla(0, 0%, 93.7255%, 1.0);
 }
 
 .well {
-    padding: 1.500rem;
-    -webkit-border-radius: 0.317rem;
-    -moz-border-radius:    0.317rem;
-    border-radius:         0.317rem;
-    background-color: #efefef;
-    background-color: hsla(0, 0%, 93.7255%, 1.0);
-    -webkit-box-shadow: inset 0 0 0.317rem hsla(0, 0%, 0%, 0.10);
-    -moz-box-shadow:    inset 0 0 0.317rem hsla(0, 0%, 0%, 0.10);
-    box-shadow:         inset 0 0 0.317rem hsla(0, 0%, 0%, 0.10);
+	padding: 1.500rem;
+	-webkit-border-radius: 0.317rem;
+	-moz-border-radius:    0.317rem;
+	border-radius:         0.317rem;
+	background-color: #efefef;
+	background-color: hsla(0, 0%, 93.7255%, 1.0);
+	-webkit-box-shadow: inset 0 0 0.317rem hsla(0, 0%, 0%, 0.10);
+	-moz-box-shadow:    inset 0 0 0.317rem hsla(0, 0%, 0%, 0.10);
+	box-shadow:         inset 0 0 0.317rem hsla(0, 0%, 0%, 0.10);
 }
 
 .island :last-child,
 .well :last-child {
-    margin-bottom: 0;
+	margin-bottom: 0;
 }
 
 .grid_col .island,
 .grid_col .well {
-    margin-bottom: 1.500rem;
+	margin-bottom: 1.500rem;
 }
 
-/* ==========================================================================
+/* =========================================================================
    Chrome Frame & Javascript prompts
-   ========================================================================== */
+   ========================================================================= */
 
 .notice-chrome_frame,
 .no-js .notice-js {
-    display: block;
-    margin: 0;
-    padding: 0.750rem 0;
-    text-align: center;
-    font-size: 0.750rem;
+	display: block;
+	margin: 0;
+	padding: 0.750rem 0;
+	text-align: center;
+	font-size: 0.750rem;
 }
 
 .notice-chrome_frame {
-    background-color: #f5f5f5;
-    background-color: hsla(0, 0%, 96.0784%, 1.0);
+	background-color: #f5f5f5;
+	background-color: hsla(0, 0%, 96.0784%, 1.0);
 }
 
 .js .notice-js {
-    display: none;
+	display: none;
 }
 
 .no-js .notice-js {
-    background-color: #ffffcc;
-    background-color: hsla(60, 100%, 90%, 1.0);
+	background-color: #ffffcc;
+	background-color: hsla(60, 100%, 90%, 1.0);
 }
 
-/* ==========================================================================
+/* =========================================================================
    Site structure & local styles
-   ========================================================================== */
+   ========================================================================= */
 
 
 
 
 
 
-/* YOUR CSS GOES HERE! */
+/*
+ * YOUR CSS GOES HERE!
+ */
 
 
 
 
 
-
-/* ==========================================================================
+/* =========================================================================
    Helper classes
-   ========================================================================== */
+   ========================================================================= */
 
 /* Floats */
 .float_left  { float: left; }
@@ -676,17 +698,17 @@ textarea {
 
 /* Image replacement */
 .ir {
-    overflow: hidden;
-    border: 0;
-    background-color: transparent;
-    *text-indent: -9999px; /* IE 6/7 fallback */
+	overflow: hidden;
+	border: 0;
+	background-color: transparent;
+	*text-indent: -9999px; /* IE 6/7 fallback */
 }
 
 .ir:before {
-    display: block;
-    content: "";
-    width: 0;
-    height: 100%;
+	display: block;
+	content: "";
+	width: 0;
+	height: 100%;
 }
 
 /*
@@ -694,8 +716,8 @@ textarea {
  */
 
 .hidden {
-    display: none !important;
-    visibility: hidden;
+	display: none !important;
+	visibility: hidden;
 }
 
 /*
@@ -704,14 +726,14 @@ textarea {
  */
 
 .visuallyhidden {
-    overflow: hidden;
-    position: absolute;
-    padding: 0;
-    margin: -1px;
-    width: 1px;
-    height: 1px;
-    border: 0;
-    clip: rect(0 0 0 0);
+	overflow: hidden;
+	position: absolute;
+	padding: 0;
+	margin: -1px;
+	width: 1px;
+	height: 1px;
+	border: 0;
+	clip: rect(0 0 0 0);
 }
 
 /*
@@ -721,12 +743,12 @@ textarea {
 
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
-    overflow: visible;
-    margin: 0;
-    position: static;
-    width: auto;
-    height: auto;
-    clip: auto;
+	overflow: visible;
+	margin: 0;
+	position: static;
+	width: auto;
+	height: auto;
+	clip: auto;
 }
 
 /*
@@ -734,7 +756,7 @@ textarea {
  */
 
 .invisible {
-    visibility: hidden;
+	visibility: hidden;
 }
 
 /*
@@ -742,12 +764,12 @@ textarea {
  */
 
 .clear {
-    display: block;
-    visibility: hidden;
-    overflow: hidden;
-    clear: both;
-    width: 0;
-    height: 0;
+	display: block;
+	visibility: hidden;
+	overflow: hidden;
+	clear: both;
+	width: 0;
+	height: 0;
 }
 
 /*
@@ -766,13 +788,13 @@ textarea {
 .grid_wrapper:after,
 .cf:before,
 .cf:after {
-    display: table; /* 1 */
-    content: " ";   /* 2 */
+	display: table; /* 1 */
+	content: " ";   /* 2 */
 }
 
 .grid_wrapper:after,
 .cf:after {
-    clear: both;
+	clear: both;
 }
 
 /*
@@ -782,166 +804,166 @@ textarea {
 
 .grid_wrapper,
 .cf {
-    *zoom: 1;
+	*zoom: 1;
 }
 
-/* ==========================================================================
+/* =========================================================================
    Media queries
-   ========================================================================== */
+   ========================================================================= */
 
 /* Grid breakpoint 1 (.grid_bp1_col-*, 480px) */
 @media only screen and (min-width: 30em) {
-    .grid_bp1_col-full {
-        width: 100%;
-    }
+	.grid_bp1_col-full {
+		width: 100%;
+	}
 
-    .grid_bp1_col-one_half {
-        width: 50%;
-    }
+	.grid_bp1_col-one_half {
+		width: 50%;
+	}
 
-    .grid_bp1_col-one_third {
-        width: 33.333%;
-    }
+	.grid_bp1_col-one_third {
+		width: 33.333%;
+	}
 
-    .grid_bp1_col-two_thirds {
-        width: 66.666%;
-    }
+	.grid_bp1_col-two_thirds {
+		width: 66.666%;
+	}
 
-    .grid_bp1_col-one_fourth {
-        width: 25%;
-    }
+	.grid_bp1_col-one_fourth {
+		width: 25%;
+	}
 
-    .grid_bp1_col-three_fourths {
-        width: 75%;
-    }
+	.grid_bp1_col-three_fourths {
+		width: 75%;
+	}
 }
 
 /* Grid breakpoint 2 (.grid_bp2_col-*, 768px) */
 @media only screen and (min-width: 48em) {
-    .grid_bp2_col-full {
-        width: 100%;
-    }
+	.grid_bp2_col-full {
+		width: 100%;
+	}
 
-    .grid_bp2_col-one_half {
-        width: 50%;
-    }
+	.grid_bp2_col-one_half {
+		width: 50%;
+	}
 
-    .grid_bp2_col-one_third {
-        width: 33.333%;
-    }
+	.grid_bp2_col-one_third {
+		width: 33.333%;
+	}
 
-    .grid_bp2_col-two_thirds {
-        width: 66.666%;
-    }
+	.grid_bp2_col-two_thirds {
+		width: 66.666%;
+	}
 
-    .grid_bp2_col-one_fourth {
-        width: 25%;
-    }
-    .grid_bp2_col-three_fourths {
-        width: 75%;
-    }
+	.grid_bp2_col-one_fourth {
+		width: 25%;
+	}
+	.grid_bp2_col-three_fourths {
+		width: 75%;
+	}
 }
 
 /* Grid breakpoint 3 (.grid_bp3_col-*, 960px) */
 @media only screen and (min-width: 60em) {
-    .grid_bp3_col-full {
-        width: 100%;
-    }
+	.grid_bp3_col-full {
+		width: 100%;
+	}
 
-    .grid_bp3_col-one_half {
-        width: 50%;
-    }
+	.grid_bp3_col-one_half {
+		width: 50%;
+	}
 
-    .grid_bp3_col-one_third {
-        width: 33.333%;
-    }
+	.grid_bp3_col-one_third {
+		width: 33.333%;
+	}
 
-    .grid_bp3_col-two_thirds {
-        width: 66.666%;
-    }
+	.grid_bp3_col-two_thirds {
+		width: 66.666%;
+	}
 
-    .grid_bp3_col-one_fourth {
-        width: 25%;
-    }
+	.grid_bp3_col-one_fourth {
+		width: 25%;
+	}
 
-    .grid_bp3_col-three_fourths {
-        width: 75%;
-    }
+	.grid_bp3_col-three_fourths {
+		width: 75%;
+	}
 }
 
 /* Style adjustments for high resolution devices
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-       only screen and (min-resolution: 144dpi) {
+	   only screen and (min-resolution: 144dpi) {
 
 } */
 
-/* ==========================================================================
+/* =========================================================================
    Print styles, inlined to avoid an HTTP request: http://cbrac.co/VUjfe3
-   ========================================================================== */
+   ========================================================================= */
 
 @media print {
-    * {
-        box-shadow: none !important;
-        background: transparent !important;
-        color: #000 !important; /* Black prints faster: http://cbrac.co/XvusCs */
-        text-shadow: none !important;
-    }
+	* {
+		box-shadow: none !important;
+		background: transparent !important;
+		color: #000 !important; /* Prints faster: http://cbrac.co/XvusCs */
+		text-shadow: none !important;
+	}
 
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
+	a,
+	a:visited {
+		text-decoration: underline;
+	}
 
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
+	a[href]:after {
+		content: " (" attr(href) ")";
+	}
 
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
+	abbr[title]:after {
+		content: " (" attr(title) ")";
+	}
 
-    /*
-     * Don't show links for images, or javascript/internal links
-     */
+	/*
+	 * Don't show links for images, or javascript/internal links
+	 */
 
-    .ir a:after,
-    a[href^="javascript:"]:after,
-    a[href^="#"]:after {
-        content: "";
-    }
+	.ir a:after,
+	a[href^="javascript:"]:after,
+	a[href^="#"]:after {
+		content: "";
+	}
 
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
+	pre,
+	blockquote {
+		border: 1px solid #999;
+		page-break-inside: avoid;
+	}
 
-    thead {
-        display: table-header-group; /* http://cbrac.co/Q6s1o2 */
-    }
+	thead {
+		display: table-header-group; /* http://cbrac.co/Q6s1o2 */
+	}
 
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
+	tr,
+	img {
+		page-break-inside: avoid;
+	}
 
-    img {
-        max-width: 100% !important;
-    }
+	img {
+		max-width: 100% !important;
+	}
 
-    @page {
-        margin: 0.5cm;
-    }
+	@page {
+		margin: 0.5cm;
+	}
 
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
+	p,
+	h2,
+	h3 {
+		orphans: 3;
+		widows: 3;
+	}
 
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
+	h2,
+	h3 {
+		page-break-after: avoid;
+	}
 }

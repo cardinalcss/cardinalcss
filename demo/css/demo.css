@@ -4,10 +4,10 @@ body {
 
 .baseline {
 	background-image: -webkit-linear-gradient(hsla(0, 0%, 0%, 0) 95%, hsla(175, 69.8561%, 47.6574%, 0.75) 95%);
-    background-image: -moz-linear-gradient(hsla(0, 0%, 0%, 0) 95%, hsla(175, 69.8561%, 47.6574%, 0.75) 95%);
-    background-image: -ms-linear-gradient(hsla(0, 0%, 0%, 0) 95%, hsla(175, 69.8561%, 47.6574%, 0.75) 95%);
-    background-image: -o-linear-gradient(hsla(0, 0%, 0%, 0) 95%, hsla(175, 69.8561%, 47.6574%, 0.75) 95%);
-    background-image: linear-gradient(hsla(0, 0%, 0%, 0) 95%, hsla(175, 69.8561%, 47.6574%, 0.75) 95%);
+	background-image: -moz-linear-gradient(hsla(0, 0%, 0%, 0) 95%, hsla(175, 69.8561%, 47.6574%, 0.75) 95%);
+	background-image: -ms-linear-gradient(hsla(0, 0%, 0%, 0) 95%, hsla(175, 69.8561%, 47.6574%, 0.75) 95%);
+	background-image: -o-linear-gradient(hsla(0, 0%, 0%, 0) 95%, hsla(175, 69.8561%, 47.6574%, 0.75) 95%);
+	background-image: linear-gradient(hsla(0, 0%, 0%, 0) 95%, hsla(175, 69.8561%, 47.6574%, 0.75) 95%);
 }
 
 .strip[role="banner"] {
@@ -37,7 +37,7 @@ body {
 
 .grid_demo .island:hover {
 	background-color: #e5e5e5;
-    background-color: hsla(0, 0%, 89.8039%, 1.0);
+	background-color: hsla(0, 0%, 89.8039%, 1.0);
 }
 
 .grid_demo-parent {

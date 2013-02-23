@@ -4,7 +4,7 @@ jQuery(document).ready(function($) {
 	$(".baseline").hide();
 
 	$(".baseline_toggle .btn").on("click", function() {
-	    $("body").toggleClass("baseline_on");
-	    $(".baseline").fadeToggle(200);
+		$("body").toggleClass("baseline_on");
+		$(".baseline").fadeToggle(200);
 	});
 });
