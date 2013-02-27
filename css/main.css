@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /* =========================================================================
    @font-face declarations
    LINK: How to define font-weight and style     - http://cbrac.co/TMxZps
@@ -53,6 +55,11 @@ body {
 	font-size: 100%; /* 16px */
 	font-family: sans-serif;
 	line-height: 1.500rem; /* 24px */
+	-webkit-hyphens: auto;
+	-moz-hyphens:    auto;
+	-ms-hyphens:     auto;
+	hyphens:         auto;
+	word-wrap: break-word;
 }
 
 /*
