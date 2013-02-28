@@ -9,5 +9,6 @@ A barebones collection of killer front-end code for starting web projects.
 
 - Forms styling
 - Less emphasis on baseline grid
+- Spruce up buttons
 - Separate the demo from this repo, create a one-page site for it
 - Use new Modernizr build (w/ REM detection) to load the REM fallback conditionally
