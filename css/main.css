@@ -37,29 +37,34 @@
 }
 
 /*
- * WARNING: Use optimizeLegibility with caution - http://cbrac.co/SJt8p1
+ * WARNING: Use `text-rendering` with caution - http://cbrac.co/SJt8p1
  * WARNING: Avoid the webkit anti-aliasing trap - http://cbrac.co/TAdhbH
+ * 1. Expands to height of browser window
+ * 2. Force scrollbar in IE - http://cbrac.co/QziGF5
+ * 3. Remove iOS text size adjust without disabling user zoom
  */
 
 html {
-	overflow-y: scroll; /* http://cbrac.co/QziGF5 */
+	height: 100%; /* 1 */
+	overflow-y: scroll; /* 2 */
+	-webkit-text-size-adjust: 100%; /* 3 */
 }
 
 /*
  * Establish base font size, color, and line height
+ * 1. Inherit <html>'s 100% height, but expand if needed
+ * 2. ...because IE6 treats `height` as `min-height`
+ * 3. http://cbrac.co/VeCzmi
  */
 
 body {
+	min-height: 100%; /* 1 */
+	_height: 100%; /* 2 */
 	color: #444;
 	color: hsla(0, 0%, 13.3333%, 1.0);
-	font-size: 100%; /* 16px */
-	font-family: sans-serif;
-	line-height: 1.500rem; /* 24px */
-	-webkit-hyphens: auto;
-	-moz-hyphens:    auto;
-	-ms-hyphens:     auto;
-	hyphens:         auto;
-	word-wrap: break-word;
+	font-size: 100.01%; /* 3 */
+	font-family: Arial, sans-serif;
+	line-height: 1.500rem;
 }
 
 /*
@@ -191,6 +196,10 @@ cite {
 	font-style: italic;
 }
 
+/*
+ * WARNING: Use `text-rendering` with caution - http://cbrac.co/SJt8p1
+ */
+
 h1,
 h2,
 h3,
@@ -203,7 +212,7 @@ h6 {
 	font-weight: 700;
 	font-family: sans-serif;
 	line-height: 1.500rem;
-	text-rendering: optimizeLegibility; /* Careful: http://cbrac.co/UkurL4 */
+	text-rendering: optimizeLegibility;
 }
 
 h1,
@@ -261,6 +270,14 @@ ol          { list-style: decimal; }
 ol ol       { list-style: upper-alpha; }
 ol ol ol    { list-style: lower-roman; }
 ol ol ol ol { list-style: lower-alpha; }
+
+p {
+	-webkit-hyphens: auto;
+	-moz-hyphens:    auto;
+	-ms-hyphens:     auto;
+	hyphens:         auto;
+	word-wrap: break-word;
+}
 
 pre {
 	position: relative;
@@ -463,61 +480,6 @@ textarea {
 }
 
 /* =========================================================================
-   Baseline grid guide (.baseline_*)
-   For development only, remove this on production sites
-   ========================================================================= */
-
-.baseline {
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	z-index: 9999;
-	display: block;
-	pointer-events: none;
-	background-image:
-		-webkit-linear-gradient(
-			hsla(0, 0%, 0%, 0) 95%,
-			hsla(0, 25%, 50%, 0.25) 95%
-		);
-	background-image:
-		-moz-linear-gradient(
-			hsla(0, 0%, 0%, 0) 95%,
-			hsla(0, 25%, 50%, 0.25) 95%
-		);
-	background-image:
-		-ms-linear-gradient(
-			hsla(0, 0%, 0%, 0) 95%,
-			hsla(0, 25%, 50%, 0.25) 95%
-		);
-	background-image:
-		-o-linear-gradient(
-			hsla(0, 0%, 0%, 0) 95%,
-			hsla(0, 25%, 50%, 0.25) 95%
-		);
-	background-image:
-		linear-gradient(
-			hsla(0, 0%, 0%, 0) 95%,
-			hsla(0, 25%, 50%, 0.25) 95%
-		);
-	background-position: 50% 0;
-	background-size: 1.500rem 1.500rem;
-}
-
-.baseline_toggle {
-	position: fixed;
-	top: 1.500rem;
-	right: 1.500rem;
-	z-index: 9999;
-	margin-top: -1px;
-}
-
-.baseline_on {
-	position: relative;
-}
-
-/* =========================================================================
    Grid system (.grid_*)
 
    Usage:
@@ -684,6 +646,7 @@ textarea {
 /*
  * YOUR CSS GOES HERE!
  */
+
 
 
 

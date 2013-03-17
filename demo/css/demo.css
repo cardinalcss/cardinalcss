@@ -1,13 +1,50 @@
-body {
-	position: relative;
+.baseline {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 9999;
+	display: block;
+	pointer-events: none;
+	background-image:
+		-webkit-linear-gradient(
+			hsla(0, 0%, 0%, 0) 95%,
+			hsla(175, 69.8561%, 47.6574%, 0.75) 95%
+		);
+	background-image:
+		-moz-linear-gradient(
+			hsla(0, 0%, 0%, 0) 95%,
+			hsla(175, 69.8561%, 47.6574%, 0.75) 95%
+		);
+	background-image:
+		-ms-linear-gradient(
+			hsla(0, 0%, 0%, 0) 95%,
+			hsla(175, 69.8561%, 47.6574%, 0.75) 95%
+		);
+	background-image:
+		-o-linear-gradient(
+			hsla(0, 0%, 0%, 0) 95%,
+			hsla(175, 69.8561%, 47.6574%, 0.75) 95%
+		);
+	background-image:
+		linear-gradient(
+			hsla(0, 0%, 0%, 0) 95%,
+			hsla(175, 69.8561%, 47.6574%, 0.75) 95%
+		);
+	background-position: 50% 0;
+	background-size: 1.500rem 1.500rem;
 }
 
-.baseline {
-	background-image: -webkit-linear-gradient(hsla(0, 0%, 0%, 0) 95%, hsla(175, 69.8561%, 47.6574%, 0.75) 95%);
-	background-image: -moz-linear-gradient(hsla(0, 0%, 0%, 0) 95%, hsla(175, 69.8561%, 47.6574%, 0.75) 95%);
-	background-image: -ms-linear-gradient(hsla(0, 0%, 0%, 0) 95%, hsla(175, 69.8561%, 47.6574%, 0.75) 95%);
-	background-image: -o-linear-gradient(hsla(0, 0%, 0%, 0) 95%, hsla(175, 69.8561%, 47.6574%, 0.75) 95%);
-	background-image: linear-gradient(hsla(0, 0%, 0%, 0) 95%, hsla(175, 69.8561%, 47.6574%, 0.75) 95%);
+.btn_baseline_toggle {
+	position: fixed;
+	top: 1.500rem;
+	right: 1.500rem;
+	z-index: 9999;
+}
+
+.baseline_on {
+	position: relative;
 }
 
 .strip[role="banner"] {

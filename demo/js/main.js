@@ -3,7 +3,7 @@ jQuery(document).ready(function($) {
 	// Toggle baseline grid
 	$(".baseline").hide();
 
-	$(".baseline_toggle .btn").on("click", function() {
+	$(".btn_baseline_toggle").on("click", function() {
 		$("body").toggleClass("baseline_on");
 		$(".baseline").fadeToggle(200);
 	});
