@@ -13,14 +13,13 @@
 		<!-- DNS Prefetch -->
 		<link rel="dns-prefetch" href="//www.google-analytics.com">
 
-		<!-- Title, desc  -->
-		<title>Cardinal | build more with less.</title>
+		<!-- Title, desc -->
+		<title></title>
 		<meta name="description" content="">
 
 		<!-- Favicons: http://cbrac.co/11ZzQkJ -->
 
 		<!-- Styles -->
-		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/main.css">
 
 		<!-- Scripts -->
@@ -28,13 +27,722 @@
 	</head>
 
 	<body>
-		<!--[if lt IE 7]><p class="notice-chrome_frame">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p><![endif]-->
 
-		<p class="notice-js">Javascript is <strong>currently disabled</strong> in your browser. This site requires Javascript to function correctly. Please <a href="http://enable-javascript.com/">enable Javascript in your browser</a>!</p>
+		<header class="strip">
+			<div class="wrapper">
+				<hgroup>
+					<h1>Cardinal</h1>
+					<h2 class="subheading">Build more with less.</h2>
+				</hgroup>
 
-		<!--
-			Yo dawg, I heard you like coding...
-		-->
+				<a href="https://github.com/cbracco/Cardinal" title="View & contribute on Github" class="btn">View on Github</a> // <a href="https://github.com/cbracco/Cardinal/archive/master.zip" title="Download from Github" class="btn">Download</a>
+			</div>
+		</header>
+
+		<div class="main wrapper">
+			<p class="text_large">Cardinal is a barebones, “mobile-first” front-end web development framework with some useful default styles, responsive layout and typography, and a simple grid system.</p>
+
+			<h2>Who should use this?</h2>
+
+			<div class="grid">
+				<div class="grid_item lap-one_half">
+					<p>If you are developing a responsive web application, then Cardinal is your friend. This framework tosses the idea of "pixel perfect" web design <em>mostly</em> out the window, instead placing more importance on good layout and readability for a wide range of devices.</p>
+				</div>
+
+				<div class="grid_item lap-one_half">
+					<p>Cardinal uses a combination of modular scale, unitless line-heights, and REM units to provide typography and layout that is not only readable, but is also easy for designers and developers to maintain and manipulate.</p>
+				</div>
+			</div>
+
+			<div class="grid">
+				<div class="grid_item lap-one_third">
+					<h3>Reset</h3>
+
+					<pre><code>article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,video{display:inline-block}audio:not([controls]){display:none;height:0}[hidden]{display:none}html{background:#fff;color:#000;font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}a:focus{outline:thin dotted}a:active,a:hover{outline:0}h1{font-size:2em;margin:.67em 0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}mark{background:#ff0;color:#000}code,kbd,pre,samp{font-family:monospace,serif;font-size:1em}pre{white-space:pre-wrap}q{quotes:"\201C" "\201D" "\2018" "\2019"}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:0}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}button,input{line-height:normal}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}</code></pre>
+
+					<p>Instead of a traditional CSS reset, Cardinal includes a minified version of <a href="http://cbrac.co/11gtlnj" title="normalize.css">normalize.css</a> by <a href="http://cbrac.co/10l8rJQ" title="Nicolas Gallagher">Nicolas Gallagher</a> to help render HTML elements more consistently across modern browsers, as well as Internet Explorer 8 and above.</p>
+				</div>
+
+				<div class="grid_item lap-one_third">
+					<h3>Base</h3>
+
+					<pre><code>box-sizing: border-box;</code></pre>
+
+					<p>Cardinal declares some useful default styles to the <code>&lt;html&gt;</code> and <code>&lt;body&gt;</code> elements to get them to play nice across browsers. It also adds basic styles to text selections, and applies <code>box-sizing: border-box;</code> to every element to fixed the flawed CSS box model.</p>
+				</div>
+
+				<div class="grid_item lap-one_third">
+					<h3>Fonts</h3>
+
+					<pre><code>@font-face {}</code></pre>
+
+					<p>To make adding custom fonts a bit quicker, Cardinal includes an example code snippet of the bulletproof <a href="http://cbrac.co/U4mSbc" title="@font-face">@font-face declaration</a>, so that you don’t have to worry about looking it up every time you want to use custom fonts in your project.</p>
+				</div>
+			</div>
+
+			<div class="grid">
+				<div class="grid_item lap-one_half">
+					<h3>Typography</h3>
+
+					<p>Following a "mobile-first" approach, Cardinal first sets the root font-size on the <code>&lt;html&gt;</code> element to <strong>75%, or 12px</strong>, and provides a fallback for IE8 and below to set the root font-size to 100%, or 16px.</p>
+
+					<pre><code>html { font-size: 75%; }
+html.lt-ie9 { font-size: 100%; }</code></pre>
+
+					<p>The root font-size is 12px because its optimized for feature phones (mobile devices with a viewport width less than 320px). This root font-size can then be overwritten with subsequent media queries, depending on the minimum width of the browser viewport.</p>
+
+					<pre><code>@media only screen and (min-width: 320px) { html { font-size: 81.25%; } }
+@media only screen and (min-width: 480px) { html { font-size: 87.5%;  } }
+@media only screen and (min-width: 768px) { html { font-size: 100%;   } }
+@media only screen and (min-width: 960px) { html { font-size: 112.5%; } }</code></pre>
+				</div>
+
+				<div class="grid_item lap-one_half">
+					<h3>Non-typography</h3>
+
+					<p>There are also some sensible default styles for non-typographical elements included with Cardinal. For instance, all <code>&lt;img&gt;</code> and <code>&lt;video&gt;</code> tags are given fluid properties, and <code>&lt;textarea&gt;</code> elements are restricted to vertical resizing only.</p>
+
+					<pre><code>img,
+video {
+	max-width: 100%;
+	width: auto\9;
+	height: auto !important;
+}</code></pre>
+
+					<pre><code>textarea {
+	resize: vertical;
+}</code></pre>
+				</div>
+			</div>
+
+			<div class="grid">
+				<div class="grid_item lap-one_half">
+					<h3>Grids</h3>
+
+					<p>Based on the clever ideas of <a href="http://builtbyboon.com/blog/proportional-grids" title="Proportional Grids FTW!">Matt Berridge</a>, Cardinal’s grid system uses <em>fluid</em> column widths and <em>fixed</em> column gutters. Nesting grid elements is a breeze, and you can dictate the grid’s behavior by adding CSS classes to items within the grid.</p>
+
+					<p>The columns widths are set in percentages, and the gutters are set in REMs. Due to the change in the root <code>font-size</code> above, the fixed gutters increase/decrease proportionally, depending on the width of the viewport.</p>
+
+					<p>The following example can be described as: “a grid with four 100% width items, which become 50% width items on lap devices, and 25% width items on desktop devices.”</p>
+				</div>
+
+				<div class="grid_item lap-one_half">
+					<h4>Usage</h4>
+
+					<ul>
+						<li><code>.grid</code> - makes element a grid wrapper.</li>
+						<li><code>.grid_item</code> - makes element a grid column.</li>
+						<li><code>.one_half</code>,<br><code>.two_thirds</code>, etc - makes element a specific width of its parent.</li>
+						<li><code>.lap-*</code> - grid breakpoint for devices you hold in your lap.</li>
+						<li><code>.desk-*</code> - grid breakpoint for desktop devices.</li>
+					</ul>
+
+					<pre rel="HTML"><code>&lt;div class=&quot;grid&quot;&gt;
+	&lt;div class=&quot;grid_item lap-one_half desk-one_fourth&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;grid_item lap-one_half desk-one_fourth&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;grid_item lap-one_half desk-one_fourth&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;grid_item lap-one_half desk-one_fourth&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+				</div>
+			</div>
+
+			<p class="lap-one_half">Below are some example grids. Simply view the source code to see how the grid system is being used.</p>
+
+			<h4>Basic</h4>
+
+			<div class="grid text_center">
+				<div class="grid_item lap-one_half desk-one_fourth"><div class="island">&nbsp;</div></div>
+				<div class="grid_item lap-one_half desk-one_fourth"><div class="island">&nbsp;</div></div>
+				<div class="grid_item lap-one_half desk-one_fourth"><div class="island">&nbsp;</div></div>
+				<div class="grid_item lap-one_half desk-one_fourth"><div class="island">&nbsp;</div></div>
+			</div>
+
+			<h4>Half-sized gutter</h4>
+
+			<div class="grid grid-gutter_half text_center">
+				<div class="grid_item lap-one_half desk-one_fourth"><div class="island">&nbsp;</div></div>
+				<div class="grid_item lap-one_half desk-one_fourth"><div class="island">&nbsp;</div></div>
+				<div class="grid_item lap-one_half desk-one_fourth"><div class="island">&nbsp;</div></div>
+				<div class="grid_item lap-one_half desk-one_fourth"><div class="island">&nbsp;</div></div>
+			</div>
+
+			<h4>Nested</h4>
+
+			<div class="grid text_center">
+				<div class="grid_item lap-one_half">
+					<div class="island padding_none">
+						<div class="grid">
+							<div class="grid_item one_half margin_none"><div class="island">&nbsp;</div></div>
+							<div class="grid_item one_half margin_none"><div class="island">&nbsp;</div></div>
+						</div>
+					</div>
+				</div>
+				<div class="grid_item lap-one_fourth"><div class="island">&nbsp;</div></div>
+				<div class="grid_item lap-one_fourth"><div class="island">&nbsp;</div></div>
+			</div>
+
+			<h4>Kitchen sink</h4>
+
+			<div class="grid text_center">
+				<div class="grid_item lap-one_third desk-one_sixth">
+					<div class="island">&nbsp;</div>
+				</div>
+
+				<div class="grid_item lap-one_third desk-one_sixth">
+					<div class="island">&nbsp;</div>
+				</div>
+
+				<div class="grid_item lap-one_third desk-one_sixth">
+					<div class="island">&nbsp;</div>
+				</div>
+
+				<div class="grid_item lap-one_third desk-one_sixth">
+					<div class="island">&nbsp;</div>
+				</div>
+
+				<div class="grid_item lap-one_third desk-one_sixth">
+					<div class="island">&nbsp;</div>
+				</div>
+
+				<div class="grid_item lap-one_third desk-one_sixth">
+					<div class="island">&nbsp;</div>
+				</div>
+
+				<div class="grid_item lap-one_fifth desk-one_fifth">
+					<div class="island">&nbsp;</div>
+				</div>
+
+				<div class="grid_item lap-three_fifths desk-one_fifth">
+					<div class="island">&nbsp;</div>
+				</div>
+
+				<div class="grid_item lap-one_fifth desk-one_fifth">
+					<div class="island">&nbsp;</div>
+				</div>
+
+				<div class="grid_item lap-two_fifths desk-one_fifth">
+					<div class="island">&nbsp;</div>
+				</div>
+
+				<div class="grid_item lap-three_fifths desk-one_fifth">
+					<div class="island">&nbsp;</div>
+				</div>
+
+				<div class="grid_item lap-one_half desk-one_fourth">
+					<div class="island">&nbsp;</div>
+				</div>
+
+				<div class="grid_item lap-one_half desk-one_fourth">
+					<div class="island">&nbsp;</div>
+				</div>
+
+				<div class="grid_item lap-one_half desk-one_fourth">
+					<div class="island">&nbsp;</div>
+				</div>
+
+				<div class="grid_item lap-one_half desk-one_fourth">
+					<div class="island">&nbsp;</div>
+				</div>
+
+				<div class="grid_item lap-two_thirds desk-one_third">
+					<div class="island">&nbsp;</div>
+				</div>
+
+				<div class="grid_item lap-one_third desk-one_third">
+					<div class="island">&nbsp;</div>
+				</div>
+
+				<div class="grid_item lap-one_whole desk-one_third">
+					<div class="island">&nbsp;</div>
+				</div>
+
+				<div class="grid_item lap-one_half">
+					<div class="island">&nbsp;</div>
+				</div>
+
+				<div class="grid_item lap-one_half">
+					<div class="island padding_none">
+						<div class="grid">
+							<div class="grid_item one_half margin_none"><div class="island">&nbsp;</div></div>
+							<div class="grid_item one_half margin_none"><div class="island">&nbsp;</div></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="grid_item one_whole">
+					<div class="island">&nbsp;</div>
+				</div>
+			</div>
+
+			<h3>Layout</h3>
+
+			<p class="lap-one_half">Cardinal also includes some reusable classes for common layout modules, like page wrappers, content wells, and 100% width containers.</p>
+
+			<div class="grid">
+				<div class="grid_item lap-one_half">
+					<pre><code>.wrapper {
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
+}</code></pre>
+				</div>
+
+				<div class="grid_item lap-one_half">
+					<pre><code>.strip {
+	margin: 0;
+	margin-bottom: 1.8rem;
+	padding: 0;
+	background: #efefef;
+	list-style: none;
+}</code></pre>
+				</div>
+
+				<div class="grid_item lap-one_half">
+					<pre><code>.island {
+	padding: 1.333rem;
+	-webkit-border-radius: 5px;
+	-moz-border-radius:    5px;
+	border-radius:         5px;
+	background: #efefef;
+}</code></pre>
+				</div>
+
+				<div class="grid_item lap-one_half">
+					<pre><code>.well {
+	padding: 1.333rem;
+	-webkit-border-radius: 5px;
+	-moz-border-radius:    5px;
+	border-radius:         5px;
+	background: #efefef;
+	-webkit-box-shadow: inset 0 0 0.317rem hsla(0, 0%, 0%, 0.10);
+	-moz-box-shadow:    inset 0 0 0.317rem hsla(0, 0%, 0%, 0.10);
+	box-shadow:         inset 0 0 0.317rem hsla(0, 0%, 0%, 0.10);
+}</code></pre>
+				</div>
+			</div>
+
+
+
+			<div class="grid">
+				<div class="grid_item lap-one_third">
+					<h3>Prompts</h3>
+
+					<p>By default, Cardinal includes two small prompts, one that shows up for users who have Javascript disabled, and one for the IE6 Chrome Frame. These are hidden by default unless the user has Javascript disabled, or is using IE6 and below.</p>
+				</div>
+
+				<div class="grid_item lap-one_third">
+					<h3>Helpers</h3>
+					<p>A lot of helpers from the fantastic <a href="http://cbrac.co/Zt9YqM">HTML5 Boilerplate</a> are used here, along with some custom helpers for quick text alignment, margins, paddings, and floats.</p>
+				</div>
+
+				<div class="grid_item lap-one_third">
+					<h3>Print</h3>
+
+					<p>This was also copy and pasted directly from <a href="http://cbrac.co/Zt9YqM">HTML5 Boilerplate</a>, and inlined to avoid an extra HTTP request.</p>
+				</div>
+			</div>
+		</div>
+
+		<footer class="strip margin_none">
+			<div class="wrapper">
+				<p class="margin_none">Some bullshit here</p>
+			</div>
+		</footer>
+
+		<!-- <div class="wrapper">
+			<h1>Heading 1</h1>
+			<h2>Heading 2</h2>
+			<h3>Heading 3</h3>
+			<h4>Heading 4</h4>
+			<h5>Heading 5</h5>
+			<h6>Heading 6</h6>
+
+			<h1 class="subheading">Heading 1</h1>
+			<h2 class="subheading">Heading 2</h2>
+			<h3 class="subheading">Heading 3</h3>
+			<h4 class="subheading">Heading 4</h4>
+			<h5 class="subheading">Heading 5</h5>
+			<h6 class="subheading">Heading 6</h6>
+
+			<h1>Heading 1: <small>here is some smaller stuff</small></h1>
+			<h2>Heading 2: <small>here is some smaller stuff</small></h2>
+			<h3>Heading 3: <small>here is some smaller stuff</small></h3>
+			<h4>Heading 4: <small>here is some smaller stuff</small></h4>
+			<h5>Heading 5: <small>here is some smaller stuff</small></h5>
+			<h6>Heading 6: <small>here is some smaller stuff</small></h6>
+
+			<section>
+				<h1>Heading 1 (in section)</h1>
+				<h2>Heading 2 (in section)</h2>
+				<h3>Heading 3 (in section)</h3>
+				<h4>Heading 4 (in section)</h4>
+				<h5>Heading 5 (in section)</h5>
+				<h6>Heading 6 (in section)</h6>
+			</section>
+
+			<article>
+				<h1>Heading 1 (in article)</h1>
+				<h2>Heading 2 (in article)</h2>
+				<h3>Heading 3 (in article)</h3>
+				<h4>Heading 4 (in article)</h4>
+				<h5>Heading 5 (in article)</h5>
+				<h6>Heading 6 (in article)</h6>
+			</article>
+
+			<header>
+				<hgroup>
+					<h1>Heading 1 (in hgroup)</h1>
+					<h2>Heading 2 (in hgroup)</h2>
+				</hgroup>
+				<nav>
+					<ul>
+						<li><a href="#">navigation item #1</a></li>
+						<li><a href="#">navigation item #2</a></li>
+						<li><a href="#">navigation item #3</a></li>
+					</ul>
+				</nav>
+			</header>
+
+			<h1>Text-level semantics</h1>
+
+			<p hidden>This should be hidden in all browsers, apart from IE6</p>
+
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m.</p>
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m.</p>
+
+			<address>Address: somewhere, world</address>
+
+			<hr>
+
+			<hr style="height:4px; border:solid #000; border-width:1px 0;">
+
+			<p>
+			The <a href="#">a element</a> example<br>
+			The <abbr>abbr element</abbr> and <abbr title="Title text">abbr element with title</abbr> examples<br>
+			The <b>b element</b> example<br>
+			The <cite>cite element</cite> example<br>
+			The <code>code element</code> example<br>
+			The <del>del element</del> example<br>
+			The <dfn>dfn element</dfn> and <dfn title="Title text">dfn element with title</dfn> examples<br>
+			The <em>em element</em> example<br>
+			The <i>i element</i> example<br>
+			The img element <img src="http://lorempixel.com/16/16" alt=""> example<br>
+			The <ins>ins element</ins> example<br>
+			The <kbd>kbd element</kbd> example<br>
+			The <mark>mark element</mark> example<br>
+			The <q>q element <q>inside</q> a q element</q> example<br>
+			The <s>s element</s> example<br>
+			The <samp>samp element</samp> example<br>
+			The <small>small element</small> example<br>
+			The <span>span element</span> example<br>
+			The <strong>strong element</strong> example<br>
+			The <sub>sub element</sub> example<br>
+			The <sup>sup element</sup> example<br>
+			The <u>u element</u> example<br>
+			The <var>var element</var> example
+			</p>
+
+			<h1>Embedded content</h1>
+
+			<h3>audio</h3>
+
+			<audio controls></audio>
+			<audio></audio>
+
+			<h3>img</h3>
+
+			<img src="http://lorempixel.com/100/100" alt="">
+			<a href="#"><img src="http://lorempixel.com/100/100" alt=""></a>
+
+			<h3>svg</h3>
+
+			<svg width="100px" height="100px">
+				<circle cx="100" cy="100" r="100" fill="#ff0000" />
+			</svg>
+
+			<h3>video</h3>
+
+			<video controls></video>
+			<video></video>
+
+			<h1>Interactive content</h1>
+
+			<h3>details / summary</h3>
+			<details>
+				<summary>More info</summary>
+				<p>Additional information</p>
+				<ul>
+					<li>Point 1</li>
+					<li>Point 2</li>
+				</ul>
+			</details>
+
+			<h1>Grouping content</h1>
+
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m.</p>
+
+			<h3>pre</h3>
+
+			<pre>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et me.</pre>
+
+			<pre><code>&lt;html>
+	&lt;head>
+	&lt;/head>
+	&lt;body>
+		&lt;div class="main"> &lt;div>
+	&lt;/body>
+&lt;/html></code></pre>
+
+			<pre rel="HTML5"><code>&lt;section class="grid_divider"&gt;
+	&lt;div class="grid_wrapper"&gt;
+		&lt;div class="grid_col grid_palm_col-one_fourth"&gt;&lt;/div&gt;
+		&lt;div class="grid_col grid_palm_col-one_fourth"&gt;&lt;/div&gt;
+		&lt;div class="grid_col grid_palm_col-one_fourth"&gt;&lt;/div&gt;
+		&lt;div class="grid_col grid_palm_col-one_fourth"&gt;&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/section&gt;</code></pre>
+
+			<h3>blockquote</h3>
+
+			<blockquote>
+				<p>Some sort of famous witty quote marked up with a &lt;blockquote> and a child &lt;p> element.</p>
+				<p>Some sort of famous witty quote marked up with a &lt;blockquote> and a child &lt;p> element.</p>
+				<p>Some sort of famous witty quote marked up with a &lt;blockquote> and a child &lt;p> element.</p>
+			</blockquote>
+
+			<blockquote>Even better philosophical quote marked up with just a &lt;blockquote> element.</blockquote>
+
+			<blockquote>
+				<p>Some sort of famous witty quote marked up with a &lt;blockquote> and a child &lt;p> element.</p>
+				<p>Some sort of famous witty quote marked up with a &lt;blockquote> and a child &lt;p> element.</p>
+				<footer>Some dude</footer>
+			</blockquote>
+
+			<h3>ordered list</h3>
+
+			<ol>
+				<li>list item 1</li>
+				<li>list item 1
+					<ol>
+						<li>list item 2</li>
+						<li>list item 2
+							<ol>
+								<li>list item 3</li>
+								<li>list item 3</li>
+							</ol>
+						</li>
+						<li>list item 2</li>
+						<li>list item 2</li>
+					</ol>
+				</li>
+				<li>list item 1</li>
+				<li>list item 1</li>
+			</ol>
+
+			<h3>unordered list</h3>
+
+			<ul>
+				<li>list item 1</li>
+				<li>list item 1
+					<ul>
+						<li>list item 2</li>
+						<li>list item 2
+							<ul>
+								<li>list item 3</li>
+								<li>list item 3</li>
+							</ul>
+						</li>
+						<li>list item 2</li>
+						<li>list item 2</li>
+					</ul>
+				</li>
+				<li>list item 1</li>
+				<li>list item 1</li>
+			</ul>
+
+			<h3>description list</h3>
+
+			<dl>
+				<dt>Description name</dt>
+				<dd>Description value</dd>
+				<dt>Description name</dt>
+				<dd>Description value</dd>
+				<dd>Description value</dd>
+				<dt>Description name</dt>
+				<dt>Description name</dt>
+				<dd>Description value</dd>
+			</dl>
+
+			<h3>figure</h3>
+
+			<figure>
+				<img src="http://lorempixel.com/400/200" alt="">
+				<figcaption>Figcaption content</figcaption>
+			</figure>
+
+			<h1>Tabular data</h1>
+
+			<table>
+				<caption>Jimi Hendrix - albums</caption>
+				<thead>
+					<tr>
+						<th>Album</th>
+						<th>Year</th>
+						<th>Price</th>
+					</tr>
+				</thead>
+				<tfoot>
+					<tr>
+						<th>Album</th>
+						<th>Year</th>
+						<th>Price</th>
+					</tr>
+				</tfoot>
+				<tbody>
+					<tr>
+						<td>Are You Experienced</td>
+						<td>1967</td>
+						<td>$10.00</td>
+					</tr>
+					<tr>
+						<td>Axis: Bold as Love</td>
+						<td>1967</td>
+						<td>$12.00</td>
+					</tr>
+					<tr>
+						<td>Electric Ladyland</td>
+						<td>1968</td>
+						<td>$10.00</td>
+					</tr>
+					<tr>
+						<td>Band of Gypsys</td>
+						<td>1970</td>
+						<td>$12.00</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<h1>Forms</h1>
+
+			<form>
+				<fieldset>
+					<legend>Inputs as descendents of labels (form legend). This doubles up as a long legend that can test word wrapping.</legend>
+					<p><label>Text input <input type="text" value="default value that goes on and on without stopping or punctuation"></label></p>
+					<p><label>Email input <input type="email"></label></p>
+					<p><label>Search input <input type="search"></label></p>
+					<p><label>Tel input <input type="tel"></label></p>
+					<p><label>URL input <input type="url" placeholder="http://"></label></p>
+					<p><label>Password input <input type="password" value="password"></label></p>
+					<p><label>File input <input type="file"></label></p>
+
+					<p><label>Radio input <input type="radio" name="rad"></label></p>
+					<p><label>Checkbox input <input type="checkbox"></label></p>
+					<p><label><input type="radio" name="rad"> Radio input</label></p>
+					<p><label><input type="checkbox"> Checkbox input</label></p>
+
+					<p><label>Select field <select><option>Option 01</option><option>Option 02</option></select></label></p>
+					<p><label>Textarea <textarea cols="30" rows="5" >Textarea text</textarea></label></p>
+				</fieldset>
+
+				<fieldset>
+					<legend>Inputs as siblings of labels</legend>
+					<p><label for="ic">Color input</label> <input type="color" id="ic" value="#000000"></p>
+					<p><label for="in">Number input</label> <input type="number" id="in" min="0" max="10" value="5"></p>
+					<p><label for="ir">Range input</label> <input type="range" id="ir" value="10"></p>
+					<p><label for="idd">Date input</label> <input type="date" id="idd" value="1970-01-01"></p>
+					<p><label for="idm">Month input</label> <input type="month" id="idm" value="1970-01"></p>
+					<p><label for="idw">Week input</label> <input type="week" id="idw" value="1970-W01"></p>
+					<p><label for="idt">Datetime input</label> <input type="datetime" id="idt" value="1970-01-01T00:00:00Z"></p>
+					<p><label for="idtl">Datetime-local input</label> <input type="datetime-local" id="idtl" value="1970-01-01T00:00"></p>
+
+					<p><label for="irb">Radio input</label> <input type="radio" id="irb" name="rad"></p>
+					<p><label for="icb">Checkbox input</label> <input type="checkbox" id="icb"></p>
+					<p><input type="radio" id="irb2" name="rad"> <label for="irb2">Radio input</label></p>
+					<p><input type="checkbox" id="icb2"> <label for="icb2">Checkbox input</label></p>
+
+					<p><label for="s">Select field</label> <select id="s"><option>Option 01</option><option>Option 02</option></select></p>
+					<p><label for="t">Textarea</label> <textarea id="t" cols="30" rows="5" >Textarea text</textarea></p>
+				</fieldset>
+
+				<fieldset>
+					<legend>Clickable inputs and buttons</legend>
+					<p><input type="image" src="http://lorempixel.com/90/24" alt="Image (input)"></p>
+					<p><input type="reset" value="Reset (input)"></p>
+					<p><input type="button" value="Button (input)"></p>
+					<p><input type="submit" value="Submit (input)"></p>
+					<p><input type="submit" value="Disabled (input)" disabled></p>
+
+
+					<p><button type="reset">Reset (button)</button></p>
+					<p><button type="button">Button (button)</button></p>
+					<p><button type="submit">Submit (button)</button></p>
+					<p><button type="submit" disabled>Disabled (button)</button></p>
+				</fieldset>
+
+				<fieldset id="boxsize">
+					<legend>box-sizing tests</legend>
+					<div><input type="text" value="text"></div>
+					<div><input type="email" value="email"></div>
+					<div><input type="search" value="search"></div>
+					<div><input type="url" value="http://example.com"></div>
+					<div><input type="password" value="password"></div>
+
+					<div><input type="color" value="#000000"></div>
+					<div><input type="number" value="5"></div>
+					<div><input type="range" value="10"></div>
+					<div><input type="date" value="1970-01-01"></div>
+					<div><input type="month" value="1970-01"></div>
+					<div><input type="week" value="1970-W01"></div>
+					<div><input type="datetime" value="1970-01-01T00:00:00Z"></div>
+					<div><input type="datetime-local" value="1970-01-01T00:00"></div>
+
+					<div><input type="radio"></div>
+					<div><input type="checkbox"></div>
+
+					<div><select><option>Option 01</option><option>Option 02</option></select></div>
+					<div><textarea cols="30" rows="5">Textarea text</textarea></div>
+
+					<div><input type="image" src="http://lorempixel.com/90/24" alt="Image (input)"></div>
+					<div><input type="reset" value="Reset (input)"></div>
+					<div><input type="button" value="Button (input)"></div>
+					<div><input type="submit" value="Submit (input)"></div>
+
+					<div><button type="reset">Reset (button)</button></div>
+					<div><button type="button">Button (button)</button></div>
+					<div><button type="submit">Submit (button)</button></div>
+				</fieldset>
+			</form>
+
+			<div class="grid">
+				<div class="grid_item">
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m.</p>
+				</div>
+			</div>
+
+			<div class="grid">
+				<div class="grid_item lap-one_half">
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et m.</p>
+				</div>
+
+				<div class="grid_item lap-one_half">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, nemo incidunt repudiandae eius maiores!</p>
+				</div>
+			</div>
+
+			<div class="grid">
+				<div class="grid_item lap-one_third">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, nemo incidunt repudiandae eius maiores!</p>
+				</div>
+
+				<div class="grid_item lap-one_third">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, nemo incidunt repudiandae eius maiores!</p>
+				</div>
+
+				<div class="grid_item lap-one_third">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, nemo incidunt repudiandae eius maiores!</p>
+				</div>
+			</div>
+		</div> -->
 
 		<!-- Scripts -->
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>

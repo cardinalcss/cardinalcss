@@ -1,11 +1,97 @@
 @charset "UTF-8";
 
-/* =========================================================================
-   @font-face declarations
-   LINK: How to define font-weight and style     - http://cbrac.co/TMxZps
-   LINK: Smoother @font-face rendering in Chrome - http://cbrac.co/U4mSbc
-   WARNING: Be careful with relative paths "../" - http://cbrac.co/UKAJEg
-   ========================================================================= */
+/*  =======================================================================  *\
+	Table of contents
+	(Ctrl/Cmd + F, and search for `$section` to jump to a section)
+	01. Reset...............Normalize.css, minified - http://cbrac.co/11gtlnj
+	02. Base................A few important styles
+	03. Fonts...............Custom @font-face declarations
+	04. Typography..........Basic typography elements
+	05. Non-typography......Important elements that are not type-based
+	06. Grids...............A super simple, nestable grid system
+	07. Layout..............Commonly used layout items
+	08. Prompts.............Chrome frame and JS prompts
+	09. App.................App-specific styles go here
+	10. Helpers.............Some useful, global classes
+	11. Queries.............CSS3 media queries for responsive design
+	12. Print...............Inlined, barebones print styles
+\*  =======================================================================  */
+
+/*  =======================================================================  *\
+	Reset ($reset)
+	Normalize.css v2.1.1 | MIT License | http://cbrac.co/11gtlnj
+\*  =======================================================================  */
+
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,video{display:inline-block}audio:not([controls]){display:none;height:0}[hidden]{display:none}html{background:#fff;color:#000;font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}a:focus{outline:thin dotted}a:active,a:hover{outline:0}h1{font-size:2em;margin:.67em 0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}mark{background:#ff0;color:#000}code,kbd,pre,samp{font-family:monospace,serif;font-size:1em}pre{white-space:pre-wrap}q{quotes:"\201C" "\201D" "\2018" "\2019"}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:0}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}button,input{line-height:normal}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}
+
+/*  =======================================================================  *\
+	Base ($base)
+\*  =======================================================================  */
+
+/* `border-box`... ALL THE THINGS - http://cbrac.co/RQrDL5 */
+*,
+*:before,
+*:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing:    border-box;
+	box-sizing:         border-box;
+}
+
+/* Set <html> and <body> to inherit the height of the browser */
+html,
+body {
+	min-height: 100%;
+}
+
+/**
+ * NOTE: Use `text-rendering` with caution - http://cbrac.co/SJt8p1
+ * NOTE: Avoid the webkit anti-aliasing trap - http://cbrac.co/TAdhbH
+ * 1. Force scrollbar in IE - http://cbrac.co/QziGF5
+ * 2. Remove iOS text size adjust without disabling user zoom
+ */
+
+html {
+	overflow-y: scroll;             /* 1 */
+	-webkit-text-size-adjust: 100%; /* 2 */
+	text-size-adjust:         100%; /* 2 */
+}
+
+/**
+ * 1. Customize the background color for text selections
+ * 2. Remove text-shadow in selection highlight - http://cbrac.co/Q6swON
+ */
+
+::-moz-selection {
+	background: #b3d4fc; /* 1 */
+	text-shadow: none;   /* 2 */
+}
+
+::selection {
+	background: #b3d4fc; /* 1 */
+	text-shadow: none;   /* 2 */
+}
+
+/* Change background for text selections when browser window is inactive */
+::selection:window-inactive {
+	background: #d0d0d0;
+}
+
+/* Remove background colors on images when selected */
+img::selection {
+	background: transparent;
+}
+
+img::-moz-selection {
+	background: transparent;
+}
+
+/*  =======================================================================  *\
+	Fonts ($fonts)
+
+	LINK: How to define font-weight and style     - http://cbrac.co/TMxZps
+	LINK: Smoother @font-face rendering in Chrome - http://cbrac.co/U4mSbc
+	WARNING: Be careful with relative paths "../" - http://cbrac.co/UKAJEg
+\*  =======================================================================  */
 
 /* YourFontName: Normal
 @font-face {
@@ -19,98 +105,53 @@
 	font-style: normal;
 }*/
 
-/* =========================================================================
-   Base styles
-   ========================================================================= */
+/*  =======================================================================  *\
+	Typography ($typography)
 
-/*
- * box-sizing: border-box
- * ...ALL THE THINGS!
- */
+	Modular scale:    12px @ 1:1.333 (perfect fourth)
+	Important number: 18px (maximum <html> `font-size`)
+	http://modularscale.com/scale/?px1=12&px2=18&ra1=1.333&ra2=0
 
-*,
-*:before,
-*:after {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing:    border-box;
-	box-sizing:         border-box;
-}
+	Description
+	--------------------
 
-/*
- * WARNING: Use `text-rendering` with caution - http://cbrac.co/SJt8p1
- * WARNING: Avoid the webkit anti-aliasing trap - http://cbrac.co/TAdhbH
- * 1. Expands to height of browser window
- * 2. Force scrollbar in IE - http://cbrac.co/QziGF5
- * 3. Remove iOS text size adjust without disabling user zoom
- */
 
-html {
-	height: 100%; /* 1 */
-	overflow-y: scroll; /* 2 */
-	-webkit-text-size-adjust: 100%; /* 3 */
-}
+	NOTE: IE9 & IE10 do not recognize `rem` units when used with the `font`
+	shorthand property.
+\*  =======================================================================  */
 
-/*
- * Establish base font size, color, and line height
- * 1. Inherit <html>'s 100% height, but expand if needed
- * 2. ...because IE6 treats `height` as `min-height`
- * 3. http://cbrac.co/VeCzmi
+html        { font-size: 75%;  }
+html.lt-ie9 { font-size: 100%; }
+
+@media only screen and (min-width: 320px) { html { font-size: 81.25%; } }
+@media only screen and (min-width: 480px) { html { font-size: 87.5%;  } }
+@media only screen and (min-width: 768px) { html { font-size: 100%;   } }
+@media only screen and (min-width: 960px) { html { font-size: 112.5%; } }
+
+/**
+ * 1. Inherits percentage declared on above <html> as the root `font-size`
+ * 2. Unitless `line-height`, which acts as a multiple of the root `font-size`
  */
 
 body {
-	min-height: 100%; /* 1 */
-	_height: 100%; /* 2 */
 	color: #444;
-	color: hsla(0, 0%, 13.3333%, 1.0);
-	font-size: 100.01%; /* 3 */
-	font-family: Arial, sans-serif;
-	line-height: 1.500rem;
+	font-size: 1rem;  /* 1 */
+	font-family: "Helvetica Neue", sans-serif;
+	line-height: 1.777; /* 2 */
 }
 
-/*
- * Remove text-shadow in selection highlight: http://cbrac.co/Q6swON
- * These selection declarations have to be separate.
- * Customize the background color to match your design.
- */
-
-::-moz-selection {
-	background: #b3d4fc;
-	background: hsla(213, 92.4051%, 84.5098%, 1.0);
-	text-shadow: none;
-}
-
-::selection {
-	background: #b3d4fc;
-	background: hsla(213, 92.4051%, 84.5098%, 1.0);
-	text-shadow: none;
-}
-
-/* =========================================================================
-   Links
-   ========================================================================= */
-
-/*
- * Define a mobile tap highlight color (iOS 1.1.1+)
- */
-
+/* Define a mobile tap highlight color (iOS 1.1.1+) */
 a:link {
 	-webkit-tap-highlight-color: #b3d4fc;
-	-webkit-tap-highlight-color: hsla(213, 92.4051%, 84.5098%, 1.0);
 }
 
 a:hover {
 	text-decoration: none;
 }
 
-/* =========================================================================
-   Typography
-   Baseline grid: 24px
-   Modular scale: 16px @ 1:1.333 (Perfect fourth)
-   http://modularscale.com/scale/?px1=16&px2=24&ra1=1.333&ra2=0
-   ========================================================================= */
-
 abbr,
-acronym {
+acronym,
+dfn[title] {
 	cursor: help;
 }
 
@@ -124,23 +165,19 @@ acronym {
 
 blockquote,
 dl,
+h1, h2, h3, h4, h5, h6,
 hr,
 menu,
 ol,
 p,
 pre,
+summary,
 ul {
-	margin: 0 0 1.500rem;
+	margin: 0 0 1.333rem;
 }​
 
-big,
-.text_xxl {
-	font-size: 4.209rem;
-	line-height: 4.500rem;
-}
-
 blockquote {
-	margin-left: 2.369rem;
+	padding-left: 2rem;
 }
 
 blockquote p {
@@ -148,11 +185,11 @@ blockquote p {
 }
 
 blockquote p + p {
-	margin-top: 1.500rem;
+	margin-top: 1.333rem;
 }
 
-/*
- * Use <footer> tag instead of <cite> inside blockquotes
+/**
+ * TIP: Use <footer> tag instead of <cite> inside blockquotes -
  * http://cbrac.co/TCVK4P
  */
 
@@ -162,27 +199,37 @@ blockquote footer:before {
 
 blockquote footer {
 	color: #686868;
-	color: hsla(0, 0%, 40.7843%, 1.0);
 	font-style: italic;
+	font-size: 0.8125rem;
 }
 
 code,
 pre {
-	font: 0.8125rem/1.500rem Monaco, Menlo, Consolas, "Courier New", monospace;
+	font-size: 0.8125rem;
+	font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
 }
 
 code {
-	padding: 0.1rem 0.317rem;
-	background-color: #f8f8f8;
-	background-color: hsla(0, 0%, 97.2549%, 1.0);
-	border: 1px solid #eaeaea;
-	border: 1px solid hsla(0, 0%, 91.7647%, 1.0);
-	-webkit-border-radius: 0.201rem;
-	-moz-border-radius:    0.201rem;
-	border-radius:         0.201rem;
+	padding: 0.1rem 0.3rem;
+	border: 1px solid #d6d6d6;
+	background: #f8f8f8;
+	white-space: nowrap;
+	-webkit-border-radius: 3px;
+	-moz-border-radius:    3px;
+	border-radius:         3px;
+}
+
+dl dt {
+	font-weight: 700;
+	color: #222;
+}
+
+dl dd {
+	margin: 0;
 }
 
 del {
+	color: #686868;
 	text-decoration: line-through;
 }
 
@@ -196,80 +243,132 @@ cite {
 	font-style: italic;
 }
 
-/*
- * WARNING: Use `text-rendering` with caution - http://cbrac.co/SJt8p1
- */
-
+/* NOTE: Use `text-rendering` with caution - http://cbrac.co/SJt8p1 */
 h1,
 h2,
 h3,
-h4,
-h5,
-h6 {
-	margin: 0;
-	margin-bottom: 1.500rem;
-	color: #222;
-	font-weight: 700;
-	font-family: sans-serif;
-	line-height: 1.500rem;
-	text-rendering: optimizeLegibility;
-}
-
-h1,
-.text_xl {
-	font-size: 3.553rem;
-	line-height: 4.500rem;
-}
-
-h2,
-.text_large {
-	font-size: 1.777rem;
-	line-height: 3.000rem;
-}
-
-h3,
-.text_medium {
-	font-size: 1.333rem;
-	line-height: 1.500rem;
-}
-
-h3,
-h4,
-h5,
-h6 {
-	margin-bottom: 0;
-}
-
 h4,
 h5,
 h6,
+.text_huge,
+.text_xxl,
+.text_xl,
+.text_large,
+.text_medium,
 .text_normal {
-	font-size: 1.000rem;
+	color: #222;
+	font-weight: 700;
+	font-family: "Helvetica Neue", sans-serif;
+	line-height: 1.5;
+	text-rendering: optimizeLegibility;
+}
+
+.text_huge,
+.text_xxl,
+.text_xl,
+.text_large,
+.text_medium,
+.text_normal {
+	color: inherit;
+	font-weight: inherit;
+}
+
+h1,
+h2,
+.text_huge,
+.text_xxl {
+	line-height: 1.333;
+}
+
+.text_huge {
+	font-size: 4.209rem;
+}
+
+h1,
+.text_xxl {
+	font-size: 3.157rem;
+}
+
+h2,
+.text_xl {
+	font-size: 2.369rem;
+}
+
+h3,
+.text_large {
+	font-size: 1.777rem;
+}
+
+h4,
+.text_medium {
+	font-size: 1.333rem;
+}
+
+h5,
+h6,
+.text_normal {
+	font-size: 1rem;
+}
+
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small {
+	color: #686868;
+	line-height: 0;
+}
+
+.subheading {
+	color: #686868;
+	font-weight: 300;
 }
 
 hr {
 	border: 0;
 	border-bottom: 1px solid #c0c0c0;
-	border-bottom: 1px solid hsla(0, 0%, 75.2941%, 1.0);
-	margin-top: -1px; /* Maintains the baseline grid */
 }
 
-ins {
+ins,
+mark {
 	background: #ff9;
-	background: hsla(60, 100%, 80%, 1.0);
 	color: #000;
-	color: hsla(0, 0%, 0%, 1.0);
 	text-decoration: none;
 }
 
-/*
- * Nested list style types for ordered lists
- */
+kbd {
+	position: relative;
+	top: -2px;
+	padding: 0.1rem 0.3rem;
+	border: 1px solid #d6d6d6;
+	border-bottom-width: 2px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius:    4px;
+	border-radius:         4px;
+	background: #f8f8f8;
+	font-size: 11px;
+	font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+}
 
+nav ul,
+nav ol {
+	padding: 0;
+	list-style: none;
+}
+
+/* Nested list style types for ordered lists */
 ol          { list-style: decimal; }
 ol ol       { list-style: upper-alpha; }
 ol ol ol    { list-style: lower-roman; }
 ol ol ol ol { list-style: lower-alpha; }
+
+ol li ol,
+ol li ul,
+ul li ul,
+ul li ol {
+	margin-bottom: 0;
+}
 
 p {
 	-webkit-hyphens: auto;
@@ -282,15 +381,15 @@ p {
 pre {
 	position: relative;
 	overflow: auto;
-	padding: 0;
-	margin-top: -1px; /* Maintains baseline grid */
-	border: 1px solid #d7d7d7;
-	border: 1px solid hsla(0, 0%, 84%, 1.0);
-	-webkit-border-radius: 0.317rem;
-	-moz-border-radius:    0.317rem;
-	border-radius:         0.317rem;
-	background: #fff;
-	background: hsla(0, 0%, 100%, 1.0);
+	padding: 1.333rem;
+	-webkit-border-radius: 5px;
+	-moz-border-radius:    5px;
+	border-radius:         5px;
+	background: #333;
+	-webkit-box-shadow: inset 0 0 5px hsla(0, 0%, 0%, 0.6);
+	-moz-box-shadow:    inset 0 0 5px hsla(0, 0%, 0%, 0.6);
+	box-shadow:         inset 0 0 5px hsla(0, 0%, 0%, 0.6);
+	color: #d6cba9;
 	white-space: pre;
 	word-wrap: normal;
 	-ms-word-break: normal;
@@ -304,325 +403,221 @@ pre {
 	-ms-hyphens:     none;
 }
 
-/*
- * Remove above <code> styles when nested inside <pre> tags
- */
-
+/* Reset above <code> styles when nested inside <pre> tags */
 pre code {
 	display: block;
 	overflow: auto;
 	margin: 0;
-	padding: 1.500rem;
+	padding: 0;
 	border: none;
 	-webkit-border-radius: 0;
 	-moz-border-radius:    0;
 	border-radius:         0;
-	background-color: transparent;
+	background: transparent;
 	white-space: pre;
 }
 
-pre[rel] code {
-	padding: 4.500rem 1.500rem 1.500rem;
+small {
+	font-size: 62.5%;
 }
 
-pre[rel]:before {
-	position: absolute;
-	top: 0;
-	right: 0;
-	left: 0;
-	width: 100%;
-	border-bottom: 1px solid #d7d7d7;
-	border-bottom: 1px solid hsla(0, 0%, 84%, 1.0);
-	-webkit-border-radius: 0.317rem 0.317rem 0 0;
-	-moz-border-radius:    0.317rem 0.317rem 0 0;
-	border-radius:         0.317rem 0.317rem 0 0;
-	background: #f0f0f0;
-	background: hsla(0, 0%, 94%, 1);
-	-webkit-box-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.04);
-	-moz-box-shadow:    0 1px 3px hsla(0, 0%, 0%, 0.04);
-	box-shadow:         0 1px 3px hsla(0, 0%, 0%, 0.04);
-	content: attr(rel);
-	text-indent: 1.5rem;
-	text-shadow: 0 0 15px #fff;
-	letter-spacing: 0.1rem;
-	font-size: 1.333rem;
-	line-height: 3rem;
-}
+/*  =======================================================================  *\
+	Non-typography ($non-typography)
+\*  =======================================================================  */
 
-small,
-.text_small {
-	font-size: 0.844rem;
-}
-
-/* =========================================================================
-   Non-texual elements
-   ========================================================================= */
-
-/*
- * Fluid-width audio elements
- */
-
+/* Fluid-width audio elements */
 audio {
 	width: 100%;
 }
 
-/*
- * Remove fieldset styles from normalize.css
- */
-
+/* Remove fieldset styles from normalize.css */
 fieldset {
-	padding: 0;
 	margin: 0;
+	padding: 0;
 	border: 0;
 }
 
-/*
- * Remove the gap between images and the bottom of
- * their containers: http://cbrac.co/Q6smqV
+figure {
+	margin-bottom: 1.333rem;
+}
+
+figcaption {
+	font-style: italic;
+	font-size: 75%;
+}
+
+figcaption {
+	margin-top: 0.5rem;
+}
+
+legend {
+	margin-bottom: 1.333rem;
+	font-weight: 700;
+}
+
+/**
+ * Remove the gap between images and the bottom of their containers -
+ * http://cbrac.co/Q6smqV
  */
 
 img {
 	vertical-align: middle;
 }
 
-/*
- * Fluid-width media that maintains their aspect ratios
- */
-
+/* Fluid-width media that maintains their aspect ratios */
 img,
 video {
-	width: auto\9;
 	max-width: 100%;
+	width: auto\9;
 	height: auto !important;
 }
 
-/*
- * Inherit font styles from <body>
- */
-
-input,
-select,
-textarea {
-	font-size: inherit;
-	font-family: inherit;
-	line-height: inherit;
-}
-
-/*
- * Remove black outlines in IE7
- */
-
+/* Remove black outlines in IE7 */
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
 	filter: chroma(color=#000000);
 }
 
-/*
- * Restrict textareas to vertical resizing only
- */
-
+/* Restrict textareas to vertical resizing only */
 textarea {
 	resize: vertical;
 }
 
-/* =========================================================================
-   Buttons
-   ========================================================================= */
+/*  =======================================================================  *\
+	Grids ($grids)
+	Inspired by http://cbrac.co/12j3Fc3 & http://cbrac.co/10H12RA
+\*  =======================================================================  */
 
-.btn {
+/* Rows */
+.grid {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	margin-left: -2rem;
+}
+
+.grid:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* Items */
+[class*="grid_item"] {
 	display: inline-block;
-	padding: 0 0.750rem;
-	border-width: 1px;
-	border-style: solid;
-	border-color: #c5c5c5;
-	border-color: hsla(0, 0%, 77.2549%, 1.0);
-	-webkit-border-radius: 0.317rem;
-	-moz-border-radius:    0.317rem;
-	border-radius:         0.317rem;
-	background-color: #e5e5e5;
-	background-color: hsla(0, 0%, 89.8039%, 1.0);
-	-webkit-box-shadow: inset 0 0 1px 1px hsla(0, 0%, 96%, 1);
-	-moz-box-shadow:    inset 0 0 1px 1px hsla(0, 0%, 96%, 1);
-	box-shadow:         inset 0 0 1px 1px hsla(0, 0%, 96%, 1);
-	color: #333;
-	color: hsla(0, 0%, 20%, 1.0);
-	text-align: center;
-	text-decoration: none;
-	text-shadow: 0 1px 0 #fff;
-	text-shadow: 0 1px 0 hsla(0, 0%, 100%, 1);
-	line-height: 2.875rem;
-	cursor: pointer;
 	*display: inline;
 	*zoom: 1;
-}
-
-.btn:hover {
-	background-color: #ececec;
-	background-color: hsla(0, 0%, 92.5490%, 1.0);
-	color: #222;
-	color: hsla(0, 0%, 13.3333%, 1.0);
-	cursor: pointer;
-}
-
-.btn:active {
-	-webkit-box-shadow: inset 0 0 0.422rem hsla(0, 0%, 0%, 0.10);
-	-moz-box-shadow:    inset 0 0 0.422rem hsla(0, 0%, 0%, 0.10);
-	box-shadow:         inset 0 0 0.422rem hsla(0, 0%, 0%, 0.10);
-	color: #000;
-	color: hsla(0, 0%, 0%, 1);
-}
-
-.btn:focus {
-	outline: thin dotted #333;
-	outline: 5px auto -webkit-focus-ring-color;
-	outline-offset: -2px;
-}
-
-/* =========================================================================
-   Grid system (.grid_*)
-
-   Usage:
-   <div class="wrapper">
-	   <div class="grid_divider">
-		   <div class="grid_wrapper">
-			   <div class="grid_col grid_bp1_col-1-2">foo</div>
-			   <div class="grid_col grid_bp1_col-1-2">bar</div>
-		   </div>
-	   </div>
-   </div>
-   ========================================================================= */
-
-.wrapper {
-	width: 90%;
-	max-width: 75rem; /* ≈ 1200px */
-	margin: 0 auto;
-}
-
-/*
- * Use this class if you want to add a border to the bottom of a column
- */
-
-.grid_divider {
-	border-bottom: 1px solid #e0e0e0;
-	border-bottom: 1px solid hsla(0, 0%, 87.8431%, 1.0);
-	margin-top: -1px;  /* Maintains the baseline grid */
-	margin-bottom: 1.500rem;
-}
-
-.grid_wrapper {
-	margin-left: -3.000rem;
-}
-
-.grid_col {
 	float: left;
-	padding-left: 3.000rem;
-	width: 100%;
+	padding-left: 2rem;
+	margin-bottom: 1.333rem;
 }
 
-.grid_gutter-half {
-	margin-left: -1.500rem;
-}
-
-.grid_gutter-half .grid_col {
-	padding-left: 1.500rem;
-}
-
-/*
- * Use these classes if you need columns
- * in the initial layout
- */
-
-.grid_col-full {
-	width: 100%;
-}
-
-.grid_col-one_half {
-	width: 50%;
-}
-
-.grid_col-one_third {
-	width: 33.333%;
-}
-
-.grid_col-two_thirds {
-	width: 66.666%;
-}
-
-.grid_col-one_fourth {
-	width: 25%;
-}
-
-.grid_col-three_fourths {
-	width: 75%;
-}
-
-/*
- * Use this class if you want a full-width column
- */
-
-.strip {
-	margin: 0 0 1.500rem;
-	padding: 1.500rem 0;
-	background-color: #efefef;
-	background-color: hsla(0, 0%, 93.7255%, 1.0);
-}
-
-.strip :last-child {
+[class*="grid_item"] *:last-child {
 	margin-bottom: 0;
 }
 
-/*
- * Use these classes if you want to make a column stand out
- */
+/* Whole */
+.grid_item,
+.one_whole      { width: 100%;    }
+
+/* Halves */
+.one_half       { width: 50%;     }
+
+/* Thirds */
+.one_third      { width: 33.333%; }
+.two_thirds     { width: 66.666%; }
+
+/* Fourths */
+.one_fourth    { width: 25%;     }
+.two_fourths   { width: 50%;     }
+.three_fourths { width: 75%;     }
+
+/* Fifths */
+.one_fifth      { width: 20%;     }
+.two_fifths     { width: 40%;     }
+.three_fifths   { width: 60%;     }
+.four_fifths    { width: 80%;     }
+
+/* Sixths */
+.one_sixth      { width: 16.666%;  }
+.two_sixths     { width: 33.333%;  }
+.three_sixths   { width: 50%;      }
+.four_sixths    { width: 66.666%;  }
+.five_sixths    { width: 83.333%;  }
+
+/* Gutters */
+.grid-gutter_half {
+	margin-left: -1rem;
+}
+
+.grid-gutter_half [class*="grid_item"] {
+	padding-left: 1rem;
+}
+
+/*  =======================================================================  *\
+	Layout ($layout)
+\*  =======================================================================  */
+
+/* 100% width container strip */
+.strip {
+	margin: 0;
+	margin-bottom: 1.8rem;
+	padding: 0;
+	background: #efefef;
+	list-style: none;
+}
+
+.strip .wrapper {
+	padding: 1.333rem 0;
+}
+
+/* Page wrapper */
+.wrapper {
+	width: 90%;
+	max-width: 1280px;
+	margin: 0 auto;
+}
 
 .island {
-	padding: 1.500rem;
-	-webkit-border-radius: 0.317rem;
-	-moz-border-radius:    0.317rem;
-	border-radius:         0.317rem;
-	background-color: #efefef;
-	background-color: hsla(0, 0%, 93.7255%, 1.0);
+	padding: 1.333rem;
+	-webkit-border-radius: 5px;
+	-moz-border-radius:    5px;
+	border-radius:         5px;
+	background: #efefef;
 }
 
 .well {
-	padding: 1.500rem;
-	-webkit-border-radius: 0.317rem;
-	-moz-border-radius:    0.317rem;
-	border-radius:         0.317rem;
-	background-color: #efefef;
-	background-color: hsla(0, 0%, 93.7255%, 1.0);
+	padding: 1.333rem;
+	-webkit-border-radius: 5px;
+	-moz-border-radius:    5px;
+	border-radius:         5px;
+	background: #efefef;
 	-webkit-box-shadow: inset 0 0 0.317rem hsla(0, 0%, 0%, 0.10);
 	-moz-box-shadow:    inset 0 0 0.317rem hsla(0, 0%, 0%, 0.10);
 	box-shadow:         inset 0 0 0.317rem hsla(0, 0%, 0%, 0.10);
 }
 
-.island :last-child,
-.well :last-child {
-	margin-bottom: 0;
+.island .island,
+.well .well {
+	background: #dedede;
 }
 
-.grid_col .island,
-.grid_col .well {
-	margin-bottom: 1.500rem;
-}
-
-/* =========================================================================
-   Chrome Frame & Javascript prompts
-   ========================================================================= */
+/*  =======================================================================  *\
+	Prompts ($prompts)
+\*  =======================================================================  */
 
 .notice-chrome_frame,
 .no-js .notice-js {
 	display: block;
 	margin: 0;
-	padding: 0.750rem 0;
+	padding: 1rem 0;
 	text-align: center;
-	font-size: 0.750rem;
+	font-size: 1rem;
 }
 
 .notice-chrome_frame {
-	background-color: #f5f5f5;
-	background-color: hsla(0, 0%, 96.0784%, 1.0);
+	background: #f5f5f5;
 }
 
 .js .notice-js {
@@ -630,41 +625,51 @@ textarea {
 }
 
 .no-js .notice-js {
-	background-color: #ffffcc;
-	background-color: hsla(60, 100%, 90%, 1.0);
+	background: #ffffcc;
 }
 
-/* =========================================================================
-   Site structure & local styles
-   ========================================================================= */
+/*  =======================================================================  *\
+	App ($app)
+\*  =======================================================================  */
 
 
 
 
-
-
-/*
- * YOUR CSS GOES HERE!
+/**
+ * YOUR MAGICAL CSS GOES HERE!
  */
 
 
 
 
-
-
-/* =========================================================================
-   Helper classes
-   ========================================================================= */
+/*  =======================================================================  *\
+	Helpers ($helpers)
+\*  =======================================================================  */
 
 /* Floats */
-.float_left  { float: left; }
+.float_left  { float: left;  }
 .float_right { float: right; }
-.float_none  { float: none; }
+.float_none  { float: none;  }
+
+/* Margins */
+.margin_top    { margin-top: 1.333rem !important;    }
+.margin_left   { margin-left: 1.333rem !important;   }
+.margin_bottom { margin-bottom: 1.333rem !important; }
+.margin_right  { margin-right: 1.333rem !important;  }
+.margin_none   { margin: 0 !important;             }
+
+/* Paddings */
+.padding_top    { padding-top: 1.333rem !important;    }
+.padding_left   { padding-left: 1.333rem !important;   }
+.padding_bottom { padding-bottom: 1.333rem !important; }
+.padding_right  { padding-right: 1.333rem !important;  }
+.padding_none   { padding: 0 !important;             }
 
 /* Text alignment */
-.text_left   { text-align: left; }
-.text_right  { text-align: right; }
-.text_center { text-align: center; }
+.text_left    { text-align: left;    }
+.text_right   { text-align: right;   }
+.text_center  { text-align: center;  }
+.text_justify { text-align: justify; }
 
 /* Image replacement */
 .ir {
@@ -681,18 +686,15 @@ textarea {
 	height: 100%;
 }
 
-/*
- * Hide from both screenreaders and browsers: http://cbrac.co/ZaoIxf
- */
-
+/* Hide from both screenreaders and browsers - http://cbrac.co/ZaoIxf */
 .hidden {
 	display: none !important;
 	visibility: hidden;
 }
 
-/*
- * Hide only visually, but have it available
- * for screenreaders: http://cbrac.co/TUcUgH
+/**
+ * Hide only visually, but have it available for screenreaders -
+ * http://cbrac.co/TUcUgH
  */
 
 .visuallyhidden {
@@ -706,9 +708,9 @@ textarea {
 	clip: rect(0 0 0 0);
 }
 
-/*
+/**
  * Extends the .visuallyhidden class to allow the element to be focusable
- * when navigated to via the keyboard: http://cbrac.co/RR8gO6
+ * when navigated to via the keyboard - http://cbrac.co/RR8gO6
  */
 
 .visuallyhidden.focusable:active,
@@ -721,18 +723,12 @@ textarea {
 	clip: auto;
 }
 
-/*
- * Hide visually and from screenreaders, but maintain layout
- */
-
+/* Hide visually and from screenreaders, but maintain layout */
 .invisible {
 	visibility: hidden;
 }
 
-/*
- * Clear floats manually: http://cbrac.co/SFv1Ua
- */
-
+/* Clear floats manually - http://cbrac.co/SFv1Ua */
 .clear {
 	display: block;
 	visibility: hidden;
@@ -754,15 +750,12 @@ textarea {
  *    that receive the `clearfix` class.
  */
 
-.grid_wrapper:before,
-.grid_wrapper:after,
 .cf:before,
 .cf:after {
 	display: table; /* 1 */
 	content: " ";   /* 2 */
 }
 
-.grid_wrapper:after,
 .cf:after {
 	clear: both;
 }
@@ -772,110 +765,96 @@ textarea {
  * Include this rule to trigger hasLayout and contain floats.
  */
 
-.grid_wrapper,
 .cf {
 	*zoom: 1;
 }
 
-/* =========================================================================
-   Media queries
-   ========================================================================= */
+/*  =======================================================================  *\
+	Queries ($queries)
 
-/* Grid breakpoint 1 (.grid_bp1_col-*, 480px) */
-@media only screen and (min-width: 30em) {
-	.grid_bp1_col-full {
-		width: 100%;
-	}
+	Description
+	--------------------
+	Included below are some common media queries (or "breakpoints"), but do
+	not feel bound to these numbers. It's encouraged that you adapt the
+	layout based on the content within your project. If the layout starts
+	to break at a certain width, height, orientation, or screen resolution,
+	you may want to address it with a media query.
 
-	.grid_bp1_col-one_half {
-		width: 50%;
-	}
+	This framework takes the "mobile first" approach, which means that the
+	styling for mobile layout is addressed above, and then the layout is
+	progressively enhanced using the media queries below.
 
-	.grid_bp1_col-one_third {
-		width: 33.333%;
-	}
+	Further reading
+	--------------------
+	- http://cbrac.co/YUO4B8
+	- http://cbrac.co/11d4gfR
+\*  =======================================================================  */
 
-	.grid_bp1_col-two_thirds {
-		width: 66.666%;
-	}
+@media only screen and (min-width: 768px) {
 
-	.grid_bp1_col-one_fourth {
-		width: 25%;
-	}
+	/**
+	 * Default grid breakpoint for lap devices (eg. tablets)
+	 */
 
-	.grid_bp1_col-three_fourths {
-		width: 75%;
-	}
+	.lap-one_whole      { width: 100%;    }
+	.lap-one_half       { width: 50%;     }
+	.lap-one_third      { width: 33.333%; }
+	.lap-two_thirds     { width: 66.666%; }
+	.lap-one_fourth     { width: 25%;     }
+	.lap-three_fourths  { width: 75%;     }
+	.lap-one_fifth      { width: 20%;     }
+	.lap-two_fifths     { width: 40%;     }
+	.lap-three_fifths   { width: 60%;     }
+	.lap-four_fifths    { width: 80%;     }
+	.lap-one_sixth      { width: 16.666%; }
+	.lap-two_sixths     { width: 33.333%; }
+	.lap-three_sixths   { width: 50%;     }
+	.lap-four_sixths    { width: 66.666%; }
+	.lap-five_sixths    { width: 83.333%; }
 }
 
-/* Grid breakpoint 2 (.grid_bp2_col-*, 768px) */
-@media only screen and (min-width: 48em) {
-	.grid_bp2_col-full {
-		width: 100%;
-	}
+@media only screen and (min-width: 960px) {
 
-	.grid_bp2_col-one_half {
-		width: 50%;
-	}
+	/**
+	 * Default grid breakpoint for desktop devices
+	 */
 
-	.grid_bp2_col-one_third {
-		width: 33.333%;
-	}
-
-	.grid_bp2_col-two_thirds {
-		width: 66.666%;
-	}
-
-	.grid_bp2_col-one_fourth {
-		width: 25%;
-	}
-	.grid_bp2_col-three_fourths {
-		width: 75%;
-	}
+	.desk-one_whole      { width: 100%;    }
+	.desk-one_half       { width: 50%;     }
+	.desk-one_third      { width: 33.333%; }
+	.desk-two_thirds     { width: 66.666%; }
+	.desk-one_fourth     { width: 25%;     }
+	.desk-three_fourths  { width: 75%;     }
+	.desk-one_fifth      { width: 20%;     }
+	.desk-two_fifths     { width: 40%;     }
+	.desk-three_fifths   { width: 60%;     }
+	.desk-four_fifths    { width: 80%;     }
+	.desk-one_sixth      { width: 16.666%; }
+	.desk-two_sixths     { width: 33.333%; }
+	.desk-three_sixths   { width: 50%;     }
+	.desk-four_sixths    { width: 66.666%; }
+	.desk-five_sixths    { width: 83.333%; }
 }
 
-/* Grid breakpoint 3 (.grid_bp3_col-*, 960px) */
-@media only screen and (min-width: 60em) {
-	.grid_bp3_col-full {
-		width: 100%;
-	}
+@media only screen and (min-width: 1280px) {}
+@media only screen and (min-width: 1440px) {}
+@media only screen and (orientation: landscape) {}
+@media only screen and (orientation: portrait) {}
 
-	.grid_bp3_col-one_half {
-		width: 50%;
-	}
-
-	.grid_bp3_col-one_third {
-		width: 33.333%;
-	}
-
-	.grid_bp3_col-two_thirds {
-		width: 66.666%;
-	}
-
-	.grid_bp3_col-one_fourth {
-		width: 25%;
-	}
-
-	.grid_bp3_col-three_fourths {
-		width: 75%;
-	}
-}
-
-/* Style adjustments for high resolution devices
+/* Style adjustments for high resolution devices */
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-	   only screen and (min-resolution: 144dpi) {
+       only screen and (min-resolution: 144dpi) {}
 
-} */
-
-/* =========================================================================
-   Print styles, inlined to avoid an HTTP request: http://cbrac.co/VUjfe3
-   ========================================================================= */
+/*  =======================================================================  *\
+	Print ($print)
+	Inlined to avoid an extra HTTP request - http://cbrac.co/VUjfe3
+\*  =======================================================================  */
 
 @media print {
 	* {
 		box-shadow: none !important;
 		background: transparent !important;
-		color: #000 !important; /* Prints faster: http://cbrac.co/XvusCs */
+		color: #000 !important; /* Prints faster - http://cbrac.co/XvusCs */
 		text-shadow: none !important;
 	}
 
@@ -892,10 +871,7 @@ textarea {
 		content: " (" attr(title) ")";
 	}
 
-	/*
-	 * Don't show links for images, or javascript/internal links
-	 */
-
+	/* Don't show links for images, or javascript/internal links */
 	.ir a:after,
 	a[href^="javascript:"]:after,
 	a[href^="#"]:after {
