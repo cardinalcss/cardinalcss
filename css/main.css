@@ -120,8 +120,8 @@ img::-moz-selection {
 	shorthand property.
 \*  =======================================================================  */
 
-html        { font-size: 75%;  }
-html.lt-ie9 { font-size: 100%; }
+html        { font-size: 75%;  } /* 12px */
+html.lt-ie9 { font-size: 100%; } /* ≤ IE8 defaults to 16px */
 
 @media only screen and (min-width: 320px) { html { font-size: 81.25%; } }
 @media only screen and (min-width: 480px) { html { font-size: 87.5%;  } }
@@ -135,7 +135,7 @@ html.lt-ie9 { font-size: 100%; }
 
 body {
 	color: #444;
-	font-size: 1rem;  /* 1 */
+	font-size: 1rem;    /* 1 */
 	font-family: "Helvetica Neue", sans-serif;
 	line-height: 1.777; /* 2 */
 }
