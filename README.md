@@ -14,38 +14,38 @@ This way, instead of deleting portions of a framework that you don't need, you s
 
 ## Overview
 
-Cardinal's main focus is readable typography and layout that can be scaled globally for a wide range of devices. 
+Cardinal's main focus is readable typography and layout that can be scaled globally for a wide range of devices.
 
 It uses a combination of modular scale, unit-less line-heights, and REM units so that all the typography and layout elements can be scaled up or down proportionally.
 
 ## Table of contents
 
-1. Reset
-2. Base
-3. Fonts
-4. Typography
-5. Non-typography
-6. Grids
-7. Layout
-8. Prompts
-9. App
-10. Helpers
-11. Queries
-12. Print
+1. [Reset](#reset)
+2. [Base](#base)
+3. [Fonts](#fonts)
+4. [Typography](#typography)
+5. [Non-typography](#non-typography)
+6. [Grids](#grids)
+7. [Layout](#layout)
+8. [Prompts](#prompts)
+9. [App](#app)
+10. [Helpers](#helpers)
+11. [Queries](#queries)
+12. [Print](#print)
 
-## Reset
+## <a name="reset"></a> Reset
 
 Instead of a traditional CSS reset, Cardinal includes a minified version of [normalize.css](http://cbrac.co/11gtlnj) by [Nicolas Gallagher](http://cbrac.co/10l8rJQ) to help render HTML elements more consistently across modern browsers, as well as Internet Explorer 8 and above.
 
-## Base
+## <a name="base"></a> Base
 
 Cardinal declares some useful default styles to the `<html>` and `<body>` elements to get them to play nice across browsers. It also adds basic styles to text selections, and applies `box-sizing: border-box;` to everything to fix the flawed CSS box model.
 
-## Fonts
+## <a name="fonts"></a> Fonts
 
 To make adding custom fonts a bit quicker, Cardinal includes an example code snippet for [bulletproof @font-face declarations](http://cbrac.co/U4mSbc), so that you don’t have to worry about looking it up each time you want to use custom fonts in your project.
 
-## Typography
+## <a name="typography"></a> Typography
 
 As mentioned above, Cardinal uses a combination of modular scale, unit-less line-heights, and REM units so that it is easy to scale the type and layout across your entire project. It's built so that you do not have to keep track of complicated decimal `em` values, but can still build a web application that is flexible, zoom-friendly, and pixel precise when needed.
 
@@ -95,7 +95,7 @@ By default, Cardinal's root font size ranges from 12px to 18px  depending on the
 
 If you need pixel precision for a particular element or property (eg. 16px font-size for menu buttons regardless of device or viewport width), simply use the `px` unit instead of the `rem` unit and it will remain constant regardless of the base font size.
 
-## Non-typography
+## <a name="non-typography"></a> Non-typography
 
 There are also some sensible default styles for non-typographical elements included with Cardinal. For instance, all `<img>` and `<video>` tags are given fluid properties, and `<textarea>` elements are restricted to vertical resizing only.
 
@@ -110,7 +110,7 @@ There are also some sensible default styles for non-typographical elements inclu
 		resize: vertical;
 	}
 
-## Grids
+## <a name="grids"></a> Grids
 
 Based on the clever ideas of Matt Berridge, Cardinal’s grid system uses fluid column widths and fixed column gutters. Nesting grid elements is a breeze, and you can dictate the grid’s behavior by adding CSS classes to items within the grid.
 
@@ -134,7 +134,7 @@ The following example can be described as: “a grid with four 100% width items,
 		<div class="grid_item lap-one_half desk-one_fourth"></div>
 	</div>
 
-## Layout
+## <a name="layout"></a> Layout
 
 Cardinal also includes some reusable classes for common layout modules, like page wrappers, content wells, and 100% width containers.
 
@@ -171,14 +171,14 @@ Cardinal also includes some reusable classes for common layout modules, like pag
 		box-shadow:         inset 0 0 0.317rem hsla(0, 0%, 0%, 0.10);
 	}
 
-## Prompts
+## <a name="prompts"></a> Prompts
 
 By default, Cardinal includes two small prompts: one that shows up for users who have Javascript disabled, and one for the IE6 Chrome Frame. These are hidden by default unless the user has Javascript disabled, or is using IE6 and below.
 
-## Helpers
+## <a name="helpers"></a> Helpers
 
 A bunch of helpers from the fantastic [HTML5 Boilerplate](http://cbrac.co/Zt9YqM) are used here, along with some custom helpers for quick text alignment, margins, paddings, and floats.
 
-## Print
+## <a name="print"></a> Print
 
 This was also copy and pasted directly from [HTML5 Boilerplate](http://cbrac.co/Zt9YqM), and inlined to avoid an extra HTTP request.
