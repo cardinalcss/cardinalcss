@@ -195,14 +195,14 @@ A bunch of helpers from the fantastic [HTML5 Boilerplate](http://cbrac.co/Zt9YqM
 	.margin_left   { margin-left: 1.333rem !important;   }
 	.margin_bottom { margin-bottom: 1.333rem !important; }
 	.margin_right  { margin-right: 1.333rem !important;  }
-	.margin_none   { margin: 0 !important;             }
+	.margin_none   { margin: 0 !important;               }
 
 	/* Paddings */
 	.padding_top    { padding-top: 1.333rem !important;    }
 	.padding_left   { padding-left: 1.333rem !important;   }
 	.padding_bottom { padding-bottom: 1.333rem !important; }
 	.padding_right  { padding-right: 1.333rem !important;  }
-	.padding_none   { padding: 0 !important;             }
+	.padding_none   { padding: 0 !important;               }
 
 	/* Text alignment */
 	.text_left    { text-align: left;    }
