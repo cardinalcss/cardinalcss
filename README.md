@@ -127,9 +127,9 @@ The columns widths are set in percentages, and the gutters are set in REMs. Due 
 
 The following example can be described as: “a grid with four 100% width items, which become 50% width items on lap devices, and 25% width items on desktop devices.”
 
-<div class="grid">
-	<div class="grid_item lap-one_half desk-one_fourth"></div>
-	<div class="grid_item lap-one_half desk-one_fourth"></div>
-	<div class="grid_item lap-one_half desk-one_fourth"></div>
-	<div class="grid_item lap-one_half desk-one_fourth"></div>
-</div>
+	<div class="grid">
+		<div class="grid_item lap-one_half desk-one_fourth"></div>
+		<div class="grid_item lap-one_half desk-one_fourth"></div>
+		<div class="grid_item lap-one_half desk-one_fourth"></div>
+		<div class="grid_item lap-one_half desk-one_fourth"></div>
+	</div>
