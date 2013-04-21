@@ -18,6 +18,8 @@ Cardinal's main focus is readable typography and layout that can be scaled globa
 
 It uses a combination of modular scale, unit-less line-heights, and REM units so that all the typography and layout elements can be scaled up or down proportionally.
 
+What follows is a breakdown of the CSS file.
+
 ## Table of contents
 
 1. [Reset](#reset)
@@ -174,6 +176,10 @@ Cardinal also includes some reusable classes for common layout modules, like pag
 ## <a name="prompts"></a> Prompts
 
 By default, Cardinal includes two small prompts: one that shows up for users who have Javascript disabled, and one for the IE6 Chrome Frame. These are hidden by default unless the user has Javascript disabled, or is using IE6 and below.
+
+## <a name="app"></a> App
+
+This is where your code goes!
 
 ## <a name="helpers"></a> Helpers
 
