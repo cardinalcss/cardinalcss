@@ -133,3 +133,52 @@ The following example can be described as: “a grid with four 100% width items,
 		<div class="grid_item lap-one_half desk-one_fourth"></div>
 		<div class="grid_item lap-one_half desk-one_fourth"></div>
 	</div>
+
+## Layout
+
+Cardinal also includes some reusable classes for common layout modules, like page wrappers, content wells, and 100% width containers.
+
+	.strip {
+		margin: 0;
+		margin-bottom: 1.333rem;
+		padding: 0;
+		background: #efefef;
+		list-style: none;
+	}
+
+	.wrapper {
+		width: 90%;
+		max-width: 1280px;
+		margin: 0 auto;
+	}
+
+	.island {
+		padding: 1.333rem;
+		-webkit-border-radius: 5px;
+		-moz-border-radius:    5px;
+		border-radius:         5px;
+		background: #efefef;
+	}
+
+	.well {
+		padding: 1.333rem;
+		-webkit-border-radius: 5px;
+		-moz-border-radius:    5px;
+		border-radius:         5px;
+		background: #efefef;
+		-webkit-box-shadow: inset 0 0 0.317rem hsla(0, 0%, 0%, 0.10);
+		-moz-box-shadow:    inset 0 0 0.317rem hsla(0, 0%, 0%, 0.10);
+		box-shadow:         inset 0 0 0.317rem hsla(0, 0%, 0%, 0.10);
+	}
+
+## Prompts
+
+By default, Cardinal includes two small prompts: one that shows up for users who have Javascript disabled, and one for the IE6 Chrome Frame. These are hidden by default unless the user has Javascript disabled, or is using IE6 and below.
+
+## Helpers
+
+A bunch of helpers from the fantastic [HTML5 Boilerplate](http://cbrac.co/Zt9YqM) are used here, along with some custom helpers for quick text alignment, margins, paddings, and floats.
+
+## Print
+
+This was also copy and pasted directly from [HTML5 Boilerplate](http://cbrac.co/Zt9YqM), and inlined to avoid an extra HTTP request.

@@ -562,7 +562,7 @@ textarea {
 /* 100% width container strip */
 .strip {
 	margin: 0;
-	margin-bottom: 1.8rem;
+	margin-bottom: 1.333rem;
 	padding: 0;
 	background: #efefef;
 	list-style: none;
