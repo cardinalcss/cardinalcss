@@ -4,15 +4,6 @@ Cardinal is a barebones, “mobile-first” CSS framework with some useful defau
 
 **Beware:** this is a work in progress. It’s pre-alpha nonsense, but feel free to help out, or watch the progress on [Pivotal Tracker](https://www.pivotaltracker.com/s/projects/803361).
 
-## Table of contents
-
-1. Introduction
-2. Overview
-3. Reset
-4. Base
-5. Fonts
-6. Typography
-
 ## Introduction
 
 Cardinal is for designers and developers who want to build responsive web applications without losing their minds.
@@ -26,6 +17,21 @@ This way, instead of deleting portions of a framework that you don't need, you s
 Cardinal's main focus is readable typography and layout that can be scaled globally for a wide range of devices. 
 
 It uses a combination of modular scale, unit-less line-heights, and REM units so that all the typography and layout elements can be scaled up or down proportionally.
+
+## Table of contents
+
+1. Reset
+2. Base
+3. Fonts
+4. Typography
+5. Non-typography
+6. Grids
+7. Layout
+8. Prompts
+9. App
+10. Helpers
+11. Queries
+12. Print
 
 ## Reset
 
@@ -47,7 +53,7 @@ In order to achieve this scalability, the `font-size` property on the `<html>` e
 
 Next, the `font-size` property on the `<body>` element is set as `1rem`, which inherits the percentage declaration on the `<html>` element as the base font size for your entire project.
 
-With media queries, you can then change the `font-size` on the `<html>` element to a different percentage value, depending on the width of the device/viewport. This changes the base font size of the entire project, so any other elements using the REM unit will scale proportionally.
+With media queries, you can then change the `font-size` property on the `<html>` element to a different percentage value, depending on the width of the device/viewport. This changes the base font size of the entire project, so that any other elements using the REM unit will scale proportionally.
 
 Following a "mobile-first" approach, Cardinal starts with small devices and works its way up to desktop and larger screen resolutions.
 
@@ -79,8 +85,12 @@ After the root `font-size` is declared for different device widths, the `font-si
 
 In other words, 1rem = the percentage on the `<html>` element, which is why all the `rem` units in your application scale as that base percentage value changes at different device/viewport widths.
 
+Instead of trying to maintain a baseline grid, Cardinal uses unit-less line heights on the `<body>` element and some other common typographical elements. This means that the line height is a multiple of the base font size, so it scales proportionally when the base font size changes.
+
 ### Modular scale
 
-By default, Cardinal's root `font-size` ranges from 12px to 18px  depending on the device width/viewport. A [modular scale](http://modularscale.com/scale/?px1=12&px2=18&ra1=1.333&ra2=0) is then calculated with [this tool](http://modularscale.com) based on the minimum and maximum base font-size values, and uses the "perfect fourth" ratio (1:1.333) found commonly in music to generate values that can be used for sizing type and layout elements across the project. **The values in the second column entitled "Ems" are the values you want to use.**
+By default, Cardinal's root font size ranges from 12px to 18px  depending on the device width/viewport. A [modular scale](http://modularscale.com/scale/?px1=12&px2=18&ra1=1.333&ra2=0) is then calculated with [this tool](http://modularscale.com) based on the minimum and maximum base font-size values, and uses the "perfect fourth" ratio (1:1.333) found commonly in music to generate values that can be used for sizing type and layout elements across the project. **The values in the second column entitled "Ems" are the values you want to use.**
 
-If you need pixel precision for a particular element or property (eg. 16px font-size for menu buttons regardless of device or viewport width), simply use the `px` unit instead of the `rem` unit and it will remain constant.
+### Pixel precision
+
+If you need pixel precision for a particular element or property (eg. 16px font-size for menu buttons regardless of device or viewport width), simply use the `px` unit instead of the `rem` unit and it will remain constant regardless of the base font size.
