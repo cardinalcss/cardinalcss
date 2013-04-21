@@ -114,14 +114,14 @@ There are also some sensible default styles for non-typographical elements inclu
 
 ## <a name="grids"></a> Grids
 
-Based on the clever ideas of [Matt Berridge](http://cbrac.co/XYCKo9), Cardinal’s grid system uses fluid column widths and fixed column gutters. Nesting grid elements is a breeze, and you can dictate the grid’s behavior by adding CSS classes to items within the grid.
+Based on the clever ideas of [Matt Berridge](http://cbrac.co/XYCKo9), Cardinal’s grid system uses fluid item widths and fixed gutters. Grid items can be divided into halves, thirds, fourths, fifths, or sixths. Nesting grid elements is a breeze, and you can dictate the grid’s behavior by adding CSS classes to items within the grid.
 
-The columns widths are set in percentages, and the gutters are set in REMs. Due to the change in the root font-size above, the fixed gutters increase/decrease proportionally, depending on the width of the viewport.
+The item widths are set in percentages, and the gutters are set in REMs. Due to the change in the root font-size above, the fixed gutters increase/decrease proportionally, depending on the width of the viewport.
 
 ### Usage
 
 - `.grid` - makes element a grid wrapper.
-- `.grid_item` - makes element a grid column.
+- `.grid_item` - makes element a grid item.
 - `.one_half`,
 `.two_thirds`, etc - makes element a specific width of its parent.
 - `.lap-*` - grid breakpoint for devices you hold in your lap.
