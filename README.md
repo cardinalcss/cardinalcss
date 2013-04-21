@@ -94,3 +94,18 @@ By default, Cardinal's root font size ranges from 12px to 18px  depending on the
 ### Pixel precision
 
 If you need pixel precision for a particular element or property (eg. 16px font-size for menu buttons regardless of device or viewport width), simply use the `px` unit instead of the `rem` unit and it will remain constant regardless of the base font size.
+
+## Non-typography
+
+There are also some sensible default styles for non-typographical elements included with Cardinal. For instance, all `<img>` and `<video>` tags are given fluid properties, and `<textarea>` elements are restricted to vertical resizing only.
+
+	img,
+	video {
+		max-width: 100%;
+		width: auto\9;
+		height: auto !important;
+	}
+
+	textarea {
+		resize: vertical;
+	}
