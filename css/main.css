@@ -8,10 +8,10 @@
 	03. Fonts...............Custom @font-face declarations
 	04. Typography..........Basic typography elements
 	05. Non-typography......Important elements that are not type-based
-	06. Grids...............A super simple, nestable grid system
+	06. Grids...............A simple, nestable grid system
 	07. Layout..............Commonly used layout items
 	08. Prompts.............Chrome frame and JS prompts
-	09. App.................App-specific styles go here
+	09. App.................Your styles go here!
 	10. Helpers.............Some useful, global classes
 	11. Queries.............CSS3 media queries for responsive design
 	12. Print...............Inlined, barebones print styles
@@ -114,7 +114,24 @@ img::-moz-selection {
 
 	Description
 	--------------------
+	Cardinal uses a combination of modular scale, unit-less line-heights, and
+	rem units so that it is easy to scale the type and layout across your
+	entire project.
 
+	How it works
+	--------------------
+	The root font-size is first set as 75%, or 12px, which feels comfortable on
+	small feature phones (mobile devices with a viewport width less than
+	320px).
+
+	A fallback for IE8 is included immediately afterwards, which instead sets
+	the root font-size to 100%, or 16px, since IE users will likely be using a
+	desktop device of some sort.
+
+	Then, using media queries, Cardinal increases the root font-size percentage
+	at some common device widths. You can tweak these media queries and
+	percentage values to suit your project. This is how the type and layout
+	scale globally.
 
 	NOTE: IE9 & IE10 do not recognize `rem` units when used with the `font`
 	shorthand property.

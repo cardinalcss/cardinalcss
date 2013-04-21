@@ -2,7 +2,7 @@
 
 Cardinal is a barebones, “mobile-first” CSS framework with some useful default styles, scalable typography, and a simple responsive grid system.
 
-**Beware:** this is a work in progress. It’s pre-alpha nonsense, but feel free to help out, or watch the progress on [Pivotal Tracker](https://www.pivotaltracker.com/s/projects/803361).
+Watch the progress for this project on [Pivotal Tracker](https://www.pivotaltracker.com/s/projects/803361).
 
 ## Introduction
 
@@ -184,6 +184,31 @@ This is where your code goes!
 ## <a name="helpers"></a> Helpers
 
 A bunch of helpers from the fantastic [HTML5 Boilerplate](http://cbrac.co/Zt9YqM) are used here, along with some custom helpers for quick text alignment, margins, paddings, and floats.
+
+	/* Floats */
+	.float_left  { float: left;  }
+	.float_right { float: right; }
+	.float_none  { float: none;  }
+
+	/* Margins */
+	.margin_top    { margin-top: 1.333rem !important;    }
+	.margin_left   { margin-left: 1.333rem !important;   }
+	.margin_bottom { margin-bottom: 1.333rem !important; }
+	.margin_right  { margin-right: 1.333rem !important;  }
+	.margin_none   { margin: 0 !important;             }
+
+	/* Paddings */
+	.padding_top    { padding-top: 1.333rem !important;    }
+	.padding_left   { padding-left: 1.333rem !important;   }
+	.padding_bottom { padding-bottom: 1.333rem !important; }
+	.padding_right  { padding-right: 1.333rem !important;  }
+	.padding_none   { padding: 0 !important;             }
+
+	/* Text alignment */
+	.text_left    { text-align: left;    }
+	.text_right   { text-align: right;   }
+	.text_center  { text-align: center;  }
+	.text_justify { text-align: justify; }
 
 ## <a name="print"></a> Print
 
