@@ -56,8 +56,8 @@ html {
 }
 
 /**
- * 1. Customize the background color for text selections
- * 2. Remove text-shadow in selection highlight - http://cbrac.co/Q6swON
+ * 1. Customize `background` for text selections
+ * 2. Remove `text-shadow` in selection highlight - http://cbrac.co/Q6swON
  */
 
 ::-moz-selection {
@@ -70,12 +70,12 @@ html {
 	text-shadow: none;   /* 2 */
 }
 
-/* Change background for text selections when browser window is inactive */
+/* Change `background` for text selections when browser is unfocused */
 ::selection:window-inactive {
 	background: #d0d0d0;
 }
 
-/* Remove background colors on images when selected */
+/* Remove `background` on images when selected */
 img::selection {
 	background: transparent;
 }
@@ -94,21 +94,21 @@ img::-moz-selection {
 	Description
 	--------------------
 	Cardinal uses a combination of modular scale, unit-less line heights, and
-	rem units so that it is easy to scale the type and layout across your
+	`rem` units so that it is easy to scale the type and layout across your
 	entire project.
 
 	How it works
 	--------------------
-	The root font-size is first set as 75%, or 12px, which feels comfortable on
-	small feature phones (mobile devices with a viewport width less than
+	The root `font-size` is first set as 75%, or 12px, which feels comfortable
+	on small feature phones (mobile devices with a viewport width less than
 	320px).
 
 	A fallback for IE8 is included immediately afterwards, which instead sets
-	the root font-size to 100%, or 16px, since IE users will likely be using a
-	desktop device of some sort.
+	the root `font-size` to 100%, or 16px, since IE users will likely be using
+	a desktop device of some sort.
 
-	Then, using media queries, Cardinal increases the root font-size percentage
-	at some common device widths & breakpoints. You can tweak these media
+	Then, using `@media` queries, Cardinal increases the root `font-size` at
+	several common device widths & breakpoints. You can tweak these `@media`
 	queries and percentage values to suit your project. This is how the type
 	and layout scale globally.
 
@@ -117,7 +117,7 @@ img::-moz-selection {
 \*  =======================================================================  */
 
 html        { font-size: 75%;  } /* 12px */
-html.lt-ie9 { font-size: 100%; } /* ≤ IE8 defaults to 16px base */
+html.lt-ie9 { font-size: 100%; } /* ≤ IE8 defaults to 16px root */
 
 @media only screen and (min-width: 320px) { html { font-size: 81.25%; } }
 @media only screen and (min-width: 480px) { html { font-size: 87.5%;  } }
@@ -136,7 +136,7 @@ body {
 	line-height: 1.5;   /* 2 */
 }
 
-/* Increased line-height for larger devices */
+/* Increased `line-height` for larger devices */
 @media only screen and (min-width: 480px) { body { line-height: 1.777; } }
 
 /* Define a mobile tap highlight color (iOS 1.1.1+) */
@@ -360,7 +360,7 @@ kbd {
 	font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
 }
 
-/* Increase `font-size` and `padding` for larger devices */
+/* Increase `font-size` and `padding` for <kbd> on larger devices */
 @media only screen and (min-width: 480px) {
 	kbd {
 		font-size: 12px;
@@ -374,7 +374,7 @@ nav ol {
 	list-style: none;
 }
 
-/* Nested list style types for ordered lists */
+/* Nested `list-style` types for ordered lists */
 ol          { list-style: decimal; }
 ol ol       { list-style: upper-alpha; }
 ol ol ol    { list-style: lower-roman; }
@@ -446,12 +446,12 @@ small {
 	Non-typography ($non-typography)
 \*  =======================================================================  */
 
-/* Fluid-width audio elements */
+/* Fluid-width <audio> elements */
 audio {
 	width: 100%;
 }
 
-/* Remove fieldset styles from normalize.css */
+/* Remove <fieldset> styles from normalize.css */
 fieldset {
 	margin: 0;
 	padding: 0;
@@ -477,7 +477,7 @@ legend {
 }
 
 /**
- * Remove the gap between images and the bottom of their containers -
+ * Remove the gap between <img> elements and the bottom of their containers -
  * http://cbrac.co/Q6smqV
  */
 
@@ -485,7 +485,7 @@ img {
 	vertical-align: middle;
 }
 
-/* Fluid-width media that maintains their aspect ratios */
+/* Fluid-width media that maintain their aspect ratios */
 img,
 video {
 	max-width: 100%;
@@ -493,21 +493,53 @@ video {
 	height: auto !important;
 }
 
-/* Remove black outlines in IE7 */
+/* Remove black outlines on <input> buttons in IE7 */
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
 	filter: chroma(color=#000000);
 }
 
-/* Restrict textareas to vertical resizing only */
+/* Restrict <textarea> elements to vertical resizing only */
 textarea {
 	resize: vertical;
 }
 
 /*  =======================================================================  *\
 	Grids ($grids)
+
 	Inspired by http://cbrac.co/12j3Fc3 & http://cbrac.co/10H12RA
+
+	Description
+	--------------------
+	Cardinal includes a simple, responsive grid system that uses fluid item
+	widths and fixed gutters. Grid items can be divided into halves, thirds,
+	fourths, fifths, and sixths.
+
+	The item widths are set in percentages, and the gutters are set in `rem`
+	units. Due to the change in the root `font-size` above, the fixed gutters
+	grow and shrink proportionally, depending on the width of the viewport.
+
+	You can also change how a grid item behaves at certain device widths &
+	breakpoints, by simply adding helper classes to any `.grid_item` element.
+
+	Usage
+	--------------------
+		* .grid - makes element a grid wrapper.
+		* .grid_item - makes element a grid item.
+		* .one_half, two_thirds, four_fifths, etc - makes element a specific
+			width of its parent.
+		* .lap-* - grid breakpoint for devices you hold in your lap.
+		* .desk-* - grid breakpoint for desktop devices.
+
+	Example
+	--------------------
+	<div class="grid">
+		<div class="grid_item lap-one_half desk-one_fourth"></div>
+		<div class="grid_item lap-one_half desk-one_fourth"></div>
+		<div class="grid_item lap-one_half desk-one_fourth"></div>
+		<div class="grid_item lap-one_half desk-one_fourth"></div>
+	</div>
 \*  =======================================================================  */
 
 /* Rows */
@@ -534,7 +566,7 @@ textarea {
 	margin-bottom: 1.333rem;
 }
 
-/* Remove the bottom margin on the last element inside of a grid item */
+/* Remove the bottom margin on the last element inside of a `.grid_item` */
 [class*="grid_item"] > *:last-child {
 	margin-bottom: 0;
 }
@@ -619,7 +651,7 @@ textarea {
 	Layout ($layout)
 \*  =======================================================================  */
 
-/* 100% width container strip */
+/* 100% width container */
 .strip {
 	margin: 0;
 	margin-bottom: 1.333rem;
@@ -769,7 +801,7 @@ textarea {
 }
 
 /**
- * Extends the .visuallyhidden class to allow the element to be focusable
+ * Extends the `.visuallyhidden` class to allow the element to be focusable
  * when navigated to via the keyboard - http://cbrac.co/RR8gO6
  */
 
@@ -834,15 +866,15 @@ textarea {
 
 	Description
 	--------------------
-	Included below are some common media queries (or "breakpoints"), but do
+	Included below are some common `@media` queries (or "breakpoints"), but do
 	not feel bound to these numbers. It's encouraged that you adapt the
 	layout based on the content within your project. If the layout starts
 	to break at a certain width, height, orientation, or screen resolution,
-	you may want to address it with a media query.
+	you may want to address it with a `@media` query.
 
 	This framework takes the "mobile first" approach, which means that the
 	styling for mobile layout is addressed above, and then the layout is
-	progressively enhanced using the media queries below.
+	progressively enhanced using the `@media` queries below.
 
 	Further reading
 	--------------------
