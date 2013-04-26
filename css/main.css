@@ -566,7 +566,7 @@ textarea {
 	margin-bottom: 1.333rem;
 }
 
-/* Remove the bottom margin on the last element inside of a `.grid_item` */
+/* Remove the bottom margin on the last element inside of every `.grid_item` */
 [class*="grid_item"] > *:last-child {
 	margin-bottom: 0;
 }
