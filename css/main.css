@@ -370,6 +370,7 @@ kbd {
 
 nav ul,
 nav ol {
+	margin: 0;
 	padding: 0;
 	list-style: none;
 }
@@ -520,8 +521,12 @@ textarea {
 	units. Due to the change in the root `font-size` above, the fixed gutters
 	grow and shrink proportionally, depending on the width of the viewport.
 
-	You can also change how a grid item behaves at certain device widths &
+	You can also change how a `.grid_item` behaves at certain device widths &
 	breakpoints, by simply adding helper classes to any `.grid_item` element.
+
+	Additionally, the `.one_half`, `.three_fourths`, etc helper classes can be
+	used outside of the grid context, if you simply want an element to have a
+	width that is a specific percentage of its parent.
 
 	Usage
 	--------------------
@@ -656,7 +661,8 @@ textarea {
 	margin: 0;
 	margin-bottom: 1.333rem;
 	padding: 0;
-	background: #efefef;
+	width: 100%;
+	background-color: #efefef;
 	list-style: none;
 }
 
@@ -685,9 +691,9 @@ textarea {
 	-moz-border-radius:    5px;
 	border-radius:         5px;
 	background: #efefef;
-	-webkit-box-shadow: inset 0 0 0.317rem hsla(0, 0%, 0%, 0.10);
-	-moz-box-shadow:    inset 0 0 0.317rem hsla(0, 0%, 0%, 0.10);
-	box-shadow:         inset 0 0 0.317rem hsla(0, 0%, 0%, 0.10);
+	-webkit-box-shadow: inset 0 0 5px hsla(0, 0%, 0%, 0.10);
+	-moz-box-shadow:    inset 0 0 5px hsla(0, 0%, 0%, 0.10);
+	box-shadow:         inset 0 0 5px hsla(0, 0%, 0%, 0.10);
 }
 
 .island .island,
