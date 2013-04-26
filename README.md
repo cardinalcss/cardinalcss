@@ -24,16 +24,15 @@ What follows is a breakdown of the CSS file.
 
 1. [Reset](#reset)
 2. [Base](#base)
-3. [Fonts](#fonts)
-4. [Typography](#typography)
-5. [Non-typography](#non-typography)
-6. [Grids](#grids)
-7. [Layout](#layout)
-8. [Prompts](#prompts)
-9. [App](#app)
-10. [Helpers](#helpers)
-11. [Queries](#queries)
-12. [Print](#print)
+3. [Typography](#typography)
+4. [Non-typography](#non-typography)
+5. [Grids](#grids)
+6. [Layout](#layout)
+7. [Prompts](#prompts)
+8. [App](#app)
+9. [Helpers](#helpers)
+10. [Queries](#queries)
+11. [Print](#print)
 
 ## <a name="reset"></a> Reset
 
@@ -42,10 +41,6 @@ Instead of a traditional CSS reset, Cardinal includes a minified version of [nor
 ## <a name="base"></a> Base
 
 Cardinal declares some useful default styles to the `<html>` and `<body>` elements to get them to play nice across browsers. It also adds basic styles to text selections, and applies `box-sizing: border-box;` to everything to fix the flawed CSS box model.
-
-## <a name="fonts"></a> Fonts
-
-To make adding custom fonts a bit quicker, Cardinal includes an example code snippet for [bulletproof @font-face declarations](http://cbrac.co/U4mSbc), so that you don’t have to worry about looking it up each time you want to use custom fonts in your project.
 
 ## <a name="typography"></a> Typography
 

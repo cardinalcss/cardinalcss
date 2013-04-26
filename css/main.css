@@ -5,16 +5,15 @@
 	(Ctrl/Cmd + F, and search for `$section` to jump to a section)
 	01. Reset...............Normalize.css, minified - http://cbrac.co/11gtlnj
 	02. Base................A few important styles
-	03. Fonts...............Custom @font-face declarations
-	04. Typography..........Basic typography elements
-	05. Non-typography......Important elements that are not type-based
-	06. Grids...............A simple, nestable grid system
-	07. Layout..............Commonly used layout items
-	08. Prompts.............Chrome frame and JS prompts
-	09. App.................Your styles go here!
-	10. Helpers.............Some useful, global classes
-	11. Queries.............CSS3 media queries for responsive design
-	12. Print...............Inlined, barebones print styles
+	03. Typography..........Basic typography elements
+	04. Non-typography......Important elements that are not type-based
+	05. Grids...............A simple, nestable grid system
+	06. Layout..............Commonly used layout items
+	07. Prompts.............Chrome frame and JS prompts
+	08. App.................Your styles go here!
+	09. Helpers.............Some useful, global classes
+	10. Queries.............CSS3 media queries for responsive design
+	11. Print...............Inlined, barebones print styles
 \*  =======================================================================  */
 
 /*  =======================================================================  *\
@@ -86,26 +85,6 @@ img::-moz-selection {
 }
 
 /*  =======================================================================  *\
-	Fonts ($fonts)
-
-	LINK: How to define font-weight and style     - http://cbrac.co/TMxZps
-	LINK: Smoother @font-face rendering in Chrome - http://cbrac.co/U4mSbc
-	WARNING: Be careful with relative paths "../" - http://cbrac.co/UKAJEg
-\*  =======================================================================  */
-
-/* YourFontName: Normal
-@font-face {
-	font-family: "YourFontName";
-	src: url("/path/to/YourFont.eot");
-	src: url("/path/to/YourFont.eot?#iefix") format("embedded-opentype"),
-			 url("/path/to/YourFont.svg#YourFontName") format("svg"),
-			 url("/path/to/YourFont.woff") format("woff"),
-			 url("/path/to/YourFont.ttf") format("truetype");
-	font-weight: normal;
-	font-style: normal;
-}*/
-
-/*  =======================================================================  *\
 	Typography ($typography)
 
 	Modular scale:    12px @ 1:1.333 (perfect fourth)
@@ -114,7 +93,7 @@ img::-moz-selection {
 
 	Description
 	--------------------
-	Cardinal uses a combination of modular scale, unit-less line-heights, and
+	Cardinal uses a combination of modular scale, unit-less line heights, and
 	rem units so that it is easy to scale the type and layout across your
 	entire project.
 
@@ -129,20 +108,20 @@ img::-moz-selection {
 	desktop device of some sort.
 
 	Then, using media queries, Cardinal increases the root font-size percentage
-	at some common device widths. You can tweak these media queries and
-	percentage values to suit your project. This is how the type and layout
-	scale globally.
+	at some common device widths & breakpoints. You can tweak these media
+	queries and percentage values to suit your project. This is how the type
+	and layout scale globally.
 
 	NOTE: IE9 & IE10 do not recognize `rem` units when used with the `font`
 	shorthand property.
 \*  =======================================================================  */
 
 html        { font-size: 75%;  } /* 12px */
-html.lt-ie9 { font-size: 100%; } /* ≤ IE8 defaults to 16px */
+html.lt-ie9 { font-size: 100%; } /* ≤ IE8 defaults to 16px base */
 
 @media only screen and (min-width: 320px) { html { font-size: 81.25%; } }
 @media only screen and (min-width: 480px) { html { font-size: 87.5%;  } }
-@media only screen and (min-width: 768px) { html { font-size: 100%;   } }
+@media only screen and (min-width: 640px) { html { font-size: 100%;   } }
 @media only screen and (min-width: 960px) { html { font-size: 112.5%; } }
 
 /**
@@ -154,8 +133,11 @@ body {
 	color: #444;
 	font-size: 1rem;    /* 1 */
 	font-family: "Helvetica Neue", sans-serif;
-	line-height: 1.777; /* 2 */
+	line-height: 1.5;   /* 2 */
 }
+
+/* Increased line-height for larger devices */
+@media only screen and (min-width: 480px) { body { line-height: 1.777; } }
 
 /* Define a mobile tap highlight color (iOS 1.1.1+) */
 a:link {
@@ -182,7 +164,6 @@ acronym {
 
 blockquote,
 dl,
-h1, h2, h3, h4, h5, h6,
 hr,
 menu,
 ol,
@@ -273,6 +254,7 @@ h6,
 .text_large,
 .text_medium,
 .text_normal {
+	margin: 0 0 0.75rem;
 	color: #222;
 	font-weight: 700;
 	font-family: "Helvetica Neue", sans-serif;
@@ -357,24 +339,33 @@ mark {
 kbd {
 	position: relative;
 	top: -1px;
-	padding: 0.1rem 0.3rem;
+	padding: 0 0.3rem;
+	margin-bottom: 1px;
 	border: 1px solid #d6d6d6;
 	-webkit-border-radius: 4px;
 	-moz-border-radius:    4px;
 	border-radius:         4px;
 	background: #f8f8f8;
-	-webkit-box-shadow: 
+	-webkit-box-shadow:
 		0 1px 0px #d6d6d6,
 		inset 0 0 0 1px #fff;
-	-moz-box-shadow: 
+	-moz-box-shadow:
 		0 1px 0px #d6d6d6,
 		inset 0 0 0 1px #fff;
-	box-shadow: 
+	box-shadow:
 		0 1px 0px #d6d6d6,
 		inset 0 0 0 1px #fff;
 	white-space: nowrap;
-	font-size: 11px;
+	font-size: 10px;
 	font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+}
+
+/* Increase `font-size` and `padding` for larger devices */
+@media only screen and (min-width: 480px) {
+	kbd {
+		font-size: 12px;
+		padding: 0.1rem 0.3rem;
+	}
 }
 
 nav ul,
@@ -444,7 +435,11 @@ pre code {
 }
 
 small {
-	font-size: 62.5%;
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	font-size: 75%;
+	line-height: 1.333;
 }
 
 /*  =======================================================================  *\
@@ -520,7 +515,7 @@ textarea {
 	list-style: none;
 	margin: 0;
 	padding: 0;
-	margin-left: -2rem;
+	margin-left: -1.333rem;
 }
 
 .grid:after {
@@ -535,11 +530,12 @@ textarea {
 	*display: inline;
 	*zoom: 1;
 	float: left;
-	padding-left: 2rem;
+	padding-left: 1.333rem;
 	margin-bottom: 1.333rem;
 }
 
-[class*="grid_item"] *:last-child {
+/* Remove the bottom margin on the last element inside of a grid item */
+[class*="grid_item"] > *:last-child {
 	margin-bottom: 0;
 }
 
@@ -574,11 +570,49 @@ textarea {
 
 /* Gutters */
 .grid-gutter_half {
-	margin-left: -1rem;
+	margin-left: -0.666rem;
 }
 
 .grid-gutter_half [class*="grid_item"] {
-	padding-left: 1rem;
+	padding-left: 0.666rem;
+}
+
+/* Default grid breakpoint for lap devices (eg. tablets) */
+@media only screen and (min-width: 640px) {
+	.lap-one_whole      { width: 100%;    }
+	.lap-one_half       { width: 50%;     }
+	.lap-one_third      { width: 33.333%; }
+	.lap-two_thirds     { width: 66.666%; }
+	.lap-one_fourth     { width: 25%;     }
+	.lap-three_fourths  { width: 75%;     }
+	.lap-one_fifth      { width: 20%;     }
+	.lap-two_fifths     { width: 40%;     }
+	.lap-three_fifths   { width: 60%;     }
+	.lap-four_fifths    { width: 80%;     }
+	.lap-one_sixth      { width: 16.666%; }
+	.lap-two_sixths     { width: 33.333%; }
+	.lap-three_sixths   { width: 50%;     }
+	.lap-four_sixths    { width: 66.666%; }
+	.lap-five_sixths    { width: 83.333%; }
+}
+
+/* Default grid breakpoint for desktop devices */
+@media only screen and (min-width: 960px) {
+	.desk-one_whole      { width: 100%;    }
+	.desk-one_half       { width: 50%;     }
+	.desk-one_third      { width: 33.333%; }
+	.desk-two_thirds     { width: 66.666%; }
+	.desk-one_fourth     { width: 25%;     }
+	.desk-three_fourths  { width: 75%;     }
+	.desk-one_fifth      { width: 20%;     }
+	.desk-two_fifths     { width: 40%;     }
+	.desk-three_fifths   { width: 60%;     }
+	.desk-four_fifths    { width: 80%;     }
+	.desk-one_sixth      { width: 16.666%; }
+	.desk-two_sixths     { width: 33.333%; }
+	.desk-three_sixths   { width: 50%;     }
+	.desk-four_sixths    { width: 66.666%; }
+	.desk-five_sixths    { width: 83.333%; }
 }
 
 /*  =======================================================================  *\
@@ -601,7 +635,7 @@ textarea {
 /* Page wrapper */
 .wrapper {
 	width: 90%;
-	max-width: 1280px;
+	max-width: 1140px;
 	margin: 0 auto;
 }
 
@@ -816,52 +850,11 @@ textarea {
 	- http://cbrac.co/11d4gfR
 \*  =======================================================================  */
 
-@media only screen and (min-width: 768px) {
-
-	/**
-	 * Default grid breakpoint for lap devices (eg. tablets)
-	 */
-
-	.lap-one_whole      { width: 100%;    }
-	.lap-one_half       { width: 50%;     }
-	.lap-one_third      { width: 33.333%; }
-	.lap-two_thirds     { width: 66.666%; }
-	.lap-one_fourth     { width: 25%;     }
-	.lap-three_fourths  { width: 75%;     }
-	.lap-one_fifth      { width: 20%;     }
-	.lap-two_fifths     { width: 40%;     }
-	.lap-three_fifths   { width: 60%;     }
-	.lap-four_fifths    { width: 80%;     }
-	.lap-one_sixth      { width: 16.666%; }
-	.lap-two_sixths     { width: 33.333%; }
-	.lap-three_sixths   { width: 50%;     }
-	.lap-four_sixths    { width: 66.666%; }
-	.lap-five_sixths    { width: 83.333%; }
-}
-
-@media only screen and (min-width: 960px) {
-
-	/**
-	 * Default grid breakpoint for desktop devices
-	 */
-
-	.desk-one_whole      { width: 100%;    }
-	.desk-one_half       { width: 50%;     }
-	.desk-one_third      { width: 33.333%; }
-	.desk-two_thirds     { width: 66.666%; }
-	.desk-one_fourth     { width: 25%;     }
-	.desk-three_fourths  { width: 75%;     }
-	.desk-one_fifth      { width: 20%;     }
-	.desk-two_fifths     { width: 40%;     }
-	.desk-three_fifths   { width: 60%;     }
-	.desk-four_fifths    { width: 80%;     }
-	.desk-one_sixth      { width: 16.666%; }
-	.desk-two_sixths     { width: 33.333%; }
-	.desk-three_sixths   { width: 50%;     }
-	.desk-four_sixths    { width: 66.666%; }
-	.desk-five_sixths    { width: 83.333%; }
-}
-
+/* Some common device widths & breakpoints */
+@media only screen and (min-width: 320px) {}
+@media only screen and (min-width: 480px) {}
+@media only screen and (min-width: 640px) {}
+@media only screen and (min-width: 960px) {}
 @media only screen and (min-width: 1280px) {}
 @media only screen and (min-width: 1440px) {}
 @media only screen and (orientation: landscape) {}
