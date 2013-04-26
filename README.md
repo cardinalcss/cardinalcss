@@ -4,7 +4,7 @@ Cardinal is a barebones, “mobile-first” CSS framework with some useful defau
 
 Watch the progress for this project on [Pivotal Tracker](https://www.pivotaltracker.com/s/projects/803361).
 
-## Introduction
+## Who is this for?
 
 Cardinal is for designers and developers who want to build responsive web applications without losing their minds.
 
