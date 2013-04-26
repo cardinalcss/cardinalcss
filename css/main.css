@@ -542,7 +542,7 @@ textarea {
 	</div>
 \*  =======================================================================  */
 
-/* Rows */
+/* Grid container */
 .grid {
 	list-style: none;
 	margin: 0;
@@ -556,7 +556,7 @@ textarea {
 	clear: both;
 }
 
-/* Items */
+/* Grid item */
 [class*="grid_item"] {
 	display: inline-block;
 	*display: inline;
