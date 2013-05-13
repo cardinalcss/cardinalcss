@@ -8,7 +8,7 @@
 	03. Typography..........Basic typography elements
 	04. Non-typography......Important elements that are not type-based
 	05. Grids...............A simple, nestable grid system
-	06. Layout..............Commonly used layout items
+	06. Modules.............Common user interface items
 	07. Prompts.............Chrome frame and JS prompts
 	08. App.................Your styles go here!
 	09. Helpers.............Some useful, global classes
@@ -163,7 +163,7 @@ acronym {
 }
 
 blockquote {
-	padding-left: 1.333rem;
+	padding-left: 1rem;
 	border-left: 5px solid #efefef;
 	font-style: italic;
 	font-family: Georgia, Times, serif;
@@ -174,7 +174,7 @@ blockquote p {
 }
 
 blockquote p + p {
-	margin-top: 1.333rem;
+	margin-top: 1rem;
 }
 
 /**
@@ -201,7 +201,7 @@ p,
 pre,
 summary,
 ul {
-	margin: 0 0 1.333rem;
+	margin: 0 0 1rem;
 }​
 
 code,
@@ -318,6 +318,10 @@ h5,
 h6,
 .text_normal {
 	font-size: 1rem;
+}
+
+.text_small {
+	font-size: 0.75rem;
 }
 
 h1 small,
@@ -437,7 +441,7 @@ pre code {
 	display: block;
 	overflow: auto;
 	margin: 0;
-	padding: 1.333rem;
+	padding: 1rem;
 	height: 100%;
 	border: none;
 	-webkit-border-radius: 0;
@@ -472,7 +476,7 @@ fieldset {
 }
 
 figure {
-	margin-bottom: 1.333rem;
+	margin-bottom: 1rem;
 }
 
 figcaption {
@@ -485,7 +489,7 @@ figcaption {
 }
 
 legend {
-	margin-bottom: 1.333rem;
+	margin-bottom: 1rem;
 	font-weight: 700;
 }
 
@@ -542,14 +546,14 @@ textarea {
 
 	If you want smaller or larger gutters, simply change the values for the
 	`margin-left` property on `.grid` and the `padding-left` property on
-	`[class*="grid_item"]` to be mirror opposites. Use a `rem` value
+	`[class*="grid-item"]` to be mirror opposites. Use a `rem` value
 	derived from the modular scale set on the typography above to keep things
 	harmonious.
 
 	Usage
 	--------------------
 	* .grid - makes element a grid wrapper.
-	* .grid_item - makes element a grid item.
+	* .grid-item - makes element a grid item.
 	* .one_half, two_thirds, four_fifths, etc - makes element a specific
 	width of its parent.
 	* .lap-* - grid breakpoint for devices you hold in your lap.
@@ -558,17 +562,17 @@ textarea {
 	Example
 	--------------------
 	<div class="grid">
-		<div class="grid_item lap-one_half desk-one_fourth"></div>
-		<div class="grid_item lap-one_half desk-one_fourth"></div>
-		<div class="grid_item lap-one_half desk-one_fourth"></div>
-		<div class="grid_item lap-one_half desk-one_fourth"></div>
+		<div class="grid-item lap-one_half desk-one_fourth"></div>
+		<div class="grid-item lap-one_half desk-one_fourth"></div>
+		<div class="grid-item lap-one_half desk-one_fourth"></div>
+		<div class="grid-item lap-one_half desk-one_fourth"></div>
 	</div>
 \*  =======================================================================  */
 
 /* Grid container */
 .grid {
 	margin: 0;
-	margin-left: -1.333rem;
+	margin-left: -2rem;
 	padding: 0;
 	list-style: none;
 }
@@ -580,22 +584,22 @@ textarea {
 }
 
 /* Grid item */
-[class*="grid_item"] {
+[class*="grid-item"] {
 	display: inline-block;
 	*display: inline;
 	*zoom: 1;
 	float: left;
-	margin-bottom: 1.333rem;
-	padding-left: 1.333rem;
+	margin-bottom: 1rem;
+	padding-left: 2rem;
 }
 
 /* Remove the bottom margin on the last element inside of every `.grid_item` */
-[class*="grid_item"] > *:last-child {
+[class*="grid-item"] > *:last-child {
 	margin-bottom: 0;
 }
 
 /* Whole */
-.grid_item,
+.grid-item,
 .one_whole      { width: 100%;    }
 
 /* Halves */
@@ -624,12 +628,20 @@ textarea {
 .five_sixths    { width: 83.333%;  }
 
 /* Gutters */
-.grid-gutter_half {
-	margin-left: -0.666rem;
+.grid_gutter_double {
+	margin-left: -4rem;
 }
 
-.grid-gutter_half [class*="grid_item"] {
-	padding-left: 0.666rem;
+.grid_gutter_double [class*="grid-item"] {
+	padding-left: 4rem;
+}
+
+.grid_gutter_half {
+	margin-left: -1rem;
+}
+
+.grid_gutter_half [class*="grid-item"] {
+	padding-left: 1rem;
 }
 
 /* Default grid breakpoint for lap devices (eg. tablets) */
@@ -671,13 +683,13 @@ textarea {
 }
 
 /*  =======================================================================  *\
-	Layout ($layout)
+	Modules ($modules)
 \*  =======================================================================  */
 
 /* 100% width container */
 .strip {
 	margin: 0;
-	margin-bottom: 1.333rem;
+	margin-bottom: 1rem;
 	padding: 0;
 	width: 100%;
 	background-color: #efefef;
@@ -685,7 +697,7 @@ textarea {
 }
 
 .strip .wrapper {
-	padding: 1.333rem 0;
+	padding: 1rem 0;
 }
 
 /* Page wrapper */
@@ -696,7 +708,7 @@ textarea {
 }
 
 .island {
-	padding: 1.333rem;
+	padding: 1rem;
 	-webkit-border-radius: 5px;
 	-moz-border-radius:    5px;
 	border-radius:         5px;
@@ -704,7 +716,7 @@ textarea {
 }
 
 .well {
-	padding: 1.333rem;
+	padding: 1rem;
 	-webkit-border-radius: 5px;
 	-moz-border-radius:    5px;
 	border-radius:         5px;
@@ -724,7 +736,7 @@ textarea {
 \*  =======================================================================  */
 
 .notice-chrome_frame,
-.no-js .notice-js {
+.no_js .notice-js {
 	display: block;
 	margin: 0;
 	padding: 1rem 0;
@@ -740,7 +752,7 @@ textarea {
 	display: none;
 }
 
-.no-js .notice-js {
+.no_js .notice-js {
 	background: #ffffcc;
 }
 
@@ -768,17 +780,17 @@ textarea {
 .float_none  { float: none;  }
 
 /* Margins */
-.margin_top    { margin-top: 1.333rem !important;    }
-.margin_left   { margin-left: 1.333rem !important;   }
-.margin_bottom { margin-bottom: 1.333rem !important; }
-.margin_right  { margin-right: 1.333rem !important;  }
+.margin_top    { margin-top: 1rem !important;    }
+.margin_left   { margin-left: 1rem !important;   }
+.margin_bottom { margin-bottom: 1rem !important; }
+.margin_right  { margin-right: 1rem !important;  }
 .margin_none   { margin: 0 !important;               }
 
 /* Paddings */
-.padding_top    { padding-top: 1.333rem !important;    }
-.padding_left   { padding-left: 1.333rem !important;   }
-.padding_bottom { padding-bottom: 1.333rem !important; }
-.padding_right  { padding-right: 1.333rem !important;  }
+.padding_top    { padding-top: 1rem !important;    }
+.padding_left   { padding-left: 1rem !important;   }
+.padding_bottom { padding-bottom: 1rem !important; }
+.padding_right  { padding-right: 1rem !important;  }
 .padding_none   { padding: 0 !important;               }
 
 /* Text alignment */
