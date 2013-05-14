@@ -7,7 +7,7 @@
 	02. Base................A few important styles
 	03. Typography..........Basic typography elements
 	04. Non-typography......Important elements that are not type-based
-	05. Grids...............A simple, nestable grid system
+	05. Grids & widths......A simple, nestable grid system & width classes
 	06. Modules.............Common user interface items
 	07. Prompts.............Chrome frame and JS prompts
 	08. App.................Your styles go here!
@@ -99,16 +99,16 @@ img::-moz-selection {
 
 	How it works
 	--------------------
-	The root `font-size` is first set as 75%, or 12px, which feels comfortable
+	The root font size is first set as 75%, or 12px, which feels comfortable
 	on small feature phones (mobile devices with a viewport width less than
 	320px).
 
 	A fallback for IE8 is included immediately afterwards, which instead sets
-	the root `font-size` to 100%, or 16px, since IE users will likely be using
+	the root font size to 100%, or 16px, since IE users will likely be using
 	a desktop device of some sort.
 
-	Then, using `@media` queries, Cardinal increases the root `font-size` at
-	several common device widths & breakpoints. You can tweak these `@media`
+	Then, using `@media` queries, Cardinal increases the root font size at
+	several common viewport widths, called breakpoints. You can tweak these `@media`
 	queries and percentage values to suit your project. This is how the type
 	and layout scale globally.
 
@@ -523,9 +523,7 @@ textarea {
 }
 
 /*  =======================================================================  *\
-	Grids ($grids)
-
-	Inspired by http://cbrac.co/12j3Fc3 & http://cbrac.co/10H12RA
+	Grids & widths ($grids)
 
 	Description
 	--------------------
@@ -534,21 +532,22 @@ textarea {
 	fourths, fifths, and sixths.
 
 	The item widths are set in percentages, and the gutters are set in `rem`
-	units. Due to the change in the root `font-size` above, the fixed gutters
+	units. Due to the change in the root font size above, the fixed gutters
 	grow and shrink proportionally, depending on the width of the viewport.
 
-	You can also change how a `.grid_item` behaves at certain device widths &
-	breakpoints, by simply adding helper classes to any `.grid_item` element.
+	You can also change how a `.grid_item` behaves at specified viewport widths &
+	breakpoints, by simply adding helper classes to any element with the 
+	`.grid_item` class.
 
 	Additionally, the `.one_half`, `.three_fourths`, etc helper classes can be
 	used outside of the grid context, if you simply want an element to have a
 	width that is a specific percentage of its parent.
 
 	If you want smaller or larger gutters, simply change the values for the
-	`margin-left` property on `.grid` and the `padding-left` property on
-	`[class*="grid-item"]` to be mirror opposites. Use a `rem` value
-	derived from the modular scale set on the typography above to keep things
-	harmonious.
+	`margin-left` property on the `.grid` class and the `padding-left` property
+	on the `[class*="grid-item"]` class to be mirror opposites. Use a `rem` 
+	value derived from the modular scale for the typography above to keep 
+	everything “harmonious.”
 
 	Usage
 	--------------------
@@ -561,6 +560,10 @@ textarea {
 
 	Example
 	--------------------
+	The below example reads as: “a grid with four 100% width items, which 
+	become 50% width items on lap devices, and 25% width items on desktop 
+	devices.”
+
 	<div class="grid">
 		<div class="grid-item lap-one_half desk-one_fourth"></div>
 		<div class="grid-item lap-one_half desk-one_fourth"></div>
@@ -903,13 +906,13 @@ textarea {
 
 	Description
 	--------------------
-	Included below are some common `@media` queries (or "breakpoints"), but do
-	not feel bound to these numbers. It's encouraged that you adapt the
+	Included below are some common `@media` queries (or “breakpoints”), but do
+	not feel bound to these numbers. It’s encouraged that you adapt the
 	layout based on the content within your project. If the layout starts
 	to break at a certain width, height, orientation, or screen resolution,
 	you may want to address it with a `@media` query.
 
-	This framework takes the "mobile first" approach, which means that the
+	This framework takes the “mobile first” approach, which means that the
 	styling for mobile layout is addressed above, and then the layout is
 	progressively enhanced using the `@media` queries below.
 
@@ -929,7 +932,7 @@ textarea {
 @media only screen and (orientation: landscape) {}
 @media only screen and (orientation: portrait) {}
 
-/* Style adjustments for high resolution devices */
+/* Style adjustments for high resolution devices go here */
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
        only screen and (min-resolution: 144dpi) {}
 
@@ -959,7 +962,7 @@ textarea {
 		content: " (" attr(title) ")";
 	}
 
-	/* Don't show links for images, or javascript/internal links */
+	/* Don’t show links for images, or javascript/internal links */
 	.ir a:after,
 	a[href^="javascript:"]:after,
 	a[href^="#"]:after {
