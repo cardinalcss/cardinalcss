@@ -25,10 +25,11 @@ What follows is a detailed breakdown of the framework.
 5. [Grids & widths](#grids)
 6. [Modules](#modules)
 7. [Prompts](#prompts)
-8. [App](#app)
-9. [Helpers](#helpers)
-10. [Queries](#queries)
-11. [Print](#print)
+8. [Helpers](#helpers)
+9. [@media queries](#queries)
+10. [Print](#print)
+11. [Javascript](#js)
+12. [Browser support](#browsers)
 
 ## <a name="overview"></a>Overview
 
@@ -192,10 +193,6 @@ Cardinal also includes some reusable classes for common layout modules like page
 
 By default, Cardinal includes two small prompts: one that shows up for users who have Javascript disabled, and one for the IE6 Chrome Frame. These are hidden by default unless the user has Javascript disabled, or is using IE6 and below.
 
-## <a name="app"></a> App
-
-This is where your code goes!
-
 ## <a name="helpers"></a> Helpers
 
 A bunch of helpers from the fantastic [HTML5 Boilerplate](http://cbrac.co/Zt9YqM) are used here, along with some custom helpers for quick text alignment, margins, paddings, and floats.
@@ -225,6 +222,18 @@ A bunch of helpers from the fantastic [HTML5 Boilerplate](http://cbrac.co/Zt9YqM
 	.text_center  { text-align: center;  }
 	.text_justify { text-align: justify; }
 
+## <a name="queries"></a> @media queries
+
+Included are some common `@media` query viewport widths, resolutions, and breakpoints where you can tweak your project’s styles for different devices.
+
 ## <a name="print"></a> Print
 
 This was also copy and pasted directly from [HTML5 Boilerplate](http://cbrac.co/Zt9YqM), and inlined to avoid an extra HTTP request.
+
+## <a name="js"></a> Javascript
+
+[A small JS polyfill](https://github.com/chuckcarpenter/REM-unit-polyfill) is included, which detects browser support for `rem` units and recalculates them into pixels if necessary, adding them to the `<head>` of the document.
+
+## <a name="browsers"></a> Browser support
+
+Cardinal supports most modern browsers (Chrome, Mozilla Firefox, Safari, Opera, IE8+). For a quick look at device support for the `rem` unit, [visit here](http://caniuse.com/#search=rem).
