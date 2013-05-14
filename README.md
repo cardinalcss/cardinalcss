@@ -58,7 +58,7 @@ Instead of a traditional CSS reset, Cardinal includes a minified version of [nor
 
 ## <a name="base"></a> Base
 
-Cardinal declares some useful default styles to the `<html>` and `<body>` elements to get them to play nice across browsers. It also adds basic styles to text selections, and applies `box-sizing: border-box;` to everything to fix the [flawed CSS box model](http://paulirish.com/2012/box-sizing-border-box-ftw/).
+Cardinal declares some useful default styles to the `<html>` and `<body>` elements to get them to play nice across browsers. It also adds basic styles to text selections, and applies `box-sizing: border-box;` to [everything](http://gifboop.com/border-box.jpg) to fix the [flawed CSS box model](http://paulirish.com/2012/box-sizing-border-box-ftw/).
 
 ## <a name="typography"></a> Typography
 
