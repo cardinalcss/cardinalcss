@@ -18,10 +18,10 @@
 
 /*  =======================================================================  *\
 	Reset ($reset)
-	Normalize.css v2.1.1 | MIT License | http://cbrac.co/11gtlnj
+	Normalize.css v2.1.2 | MIT License | http://cbrac.co/11gtlnj
 \*  =======================================================================  */
 
-article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,video{display:inline-block}audio:not([controls]){display:none;height:0}[hidden]{display:none}html{background:#fff;color:#000;font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}a:focus{outline:thin dotted}a:active,a:hover{outline:0}h1{font-size:2em;margin:.67em 0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}mark{background:#ff0;color:#000}code,kbd,pre,samp{font-family:monospace,serif;font-size:1em}pre{white-space:pre-wrap}q{quotes:"\201C" "\201D" "\2018" "\2019"}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:0}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}button,input{line-height:normal}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,video{display:inline-block}audio:not([controls]){display:none;height:0}[hidden]{display:none}html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}a:focus{outline:thin dotted}a:active,a:hover{outline:0}h1{font-size:2em;margin:.67em 0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}mark{background:#ff0;color:#000}code,kbd,pre,samp{font-family:monospace,serif;font-size:1em}pre{white-space:pre-wrap}q{quotes:"\201C" "\201D" "\2018" "\2019"}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:0}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}button,input{line-height:normal}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}
 
 /*  =======================================================================  *\
 	Base ($base)
@@ -117,7 +117,7 @@ img::-moz-selection {
 \*  =======================================================================  */
 
 html        { font-size: 75%;  } /* 12px */
-html.lt-ie9 { font-size: 100%; } /* ≤ IE8 defaults to 16px root */
+html.lt_ie9 { font-size: 100%; } /* ≤ IE8 defaults to 16px root */
 
 @media only screen and (min-width: 320px) { html { font-size: 81.25%; } }
 @media only screen and (min-width: 480px) { html { font-size: 87.5%;  } }
@@ -569,83 +569,77 @@ textarea {
 	</div>
 \*  =======================================================================  */
 
-/* Grid container */
+/**
+ * Grid container
+ * 1. Default gutter width, change if desired
+ * 2. Remove `list-style` in case `.grid` is on a <ul> element
+ * 3. Hack to remove `inline-block` whitespace - http://cbrac.co/16xcjcl
+ */
+
 .grid {
 	margin: 0;
-	margin-left: -2rem;
+	margin-left: -2rem; /* 1 */
 	padding: 0;
-	list-style: none;
+	list-style: none;   /* 2 */
+	font-size: 0;       /* 3 */
 }
 
-.grid:after {
-	display: table;
-	clear: both;
-	content: "";
-}
+/* Gutters */
+.grid_gutter_half                        { margin-left: -1rem; }
+.grid_gutter_half [class*="grid-item"]   { padding-left: 1rem; }
+.grid_gutter_double                      { margin-left: -4rem; }
+.grid_gutter_double [class*="grid-item"] { padding-left: 4rem; }
 
-/* Grid item */
+/**
+ * Grid item
+ * 1. Default gutter width, change if desired
+ * 2. Ensures elements within `.grid-item` start at the top
+ * 3. Reset `font-size` back to normal
+ */
+
 [class*="grid-item"] {
 	display: inline-block;
 	*display: inline;
 	*zoom: 1;
-	float: left;
 	margin-bottom: 1rem;
-	padding-left: 2rem;
+	padding-left: 2rem;  /* 1 */
+	vertical-align: top; /* 2 */
+	font-size: 1rem;     /* 3 */
 }
 
-/* Remove the bottom margin on the last element inside of every `.grid_item` */
+/* Remove the bottom margin on the last element inside each `.grid_item` */
 [class*="grid-item"] > *:last-child {
 	margin-bottom: 0;
 }
 
-/* Whole */
+/* Widths */
 .grid-item,
-.one_whole      { width: 100%;    }
-
-/* Halves */
-.one_half       { width: 50%;     }
-
-/* Thirds */
-.one_third      { width: 33.333%; }
-.two_thirds     { width: 66.666%; }
-
-/* Fourths */
-.one_fourth     { width: 25%;     }
-.two_fourths    { width: 50%;     }
-.three_fourths  { width: 75%;     }
-
-/* Fifths */
-.one_fifth      { width: 20%;     }
-.two_fifths     { width: 40%;     }
-.three_fifths   { width: 60%;     }
-.four_fifths    { width: 80%;     }
-
-/* Sixths */
-.one_sixth      { width: 16.666%;  }
-.two_sixths     { width: 33.333%;  }
-.three_sixths   { width: 50%;      }
-.four_sixths    { width: 66.666%;  }
-.five_sixths    { width: 83.333%;  }
-
-/* Gutters */
-.grid_gutter_double {
-	margin-left: -4rem;
-}
-
-.grid_gutter_double [class*="grid-item"] {
-	padding-left: 4rem;
-}
-
-.grid_gutter_half {
-	margin-left: -1rem;
-}
-
-.grid_gutter_half [class*="grid-item"] {
-	padding-left: 1rem;
-}
+.one_whole     { width: 100%;     }
+.one_half      { width: 50%;      }
+.one_third     { width: 33.333%;  }
+.two_thirds    { width: 66.666%;  }
+.one_fourth    { width: 25%;      }
+.two_fourths   { width: 50%;      }
+.three_fourths { width: 75%;      }
+.one_fifth     { width: 20%;      }
+.two_fifths    { width: 40%;      }
+.three_fifths  { width: 60%;      }
+.four_fifths   { width: 80%;      }
+.one_sixth     { width: 16.666%;  }
+.two_sixths    { width: 33.333%;  }
+.three_sixths  { width: 50%;      }
+.four_sixths   { width: 66.666%;  }
+.five_sixths   { width: 83.333%;  }
 
 /* Default grid breakpoint for lap devices (eg. tablets) */
 @media only screen and (min-width: 640px) {
+	/* Gutters */
+	.lap-grid_gutter_half                        { margin-left: -1rem; }
+	.lap-grid_gutter_half [class*="grid-item"]   { padding-left: 1rem; }
+	.lap-grid_gutter_double                      { margin-left: -4rem; }
+	.lap-grid_gutter_double [class*="grid-item"] { padding-left: 4rem; }
+
+	/* Widths */
 	.lap-one_whole      { width: 100%;    }
 	.lap-one_half       { width: 50%;     }
 	.lap-one_third      { width: 33.333%; }
@@ -665,6 +659,13 @@ textarea {
 
 /* Default grid breakpoint for desktop devices */
 @media only screen and (min-width: 960px) {
+	/* Gutters */
+	.desk-grid_gutter_half                        { margin-left: -1rem; }
+	.desk-grid_gutter_half [class*="grid-item"]   { padding-left: 1rem; }
+	.desk-grid_gutter_double                      { margin-left: -4rem; }
+	.desk-grid_gutter_double [class*="grid-item"] { padding-left: 4rem; }
+
+	/* Widths */
 	.desk-one_whole      { width: 100%;    }
 	.desk-one_half       { width: 50%;     }
 	.desk-one_third      { width: 33.333%; }
@@ -781,17 +782,17 @@ textarea {
 
 /* Margins */
 .margin_top    { margin-top: 1rem !important;    }
-.margin_left   { margin-left: 1rem !important;   }
-.margin_bottom { margin-bottom: 1rem !important; }
 .margin_right  { margin-right: 1rem !important;  }
-.margin_none   { margin: 0 !important;               }
+.margin_bottom { margin-bottom: 1rem !important; }
+.margin_left   { margin-left: 1rem !important;   }
+.margin_none   { margin: 0 !important;           }
 
 /* Paddings */
 .padding_top    { padding-top: 1rem !important;    }
-.padding_left   { padding-left: 1rem !important;   }
-.padding_bottom { padding-bottom: 1rem !important; }
 .padding_right  { padding-right: 1rem !important;  }
-.padding_none   { padding: 0 !important;               }
+.padding_bottom { padding-bottom: 1rem !important; }
+.padding_left   { padding-left: 1rem !important;   }
+.padding_none   { padding: 0 !important;           }
 
 /* Text alignment */
 .text_left    { text-align: left;    }
