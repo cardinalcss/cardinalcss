@@ -333,7 +333,7 @@ h4 small,
 h5 small,
 h6 small {
 	color: #686868;
-	line-height: 0;
+	line-height: inherit;
 }
 
 .subheading {
