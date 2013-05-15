@@ -373,7 +373,7 @@ kbd {
 		inset 0 0 0 1px #fff;
 	white-space: nowrap;
 	font-size: 10px;
-	font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+	font-family: Monaco, "Lucida Sans Typewriter", Consolas, "Courier New", monospace;
 }
 
 /* Increase `font-size` and `padding` for <kbd> on larger devices */
