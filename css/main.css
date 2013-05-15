@@ -202,7 +202,7 @@ pre,
 summary,
 ul {
 	margin: 0 0 1rem;
-}​
+}
 
 code,
 pre {
@@ -547,7 +547,7 @@ textarea {
 
 	If you want smaller or larger gutters, simply change the values for the
 	`margin-left` property on the `.grid` class and the `padding-left` property
-	on the `[class*="grid-item"]` class to be mirror opposites. Use a `rem`
+	on the `.grid-item` class to be mirror opposites. Use a `rem`
 	value derived from the modular scale for the typography above to keep
 	everything “harmonious.”
 
@@ -590,10 +590,10 @@ textarea {
 }
 
 /* Gutters */
-.grid_gutter_half                        { margin-left: -1rem; }
-.grid_gutter_half [class*="grid-item"]   { padding-left: 1rem; }
-.grid_gutter_double                      { margin-left: -4rem; }
-.grid_gutter_double [class*="grid-item"] { padding-left: 4rem; }
+.grid_gutter_half              { margin-left: -1rem; }
+.grid_gutter_half .grid-item   { padding-left: 1rem; }
+.grid_gutter_double            { margin-left: -4rem; }
+.grid_gutter_double .grid-item { padding-left: 4rem; }
 
 /**
  * Grid item
@@ -602,7 +602,7 @@ textarea {
  * 3. Reset `font-size` back to normal
  */
 
-[class*="grid-item"] {
+.grid-item {
 	display: inline-block;
 	*display: inline;
 	*zoom: 1;
@@ -613,7 +613,7 @@ textarea {
 }
 
 /* Remove the bottom margin on the last element inside each `.grid_item` */
-[class*="grid-item"] > *:last-child {
+.grid-item > *:last-child {
 	margin-bottom: 0;
 }
 
@@ -639,10 +639,10 @@ textarea {
 /* Default grid breakpoint for lap devices (eg. tablets) */
 @media only screen and (min-width: 640px) {
 	/* Gutters */
-	.lap-grid_gutter_half                        { margin-left: -1rem; }
-	.lap-grid_gutter_half [class*="grid-item"]   { padding-left: 1rem; }
-	.lap-grid_gutter_double                      { margin-left: -4rem; }
-	.lap-grid_gutter_double [class*="grid-item"] { padding-left: 4rem; }
+	.lap-grid_gutter_half              { margin-left: -1rem; }
+	.lap-grid_gutter_half .grid-item   { padding-left: 1rem; }
+	.lap-grid_gutter_double            { margin-left: -4rem; }
+	.lap-grid_gutter_double .grid-item { padding-left: 4rem; }
 
 	/* Widths */
 	.lap-one_whole      { width: 100%;    }
@@ -665,10 +665,10 @@ textarea {
 /* Default grid breakpoint for desktop devices */
 @media only screen and (min-width: 960px) {
 	/* Gutters */
-	.desk-grid_gutter_half                        { margin-left: -1rem; }
-	.desk-grid_gutter_half [class*="grid-item"]   { padding-left: 1rem; }
-	.desk-grid_gutter_double                      { margin-left: -4rem; }
-	.desk-grid_gutter_double [class*="grid-item"] { padding-left: 4rem; }
+	.desk-grid_gutter_half              { margin-left: -1rem; }
+	.desk-grid_gutter_half .grid-item   { padding-left: 1rem; }
+	.desk-grid_gutter_double            { margin-left: -4rem; }
+	.desk-grid_gutter_double .grid-item { padding-left: 4rem; }
 
 	/* Widths */
 	.desk-one_whole      { width: 100%;    }
