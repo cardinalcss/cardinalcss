@@ -108,9 +108,9 @@ img::-moz-selection {
 	a desktop device of some sort.
 
 	Then, using `@media` queries, Cardinal increases the root font size at
-	several common viewport widths, called breakpoints. You can tweak these `@media`
-	queries and percentage values to suit your project. This is how the type
-	and layout scale globally.
+	several common viewport widths, called breakpoints. You can tweak these
+	`@media` queries and percentage values to suit your project. This is how
+	the type and layout scale globally.
 
 	NOTE: IE9 & IE10 do not recognize `rem` units when used with the `font`
 	shorthand property.
@@ -259,12 +259,13 @@ h3,
 h4,
 h5,
 h6,
-.text_huge,
-.text_xxl,
-.text_xl,
-.text_large,
-.text_medium,
-.text_normal {
+h1.text_huge, h2.text_huge, h3.text_huge, h4.text_huge, h5.text_huge, h6.text_huge,
+h1.text_xxl, h2.text_xxl, h3.text_xxl, h4.text_xxl, h5.text_xxl, h6.text_xxl,
+h1.text_xl, h2.text_xl, h3.text_xl, h4.text_xl, h5.text_xl, h6.text_xl,
+h1.text_large, h2.text_large, h3.text_large, h4.text_large, h5.text_large, h6.text_large,
+h1.text_medium, h2.text_medium, h3.text_medium, h4.text_medium, h5.text_medium, h6.text_medium,
+h1.text_normal, h2.text_normal, h3.text_normal, h4.text_normal, h5.text_normal, h6.text_normal,
+h1.text_small, h2.text_small, h3.text_small, h4.text_small, h5.text_small, h6.text_small {
 	margin: 0 0 0.75rem;
 	color: #222;
 	font-weight: 700;
@@ -278,7 +279,8 @@ h6,
 .text_xl,
 .text_large,
 .text_medium,
-.text_normal {
+.text_normal,
+.text_small {
 	color: inherit;
 	font-weight: inherit;
 }
@@ -535,8 +537,8 @@ textarea {
 	units. Due to the change in the root font size above, the fixed gutters
 	grow and shrink proportionally, depending on the width of the viewport.
 
-	You can also change how a `.grid_item` behaves at specified viewport widths &
-	breakpoints, by simply adding helper classes to any element with the 
+	You can also change how a `.grid_item` behaves at specified viewport widths
+	& breakpoints, by simply adding helper classes to any element with the
 	`.grid_item` class.
 
 	Additionally, the `.one_half`, `.three_fourths`, etc helper classes can be
@@ -545,8 +547,8 @@ textarea {
 
 	If you want smaller or larger gutters, simply change the values for the
 	`margin-left` property on the `.grid` class and the `padding-left` property
-	on the `[class*="grid-item"]` class to be mirror opposites. Use a `rem` 
-	value derived from the modular scale for the typography above to keep 
+	on the `[class*="grid-item"]` class to be mirror opposites. Use a `rem`
+	value derived from the modular scale for the typography above to keep
 	everything “harmonious.”
 
 	Usage
@@ -560,8 +562,8 @@ textarea {
 
 	Example
 	--------------------
-	The below example reads as: “a grid with four 100% width items, which 
-	become 50% width items on lap devices, and 25% width items on desktop 
+	The below example reads as: “a grid with four 100% width items, which
+	become 50% width items on lap devices, and 25% width items on desktop
 	devices.”
 
 	<div class="grid">

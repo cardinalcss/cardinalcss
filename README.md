@@ -82,7 +82,7 @@ A fallback for IE8 is included immediately afterwards, which instead sets the ro
 
 	html.lt_ie9 { font-size: 100%; }
 
-Then, using media queries, Cardinal increases the root font size percentage valueviewport at a few common viewport widths. **You can tweak these media queries and percentage values to suit your project.** This is how the type and layout scale globally.
+Then, using media queries, Cardinal increases the root font size percentage value at a few common viewport widths. **You can tweak these media queries and percentage values to suit your project.** This is how the type and layout scale globally.
 
 	@media only screen and (min-width: 320px) { html { font-size: 81.25%; } } /* 13px */
 	@media only screen and (min-width: 480px) { html { font-size: 87.5%;  } } /* 14px */
@@ -102,7 +102,7 @@ In other words, `1rem` = the percentage on the `<html>` element, which is why al
 
 ### Bye bye, baseline grid
 
-**Instead of trying to maintain a baseline grid**, Cardinal uses a unit-less value for the `line-height` property on the `<body>` element ,and other common typographical elements. A unit-less value is used on other common typographical elements in Cardinal too, like headings. This means that the line height is calculated as a multiple of the root font size, so it scales proportionally too when the root font size changes at different viewport widths.
+**Instead of trying to maintain a baseline grid**, Cardinal uses a unit-less value for the `line-height` property on the `<body>` element, and other common typographical elements. A unit-less value is used on other common typographical elements in Cardinal too, like headings. This means that the line height is calculated as a multiple of the root font size, so it scales proportionally too when the root font size changes at different viewport widths.
 
 ### Modular scale FTW!
 
@@ -110,7 +110,7 @@ By default, Cardinal’s root font size ranges from `12px` to `18px`,  depending
 
 ### Pixel precision
 
-If you need pixel precision for a particular element or property (eg. 1px border width on menu buttons, regardless of viewport width), simply use the `px` unit instead of the `rem` unit and it will remain that value regardless of the root font size.
+If you need pixel precision for a particular element or property (eg. 1px border width on menu buttons), simply use the `px` unit instead of the `rem` unit and it will be affected by the root font size.
 
 ## <a name="non-typography"></a> Non-typography
 
