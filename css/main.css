@@ -552,12 +552,12 @@ textarea {
 
 	Usage
 	--------------------
-	* .grid - makes element a grid wrapper.
-	* .grid-item - makes element a grid item.
-	* .one_half, two_thirds, four_fifths, etc - makes element a specific
+	* .grid - element becomes a grid wrapper.
+	* .grid-item - element becomes a grid item.
+	* .one_half, two_thirds, four_fifths, etc - element becomes a specific
 	width of its parent.
-	* .lap-* - grid breakpoint for devices you hold in your lap.
-	* .desk-* - grid breakpoint for desktop devices.
+	* .lap-* - element’s width changes on devices you hold in your lap.
+	* .desk-* - element’s width changes on desktop devices.
 
 	Example
 	--------------------

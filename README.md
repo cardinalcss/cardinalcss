@@ -137,11 +137,11 @@ The classes for default item widths are not grid-specific, **on purpose**, so th
 
 ### Usage
 
-- `.grid` - makes element a grid wrapper.
-- `.grid-item` - makes element a grid item.
-- `.one_half`, `.two_thirds`, etc - makes element a specific width of its parent.
-- `.lap-*` - grid breakpoint for devices you hold in your lap.
-- `.desk-*` - grid breakpoint for desktop devices.
+- `.grid` - element becomes a grid wrapper.
+- `.grid-item` - element becomes a grid item.
+- `.one_half`, `.two_thirds`, etc - element becomes a specific width of its parent.
+- `.lap-*` - element’s width changes on devices you hold in your lap.
+- `.desk-*` - element’s width changes on desktop devices.
 
 The following example can be described as: “a grid with four 100% width items, which become 50% width items on lap devices, and 25% width items on desktop devices.”
 
