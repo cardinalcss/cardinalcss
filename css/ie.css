@@ -16,13 +16,13 @@ body {
 	line-height: 1.777;
 }
 
-code {
-	padding: 0.1rem 0.3rem;
+code,
+kbd {
+	padding: 2px 5px;
 }
 
 kbd {
-	padding: 0.1rem 0.3rem;
-	font-size: 0.75rem;
+	font-size: 13px;
 }
 
 /*  =======================================================================  *\
