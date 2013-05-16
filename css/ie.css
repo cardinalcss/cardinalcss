@@ -1,0 +1,72 @@
+/**
+ * IE conditional stylesheet
+ * Needed for IE8 because @media queries are not supported
+ */
+
+/*  =======================================================================  *\
+	Typography ($typography)
+\*  =======================================================================  */
+
+/* ≤ IE8 defaults to 16px root */
+html.lt_ie9 {
+	font-size: 100%;
+}
+
+body {
+	line-height: 1.777;
+}
+
+code {
+	padding: 0.1rem 0.3rem;
+}
+
+kbd {
+	padding: 0.1rem 0.3rem;
+	font-size: 0.75rem;
+}
+
+/*  =======================================================================  *\
+	Grids & widths ($grids)
+\*  =======================================================================  */
+
+/* Gutters */
+
+/* Widths */
+.lap-one_whole      { width: 100%;    }
+.lap-one_half       { width: 50%;     }
+.lap-one_third      { width: 33.333%; }
+.lap-two_thirds     { width: 66.666%; }
+.lap-one_fourth     { width: 25%;     }
+.lap-three_fourths  { width: 75%;     }
+.lap-one_fifth      { width: 20%;     }
+.lap-two_fifths     { width: 40%;     }
+.lap-three_fifths   { width: 60%;     }
+.lap-four_fifths    { width: 80%;     }
+.lap-one_sixth      { width: 16.666%; }
+.lap-two_sixths     { width: 33.333%; }
+.lap-three_sixths   { width: 50%;     }
+.lap-four_sixths    { width: 66.666%; }
+.lap-five_sixths    { width: 83.333%; }
+.desk-one_whole     { width: 100%;    }
+.desk-one_half      { width: 50%;     }
+.desk-one_third     { width: 33.333%; }
+.desk-two_thirds    { width: 66.666%; }
+.desk-one_fourth    { width: 25%;     }
+.desk-three_fourths { width: 75%;     }
+.desk-one_fifth     { width: 20%;     }
+.desk-two_fifths    { width: 40%;     }
+.desk-three_fifths  { width: 60%;     }
+.desk-four_fifths   { width: 80%;     }
+.desk-one_sixth     { width: 16.666%; }
+.desk-two_sixths    { width: 33.333%; }
+.desk-three_sixths  { width: 50%;     }
+.desk-four_sixths   { width: 66.666%; }
+.desk-five_sixths   { width: 83.333%; }
+
+/*  =======================================================================  *\
+	Modules ($modules)
+\*  =======================================================================  */
+
+.lt_ie9 .wrapper {
+	width: 960px;
+}

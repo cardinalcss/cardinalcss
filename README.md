@@ -78,7 +78,7 @@ The root font size is first set as 75% (or 12px), which feels comfortable on sma
 
 	html { font-size: 75%; }
 
-A fallback for IE8 is included immediately afterwards, which instead sets the root font-size to 100% (or 16px), since IE users will likely be using a desktop device of some sort.
+A fallback for IE8 is included in `ie.css`, which instead sets the root font-size to 100% (or 16px), since IE users will likely be using a desktop device of some sort.
 
 	html.lt_ie9 { font-size: 100%; }
 

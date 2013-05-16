@@ -103,10 +103,6 @@ img::-moz-selection {
 	on small feature phones (mobile devices with a viewport width less than
 	320px).
 
-	A fallback for IE8 is included immediately afterwards, which instead sets
-	the root font size to 100%, or 16px, since IE users will likely be using
-	a desktop device of some sort.
-
 	Then, using `@media` queries, Cardinal increases the root font size at
 	several common viewport widths, called breakpoints. You can tweak these
 	`@media` queries and percentage values to suit your project. This is how
@@ -116,9 +112,7 @@ img::-moz-selection {
 	shorthand property.
 \*  =======================================================================  */
 
-html        { font-size: 75%;  } /* 12px */
-html.lt_ie9 { font-size: 100%; } /* ≤ IE8 defaults to 16px root */
-
+html { font-size: 75%;  } /* 12px */
 @media only screen and (min-width: 320px) { html { font-size: 81.25%; } }
 @media only screen and (min-width: 480px) { html { font-size: 87.5%;  } }
 @media only screen and (min-width: 640px) { html { font-size: 100%;   } }
@@ -459,8 +453,6 @@ pre code {
 
 small {
 	display: inline-block;
-	*display: inline;
-	*zoom: 1;
 	font-size: 75%;
 	line-height: 1.333;
 }
@@ -608,8 +600,6 @@ textarea {
 
 .grid-item {
 	display: inline-block;
-	*display: inline;
-	*zoom: 1;
 	margin-bottom: 1rem;
 	padding-left: 2rem;  /* 1 */
 	vertical-align: top; /* 2 */
@@ -675,21 +665,21 @@ textarea {
 	.desk-grid_gutter_double .grid-item { padding-left: 4rem; }
 
 	/* Widths */
-	.desk-one_whole      { width: 100%;    }
-	.desk-one_half       { width: 50%;     }
-	.desk-one_third      { width: 33.333%; }
-	.desk-two_thirds     { width: 66.666%; }
-	.desk-one_fourth     { width: 25%;     }
-	.desk-three_fourths  { width: 75%;     }
-	.desk-one_fifth      { width: 20%;     }
-	.desk-two_fifths     { width: 40%;     }
-	.desk-three_fifths   { width: 60%;     }
-	.desk-four_fifths    { width: 80%;     }
-	.desk-one_sixth      { width: 16.666%; }
-	.desk-two_sixths     { width: 33.333%; }
-	.desk-three_sixths   { width: 50%;     }
-	.desk-four_sixths    { width: 66.666%; }
-	.desk-five_sixths    { width: 83.333%; }
+	.desk-one_whole     { width: 100%;    }
+	.desk-one_half      { width: 50%;     }
+	.desk-one_third     { width: 33.333%; }
+	.desk-two_thirds    { width: 66.666%; }
+	.desk-one_fourth    { width: 25%;     }
+	.desk-three_fourths { width: 75%;     }
+	.desk-one_fifth     { width: 20%;     }
+	.desk-two_fifths    { width: 40%;     }
+	.desk-three_fifths  { width: 60%;     }
+	.desk-four_fifths   { width: 80%;     }
+	.desk-one_sixth     { width: 16.666%; }
+	.desk-two_sixths    { width: 33.333%; }
+	.desk-three_sixths  { width: 50%;     }
+	.desk-four_sixths   { width: 66.666%; }
+	.desk-five_sixths   { width: 83.333%; }
 }
 
 /*  =======================================================================  *\
