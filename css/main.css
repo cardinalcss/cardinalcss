@@ -415,7 +415,7 @@ p {
 pre {
 	position: relative;
 	overflow: auto;
-	padding: 0;
+	padding: 1rem;
 	-webkit-border-radius: 5px;
 	-moz-border-radius:    5px;
 	border-radius:         5px;
@@ -442,7 +442,7 @@ pre code {
 	display: block;
 	overflow: auto;
 	margin: 0;
-	padding: 1rem;
+	padding: 0;
 	height: 100%;
 	border: none;
 	-webkit-border-radius: 0;
