@@ -335,7 +335,12 @@ h6 small {
 	line-height: inherit;
 }
 
-.subheading {
+h1.subheading,
+h2.subheading,
+h3.subheading,
+h4.subheading,
+h5.subheading,
+h6.subheading {
 	color: #686868;
 	font-weight: 300;
 }
