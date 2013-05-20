@@ -99,9 +99,8 @@ img::-moz-selection {
 
 	How it works
 	--------------------
-	The root font size is first set as 75%, or 12px, which feels comfortable
-	on small feature phones (mobile devices with a viewport width less than
-	320px).
+	The root font size is first set to a value that feels comfortable on small 
+	feature phones (mobile devices with a viewport width less than 320px).
 
 	Then, using `@media` queries, Cardinal increases the root font size at
 	several common viewport widths, called breakpoints. You can tweak these
@@ -112,7 +111,7 @@ img::-moz-selection {
 	shorthand property.
 \*  =======================================================================  */
 
-html { font-size: 75%;  } /* 12px */
+html { font-size: 75%; } /* 12px */
 @media only screen and (min-width: 320px) { html { font-size: 81.25%; } }
 @media only screen and (min-width: 480px) { html { font-size: 87.5%;  } }
 @media only screen and (min-width: 640px) { html { font-size: 100%;   } }

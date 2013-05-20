@@ -74,7 +74,7 @@ Following a “mobile-first” approach, Cardinal starts with small devices and 
 
 ### Scalability with REMs and unit-less line heights
 
-The root font size is first set as 75% (or 12px), which feels comfortable on small feature phones (mobile devices with a viewport width < 320px).
+The root font size is first set to a value that feels comfortable on small feature phones (mobile devices with a viewport width < 320px).
 
 	html { font-size: 75%; }
 
