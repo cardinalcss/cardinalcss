@@ -30,6 +30,18 @@ kbd {
 \*  =======================================================================  */
 
 /* Gutters */
+.lap-grid_gutter_half,
+.desk-grid_gutter_half              { margin-left: -16px; }
+.lap-grid_gutter_half .grid-item,
+.desk-grid_gutter_half .grid-item   { padding-left: 16px; }
+.lap-grid_gutter_whole,
+.desk-grid_gutter_whole             { margin-left: -32px; }
+.lap-grid_gutter_whole .grid-item,
+.desk-grid_gutter_whole .grid-item  { padding-left: 32px; }
+.lap-grid_gutter_double,
+.desk-grid_gutter_double            { margin-left: -64px; }
+.lap-grid_gutter_double .grid-item,
+.desk-grid_gutter_double .grid-item { padding-left: 64px; }
 
 /* Widths */
 .lap-one_whole      { width: 100%;    }

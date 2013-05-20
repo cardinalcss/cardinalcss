@@ -130,9 +130,6 @@ body {
 	line-height: 1.5;   /* 2 */
 }
 
-/* Increased `line-height` for larger devices */
-@media only screen and (min-width: 480px) { body { line-height: 1.777; } }
-
 /* Define a mobile tap highlight color (iOS 1.1.1+) */
 a:link {
 	-webkit-tap-highlight-color: #b3d4fc;
@@ -635,6 +632,8 @@ textarea {
 	/* Gutters */
 	.lap-grid_gutter_half              { margin-left: -1rem; }
 	.lap-grid_gutter_half .grid-item   { padding-left: 1rem; }
+	.lap-grid_gutter_whole             { margin-left: -2rem; }
+	.lap-grid_gutter_whole .grid-item  { padding-left: 2rem; }
 	.lap-grid_gutter_double            { margin-left: -4rem; }
 	.lap-grid_gutter_double .grid-item { padding-left: 4rem; }
 
@@ -661,6 +660,8 @@ textarea {
 	/* Gutters */
 	.desk-grid_gutter_half              { margin-left: -1rem; }
 	.desk-grid_gutter_half .grid-item   { padding-left: 1rem; }
+	.desk-grid_gutter_whole             { margin-left: -2rem; }
+	.desk-grid_gutter_whole .grid-item  { padding-left: 2rem; }
 	.desk-grid_gutter_double            { margin-left: -4rem; }
 	.desk-grid_gutter_double .grid-item { padding-left: 4rem; }
 
