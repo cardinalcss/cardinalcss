@@ -54,7 +54,7 @@ Use hyphens to separate the name of the block from the name of the element, and 
 
 ## <a name="reset"></a> Reset
 
-Instead of a traditional CSS reset, Cardinal includes a minified version of [normalize.css](http://cbrac.co/11gtlnj) by [Nicolas Gallagher](http://cbrac.co/10l8rJQ) to help render HTML elements more consistently across modern browsers, as well as Internet Explorer 8 and above.
+Instead of a traditional CSS reset, Cardinal includes a minified version of [normalize.css](http://cbrac.co/11gtlnj) by [Nicolas Gallagher](http://cbrac.co/10l8rJQ) to help render HTML elements more consistently across modern browsers, as well as IE9 and above.
 
 ## <a name="base"></a> Base
 
@@ -77,10 +77,6 @@ Following a “mobile-first” approach, Cardinal starts with small devices and 
 The root font size is first set to a value that feels comfortable on small feature phones (mobile devices with a viewport width < 320px).
 
 	html { font-size: 75%; }
-
-A fallback for IE8 is included in `ie.css`, which instead sets the root font-size to 100% (or 16px), since IE users will likely be using a desktop device of some sort.
-
-	html.lt_ie9 { font-size: 100%; }
 
 Then, using media queries, Cardinal increases the root font size percentage value at a few common viewport widths. **You can tweak these media queries and percentage values to suit your project.** This is how the type and layout scale globally.
 
