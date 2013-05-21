@@ -223,7 +223,7 @@ This was also copy and pasted directly from [HTML5 Boilerplate](http://cbrac.co/
 
 ## <a name="js"></a> Javascript
 
-[A small JS polyfill](https://github.com/chuckcarpenter/REM-unit-polyfill) is included, which detects browser support for `rem` units and recalculates them into pixels if necessary, adding them to the `<head>` of the document.
+Pulled from the [HTML5 Boilerplate](http://cbrac.co/Zt9YqM), the `plugins.js` file includes is a small function to avoid console errors in browsers that lack a console.
 
 ## <a name="browsers"></a> Browser support
 
