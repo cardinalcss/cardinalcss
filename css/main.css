@@ -99,7 +99,7 @@ img::-moz-selection {
 
 	How it works
 	--------------------
-	The root font size is first set to a value that feels comfortable on small 
+	The root font size is first set to a value that feels comfortable on small
 	feature phones (mobile devices with a viewport width less than 320px).
 
 	Then, using `@media` queries, Cardinal increases the root font size at

@@ -156,38 +156,29 @@ The following example can be described as: “a grid with four 100% width items,
 
 Cardinal also includes some reusable classes for common layout modules like page wrappers, content wells, and 100% width containers.
 
-	.strip {
-		margin: 0;
-		margin-bottom: 1rem;
-		padding: 0;
-		background: #efefef;
-		list-style: none;
-	}
+### Strips
 
-	.wrapper {
-		margin: 0 auto;
-		max-width: 1140px;
-		width: 90%;
-	}
+	.strip {}
 
-	.island {
-		padding: 1rem;
-		-webkit-border-radius: 5px;
-		-moz-border-radius:    5px;
-		border-radius:         5px;
-		background: #efefef;
-	}
+A strip is useful when you want a background color, image, or content to span the entire width of the viewport.
 
-	.well {
-		padding: 1rem;
-		-webkit-border-radius: 5px;
-		-moz-border-radius:    5px;
-		border-radius:         5px;
-		background: #efefef;
-		-webkit-box-shadow: inset 0 0 0.317rem hsla(0, 0%, 0%, 0.10);
-		-moz-box-shadow:    inset 0 0 0.317rem hsla(0, 0%, 0%, 0.10);
-		box-shadow:         inset 0 0 0.317rem hsla(0, 0%, 0%, 0.10);
-	}
+### Wrappers
+
+	.wrapper {}
+
+A wrapper provides a `max-width` for the content within it, and centers the content.
+
+### Islands
+
+	.island {}
+
+An island is a content block that you want to appear raised from its surrounding area.
+
+### Wells
+
+	.well {}
+
+A well is a content block that you want to appear sunken from its surrounding area.
 
 ## <a name="prompts"></a> Prompts
 
@@ -236,4 +227,4 @@ This was also copy and pasted directly from [HTML5 Boilerplate](http://cbrac.co/
 
 ## <a name="browsers"></a> Browser support
 
-Cardinal supports most modern browsers (Chrome, Mozilla Firefox, Safari, Opera, IE8+). For a quick look at device support for the `rem` unit, [visit here](http://caniuse.com/#search=rem).
+Cardinal supports most modern browsers (Chrome, Mozilla Firefox, Safari, Opera, IE9+). For a quick look at device support for the `rem` unit, [visit here](http://caniuse.com/#search=rem).
