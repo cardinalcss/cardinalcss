@@ -1,6 +1,6 @@
 # Cardinal
 
-Cardinal is a small, “[mobile first](http://cbrac.co/116bQqk)” CSS framework with some useful default styles, scalable typography, and a simple responsive grid system.
+Cardinal is a small, “[mobile first](http://cbrac.co/116bQqk)” CSS framework with some useful default styles, scalable typography, reusable modules, and a simple responsive grid system.
 
 ## What does that mean?
 
