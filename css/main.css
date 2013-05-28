@@ -3,29 +3,22 @@
 /*  =======================================================================  *\
 	Table of contents
 	(Ctrl/Cmd + F, and search for `$section` to jump to a section)
-	01. Reset...............Normalize.css, minified - http://cbrac.co/11gtlnj
-	02. Base................A few important styles
-	03. Typography..........Basic typography elements
-	04. Non-typography......Important elements that are not type-based
-	05. Grids & widths......A simple, nestable grid system & width classes
-	06. Modules.............Common user interface items
-	07. Prompts.............Chrome frame and JS prompts
-	08. App.................Your styles go here!
-	09. Helpers.............Some useful, global classes
-	10. Queries.............CSS3 media queries for responsive design
-	11. Print...............Inlined, barebones print styles
+	01. Base................Normalize.css (minified), and some important styles
+	02. Typography..........Basic typography elements
+	03. Non-typography......Important elements that are not type-based
+	04. Grids...............A simple, nestable grid system and width classes
+	05. Modules.............Common UI modules (tables, buttons, forms, etc)
+	06. Main................Your styles go here!
+	07. Helpers.............Some useful, global classes
+	08. Print...............Inlined, barebones print styles
 \*  =======================================================================  */
-
-/*  =======================================================================  *\
-	Reset ($reset)
-	Normalize.css v2.1.2 | MIT License | git.io/normalize
-\*  =======================================================================  */
-
-article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,video{display:inline-block}audio:not([controls]){display:none;height:0}[hidden]{display:none}html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}a:focus{outline:thin dotted}a:active,a:hover{outline:0}h1{font-size:2em;margin:.67em 0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}mark{background:#ff0;color:#000}code,kbd,pre,samp{font-family:monospace,serif;font-size:1em}pre{white-space:pre-wrap}q{quotes:"\201C" "\201D" "\2018" "\2019"}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:0}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}button,input{line-height:normal}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}
 
 /*  =======================================================================  *\
 	Base ($base)
 \*  =======================================================================  */
+
+/*! normalize.css v2.1.2 | MIT License | git.io/normalize */
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,video{display:inline-block}audio:not([controls]){display:none;height:0}[hidden]{display:none}html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}a:focus{outline:thin dotted}a:active,a:hover{outline:0}h1{font-size:2em;margin:.67em 0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}mark{background:#ff0;color:#000}code,kbd,pre,samp{font-family:monospace,serif;font-size:1em}pre{white-space:pre-wrap}q{quotes:"\201C" "\201D" "\2018" "\2019"}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:0}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}button,input{line-height:normal}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}
 
 /* `border-box`... ALL THE THINGS - http://cbrac.co/RQrDL5 */
 *,
@@ -517,7 +510,7 @@ textarea {
 }
 
 /*  =======================================================================  *\
-	Grids & widths ($grids)
+	Grids ($grids)
 
 	Description
 	--------------------
@@ -547,16 +540,17 @@ textarea {
 	--------------------
 	* .grid - element becomes a grid wrapper.
 	* .grid-item - element becomes a grid item.
-	* .one_half, two_thirds, four_fifths, etc - element becomes a specific
-	width of its parent.
+	* .one_half,
+	  .two_thirds,
+	  .four_fifths, etc. - element becomes a specific width of its parent.
 	* .lap-* - element’s width changes on devices you hold in your lap.
 	* .desk-* - element’s width changes on desktop devices.
 
 	Example
 	--------------------
 	The below example reads as: “a grid with four 100% width items, which
-	become 50% width items on lap devices, and 25% width items on desktop
-	devices.”
+	become 50% width items on devices that rest in your lap, and 25% width
+	items on larger devices that rest on top of your desk.”
 
 	<div class="grid">
 		<div class="grid-item lap-one_half desk-one_fourth"></div>
@@ -757,7 +751,7 @@ textarea {
 }
 
 /*  =======================================================================  *\
-	App ($app)
+	Main ($main)
 \*  =======================================================================  */
 
 
@@ -896,42 +890,6 @@ textarea {
 .cf {
 	*zoom: 1;
 }
-
-/*  =======================================================================  *\
-	Queries ($queries)
-
-	Description
-	--------------------
-	Included below are some common `@media` queries (or “breakpoints”), but do
-	not feel bound to these numbers. It’s encouraged that you adapt the
-	layout based on the content within your project. If the layout starts
-	to break at a certain width, height, orientation, or screen resolution,
-	you may want to address it with a `@media` query.
-
-	This framework takes the “mobile first” approach, which means that the
-	styling for mobile layout is addressed above, and then the layout is
-	progressively enhanced using the `@media` queries below.
-
-	Further reading
-	--------------------
-	- http://cbrac.co/YUO4B8
-	- http://cbrac.co/11d4gfR
-\*  =======================================================================  */
-
-/* Some common device widths & breakpoints */
-@media only screen and (min-width: 320px) {}
-@media only screen and (min-width: 480px) {}
-@media only screen and (min-width: 640px) {}
-@media only screen and (min-width: 768px) {}
-@media only screen and (min-width: 960px) {}
-@media only screen and (min-width: 1280px) {}
-@media only screen and (min-width: 1440px) {}
-@media only screen and (orientation: landscape) {}
-@media only screen and (orientation: portrait) {}
-
-/* Style adjustments for high resolution devices go here */
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-       only screen and (min-resolution: 144dpi) {}
 
 /*  =======================================================================  *\
 	Print ($print)

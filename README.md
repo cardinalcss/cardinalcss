@@ -1,32 +1,34 @@
 # Cardinal
 
-Cardinal is a barebones, “mobile-first” CSS framework with some useful default styles, scalable typography, and a simple responsive grid system.
+Cardinal is a small, “[mobile first](http://cbrac.co/116bQqk)” CSS framework with some useful default styles, scalable typography, and a simple responsive grid system.
 
-Watch the progress for this project on [Pivotal Tracker](https://www.pivotaltracker.com/s/projects/803361).
+## What does that mean?
+
+“[Mobile first](http://www.lukew.com/resources/mobile_first.asp)”, a phrase coined by Luke Wroblewski [in 2009](http://www.lukew.com/ff/entry.asp?933), is a strategy for web development that focuses on building the mobile experience of a web application first, and [progressively enhancing](http://en.wikipedia.org/wiki/Progressive_enhancement) the application for users with larger devices, better browsers, and greater bandwidth.
+
+The idea is that if you design for the smallest devices (and least capable browsers) first, it forces you to prioritize and determine what are the most important data and actions in your application. The end result is an application that is focused on the key tasks a user is supposed to complete, without the extraneous content and interface fluff that plagues many applications that take a top-down, “PC first” approach.
 
 ## Who should use this?
 
-Designers and developers who want to build well-organized, responsive web applications without *losing their minds* should use Cardinal.
+Designers and developers who want to build well-organized, responsive web applications *without losing their minds* should use Cardinal.
 
-The purpose of this framework is to make it easier to rapidly prototype, build, scale, and maintain CSS for responsive web applications. Cardinal omits the aesthetic design decisions that bog down larger, more complicated CSS frameworks, leaving the design and creativity up to you.
+The purpose of this framework is to make it easier to rapidly prototype, build, scale, and maintain CSS for responsive web applications. Cardinal omits many aesthetic design decisions often bog down larger, more complicated CSS frameworks, leaving the design and creativity up to you.
 
-This way, instead of deleting portions of a framework that you don’t need, you start with a solid foundation that you can customize and build upon.
-
-What follows is a detailed breakdown of the framework.
+Instead of deleting portions of a framework that you don’t need, you start with a solid foundation that you can customize and build upon.
 
 ## Table of contents
 
+What follows is a detailed breakdown of the framework.
+
 1. [Overview](#overview)
-1. [Class-naming conventions](#class-names)
-1. [Reset](#reset)
-2. [Base](#base)
-3. [Typography](#typography)
-4. [Non-typography](#non-typography)
-5. [Grids & widths](#grids)
-6. [Modules](#modules)
-7. [Prompts](#prompts)
-8. [Helpers](#helpers)
-9. [@media queries](#queries)
+2. [Class-naming conventions](#class-names)
+3. [Base](#base)
+4. [Typography](#typography)
+5. [Non-typography](#non-typography)
+6. [Grids](#grids)
+7. [Modules](#modules)
+8. [Main](#main)
+9. [Helpers](#helpers)
 10. [Print](#print)
 11. [Javascript](#js)
 12. [Browser support](#browsers)
@@ -45,6 +47,8 @@ Cardinal uses simple naming conventions for CSS classes that are human readable 
 
 Use hyphens to separate the name of the block from the name of the element, and use underscores to separate words in long names. Here is an example of a simple “post” block:
 
+### Example
+
 	.post         {} /* Block */
 	.post-image   {} /* Element */
 	.post-title   {} /* Element */
@@ -52,13 +56,11 @@ Use hyphens to separate the name of the block from the name of the element, and 
 	.post-excerpt {} /* Element */
 	.post.last    {} /* Modifier */
 
-## <a name="reset"></a> Reset
+## <a name="base"></a> Base
 
 Instead of a traditional CSS reset, Cardinal includes a minified version of [normalize.css](http://cbrac.co/11gtlnj) by [Nicolas Gallagher](http://cbrac.co/10l8rJQ) to help render HTML elements more consistently across modern browsers, as well as IE9 and above.
 
-## <a name="base"></a> Base
-
-Cardinal declares some useful default styles to the `<html>` and `<body>` elements to get them to play nice across browsers. It also adds basic styles to text selections, and applies `box-sizing: border-box;` to [everything](http://gifboop.com/border-box.jpg) to fix the [flawed CSS box model](http://paulirish.com/2012/box-sizing-border-box-ftw/).
+Cardinal also declares some useful default styles on the `<html>` and `<body>` elements to get them to play nice across browsers. It also includes basic styles for text selections, and applies `box-sizing: border-box;` to [everything](http://gifboop.com/border-box.jpg) to fix the [flawed CSS box model](http://paulirish.com/2012/box-sizing-border-box-ftw/).
 
 ## <a name="typography"></a> Typography
 
@@ -70,7 +72,7 @@ In order to achieve this scalability, the `font-size` property on the `<html>` e
 
 With media queries, you can then change the `font-size` property on the `<html>` element to a different percentage value, depending on the width of the device/viewport. This changes the root font size of the entire project, so that any other CSS values using the `rem` unit will scale accordingly.
 
-Following a “mobile-first” approach, Cardinal starts with small devices and cascades up to desktop and larger screen resolutions.
+Following a “[mobile first](http://cbrac.co/116bQqk)” approach, Cardinal starts with small devices and cascades up to desktop and larger screen resolutions.
 
 ### Scalability with REMs and unit-less line heights
 
@@ -78,7 +80,7 @@ The root font size is first set to a value that feels comfortable on small featu
 
 	html { font-size: 75%; }
 
-Then, using media queries, Cardinal increases the root font size percentage value at a few common viewport widths. **You can tweak these media queries and percentage values to suit your project.** This is how the type and layout scale globally.
+Then, using media queries, Cardinal increases the root font size percentage value at a few common viewport widths. **You can tweak these media queries and percentage values to suit your project.** This is how the typography and page layout scale globally.
 
 	@media only screen and (min-width: 320px) { html { font-size: 81.25%; } } /* 13px */
 	@media only screen and (min-width: 480px) { html { font-size: 87.5%;  } } /* 14px */
@@ -98,11 +100,11 @@ In other words, `1rem` = the percentage on the `<html>` element, which is why al
 
 ### Bye bye, baseline grid
 
-**Instead of trying to maintain a baseline grid**, Cardinal uses a unit-less value for the `line-height` property on the `<body>` element, and other common typographical elements. A unit-less value is used on other common typographical elements in Cardinal too, like headings. This means that the line height is calculated as a multiple of the root font size, so it scales proportionally too when the root font size changes at different viewport widths.
+**Instead of trying to maintain a [baseline grid](http://coding.smashingmagazine.com/2012/12/17/css-baseline-the-good-the-bad-and-the-ugly/)**, Cardinal uses a unit-less value for the `line-height` property on the `<body>` element, and other common typographical elements. A unit-less value is used on other common typographical elements in Cardinal too, like headings. This means that the line height is calculated as a multiple of the root font size, so it scales proportionally too when the root font size changes at different viewport widths.
 
 ### Modular scale FTW!
 
-By default, Cardinal’s root font size ranges from `12px` to `18px`,  depending on the viewport width. A [modular scale](http://modularscale.com/scale/?px1=12&px2=18&ra1=1.333&ra2=0) is then calculated with [this tool](http://modularscale.com) based on the minimum and maximum root font size values (in pixels), and uses the “perfect fourth” ratio (1:1.333) found commonly in music to generate values that can be used for sizing type and layout elements across the project. *The values in the second column entitled “Ems” are the values you want to use.*
+By default, Cardinal’s root font size ranges from `12px` to `18px`,  depending on the viewport width. A [modular scale](http://alistapart.com/article/more-meaningful-typography) is then [calculated](http://modularscale.com/scale/?px1=12&px2=18&ra1=1.333&ra2=0) with [this tool](http://modularscale.com) based on the minimum and maximum root font size values (in pixels), and uses the “perfect fourth” ratio (1:1.333) found commonly in music to generate values that can be used for sizing type and layout elements across the project. *The values in the second column entitled “Ems” are the values you want to use.*
 
 ### Pixel precision
 
@@ -123,7 +125,7 @@ There are also some sensible default styles for non-typographical elements inclu
 		resize: vertical;
 	}
 
-## <a name="grids"></a> Grids & widths
+## <a name="grids"></a> Grids
 
 Inspired by the clever ideas of [Matt Berridge](http://cbrac.co/XYCKo9), Cardinal’s grid system uses *fluid* item widths and *fixed* gutters. Grid items can be divided into halves, thirds, fourths, fifths, or sixths. Nesting grid elements is a breeze, and you can change how a grid item behaves with human-readable CSS classes.
 
@@ -138,6 +140,8 @@ The classes for default item widths are not grid-specific, **on purpose**, so th
 - `.one_half`, `.two_thirds`, etc - element becomes a specific width of its parent.
 - `.lap-*` - element’s width changes on devices you hold in your lap.
 - `.desk-*` - element’s width changes on desktop devices.
+
+### Example
 
 The following example can be described as: “a grid with four 100% width items, which become 50% width items on lap devices, and 25% width items on desktop devices.”
 
@@ -168,21 +172,21 @@ A wrapper provides a `max-width` for the content within it, and centers the cont
 
 	.island {}
 
-An island is a content block that you want to appear raised from its surrounding area.
+An island is a content block that you want to appear raised above its surrounding area.
 
 ### Wells
 
 	.well {}
 
-A well is a content block that you want to appear sunken from its surrounding area.
+A well is a content block that you want to appear sunken underneath its surrounding area.
 
-## <a name="prompts"></a> Prompts
+## <a name="main"></a> Main
 
-By default, Cardinal includes two small prompts: one that shows up for users who have Javascript disabled, and one for the IE6 Chrome Frame. These are hidden by default unless the user has Javascript disabled, or is using IE6 and below.
+This is where you put all of your uber-clever styles for your application/website/whatever!
 
 ## <a name="helpers"></a> Helpers
 
-A bunch of helpers from the fantastic [HTML5 Boilerplate](http://cbrac.co/Zt9YqM) are used here, along with some custom helpers for quick text alignment, margins, paddings, and floats.
+A bunch of helpers from the fantastic [HTML5 Boilerplate](http://cbrac.co/Zt9YqM) are included here, along with some custom helpers for floats, margins, paddings, and text alignment.
 
 	/* Floats */
 	.float_left  { float: left;  }
@@ -190,28 +194,24 @@ A bunch of helpers from the fantastic [HTML5 Boilerplate](http://cbrac.co/Zt9YqM
 	.float_none  { float: none;  }
 
 	/* Margins */
-	.margin_top    { margin-top: 1.333rem !important;    }
-	.margin_left   { margin-left: 1.333rem !important;   }
-	.margin_bottom { margin-bottom: 1.333rem !important; }
-	.margin_right  { margin-right: 1.333rem !important;  }
-	.margin_none   { margin: 0 !important;               }
+	.margin_top    { margin-top: 1rem !important;    }
+	.margin_left   { margin-left: 1rem !important;   }
+	.margin_bottom { margin-bottom: 1rem !important; }
+	.margin_right  { margin-right: 1rem !important;  }
+	.margin_none   { margin: 0 !important;           }
 
 	/* Paddings */
-	.padding_top    { padding-top: 1.333rem !important;    }
-	.padding_left   { padding-left: 1.333rem !important;   }
-	.padding_bottom { padding-bottom: 1.333rem !important; }
-	.padding_right  { padding-right: 1.333rem !important;  }
-	.padding_none   { padding: 0 !important;               }
+	.padding_top    { padding-top: 1rem !important;    }
+	.padding_left   { padding-left: 1rem !important;   }
+	.padding_bottom { padding-bottom: 1rem !important; }
+	.padding_right  { padding-right: 1rem !important;  }
+	.padding_none   { padding: 0 !important;           }
 
 	/* Text alignment */
 	.text_left    { text-align: left;    }
 	.text_right   { text-align: right;   }
 	.text_center  { text-align: center;  }
 	.text_justify { text-align: justify; }
-
-## <a name="queries"></a> @media queries
-
-Included are some common `@media` query viewport widths, resolutions, and breakpoints where you can tweak your project’s styles for different devices.
 
 ## <a name="print"></a> Print
 
