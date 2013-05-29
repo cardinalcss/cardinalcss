@@ -23,3 +23,7 @@ The purpose of this framework is to make it easier to rapidly prototype, build, 
 ## Getting started
 
 You can read the full documentation at [http://cbracco.github.io/Cardinal/](http://cbracco.github.io/Cardinal/), which provides detailed explanations, examples, and demostrations.
+
+## Browser support
+
+Cardinal supports many modern browsers (Google Chrome, Mozilla Firefox, Safari, Opera, IE9+).
