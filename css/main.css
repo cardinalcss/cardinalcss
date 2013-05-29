@@ -724,31 +724,6 @@ textarea {
 }
 
 /*  =======================================================================  *\
-	Prompts ($prompts)
-\*  =======================================================================  */
-
-.notice-chrome_frame,
-.no_js .notice-js {
-	display: block;
-	margin: 0;
-	padding: 1rem 0;
-	text-align: center;
-	font-size: 1rem;
-}
-
-.notice-chrome_frame {
-	background: #f5f5f5;
-}
-
-.js .notice-js {
-	display: none;
-}
-
-.no_js .notice-js {
-	background: #ffffcc;
-}
-
-/*  =======================================================================  *\
 	Main ($main)
 \*  =======================================================================  */
 
