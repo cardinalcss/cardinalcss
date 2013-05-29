@@ -72,21 +72,17 @@
 
 						<p class="text_medium">Designers and developers who want to build well-organized, responsive web applications without <em>losing their minds</em>, should use Cardinal.</p>
 
-						<p>The purpose of this framework is to make it easier to rapidly prototype, build, scale, and maintain CSS for responsive web applications. Cardinal omits many aesthetic design decisions often bog down larger, more complicated CSS frameworks, leaving the design and creativity up to you.</p>
+						<p>Cardinal provides a new approach to scaling web typography and layout across multiple devices. It places <em>little emphasis</em> on pixel-precision, but does not restrict its usage. Instead, Cardinal leverages <a href="http://alistapart.com/article/more-meaningful-typography">modular scale</a>, <a href="http://meyerweb.com/eric/thoughts/2006/02/08/unitless-line-heights/">unit-less line heights</a>, and the power of the <a href="http://snook.ca/archives/html_and_css/font-size-with-rem">REM unit</a> to make it simpler to resize the typography and layout of <strong>your entire application</strong> for different devices.</p>
 
-						<p>Cardinal’s main goal is readable typography and layout that can be scaled globally across a wide range of devices. It uses a combination of <a href="http://alistapart.com/article/more-meaningful-typography">modular scale</a>, <a href="http://meyerweb.com/eric/thoughts/2006/02/08/unitless-line-heights/">unit-less line heights</a>, and <a href="http://snook.ca/archives/html_and_css/font-size-with-rem">REM</a> units so that all the typography and layout elements can be scaled up or down, proportionally.</p>
+						<p>This framework is for building responsive web applications. It’s not meant to be simply “bolted on” to a project, like you can do with <a href="http://getbootstrap.com/">Twitter Bootstrap</a> or <a href="http://foundation.zurb.com/">Zurb’s Foundation</a>; it’s a starting point that you will want to customize and build upon to suit your application or project.</p>
 
-						<h3>What does that mean?</h3>
+						<p>Cardinal omits many aesthetic design decisions that often bog down larger, more complicated CSS frameworks. It leaves the design and creativity up to you.</p>
+
+						<h3>What is “mobile first?”</h3>
 
 						<p>“<a href="http://www.lukew.com/resources/mobile_first.asp">Mobile first</a>”, a phrase coined by Luke Wroblewski <a href="http://www.lukew.com/ff/entry.asp?933">in 2009</a>, is a strategy for web development that focuses on building the mobile experience of a web application first, and <a href="http://en.wikipedia.org/wiki/Progressive_enhancement">progressively enhancing</a> the application for users with larger devices, better browsers, and greater bandwidth.</p>
 
 						<p>The idea is that if you design for the smallest devices (and least capable browsers) first, it forces you to prioritize and determine what are the most important data and actions in your application. The end result is an application that is focused on the key tasks a user is supposed to complete, without the extraneous content and interface fluff that plagues many applications that take a top-down, “PC first” approach.</p>
-
-						<h3>Who should use this?</h3>
-
-						<p>The purpose of this framework is to make it easier to rapidly prototype, build, scale, and maintain CSS for responsive web applications. Cardinal omits the aesthetic design decisions that bog down larger, more complicated CSS frameworks, leaving the design and creativity up to you.</p>
-
-						<p>This way, instead of deleting portions of a framework that you don’t need, you start with a solid foundation that you can customize and build upon.</p>
 
 						<a name="naming"></a>
 						<h2>Naming conventions</h2>
@@ -119,22 +115,30 @@
 
 						<pre><code>article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,video{display:inline-block}audio:not([controls]){display:none;height:0}[hidden]{display:none}html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}a:focus{outline:thin dotted}a:active,a:hover{outline:0}h1{font-size:2em;margin:.67em 0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}mark{background:#ff0;color:#000}code,kbd,pre,samp{font-family:monospace,serif;font-size:1em}pre{white-space:pre-wrap}q{quotes:"\201C" "\201D" "\2018" "\2019"}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:0}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}button,input{line-height:normal}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}</code></pre>
 
-						<p>Instead of a traditional CSS reset, Cardinal includes a minified version of <a href="http://cbrac.co/11gtlnj" title="normalize.css">normalize.css</a> by <a href="http://cbrac.co/10l8rJQ" title="Nicolas Gallagher">Nicolas Gallagher</a> to help render HTML elements more consistently across modern browsers, as well as IE9 and above.</p>
+						<p>Instead of a traditional CSS reset, Cardinal includes a minified version of <a href="http://cbrac.co/11gtlnj" title="normalize.css">normalize.css</a> by <a href="http://cbrac.co/10l8rJQ" title="Nicolas Gallagher">Nicolas Gallagher</a> to help render HTML elements more consistently across browsers.</p>
 
-						<p>Cardinal declares some useful default styles on the <code>&lt;html&gt;</code> and <code>&lt;body&gt;</code> elements to get them to play nice across browsers. It also adds basic styles to text selections, and applies <code>box-sizing: border-box;</code> to <a href="http://gifboop.com/border-box.jpg">everything</a> to fix the <a href="http://paulirish.com/2012/box-sizing-border-box-ftw/">flawed CSS box model</a>.</p>
+						<div class="grid">
+							<div class="grid-item lap-one_half">
+								<p>Cardinal declares some useful default styles on the <code>&lt;html&gt;</code> and <code>&lt;body&gt;</code> elements to get them to play nice across browsers. It also adds basic styles to text selections, and applies <code>box-sizing: border-box;</code> to <a href="http://gifboop.com/border-box.jpg">everything</a> to fix the <a href="http://paulirish.com/2012/box-sizing-border-box-ftw/">flawed CSS box model</a>.</p>
+							</div>
+
+							<div class="grid-item lap-one_half">
+								<pre><code>*,
+*:before,
+*:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing:    border-box;
+	box-sizing:         border-box;
+}</code></pre>
+							</div>
+						</div>
 
 						<a name="typography"></a>
 						<h2>Typography</h2>
 
-						<p>As mentioned above, Cardinal uses a combination of modular scale, unit-less line heights, and <code>rem</code> units so that it is easy to scale the type and layout across an entire project. It’s built so that you do not have to keep track of cascading <code>em</code> values, but can still build a web application that is flexible, zoom-friendly, and pixel precise when needed.</p>
-
-						<p>In order to achieve this scalability, the <code>font-size</code> property on the <code>&lt;html&gt;</code> element is <strong>first</strong> set as a percentage value.</p>
-
-						<p><strong>Next</strong>, the <code>font-size</code> property on the <code>&lt;body&gt;</code> element is set as <code>1rem</code>, which inherits the percentage declaration on the <code>&lt;html&gt;</code> element as the root font size for your entire project.</p>
-
-						<p>With media queries, you can then change the <code>font-size</code> property on the <code>&lt;html&gt;</code> element to a different percentage value, depending on the width of the device or viewport. This changes the root font size of the entire project, so that any other elements using the <code>rem</code> unit will scale proportionally.</p>
-
 						<p>Following a “mobile first” approach, Cardinal starts with small devices and cascades up to desktop and larger screen resolutions.</p>
+
+						<p>Cardinal is built so that you do not have to keep track of cascading <code>em</code> values, but can still build a web application that is flexible, zoom-friendly, and pixel precise when needed.</p>
 
 						<h3>Scalability with REMs and unit-less line heights</h3>
 
@@ -158,7 +162,7 @@
 	line-height: 1.5;
 }</code></pre>
 
-						<p>In other words, <code>1rem</code> = the percentage on the <code>&lt;html&gt;</code> element, which is why all the <code>rem</code> units in your application scale when that initial percentage value changes at different viewport widths.</p>
+						<p>In other words, <code>1rem</code> = the percentage on the <code>&lt;html&gt;</code> element, which causes all the <code>rem</code> units in your application resize when that initial percentage value changes at different viewport widths.</p>
 
 						<div class="grid">
 							<div class="grid-item desk-one_half">
@@ -170,13 +174,15 @@
 							<div class="grid-item desk-one_half">
 								<h3>Modular scale FTW!</h3>
 
-								<p>By default, Cardinal’s root font size ranges from <code>12px</code> to <code>18px</code>, depending on the viewport width. A <a href="http://alistapart.com/article/more-meaningful-typography">modular scale</a> is then <a href="http://modularscale.com/scale/?px1=12&px2=18&ra1=1.333&ra2=0">calculated</a> with <a href="http://modularscale.com/">this tool</a> based on the minimum and maximum root font size (in pixels), and uses the “perfect fourth” ratio (1:1.333) found commonly in music to generate values that can be used for sizing type and layout elements across the project. <em>The values in the second column entitled “Ems” are the values you want to use.</em></p>
+								<p>By default, Cardinal’s root font size ranges from <code>12px</code> to <code>18px</code>, depending on the viewport width. A <a href="http://alistapart.com/article/more-meaningful-typography">modular scale</a> is then <a href="http://modularscale.com/scale/?px1=12&px2=18&ra1=1.333&ra2=0">calculated</a> with <a href="http://modularscale.com/">this tool</a> based on the minimum and maximum root font size (in pixels), and uses the “perfect fourth” ratio (1:1.333) found commonly in music to generate values that can be used for sizing type and layout elements across the project.</p>
+
+								<p><em>The values in the second column entitled “Ems” are the values you want to use throughout your project.</em></p>
 							</div>
 
 							<div class="grid-item">
 								<h3>Pixel precision</h3>
 
-								<p>If you need pixel precision for a particular element or property (eg. 1px border width on menu buttons, regardless of viewport width), simply use the <code>px</code> unit instead of the <code>rem</code> unit and it <strong>will not</strong> be affected by the root font size.</p>
+								<p>If you need pixel precision for a particular element or property (eg. 1px border width on menu buttons, regardless of viewport width), simply use the <code>px</code> unit instead of the <code>rem</code> unit and it <strong>will not</strong> be affected by any changes in the root font size.</p>
 							</div>
 						</div>
 
@@ -229,6 +235,13 @@ video {
 
 						<h4>Basic</h4>
 
+						<pre class="max_height"><code>&lt;div class=&quot;grid&quot;&gt;
+	&lt;div class=&quot;grid-item one_fourth&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;grid-item one_fourth&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;grid-item one_fourth&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;grid-item one_fourth&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
 						<div class="grid text_center">
 							<div class="grid-item one_fourth"><div class="island">&nbsp;</div></div>
 							<div class="grid-item one_fourth"><div class="island">&nbsp;</div></div>
@@ -237,6 +250,13 @@ video {
 						</div>
 
 						<h4>Half gutter</h4>
+
+						<pre class="max_height"><code>&lt;div class=&quot;grid grid_gutter_half&quot;&gt;
+	&lt;div class=&quot;grid-item one_half desk-one_fourth&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;grid-item one_half desk-one_fourth&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;grid-item one_half desk-one_fourth&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;grid-item one_half desk-one_fourth&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
 
 						<div class="grid grid_gutter_half text_center">
 							<div class="grid-item one_half desk-one_fourth"><div class="island">&nbsp;</div></div>
@@ -247,6 +267,13 @@ video {
 
 						<h4>Double gutter</h4>
 
+						<pre class="max_height"><code>&lt;div class=&quot;grid grid_gutter_double&quot;&gt;
+	&lt;div class=&quot;grid-item one_half desk-one_fourth&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;grid-item one_half desk-one_fourth&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;grid-item one_half desk-one_fourth&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;grid-item one_half desk-one_fourth&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
 						<div class="grid grid_gutter_double text_center">
 							<div class="grid-item one_half desk-one_fourth"><div class="island">&nbsp;</div></div>
 							<div class="grid-item one_half desk-one_fourth"><div class="island">&nbsp;</div></div>
@@ -256,6 +283,13 @@ video {
 
 						<h4>Basic, responsive</h4>
 
+						<pre class="max_height"><code>&lt;div class=&quot;grid&quot;&gt;
+	&lt;div class=&quot;grid-item lap-one_half desk-one_fourth&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;grid-item lap-one_half desk-one_fourth&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;grid-item lap-one_half desk-one_fourth&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;grid-item lap-one_half desk-one_fourth&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
 						<div class="grid text_center">
 							<div class="grid-item lap-one_half desk-one_fourth"><div class="island">&nbsp;</div></div>
 							<div class="grid-item lap-one_half desk-one_fourth"><div class="island">&nbsp;</div></div>
@@ -264,6 +298,17 @@ video {
 						</div>
 
 						<h4>Nested</h4>
+
+						<pre class="max_height"><code>&lt;div class=&quot;grid&quot;&gt;
+	&lt;div class=&quot;grid-item one_half&quot;&gt;
+		&lt;div class=&quot;grid&quot;&gt;
+			&lt;div class=&quot;grid-item one_half&quot;&gt;&lt;/div&gt;
+			&lt;div class=&quot;grid-item one_half&quot;&gt;&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;grid-item one_fourth&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;grid-item one_fourth&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
 
 						<div class="grid text_center">
 							<div class="grid-item one_half">
@@ -280,6 +325,17 @@ video {
 
 						<h4>Nested, responsive</h4>
 
+						<pre class="max_height"><code>&lt;div class=&quot;grid&quot;&gt;
+	&lt;div class=&quot;grid-item lap-one_half&quot;&gt;
+		&lt;div class=&quot;grid&quot;&gt;
+			&lt;div class=&quot;grid-item one_half&quot;&gt;&lt;/div&gt;
+			&lt;div class=&quot;grid-item one_half&quot;&gt;&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;grid-item lap-one_fourth&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;grid-item lap-one_fourth&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
 						<div class="grid text_center">
 							<div class="grid-item lap-one_half">
 								<div class="island padding_none">
@@ -294,6 +350,35 @@ video {
 						</div>
 
 						<h4>Kitchen sink</h4>
+
+						<pre class="max_height"><code>&lt;div class=&quot;grid&quot;&gt;
+	&lt;div class=&quot;grid-item one_sixth&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;grid-item one_sixth&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;grid-item one_sixth&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;grid-item one_sixth&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;grid-item one_sixth&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;grid-item one_sixth&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;grid-item one_fifth&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;grid-item one_fifth&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;grid-item one_fifth&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;grid-item one_fifth&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;grid-item one_fifth&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;grid-item one_fourth&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;grid-item one_fourth&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;grid-item one_fourth&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;grid-item one_fourth&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;grid-item one_third&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;grid-item one_third&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;grid-item one_third&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;grid-item one_half&quot;&gt;
+		&lt;div class=&quot;grid&quot;&gt;
+			&lt;div class=&quot;grid-item one_half&quot;&gt;&lt;/div&gt;
+			&lt;div class=&quot;grid-item one_half&quot;&gt;&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;grid-item one_half&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;grid-item one_whole&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
 
 						<div class="grid text_center">
 							<div class="grid-item one_sixth">
@@ -388,6 +473,35 @@ video {
 
 						<h4>Kitchen sink, responsive</h4>
 
+						<pre class="max_height"><code>&lt;div class=&quot;grid&quot;&gt;
+	&lt;div class=&quot;grid-item lap-one_third desk-one_sixth&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;grid-item lap-one_third desk-one_sixth&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;grid-item lap-one_third desk-one_sixth&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;grid-item lap-one_third desk-one_sixth&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;grid-item lap-one_third desk-one_sixth&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;grid-item lap-one_third desk-one_sixth&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;grid-item lap-one_fifth desk-one_fifth&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;grid-item lap-three_fifths desk-one_fifth&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;grid-item lap-one_fifth desk-one_fifth&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;grid-item lap-two_fifths desk-one_fifth&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;grid-item lap-three_fifths desk-one_fifth&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;grid-item lap-one_half desk-one_fourth&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;grid-item lap-one_half desk-one_fourth&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;grid-item lap-one_half desk-one_fourth&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;grid-item lap-one_half desk-one_fourth&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;grid-item lap-two_thirds desk-one_third&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;grid-item lap-one_third&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;grid-item lap-one_whole desk-one_third&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;grid-item lap-one_half&quot;&gt;
+		&lt;div class=&quot;grid&quot;&gt;
+			&lt;div class=&quot;grid-item one_half&quot;&gt;&lt;/div&gt;
+			&lt;div class=&quot;grid-item one_half&quot;&gt;&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;grid-item lap-one_half&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;grid-item one_whole&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
 						<div class="grid text_center">
 							<div class="grid-item lap-one_third desk-one_sixth">
 								<div class="island">&nbsp;</div>
@@ -453,7 +567,7 @@ video {
 								<div class="island">&nbsp;</div>
 							</div>
 
-							<div class="grid-item lap-one_third desk-one_third">
+							<div class="grid-item lap-one_third">
 								<div class="island">&nbsp;</div>
 							</div>
 

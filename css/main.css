@@ -85,8 +85,8 @@ img::-moz-selection {
 	Description
 	--------------------
 	Cardinal uses a combination of modular scale, unit-less line heights, and
-	`rem` units so that it is easy to scale the type and layout across your
-	entire project.
+	`rem` units so that it is easy to resize the typography and layout of
+	your entire application.
 
 	How it works
 	--------------------
@@ -726,6 +726,10 @@ textarea {
 /*  =======================================================================  *\
 	Main ($main)
 \*  =======================================================================  */
+
+pre.max_height {
+	max-height: 250px;
+}
 
 .header .wrapper {
 	position: relative;
