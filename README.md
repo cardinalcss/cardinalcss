@@ -108,7 +108,7 @@ By default, Cardinal’s root font size ranges from `12px` to `18px`,  depending
 
 ### Pixel precision
 
-If you need pixel precision for a particular element or property (eg. 1px border width on menu buttons), simply use the `px` unit instead of the `rem` unit and it will be affected by the root font size.
+If you need pixel precision for a particular element or property (eg. 1px border width on menu buttons), simply use the `px` unit instead of the `rem` unit and it **will not** be affected by the root font size.
 
 ## <a name="non-typography"></a> Non-typography
 
