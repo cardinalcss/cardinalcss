@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no_js lt_ie9 lt_ie8 lt_ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no_js lt_ie9 lt_ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no_js lt_ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no_js"> <!--<![endif]-->
+	<head>
+		<!-- Meta -->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+		<meta http-equiv="ClearType" content="true">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- DNS Prefetch -->
+		<link rel="dns-prefetch" href="//www.google-analytics.com">
+
+		<!-- Title, desc -->
+		<title>Cardinal - Build more with less.</title>
+		<meta name="description" content="Cardinal is a small, “mobile-first” CSS framework with some useful default styles, scalable typography, and a simple responsive grid system.">
+
+		<!-- Favicons: http://cbrac.co/11ZzQkJ -->
+
+		<!-- Styles -->
+		<link rel="stylesheet" href="css/main.min.css">
+
+		<!-- Scripts -->
+		<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+	</head>
+
+	<body>
+		<header class="strip header">
+			<div class="wrapper">
+				<hgroup>
+					<h1>Cardinal</h1>
+					<h2 class="text_large subheading">Build more with less.</h2>
+				</hgroup>
+
+				<a href="https://github.com/cbracco/Cardinal" title="View & contribute on Github" class="btn">View on Github</a> // <a href="https://github.com/cbracco/Cardinal/archive/master.zip" title="Download from Github" class="btn">Download</a>
+
+				<img src="img/logo.svg" data-src="img/logo.png" class="logo">
+			</div>
+		</header>
+
+		<div class="main wrapper">
+			<div class="grid">
+				<div class="grid-item lap-one_fourth desk-one_fifth toc">
+					<nav class="well">
+						<h4>Contents</h4>
+						<ul>
+							<li><a href="#overview">Overview</a></li>
+							<li><a href="#class-names">Class-naming</a></li>
+							<li><a href="#reset">Reset</a></li>
+							<li><a href="#base">Base</a></li>
+							<li><a href="#typography">Typography</a></li>
+							<li><a href="#non-typography">Non-typography</a></li>
+							<li><a href="#grids">Grids & widths</a></li>
+							<li><a href="#modules">Modules</a></li>
+							<li><a href="#prompts">Prompts</a></li>
+							<li><a href="#helpers">Helpers</a></li>
+							<li><a href="#queries">Queries</a></li>
+							<li><a href="#print">Print</a></li>
+							<li><a href="#js">Javascript</a></li>
+							<li><a href="#browsers">Browser support</a></li>
+						</ul>
+					</nav>
+				</div>
+
+				<div class="grid-item lap-three_fourths desk-four_fifths">
+					<div class="content">
+						<!-- <p class="text_large">Cardinal is a barebones, “mobile-first” front-end web development framework with some useful default styles, responsive layout and typography, and a simple grid system.</p> -->
+
+						<p class="text_large">Cardinal is a barebones, “mobile-first” CSS framework with some useful default styles, scalable typography, and a simple responsive grid system.</p>
+
+						<h2>Who should use this?</h2>
+
+						<p class="text_medium">Designers and developers who want to build well-organized, responsive web applications without <em>losing their minds</em> should use Cardinal.</p>
+
+						<p>The purpose of this framework is to make it easier to rapidly prototype, build, scale, and maintain CSS for responsive web applications. Cardinal omits the aesthetic design decisions that bog down larger, more complicated CSS frameworks, leaving the design and creativity up to you.</p>
+
+						<p>This way, instead of deleting portions of a framework that you don’t need, you start with a solid foundation that you can customize and build upon.</p>
+
+						<a name="overview"></a>
+						<h2>Overview</h2>
+
+						<p>Cardinal’s main goal is readable typography and layout that can be scaled globally for a wide range of devices. It uses a combination of <a href="http://alistapart.com/article/more-meaningful-typography">modular scale</a>, <a href="http://meyerweb.com/eric/thoughts/2006/02/08/unitless-line-heights/">unit-less line heights</a>, and <a href="http://snook.ca/archives/html_and_css/font-size-with-rem">REM</a> units so that all the typography and layout elements can be scaled up or down, proportionally.</p>
+
+						<a name="class-names"></a>
+						<h2>Class-naming conventions</h2>
+
+						<p>Cardinal uses simple naming conventions for CSS classes that are human readable and easier for developers to interpret. While inspired by the <a href="http://bem.info/method/definitions/">BEM approach</a>, the class-naming conventions used in Cardinal are far less complex.</p>
+
+						<pre><code>.block_name              {} /* Block */
+.block_name-element_name {} /* Element */
+.modifier_name           {} /* Modifier */</code></pre>
+
+						<p>Use hyphens to separate the name of the block from the name of the element, and use underscores to separate words in long names. Here is an example of a simple “post” block:</p>
+
+						<pre><code>.post         {} /* Block */
+.post-image   {} /* Element */
+.post-title   {} /* Element */
+.post-date    {} /* Element */
+.post-excerpt {} /* Element */
+.post.last    {} /* Modifier */</code></pre>
+
+						<div class="grid">
+							<div class="grid-item desk-one_half">
+								<a name="reset"></a>
+								<h3>Reset</h3>
+
+								<pre><code>article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,video{display:inline-block}audio:not([controls]){display:none;height:0}[hidden]{display:none}html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}a:focus{outline:thin dotted}a:active,a:hover{outline:0}h1{font-size:2em;margin:.67em 0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}mark{background:#ff0;color:#000}code,kbd,pre,samp{font-family:monospace,serif;font-size:1em}pre{white-space:pre-wrap}q{quotes:"\201C" "\201D" "\2018" "\2019"}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:0}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}button,input{line-height:normal}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}</code></pre>
+
+								<p>Instead of a traditional CSS reset, Cardinal includes a minified version of <a href="http://cbrac.co/11gtlnj" title="normalize.css">normalize.css</a> by <a href="http://cbrac.co/10l8rJQ" title="Nicolas Gallagher">Nicolas Gallagher</a> to help render HTML elements more consistently across modern browsers, as well as IE9 and above.</p>
+							</div>
+
+							<div class="grid-item desk-one_half">
+								<a name="base"></a>
+								<h3>Base</h3>
+
+								<pre><code>box-sizing: border-box;</code></pre>
+
+								<p>Cardinal declares some useful default styles on the <code>&lt;html&gt;</code> and <code>&lt;body&gt;</code> elements to get them to play nice across browsers. It also adds basic styles to text selections, and applies <code>box-sizing: border-box;</code> to <a href="http://gifboop.com/border-box.jpg">everything</a> to fix the <a href="http://paulirish.com/2012/box-sizing-border-box-ftw/">flawed CSS box model</a>.</p>
+							</div>
+						</div>
+
+						<a name="typography"></a>
+						<h3>Typography</h3>
+
+						<p>As mentioned above, Cardinal uses a combination of modular scale, unit-less line heights, and <code>rem</code> units so that it is easy to scale the type and layout across an entire project. It’s built so that you do not have to keep track of cascading <code>em</code> values, but can still build a web application that is flexible, zoom-friendly, and pixel precise when needed.</p>
+
+						<p>In order to achieve this scalability, the <code>font-size</code> property on the <code>&lt;html&gt;</code> element is <strong>first</strong> set as a percentage value.</p>
+
+						<p><strong>Next</strong>, the <code>font-size</code> property on the <code>&lt;body&gt;</code> element is set as <code>1rem</code>, which inherits the percentage declaration on the <code>&lt;html&gt;</code> element as the root font size for your entire project.</p>
+
+						<p>With media queries, you can then change the <code>font-size</code> property on the <code>&lt;html&gt;</code> element to a different percentage value, depending on the width of the device or viewport. This changes the root font size of the entire project, so that any other elements using the <code>rem</code> unit will scale proportionally.</p>
+
+						<p>Following a “mobile-first” approach, Cardinal starts with small devices and cascades up to desktop and larger screen resolutions.</p>
+
+						<h4>Scalability with REMs and unit-less line heights</h4>
+
+						<p>The root font size is first set to a value that feels comfortable on small feature phones (mobile devices with a viewport width > 320px).</p>
+
+						<pre><code>html { font-size: 75%; } /* 12px */</code></pre>
+
+						<p>Then, using media queries, Cardinal increases the root font size percentage value at a few common viewport widths. <strong>You can tweak these media queries and percentage values to suit your project.</strong> This is how the type and layout scale globally.</p>
+
+						<pre><code>@media only screen and (min-width: 320px) { html { font-size: 81.25%; } } /* 13px */
+@media only screen and (min-width: 480px) { html { font-size: 87.5%;  } } /* 14px */
+@media only screen and (min-width: 768px) { html { font-size: 100%;   } } /* 16px */
+@media only screen and (min-width: 960px) { html { font-size: 112.5%; } } /* 18px */</code></pre>
+
+						<p>After the root font size is declared for different viewport widths, the <code>font-size</code> property on the <code>&lt;body&gt;</code> element is set to <code>1rem</code>, and the <code>line-height</code> property is given a unit-less value.</p>
+
+						<pre><code>body {
+	color: #444;
+	font-size: 1rem;
+	font-family: "Helvetica Neue", sans-serif;
+	line-height: 1.5;
+}</code></pre>
+
+						<p>In other words, <code>1rem</code> = the percentage on the <code>&lt;html&gt;</code> element, which is why all the <code>rem</code> units in your application scale when that initial percentage value changes at different viewport widths.</p>
+
+						<div class="grid">
+							<div class="grid-item desk-one_half">
+								<h4>Bye bye, baseline grid</h4>
+
+								<p><strong>Instead of trying to maintain a baseline grid</strong>, Cardinal uses a unit-less value for the <code>line-height</code> property on the <code>&lt;body&gt;</code> element. A unit-less value is used on other common typographical elements in Cardinal too, like headings. This means that the line height is calculated as a multiple of the root font size, so it scales proportionally too when the root font size changes at different viewport widths.</p>
+							</div>
+
+							<div class="grid-item desk-one_half">
+								<h4>Modular scale FTW!</h4>
+
+								<p>By default, Cardinal’s root font size ranges from <code>12px</code> to <code>18px</code>, depending on the viewport width. A <a href="http://modularscale.com/scale/?px1=12&px2=18&ra1=1.333&ra2=0">modular scale</a> is then calculated with <a href="http://modularscale.com/">this tool</a> based on the minimum and maximum root font size (in pixels), and uses the “perfect fourth” ratio (1:1.333) found commonly in music to generate values that can be used for sizing type and layout elements across the project. <em>The values in the second column entitled “Ems” are the values you want to use.</em></p>
+							</div>
+
+							<div class="grid-item">
+								<h4>Pixel precision</h4>
+
+								<p>If you need pixel precision for a particular element or property (eg. 1px border width on menu buttons, regardless of viewport width), simply use the <code>px</code> unit instead of the <code>rem</code> unit and it will remain that value regardless of the root font size.</p>
+							</div>
+						</div>
+
+						<a name="non-typography"></a>
+						<h3>Non-typography</h3>
+
+						<p>There are also some sensible default styles for non-typographical elements included with Cardinal. For instance, all <code>&lt;img&gt;</code> and <code>&lt;video&gt;</code> tags are given fluid properties, and <code>&lt;textarea&gt;</code> elements are restricted to vertical resizing only.</p>
+
+						<pre><code>img,
+video {
+	max-width: 100%;
+	width: auto\9;
+	height: auto !important;
+}</code></pre>
+
+						<pre><code>textarea {
+	resize: vertical;
+}</code></pre>
+
+						<a name="grids"></a>
+						<h3>Grids & widths</h3>
+
+						<div class="grid">
+							<div class="grid-item desk-one_half">
+								<p>Inspired by the clever ideas of <a href="http://builtbyboon.com/blog/proportional-grids">Matt Berridge</a>, Cardinal’s grid system uses <em>fluid</em> item widths and <em>fixed</em> gutters. Grid items can be divided into halves, thirds, fourths, fifths, or sixths. Nesting grid elements is a breeze, and you can change how a grid item behaves with human-readable CSS classes.</p>
+
+								<p>The item widths have percentage values, and the gutters have <code>rem</code> values. Due to the change in the root font size (<a href="#typography">as described above</a>), the fixed gutters increase or decrease proportionally, depending on the width of the viewport.</p>
+
+								<p>The classes for default item widths are not grid-specific, <strong>on purpose</strong>, so that they can be used on any element in your project.</p>
+							</div>
+
+							<div class="grid-item desk-one_half">
+								<h4>Usage</h4>
+
+								<pre><code>&lt;div class=&quot;grid&quot;&gt;
+	&lt;div class=&quot;grid-item lap-one_half desk-one_fourth&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;grid-item lap-one_half desk-one_fourth&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;grid-item lap-one_half desk-one_fourth&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;grid-item lap-one_half desk-one_fourth&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+								<p>The above can be described as:</p>
+
+								<blockquote><p>“a grid with four 100% width items, which become 50% width items on lap devices, and 25% width items on desktop devices.”</p></blockquote>
+							</div>
+						</div>
+
+						<h4>Examples</h4>
+
+						<p>Below are some example grids. <strong>View the source code</strong> of this page to see how the they behave.</p>
+
+						<h5>Basic</h5>
+
+						<div class="grid text_center">
+							<div class="grid-item lap-one_half desk-one_fourth"><div class="island">&nbsp;</div></div>
+							<div class="grid-item lap-one_half desk-one_fourth"><div class="island">&nbsp;</div></div>
+							<div class="grid-item lap-one_half desk-one_fourth"><div class="island">&nbsp;</div></div>
+							<div class="grid-item lap-one_half desk-one_fourth"><div class="island">&nbsp;</div></div>
+						</div>
+
+						<h5>Half gutter</h5>
+
+						<div class="grid grid_gutter_half text_center">
+							<div class="grid-item one_half desk-one_fourth"><div class="island">&nbsp;</div></div>
+							<div class="grid-item one_half desk-one_fourth"><div class="island">&nbsp;</div></div>
+							<div class="grid-item one_half desk-one_fourth"><div class="island">&nbsp;</div></div>
+							<div class="grid-item one_half desk-one_fourth"><div class="island">&nbsp;</div></div>
+						</div>
+
+						<h5>Double gutter</h5>
+
+						<div class="grid grid_gutter_double text_center">
+							<div class="grid-item one_half desk-one_fourth"><div class="island">&nbsp;</div></div>
+							<div class="grid-item one_half desk-one_fourth"><div class="island">&nbsp;</div></div>
+							<div class="grid-item one_half desk-one_fourth"><div class="island">&nbsp;</div></div>
+							<div class="grid-item one_half desk-one_fourth"><div class="island">&nbsp;</div></div>
+						</div>
+
+						<h5>Nested</h5>
+
+						<div class="grid text_center">
+							<div class="grid-item lap-one_half">
+								<div class="island padding_none">
+									<div class="grid">
+										<div class="grid-item one_half margin_none"><div class="island">&nbsp;</div></div>
+										<div class="grid-item one_half margin_none"><div class="island">&nbsp;</div></div>
+									</div>
+								</div>
+							</div>
+							<div class="grid-item lap-one_fourth"><div class="island">&nbsp;</div></div>
+							<div class="grid-item lap-one_fourth"><div class="island">&nbsp;</div></div>
+						</div>
+
+						<h5>Kitchen sink</h5>
+
+						<div class="grid text_center">
+							<div class="grid-item lap-one_third desk-one_sixth">
+								<div class="island">&nbsp;</div>
+							</div>
+
+							<div class="grid-item lap-one_third desk-one_sixth">
+								<div class="island">&nbsp;</div>
+							</div>
+
+							<div class="grid-item lap-one_third desk-one_sixth">
+								<div class="island">&nbsp;</div>
+							</div>
+
+							<div class="grid-item lap-one_third desk-one_sixth">
+								<div class="island">&nbsp;</div>
+							</div>
+
+							<div class="grid-item lap-one_third desk-one_sixth">
+								<div class="island">&nbsp;</div>
+							</div>
+
+							<div class="grid-item lap-one_third desk-one_sixth">
+								<div class="island">&nbsp;</div>
+							</div>
+
+							<div class="grid-item lap-one_fifth desk-one_fifth">
+								<div class="island">&nbsp;</div>
+							</div>
+
+							<div class="grid-item lap-three_fifths desk-one_fifth">
+								<div class="island">&nbsp;</div>
+							</div>
+
+							<div class="grid-item lap-one_fifth desk-one_fifth">
+								<div class="island">&nbsp;</div>
+							</div>
+
+							<div class="grid-item lap-two_fifths desk-one_fifth">
+								<div class="island">&nbsp;</div>
+							</div>
+
+							<div class="grid-item lap-three_fifths desk-one_fifth">
+								<div class="island">&nbsp;</div>
+							</div>
+
+							<div class="grid-item lap-one_half desk-one_fourth">
+								<div class="island">&nbsp;</div>
+							</div>
+
+							<div class="grid-item lap-one_half desk-one_fourth">
+								<div class="island">&nbsp;</div>
+							</div>
+
+							<div class="grid-item lap-one_half desk-one_fourth">
+								<div class="island">&nbsp;</div>
+							</div>
+
+							<div class="grid-item lap-one_half desk-one_fourth">
+								<div class="island">&nbsp;</div>
+							</div>
+
+							<div class="grid-item lap-two_thirds desk-one_third">
+								<div class="island">&nbsp;</div>
+							</div>
+
+							<div class="grid-item lap-one_third desk-one_third">
+								<div class="island">&nbsp;</div>
+							</div>
+
+							<div class="grid-item lap-one_whole desk-one_third">
+								<div class="island">&nbsp;</div>
+							</div>
+
+							<div class="grid-item lap-one_half">
+								<div class="island">&nbsp;</div>
+							</div>
+
+							<div class="grid-item lap-one_half">
+								<div class="island padding_none">
+									<div class="grid">
+										<div class="grid-item one_half margin_none"><div class="island">&nbsp;</div></div>
+										<div class="grid-item one_half margin_none"><div class="island">&nbsp;</div></div>
+									</div>
+								</div>
+							</div>
+
+							<div class="grid-item one_whole">
+								<div class="island">&nbsp;</div>
+							</div>
+						</div>
+
+						<a name="modules"></a>
+						<h3>Modules</h3>
+
+						<p>Cardinal also includes some reusable classes for common layout modules like page wrappers, content wells, and 100% width containers.</p>
+
+						<div class="grid">
+							<div class="grid-item lap-one_half desk-one_fourth">
+								<h4>Strips</h4>
+
+								<p><pre><code>.strip {}</code></pre></p>
+
+								<p>A strip is useful when you want a background color, image, or content to span the entire width of the viewport.</p>
+							</div>
+
+							<div class="grid-item lap-one_half desk-one_fourth">
+								<h4>Wrappers</h4>
+
+								<p><pre><code>.wrapper {}</code></pre></p>
+
+								<p>A wrapper provides a <code>max-width</code> for the content within it, and centers the content.</p>
+							</div>
+
+							<div class="grid-item lap-one_half desk-one_fourth">
+								<h4>Islands</h4>
+
+								<p><pre><code>.island {}</code></pre></p>
+
+								<p>An island is a content block that you want to appear raised from its surrounding area.</p>
+							</div>
+
+							<div class="grid-item lap-one_half desk-one_fourth">
+								<h4>Wells</h4>
+
+								<p><pre><code>.well {}</code></pre></p>
+
+								<p>A well is a content block that you want to appear sunken from its surrounding area.</p>
+							</div>
+						</div>
+
+						<div class="grid">
+							<div class="grid-item lap-one_half desk-one_third">
+								<a name="prompts"></a>
+								<h3>Prompts</h3>
+
+								<p>By default, Cardinal includes two small prompts, one that shows up for <a href="http://developer.yahoo.com/blogs/ydn/many-users-javascript-disabled-14121.html">users who have Javascript disabled</a>, and one for the <a href="https://developers.google.com/chrome/chrome-frame/">IE6 Chrome Frame</a>.</p>
+							</div>
+
+							<div class="grid-item lap-one_half desk-one_third">
+								<a name="helpers"></a>
+								<h3>Helpers</h3>
+								<p>A lot of helpers from the fantastic <a href="http://cbrac.co/Zt9YqM">HTML5 Boilerplate</a> are used here, along with some custom helpers for quick text alignment, margins, paddings, and floats.</p>
+							</div>
+
+							<div class="grid-item lap-one_half desk-one_third">
+								<a name="queries"></a>
+								<h3>Queries</h3>
+
+								<p>Included are some common <code>@media</code> query device widths, resolutions, and breakpoints where you can tweak your web application styles for different devices.</p>
+							</div>
+
+							<div class="grid-item lap-one_half">
+								<a name="print"></a>
+								<h3>Print</h3>
+
+								<p>This was also copy and pasted directly from <a href="http://cbrac.co/Zt9YqM">HTML5 Boilerplate</a>, and inlined to avoid an extra HTTP request.</p>
+							</div>
+
+							<div class="grid-item lap-one_half">
+								<a name="js"></a>
+								<h3>Javscript</h3>
+								<p>Pulled from the <a href="http://cbrac.co/Zt9YqM">HTML5 Boilerplate</a>, the <code>plugins.js</code> file includes is a small function to avoid console errors in browsers that lack a console.</p>
+							</div>
+
+							<div class="grid-item lap-one_half desk-one_whole">
+								<a name="browsers"></a>
+								<h3>Browser support</h3>
+
+								<p>Cardinal supports most modern browsers (Chrome, Mozilla Firefox, Safari, Opera, IE9+). For a quick look at device support for the <code>rem</code> unit, <a href="http://caniuse.com/#search=rem">visit here</a>.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer class="credits strip margin_none">
+			<div class="wrapper">
+				<p class="margin_none">code by @<a href="http://cbracco.me">cbracco</a> // illustration by @<a href="https://twitter.com/varberakis">varberakis</a></p>
+
+				<a href="#" class="top" style="font-family: 'Arial Unicode MS';">&uarr;</a>
+			</div>
+		</footer>
+
+		<!-- Scripts -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+
+		<script src="js/plugins.js"></script>
+		<script src="js/main.js"></script>
+
+		<!-- Google Analytics -->
+		<script>
+			var _gaq=[["_setAccount","UA-12953082-11"],["_trackPageview"]];
+			(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+			g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
+			s.parentNode.insertBefore(g,s)}(document,"script"));
+		</script>
+	</body>
+</html>
