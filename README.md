@@ -1,8 +1,8 @@
+# Cardinal
+
 <a href="http://cbracco.github.io/Cardinal/">
 	<img src="http://cbracco.github.io/Cardinal/img/logo.png" width="100px">
 </a>
-
-# Cardinal
 
 [Pivotal Tracker](https://www.pivotaltracker.com/s/projects/803361) // [View documentation](http://cbracco.github.io/Cardinal/)
 
