@@ -20,7 +20,8 @@
 		<!-- Favicons: http://cbrac.co/11ZzQkJ -->
 
 		<!-- Styles -->
-		<link rel="stylesheet" href="css/main.min.css">
+		<link rel="stylesheet" href="css/main.css">
+		<!-- <link rel="stylesheet" href="css/main.min.css"> -->
 
 		<!-- Scripts -->
 		<script src="js/vendor/modernizr-2.6.2.min.js"></script>
@@ -42,10 +43,10 @@
 
 		<div class="main wrapper">
 			<div class="grid">
-				<div class="toc grid-item lap-one_fourth">
-					<nav class="well">
-						<h4>Contents</h4>
-						<ul>
+				<div class="grid-item lap-one_fourth">
+					<nav class="toc">
+						<ul class="well">
+							<h4>Contents</h4>
 							<li><a href="#overview">Overview</a></li>
 							<li><a href="#naming">Class names</a></li>
 							<li><a href="#base">Base</a></li>
@@ -69,7 +70,11 @@
 						<a name="overview"></a>
 						<h2>Overview</h2>
 
-						<p>Cardinal’s main goal is readable typography and layout that can be scaled globally for a wide range of devices. It uses a combination of <a href="http://alistapart.com/article/more-meaningful-typography">modular scale</a>, <a href="http://meyerweb.com/eric/thoughts/2006/02/08/unitless-line-heights/">unit-less line heights</a>, and <a href="http://snook.ca/archives/html_and_css/font-size-with-rem">REM</a> units so that all the typography and layout elements can be scaled up or down, proportionally.</p>
+						<p class="text_medium">Designers and developers who want to build well-organized, responsive web applications without <em>losing their minds</em>, should use Cardinal.</p>
+
+						<p>The purpose of this framework is to make it easier to rapidly prototype, build, scale, and maintain CSS for responsive web applications. Cardinal omits many aesthetic design decisions often bog down larger, more complicated CSS frameworks, leaving the design and creativity up to you.</p>
+
+						<p>Cardinal’s main goal is readable typography and layout that can be scaled globally across a wide range of devices. It uses a combination of <a href="http://alistapart.com/article/more-meaningful-typography">modular scale</a>, <a href="http://meyerweb.com/eric/thoughts/2006/02/08/unitless-line-heights/">unit-less line heights</a>, and <a href="http://snook.ca/archives/html_and_css/font-size-with-rem">REM</a> units so that all the typography and layout elements can be scaled up or down, proportionally.</p>
 
 						<h3>What does that mean?</h3>
 
@@ -78,8 +83,6 @@
 						<p>The idea is that if you design for the smallest devices (and least capable browsers) first, it forces you to prioritize and determine what are the most important data and actions in your application. The end result is an application that is focused on the key tasks a user is supposed to complete, without the extraneous content and interface fluff that plagues many applications that take a top-down, “PC first” approach.</p>
 
 						<h3>Who should use this?</h3>
-
-						<p class="text_medium">Designers and developers who want to build well-organized, responsive web applications without <em>losing their minds</em>, should use Cardinal.</p>
 
 						<p>The purpose of this framework is to make it easier to rapidly prototype, build, scale, and maintain CSS for responsive web applications. Cardinal omits the aesthetic design decisions that bog down larger, more complicated CSS frameworks, leaving the design and creativity up to you.</p>
 

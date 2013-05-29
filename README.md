@@ -1,5 +1,5 @@
 # Cardinal
 
-This repository contains the source code for Cardinal’s documentation/demo site.
+This repository contains the source code for [Cardinal](https://github.com/cbracco/Cardinal)’s documentation website.
 
-[View this website](http://cbracco.github.io/Cardinal/)
+[View the documentation](http://cbracco.github.io/Cardinal/)
