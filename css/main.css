@@ -27,7 +27,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,su
 	box-sizing:         border-box;
 }
 
-/* Set <html> and <body> to inherit the height of the browser */
+/* Set <html> and <body> to inherit the height of the viewport */
 html,
 body {
 	min-height: 100%;
@@ -115,9 +115,9 @@ html { font-size: 75%; } /* 12px */
 
 body {
 	color: #444;
-	font-size: 1rem;    /* 1 */
+	font-size: 1rem;  /* 1 */
 	font-family: "Helvetica Neue", sans-serif;
-	line-height: 1.5;   /* 2 */
+	line-height: 1.5; /* 2 */
 }
 
 /* Define a mobile tap highlight color (iOS 1.1.1+) */
