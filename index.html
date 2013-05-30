@@ -15,7 +15,7 @@
 
 		<!-- Title, desc -->
 		<title>Cardinal - Build more with less.</title>
-		<meta name="description" content="Cardinal is a small, “mobile first” CSS framework with some useful default styles, scalable typography, and a simple responsive grid system.">
+		<meta name="description" content="Cardinal is a small, “mobile first” CSS framework with some useful default styles, scalable typography, reusable modules, and a simple responsive grid system.">
 
 		<!-- Favicons: http://cbrac.co/11ZzQkJ -->
 
@@ -211,15 +211,22 @@ video {
 							<div class="grid-item desk-one_half">
 								<h3>Usage</h3>
 
-								<pre><code>&lt;div class=&quot;grid&quot;&gt;
-	&lt;div class=&quot;grid-item lap-one_half desk-one_fourth&quot;&gt;&lt;/div&gt;
-	&lt;div class=&quot;grid-item lap-one_half desk-one_fourth&quot;&gt;&lt;/div&gt;
-	&lt;div class=&quot;grid-item lap-one_half desk-one_fourth&quot;&gt;&lt;/div&gt;
-	&lt;div class=&quot;grid-item lap-one_half desk-one_fourth&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-								<p>The above can be described as:</p>
+								<dl class="island">
+									<dt>.grid</dt>
+									<dd>Element becomes a grid wrapper.</dd>
 
-								<blockquote><p>“a grid with four 100% width items, which become 50% width items on lap devices, and 25% width items on desktop devices.”</p></blockquote>
+									<dt>.grid-item</dt>
+									<dd>Element becomes a grid item.</dd>
+
+									<dt>.one_half, .two_thirds, .four_fifths, etc.</dt>
+									<dd>Element becomes a specific width of its parent.</dd>
+
+									<dt>.lap-*</dt>
+									<dd>Element’s width changes on devices you rest in your lap (eg. tablets).</dd>
+
+									<dt>.desk-*</dt>
+									<dd>Element’s width changes on devices that remain on your desk (eg. an iMac)</dd>
+								</dl>
 							</div>
 						</div>
 
