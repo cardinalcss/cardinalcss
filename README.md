@@ -38,7 +38,7 @@ Cardinal supports most modern browsers:
 
 ## Getting started
 
-You can read the full documentation at [http://cardinalcss.com](http://cardinalcss.com), which provides detailed explanations, examples, and demostrations.
+You can read the full documentation at [http://cardinalcss.com](http://cardinalcss.com), which provides detailed explanations, examples, and demostrations. These docs will improve over time, but there should be enough there to get you started.
 
 ## Versioning
 
@@ -54,7 +54,7 @@ Cardinal will be maintained using the [Semantic Versioning](http://semver.org/) 
 
 Find something broken? Have ideas or feature requests? Please [submit an issue](https://github.com/cbracco/Cardinal/issues/new) here on Github. Or, if you are feeling especially motivated, write some code and submit a pull request! 
 
-When doing so, please checkout a new feature branch, and submit your pull request from it. Do not submit pull requests from your `master` branch.
+When doing so, please checkout a new feature branch, and submit your pull request from it. Do not submit pull requests from your `master` branch. Please and thank you.
 
 ## Colophon
 
