@@ -1,29 +1,49 @@
-# Cardinal
-
-<a href="http://cbracco.github.io/Cardinal/">
-	<img src="http://cbracco.github.io/Cardinal/img/logo.png" width="100px">
+<a href="http://cardinalcss.com">
+	<img src="http://cardinalcss.com/img/logo.png" width="100px">
 </a>
 
-[Pivotal Tracker](https://www.pivotaltracker.com/s/projects/803361) // [View documentation](http://cbracco.github.io/Cardinal/)
+# Cardinal
 
 Cardinal is a small, “[mobile first](http://cbrac.co/116bQqk)” CSS framework with some useful default styles, scalable typography, reusable modules, and a simple responsive grid system.
 
-## What does that mean?
+[Pivotal Tracker](https://www.pivotaltracker.com/s/projects/803361) // [View documentation](http://cardinalcss.com)
+
+### What does that mean?
 
 This framework is for building responsive web applications. It’s not meant to be simply “bolted on” to a project like [Twitter Bootstrap](http://getbootstrap.com) or [Zurb’s Foundation](http://foundation.zurb.com); it’s a starting point that you will want to customize and build upon to suit your application or project.
 
 Cardinal provides a new approach to scaling web typography and layout across multiple devices. It places **little emphasis on pixel-precision**, but does not restrict its usage. Instead, Cardinal leverages the power of the `rem` unit to make it simpler to scale the type and layout of **the entire application** for different devices.
 
-## Who should use this?
+### Who should use this?
 
 Designers and developers who want to build well-organized, responsive web applications *without losing their minds* should use Cardinal.
 
 The purpose of this framework is to make it easier to rapidly prototype, build, scale, and maintain CSS for responsive web applications. Cardinal omits many aesthetic design decisions often bog down larger, more complicated CSS frameworks, leaving the design and creativity up to you.
 
-## Getting started
-
-You can read the full documentation at [http://cbracco.github.io/Cardinal/](http://cbracco.github.io/Cardinal/), which provides detailed explanations, examples, and demostrations.
-
-## Browser support
+### Browser support
 
 Cardinal supports many modern browsers (Google Chrome, Mozilla Firefox, Safari, Opera, IE9+).
+
+## Installing
+
+[Download it](https://github.com/cbracco/Cardinal/archive/master.zip).
+
+## Getting started
+
+You can read the full documentation at [http://cardinalcss.com](http://cardinalcss.com), which provides detailed explanations, examples, and demostrations.
+
+## Versioning
+
+Cardinal will be maintained using the [Semantic Versioning](http://semver.org/) guidelines as best I can. From here on out, releases will be numbered using the following format:
+
+`major.minor.patch`
+
+* Breaking backwards compatibility increments `major`, while resetting `minor` and `patch`.
+* New code that does not break backwards compatibility increments `minor`, while resetting `patch`.
+* Bug fixes and other small changes increment `patch`.
+
+## Contributing
+
+Find something broken? Have ideas or feature requests? Please [submit an issue](https://github.com/cbracco/Cardinal/issues/new) here on Github. Or, if you are feeling especially motivated, write some code and submit a pull request! 
+
+When doing so, please checkout a new feature branch, and submit your pull request from it. Do not submit pull requests from your `master` branch.
