@@ -22,7 +22,15 @@ The purpose of this framework is to make it easier to rapidly prototype, build, 
 
 ### Browser support
 
-Cardinal supports many modern browsers (Google Chrome, Mozilla Firefox, Safari, Opera, IE9+).
+Cardinal supports most modern browsers: 
+
+* Google Chrome 25+
+* Mozilla Firefox 19+
+* Safari 5.1+
+* iOS Safari 4.0+
+* Opera 12.1+
+* Android 2.1+
+* Internet Explorer 9+
 
 ## Installing
 
@@ -47,3 +55,7 @@ Cardinal will be maintained using the [Semantic Versioning](http://semver.org/) 
 Find something broken? Have ideas or feature requests? Please [submit an issue](https://github.com/cbracco/Cardinal/issues/new) here on Github. Or, if you are feeling especially motivated, write some code and submit a pull request! 
 
 When doing so, please checkout a new feature branch, and submit your pull request from it. Do not submit pull requests from your `master` branch.
+
+## Colophon
+
+Cardinal is a project by [Chris Bracco](http://cbracco.me).
