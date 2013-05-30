@@ -541,8 +541,8 @@ textarea {
 	* .one_half,
 	  .two_thirds,
 	  .four_fifths, etc. - element becomes a specific width of its parent.
-	* .lap-* - element’s width changes on devices you hold in your lap.
-	* .desk-* - element’s width changes on desktop devices.
+	* .lap-* - element’s width changes on devices you place in your lap.
+	* .desk-* - element’s width changes on devices that remain on your desk.
 
 	Example
 	--------------------
@@ -618,7 +618,7 @@ textarea {
 .four_sixths   { width: 66.666%;  }
 .five_sixths   { width: 83.333%;  }
 
-/* Default grid breakpoint for lap devices (eg. tablets) */
+/* Grid breakpoint for devices that sit in your lap (eg. tablets) */
 @media only screen and (min-width: 640px) {
 	/* Gutters */
 	.lap-grid_gutter_half              { margin-left: -1rem; }
@@ -646,7 +646,7 @@ textarea {
 	.lap-five_sixths    { width: 83.333%; }
 }
 
-/* Default grid breakpoint for desktop devices */
+/* Grid breakpoint for devices that remain on your desk (eg. iMac) */
 @media only screen and (min-width: 960px) {
 	/* Gutters */
 	.desk-grid_gutter_half              { margin-left: -1rem; }
