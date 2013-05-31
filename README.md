@@ -36,6 +36,8 @@ Cardinal supports most modern browsers:
 
 [Download it](https://github.com/cbracco/Cardinal/archive/master.zip).
 
+There is a minified version of Cardinal that is included in the `css/` directory of this project, but I would recommend developing with the uncompressed version and using your own build process to minify your CSS for production. That way you only have one HTTP request, and aren’t just slapping Cardinal onto your project (which sort of defeats the purpose of using the framework, anyways).
+
 ## Getting started
 
 You can read the full documentation at [http://cardinalcss.com](http://cardinalcss.com), which provides detailed explanations, examples, and demostrations. These docs will improve over time, but there should be enough there to get you started.
