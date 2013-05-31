@@ -22,7 +22,7 @@ The purpose of this framework is to make it easier to rapidly prototype, build, 
 
 ### Browser support
 
-Cardinal supports most modern browsers: 
+Cardinal supports most modern browsers:
 
 * Google Chrome 25+
 * Mozilla Firefox 19+
@@ -52,7 +52,7 @@ Cardinal will be maintained using the [Semantic Versioning](http://semver.org/) 
 
 ## Contributing
 
-Find something broken? Have ideas or feature requests? Please [submit an issue](https://github.com/cbracco/Cardinal/issues/new) here on Github. Or, if you are feeling especially motivated, write some code and submit a pull request! 
+Find something broken? Have ideas or feature requests? Please [submit an issue](https://github.com/cbracco/Cardinal/issues/new) here on Github. Or, if you are feeling especially motivated, write some code and submit a pull request!
 
 When doing so, please checkout a new feature branch, and submit your pull request from it. Do not submit pull requests from your `master` branch. Please and thank you.
 
