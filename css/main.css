@@ -719,10 +719,6 @@ textarea {
 	Main ($main)
 \*  =======================================================================  */
 
-pre {
-	max-height: 300px;
-}
-
 /* Page */
 .page.active {
 	position: relative;
@@ -779,6 +775,7 @@ pre {
 	background-color: #222;
 	font-size: 15px;
 	-webkit-overflow-scroll: touch;
+	box-sizing: content-box \0/; /* IE9 hack to fix vertical scrollbar issue */
 }
 
 @media only screen and (min-width: 768px) {
@@ -819,7 +816,7 @@ pre {
 	color: #c0c0c0;
 }
 
-/* Main */
+/* Content */
 .content .wrapper {
 	width: 100%;
 	margin: 0;
@@ -832,6 +829,10 @@ pre {
 .content h5,
 .content h6 {
 	letter-spacing: 1px;
+}
+
+.content pre {
+	max-height: 300px;
 }
 
 /* Header */
