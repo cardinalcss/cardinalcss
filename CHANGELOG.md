@@ -1,3 +1,7 @@
+# 0.1.4 (June 1, 2013)
+
+* Added .editorconfig file.
+
 # 0.1.3 (May 31, 2013)
 
 * Added conditional classes on the `html` element for IE9.
