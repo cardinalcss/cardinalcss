@@ -1,7 +1,13 @@
 $(function() {
+	// Menu button toggle
+	$(".menu-button").on("click", function(){
+		$(".page").toggleClass("active");
+		$(".menu").toggleClass("active");
+	});
+
 	// Fallback to .png logo if SVG is not supported
 	if (!Modernizr.svg) {
-		$(".logo img").each(function() {
+		$(".birdy").each(function() {
 			$(this).attr("src", $(this).data("src"));
 		});
 	}

@@ -85,8 +85,8 @@ img::-moz-selection {
 	Description
 	--------------------
 	Cardinal uses a combination of modular scale, unit-less line heights, and
-	`rem` units so that it is easy to resize the typography and layout of
-	your entire application.
+	`rem` units so that it is easy to scale the type and layout across your
+	entire project.
 
 	How it works
 	--------------------
@@ -103,10 +103,11 @@ img::-moz-selection {
 \*  =======================================================================  */
 
 html { font-size: 75%; } /* 12px */
-@media only screen and (min-width: 320px) { html { font-size: 81.25%; } }
-@media only screen and (min-width: 480px) { html { font-size: 87.5%;  } }
-@media only screen and (min-width: 640px) { html { font-size: 100%;   } }
-@media only screen and (min-width: 960px) { html { font-size: 112.5%; } }
+@media only screen and (min-width: 320px)  { html { font-size: 81.25%; } }
+@media only screen and (min-width: 480px)  { html { font-size: 87.5%;  } }
+@media only screen and (min-width: 640px)  { html { font-size: 100%;   } }
+@media only screen and (min-width: 960px)  { html { font-size: 112.5%; } }
+@media only screen and (min-width: 1440px) { html { font-size: 150%;   } }
 
 /**
  * 1. Inherits percentage declared on above <html> as the root `font-size`
@@ -538,8 +539,8 @@ textarea {
 	* .one_half,
 	  .two_thirds,
 	  .four_fifths, etc. - element becomes a specific width of its parent.
-	* .lap-* - element’s width changes on devices you hold in your lap.
-	* .desk-* - element’s width changes on desktop devices.
+	* .lap-* - element’s width changes on devices you place in your lap.
+	* .desk-* - element’s width changes on devices that remain on your desk.
 
 	Example
 	--------------------
@@ -615,7 +616,7 @@ textarea {
 .four_sixths   { width: 66.666%;  }
 .five_sixths   { width: 83.333%;  }
 
-/* Default grid breakpoint for lap devices (eg. tablets) */
+/* Grid breakpoint for devices that sit in your lap (eg. tablets) */
 @media only screen and (min-width: 640px) {
 	/* Gutters */
 	.lap-grid_gutter_half              { margin-left: -1rem; }
@@ -643,7 +644,7 @@ textarea {
 	.lap-five_sixths    { width: 83.333%; }
 }
 
-/* Default grid breakpoint for desktop devices */
+/* Grid breakpoint for devices that remain on your desk (eg. iMac) */
 @media only screen and (min-width: 960px) {
 	/* Gutters */
 	.desk-grid_gutter_half              { margin-left: -1rem; }
@@ -718,44 +719,181 @@ textarea {
 	Main ($main)
 \*  =======================================================================  */
 
-pre.max_height {
-	max-height: 250px;
+pre {
+	max-height: 300px;
 }
 
-.header .wrapper {
+/* Page */
+.page.active {
 	position: relative;
 }
 
-.header h1 {
-	letter-spacing: 0.1rem;
+.page.active,
+.page.active .menu-button,
+.menu.active {
+	left: 180px;
+}
+
+@media only screen and (min-width: 768px) {
+	.page {
+		padding-left: 180px;
+	}
+
+	.page.active {
+		left: 0;
+	}
+}
+
+/* Menu button */
+.menu-button {
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding: 6px 12px;
+	background-color: hsla(0, 0%, 13%, 0.7);
+	color: #fff;
+	text-decoration: none;
+}
+
+@media only screen and (min-width: 768px) {
+	.menu-button {
+		display: none;
+	}
+}
+
+.menu-button:hover {
+	background-color: #222;
+}
+
+/* Menu */
+.menu {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 2;
+	overflow-y: auto;
+	margin-left: -180px;
+	width: 180px;
+	height: 100%;
+	background-color: #222;
+	font-size: 15px;
+	-webkit-overflow-scroll: touch;
+}
+
+@media only screen and (min-width: 768px) {
+	.menu {
+		left: 180px;
+	}
+}
+
+.menu,
+.menu-heading {
+	color: #fff;
+	text-decoration: none;
+	-webkit-font-smoothing: antialiased;
+}
+
+.menu-heading {
+	margin: 0;
+	font-size: 28px;
+}
+
+.menu ul > a:first-child {
+	border-bottom: 1px solid #333;
+}
+
+.menu a {
+	display: block;
+	padding: 0.75rem;
+	text-decoration: none;
+}
+
+.menu li a {
+	color: #787878;
+	font-weight: bold;
+}
+
+.menu li a:hover {
+	background-color: #333;
+	color: #c0c0c0;
+}
+
+/* Main */
+.content .wrapper {
+	width: 100%;
+	margin: 0;
+	padding: 2rem 5%;
+}
+
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+	letter-spacing: 1px;
+}
+
+/* Header */
+.branding {
+	margin-bottom: 0;
+	text-align: center;
+}
+
+.site_name {
 	line-height: 1;
 }
 
-.header .logo {
-	position: absolute;
-	top: 1rem;
-	right: 0;
-	width: 20%;
-	max-width: 210px;
+@media only screen and (min-width: 768px) {
+	.branding {
+		text-align: left;
+	}
+
+	.birdy,
+	hgroup {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.birdy {
+		margin-right: 5%;
+	}
 }
 
-.toc {
-	display: none;
-	font-size: 0.75rem;
+@media only screen and (min-width: 960px) {
+	.branding .wrapper {
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+	}
 }
 
-.toc .well {
-	padding: 0.75rem;
+@media only screen and (min-width: 1140px) {
+	.branding {
+		text-align: center;
+	}
 }
 
+/* Footer */
 .credits .wrapper {
 	position: relative;
+	width: 100%;
+	padding: 1rem 5%;
+	margin: 0;
 }
 
-.top {
+@media only screen and (min-width: 1280px) {
+	.content .wrapper,
+	.credits .wrapper {
+		margin: 0 auto;
+		max-width: 1440px;
+	}
+}
+
+/* “Back to top” button */
+.btn_top {
 	position: absolute;
 	top: -1.333rem;
-	right: 0;
+	right: 5%;
 	width: 2.665rem;
 	height: 2.665rem;
 	-webkit-border-radius: 50%;
@@ -770,35 +908,12 @@ pre.max_height {
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
 	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=75);
 	opacity: 0.75;
-	-webkit-transition: opacity 0.2s ease-in-out;
-	-moz-transition:    opacity 0.2s ease-in-out;
-	-o-transition:      opacity 0.2s ease-in-out;
-	transition:         opacity 0.2s ease-in-out;
-	-webkit-backface-visibility: hidden;
 }
 
-.top:hover {
+.btn_top:hover {
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
 	opacity: 1.0;
-}
-
-@media only screen and (min-width: 640px) {
-	.toc {
-		display: block;
-	}
-}
-
-@media only screen and (min-width: 768px) {
-	.toc {
-		font-size: 0.875rem;
-	}
-}
-
-@media only screen and (min-width: 960px) {
-	.toc .well {
-		padding: 1rem 1.333rem;
-	}
 }
 
 /*  =======================================================================  *\

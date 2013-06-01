@@ -2,7 +2,7 @@
 <!--[if lt IE 7]>      <html class="no_js lt_ie9 lt_ie8 lt_ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no_js lt_ie9 lt_ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no_js lt_ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no_js"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 	<head>
 		<!-- Meta -->
 		<meta charset="utf-8">
@@ -10,64 +10,70 @@
 		<meta http-equiv="ClearType" content="true">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<!-- DNS Prefetch -->
+		<!-- DNS prefetch -->
 		<link rel="dns-prefetch" href="//www.google-analytics.com">
 
 		<!-- Title, desc -->
-		<title>Cardinal - Build more with less.</title>
+		<title>Cardinal &mdash; Build more with less.</title>
 		<meta name="description" content="Cardinal is a small, “mobile first” CSS framework with some useful default styles, scalable typography, reusable modules, and a simple responsive grid system.">
 
 		<!-- Favicons: http://cbrac.co/11ZzQkJ -->
 
 		<!-- Styles -->
-		<!-- <link rel="stylesheet" href="css/main.css"> -->
-		<link rel="stylesheet" href="css/main.min.css">
+		<link rel="stylesheet" href="css/main.css">
 
-		<!-- Scripts -->
+		<!-- Modernizr -->
 		<script src="js/vendor/modernizr-2.6.2.min.js"></script>
 	</head>
 
 	<body>
-		<header class="strip header">
-			<div class="wrapper">
-				<hgroup>
-					<h1>Cardinal</h1>
-					<h2 class="text_large subheading">Build more with less.</h2>
-				</hgroup>
-
-				<a href="https://github.com/cbracco/Cardinal" title="View & contribute on Github" class="btn">View on Github</a> // <a href="https://github.com/cbracco/Cardinal/archive/master.zip" title="Download from Github" class="btn">Download</a>
-
-				<img src="img/logo.svg" data-src="img/logo.png" class="logo">
-			</div>
-		</header>
-
-		<div class="main wrapper">
-			<div class="grid">
-				<div class="grid-item lap-one_fourth">
-					<nav class="toc">
-						<ul class="well">
-							<h4>Contents</h4>
-							<li><a href="#overview">Overview</a></li>
-							<li><a href="#naming">Class names</a></li>
-							<li><a href="#base">Base</a></li>
-							<li><a href="#typography">Typography</a></li>
-							<li><a href="#non-typography">Non-typography</a></li>
-							<li><a href="#grids">Grids</a></li>
-							<li><a href="#modules">Modules</a></li>
-							<li><a href="#main">Main</a></li>
-							<li><a href="#helpers">Helpers</a></li>
-							<li><a href="#print">Print</a></li>
-							<li><a href="#js">Javascript</a></li>
-							<li><a href="#browsers">Browser support</a></li>
-						</ul>
-					</nav>
+		<div class="page">
+			<a href="#" class="menu-button">
+				<svg width="26" height="26">
+					<path d="M0,8 26,8" stroke="#fff" stroke-width="4"></path>
+					<path d="M0,15 26,15" stroke="#fff" stroke-width="4"></path>
+					<path d="M0,22 26,22" stroke="#fff" stroke-width="4"></path>
+				</svg>
+			</a>
+			
+			<nav class="menu">
+				<div class="menu-inner">
+					<ul>
+						<a href="#"><h3 class="menu-heading">Cardinal</h3></a>
+						<li><a href="#overview">Overview</a></li>
+						<li><a href="#naming">Class names</a></li>
+						<li><a href="#base">Base</a></li>
+						<li><a href="#typography">Typography</a></li>
+						<li><a href="#non-typography">Non-typography</a></li>
+						<li><a href="#grids">Grids</a></li>
+						<li><a href="#modules">Modules</a></li>
+						<li><a href="#main">Main</a></li>
+						<li><a href="#helpers">Helpers</a></li>
+						<li><a href="#print">Print</a></li>
+						<li><a href="#js">Javascript</a></li>
+						<li><a href="#browsers">Browser support</a></li>
+					</ul>
 				</div>
+			</nav>
 
-				<div class="grid-item lap-three_fourths">
-					<div class="content">
-						<p class="text_large">Cardinal is a small, “<a href="http://cbrac.co/113eY5h">mobile first</a>” CSS framework with some useful default styles, scalable typography, reusable modules, and a simple responsive grid system.</p>
+			<header class="branding strip">
+				<div class="wrapper">
+					<img src="img/icon.svg" data-src="img/icon.png" alt="Cardinal" class="birdy one_fifth desk-one_fourth">
+				
+					<hgroup>
+						<h1 class="site_name">Cardinal</h1>
+						<h2 class="text_large subheading">Build more with less.</h2>
 
-						<a name="overview"></a>
+						<a href="https://github.com/cbracco/Cardinal/archive/master.zip" title="Download from Github" class="btn">Download</a> // <a href="https://github.com/cbracco/Cardinal" title="View & contribute on Github" class="btn">View on Github</a>
+					</hgroup>
+				</div>
+			</header>
+
+			<div class="content">
+				<div class="wrapper">
+					<p class="text_large">Cardinal is a small, “<a href="http://cbrac.co/113eY5h">mobile first</a>” CSS framework with some useful default styles, scalable typography, reusable modules, and a simple responsive grid system.</p>
+
+					<section id="overview">
 						<h2>Overview</h2>
 
 						<p class="text_medium">Designers and developers who want to build well-organized, responsive web applications without <em>losing their minds</em>, should use Cardinal.</p>
@@ -77,8 +83,9 @@
 						<p>This framework is for building responsive web applications. It’s not meant to be simply “bolted on” to a project, like you can do with <a href="http://getbootstrap.com/">Twitter Bootstrap</a> or <a href="http://foundation.zurb.com/">Zurb’s Foundation</a>; it’s a starting point that you will want to customize and build upon to suit your application or project.</p>
 
 						<p>Cardinal omits many aesthetic design decisions that often bog down larger, more complicated CSS frameworks. It leaves the design and creativity up to you.</p>
+					</section>
 
-						<a name="naming"></a>
+					<section id="naming">
 						<h2>Naming conventions</h2>
 
 						<div class="grid">
@@ -93,8 +100,6 @@
 							<div class="grid-item lap-one_half">
 								<p>Use hyphens to separate the name of the block from the name of the element, and use underscores to separate words in long names.</p>
 
-								<p>Here is an example of a simple “post” block:</p>
-
 								<pre><code>.post         {} /* Block */
 .post-image   {} /* Element */
 .post-title   {} /* Element */
@@ -103,8 +108,9 @@
 .post.last    {} /* Modifier */</code></pre>
 							</div>
 						</div>
+					</section>
 
-						<a name="base"></a>
+					<section id="base">
 						<h2>Base</h2>
 
 						<pre><code>article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,video{display:inline-block}audio:not([controls]){display:none;height:0}[hidden]{display:none}html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}a:focus{outline:thin dotted}a:active,a:hover{outline:0}h1{font-size:2em;margin:.67em 0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}mark{background:#ff0;color:#000}code,kbd,pre,samp{font-family:monospace,serif;font-size:1em}pre{white-space:pre-wrap}q{quotes:"\201C" "\201D" "\2018" "\2019"}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:0}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}button,input{line-height:normal}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}</code></pre>
@@ -126,8 +132,9 @@
 }</code></pre>
 							</div>
 						</div>
+					</section>
 
-						<a name="typography"></a>
+					<section id="typography">
 						<h2>Typography</h2>
 
 						<p>Following a “<a href="http://cbrac.co/113eY5h">mobile first</a>” approach, Cardinal starts with small devices and cascades up to desktop and larger screen resolutions.</p>
@@ -195,8 +202,9 @@ video {
 						<pre><code>textarea {
 	resize: vertical;
 }</code></pre>
+					</section>
 
-						<a name="grids"></a>
+					<section id="grids">
 						<h2>Grids</h2>
 
 						<div class="grid">
@@ -593,8 +601,9 @@ video {
 								<div class="island">&nbsp;</div>
 							</div>
 						</div>
+					</section>
 
-						<a name="modules"></a>
+					<section id="modules">
 						<h2>Modules</h2>
 
 						<p>Cardinal also includes some reusable classes for common layout modules like page wrappers, content wells, and 100% width containers.</p>
@@ -632,62 +641,70 @@ video {
 								<p>A well is a content block that you want to appear sunken from its surrounding area.</p>
 							</div>
 						</div>
+					</section>
 
-						<a name="main"></a>
+					<section id="main">
 						<h2>Main</h2>
 
-						<p>This is where you put all of your uber-clever styles for your application/website/whatever!</p>
+						<pre><code>/*  =======================================================================  *\
+	Main ($main)
+\*  =======================================================================  */</code></pre>
 
-						<div class="grid">
-							<div class="grid-item lap-one_half desk-one_third">
-								<a name="helpers"></a>
-								<h2>Helpers</h2>
-								<p>A lot of helpers from the fantastic <a href="http://cbrac.co/Zt9YqM">HTML5 Boilerplate</a> are used here, along with some custom helpers for quick text alignment, margins, paddings, and floats.</p>
-							</div>
+						<p>This is where you place all of your application/website/whatever’s styles.</p>
+					</section>
 
-							<div class="grid-item lap-one_half desk-one_third">
-								<a name="print"></a>
-								<h2>Print</h2>
+					<div class="grid">
+						<section id="helpers" class="grid-item lap-one_half">
+							<h2>Helpers</h2>
+							
+							<p>A lot of helpers from the fantastic <a href="http://cbrac.co/Zt9YqM">HTML5 Boilerplate</a> are used here, along with some custom helpers for quick text alignment, margins, paddings, and floats.</p>
+						</section>
 
-								<p>This was also copy and pasted directly from <a href="http://cbrac.co/Zt9YqM">HTML5 Boilerplate</a>, and inlined to avoid an extra HTTP request.</p>
-							</div>
+						<section id="print" class="grid-item lap-one_half">
+							<h2>Print</h2>
 
-							<div class="grid-item lap-one_half desk-one_third">
-								<a name="js"></a>
-								<h2>Javascript</h2>
-								<p>Pulled from the <a href="http://cbrac.co/Zt9YqM">HTML5 Boilerplate</a>, the <code>plugins.js</code> file includes is a small function to avoid console errors in browsers that lack a console.</p>
-							</div>
+							<p>This was also copy and pasted directly from <a href="http://cbrac.co/Zt9YqM">HTML5 Boilerplate</a>, and inlined to avoid an extra HTTP request.</p>
+						</section>
 
-							<div class="grid-item lap-one_half desk-one_whole">
-								<a name="browsers"></a>
+						<section id="js" class="grid-item lap-one_half">
+							<h2>Javascript</h2>
+							
+							<p>Pulled from the <a href="http://cbrac.co/Zt9YqM">HTML5 Boilerplate</a>, the <code>plugins.js</code> file includes a small function to avoid console errors in browsers that lack a console.</p>
+
+							<p>An asynchronous Google Analytics snippet is also present at the bottom of <code>index.html</code>.</p>
+						</section>
+
+						<section id="browsers" class="grid-item lap-one_half">
+							<div class="well">
 								<h2>Browser support</h2>
 
 								<p>Cardinal supports most modern browsers (Chrome, Mozilla Firefox, Safari, Opera, IE9+). For a quick look at device support for the <code>rem</code> unit, <a href="http://caniuse.com/#search=rem">visit here</a>.</p>
 							</div>
-						</div>
+						</section>
 					</div>
 				</div>
 			</div>
+
+			<footer class="credits strip margin_none">
+				<div class="wrapper">
+					<p class="margin_none">code by @<a href="http://cbracco.me">cbracco</a> // illustration by @<a href="https://twitter.com/varberakis">varberakis</a></p>
+
+					<a href="#" class="btn btn_top" style="font-family: 'Arial Unicode MS';">&uarr;</a>
+				</div>
+			</footer>
 		</div>
 
-		<footer class="credits strip margin_none">
-			<div class="wrapper">
-				<p class="margin_none">code by @<a href="http://cbracco.me">cbracco</a> // illustration by @<a href="https://twitter.com/varberakis">varberakis</a></p>
-
-				<a href="#" class="top" style="font-family: 'Arial Unicode MS';">&uarr;</a>
-			</div>
-		</footer>
+		<!-- jQuery -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
+		<script>window.jQuery || document.write("<script src=\"js/vendor/jquery-1.10.0.min.js\"><\/script>")</script>
 
 		<!-- Scripts -->
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-		<script>window.jQuery || document.write('<script src="js/vendor/jquery-2.0.0.min.js"><\/script>')</script>
-
 		<script src="js/plugins.js"></script>
 		<script src="js/main.js"></script>
 
-		<!-- Google Analytics -->
+		<!-- Google Analytics: change UA-XXXXXXXX-XX to be your site’s ID. -->
 		<script>
-			var _gaq=[["_setAccount","UA-12953082-11"],["_trackPageview"]];
+			var _gaq=[["_setAccount","UA-XXXXXXXX-XX"],["_trackPageview"]];
 			(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
 			g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
 			s.parentNode.insertBefore(g,s)}(document,"script"));
