@@ -775,7 +775,11 @@ textarea {
 	background-color: #222;
 	font-size: 15px;
 	-webkit-overflow-scroll: touch;
-	box-sizing: content-box \0/; /* IE9 hack to fix vertical scrollbar issue */
+}
+
+/* IFix vertical scrollbar issue in IE9 */
+.ie9 .menu {
+	box-sizing: content-box;
 }
 
 @media only screen and (min-width: 768px) {
