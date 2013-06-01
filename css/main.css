@@ -745,6 +745,7 @@ textarea {
 	position: fixed;
 	top: 0;
 	left: 0;
+	z-index: 2;
 	padding: 6px 12px;
 	background-color: hsla(0, 0%, 13%, 0.7);
 	color: #fff;
