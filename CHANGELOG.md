@@ -1,3 +1,7 @@
+# 0.1.3 (May 31, 2013)
+
+* Added conditional classes on the `html` element for IE9.
+
 # 0.1.2 (May 31, 2013)
 
 * Added blank lines to the end of each file, because old habits die hard.
