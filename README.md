@@ -67,4 +67,4 @@ When doing so, please checkout a new feature branch, and submit your pull reques
 
 ## Colophon
 
-Cardinal is a project by [Chris Bracco](http://cbracco.me). Illustration by [Justin Varberakis](http://twitter.com/varberakis)
+Cardinal is a project by [Chris Bracco](http://cbracco.me). Illustration by [Justin Varberakis](http://twitter.com/varberakis).
