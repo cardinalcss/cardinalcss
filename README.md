@@ -41,7 +41,7 @@ To fix this, simply change the element’s `box-sizing` value to `content-box` i
 
 ## Installing
 
-[Download it](https://github.com/cbracco/Cardinal/archive/master.zip).
+* [Download it](https://github.com/cbracco/Cardinal/archive/master.zip).
 
 There is a minified version of Cardinal that is included in the `css/` directory of this project, but I would recommend developing with the uncompressed version and using your own build process to minify your CSS for production. That way you only have one HTTP request, and you aren’t just slapping Cardinal onto your project (which sort of defeats the purpose of using the framework, anyways).
 
