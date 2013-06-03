@@ -47,7 +47,7 @@ There is a minified version of Cardinal that is included in the `css/` directory
 
 ## Getting started
 
-You can read the full documentation at [http://cardinalcss.com](http://cardinalcss.com), which provides detailed explanations, examples, and demostrations. These docs will improve over time, but there should be enough there to get you started.
+You can [read the full documentation](http://cardinalcss.com) to get started. It provides detailed explanations and examples. These docs will improve over time, but there is plenty of information already there to digest.
 
 ## Versioning
 
