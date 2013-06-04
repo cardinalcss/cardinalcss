@@ -1,3 +1,7 @@
+# 0.1.5 (June 3, 2013)
+
+* Removed IE8 conditional classes on the `html` element, since Cardinal only supports IE9+ at the moment.
+
 # 0.1.4 (June 1, 2013)
 
 * Added .editorconfig file.
