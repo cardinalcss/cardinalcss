@@ -21,7 +21,7 @@
 		<!-- Favicons: http://cbrac.co/11ZzQkJ -->
 
 		<!-- Styles -->
-		<link rel="stylesheet" href="css/main.min.css">
+		<link rel="stylesheet" href="css/main.css">
 
 		<!-- Modernizr -->
 		<script src="js/vendor/modernizr-2.6.2.min.js"></script>
@@ -36,7 +36,7 @@
 					<path d="M0,22 26,22" stroke="#fff" stroke-width="4"></path>
 				</svg>
 			</button>
-			
+
 			<nav class="menu">
 				<div class="menu-inner">
 					<ul>
@@ -47,7 +47,8 @@
 						<li><a href="#typography">Typography</a></li>
 						<li><a href="#non-typography">Non-typography</a></li>
 						<li><a href="#grids">Grids</a></li>
-						<li><a href="#modules">Modules</a></li>
+						<li><a href="#layout">Layout</a></li>
+						<li><a href="#buttons">Buttons</a></li>
 						<li><a href="#main">Main</a></li>
 						<li><a href="#helpers">Helpers</a></li>
 						<li><a href="#print">Print</a></li>
@@ -60,7 +61,7 @@
 			<header class="branding strip">
 				<div class="wrapper">
 					<img src="img/icon.svg" data-src="img/icon.png" alt="Cardinal" class="birdy one_fifth desk-one_fourth">
-				
+
 					<hgroup>
 						<h1 class="site_name">Cardinal</h1>
 						<h2 class="text_large subheading">Build more with less.</h2>
@@ -604,8 +605,8 @@ video {
 						</div>
 					</section>
 
-					<section id="modules">
-						<h2>Modules</h2>
+					<section id="layout">
+						<h2>Layout</h2>
 
 						<p>Cardinal also includes some reusable classes for common layout modules like page wrappers, content wells, and 100% width containers.</p>
 
@@ -644,6 +645,360 @@ video {
 						</div>
 					</section>
 
+					<section id="buttons">
+						<h2>Buttons</h2>
+
+						<div class="grid">
+							<div class="grid-item">
+								<pre><code>&lt;button type="button" class="button [style] [size || width] [shape || state]"&gt;Button text&lt;/button&gt;</code></pre>
+							</div>
+
+							<div class="grid-item lap-one_half">
+								<p>Buttons are common web UI components, and some basic button styles are available with Cardinal. While minimal, there is a large variety of style, shape, and size combinations that you can create.</p>
+
+								<p>By chaining CSS classes together, you can quickly style anchor links <code>&lt;a href=""&gt;</code>, button tags <code>&lt;button&gt;</code>, and input <code>&lt;input type="submit"&gt;</code> elements.</p>
+
+								<p>To start, simply add the <code>.button</code> class to an element. This provides the base styles that can be further modified by adding more specific classes.</p>
+
+								<p><em>When using the <code>.block</code> class, you must also specify the button width by using the “widths” classes that were mentioned in the <a href="#grids">“Grids” section</a> above.</em></p>
+							</div>
+
+							<div class="grid-item lap-one_half">
+								<dl class="island">
+									<h3>Usage</h3>
+
+									<hr>
+
+									<dt>.button</dt>
+									<dd>Element becomes the default, “flat” style button.</dd>
+
+									<dt>.hollow, .chunky, .glossy</dt>
+									<dd>Element becomes the specified button style.</dd>
+
+									<dt>.mini, .small, .large, .block</dt>
+									<dd>Element becomes the specified button size.</dd>
+
+									<dt>.one_half, .two_thirds, .four_fifths, etc.</dt>
+									<dd>Element becomes a specific width of its parent.</dd>
+
+									<dt>.rounded, .pill</dt>
+									<dd>Element becomes the specified button shape.</dd>
+
+									<dt>.disabled, .button[disabled]</dt>
+									<dd>Element becomes a button that is not usable.</dd>
+								</dl>
+							</div>
+						</div>
+
+						<h3>Flat style</h3>
+
+						<h4>Default shape</h4>
+
+						<p>
+							<button type="button" class="button mini">.button.mini</button>
+							<button type="button" class="button mini disabled">.button.mini.disabled</button>
+						</p>
+
+						<p>
+							<button type="button" class="button small">.button.small</button>
+							<button type="button" class="button small disabled">.button.small.disabled</button>
+						</p>
+
+						<p>
+							<button type="button" class="button">.button</button>
+							<button type="button" class="button disabled">.button.disabled</button>
+						</p>
+
+						<p>
+							<button type="button" class="button large">.button.large</button>
+							<button type="button" class="button large disabled">.button.large.disabled</button>
+						</p>
+
+						<p><button type="button" class="button block one_whole">.button.block.one_whole</button></p>
+						<p><button type="button" class="button block one_whole disabled">.button.block.one_whole.disabled</button></p>
+
+						<h4>Rounded shape</h4>
+
+						<p>
+							<button type="button" class="button mini rounded">.button.mini.rounded</button>
+							<button type="button" class="button mini rounded disabled">.button.mini.rounded.disabled</button>
+						</p>
+
+						<p>
+							<button type="button" class="button small rounded">.button.small.rounded</button>
+							<button type="button" class="button small rounded disabled">.button.small.rounded.disabled</button>
+						</p>
+
+						<p>
+							<button type="button" class="button rounded">.button.rounded</button>
+							<button type="button" class="button rounded disabled">.button.rounded.disabled</button>
+						</p>
+
+						<p>
+							<button type="button" class="button large rounded">.button.large.rounded</button>
+							<button type="button" class="button large rounded disabled">.button.large.rounded.disabled</button>
+						</p>
+
+						<p><button type="button" class="button block one_whole rounded">.button.block.one_whole.rounded</button></p>
+						<p><button type="button" class="button block one_whole rounded disabled">.button.block.one_whole.rounded.disabled</button></p>
+
+						<h4>“Pill” shape</h4>
+
+						<p>
+							<button type="button" class="button mini pill">.button.mini.pill</button>
+							<button type="button" class="button mini pill disabled">.button.mini.pill.disabled</button>
+						</p>
+
+						<p>
+							<button type="button" class="button small pill">.button.small.pill</button>
+							<button type="button" class="button small pill disabled">.button.small.pill.disabled</button>
+						</p>
+
+						<p>
+							<button type="button" class="button pill">.button.pill</button>
+							<button type="button" class="button pill disabled">.button.pill.disabled</button>
+						</p>
+
+						<p>
+							<button type="button" class="button large pill">.button.large.pill</button>
+							<button type="button" class="button large pill disabled">.button.large.pill.disabled</button>
+						</p>
+
+						<p><button type="button" class="button block pill one_whole">.button.block.one_whole.pill</button></p>
+						<p><button type="button" class="button block pill one_whole disabled">.button.block.one_whole.pill.disabled</button></p>
+
+						<h3>Hollow style</h3>
+
+						<h4>Default shape</h4>
+
+						<p>
+							<button type="button" class="button hollow mini">.button.hollow.mini</button>
+							<button type="button" class="button hollow mini disabled">.button.hollow.mini.disabled</button>
+						</p>
+
+						<p>
+							<button type="button" class="button hollow small">.button.hollow.small</button>
+							<button type="button" class="button hollow small disabled">.button.hollow.small.disabled</button>
+						</p>
+
+						<p>
+							<button type="button" class="button hollow">.button.hollow</button>
+							<button type="button" class="button hollow disabled">.button.hollow.disabled</button>
+						</p>
+
+						<p>
+							<button type="button" class="button hollow large">.button.hollow.large</button>
+							<button type="button" class="button hollow large disabled">.button.hollow.large.disabled</button>
+						</p>
+
+						<p><button type="button" class="button hollow block one_whole">.button.hollow.block.one_whole</button></p>
+						<p><button type="button" class="button hollow block one_whole disabled">.button.hollow.block.one_whole.disabled</button></p>
+
+						<h4>Rounded shape</h4>
+
+						<p>
+							<button type="button" class="button hollow mini rounded">.button.hollow.mini.rounded</button>
+							<button type="button" class="button hollow mini rounded disabled">.button.hollow.mini.rounded.disabled</button>
+						</p>
+
+						<p>
+							<button type="button" class="button hollow small rounded">.button.hollow.small.rounded</button>
+							<button type="button" class="button hollow small rounded disabled">.button.hollow.small.rounded.disabled</button>
+						</p>
+
+						<p>
+							<button type="button" class="button hollow rounded">.button.hollow.rounded</button>
+							<button type="button" class="button hollow rounded disabled">.button.hollow.rounded.disabled</button>
+						</p>
+
+						<p>
+							<button type="button" class="button hollow large rounded">.button.hollow.large.rounded</button>
+							<button type="button" class="button hollow large rounded disabled">.button.hollow.large.rounded.disabled</button>
+						</p>
+
+						<p><button type="button" class="button hollow block one_whole rounded">.button.hollow.block.one_whole.rounded</button></p>
+						<p><button type="button" class="button hollow block one_whole rounded disabled">.button.hollow.block.one_whole.rounded.disabled</button></p>
+
+						<h4>“Pill” shape</h4>
+
+						<p>
+							<button type="button" class="button hollow mini pill">.button.hollow.mini.pill</button>
+							<button type="button" class="button hollow mini pill disabled">.button.hollow.mini.pill.disabled</button>
+						</p>
+
+						<p>
+							<button type="button" class="button hollow small pill">.button.hollow.small.pill</button>
+							<button type="button" class="button hollow small pill disabled">.button.hollow.small.pill.disabled</button>
+						</p>
+
+						<p>
+							<button type="button" class="button hollow pill">.button.hollow.pill</button>
+							<button type="button" class="button hollow pill disabled">.button.hollow.pill.disabled</button>
+						</p>
+
+						<p>
+							<button type="button" class="button hollow large pill">.button.hollow.large.pill</button>
+							<button type="button" class="button hollow large pill disabled">.button.hollow.large.pill.disabled</button>
+						</p>
+
+						<p><button type="button" class="button hollow block one_whole pill">.button.hollow.block.one_whole.pill</button></p>
+						<p><button type="button" class="button hollow block one_whole pill disabled">.button.hollow.block.one_whole.pill.disabled</button></p>
+
+						<h3>Chunky style</h3>
+
+						<h4>Default shape</h4>
+
+						<p>
+							<button type="button" class="button chunky mini">.button.chunky.mini</button>
+							<button type="button" class="button chunky mini disabled">.button.chunky.mini.disabled</button>
+						</p>
+
+						<p>
+							<button type="button" class="button chunky small">.button.chunky.small</button>
+							<button type="button" class="button chunky small disabled">.button.chunky.small.disabled</button>
+						</p>
+
+						<p>
+							<button type="button" class="button chunky">.button.chunky</button>
+							<button type="button" class="button chunky disabled">.button.chunky.disabled</button>
+						</p>
+
+						<p>
+							<button type="button" class="button chunky large">.button.chunky.large</button>
+							<button type="button" class="button chunky large disabled">.button.chunky.large.disabled</button>
+						</p>
+
+						<p><button type="button" class="button chunky block one_whole">.button.chunky.block.one_whole</button></p>
+						<p><button type="button" class="button chunky block one_whole disabled">.button.chunky.block.one_whole.disabled</button></p>
+
+						<h4>Rounded shape</h4>
+
+						<p>
+							<button type="button" class="button chunky mini rounded">.button.chunky.mini.rounded</button>
+							<button type="button" class="button chunky mini rounded disabled">.button.chunky.mini.rounded.disabled</button>
+						</p>
+
+						<p>
+							<button type="button" class="button chunky small rounded">.button.chunky.small.rounded</button>
+							<button type="button" class="button chunky small rounded disabled">.button.chunky.small.rounded.disabled</button>
+						</p>
+
+						<p>
+							<button type="button" class="button chunky rounded">.button.chunky.rounded</button>
+							<button type="button" class="button chunky rounded disabled">.button.chunky.rounded.disabled</button>
+						</p>
+
+						<p>
+							<button type="button" class="button chunky large rounded">.button.chunky.large.rounded</button>
+							<button type="button" class="button chunky large rounded disabled">.button.chunky.large.rounded.disabled</button>
+						</p>
+
+						<p><button type="button" class="button chunky block one_whole rounded">.button.chunky.block.one_whole.rounded</button></p>
+						<p><button type="button" class="button chunky block one_whole rounded disabled">.button.chunky.block.one_whole.rounded.disabled</button></p>
+
+						<h4>“Pill” shape</h4>
+
+						<p>
+							<button type="button" class="button chunky mini pill">.button.chunky.mini.pill</button>
+							<button type="button" class="button chunky mini pill disabled">.button.chunky.mini.pill.disabled</button>
+						</p>
+
+						<p>
+							<button type="button" class="button chunky small pill">.button.chunky.small.pill</button>
+							<button type="button" class="button chunky small pill disabled">.button.chunky.small.pill.disabled</button>
+						</p>
+
+						<p>
+							<button type="button" class="button chunky pill">.button.chunky.pill</button>
+							<button type="button" class="button chunky pill disabled">.button.chunky.pill.disabled</button>
+						</p>
+
+						<p>
+							<button type="button" class="button chunky large pill">.button.chunky.large.pill</button>
+							<button type="button" class="button chunky large pill disabled">.button.chunky.large.pill.disabled</button>
+						</p>
+
+						<p><button type="button" class="button chunky block one_whole pill">.button.chunky.block.one_whole.pill</button></p>
+						<p><button type="button" class="button chunky block one_whole pill disabled">.button.chunky.block.one_whole.pill.disabled</button></p>
+
+						<h3>Glossy style</h3>
+
+						<h4>Default shape</h4>
+
+						<p>
+							<button type="button" class="button glossy mini">.button.glossy.mini</button>
+							<button type="button" class="button glossy mini disabled">.button.glossy.mini.disabled</button>
+						</p>
+
+						<p>
+							<button type="button" class="button glossy small">.button.glossy.small</button>
+							<button type="button" class="button glossy small disabled">.button.glossy.small.disabled</button>
+						</p>
+
+						<p>
+							<button type="button" class="button glossy">.button.glossy</button>
+							<button type="button" class="button glossy disabled">.button.glossy.disabled</button>
+						</p>
+
+						<p>
+							<button type="button" class="button glossy large">.button.glossy.large</button>
+							<button type="button" class="button glossy large disabled">.button.glossy.large.disabled</button>
+						</p>
+
+						<p><button type="button" class="button glossy block one_whole">.button.glossy.block.one_whole</button></p>
+						<p><button type="button" class="button glossy block one_whole disabled">.button.glossy.block.one_whole.disabled</button></p>
+
+						<h4>Rounded shape</h4>
+
+						<p>
+							<button type="button" class="button glossy mini rounded">.button.glossy.mini.rounded</button>
+							<button type="button" class="button glossy mini rounded disabled">.button.glossy.mini.rounded.disabled</button>
+						</p>
+
+						<p>
+							<button type="button" class="button glossy small rounded">.button.glossy.small.rounded</button>
+							<button type="button" class="button glossy small rounded disabled">.button.glossy.small.rounded.disabled</button>
+						</p>
+
+						<p>
+							<button type="button" class="button glossy rounded">.button.glossy.rounded</button>
+							<button type="button" class="button glossy rounded disabled">.button.glossy.rounded.disabled</button>
+						</p>
+
+						<p>
+							<button type="button" class="button glossy large rounded">.button.glossy.large.rounded</button>
+							<button type="button" class="button glossy large rounded disabled">.button.glossy.large.rounded.disabled</button>
+						</p>
+
+						<p><button type="button" class="button glossy block one_whole rounded">.button.glossy.block.one_whole.rounded</button></p>
+						<p><button type="button" class="button glossy block one_whole rounded disabled">.button.glossy.block.one_whole.rounded.disabled</button></p>
+
+						<h4>“Pill” shape</h4>
+
+						<p>
+							<button type="button" class="button glossy mini pill">.button.glossy.mini.pill</button>
+							<button type="button" class="button glossy mini pill disabled">.button.glossy.mini.pill.disabled</button>
+						</p>
+
+						<p>
+							<button type="button" class="button glossy small pill">.button.glossy.small.pill</button>
+							<button type="button" class="button glossy small pill disabled">.button.glossy.small.pill.disabled</button>
+						</p>
+
+						<p>
+							<button type="button" class="button glossy pill">.button.glossy.pill</button>
+							<button type="button" class="button glossy pill disabled">.button.glossy.pill.disabled</button>
+						</p>
+
+						<p>
+							<button type="button" class="button glossy large pill">.button.glossy.large.pill</button>
+							<button type="button" class="button glossy large pill disabled">.button.glossy.large.pill.disabled</button>
+						</p>
+
+						<p><button type="button" class="button glossy block one_whole pill">.button.glossy.block.one_whole.pill</button></p>
+						<p><button type="button" class="button glossy block one_whole pill disabled">.button.glossy.block.one_whole.pill.disabled</button></p>
+					</section>
+
 					<section id="main">
 						<h2>Main</h2>
 
@@ -651,36 +1006,48 @@ video {
 	Main ($main)
 \*  =======================================================================  */</code></pre>
 
-						<p>This is where you place all of your application/website/whatever’s styles.</p>
+						<p>This is where you place all of <em>your</em> custom, project-specific styles.</p>
 					</section>
 
 					<div class="grid">
 						<section id="helpers" class="grid-item lap-one_half">
 							<h2>Helpers</h2>
-							
-							<p>A lot of helpers from the fantastic <a href="http://cbrac.co/Zt9YqM">HTML5 Boilerplate</a> are used here, along with some custom helpers for quick text alignment, margins, paddings, and floats.</p>
+
+							<p>A lot of helpers from the fantastic <a href="http://cbrac.co/Zt9YqM">HTML5 Boilerplate</a> are included here, along with some custom helpers for quick control over text alignment, margins, paddings, and floats.</p>
 						</section>
 
 						<section id="print" class="grid-item lap-one_half">
 							<h2>Print</h2>
 
-							<p>This was also copy and pasted directly from <a href="http://cbrac.co/Zt9YqM">HTML5 Boilerplate</a>, and inlined to avoid an extra HTTP request.</p>
+							<p>These styles make your project more printer-friendly. They were also copy and pasted directly from the <a href="http://cbrac.co/Zt9YqM">HTML5 Boilerplate</a> project, and inlined to avoid an extra HTTP request.</p>
 						</section>
 
-						<section id="js" class="grid-item lap-one_half">
+						<section id="js" class="grid-item lap-one_third">
 							<h2>Javascript</h2>
-							
+
 							<p>Pulled from the <a href="http://cbrac.co/Zt9YqM">HTML5 Boilerplate</a>, the <code>plugins.js</code> file includes a small function to avoid console errors in browsers that lack a console.</p>
 
 							<p>An asynchronous Google Analytics snippet is also present at the bottom of <code>index.html</code>.</p>
 						</section>
 
-						<section id="browsers" class="grid-item lap-one_half">
-							<div class="well">
-								<h2>Browser support</h2>
+						<section id="browsers" class="grid-item lap-two_thirds">
+							<h2>Browser support</h2>
 
-								<p>Cardinal supports most modern browsers (Chrome, Mozilla Firefox, Safari, Opera, IE9+). For a quick look at device support for the <code>rem</code> unit, <a href="http://caniuse.com/#search=rem">visit here</a>.</p>
+							<p>Cardinal supports most modern browsers:</p>
+
+							<div class="island">
+								<ul class="margin_none">
+									<li>Google Chrome 25+</li>
+									<li>Mozilla Firefox 19+</li>
+									<li>Safari 5.1+</li>
+									<li>iOS Safari 4.0+</li>
+									<li>Opera 12.1+</li>
+									<li>Android 2.1+</li>
+									<li>Internet Explorer 9+</li>
+								</ul>
 							</div>
+
+							<p>For a quick look at device support for the <code>rem</code> unit, <a href="http://caniuse.com/#search=rem">visit here</a>.</p>
 						</section>
 					</div>
 				</div>
@@ -703,12 +1070,15 @@ video {
 		<script src="js/plugins.js"></script>
 		<script src="js/main.js"></script>
 
-		<!-- Google Analytics: change UA-XXXXXXXX-XX to be your site’s ID. -->
+		<!-- Google Analytics (async) -->
 		<script>
-			var _gaq=[["_setAccount","UA-XXXXXXXX-XX"],["_trackPageview"]];
-			(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-			g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
-			s.parentNode.insertBefore(g,s)}(document,"script"));
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-12953082-13', 'cardinalcss.com');
+			ga('send', 'pageview');
 		</script>
 	</body>
 </html>
