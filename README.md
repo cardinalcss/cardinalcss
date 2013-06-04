@@ -35,7 +35,7 @@ Cardinal supports most modern browsers:
 
 ### Known issues
 
-There is a bug in IE9 (big suprise) when `box-sizing: border-box;`, `position: fixed;`, and `overflow: auto;` are declared on the same element. The scrollbar’s width is subtracted twice, making the element’s width incorrect.
+There is a bug in IE9 (big suprise) when `box-sizing: border-box;`, `position: fixed;`, and `overflow: auto;` are declared on the same element. The scrollbar’s width is subtracted twice, making the element’s width incorrect. I came across this bug while making the off-canvas navigation for this project’s [documentation website](http://cardinalcss.com).
 
 To fix this, simply change the element’s `box-sizing` value to `content-box` instead of `border-box`, and voila.
 

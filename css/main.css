@@ -5,17 +5,18 @@
 	02. Typography..........Basic typography elements
 	03. Non-typography......Important elements that are not type-based
 	04. Grids...............A simple, nestable grid system and width classes
-	05. Modules.............Common UI modules (tables, buttons, forms, etc)
-	06. Main................Your styles go here!
-	07. Helpers.............Some useful, global classes
-	08. Print...............Inlined, barebones print styles
+	05. Layout..............Common layout items (wrappers, wells, islands, etc)
+	06. Buttons.............Basic styles, sizes, and shapes
+	07. Main................Your styles go here!
+	08. Helpers.............Some useful, global classes
+	09. Print...............Inlined, barebones print styles
 \*  =======================================================================  */
 
 /*  =======================================================================  *\
 	Base ($base)
 \*  =======================================================================  */
 
-/* normalize.css v2.1.2 | MIT License | git.io/normalize */
+/*! normalize.css v2.1.2 | MIT License | git.io/normalize */
 article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,video{display:inline-block}audio:not([controls]){display:none;height:0}[hidden]{display:none}html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}a:focus{outline:thin dotted}a:active,a:hover{outline:0}h1{font-size:2em;margin:.67em 0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}mark{background:#ff0;color:#000}code,kbd,pre,samp{font-family:monospace,serif;font-size:1em}pre{white-space:pre-wrap}q{quotes:"\201C" "\201D" "\2018" "\2019"}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:0}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}button,input{line-height:normal}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}
 
 /* `border-box`... ALL THE THINGS - http://cbrac.co/RQrDL5 */
@@ -103,10 +104,11 @@ img::-moz-selection {
 \*  =======================================================================  */
 
 html { font-size: 75%; } /* 12px */
-@media only screen and (min-width: 320px) { html { font-size: 81.25%; } }
-@media only screen and (min-width: 480px) { html { font-size: 87.5%;  } }
-@media only screen and (min-width: 640px) { html { font-size: 100%;   } }
-@media only screen and (min-width: 960px) { html { font-size: 112.5%; } }
+@media only screen and (min-width: 320px)  { html { font-size: 81.25%; } }
+@media only screen and (min-width: 480px)  { html { font-size: 87.5%;  } }
+@media only screen and (min-width: 640px)  { html { font-size: 100%;   } }
+@media only screen and (min-width: 960px)  { html { font-size: 112.5%; } }
+@media only screen and (min-width: 1440px) { html { font-size: 150%;   } }
 
 /**
  * 1. Inherits percentage declared on above <html> as the root `font-size`
@@ -672,7 +674,7 @@ textarea {
 }
 
 /*  =======================================================================  *\
-	Modules ($modules)
+	Layout ($layout)
 \*  =======================================================================  */
 
 /* 100% width container */
@@ -696,6 +698,11 @@ textarea {
 	width: 90%;
 }
 
+.island,
+.well {
+	margin: 0 0 1rem;
+}
+
 .island {
 	padding: 1rem;
 	background: #efefef;
@@ -712,6 +719,277 @@ textarea {
 .island .island,
 .well .well {
 	background: #dedede;
+}
+
+/*  =======================================================================  *\
+	Buttons ($buttons)
+
+	Usage
+	--------------------
+	class="button [style] [size && || width] [shape && || state]"
+
+	* .button - element becomes the default, “flat” style button.
+	* .hollow,
+	  .chunky,
+	  .glossy - element becomes the specified button style.
+	* .mini,
+	  .small,
+	  .large,
+	  .block - element becomes the specified button size.
+	* .one_half,
+	  .two_thirds,
+	  .four_fifths, etc. - element becomes a specific width of its parent.
+	* .rounded,
+	  .pill - element becomes the specified button shape.
+	* .disabled,
+	  .button[disabled] - element becomes a button that is not usable.
+
+	Examples
+	--------------------
+	* <button type="button" class="button large one_whole rounded"></button>
+	* <a href="" class="button mini chunky one_half pill disabled"></a>
+	* <input type="submit" class="button glossy" value="Send message">
+\*  =======================================================================  */
+
+/* Base */
+.button {
+	display: inline-block;
+	margin: 0;
+	padding: 0.563rem 0.844rem;
+	border: 0 none;
+	background: #e5e5e5;
+	color: #444;
+	text-align: center;
+	text-decoration: none;
+	font-size: 1rem;
+	line-height: 1.5;
+	cursor: pointer;
+}
+
+.button:hover {
+	background: #ececec;
+	color: #222;
+	cursor: pointer;
+}
+
+.button:active {
+	background: #e7e7e7;
+	-webkit-box-shadow: inset 0 0 6px hsla(0, 0%, 0%, 0.20);
+	-moz-box-shadow:    inset 0 0 6px hsla(0, 0%, 0%, 0.20);
+	box-shadow:         inset 0 0 6px hsla(0, 0%, 0%, 0.20);
+}
+
+.button:focus {
+	outline: thin dotted #333;
+	outline: 5px auto -webkit-focus-ring-color;
+	outline-offset: -2px;
+}
+
+/* Styles */
+.button.hollow {
+	background: transparent;
+	-webkit-box-shadow: inset 0 0 0 3px #eaeaea;
+	-moz-box-shadow:    inset 0 0 0 3px #eaeaea;
+	box-shadow:         inset 0 0 0 3px #eaeaea;
+}
+
+.button.hollow:hover {
+	background: #ececec;
+	-webkit-box-shadow: inset 0 0 0 3px #ececec;
+	-moz-box-shadow:    inset 0 0 0 3px #ececec;
+	box-shadow:         inset 0 0 0 3px #ececec;
+}
+
+.button.hollow:active {
+	background: #e7e7e7;
+	-webkit-box-shadow: inset 0 0 6px hsla(0, 0%, 0%, 0.20);
+	-moz-box-shadow:    inset 0 0 6px hsla(0, 0%, 0%, 0.20);
+	box-shadow:         inset 0 0 6px hsla(0, 0%, 0%, 0.20);
+}
+
+.button.chunky {
+	-webkit-box-shadow: inset 0 -2px 0 hsla(0, 0%, 0%, 0.12);
+	-moz-box-shadow:    inset 0 -2px 0 hsla(0, 0%, 0%, 0.12);
+	box-shadow:         inset 0 -2px 0 hsla(0, 0%, 0%, 0.12);
+}
+
+.button.chunky:active {
+	-webkit-box-shadow: inset 0 2px 3px hsla(0, 0%, 0%, 0.2);
+	-moz-box-shadow:    inset 0 2px 3px hsla(0, 0%, 0%, 0.2);
+	box-shadow:         inset 0 2px 3px hsla(0, 0%, 0%, 0.2);
+}
+
+.button.glossy {
+	border: 1px solid #c5c5c5;
+	background-image: -moz-linear-gradient(
+		top,
+		hsla(0, 0%, 100%, 1.0) 0%,
+		hsla(0, 0%, 95%, 1.0) 50%,
+		hsla(0, 0%, 88%, 1.0) 51%,
+		hsla(0, 0%, 96%, 1.0) 100%
+	); /* FF 3.6+ */
+	background-image: -webkit-gradient(
+		linear,
+		left top,
+		left bottom,
+		color-stop(0%,   hsla(0, 0%, 100%, 1.0)),
+		color-stop(50%,  hsla(0, 0%, 95%, 1.0)),
+		color-stop(51%,  hsla(0, 0%, 88%, 1.0)),
+		color-stop(100%, hsla(0, 0%, 96%, 1.0))
+	); /* Chrome, Safari 4+ */
+	background-image: -webkit-linear-gradient(
+		top,
+		hsla(0, 0%, 100%, 1.0) 0%,
+		hsla(0, 0%, 95%, 1.0) 50%,
+		hsla(0, 0%, 88%, 1.0) 51%,
+		hsla(0, 0%, 96%, 1.0) 100%
+	); /* Chrome 10+, Safari 5.1+ */
+	background-image: -o-linear-gradient(
+		top,
+		hsla(0, 0%, 100%, 1.0) 0%,
+		hsla(0, 0%, 95%, 1.0) 50%,
+		hsla(0, 0%, 88%, 1.0) 51%,
+		hsla(0, 0%, 96%, 1.0) 100%
+	); /* Opera 11.10+ */
+	background-image: -ms-linear-gradient(
+		top,
+		hsla(0, 0%, 100%, 1.0) 0%,
+		hsla(0, 0%, 95%, 1.0) 50%,
+		hsla(0, 0%, 88%, 1.0) 51%,
+		hsla(0, 0%, 96%, 1.0) 100%
+	); /* IE 10+ */
+	background-image: linear-gradient(
+		to bottom,
+		hsla(0, 0%, 100%, 1.0) 0%,
+		hsla(0, 0%, 95%, 1.0) 50%,
+		hsla(0, 0%, 88%, 1.0) 51%,
+		hsla(0, 0%, 96%, 1.0) 100%
+	); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient(
+		startColorstr='#ffffff',
+		endColorstr='#f6f6f6',
+		GradientType=0
+	); /* IE 6-9 */
+}
+
+.button.glossy:hover {
+	background-image: -moz-linear-gradient(
+		top,
+		hsla(0, 0%, 100%, 1.0) 0%,
+		hsla(0, 0%, 98%, 1.0) 50%,
+		hsla(0, 0%, 91%, 1.0) 51%,
+		hsla(0, 0%, 99%, 1.0) 100%
+	); /* FF3.6+ */
+	background-image: -webkit-gradient(
+		linear,
+		left top,
+		left bottom,
+		color-stop(0%, hsla(0, 0%, 100%, 1.0)),
+		color-stop(50%, hsla(0, 0%, 98%, 1.0)),
+		color-stop(51%, hsla(0, 0%, 91%, 1.0)),
+		color-stop(100%, hsla(0, 0%, 99%, 1.0))
+	); /* Chrome, Safari4+ */
+	background-image: -webkit-linear-gradient(
+		top,
+		hsla(0, 0%, 100%, 1.0) 0%,
+		hsla(0, 0%, 98%, 1.0) 50%,
+		hsla(0, 0%, 91%, 1.0) 51%,
+		hsla(0, 0%, 99%, 1.0) 100%
+	); /* Chrome10+, Safari5.1+ */
+	background-image: -o-linear-gradient(
+		top,
+		hsla(0, 0%, 100%, 1.0) 0%,
+		hsla(0, 0%, 98%, 1.0) 50%,
+		hsla(0, 0%, 91%, 1.0) 51%,
+		hsla(0, 0%, 99%, 1.0) 100%
+	); /* Opera 11.10+ */
+	background-image: -ms-linear-gradient(
+		top,
+		hsla(0, 0%, 100%, 1.0) 0%,
+		hsla(0, 0%, 98%, 1.0) 50%,
+		hsla(0, 0%, 91%, 1.0) 51%,
+		hsla(0, 0%, 99%, 1.0) 100%
+	); /* IE10+ */
+	background-image: linear-gradient(
+		to bottom,
+		hsla(0, 0%, 100%, 1.0) 0%,
+		hsla(0, 0%, 98%, 1.0) 50%,
+		hsla(0, 0%, 91%, 1.0) 51%,
+		hsla(0, 0%, 99%, 1.0) 100%
+	); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient(
+		startColorstr='#ffffff',
+		endColorstr='#fafafa',
+		GradientType=0
+	); /* IE6-9 */
+}
+
+/* Sizes */
+.button.mini {
+	padding: 0.238rem 0.563rem;
+	font-size: 0.8125rem;
+}
+
+@media only screen and (min-width: 640px) {
+	.button.mini {
+		font-size: 0.75rem;
+	}
+}
+
+.button.small {
+	padding: 0.317rem 0.75rem;
+	font-size: 0.875rem;
+}
+
+.button.large,
+.button.block {
+	padding: 1rem 1.333rem;
+	font-size: 1.125rem;
+	line-height: 1.333;
+}
+
+.button.block {
+	display: block;
+}
+
+/* Shapes */
+.button.rounded {
+	-webkit-border-radius: 0.356rem;
+	-moz-border-radius:    0.356rem;
+	border-radius:         0.356rem;
+}
+
+.button.pill {
+	-webkit-border-radius: 9999rem;
+	-moz-border-radius:    9999rem;
+	border-radius:         9999rem;
+}
+
+/* States */
+.button.disabled,
+.button.disabled:hover,
+.button.disabled:active,
+.button[disabled] {
+	background: #e6e6e6 !important;
+	-webkit-box-shadow: none !important;
+	-moz-box-shadow:    none !important;
+	box-shadow:         none !important;
+	color: #505050 !important;
+	text-shadow: none !important;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=65)";
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=65);
+	opacity: 0.65;
+	cursor: not-allowed !important;
+}
+
+.button.hollow.disabled,
+.button.hollow.disabled:hover,
+.button.hollow.disabled:active,
+.button.hollow[disabled] {
+	background: transparent !important;
+	-webkit-box-shadow: inset 0 0 0 3px #eaeaea !important;
+	-moz-box-shadow:    inset 0 0 0 3px #eaeaea !important;
+	box-shadow:         inset 0 0 0 3px #eaeaea !important;
 }
 
 /*  =======================================================================  *\
