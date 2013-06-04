@@ -1,3 +1,7 @@
+# 0.2.1 (June 1, 2013)
+
+- Word-wrapped/hyphenated more elements per @danielzilli’s [suggestion](https://github.com/cbracco/Cardinal/issues/1).
+
 # 0.2.0 (June 1, 2013)
 
 - **NEW!** Added classes for button styles.
