@@ -392,7 +392,11 @@ ul li ol {
 	margin-bottom: 0;
 }
 
-p {
+p,
+table,
+textarea,
+td,
+th {
 	-webkit-hyphens: auto;
 	-moz-hyphens:    auto;
 	-ms-hyphens:     auto;
