@@ -1186,17 +1186,14 @@ textarea {
 	position: absolute;
 	top: -1.333rem;
 	right: 5%;
-	width: 2.665rem;
-	height: 2.665rem;
+	padding: 0.75rem;
 	-webkit-border-radius: 50%;
 	-moz-border-radius:    50%;
 	border-radius:         50%;
 	background-color: #bb2122;
-	color: #fff;
 	text-align: center;
 	text-decoration: none;
-	line-height: 2.665rem;
-	font-size: 1.333rem;
+	line-height: 0;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
 	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=75);
 	opacity: 0.75;
@@ -1206,6 +1203,21 @@ textarea {
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
 	opacity: 1.0;
+}
+
+.icon {
+	display: inline-block;
+	width: 1.5rem;
+	height: 1.5rem;
+	background-image: url("../img/icons.svg");
+	-webkit-background-size: 100% 100%;
+	-moz-background-size:    100% 100%;
+	background-size:         100% 100%;
+	background-repeat: no-repeat;
+}
+
+.icon-arrow_up {
+	background-position: 0 0;
 }
 
 /*  =======================================================================  *\
