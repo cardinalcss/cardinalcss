@@ -1,5 +1,5 @@
 <a href="http://cardinalcss.com">
-	<img src="http://cardinalcss.com/img/icon.png" width="150px">
+	<img src="http://cardinalcss.com/img/logo.png" width="150px">
 </a>
 
 # Cardinal
