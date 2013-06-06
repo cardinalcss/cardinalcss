@@ -1091,10 +1091,6 @@ textarea {
 	display: block;
 	padding: 0.75rem;
 	text-decoration: none;
-	-webkit-transition: all 0.2s ease-in-out;
-	-moz-transition:    all 0.2s ease-in-out;
-	-o-transition:      all 0.2s ease-in-out;
-	transition:         all 0.2s ease-in-out;
 }
 
 .menu li a {
@@ -1104,6 +1100,11 @@ textarea {
 
 .menu li a:hover {
 	background-color: #333;
+	color: #c0c0c0;
+}
+
+.menu li.current a {
+	background-color: #444;
 	color: #c0c0c0;
 }
 
