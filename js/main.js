@@ -27,25 +27,37 @@ $(function() {
 	var menu = $(".menu ul");
 	var menu_link = $(".menu a");
 
-	menu_link.on("touchstart click", function(e) {
+	// Set a flag for drag
+	var flag = false;
+	menu_link.on("touchmove", function() {
+		flag = true;
+	});
+
+	menu_link.on("touchend click", function(e) {
 		// Prevent the default event
 		e.stopPropagation();
 		e.preventDefault();
 
-		if(e.handled !== true) {
-			// Animate to the corresponding section
-			$('html, body').animate({ scrollTop: $(this.hash).offset().top }, 500);
-
-			// Remove the “active” class from other parent items
-			menu.children().removeClass();
-
-			// Add the class to current item’s parent
-			$(this).parent().addClass("current");
-
-			// Set e.handled to true
-			e.handled = true;
+		// If it was a drag, do nothing, and reset the flag
+		if(flag) {
+			flag = false;
+			return;
 		} else {
-			return false;
+			if(e.handled !== true) {
+				// Animate to the corresponding section
+				$('html, body').animate({ scrollTop: $(this.hash).offset().top }, 500);
+
+				// Remove the “active” class from other parent items
+				menu.children().removeClass();
+
+				// Add the class to current item’s parent
+				$(this).parent().addClass("current");
+
+				// Set e.handled to true
+				e.handled = true;
+			} else {
+				return false;
+			}
 		}
 	});
 
