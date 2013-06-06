@@ -45,7 +45,7 @@ $(function() {
 		} else {
 			if(e.handled !== true) {
 				// Animate to the corresponding section
-				$('html, body').animate({ scrollTop: $(this.hash).offset().top }, 500);
+				$('html, body').scrollTop($(this.hash).offset().top);
 
 				// Remove the “active” class from other parent items
 				menu.children().removeClass();
