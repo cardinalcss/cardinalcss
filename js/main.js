@@ -73,7 +73,7 @@ $(function() {
 
 		if(e.handled !== true) {
 			// Animate to the corresponding section
-			$('html, body').animate({ scrollTop: $(this.hash).offset().top }, 500);
+			$('html, body').scrollTop($(this.hash).offset().top);
 
 			// Set e.handled to true
 			e.handled = true;
