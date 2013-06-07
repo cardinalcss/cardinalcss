@@ -1002,7 +1002,7 @@ textarea {
 	Tables ($tables)
 \*  =======================================================================  */
 
-/* Default */
+/* Borderless */
 .table {
 	max-width: 100%;
 	width: 100%;
@@ -1071,8 +1071,8 @@ textarea {
 	border-bottom: 1px solid #d0d0d0;
 }
 
-/* Stripes */
-.table.stripes tbody > tr:nth-child(odd) > td {
+/* Stripe */
+.table.stripe tbody > tr:nth-child(odd) > td {
 	background-color: #f8f8f8;
 }
 
