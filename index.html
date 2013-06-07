@@ -1004,9 +1004,52 @@ video {
 						<h2>Tables</h2>
 
 						<div class="grid">
+							<div class="grid-item desk-one_third">
+								<p>Tables are important HTML elements that can be tricky to style across multiple devices. Cardinal makes it easy for you add some basic table layouts and styles.</p>
+
+								<p>Start by adding the <code>.table</code> class to a <code>&lt;table&gt;</code> element. This gives the table a basic layout with flexible table cells.</p>
+
+								<p>If you want to use a table header and make it stand out, simply wrap that table row with the <code>&lt;thead&gt;</code> element, and use <code>&lt;th&gt;</code> elements for the cells instead of <code>&lt;td&gt;</code>.</p>
+
+								<p>For table footers, use the <code>&lt;tfoot&gt;</code> element, and use <code>&lt;td&gt;</code> for the cells.</p>
+							</div>
+
+							<div class="grid-item desk-two_thirds">
+								<dl class="well">
+									<h3>Usage</h3>
+
+									<hr>
+
+									<dt>.table</dt>
+									<dd>Table is given the default layout.</dd>
+
+									<dt>.table.border_rows</dt>
+									<dd>Table is given border styles on the rows only.</dd>
+
+									<dt>.table.border_all</dt>
+									<dd>Table is given border styles on all table cells.</dd>
+
+									<dt>.table.border</dt>
+									<dd>Table is given an outer border.</dd>
+
+									<dt>.table.border.border_rows</dt>
+									<dd>Table is given an outer border, and border styles on the rows.</dd>
+
+									<dt>.table.border.border_all</dt>
+									<dd>Table is given an outer border, and border styles on all table cells.</dd>
+
+									<dt>.table.stripe</dt>
+									<dd>Table is given rows with alternating background colors.</dd>
+								</dl>
+							</div>
+						</div>
+
+						<h3>Examples</h3>
+
+						<div class="grid">
 							<div class="grid-item lap-one_half">
-								<h3>Default</h3>
-								<h4 class="subheading">no &lt;thead&gt; element</h4>
+								<h4>Borderless</h4>
+								<p>No <code>&lt;thead&gt;</code> or <code>&lt;tfoot&gt;</code></p>
 
 								<pre><code>&lt;table class="table"&gt;
 	&lt;tr&gt;
@@ -1061,34 +1104,14 @@ video {
 											<td>Awesome</td>
 											<td>true</td>
 										</tr>
-
-										<tr>
-											<td>6</td>
-											<td>7854</td>
-											<td>Crazy</td>
-											<td>true</td>
-										</tr>
-
-										<tr>
-											<td>7</td>
-											<td>1246</td>
-											<td>Messy</td>
-											<td>false</td>
-										</tr>
-
-										<tr>
-											<td>8</td>
-											<td>6545</td>
-											<td>Groovy</td>
-											<td>false</td>
-										</tr>
 									</tbody>
 								</table>
 							</div>
 
 							<div class="grid-item lap-one_half">
-								<h3>Default</h3>
-								<h4 class="subheading">with &lt;thead&gt; element</h4>
+								<h4>Borderless</h4>
+								<p><code>thead&gt;</code> & <code>&lt;tfoot&gt;</code></p>
+
 								<pre><code>&lt;table class="table"&gt;
 	&lt;thead&gt;
 		&lt;tr&gt;
@@ -1098,6 +1121,15 @@ video {
 			&lt;th&gt;Thing 3&lt;/th&gt;
 		&lt;/tr&gt;
 	&lt;/thead&gt;
+
+	&lt;tfoot&gt;
+		&lt;tr&gt;
+			&lt;td&gt;#&lt;/td&gt;
+			&lt;td&gt;Thing 1&lt;/td&gt;
+			&lt;td&gt;Thing 2&lt;/td&gt;
+			&lt;td&gt;Thing 3&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tfoot&gt;
 	...
 &lt;/table&gt;</code></pre>
 
@@ -1110,6 +1142,15 @@ video {
 											<th>Thing 3</th>
 										</tr>
 									</thead>
+
+									<tfoot>
+										<tr>
+											<td>#</td>
+											<td>Thing 1</td>
+											<td>Thing 2</td>
+											<td>Thing 3</td>
+										</tr>
+									</tfoot>
 
 									<tbody>
 										<tr>
@@ -1146,34 +1187,14 @@ video {
 											<td>Awesome</td>
 											<td>true</td>
 										</tr>
-
-										<tr>
-											<td>6</td>
-											<td>7854</td>
-											<td>Crazy</td>
-											<td>true</td>
-										</tr>
-
-										<tr>
-											<td>7</td>
-											<td>1246</td>
-											<td>Messy</td>
-											<td>false</td>
-										</tr>
-
-										<tr>
-											<td>8</td>
-											<td>6545</td>
-											<td>Groovy</td>
-											<td>false</td>
-										</tr>
 									</tbody>
 								</table>
 							</div>
 
 							<div class="grid-item lap-one_half">
-								<h3>Border</h3>
-								<h4 class="subheading">no outer border; rows only; no &lt;thead&gt; element</h4>
+								<h4>Row borders</h4>
+								<p>No <code>&lt;thead&gt;</code> or <code>&lt;tfoot&gt;</code></p>
+
 								<pre><code>&lt;table class="table border_rows"&gt;
 	&lt;tr&gt;
 		&lt;th&gt;#&lt;/th&gt;
@@ -1227,34 +1248,14 @@ video {
 											<td>Awesome</td>
 											<td>true</td>
 										</tr>
-
-										<tr>
-											<td>6</td>
-											<td>7854</td>
-											<td>Crazy</td>
-											<td>true</td>
-										</tr>
-
-										<tr>
-											<td>7</td>
-											<td>1246</td>
-											<td>Messy</td>
-											<td>false</td>
-										</tr>
-
-										<tr>
-											<td>8</td>
-											<td>6545</td>
-											<td>Groovy</td>
-											<td>false</td>
-										</tr>
 									</tbody>
 								</table>
 							</div>
 
 							<div class="grid-item lap-one_half">
-								<h3>Border</h3>
-								<h4 class="subheading">no outer border; rows; with &lt;thead&gt; element</h4>
+								<h4>Row borders</h4>
+								<p><code>thead&gt;</code> & <code>&lt;tfoot&gt;</code></p>
+
 								<pre><code>&lt;table class="table border_rows"&gt;
 	&lt;thead&gt;
 		&lt;tr&gt;
@@ -1276,6 +1277,15 @@ video {
 											<th>Thing 3</th>
 										</tr>
 									</thead>
+
+									<tfoot>
+										<tr>
+											<td>#</td>
+											<td>Thing 1</td>
+											<td>Thing 2</td>
+											<td>Thing 3</td>
+										</tr>
+									</tfoot>
 
 									<tbody>
 										<tr>
@@ -1312,34 +1322,14 @@ video {
 											<td>Awesome</td>
 											<td>true</td>
 										</tr>
-
-										<tr>
-											<td>6</td>
-											<td>7854</td>
-											<td>Crazy</td>
-											<td>true</td>
-										</tr>
-
-										<tr>
-											<td>7</td>
-											<td>1246</td>
-											<td>Messy</td>
-											<td>false</td>
-										</tr>
-
-										<tr>
-											<td>8</td>
-											<td>6545</td>
-											<td>Groovy</td>
-											<td>false</td>
-										</tr>
 									</tbody>
 								</table>
 							</div>
 
 							<div class="grid-item lap-one_half">
-								<h3>Border</h3>
-								<h4 class="subheading">no outer border; all cells; no &lt;thead&gt; element</h4>
+								<h4>Row & column borders</h4>
+								<p>No <code>&lt;thead&gt;</code> or <code>&lt;tfoot&gt;</code></p>
+
 								<pre><code>&lt;table class="table border_all"&gt;
 	&lt;tr&gt;
 		&lt;th&gt;#&lt;/th&gt;
@@ -1393,34 +1383,14 @@ video {
 											<td>Awesome</td>
 											<td>true</td>
 										</tr>
-
-										<tr>
-											<td>6</td>
-											<td>7854</td>
-											<td>Crazy</td>
-											<td>true</td>
-										</tr>
-
-										<tr>
-											<td>7</td>
-											<td>1246</td>
-											<td>Messy</td>
-											<td>false</td>
-										</tr>
-
-										<tr>
-											<td>8</td>
-											<td>6545</td>
-											<td>Groovy</td>
-											<td>false</td>
-										</tr>
 									</tbody>
 								</table>
 							</div>
 
 							<div class="grid-item lap-one_half">
-								<h3>Border</h3>
-								<h4 class="subheading">no outer border; all cells; with &lt;thead&gt; element</h4>
+								<h4>Row & column borders</h4>
+								<p><code>thead&gt;</code> & <code>&lt;tfoot&gt;</code></p>
+
 								<pre><code>&lt;table class="table border_all"&gt;
 	&lt;thead&gt;
 		&lt;tr&gt;
@@ -1478,34 +1448,14 @@ video {
 											<td>Awesome</td>
 											<td>true</td>
 										</tr>
-
-										<tr>
-											<td>6</td>
-											<td>7854</td>
-											<td>Crazy</td>
-											<td>true</td>
-										</tr>
-
-										<tr>
-											<td>7</td>
-											<td>1246</td>
-											<td>Messy</td>
-											<td>false</td>
-										</tr>
-
-										<tr>
-											<td>8</td>
-											<td>6545</td>
-											<td>Groovy</td>
-											<td>false</td>
-										</tr>
 									</tbody>
 								</table>
 							</div>
 
 							<div class="grid-item lap-one_half">
-								<h3>Border</h3>
-								<h4 class="subheading">outer border only; no &lt;thead&gt; element</h4>
+								<h4>Outer border</h4>
+								<p>No <code>&lt;thead&gt;</code> or <code>&lt;tfoot&gt;</code></p>
+
 								<pre><code>&lt;table class="table border"&gt;
 	&lt;tr&gt;
 		&lt;th&gt;#&lt;/th&gt;
@@ -1559,34 +1509,14 @@ video {
 											<td>Awesome</td>
 											<td>true</td>
 										</tr>
-
-										<tr>
-											<td>6</td>
-											<td>7854</td>
-											<td>Crazy</td>
-											<td>true</td>
-										</tr>
-
-										<tr>
-											<td>7</td>
-											<td>1246</td>
-											<td>Messy</td>
-											<td>false</td>
-										</tr>
-
-										<tr>
-											<td>8</td>
-											<td>6545</td>
-											<td>Groovy</td>
-											<td>false</td>
-										</tr>
 									</tbody>
 								</table>
 							</div>
 
 							<div class="grid-item lap-one_half">
-								<h3>Border</h3>
-								<h4 class="subheading">outer border only; with &lt;thead&gt; element</h4>
+								<h4>Outer border</h4>
+								<p><code>thead&gt;</code> & <code>&lt;tfoot&gt;</code></p>
+
 								<pre><code>&lt;table class="table border"&gt;
 	&lt;thead&gt;
 		&lt;tr&gt;
@@ -1644,34 +1574,14 @@ video {
 											<td>Awesome</td>
 											<td>true</td>
 										</tr>
-
-										<tr>
-											<td>6</td>
-											<td>7854</td>
-											<td>Crazy</td>
-											<td>true</td>
-										</tr>
-
-										<tr>
-											<td>7</td>
-											<td>1246</td>
-											<td>Messy</td>
-											<td>false</td>
-										</tr>
-
-										<tr>
-											<td>8</td>
-											<td>6545</td>
-											<td>Groovy</td>
-											<td>false</td>
-										</tr>
 									</tbody>
 								</table>
 							</div>
 
 							<div class="grid-item lap-one_half">
-								<h3>Border</h3>
-								<h4 class="subheading">rows only; no &lt;thead&gt; element</h4>
+								<h4>Outer & row borders</h4>
+								<p>No <code>&lt;thead&gt;</code> or <code>&lt;tfoot&gt;</code></p>
+
 								<pre><code>&lt;table class="table border border_rows"&gt;
 	&lt;tr&gt;
 		&lt;th&gt;#&lt;/th&gt;
@@ -1725,34 +1635,14 @@ video {
 											<td>Awesome</td>
 											<td>true</td>
 										</tr>
-
-										<tr>
-											<td>6</td>
-											<td>7854</td>
-											<td>Crazy</td>
-											<td>true</td>
-										</tr>
-
-										<tr>
-											<td>7</td>
-											<td>1246</td>
-											<td>Messy</td>
-											<td>false</td>
-										</tr>
-
-										<tr>
-											<td>8</td>
-											<td>6545</td>
-											<td>Groovy</td>
-											<td>false</td>
-										</tr>
 									</tbody>
 								</table>
 							</div>
 
 							<div class="grid-item lap-one_half">
-								<h3>Border</h3>
-								<h4 class="subheading">rows only; with &lt;thead&gt; element</h4>
+								<h4>Outer & row borders</h4>
+								<p><code>thead&gt;</code> & <code>&lt;tfoot&gt;</code></p>
+
 								<pre><code>&lt;table class="table border border_rows"&gt;
 	&lt;thead&gt;
 		&lt;tr&gt;
@@ -1810,34 +1700,14 @@ video {
 											<td>Awesome</td>
 											<td>true</td>
 										</tr>
-
-										<tr>
-											<td>6</td>
-											<td>7854</td>
-											<td>Crazy</td>
-											<td>true</td>
-										</tr>
-
-										<tr>
-											<td>7</td>
-											<td>1246</td>
-											<td>Messy</td>
-											<td>false</td>
-										</tr>
-
-										<tr>
-											<td>8</td>
-											<td>6545</td>
-											<td>Groovy</td>
-											<td>false</td>
-										</tr>
 									</tbody>
 								</table>
 							</div>
 
 							<div class="grid-item lap-one_half">
-								<h3>Border</h3>
-								<h4 class="subheading">outer border; all cells; no &lt;thead&gt; element</h4>
+								<h4>All borders</h4>
+								<p>No <code>&lt;thead&gt;</code> or <code>&lt;tfoot&gt;</code></p>
+
 								<pre><code>&lt;table class="table border border_all"&gt;
 	&lt;tr&gt;
 		&lt;th&gt;#&lt;/th&gt;
@@ -1891,34 +1761,14 @@ video {
 											<td>Awesome</td>
 											<td>true</td>
 										</tr>
-
-										<tr>
-											<td>6</td>
-											<td>7854</td>
-											<td>Crazy</td>
-											<td>true</td>
-										</tr>
-
-										<tr>
-											<td>7</td>
-											<td>1246</td>
-											<td>Messy</td>
-											<td>false</td>
-										</tr>
-
-										<tr>
-											<td>8</td>
-											<td>6545</td>
-											<td>Groovy</td>
-											<td>false</td>
-										</tr>
 									</tbody>
 								</table>
 							</div>
 
 							<div class="grid-item lap-one_half">
-								<h3>Border</h3>
-								<h4 class="subheading">outer border; all cells; with &lt;thead&gt; element</h4>
+								<h4>All borders</h4>
+								<p><code>thead&gt;</code> & <code>&lt;tfoot&gt;</code></p>
+
 								<pre><code>&lt;table class="table border border_rows"&gt;
 	&lt;thead&gt;
 		&lt;tr&gt;
@@ -1976,26 +1826,131 @@ video {
 											<td>Awesome</td>
 											<td>true</td>
 										</tr>
+									</tbody>
+								</table>
+							</div>
 
+							<div class="grid-item lap-one_half">
+								<h4>Stripes</h4>
+								<p>No <code>&lt;thead&gt;</code> or <code>&lt;tfoot&gt;</code></p>
+
+								<pre><code>&lt;table class="table stripes"&gt;
+	&lt;tr&gt;
+		&lt;th&gt;#&lt;/th&gt;
+		&lt;th&gt;Thing 1&lt;/th&gt;
+		&lt;th&gt;Thing 2&lt;/th&gt;
+		&lt;th&gt;Thing 3&lt;/th&gt;
+	&lt;/tr&gt;
+	...
+&lt;/table&gt;</code></pre>
+
+								<table class="table stripes">
+									<tr>
+										<th>#</th>
+										<th>Thing 1</th>
+										<th>Thing 2</th>
+										<th>Thing 3</th>
+									</tr>
+
+									<tbody>
 										<tr>
-											<td>6</td>
-											<td>7854</td>
-											<td>Crazy</td>
+											<td>1</td>
+											<td>1246</td>
+											<td>Hello</td>
 											<td>true</td>
 										</tr>
 
 										<tr>
-											<td>7</td>
-											<td>1246</td>
-											<td>Messy</td>
+											<td>2</td>
+											<td>4652</td>
+											<td>Goodbye</td>
 											<td>false</td>
 										</tr>
 
 										<tr>
-											<td>8</td>
-											<td>6545</td>
-											<td>Groovy</td>
+											<td>3</td>
+											<td>1657</td>
+											<td>Cheers</td>
 											<td>false</td>
+										</tr>
+
+										<tr>
+											<td>4</td>
+											<td>1498</td>
+											<td>Beers</td>
+											<td>true</td>
+										</tr>
+
+										<tr>
+											<td>5</td>
+											<td>3286</td>
+											<td>Awesome</td>
+											<td>true</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+
+							<div class="grid-item lap-one_half">
+								<h4>Stripes</h4>
+								<p><code>thead&gt;</code> & <code>&lt;tfoot&gt;</code></p>
+
+								<pre><code>&lt;table class="table stripes"&gt;
+	&lt;thead&gt;
+		&lt;tr&gt;
+			&lt;th&gt;#&lt;/th&gt;
+			&lt;th&gt;Thing 1&lt;/th&gt;
+			&lt;th&gt;Thing 2&lt;/th&gt;
+			&lt;th&gt;Thing 3&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	...
+&lt;/table&gt;</code></pre>
+
+								<table class="table stripes">
+									<thead>
+										<tr>
+											<th>#</th>
+											<th>Thing 1</th>
+											<th>Thing 2</th>
+											<th>Thing 3</th>
+										</tr>
+									</thead>
+
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>1246</td>
+											<td>Hello</td>
+											<td>true</td>
+										</tr>
+
+										<tr>
+											<td>2</td>
+											<td>4652</td>
+											<td>Goodbye</td>
+											<td>false</td>
+										</tr>
+
+										<tr>
+											<td>3</td>
+											<td>1657</td>
+											<td>Cheers</td>
+											<td>false</td>
+										</tr>
+
+										<tr>
+											<td>4</td>
+											<td>1498</td>
+											<td>Beers</td>
+											<td>true</td>
+										</tr>
+
+										<tr>
+											<td>5</td>
+											<td>3286</td>
+											<td>Awesome</td>
+											<td>true</td>
 										</tr>
 									</tbody>
 								</table>
