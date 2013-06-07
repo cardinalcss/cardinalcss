@@ -21,7 +21,7 @@
 		<!-- Favicons: http://cbrac.co/11ZzQkJ -->
 
 		<!-- Styles -->
-		<link rel="stylesheet" href="css/main.min.css">
+		<link rel="stylesheet" href="css/main.css">
 
 		<!-- Modernizr -->
 		<script src="js/vendor/modernizr-2.6.2.min.js"></script>
@@ -49,6 +49,7 @@
 						<li><a href="#grids">Grids</a></li>
 						<li><a href="#layout">Layout</a></li>
 						<li><a href="#buttons">Buttons</a></li>
+						<li><a href="#tables">Tables</a></li>
 						<li><a href="#main">Main</a></li>
 						<li><a href="#helpers">Helpers</a></li>
 						<li><a href="#print">Print</a></li>
@@ -997,6 +998,1009 @@ video {
 
 						<p><button type="button" class="button glossy block one_whole pill">.button.glossy.block.one_whole.pill</button></p>
 						<p><button type="button" class="button glossy block one_whole pill disabled">.button.glossy.block.one_whole.pill.disabled</button></p>
+					</section>
+
+					<section id="tables">
+						<h2>Tables</h2>
+
+						<div class="grid">
+							<div class="grid-item lap-one_half">
+								<h3>Default</h3>
+								<h4 class="subheading">no &lt;thead&gt; element</h4>
+
+								<pre><code>&lt;table class="table"&gt;
+	&lt;tr&gt;
+		&lt;th&gt;#&lt;/th&gt;
+		&lt;th&gt;Thing 1&lt;/th&gt;
+		&lt;th&gt;Thing 2&lt;/th&gt;
+		&lt;th&gt;Thing 3&lt;/th&gt;
+	&lt;/tr&gt;
+	...
+&lt;/table&gt;</code></pre>
+
+								<table class="table">
+									<tr>
+										<th>#</th>
+										<th>Thing 1</th>
+										<th>Thing 2</th>
+										<th>Thing 3</th>
+									</tr>
+
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>1246</td>
+											<td>Hello</td>
+											<td>true</td>
+										</tr>
+
+										<tr>
+											<td>2</td>
+											<td>4652</td>
+											<td>Goodbye</td>
+											<td>false</td>
+										</tr>
+
+										<tr>
+											<td>3</td>
+											<td>1657</td>
+											<td>Cheers</td>
+											<td>false</td>
+										</tr>
+
+										<tr>
+											<td>4</td>
+											<td>1498</td>
+											<td>Beers</td>
+											<td>true</td>
+										</tr>
+
+										<tr>
+											<td>5</td>
+											<td>3286</td>
+											<td>Awesome</td>
+											<td>true</td>
+										</tr>
+
+										<tr>
+											<td>6</td>
+											<td>7854</td>
+											<td>Crazy</td>
+											<td>true</td>
+										</tr>
+
+										<tr>
+											<td>7</td>
+											<td>1246</td>
+											<td>Messy</td>
+											<td>false</td>
+										</tr>
+
+										<tr>
+											<td>8</td>
+											<td>6545</td>
+											<td>Groovy</td>
+											<td>false</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+
+							<div class="grid-item lap-one_half">
+								<h3>Default</h3>
+								<h4 class="subheading">with &lt;thead&gt; element</h4>
+								<pre><code>&lt;table class="table"&gt;
+	&lt;thead&gt;
+		&lt;tr&gt;
+			&lt;th&gt;#&lt;/th&gt;
+			&lt;th&gt;Thing 1&lt;/th&gt;
+			&lt;th&gt;Thing 2&lt;/th&gt;
+			&lt;th&gt;Thing 3&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	...
+&lt;/table&gt;</code></pre>
+
+								<table class="table">
+									<thead>
+										<tr>
+											<th>#</th>
+											<th>Thing 1</th>
+											<th>Thing 2</th>
+											<th>Thing 3</th>
+										</tr>
+									</thead>
+
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>1246</td>
+											<td>Hello</td>
+											<td>true</td>
+										</tr>
+
+										<tr>
+											<td>2</td>
+											<td>4652</td>
+											<td>Goodbye</td>
+											<td>false</td>
+										</tr>
+
+										<tr>
+											<td>3</td>
+											<td>1657</td>
+											<td>Cheers</td>
+											<td>false</td>
+										</tr>
+
+										<tr>
+											<td>4</td>
+											<td>1498</td>
+											<td>Beers</td>
+											<td>true</td>
+										</tr>
+
+										<tr>
+											<td>5</td>
+											<td>3286</td>
+											<td>Awesome</td>
+											<td>true</td>
+										</tr>
+
+										<tr>
+											<td>6</td>
+											<td>7854</td>
+											<td>Crazy</td>
+											<td>true</td>
+										</tr>
+
+										<tr>
+											<td>7</td>
+											<td>1246</td>
+											<td>Messy</td>
+											<td>false</td>
+										</tr>
+
+										<tr>
+											<td>8</td>
+											<td>6545</td>
+											<td>Groovy</td>
+											<td>false</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+
+							<div class="grid-item lap-one_half">
+								<h3>Border</h3>
+								<h4 class="subheading">no outer border; rows only; no &lt;thead&gt; element</h4>
+								<pre><code>&lt;table class="table border_rows"&gt;
+	&lt;tr&gt;
+		&lt;th&gt;#&lt;/th&gt;
+		&lt;th&gt;Thing 1&lt;/th&gt;
+		&lt;th&gt;Thing 2&lt;/th&gt;
+		&lt;th&gt;Thing 3&lt;/th&gt;
+	&lt;/tr&gt;
+	...
+&lt;/table&gt;</code></pre>
+
+								<table class="table border_rows">
+									<tr>
+										<th>#</th>
+										<th>Thing 1</th>
+										<th>Thing 2</th>
+										<th>Thing 3</th>
+									</tr>
+
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>1246</td>
+											<td>Hello</td>
+											<td>true</td>
+										</tr>
+
+										<tr>
+											<td>2</td>
+											<td>4652</td>
+											<td>Goodbye</td>
+											<td>false</td>
+										</tr>
+
+										<tr>
+											<td>3</td>
+											<td>1657</td>
+											<td>Cheers</td>
+											<td>false</td>
+										</tr>
+
+										<tr>
+											<td>4</td>
+											<td>1498</td>
+											<td>Beers</td>
+											<td>true</td>
+										</tr>
+
+										<tr>
+											<td>5</td>
+											<td>3286</td>
+											<td>Awesome</td>
+											<td>true</td>
+										</tr>
+
+										<tr>
+											<td>6</td>
+											<td>7854</td>
+											<td>Crazy</td>
+											<td>true</td>
+										</tr>
+
+										<tr>
+											<td>7</td>
+											<td>1246</td>
+											<td>Messy</td>
+											<td>false</td>
+										</tr>
+
+										<tr>
+											<td>8</td>
+											<td>6545</td>
+											<td>Groovy</td>
+											<td>false</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+
+							<div class="grid-item lap-one_half">
+								<h3>Border</h3>
+								<h4 class="subheading">no outer border; rows; with &lt;thead&gt; element</h4>
+								<pre><code>&lt;table class="table border_rows"&gt;
+	&lt;thead&gt;
+		&lt;tr&gt;
+			&lt;th&gt;#&lt;/th&gt;
+			&lt;th&gt;Thing 1&lt;/th&gt;
+			&lt;th&gt;Thing 2&lt;/th&gt;
+			&lt;th&gt;Thing 3&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	...
+&lt;/table&gt;</code></pre>
+
+								<table class="table border_rows">
+									<thead>
+										<tr>
+											<th>#</th>
+											<th>Thing 1</th>
+											<th>Thing 2</th>
+											<th>Thing 3</th>
+										</tr>
+									</thead>
+
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>1246</td>
+											<td>Hello</td>
+											<td>true</td>
+										</tr>
+
+										<tr>
+											<td>2</td>
+											<td>4652</td>
+											<td>Goodbye</td>
+											<td>false</td>
+										</tr>
+
+										<tr>
+											<td>3</td>
+											<td>1657</td>
+											<td>Cheers</td>
+											<td>false</td>
+										</tr>
+
+										<tr>
+											<td>4</td>
+											<td>1498</td>
+											<td>Beers</td>
+											<td>true</td>
+										</tr>
+
+										<tr>
+											<td>5</td>
+											<td>3286</td>
+											<td>Awesome</td>
+											<td>true</td>
+										</tr>
+
+										<tr>
+											<td>6</td>
+											<td>7854</td>
+											<td>Crazy</td>
+											<td>true</td>
+										</tr>
+
+										<tr>
+											<td>7</td>
+											<td>1246</td>
+											<td>Messy</td>
+											<td>false</td>
+										</tr>
+
+										<tr>
+											<td>8</td>
+											<td>6545</td>
+											<td>Groovy</td>
+											<td>false</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+
+							<div class="grid-item lap-one_half">
+								<h3>Border</h3>
+								<h4 class="subheading">no outer border; all cells; no &lt;thead&gt; element</h4>
+								<pre><code>&lt;table class="table border_all"&gt;
+	&lt;tr&gt;
+		&lt;th&gt;#&lt;/th&gt;
+		&lt;th&gt;Thing 1&lt;/th&gt;
+		&lt;th&gt;Thing 2&lt;/th&gt;
+		&lt;th&gt;Thing 3&lt;/th&gt;
+	&lt;/tr&gt;
+	...
+&lt;/table&gt;</code></pre>
+
+								<table class="table border_all">
+									<tr>
+										<th>#</th>
+										<th>Thing 1</th>
+										<th>Thing 2</th>
+										<th>Thing 3</th>
+									</tr>
+
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>1246</td>
+											<td>Hello</td>
+											<td>true</td>
+										</tr>
+
+										<tr>
+											<td>2</td>
+											<td>4652</td>
+											<td>Goodbye</td>
+											<td>false</td>
+										</tr>
+
+										<tr>
+											<td>3</td>
+											<td>1657</td>
+											<td>Cheers</td>
+											<td>false</td>
+										</tr>
+
+										<tr>
+											<td>4</td>
+											<td>1498</td>
+											<td>Beers</td>
+											<td>true</td>
+										</tr>
+
+										<tr>
+											<td>5</td>
+											<td>3286</td>
+											<td>Awesome</td>
+											<td>true</td>
+										</tr>
+
+										<tr>
+											<td>6</td>
+											<td>7854</td>
+											<td>Crazy</td>
+											<td>true</td>
+										</tr>
+
+										<tr>
+											<td>7</td>
+											<td>1246</td>
+											<td>Messy</td>
+											<td>false</td>
+										</tr>
+
+										<tr>
+											<td>8</td>
+											<td>6545</td>
+											<td>Groovy</td>
+											<td>false</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+
+							<div class="grid-item lap-one_half">
+								<h3>Border</h3>
+								<h4 class="subheading">no outer border; all cells; with &lt;thead&gt; element</h4>
+								<pre><code>&lt;table class="table border_all"&gt;
+	&lt;thead&gt;
+		&lt;tr&gt;
+			&lt;th&gt;#&lt;/th&gt;
+			&lt;th&gt;Thing 1&lt;/th&gt;
+			&lt;th&gt;Thing 2&lt;/th&gt;
+			&lt;th&gt;Thing 3&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	...
+&lt;/table&gt;</code></pre>
+
+								<table class="table border_all">
+									<thead>
+										<tr>
+											<th>#</th>
+											<th>Thing 1</th>
+											<th>Thing 2</th>
+											<th>Thing 3</th>
+										</tr>
+									</thead>
+
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>1246</td>
+											<td>Hello</td>
+											<td>true</td>
+										</tr>
+
+										<tr>
+											<td>2</td>
+											<td>4652</td>
+											<td>Goodbye</td>
+											<td>false</td>
+										</tr>
+
+										<tr>
+											<td>3</td>
+											<td>1657</td>
+											<td>Cheers</td>
+											<td>false</td>
+										</tr>
+
+										<tr>
+											<td>4</td>
+											<td>1498</td>
+											<td>Beers</td>
+											<td>true</td>
+										</tr>
+
+										<tr>
+											<td>5</td>
+											<td>3286</td>
+											<td>Awesome</td>
+											<td>true</td>
+										</tr>
+
+										<tr>
+											<td>6</td>
+											<td>7854</td>
+											<td>Crazy</td>
+											<td>true</td>
+										</tr>
+
+										<tr>
+											<td>7</td>
+											<td>1246</td>
+											<td>Messy</td>
+											<td>false</td>
+										</tr>
+
+										<tr>
+											<td>8</td>
+											<td>6545</td>
+											<td>Groovy</td>
+											<td>false</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+
+							<div class="grid-item lap-one_half">
+								<h3>Border</h3>
+								<h4 class="subheading">outer border only; no &lt;thead&gt; element</h4>
+								<pre><code>&lt;table class="table border"&gt;
+	&lt;tr&gt;
+		&lt;th&gt;#&lt;/th&gt;
+		&lt;th&gt;Thing 1&lt;/th&gt;
+		&lt;th&gt;Thing 2&lt;/th&gt;
+		&lt;th&gt;Thing 3&lt;/th&gt;
+	&lt;/tr&gt;
+	...
+&lt;/table&gt;</code></pre>
+
+								<table class="table border">
+									<tr>
+										<th>#</th>
+										<th>Thing 1</th>
+										<th>Thing 2</th>
+										<th>Thing 3</th>
+									</tr>
+
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>1246</td>
+											<td>Hello</td>
+											<td>true</td>
+										</tr>
+
+										<tr>
+											<td>2</td>
+											<td>4652</td>
+											<td>Goodbye</td>
+											<td>false</td>
+										</tr>
+
+										<tr>
+											<td>3</td>
+											<td>1657</td>
+											<td>Cheers</td>
+											<td>false</td>
+										</tr>
+
+										<tr>
+											<td>4</td>
+											<td>1498</td>
+											<td>Beers</td>
+											<td>true</td>
+										</tr>
+
+										<tr>
+											<td>5</td>
+											<td>3286</td>
+											<td>Awesome</td>
+											<td>true</td>
+										</tr>
+
+										<tr>
+											<td>6</td>
+											<td>7854</td>
+											<td>Crazy</td>
+											<td>true</td>
+										</tr>
+
+										<tr>
+											<td>7</td>
+											<td>1246</td>
+											<td>Messy</td>
+											<td>false</td>
+										</tr>
+
+										<tr>
+											<td>8</td>
+											<td>6545</td>
+											<td>Groovy</td>
+											<td>false</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+
+							<div class="grid-item lap-one_half">
+								<h3>Border</h3>
+								<h4 class="subheading">outer border only; with &lt;thead&gt; element</h4>
+								<pre><code>&lt;table class="table border"&gt;
+	&lt;thead&gt;
+		&lt;tr&gt;
+			&lt;th&gt;#&lt;/th&gt;
+			&lt;th&gt;Thing 1&lt;/th&gt;
+			&lt;th&gt;Thing 2&lt;/th&gt;
+			&lt;th&gt;Thing 3&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	...
+&lt;/table&gt;</code></pre>
+
+								<table class="table border">
+									<thead>
+										<tr>
+											<th>#</th>
+											<th>Thing 1</th>
+											<th>Thing 2</th>
+											<th>Thing 3</th>
+										</tr>
+									</thead>
+
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>1246</td>
+											<td>Hello</td>
+											<td>true</td>
+										</tr>
+
+										<tr>
+											<td>2</td>
+											<td>4652</td>
+											<td>Goodbye</td>
+											<td>false</td>
+										</tr>
+
+										<tr>
+											<td>3</td>
+											<td>1657</td>
+											<td>Cheers</td>
+											<td>false</td>
+										</tr>
+
+										<tr>
+											<td>4</td>
+											<td>1498</td>
+											<td>Beers</td>
+											<td>true</td>
+										</tr>
+
+										<tr>
+											<td>5</td>
+											<td>3286</td>
+											<td>Awesome</td>
+											<td>true</td>
+										</tr>
+
+										<tr>
+											<td>6</td>
+											<td>7854</td>
+											<td>Crazy</td>
+											<td>true</td>
+										</tr>
+
+										<tr>
+											<td>7</td>
+											<td>1246</td>
+											<td>Messy</td>
+											<td>false</td>
+										</tr>
+
+										<tr>
+											<td>8</td>
+											<td>6545</td>
+											<td>Groovy</td>
+											<td>false</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+
+							<div class="grid-item lap-one_half">
+								<h3>Border</h3>
+								<h4 class="subheading">rows only; no &lt;thead&gt; element</h4>
+								<pre><code>&lt;table class="table border border_rows"&gt;
+	&lt;tr&gt;
+		&lt;th&gt;#&lt;/th&gt;
+		&lt;th&gt;Thing 1&lt;/th&gt;
+		&lt;th&gt;Thing 2&lt;/th&gt;
+		&lt;th&gt;Thing 3&lt;/th&gt;
+	&lt;/tr&gt;
+	...
+&lt;/table&gt;</code></pre>
+
+								<table class="table border border_rows">
+									<tr>
+										<th>#</th>
+										<th>Thing 1</th>
+										<th>Thing 2</th>
+										<th>Thing 3</th>
+									</tr>
+
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>1246</td>
+											<td>Hello</td>
+											<td>true</td>
+										</tr>
+
+										<tr>
+											<td>2</td>
+											<td>4652</td>
+											<td>Goodbye</td>
+											<td>false</td>
+										</tr>
+
+										<tr>
+											<td>3</td>
+											<td>1657</td>
+											<td>Cheers</td>
+											<td>false</td>
+										</tr>
+
+										<tr>
+											<td>4</td>
+											<td>1498</td>
+											<td>Beers</td>
+											<td>true</td>
+										</tr>
+
+										<tr>
+											<td>5</td>
+											<td>3286</td>
+											<td>Awesome</td>
+											<td>true</td>
+										</tr>
+
+										<tr>
+											<td>6</td>
+											<td>7854</td>
+											<td>Crazy</td>
+											<td>true</td>
+										</tr>
+
+										<tr>
+											<td>7</td>
+											<td>1246</td>
+											<td>Messy</td>
+											<td>false</td>
+										</tr>
+
+										<tr>
+											<td>8</td>
+											<td>6545</td>
+											<td>Groovy</td>
+											<td>false</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+
+							<div class="grid-item lap-one_half">
+								<h3>Border</h3>
+								<h4 class="subheading">rows only; with &lt;thead&gt; element</h4>
+								<pre><code>&lt;table class="table border border_rows"&gt;
+	&lt;thead&gt;
+		&lt;tr&gt;
+			&lt;th&gt;#&lt;/th&gt;
+			&lt;th&gt;Thing 1&lt;/th&gt;
+			&lt;th&gt;Thing 2&lt;/th&gt;
+			&lt;th&gt;Thing 3&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	...
+&lt;/table&gt;</code></pre>
+
+								<table class="table border border_rows">
+									<thead>
+										<tr>
+											<th>#</th>
+											<th>Thing 1</th>
+											<th>Thing 2</th>
+											<th>Thing 3</th>
+										</tr>
+									</thead>
+
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>1246</td>
+											<td>Hello</td>
+											<td>true</td>
+										</tr>
+
+										<tr>
+											<td>2</td>
+											<td>4652</td>
+											<td>Goodbye</td>
+											<td>false</td>
+										</tr>
+
+										<tr>
+											<td>3</td>
+											<td>1657</td>
+											<td>Cheers</td>
+											<td>false</td>
+										</tr>
+
+										<tr>
+											<td>4</td>
+											<td>1498</td>
+											<td>Beers</td>
+											<td>true</td>
+										</tr>
+
+										<tr>
+											<td>5</td>
+											<td>3286</td>
+											<td>Awesome</td>
+											<td>true</td>
+										</tr>
+
+										<tr>
+											<td>6</td>
+											<td>7854</td>
+											<td>Crazy</td>
+											<td>true</td>
+										</tr>
+
+										<tr>
+											<td>7</td>
+											<td>1246</td>
+											<td>Messy</td>
+											<td>false</td>
+										</tr>
+
+										<tr>
+											<td>8</td>
+											<td>6545</td>
+											<td>Groovy</td>
+											<td>false</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+
+							<div class="grid-item lap-one_half">
+								<h3>Border</h3>
+								<h4 class="subheading">outer border; all cells; no &lt;thead&gt; element</h4>
+								<pre><code>&lt;table class="table border border_all"&gt;
+	&lt;tr&gt;
+		&lt;th&gt;#&lt;/th&gt;
+		&lt;th&gt;Thing 1&lt;/th&gt;
+		&lt;th&gt;Thing 2&lt;/th&gt;
+		&lt;th&gt;Thing 3&lt;/th&gt;
+	&lt;/tr&gt;
+	...
+&lt;/table&gt;</code></pre>
+
+								<table class="table border border_all">
+									<tr>
+										<th>#</th>
+										<th>Thing 1</th>
+										<th>Thing 2</th>
+										<th>Thing 3</th>
+									</tr>
+
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>1246</td>
+											<td>Hello</td>
+											<td>true</td>
+										</tr>
+
+										<tr>
+											<td>2</td>
+											<td>4652</td>
+											<td>Goodbye</td>
+											<td>false</td>
+										</tr>
+
+										<tr>
+											<td>3</td>
+											<td>1657</td>
+											<td>Cheers</td>
+											<td>false</td>
+										</tr>
+
+										<tr>
+											<td>4</td>
+											<td>1498</td>
+											<td>Beers</td>
+											<td>true</td>
+										</tr>
+
+										<tr>
+											<td>5</td>
+											<td>3286</td>
+											<td>Awesome</td>
+											<td>true</td>
+										</tr>
+
+										<tr>
+											<td>6</td>
+											<td>7854</td>
+											<td>Crazy</td>
+											<td>true</td>
+										</tr>
+
+										<tr>
+											<td>7</td>
+											<td>1246</td>
+											<td>Messy</td>
+											<td>false</td>
+										</tr>
+
+										<tr>
+											<td>8</td>
+											<td>6545</td>
+											<td>Groovy</td>
+											<td>false</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+
+							<div class="grid-item lap-one_half">
+								<h3>Border</h3>
+								<h4 class="subheading">outer border; all cells; with &lt;thead&gt; element</h4>
+								<pre><code>&lt;table class="table border border_rows"&gt;
+	&lt;thead&gt;
+		&lt;tr&gt;
+			&lt;th&gt;#&lt;/th&gt;
+			&lt;th&gt;Thing 1&lt;/th&gt;
+			&lt;th&gt;Thing 2&lt;/th&gt;
+			&lt;th&gt;Thing 3&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	...
+&lt;/table&gt;</code></pre>
+
+								<table class="table border border_all">
+									<thead>
+										<tr>
+											<th>#</th>
+											<th>Thing 1</th>
+											<th>Thing 2</th>
+											<th>Thing 3</th>
+										</tr>
+									</thead>
+
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>1246</td>
+											<td>Hello</td>
+											<td>true</td>
+										</tr>
+
+										<tr>
+											<td>2</td>
+											<td>4652</td>
+											<td>Goodbye</td>
+											<td>false</td>
+										</tr>
+
+										<tr>
+											<td>3</td>
+											<td>1657</td>
+											<td>Cheers</td>
+											<td>false</td>
+										</tr>
+
+										<tr>
+											<td>4</td>
+											<td>1498</td>
+											<td>Beers</td>
+											<td>true</td>
+										</tr>
+
+										<tr>
+											<td>5</td>
+											<td>3286</td>
+											<td>Awesome</td>
+											<td>true</td>
+										</tr>
+
+										<tr>
+											<td>6</td>
+											<td>7854</td>
+											<td>Crazy</td>
+											<td>true</td>
+										</tr>
+
+										<tr>
+											<td>7</td>
+											<td>1246</td>
+											<td>Messy</td>
+											<td>false</td>
+										</tr>
+
+										<tr>
+											<td>8</td>
+											<td>6545</td>
+											<td>Groovy</td>
+											<td>false</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
 					</section>
 
 					<section id="main">
