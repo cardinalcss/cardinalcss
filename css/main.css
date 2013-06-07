@@ -1002,7 +1002,7 @@ textarea {
 	Tables ($tables)
 \*  =======================================================================  */
 
-/* Default */
+/* Borderless */
 .table {
 	max-width: 100%;
 	width: 100%;
@@ -1011,12 +1011,15 @@ textarea {
 	empty-cells: show;
 }
 
-.table th {
+.table th,
+.table tfoot td {
 	color: #222;
 	text-align: left;
+	font-weight: bold;
 }
 
-.table thead th {
+.table thead th,
+.table tfoot td  {
 	background-color: #efefef;
 }
 
@@ -1066,6 +1069,11 @@ textarea {
 /* Add bottom border to last row in the table */
 .table.border_rows tr:last-child td {
 	border-bottom: 1px solid #d0d0d0;
+}
+
+/* Stripe */
+.table.stripe tbody > tr:nth-child(odd) > td {
+	background-color: #f8f8f8;
 }
 
 /*  =======================================================================  *\
