@@ -38,7 +38,7 @@ body {
 /**
  * NOTE: Use `text-rendering` with caution - http://cbrac.co/SJt8p1
  * NOTE: Avoid the webkit anti-aliasing trap - http://cbrac.co/TAdhbH
- * 1. Force scrollbar in IE - http://cbrac.co/QziGF5
+ * 1. Force a vertical scrollbar - http://cbrac.co/163MspB
  * 2. Remove iOS text size adjust without disabling user zoom
  */
 
@@ -119,7 +119,7 @@ html { font-size: 75%; } /* 12px */
 body {
 	color: #444;
 	font-size: 1rem;  /* 1 */
-	font-family: "Helvetica Neue", sans-serif;
+	font-family: "Helvetica Neue", Arial, sans-serif;
 	line-height: 1.5; /* 2 */
 }
 
@@ -150,7 +150,7 @@ blockquote {
 	padding-left: 1rem;
 	border-left: 5px solid #efefef;
 	font-style: italic;
-	font-family: Georgia, Times, serif;
+	font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
 }
 
 blockquote p {
@@ -417,8 +417,7 @@ pre {
 	color: #d6cba9;
 	white-space: pre;
 	word-wrap: normal;
-	-ms-word-break: normal;
-	word-break:     normal;
+	word-break: normal;
 	-moz-tab-size: 4;
 	-o-tab-size:   4;
 	tab-size:      4;
@@ -794,16 +793,16 @@ textarea {
 /* Styles */
 .button.hollow {
 	background: transparent;
-	-webkit-box-shadow: inset 0 0 0 3px #eaeaea;
-	-moz-box-shadow:    inset 0 0 0 3px #eaeaea;
-	box-shadow:         inset 0 0 0 3px #eaeaea;
+	-webkit-box-shadow: inset 0 0 0 3px hsla(0, 0%, 92%, 1.0);
+	-moz-box-shadow:    inset 0 0 0 3px hsla(0, 0%, 92%, 1.0);
+	box-shadow:         inset 0 0 0 3px hsla(0, 0%, 92%, 1.0);
 }
 
 .button.hollow:hover {
 	background: #ececec;
-	-webkit-box-shadow: inset 0 0 0 3px #ececec;
-	-moz-box-shadow:    inset 0 0 0 3px #ececec;
-	box-shadow:         inset 0 0 0 3px #ececec;
+	-webkit-box-shadow: inset 0 0 0 3px hsla(0, 0%, 93%, 1.0);
+	-moz-box-shadow:    inset 0 0 0 3px hsla(0, 0%, 93%, 1.0);
+	box-shadow:         inset 0 0 0 3px hsla(0, 0%, 93%, 1.0);
 }
 
 .button.hollow:active {
@@ -983,7 +982,6 @@ textarea {
 	color: #505050 !important;
 	text-shadow: none !important;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=65)";
-	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=65);
 	opacity: 0.65;
 	cursor: not-allowed !important;
 }
@@ -1124,7 +1122,6 @@ textarea {
 	overflow: hidden;
 	border: 0;
 	background-color: transparent;
-	*text-indent: -9999px; /* IE 6/7 fallback */
 }
 
 .ir:before {
@@ -1206,15 +1203,6 @@ textarea {
 
 .cf:after {
 	clear: both;
-}
-
-/*
- * For IE 6/7 only
- * Include this rule to trigger hasLayout and contain floats.
- */
-
-.cf {
-	*zoom: 1;
 }
 
 /*  =======================================================================  *\

@@ -1,3 +1,8 @@
+# 0.3.1 (June 10, 2013)
+
+- Added Arial to the font stack on the `body` element, and beefed up the font stack for `blockquote` elements.
+- Removed some more support for IE ≤ 8.
+
 # 0.3.0 (June 7, 2013)
 
 - **NEW!** Added classes for table styles.
