@@ -3,6 +3,8 @@ $(function()
 		/**
 		 * Sidebar menu
 		 */
+
+		// Set variables
 		var html_body = $("html, body"),
 			page = $(".page"),
 			menu = $(".menu"),
@@ -48,6 +50,7 @@ $(function()
 		/**
 		 * Sidebar menu button toggle
 		 */
+
 		menu_button.on("touchstart click", function(e)
 			{
 				// Prevent the default event
