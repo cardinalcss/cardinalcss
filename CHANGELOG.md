@@ -1,3 +1,7 @@
+# 0.3.2 (June 10, 2013)
+
+- Added `.grid_gutter_none` classes so that you can create grids with no gutters, if desired.
+
 # 0.3.1 (June 10, 2013)
 
 - Added Arial to the font stack on the `body` element, and beefed up the font stack for `blockquote` elements.

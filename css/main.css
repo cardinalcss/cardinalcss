@@ -577,14 +577,16 @@ textarea {
 	font-size: 0;       /* 3 */
 }
 
-/* Gutters */
+/* Gutter options */
+.grid_gutter_none              { margin-left: 0;     }
+.grid_gutter_none .grid-item   { padding-left: 0;    }
 .grid_gutter_half              { margin-left: -1rem; }
 .grid_gutter_half .grid-item   { padding-left: 1rem; }
 .grid_gutter_double            { margin-left: -4rem; }
 .grid_gutter_double .grid-item { padding-left: 4rem; }
 
 /**
- * Grid item
+ * Grid items
  * 1. Default gutter width, change if desired
  * 2. Ensures elements within `.grid-item` start at the top
  * 3. Reset `font-size` back to normal
@@ -605,26 +607,28 @@ textarea {
 
 /* Widths */
 .grid-item,
-.one_whole     { width: 100%;     }
-.one_half      { width: 50%;      }
-.one_third     { width: 33.333%;  }
-.two_thirds    { width: 66.666%;  }
-.one_fourth    { width: 25%;      }
-.two_fourths   { width: 50%;      }
-.three_fourths { width: 75%;      }
-.one_fifth     { width: 20%;      }
-.two_fifths    { width: 40%;      }
-.three_fifths  { width: 60%;      }
-.four_fifths   { width: 80%;      }
-.one_sixth     { width: 16.666%;  }
-.two_sixths    { width: 33.333%;  }
-.three_sixths  { width: 50%;      }
-.four_sixths   { width: 66.666%;  }
-.five_sixths   { width: 83.333%;  }
+.one_whole     { width: 100%;    }
+.one_half      { width: 50%;     }
+.one_third     { width: 33.333%; }
+.two_thirds    { width: 66.666%; }
+.one_fourth    { width: 25%;     }
+.two_fourths   { width: 50%;     }
+.three_fourths { width: 75%;     }
+.one_fifth     { width: 20%;     }
+.two_fifths    { width: 40%;     }
+.three_fifths  { width: 60%;     }
+.four_fifths   { width: 80%;     }
+.one_sixth     { width: 16.666%; }
+.two_sixths    { width: 33.333%; }
+.three_sixths  { width: 50%;     }
+.four_sixths   { width: 66.666%; }
+.five_sixths   { width: 83.333%; }
 
 /* Grid breakpoint for devices that sit in your lap (eg. tablets) */
 @media only screen and (min-width: 640px) {
-	/* Gutters */
+	/* Gutter options */
+	.lap-grid_gutter_none              { margin-left: 0;     }
+	.lap-grid_gutter_none .grid-item   { padding-left: 0;    }
 	.lap-grid_gutter_half              { margin-left: -1rem; }
 	.lap-grid_gutter_half .grid-item   { padding-left: 1rem; }
 	.lap-grid_gutter_whole             { margin-left: -2rem; }
@@ -652,7 +656,9 @@ textarea {
 
 /* Grid breakpoint for devices that remain on your desk (eg. iMac) */
 @media only screen and (min-width: 960px) {
-	/* Gutters */
+	/* Gutter options */
+	.desk-grid_gutter_none              { margin-left: 0;     }
+	.desk-grid_gutter_none .grid-item   { padding-left: 0;    }
 	.desk-grid_gutter_half              { margin-left: -1rem; }
 	.desk-grid_gutter_half .grid-item   { padding-left: 1rem; }
 	.desk-grid_gutter_whole             { margin-left: -2rem; }
