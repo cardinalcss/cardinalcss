@@ -1079,13 +1079,13 @@ textarea {
 \*  =======================================================================  */
 
 /* Page */
-.page.menu_open {
+.menu_open {
 	position: relative;
 }
 
-.page.menu_open,
-.page.menu_open .menu-button,
-.page.menu_open .menu {
+.menu_open,
+.menu_open .menu-button,
+.menu_open .menu {
 	left: 180px;
 }
 
@@ -1094,7 +1094,7 @@ textarea {
 		padding-left: 180px;
 	}
 
-	.page.menu_open {
+	.menu_open {
 		left: 0;
 	}
 }
@@ -1113,7 +1113,7 @@ textarea {
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
-.page.menu_open .menu-button {
+.menu_open .menu-button {
 	background-color: #222;
 }
 
