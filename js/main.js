@@ -23,8 +23,8 @@ $(function()
 					scroll_height = this.scrollHeight,
 					height = $this.height(),
 					delta = (e.type == "DOMMouseScroll" ?
-						e.originalEvent.detail * -40 : /* Firefox */
-						e.originalEvent.wheelDelta),   /* The rest */
+						e.originalEvent.detail * -40 : // Firefox
+						e.originalEvent.wheelDelta),   // The rest
 					up = delta > 0;
 
 				// Prevent the scroll event
