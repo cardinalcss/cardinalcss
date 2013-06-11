@@ -15,7 +15,7 @@ $(function()
 
 		// Prevent scrolling the entire page while scrolling inside the menu
 		// http://cbrac.co/1bt2GJg
-		menu.on("DOMMouseScroll mousewheel", function(e)
+		/*menu.on("DOMMouseScroll mousewheel", function(e)
 			{
 				// Scroll variables
 				var $this = $(this),
@@ -44,7 +44,7 @@ $(function()
 					return prevent();
 				}
 			}
-		);
+		);*/
 
 		// Set a flag on drag
 		menu_link.on("touchmove", function() { flag = true; });
