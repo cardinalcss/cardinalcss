@@ -1134,13 +1134,16 @@ textarea {
 	bottom: 0;
 	left: 0;
 	z-index: 2;
-	overflow-y: auto;
 	margin-left: -180px;
 	width: 180px;
 	height: 100%;
 	background-color: #222;
 	font-size: 15px;
 	-webkit-overflow-scroll: touch;
+}
+
+.menu-inner {
+	overflow-y: auto;
 }
 
 /* IFix vertical scrollbar issue in IE9 */

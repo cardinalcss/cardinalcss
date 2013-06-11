@@ -8,6 +8,7 @@ $(function()
 		var html_body = $("html, body"),
 			page = $(".page"),
 			menu = $(".menu"),
+			menu_inner = $(".menu-inner"),
 			menu_list = $(".menu ul"),
 			menu_button = $(".menu-button"),
 			menu_link = $(".menu a"),
