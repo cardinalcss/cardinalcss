@@ -1,27 +1,6 @@
 $(function()
 	{
 		/**
-		 * Sidebar menu button toggle
-		 */
-
-		menu_button.on("touchstart click", function(e)
-			{
-				// Prevent the default event
-				e.stopPropagation();
-				e.preventDefault();
-
-				if(e.handled !== true) {
-					page.toggleClass("menu_open");
-
-					// Set e.handled to true
-					e.handled = true;
-				} else {
-					return false;
-				}
-			}
-		);
-
-		/**
 		 * Sidebar menu
 		 */
 
@@ -97,6 +76,27 @@ $(function()
 					} else {
 						return false;
 					}
+				}
+			}
+		);
+
+		/**
+		 * Sidebar menu button toggle
+		 */
+
+		menu_button.on("touchstart click", function(e)
+			{
+				// Prevent the default event
+				e.stopPropagation();
+				e.preventDefault();
+
+				if(e.handled !== true) {
+					page.toggleClass("menu_open");
+
+					// Set e.handled to true
+					e.handled = true;
+				} else {
+					return false;
 				}
 			}
 		);
