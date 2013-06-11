@@ -1143,7 +1143,7 @@ textarea {
 	-webkit-overflow-scroll: touch;
 }
 
-/* IFix vertical scrollbar issue in IE9 */
+/* Fix vertical scrollbar issue in IE9 */
 .ie9 .menu {
 	box-sizing: content-box;
 }
