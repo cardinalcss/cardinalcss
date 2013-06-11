@@ -15,7 +15,7 @@ $(function()
 
 		// Prevent scrolling the entire page while scrolling inside the menu
 		// http://cbrac.co/1bt2GJg
-		menu.on('DOMMouseScroll mousewheel touchmove', function(e)
+		menu.on('DOMMouseScroll mousewheel', function(e)
 			{
 				// Scroll variables
 				var $this = $(this),
