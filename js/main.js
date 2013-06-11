@@ -8,7 +8,6 @@ $(function()
 		var html_body = $("html, body"),
 			page = $(".page"),
 			menu = $(".menu"),
-			menu_inner = $(".menu-inner"),
 			menu_list = $(".menu ul"),
 			menu_button = $(".menu-button"),
 			menu_link = $(".menu a"),
@@ -16,16 +15,16 @@ $(function()
 
 		// Prevent scrolling the entire page while scrolling inside the menu
 		// http://cbrac.co/1bt2GJg
-		/*menu.on('DOMMouseScroll mousewheel', function(e)
+		menu.on("DOMMouseScroll mousewheel", function(e)
 			{
 				// Scroll variables
 				var $this = $(this),
 					scroll_top = this.scrollTop,
 					scroll_height = this.scrollHeight,
 					height = $this.height(),
-					delta = (e.type == 'DOMMouseScroll' ?
-						e.originalEvent.detail * -40 : // Firefox
-						e.originalEvent.wheelDelta),   // The rest
+					delta = (e.type == "DOMMouseScroll" ?
+						e.originalEvent.detail * -40 : /* Firefox */
+						e.originalEvent.wheelDelta),   /* The rest */
 					up = delta > 0;
 
 				// Prevent the scroll event
@@ -45,7 +44,7 @@ $(function()
 					return prevent();
 				}
 			}
-		);*/
+		);
 
 		// Set a flag on drag
 		menu_link.on("touchmove", function() { flag = true; });
