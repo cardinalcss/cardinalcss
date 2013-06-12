@@ -1,3 +1,7 @@
+# 0.3.3 (June 12, 2013)
+
+- Fixed a nasty bug in Safari 5 to eliminiate white space caused by `display: inline-block;` on grid items.
+
 # 0.3.2 (June 10, 2013)
 
 - Added `.grid_gutter_none` classes so that you can create grids with no gutters, if desired.
