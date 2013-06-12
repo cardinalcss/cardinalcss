@@ -1,7 +1,3 @@
-# 0.3.3 (June 12, 2013)
-
-- Added comments about fixing white space issues in Safari < 6 & Android < 4.2, which are caused by using `display: inline-block;` on grid items.
-
 # 0.3.2 (June 10, 2013)
 
 - Added `.grid_gutter_none` classes so that you can create grids with no gutters, if desired.
