@@ -30,7 +30,7 @@ Cardinal supports most modern browsers:
 * Safari 6.0+
 * iOS Safari 4.0+
 * Opera 12.1+
-* Android 2.1+
+* Android 4.2+
 * Internet Explorer 9+
 
 ### Known issues
