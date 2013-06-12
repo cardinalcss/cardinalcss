@@ -27,7 +27,7 @@ Cardinal supports most modern browsers:
 
 * Google Chrome 25+
 * Mozilla Firefox 19+
-* Safari 5.1+
+* Safari 6.0+
 * iOS Safari 4.0+
 * Opera 12.1+
 * Android 2.1+
