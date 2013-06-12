@@ -1,6 +1,6 @@
 # 0.3.3 (June 12, 2013)
 
-- First attempt at fixing a white space bug in Safari 5 caused by `display: inline-block;` on grid items.
+- Added comments about fixing white space issues in Safari 5 & Android < 4.2 which are caused by using `display: inline-block;` on grid items.
 
 # 0.3.2 (June 10, 2013)
 

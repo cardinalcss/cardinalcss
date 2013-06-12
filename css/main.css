@@ -560,6 +560,22 @@ textarea {
 		<div class="grid-item lap-one_half desk-one_fourth"></div>
 		<div class="grid-item lap-one_half desk-one_fourth"></div>
 	</div>
+
+	White space issues
+	--------------------
+	Since the grids use `display: inline-block;` instead of floats, a hack is
+	used to remove that white-space in modern browsers. However, this hack does
+	not work in Safari < 6, and Android < 4.2.
+
+	If you need to support these older browsers, simply remove the white space
+	in between the grid items manually, in the HTML, like so:
+
+	<div class="grid">
+		<div class="grid-item lap-one_half desk-one_fourth"></div
+		><div class="grid-item lap-one_half desk-one_fourth"></div
+		><div class="grid-item lap-one_half desk-one_fourth"></div
+		><div class="grid-item lap-one_half desk-one_fourth"></div>
+	</div>
 \*  =======================================================================  */
 
 /**
@@ -571,11 +587,10 @@ textarea {
 
 .grid {
 	margin: 0;
-	margin-left: -2rem;   /* 1 */
+	margin-left: -2rem; /* 1 */
 	padding: 0;
-	list-style: none;     /* 2 */
-	font-size: 0;         /* 3 */
-	letter-spacing: -1px; /* 3 */
+	list-style: none;   /* 2 */
+	font-size: 0;       /* 3 */
 }
 
 /* Gutters */
@@ -590,16 +605,15 @@ textarea {
  * Grid item
  * 1. Default gutter width, change if desired
  * 2. Ensures elements within `.grid-item` start at the top
- * 3. Reset `font-size` and `letter-spacing` back to normal
+ * 3. Reset `font-size` back to normal
  */
 
 .grid-item {
 	display: inline-block;
 	margin-bottom: 1rem;
-	padding-left: 2rem;     /* 1 */
-	vertical-align: top;    /* 2 */
-	font-size: 1rem;        /* 3 */
-	letter-spacing: normal; /* 3 */
+	padding-left: 2rem;  /* 1 */
+	vertical-align: top; /* 2 */
+	font-size: 1rem;     /* 3 */
 }
 
 /* Remove the bottom margin on the last element inside each `.grid_item` */
