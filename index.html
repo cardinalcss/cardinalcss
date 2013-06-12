@@ -240,6 +240,21 @@ video {
 							</div>
 						</div>
 
+						<h3 style="color: red;">White space issues</h3>
+
+						<p>Since the grids use <code>display: inline-block;</code> instead of floats, the <code>font-size: 0;</code> hack is used to remove the white space in modern browsers. However, this hack does not work in older versions of Safari and Android (Safari < 6, Android < 4.2).</p>
+
+						<p>If you need to support these older browsers, simply remove the white space in between each <code>.grid-item</code> manually, in the HTML, like so:
+
+						<pre><code>&lt;div class="grid"&gt;
+	&lt;div class="grid-item lap-one_half desk-one_fourth"&gt;&lt;/div
+	&gt;&lt;div class="grid-item lap-one_half desk-one_fourth"&gt;&lt;/div
+	&gt;&lt;div class="grid-item lap-one_half desk-one_fourth"&gt;&lt;/div
+	&gt;&lt;div class="grid-item lap-one_half desk-one_fourth"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+						<p><strong>Alternatively</strong>, if you use a build process (and you should) to minify your HTML for the production/live site, then the problematic white space is removed anyways. This way you can keep your HTML syntax normal in your development environment, and support a few more legacy browsers on the live site.</p>
+
 						<h3>Examples</h3>
 
 						<p>Below are some example grids. <strong>View the source code</strong> of this page to see how the they behave.</p>

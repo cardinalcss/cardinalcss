@@ -560,6 +560,22 @@ textarea {
 		<div class="grid-item lap-one_half desk-one_fourth"></div>
 		<div class="grid-item lap-one_half desk-one_fourth"></div>
 	</div>
+
+	White space issues
+	--------------------
+	Since the grids use `display: inline-block;` instead of floats, a hack is
+	used to remove that white-space in modern browsers. However, this hack does
+	not work in Safari < 6, and Android < 4.2.
+
+	If you need to support these older browsers, simply remove the white space
+	in between the grid items manually, in the HTML, like so:
+
+	<div class="grid">
+		<div class="grid-item lap-one_half desk-one_fourth"></div
+		><div class="grid-item lap-one_half desk-one_fourth"></div
+		><div class="grid-item lap-one_half desk-one_fourth"></div
+		><div class="grid-item lap-one_half desk-one_fourth"></div>
+	</div>
 \*  =======================================================================  */
 
 /**
@@ -571,14 +587,15 @@ textarea {
 
 .grid {
 	margin: 0;
-	margin-left: -2rem;   /* 1 */
+	margin-left: -2rem; /* 1 */
 	padding: 0;
-	list-style: none;     /* 2 */
-	font-size: 0;         /* 3 */
-	letter-spacing: -1px; /* 3 */
+	list-style: none;   /* 2 */
+	font-size: 0;       /* 3 */
 }
 
 /* Gutters */
+.grid_gutter_none              { margin-left: 0;     }
+.grid_gutter_none .grid-item   { padding-left: 0;    }
 .grid_gutter_half              { margin-left: -1rem; }
 .grid_gutter_half .grid-item   { padding-left: 1rem; }
 .grid_gutter_double            { margin-left: -4rem; }
@@ -588,16 +605,15 @@ textarea {
  * Grid item
  * 1. Default gutter width, change if desired
  * 2. Ensures elements within `.grid-item` start at the top
- * 3. Reset `font-size` and `letter-spacing` back to normal
+ * 3. Reset `font-size` back to normal
  */
 
 .grid-item {
 	display: inline-block;
 	margin-bottom: 1rem;
-	padding-left: 2rem;     /* 1 */
-	vertical-align: top;    /* 2 */
-	font-size: 1rem;        /* 3 */
-	letter-spacing: normal; /* 3 */
+	padding-left: 2rem;  /* 1 */
+	vertical-align: top; /* 2 */
+	font-size: 1rem;     /* 3 */
 }
 
 /* Remove the bottom margin on the last element inside each `.grid_item` */
@@ -607,26 +623,28 @@ textarea {
 
 /* Widths */
 .grid-item,
-.one_whole     { width: 100%;     }
-.one_half      { width: 50%;      }
-.one_third     { width: 33.333%;  }
-.two_thirds    { width: 66.666%;  }
-.one_fourth    { width: 25%;      }
-.two_fourths   { width: 50%;      }
-.three_fourths { width: 75%;      }
-.one_fifth     { width: 20%;      }
-.two_fifths    { width: 40%;      }
-.three_fifths  { width: 60%;      }
-.four_fifths   { width: 80%;      }
-.one_sixth     { width: 16.666%;  }
-.two_sixths    { width: 33.333%;  }
-.three_sixths  { width: 50%;      }
-.four_sixths   { width: 66.666%;  }
-.five_sixths   { width: 83.333%;  }
+.one_whole     { width: 100%;    }
+.one_half      { width: 50%;     }
+.one_third     { width: 33.333%; }
+.two_thirds    { width: 66.666%; }
+.one_fourth    { width: 25%;     }
+.two_fourths   { width: 50%;     }
+.three_fourths { width: 75%;     }
+.one_fifth     { width: 20%;     }
+.two_fifths    { width: 40%;     }
+.three_fifths  { width: 60%;     }
+.four_fifths   { width: 80%;     }
+.one_sixth     { width: 16.666%; }
+.two_sixths    { width: 33.333%; }
+.three_sixths  { width: 50%;     }
+.four_sixths   { width: 66.666%; }
+.five_sixths   { width: 83.333%; }
 
 /* Grid breakpoint for devices that sit in your lap (eg. tablets) */
 @media only screen and (min-width: 640px) {
-	/* Gutters */
+	/* Gutter options */
+	.lap-grid_gutter_none              { margin-left: 0;     }
+	.lap-grid_gutter_none .grid-item   { padding-left: 0;    }
 	.lap-grid_gutter_half              { margin-left: -1rem; }
 	.lap-grid_gutter_half .grid-item   { padding-left: 1rem; }
 	.lap-grid_gutter_whole             { margin-left: -2rem; }
@@ -654,7 +672,9 @@ textarea {
 
 /* Grid breakpoint for devices that remain on your desk (eg. iMac) */
 @media only screen and (min-width: 960px) {
-	/* Gutters */
+	/* Gutter options */
+	.desk-grid_gutter_none              { margin-left: 0;     }
+	.desk-grid_gutter_none .grid-item   { padding-left: 0;    }
 	.desk-grid_gutter_half              { margin-left: -1rem; }
 	.desk-grid_gutter_half .grid-item   { padding-left: 1rem; }
 	.desk-grid_gutter_whole             { margin-left: -2rem; }
