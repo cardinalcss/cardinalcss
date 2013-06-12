@@ -567,7 +567,6 @@ textarea {
  * 1. Default gutter width, change if desired
  * 2. Remove `list-style` in case `.grid` is on a <ul> element
  * 3. Hack to remove `inline-block` whitespace - http://cbrac.co/16xcjcl
- * 4. Hack for Safari 5 to remove `inline-block` whitespace
  */
 
 .grid {
@@ -576,10 +575,10 @@ textarea {
 	padding: 0;
 	list-style: none;     /* 2 */
 	font-size: 0;         /* 3 */
-	letter-spacing: -1px; /* 4 */
+	letter-spacing: -1px; /* 3 */
 }
 
-/* Gutter options */
+/* Gutters */
 .grid_gutter_none              { margin-left: 0;     }
 .grid_gutter_none .grid-item   { padding-left: 0;    }
 .grid_gutter_half              { margin-left: -1rem; }
@@ -588,11 +587,10 @@ textarea {
 .grid_gutter_double .grid-item { padding-left: 4rem; }
 
 /**
- * Grid items
+ * Grid item
  * 1. Default gutter width, change if desired
  * 2. Ensures elements within `.grid-item` start at the top
- * 3. Reset `font-size` back to normal
- * 4. Reset `letter-spacing` back to normal
+ * 3. Reset `font-size` and `letter-spacing` back to normal
  */
 
 .grid-item {
@@ -601,7 +599,7 @@ textarea {
 	padding-left: 2rem;     /* 1 */
 	vertical-align: top;    /* 2 */
 	font-size: 1rem;        /* 3 */
-	letter-spacing: normal; /* 4 */
+	letter-spacing: normal; /* 3 */
 }
 
 /* Remove the bottom margin on the last element inside each `.grid_item` */
