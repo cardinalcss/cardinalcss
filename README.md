@@ -37,6 +37,8 @@ Cardinal supports most modern browsers:
 
 #### White space hack
 
+- [More info here](http://css-tricks.com/fighting-the-space-between-inline-block-elements/)
+
 Since the grids use `display: inline-block;` instead of floats, the `font-size: 0;` hack is used to remove the white space in modern browsers. However, this hack does not work in older versions of Safari and Android (Safari < 6, Android < 4.2).
 
 If you need to support these older browsers, simply remove the white space in between each .grid-item manually, in the HTML, like so:
@@ -48,7 +50,9 @@ If you need to support these older browsers, simply remove the white space in be
 		><div class="grid-item lap-one_half desk-one_fourth"></div>
 	</div>
 
-#### border-box in IE9
+**Alternatively**, if you use a build process (and you should) to minify your HTML for the production/live site, then the problematic white space is removed anyways. This way you can keep your HTML syntax normal in your development environment, and support a few more legacy browsers on the live site.
+
+#### box-sizing: border-box; in IE9
 
 There is a bug in IE9 (big suprise) when `box-sizing: border-box;`, `position: fixed;`, and `overflow: auto;` are declared on the same element. The scrollbar’s width is subtracted twice, making the element’s width incorrect. I came across this bug while making the off-canvas navigation for this project’s [documentation website](http://cardinalcss.com).
 
