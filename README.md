@@ -39,7 +39,7 @@ Cardinal supports most modern browsers:
 
 - [More info here](http://css-tricks.com/fighting-the-space-between-inline-block-elements/)
 
-Since the grids use `display: inline-block;` instead of floats, the `font-size: 0;` hack is used to remove the white space in modern browsers. However, this hack does not work in older versions of Safari and Android (Safari < 6, Android < 4.2).
+Since the `.grid-item` class uses `display: inline-block;` instead of floats, the `font-size: 0;` hack is used on the `.grid` element to remove the white space between `.grid-item` elements in modern browsers. However, this hack does not work in older versions of Safari and Android (Safari < 6, Android < 4.2).
 
 If you need to support these older browsers, simply remove the white space in between each .grid-item manually, in the HTML, like so:
 
