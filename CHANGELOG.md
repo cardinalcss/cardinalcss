@@ -1,3 +1,7 @@
+# 0.3.3 (June 13, 2013)
+
+- Removed IE7 fix for input button outlines.
+
 # 0.3.2 (June 10, 2013)
 
 - Added `.grid_gutter_none` classes so that you can create grids with no gutters, if desired.
