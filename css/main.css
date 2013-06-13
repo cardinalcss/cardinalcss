@@ -499,13 +499,6 @@ video {
 	height: auto !important;
 }
 
-/* Remove black outlines on <input> buttons in IE7 */
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-	filter: chroma(color=#000000);
-}
-
 /* Restrict <textarea> elements to vertical resizing only */
 textarea {
 	resize: vertical;
