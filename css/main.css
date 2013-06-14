@@ -746,7 +746,7 @@ textarea {
 
    Usage
    --------------------
-   class="button [style] [size] [width] [shape] [color] [state]"
+   class="button [style] [size || width] [shape || state]"
 
    * .button - element becomes the default, “flat” style button.
    * .hollow,
@@ -761,8 +761,6 @@ textarea {
      .four_fifths, etc. - element becomes a specific width of its parent.
    * .rounded,
      .pill - element becomes the specified button shape.
-   * .primary,
-     .secondary - element becomes the specified button color.
    * .disabled,
      .button[disabled] - element becomes a button that is not usable.
 

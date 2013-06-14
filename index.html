@@ -680,7 +680,7 @@ video {
 
 						<div class="grid">
 							<div class="grid-item">
-								<pre><code>&lt;button type="button" class="button [style] [size] [width] [shape] [color] [state]"&gt;Button text&lt;/button&gt;</code></pre>
+								<pre><code>&lt;button type="button" class="button [style] [size || width] [shape || state]"&gt;Button text&lt;/button&gt;</code></pre>
 							</div>
 
 							<div class="grid-item lap-one_half">
@@ -690,7 +690,7 @@ video {
 
 								<p>To start, simply add the <code>.button</code> class to an element. This provides the base styles that can be further modified by adding more specific classes.</p>
 
-								<p style="color: red;"><em>When using the <code>.block</code> class, you must also specify the button width by using the “widths” classes that were mentioned in the <a href="#grids">“Grids” section</a> above.</em></p>
+								<p><em>When using the <code>.block</code> class, you must also specify the button width by using the “widths” classes that were mentioned in the <a href="#grids">“Grids” section</a> above.</em></p>
 							</div>
 
 							<div class="grid-item lap-one_half">
@@ -713,9 +713,6 @@ video {
 
 									<dt>.rounded, .pill</dt>
 									<dd>Element becomes the specified button shape.</dd>
-
-									<dt>.primary, .secondary</dt>
-									<dd>Element becomes the specified button color.</dd>
 
 									<dt>.disabled, .button[disabled]</dt>
 									<dd>Element becomes a button that is not usable.</dd>
