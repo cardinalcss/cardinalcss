@@ -1,3 +1,4 @@
+// When the DOM is ready,
 $(function() {
-	// Stuff to do as soon as the DOM is ready;
+	// Do stuff;
 });
