@@ -28,3 +28,17 @@
 // //
 // Place your Javascript code, plugins, etc here
 // //
+
+function updateVersion() {
+	$.ajax(
+		{
+			url: "https://api.github.com/repos/cbracco/cardinal/tags",
+			dataType: "jsonp",
+			timeout: 60 * 1000,
+			success: function(results) {
+				var tag = results.data;
+				$(".version").append("&nbsp;<span class=\"version\">" + tag[0]["name"] + "</span>");
+			}
+		}
+	);
+}

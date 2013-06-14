@@ -81,8 +81,8 @@ img::-moz-selection {
    Typography ($typography)
 
    Modular scale:    12px @ 1:1.333 (perfect fourth)
-   Important number: 18px (maximum <html> `font-size`)
-   http://modularscale.com/scale/?px1=12&px2=18&ra1=1.333&ra2=0
+   Important number: 24px (maximum <html> `font-size`)
+   http://modularscale.com/scale/?px1=12&px2=24&ra1=1.333&ra2=0
 
    Description
    --------------------
@@ -746,7 +746,7 @@ textarea {
 
    Usage
    --------------------
-   class="button [style] [size && || width] [shape && || state]"
+   class="button [style] [size] [width] [shape] [color] [state]"
 
    * .button - element becomes the default, “flat” style button.
    * .hollow,
@@ -761,6 +761,8 @@ textarea {
      .four_fifths, etc. - element becomes a specific width of its parent.
    * .rounded,
      .pill - element becomes the specified button shape.
+   * .primary,
+     .secondary - element becomes the specified button color.
    * .disabled,
      .button[disabled] - element becomes a button that is not usable.
 
@@ -1019,7 +1021,6 @@ textarea {
 }
 
 .button.primary {
-	margin-right: 0.5rem;
 	background: #1FA3EC;
 }
 
@@ -1027,21 +1028,12 @@ textarea {
 	background: #4CB3EC;
 }
 
-/* Github button */
 .button.secondary {
 	background: #686868;
 }
 
-.button.primary:hover,
 .button.secondary:hover {
-
-}
-
-.button.primary:active,
-.button.secondary:active {
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-	opacity: 1;
+	background: #787878;
 }
 
 /* ========================================================================= *\
@@ -1249,8 +1241,16 @@ textarea {
 	text-align: center;
 }
 
+.birdy {
+	margin-bottom: 0.75rem;
+}
+
 .site_name {
 	line-height: 1;
+}
+
+.branding .button.primary {
+	margin-right: 0.475rem;
 }
 
 .changelog {
@@ -1260,10 +1260,6 @@ textarea {
 
 .changelog a {
 	color: #969696;
-}
-
-.birdy {
-	margin-bottom: 0.75rem;
 }
 
 @media only screen and (min-width: 480px) {

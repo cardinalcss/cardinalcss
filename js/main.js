@@ -98,17 +98,4 @@ $(function() {
 
 	// Request version number once a minute
 	setInterval(updateVersion(), 60 * 1000);
-
-	function updateVersion() {
-		$.ajax(
-			{
-				url: "https://api.github.com/repos/cbracco/cardinal/tags",
-				dataType: "jsonp",
-				success: function(results) {
-					var tag = results.data;
-					$(".version").append("&nbsp;<span class=\"version\">" + tag[0]["name"] + "</span>");
-				}
-			}
-		);
-	}
 });
