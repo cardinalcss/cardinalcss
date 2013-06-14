@@ -43,6 +43,7 @@
 						<a href="#top"><h3 class="menu-heading">Cardinal</h3></a>
 						<li><a href="#overview">Overview</a></li>
 						<li><a href="#naming">Class names</a></li>
+						<li><a href="#meta">&lt;meta&gt; tags</a></li>
 						<li><a href="#base">Base</a></li>
 						<li><a href="#typography">Typography</a></li>
 						<li><a href="#non-typography">Non-typography</a></li>
@@ -111,6 +112,18 @@
 							</div>
 						</div>
 					</section>
+
+					<section id="meta">
+						<h2>&lt;meta&gt; tags</h2>
+					</section>
+
+					<pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></pre>
+
+					<p>Even though this is a CSS framework, there is a very important HTML <code>meta</code> tag that must be included to get everything playing nicely.</p>
+
+					<p>The <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag">viewport meta tag</a> determines how your application will display on mobile browsers. The <code>width</code> property specifies the size of the viewport, and <code>initial-scale</code> specifies the zoom level of your application when it is first loaded.</p>
+
+					<p>Cardinal uses the popular combination of <code>width=device-width</code> and <code>initial-scale=1.0</code>, which tells mobile browsers to load your application at the width of the device (in pixels), with a scale of 100%.</p>
 
 					<section id="base">
 						<h2>Base</h2>
