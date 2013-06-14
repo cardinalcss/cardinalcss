@@ -1011,6 +1011,39 @@ textarea {
 	box-shadow:         inset 0 0 0 3px #eaeaea !important;
 }
 
+/* Primary & secondary buttons */
+.button.primary,
+.button.secondary {
+	color: #fff;
+	text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.25);
+}
+
+.button.primary {
+	margin-right: 0.5rem;
+	background: #1FA3EC;
+}
+
+.button.primary:hover {
+	background: #4CB3EC;
+}
+
+/* Github button */
+.button.secondary {
+	background: #686868;
+}
+
+.button.primary:hover,
+.button.secondary:hover {
+
+}
+
+.button.primary:active,
+.button.secondary:active {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+	opacity: 1;
+}
+
 /* ========================================================================= *\
    Tables ($tables)
 \* ========================================================================= */
@@ -1210,6 +1243,59 @@ textarea {
 	color: #c0c0c0;
 }
 
+/* Header */
+.branding {
+	margin-bottom: 0;
+	text-align: center;
+}
+
+.site_name {
+	line-height: 1;
+}
+
+.changelog {
+	margin: 0.75rem 0 0;
+	font-size: 0.8125rem;
+}
+
+.changelog a {
+	color: #969696;
+}
+
+.birdy {
+	margin-bottom: 0.75rem;
+}
+
+@media only screen and (min-width: 480px) {
+	.branding {
+		text-align: left;
+	}
+
+	.birdy,
+	hgroup {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.birdy {
+		margin-bottom: 0;
+		margin-right: 5%;
+	}
+}
+
+@media only screen and (min-width: 960px) {
+	.branding .wrapper {
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+	}
+}
+
+@media only screen and (min-width: 1140px) {
+	.branding {
+		text-align: center;
+	}
+}
+
 /* Content */
 .content .wrapper {
 	width: 100%;
@@ -1231,45 +1317,6 @@ textarea {
 
 #tables pre {
 	max-height: 200px;
-}
-
-/* Header */
-.branding {
-	margin-bottom: 0;
-	text-align: center;
-}
-
-.site_name {
-	line-height: 1;
-}
-
-@media only screen and (min-width: 768px) {
-	.branding {
-		text-align: left;
-	}
-
-	.birdy,
-	hgroup {
-		display: inline-block;
-		vertical-align: middle;
-	}
-
-	.birdy {
-		margin-right: 5%;
-	}
-}
-
-@media only screen and (min-width: 960px) {
-	.branding .wrapper {
-		padding-top: 2rem;
-		padding-bottom: 2rem;
-	}
-}
-
-@media only screen and (min-width: 1140px) {
-	.branding {
-		text-align: center;
-	}
 }
 
 /* Footer */
