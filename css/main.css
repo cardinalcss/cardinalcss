@@ -1,21 +1,21 @@
-/*  =======================================================================  *\
-	Table of contents
-	(Ctrl/Cmd + F, and search for `$section` to jump to a section)
-	01. Base................Normalize.css (minified), and some important styles
-	02. Typography..........Basic typography elements
-	03. Non-typography......Important elements that are not type-based
-	04. Grids...............A simple, nestable grid system and width classes
-	05. Layout..............Common layout items (wrappers, wells, islands, etc)
-	06. Buttons.............Basic styles, sizes, and shapes
-	07. Tables..............Styles for tabular data
-	08. Main................Your styles go here!
-	09. Helpers.............Some useful, global classes
-	10. Print...............Inlined, barebones print styles
-\*  =======================================================================  */
+/* ========================================================================= *\
+   Table of contents
+   (Ctrl/Cmd + F, and search for `$section` to jump to a section)
+   01. Base................Normalize.css (minified), and some important styles
+   02. Typography..........Basic typography elements
+   03. Non-typography......Important elements that are not type-based
+   04. Grids...............A simple, nestable grid system and width classes
+   05. Layout..............Common layout items (wrappers, wells, islands, etc)
+   06. Buttons.............Basic styles, sizes, and shapes
+   07. Tables..............Styles for tabular data
+   08. Main................Your styles go here!
+   09. Helpers.............Some useful, global classes
+   10. Print...............Inlined, barebones print styles
+\* ========================================================================= */
 
-/*  =======================================================================  *\
-	Base ($base)
-\*  =======================================================================  */
+/* ========================================================================= *\
+   Base ($base)
+\* ========================================================================= */
 
 /*! normalize.css v2.1.2 | MIT License | git.io/normalize */
 article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,video{display:inline-block}audio:not([controls]){display:none;height:0}[hidden]{display:none}html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}a:focus{outline:thin dotted}a:active,a:hover{outline:0}h1{font-size:2em;margin:.67em 0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}mark{background:#ff0;color:#000}code,kbd,pre,samp{font-family:monospace,serif;font-size:1em}pre{white-space:pre-wrap}q{quotes:"\201C" "\201D" "\2018" "\2019"}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:0}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}button,input{line-height:normal}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}
@@ -77,32 +77,32 @@ img::-moz-selection {
 	background: transparent;
 }
 
-/*  =======================================================================  *\
-	Typography ($typography)
+/* ========================================================================= *\
+   Typography ($typography)
 
-	Modular scale:    12px @ 1:1.333 (perfect fourth)
-	Important number: 18px (maximum <html> `font-size`)
-	http://modularscale.com/scale/?px1=12&px2=18&ra1=1.333&ra2=0
+   Modular scale:    12px @ 1:1.333 (perfect fourth)
+   Important number: 18px (maximum <html> `font-size`)
+   http://modularscale.com/scale/?px1=12&px2=18&ra1=1.333&ra2=0
 
-	Description
-	--------------------
-	Cardinal uses a combination of modular scale, unit-less line heights, and
-	`rem` units so that it is easy to scale the type and layout across your
-	entire project.
+   Description
+   --------------------
+   Cardinal uses a combination of modular scale, unit-less line heights, and
+   `rem` units so that it is easy to scale the type and layout across your
+   entire project.
 
-	How it works
-	--------------------
-	The root font size is first set to a value that feels comfortable on small
-	feature phones (mobile devices with a viewport width less than 320px).
+   How it works
+   --------------------
+   The root font size is first set to a value that feels comfortable on small
+   feature phones (mobile devices with a viewport width less than 320px).
 
-	Then, using `@media` queries, Cardinal increases the root font size at
-	several common viewport widths, called breakpoints. You can tweak these
-	`@media` queries and percentage values to suit your project. This is how
-	the type and layout scale globally.
+   Then, using `@media` queries, Cardinal increases the root font size at
+   several common viewport widths, called breakpoints. You can tweak these
+   `@media` queries and percentage values to suit your project. This is how
+   the type and layout scale globally.
 
-	NOTE: IE9 & IE10 do not recognize `rem` units when used with the `font`
-	shorthand property.
-\*  =======================================================================  */
+   NOTE: IE9 & IE10 do not recognize `rem` units when used with the `font`
+   shorthand property.
+\* ========================================================================= */
 
 html { font-size: 75%; } /* 12px */
 @media only screen and (min-width: 320px)  { html { font-size: 81.25%; } }
@@ -448,9 +448,9 @@ small {
 	line-height: 1.333;
 }
 
-/*  =======================================================================  *\
-	Non-typography ($non-typography)
-\*  =======================================================================  */
+/* ========================================================================= *\
+   Non-typography ($non-typography)
+\* ========================================================================= */
 
 /* Fluid-width <audio> elements */
 audio {
@@ -504,72 +504,72 @@ textarea {
 	resize: vertical;
 }
 
-/*  =======================================================================  *\
-	Grids ($grids)
+/* ========================================================================= *\
+   Grids ($grids)
 
-	Description
-	--------------------
-	Cardinal includes a simple, responsive grid system that uses fluid item
-	widths and fixed gutters. Grid items can be divided into halves, thirds,
-	fourths, fifths, and sixths.
+   Description
+   --------------------
+   Cardinal includes a simple, responsive grid system that uses fluid item
+   widths and fixed gutters. Grid items can be divided into halves, thirds,
+   fourths, fifths, and sixths.
 
-	The item widths are set in percentages, and the gutters are set in `rem`
-	units. Due to the change in the root font size above, the fixed gutters
-	grow and shrink proportionally, depending on the width of the viewport.
+   The item widths are set in percentages, and the gutters are set in `rem`
+   units. Due to the change in the root font size above, the fixed gutters
+   grow and shrink proportionally, depending on the width of the viewport.
 
-	You can also change how a `.grid_item` behaves at specified viewport widths
-	& breakpoints, by simply adding helper classes to any element with the
-	`.grid_item` class.
+   You can also change how a `.grid_item` behaves at specified viewport widths
+   & breakpoints, by simply adding helper classes to any element with the
+   `.grid_item` class.
 
-	Additionally, the `.one_half`, `.three_fourths`, etc helper classes can be
-	used outside of the grid context, if you simply want an element to have a
-	width that is a specific percentage of its parent.
+   Additionally, the `.one_half`, `.three_fourths`, etc helper classes can be
+   used outside of the grid context, if you simply want an element to have a
+   width that is a specific percentage of its parent.
 
-	If you want smaller or larger gutters, simply change the values for the
-	`margin-left` property on the `.grid` class and the `padding-left` property
-	on the `.grid-item` class to be mirror opposites. Use a `rem`
-	value derived from the modular scale for the typography above to keep
-	everything “harmonious.”
+   If you want smaller or larger gutters, simply change the values for the
+   `margin-left` property on the `.grid` class and the `padding-left` property
+   on the `.grid-item` class to be mirror opposites. Use a `rem`
+   value derived from the modular scale for the typography above to keep
+   everything “harmonious.”
 
-	Usage
-	--------------------
-	* .grid - element becomes a grid wrapper.
-	* .grid-item - element becomes a grid item.
-	* .one_half,
-	  .two_thirds,
-	  .four_fifths, etc. - element becomes a specific width of its parent.
-	* .lap-* - element’s width changes on devices you place in your lap.
-	* .desk-* - element’s width changes on devices that remain on your desk.
+   Usage
+   --------------------
+   * .grid - element becomes a grid wrapper.
+   * .grid-item - element becomes a grid item.
+   * .one_half,
+     .two_thirds,
+     .four_fifths, etc. - element becomes a specific width of its parent.
+   * .lap-* - element’s width changes on devices you place in your lap.
+   * .desk-* - element’s width changes on devices that remain on your desk.
 
-	Example
-	--------------------
-	The below example reads as: “a grid with four 100% width items, which
-	become 50% width items on devices that rest in your lap, and 25% width
-	items on larger devices that rest on top of your desk.”
+   Example
+   --------------------
+   The below example reads as: “a grid with four 100% width items, which
+   become 50% width items on devices that rest in your lap, and 25% width
+   items on larger devices that rest on top of your desk.”
 
-	<div class="grid">
-		<div class="grid-item lap-one_half desk-one_fourth"></div>
-		<div class="grid-item lap-one_half desk-one_fourth"></div>
-		<div class="grid-item lap-one_half desk-one_fourth"></div>
-		<div class="grid-item lap-one_half desk-one_fourth"></div>
-	</div>
+   <div class="grid">
+       <div class="grid-item lap-one_half desk-one_fourth"></div>
+       <div class="grid-item lap-one_half desk-one_fourth"></div>
+       <div class="grid-item lap-one_half desk-one_fourth"></div>
+       <div class="grid-item lap-one_half desk-one_fourth"></div>
+   </div>
 
-	White space issues
-	--------------------
-	Since the grids use `display: inline-block;` instead of floats, a hack is
-	used to remove that white-space in modern browsers. However, this hack does
-	not work in Safari < 6, and Android < 4.2.
+   White space issues
+   --------------------
+   Since the grids use `display: inline-block;` instead of floats, a hack is
+   used to remove that white-space in modern browsers. However, this hack does
+   not work in Safari < 6, and Android < 4.2.
 
-	If you need to support these older browsers, simply remove the white space
-	in between the grid items manually, in the HTML, like so:
+   If you need to support these older browsers, simply remove the white space
+   in between the grid items manually, in the HTML, like so:
 
-	<div class="grid">
-		<div class="grid-item lap-one_half desk-one_fourth"></div
-		><div class="grid-item lap-one_half desk-one_fourth"></div
-		><div class="grid-item lap-one_half desk-one_fourth"></div
-		><div class="grid-item lap-one_half desk-one_fourth"></div>
-	</div>
-\*  =======================================================================  */
+   <div class="grid">
+       <div class="grid-item lap-one_half desk-one_fourth"></div
+       ><div class="grid-item lap-one_half desk-one_fourth"></div
+       ><div class="grid-item lap-one_half desk-one_fourth"></div
+       ><div class="grid-item lap-one_half desk-one_fourth"></div>
+   </div>
+\* ========================================================================= */
 
 /**
  * Grid container
@@ -693,9 +693,9 @@ textarea {
 	.desk-five_sixths   { width: 83.333%; }
 }
 
-/*  =======================================================================  *\
-	Layout ($layout)
-\*  =======================================================================  */
+/* ========================================================================= *\
+   Layout ($layout)
+\* ========================================================================= */
 
 /* 100% width container */
 .strip {
@@ -741,35 +741,35 @@ textarea {
 	background: #dedede;
 }
 
-/*  =======================================================================  *\
-	Buttons ($buttons)
+/* ========================================================================= *\
+   Buttons ($buttons)
 
-	Usage
-	--------------------
-	class="button [style] [size && || width] [shape && || state]"
+   Usage
+   --------------------
+   class="button [style] [size && || width] [shape && || state]"
 
-	* .button - element becomes the default, “flat” style button.
-	* .hollow,
-	  .chunky,
-	  .glossy - element becomes the specified button style.
-	* .mini,
-	  .small,
-	  .large,
-	  .block - element becomes the specified button size.
-	* .one_half,
-	  .two_thirds,
-	  .four_fifths, etc. - element becomes a specific width of its parent.
-	* .rounded,
-	  .pill - element becomes the specified button shape.
-	* .disabled,
-	  .button[disabled] - element becomes a button that is not usable.
+   * .button - element becomes the default, “flat” style button.
+   * .hollow,
+     .chunky,
+     .glossy - element becomes the specified button style.
+   * .mini,
+     .small,
+     .large,
+     .block - element becomes the specified button size.
+   * .one_half,
+     .two_thirds,
+     .four_fifths, etc. - element becomes a specific width of its parent.
+   * .rounded,
+     .pill - element becomes the specified button shape.
+   * .disabled,
+     .button[disabled] - element becomes a button that is not usable.
 
-	Examples
-	--------------------
-	* <button type="button" class="button large one_whole rounded"></button>
-	* <a href="" class="button mini chunky one_half pill disabled"></a>
-	* <input type="submit" class="button glossy" value="Send message">
-\*  =======================================================================  */
+   Examples
+   --------------------
+   * <button type="button" class="button large one_whole rounded"></button>
+   * <a href="" class="button mini chunky one_half pill disabled"></a>
+   * <input type="submit" class="button glossy" value="Send message">
+\* ========================================================================= */
 
 /* Base */
 .button {
@@ -1011,9 +1011,9 @@ textarea {
 	box-shadow:         inset 0 0 0 3px #eaeaea !important;
 }
 
-/*  =======================================================================  *\
-	Tables ($tables)
-\*  =======================================================================  */
+/* ========================================================================= *\
+   Tables ($tables)
+\* ========================================================================= */
 
 /* Borderless */
 .table {
@@ -1089,9 +1089,9 @@ textarea {
 	background-color: #f8f8f8;
 }
 
-/*  =======================================================================  *\
-	Main ($main)
-\*  =======================================================================  */
+/* ========================================================================= *\
+   Main ($main)
+\* ========================================================================= */
 
 
 
@@ -1103,9 +1103,9 @@ textarea {
 
 
 
-/*  =======================================================================  *\
-	Helpers ($helpers)
-\*  =======================================================================  */
+/* ========================================================================= *\
+   Helpers ($helpers)
+\* ========================================================================= */
 
 /* Floats */
 .float_left  { float: left;  }
@@ -1220,10 +1220,10 @@ textarea {
 	clear: both;
 }
 
-/*  =======================================================================  *\
-	Print ($print)
-	Inlined to avoid an extra HTTP request - http://cbrac.co/VUjfe3
-\*  =======================================================================  */
+/* ========================================================================= *\
+   Print ($print)
+   Inlined to avoid an extra HTTP request - http://cbrac.co/VUjfe3
+\* ========================================================================= */
 
 @media print {
 	* {
