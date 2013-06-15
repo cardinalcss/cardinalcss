@@ -7,10 +7,11 @@
    04. Grids...............A simple, nestable grid system and width classes
    05. Layout..............Common layout items (wrappers, wells, islands, etc)
    06. Buttons.............Basic styles, sizes, and shapes
-   07. Tables..............Styles for tabular data
-   08. Main................Your styles go here!
-   09. Helpers.............Some useful, global classes
-   10. Print...............Inlined, barebones print styles
+   07. Icons...............Useful classes to display icons
+   08. Tables..............Styles for tabular data
+   09. Main................Your styles go here!
+   10. Helpers.............Some useful, global classes
+   11. Print...............Inlined, barebones print styles
 \* ========================================================================= */
 
 /* ========================================================================= *\
@@ -1034,6 +1035,50 @@ textarea {
 	background: #787878;
 }
 
+/* “Back to top” button */
+.button.back_to_top {
+	position: absolute;
+	top: -1.333rem;
+	right: 5%;
+	padding: 0.75rem;
+	-webkit-border-radius: 50%;
+	-moz-border-radius:    50%;
+	border-radius:         50%;
+	background-color: #bb2122;
+	text-align: center;
+	text-decoration: none;
+	line-height: 0;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=75);
+	opacity: 0.75;
+}
+
+.button.back_to_top:hover {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+	opacity: 1.0;
+}
+
+/* ========================================================================= *\
+   Icons ($icons)
+\* ========================================================================= */
+
+/* Icons */
+.icon {
+	display: inline-block;
+	width: 1.5rem;
+	height: 1.5rem;
+	background-image: url("../img/icons.svg");
+	-webkit-background-size: 100% 100%;
+	-moz-background-size:    100% 100%;
+	background-size:         100% 100%;
+	background-repeat: no-repeat;
+}
+
+.icon-arrow_up {
+	background-position: 0 0;
+}
+
 /* ========================================================================= *\
    Tables ($tables)
 \* ========================================================================= */
@@ -1239,24 +1284,24 @@ textarea {
 	text-align: center;
 }
 
-.birdy {
+.branding-logo {
 	margin-bottom: 0.75rem;
 }
 
-.site_name {
+.branding-name {
 	line-height: 1;
 }
 
-.branding .button.primary {
+.branding-buttons .button.primary {
 	margin-right: 0.475rem;
 }
 
-.changelog {
+.branding-links {
 	margin: 0.75rem 0 0;
 	font-size: 0.8125rem;
 }
 
-.changelog a {
+.branding-links a {
 	color: #969696;
 }
 
@@ -1265,13 +1310,13 @@ textarea {
 		text-align: left;
 	}
 
-	.birdy,
-	hgroup {
+	.branding-logo,
+	.branding-info {
 		display: inline-block;
 		vertical-align: middle;
 	}
 
-	.birdy {
+	.branding-logo {
 		margin-bottom: 0;
 		margin-right: 5%;
 	}
@@ -1327,45 +1372,6 @@ textarea {
 		margin: 0 auto;
 		max-width: 1440px;
 	}
-}
-
-/* “Back to top” button */
-.btn_top {
-	position: absolute;
-	top: -1.333rem;
-	right: 5%;
-	padding: 0.75rem;
-	-webkit-border-radius: 50%;
-	-moz-border-radius:    50%;
-	border-radius:         50%;
-	background-color: #bb2122;
-	text-align: center;
-	text-decoration: none;
-	line-height: 0;
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
-	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=75);
-	opacity: 0.75;
-}
-
-.btn_top:hover {
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
-	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-	opacity: 1.0;
-}
-
-.icon {
-	display: inline-block;
-	width: 1.5rem;
-	height: 1.5rem;
-	background-image: url("../img/icons.svg");
-	-webkit-background-size: 100% 100%;
-	-moz-background-size:    100% 100%;
-	background-size:         100% 100%;
-	background-repeat: no-repeat;
-}
-
-.icon-arrow_up {
-	background-position: 0 0;
 }
 
 /* ========================================================================= *\

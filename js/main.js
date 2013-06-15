@@ -4,7 +4,7 @@ $(function() {
 	 * Sidebar menu
 	 */
 
-	 // Global variables
+	// Global variables
 	var html_body = $("html, body"),
 		page = $(".page"),
 		menu = $(".menu"),
