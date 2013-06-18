@@ -1206,10 +1206,6 @@ textarea {
 	}
 }
 
-.menu-button:hover {
-	background-color: #222;
-}
-
 /* Menu */
 .menu {
 	position: fixed;
@@ -1267,6 +1263,10 @@ textarea {
 
 @media only screen and (min-width: 960px) {
 	/* To avoid hover state weirdness on touch events */
+	.menu-button:hover {
+		background-color: #222;
+	}
+
 	.menu li a:hover {
 		background-color: #333;
 		color: #c0c0c0;
