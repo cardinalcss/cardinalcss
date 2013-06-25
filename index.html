@@ -237,9 +237,9 @@ video {
 							</div>
 
 							<div class="grid-item desk-one_half">
-								<h3>Usage</h3>
-
 								<dl class="island">
+									<h3>Usage</h3>
+									<hr>
 									<dt>.grid</dt>
 									<dd>Element becomes a grid wrapper.</dd>
 
@@ -258,6 +258,14 @@ video {
 							</div>
 						</div>
 
+						<h3>“lap-*” and “desk-*” classes</h3>
+
+						<p>Cardinal supports the <a href="http://coding.smashingmagazine.com/2012/03/22/device-agnostic-approach-to-responsive-web-design/">device</a>-<a href="http://tympanus.net/codrops/2012/10/30/becoming-device-agnostic/">agnostic</a> approach to responsive design. The design for an application that uses Cardinal shouldn’t care about the pixel dimension of the device it’s being viewed upon. The dimensions of the content and layout within the design should dictate how it changes across the vast spectrum of devices that exist today.</p>
+
+						<p>The words “lap” and “desk” are used in this grid system to define common breakpoints, instead of specific device names like iPad or Samsung Galaxy Nexus. The <code>min-width</code> values for the <code>@media</code> queries containing these classes are set to common widths (640px and 960px) by default.</p>
+
+						<p>You are encouraged to change these values based where your own design breaks or looks best. You are also encouraged to add more breakpoints as you need them, to ensure your design looks great across all device dimensions.</p>
+
 						<h3 style="color: red;">White space issues</h3>
 
 						<p>Since the <code>.grid-item</code> class uses <code>display: inline-block;</code> instead of floats, the <code>font-size: 0;</code> hack is used on the <code>.grid</code> element to remove the white space between <code>.grid-item</code> elements in modern browsers. However, this hack does not work in older versions of Safari and Android (Safari < 6, Android < 4.2).</p>
@@ -273,11 +281,11 @@ video {
 
 						<p><strong>Alternatively</strong>, if you use a build process (and you should) to minify your HTML for the production/live site, then the problematic white space is removed anyways. This way you can keep your HTML syntax normal in your development environment, and support a few more legacy browsers on the live site.</p>
 
-						<h3>Examples</h3>
+						<h3>Grid examples</h3>
 
 						<p>Below are some example grids. <strong>View the source code</strong> of this page to see how the they behave.</p>
 
-						<h4>Basic</h4>
+						<h4>Basic grid</h4>
 
 						<pre class="max_height"><code>&lt;div class=&quot;grid&quot;&gt;
 	&lt;div class=&quot;grid-item one_fourth&quot;&gt;&lt;/div&gt;
@@ -293,7 +301,7 @@ video {
 							<div class="grid-item one_fourth"><div class="island">&nbsp;</div></div>
 						</div>
 
-						<h4>Half gutter</h4>
+						<h4>Half gutter grid</h4>
 
 						<pre class="max_height"><code>&lt;div class=&quot;grid grid_gutter_half&quot;&gt;
 	&lt;div class=&quot;grid-item one_half desk-one_fourth&quot;&gt;&lt;/div&gt;
@@ -309,7 +317,7 @@ video {
 							<div class="grid-item one_half desk-one_fourth"><div class="island">&nbsp;</div></div>
 						</div>
 
-						<h4>Double gutter</h4>
+						<h4>Double gutter grid</h4>
 
 						<pre class="max_height"><code>&lt;div class=&quot;grid grid_gutter_double&quot;&gt;
 	&lt;div class=&quot;grid-item one_half desk-one_fourth&quot;&gt;&lt;/div&gt;
@@ -325,7 +333,7 @@ video {
 							<div class="grid-item one_half desk-one_fourth"><div class="island">&nbsp;</div></div>
 						</div>
 
-						<h4>Basic, responsive</h4>
+						<h4>Basic, responsive grid</h4>
 
 						<pre class="max_height"><code>&lt;div class=&quot;grid&quot;&gt;
 	&lt;div class=&quot;grid-item lap-one_half desk-one_fourth&quot;&gt;&lt;/div&gt;
@@ -341,7 +349,7 @@ video {
 							<div class="grid-item lap-one_half desk-one_fourth"><div class="island">&nbsp;</div></div>
 						</div>
 
-						<h4>Nested</h4>
+						<h4>Nested grid</h4>
 
 						<pre class="max_height"><code>&lt;div class=&quot;grid&quot;&gt;
 	&lt;div class=&quot;grid-item one_half&quot;&gt;
@@ -367,7 +375,7 @@ video {
 							<div class="grid-item one_fourth"><div class="island">&nbsp;</div></div>
 						</div>
 
-						<h4>Nested, responsive</h4>
+						<h4>Nested, responsive grid</h4>
 
 						<pre class="max_height"><code>&lt;div class=&quot;grid&quot;&gt;
 	&lt;div class=&quot;grid-item lap-one_half&quot;&gt;
@@ -393,7 +401,7 @@ video {
 							<div class="grid-item lap-one_fourth"><div class="island">&nbsp;</div></div>
 						</div>
 
-						<h4>Kitchen sink</h4>
+						<h4>“Kitchen sink” grid</h4>
 
 						<pre class="max_height"><code>&lt;div class=&quot;grid&quot;&gt;
 	&lt;div class=&quot;grid-item one_sixth&quot;&gt;&lt;/div&gt;
@@ -515,7 +523,7 @@ video {
 							</div>
 						</div>
 
-						<h4>Kitchen sink, responsive</h4>
+						<h4>“Kitchen sink”, responsive grid</h4>
 
 						<pre class="max_height"><code>&lt;div class=&quot;grid&quot;&gt;
 	&lt;div class=&quot;grid-item lap-one_third desk-one_sixth&quot;&gt;&lt;/div&gt;
