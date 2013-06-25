@@ -1,3 +1,7 @@
+# 0.3.4 (June 25, 2013)
+
+- Updated comment line length to have a maximum of 72 characters.
+
 # 0.3.3 (June 13, 2013)
 
 - Removed IE7 fix for input button outlines.
