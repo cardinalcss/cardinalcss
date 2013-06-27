@@ -35,7 +35,7 @@ Cardinal supports most modern browsers:
 
 ### Known issues
 
-#### White space hack
+#### “display: inline-block” whitespace hack
 
 - [More info here](http://css-tricks.com/fighting-the-space-between-inline-block-elements/)
 
@@ -51,6 +51,17 @@ If you need to support these older browsers, simply remove the white space in be
 	</div>
 
 **Alternatively**, if you use a build process (and you should) to minify your HTML for the production/live site, then the problematic white space is removed anyways. This way you can keep your HTML syntax normal in your development environment, and support a few more legacy browsers on the live site.
+
+#### Google Maps
+
+- [More info here](https://github.com/cbracco/cardinal/issues/6)
+
+Cardinal defines all images to have `max-width: 100%`, which can interfere with the Google Maps “info window.” To fix this issue, you must change `100%` to `none` for all images inside your Google Maps, like so:
+
+	img[src*="gstatic.com/"],
+	img[src*="googleapis.com/"] {
+		max-width: none;
+	}
 
 #### box-sizing: border-box; in IE9
 
