@@ -755,6 +755,14 @@ textarea {
  * Menus (vertical by default)
  */
 
+.menu.centered {
+	text-align: center;
+}
+
+.menu.bordered {
+	border: 1px solid #d0d0d0;
+}
+
 .menu-heading,
 .menu a {
 	padding: 0.356rem 0.75rem;
@@ -779,10 +787,6 @@ textarea {
 .menu.horizontal {
 	border: 0 none;
 	font-size: 0;
-}
-
-.menu.horizontal.centered {
-	text-align: center;
 }
 
 .menu.horizontal .menu-heading,
