@@ -3,14 +3,15 @@
    (Ctrl/Cmd + F, and search for `$section` to jump to a section)
    01. Base................Normalize.css (minified), important styles
    02. Typography..........Basic typography elements
-   03. Non-typography......Important elements that are not type-based
-   04. Grids...............A simple grid system & handy width classes
-   05. Layout..............Common layout items (wrappers, islands, etc)
-   06. Buttons.............Basic styles, sizes, and shapes
-   07. Tables..............Styles for tabular data
-   08. Main................Your styles go here!
-   09. Helpers.............Some useful, global classes
-   10. Print...............Inlined, barebones print styles
+   03. Non-typography......Styling for elements that are not type-based
+   04. Layout..............Common layout items (wrappers, islands, etc)
+   05. Grids...............A simple grid system & handy width classes
+   06. Navigation..........Menus, toolbars, etc
+   07. Buttons.............Styles, sizes, shapes, and states
+   08. Tables..............Styles for tabular data
+   09. Main................Your styles go here!
+   10. Helpers.............Some useful, global classes
+   11. Print...............Inlined, barebones print styles
 \* ================================================================== */
 
 /* ================================================================== *\
@@ -509,6 +510,54 @@ textarea {
 }
 
 /* ================================================================== *\
+   Layout ($layout)
+\* ================================================================== */
+
+/* 100% width container */
+.strip {
+	margin: 0;
+	margin-bottom: 1rem;
+	padding: 0;
+	width: 100%;
+	background-color: #efefef;
+	list-style: none;
+}
+
+.strip .wrapper {
+	padding: 1rem 0;
+}
+
+/* Page wrapper */
+.wrapper {
+	margin: 0 auto;
+	max-width: 1140px;
+	width: 90%;
+}
+
+.island,
+.well {
+	margin: 0 0 1rem;
+}
+
+.island {
+	padding: 1rem;
+	background: #efefef;
+}
+
+.well {
+	padding: 1rem;
+	background: #efefef;
+	-webkit-box-shadow: inset 0 0 8px hsla(0, 0%, 0%, 0.15);
+	-moz-box-shadow:    inset 0 0 8px hsla(0, 0%, 0%, 0.15);
+	box-shadow:         inset 0 0 8px hsla(0, 0%, 0%, 0.15);
+}
+
+.island .island,
+.well .well {
+	background: #dedede;
+}
+
+/* ================================================================== *\
    Grids ($grids)
 
    Description
@@ -699,52 +748,75 @@ textarea {
 }
 
 /* ================================================================== *\
-   Layout ($layout)
+   Navigation ($navigation)
 \* ================================================================== */
 
-/* 100% width container */
-.strip {
-	margin: 0;
-	margin-bottom: 1rem;
-	padding: 0;
-	width: 100%;
+/**
+ * Menus (vertical by default)
+ */
+
+.menu-heading,
+.menu a {
+	padding: 0.356rem 0.75rem;
+}
+
+.menu-heading {
+	margin-bottom: 0;
 	background-color: #efefef;
-	list-style: none;
+	font-size: 1.125rem;
 }
 
-.strip .wrapper {
-	padding: 1rem 0;
+.menu a {
+	display: block;
+	text-decoration: none;
 }
 
-/* Page wrapper */
-.wrapper {
-	margin: 0 auto;
-	max-width: 1140px;
-	width: 90%;
+.menu a:hover {
+	background-color: #f8f8f8;
+	color: #222;
 }
 
-.island,
-.well {
-	margin: 0 0 1rem;
+.menu.horizontal {
+	border: 0 none;
+	font-size: 0;
 }
 
-.island {
-	padding: 1rem;
-	background: #efefef;
+.menu.horizontal.centered {
+	text-align: center;
 }
 
-.well {
-	padding: 1rem;
-	background: #efefef;
-	-webkit-box-shadow: inset 0 0 8px hsla(0, 0%, 0%, 0.15);
-	-moz-box-shadow:    inset 0 0 8px hsla(0, 0%, 0%, 0.15);
-	box-shadow:         inset 0 0 8px hsla(0, 0%, 0%, 0.15);
+.menu.horizontal .menu-heading,
+.menu.horizontal a {
+	font-size: 1rem;
 }
 
-.island .island,
-.well .well {
-	background: #dedede;
+.menu.horizontal .menu-heading,
+.menu.horizontal ul,
+.menu.horizontal li,
+.menu.horizontal a {
+	display: inline-block;
+	vertical-align: baseline;
 }
+
+.menu.horizontal li {
+	display: inline;
+}
+
+.menu.horizontal .menu-heading {
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size: 1rem;
+}
+
+.menu.horizontal a {
+	display: inline-block;
+}
+
+/**
+ * Toolbars
+ */
+
+.toolbar { }
 
 /* ================================================================== *\
    Buttons ($buttons)
