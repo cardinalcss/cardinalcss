@@ -82,8 +82,8 @@ img::-moz-selection {
    Typography ($typography)
 
    Modular scale:    12px @ 1:1.333 (perfect fourth)
-   Important number: 18px (maximum <html> `font-size`)
-   http://modularscale.com/scale/?px1=12&px2=18&ra1=1.333&ra2=0
+   Important number: 24px (maximum <html> `font-size`)
+   http://modularscale.com/scale/?px1=12&px2=24&ra1=1.333&ra2=0
 
    Description
    --------------------
@@ -107,11 +107,12 @@ img::-moz-selection {
 \* ========================================================================= */
 
 html { font-size: 75%; } /* 12px */
-@media only screen and (min-width: 320px)  { html { font-size: 81.25%; } }
-@media only screen and (min-width: 480px)  { html { font-size: 87.5%;  } }
-@media only screen and (min-width: 640px)  { html { font-size: 100%;   } }
-@media only screen and (min-width: 960px)  { html { font-size: 112.5%; } }
-@media only screen and (min-width: 1440px) { html { font-size: 150%;   } }
+@media only screen and (min-width: 320px)  { html { font-size: 81.25%; } } /* 13px */
+@media only screen and (min-width: 480px)  { html { font-size: 87.5%;  } } /* 14px */
+@media only screen and (min-width: 640px)  { html { font-size: 100%;   } } /* 16px */
+@media only screen and (min-width: 960px)  { html { font-size: 112.5%; } } /* 18px */
+@media only screen and (min-width: 1140px) { html { font-size: 125%;   } } /* 20px */
+@media only screen and (min-width: 1440px) { html { font-size: 150%;   } } /* 24px */
 
 /**
  * 1. Inherits percentage declared on above <html> as root `font-size`
@@ -377,13 +378,6 @@ kbd {
 		padding: 0.1rem 0.3rem;
 		font-size: 0.75rem;
 	}
-}
-
-nav ul,
-nav ol {
-	margin: 0;
-	padding: 0;
-	list-style: none;
 }
 
 /* Nested `list-style` types for ordered lists */
@@ -752,26 +746,33 @@ textarea {
 \* ================================================================== */
 
 /**
- * Menus (vertical by default)
+ * Menus
  */
 
-.menu.centered {
-	text-align: center;
+.menu,
+.menu-heading,
+.menu a {
+	display: inline-block;
+	vertical-align: top;
 }
 
-.menu.bordered {
-	border: 1px solid #d0d0d0;
+.menu,
+.menu ol,
+.menu ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
 }
 
 .menu-heading,
 .menu a {
 	padding: 0.356rem 0.75rem;
+	font-size: 1rem;
 }
 
 .menu-heading {
 	margin-bottom: 0;
 	background-color: #efefef;
-	font-size: 1.125rem;
 }
 
 .menu a {
@@ -779,13 +780,27 @@ textarea {
 	text-decoration: none;
 }
 
-.menu a:hover {
+.menu a:hover,
+.menu a:active,
+.menu li.current a,
+.menu a.current {
 	background-color: #f8f8f8;
+}
+
+.menu a:hover {
 	color: #222;
 }
 
+.menu a:active,
+.menu li.current a,
+.menu a.current {
+	-webkit-box-shadow: inset 0 0 6px hsla(0, 0%, 0%, 0.2);
+	-moz-box-shadow:    inset 0 0 6px hsla(0, 0%, 0%, 0.2);
+	box-shadow:         inset 0 0 6px hsla(0, 0%, 0%, 0.2);
+}
+
+/* Horizontal orientation */
 .menu.horizontal {
-	border: 0 none;
 	font-size: 0;
 }
 
@@ -795,24 +810,32 @@ textarea {
 }
 
 .menu.horizontal .menu-heading,
+.menu.horizontal ol,
 .menu.horizontal ul,
 .menu.horizontal li,
 .menu.horizontal a {
 	display: inline-block;
-	vertical-align: baseline;
 }
 
-.menu.horizontal li {
-	display: inline;
+/* Alignment */
+.menu.centered {
+	text-align: center;
 }
 
-.menu.horizontal .menu-heading {
-	text-transform: uppercase;
-	font-weight: 400;
-	font-size: 1rem;
+/* Borders */
+.menu.bordered {
+	border: 1px solid #d0d0d0;
 }
 
-.menu.horizontal a {
+/* Sizes */
+.menu.block,
+.menu.block .menu-heading,
+.menu.block a {
+	display: block;
+}
+
+.menu.horizontal.block .menu-heading,
+.menu.horizontal.block a {
 	display: inline-block;
 }
 
@@ -825,25 +848,32 @@ textarea {
 /* ================================================================== *\
    Buttons ($buttons)
 
-   Usage
+   Description
    --------------------
-   class="button [style] [size && || width] [shape && || state]"
-
    * .button - element becomes the default, “flat” style button.
+
    * .hollow,
      .chunky,
      .glossy - element becomes the specified button style.
+
    * .mini,
      .small,
      .large,
      .block - element becomes the specified button size.
+
    * .one_half,
      .two_thirds,
      .four_fifths, etc. - element becomes specific width of its parent.
+
    * .rounded,
      .pill - element becomes the specified button shape.
+
    * .disabled,
      .button[disabled] - element becomes a button that is not usable.
+
+   Usage
+   --------------------
+   class="button [style] [size && || width] [shape && || state]"
 
    Examples
    --------------------
@@ -915,9 +945,9 @@ textarea {
 }
 
 .button.chunky:active {
-	-webkit-box-shadow: inset 0 2px 3px hsla(0, 0%, 0%, 0.2);
-	-moz-box-shadow:    inset 0 2px 3px hsla(0, 0%, 0%, 0.2);
-	box-shadow:         inset 0 2px 3px hsla(0, 0%, 0%, 0.2);
+	-webkit-box-shadow: inset 0 2px 3px hsla(0, 0%, 0%, 0.20);
+	-moz-box-shadow:    inset 0 2px 3px hsla(0, 0%, 0%, 0.20);
+	box-shadow:         inset 0 2px 3px hsla(0, 0%, 0%, 0.20);
 }
 
 .button.glossy {
