@@ -584,8 +584,8 @@ textarea {
    * .grid - element becomes a grid wrapper.
    * .grid-item - element becomes a grid item.
    * .one_half,
-     .two_thirds,
-     .four_fifths, etc. - element becomes specific width of its parent.
+	 .two_thirds,
+	 .four_fifths, etc. - element becomes specific width of its parent.
    * .lap-* - element’s width changes on devices you place in your lap.
    * .desk-* - element’s width changes on devices that remain on a desk.
 
@@ -596,10 +596,10 @@ textarea {
    width items on larger devices that rest on top of your desk.”
 
    <div class="grid">
-       <div class="grid-item lap-one_half desk-one_fourth"></div>
-       <div class="grid-item lap-one_half desk-one_fourth"></div>
-       <div class="grid-item lap-one_half desk-one_fourth"></div>
-       <div class="grid-item lap-one_half desk-one_fourth"></div>
+	   <div class="grid-item lap-one_half desk-one_fourth"></div>
+	   <div class="grid-item lap-one_half desk-one_fourth"></div>
+	   <div class="grid-item lap-one_half desk-one_fourth"></div>
+	   <div class="grid-item lap-one_half desk-one_fourth"></div>
    </div>
 
    White space issues
@@ -612,10 +612,10 @@ textarea {
    space in between the grid items manually, in the HTML, like so:
 
    <div class="grid">
-       <div class="grid-item lap-one_half desk-one_fourth"></div
-       ><div class="grid-item lap-one_half desk-one_fourth"></div
-       ><div class="grid-item lap-one_half desk-one_fourth"></div
-       ><div class="grid-item lap-one_half desk-one_fourth"></div>
+	   <div class="grid-item lap-one_half desk-one_fourth"></div
+	   ><div class="grid-item lap-one_half desk-one_fourth"></div
+	   ><div class="grid-item lap-one_half desk-one_fourth"></div
+	   ><div class="grid-item lap-one_half desk-one_fourth"></div>
    </div>
 \* ================================================================== */
 
@@ -746,7 +746,7 @@ textarea {
 \* ================================================================== */
 
 /**
- * Menus
+ * Vertical menus (default)
  */
 
 .menu,
@@ -767,6 +767,7 @@ textarea {
 .menu-heading,
 .menu a {
 	padding: 0.356rem 0.75rem;
+	color: #222;
 	font-size: 1rem;
 }
 
@@ -799,7 +800,10 @@ textarea {
 	box-shadow:         inset 0 0 6px hsla(0, 0%, 0%, 0.2);
 }
 
-/* Horizontal orientation */
+/**
+ * Horizontal menus
+ */
+
 .menu.horizontal {
 	font-size: 0;
 }
@@ -817,17 +821,27 @@ textarea {
 	display: inline-block;
 }
 
-/* Alignment */
+/**
+ * Alignment
+ */
+
 .menu.centered {
 	text-align: center;
 }
 
-/* Borders */
+/**
+ * Borders
+ */
+
 .menu.bordered {
 	border: 1px solid #d0d0d0;
 }
 
-/* Sizes */
+/**
+ * Sizes
+ */
+
+/* Block */
 .menu.block,
 .menu.block .menu-heading,
 .menu.block a {
@@ -843,8 +857,6 @@ textarea {
  * Toolbars
  */
 
-.toolbar { }
-
 /* ================================================================== *\
    Buttons ($buttons)
 
@@ -853,23 +865,23 @@ textarea {
    * .button - element becomes the default, “flat” style button.
 
    * .hollow,
-     .chunky,
-     .glossy - element becomes the specified button style.
+	 .chunky,
+	 .glossy - element becomes the specified button style.
 
    * .mini,
-     .small,
-     .large,
-     .block - element becomes the specified button size.
+	 .small,
+	 .large,
+	 .block - element becomes the specified button size.
 
    * .one_half,
-     .two_thirds,
-     .four_fifths, etc. - element becomes specific width of its parent.
+	 .two_thirds,
+	 .four_fifths, etc. - element becomes specific width of its parent.
 
    * .rounded,
-     .pill - element becomes the specified button shape.
+	 .pill - element becomes the specified button shape.
 
    * .disabled,
-     .button[disabled] - element becomes a button that is not usable.
+	 .button[disabled] - element becomes a button that is not usable.
 
    Usage
    --------------------
