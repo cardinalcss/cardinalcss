@@ -75,30 +75,29 @@ blockquote {
 	font-style: italic;
 	font-family: Baskerville, "Baskerville Old Face", "Hoefler Text",
 		Garamond, "Times New Roman", serif;
+
+	p {
+		margin: 0;
+	}
+
+	p + p {
+		margin-top: 1rem;
+	}
+
+	/**
+	 * TIP: Use <footer> tag instead of <cite> inside blockquotes -
+	 * http://cbrac.co/TCVK4P
+	 */
+	footer {
+		color: @heading-color;
+		font-style: italic;
+		font-size: 0.8125rem;
+		&:before {
+			content: "\2014 \2009";
+		}
+	}
 }
 
-blockquote p {
-	margin: 0;
-}
-
-blockquote p + p {
-	margin-top: 1rem;
-}
-
-/**
- * TIP: Use <footer> tag instead of <cite> inside blockquotes -
- * http://cbrac.co/TCVK4P
- */
-
-blockquote footer:before {
-	content: "\2014 \2009";
-}
-
-blockquote footer {
-	color: @heading-color;
-	font-style: italic;
-	font-size: 0.8125rem;
-}
 
 blockquote,
 dl,
@@ -272,16 +271,7 @@ kbd {
 	padding: 0 0.3rem;
 	border: 1px solid @border-code-color;
 	.border-radius(4px);
-	background: @bg-current-color;
-	-webkit-box-shadow:
-		0 1px 0px @border-code-color,
-		inset 0 0 0 1px @white;
-	-moz-box-shadow:
-		0 1px 0px @border-code-color,
-		inset 0 0 0 1px @white;
-	box-shadow:
-		0 1px 0px @border-code-color,
-		inset 0 0 0 1px @white;
+	.box-shadow(0 1px 0px @border-code-color);
 	white-space: nowrap;
 	font-size: 10px;
 	font-family: Monaco, "Lucida Sans Typewriter", Consolas,
@@ -297,10 +287,19 @@ kbd {
 }
 
 /* Nested `list-style` types for ordered lists */
-ol          { list-style: decimal; }
-ol ol       { list-style: upper-alpha; }
-ol ol ol    { list-style: lower-roman; }
-ol ol ol ol { list-style: lower-alpha; }
+ol { 
+	list-style: decimal; 
+	ol { 
+		list-style: upper-alpha; 
+		ol { 
+			list-style: lower-roman;
+			ol { 
+				list-style: lower-alpha;
+			}
+		}
+	}
+}
+
 
 ol li ol,
 ol li ul,
@@ -326,9 +325,7 @@ pre {
 	overflow: auto;
 	padding: 1rem;
 	background: @pre-bg-color;
-	-webkit-box-shadow: inset 0 0 5px hsla(0, 0%, 0%, 0.6);
-	-moz-box-shadow:    inset 0 0 5px hsla(0, 0%, 0%, 0.6);
-	box-shadow:         inset 0 0 5px hsla(0, 0%, 0%, 0.6);
+	.box-shadow(inset 0 0 5px hsla(0, 0%, 0%, 0.6));
 	color: @pre-color;
 	white-space: pre;
 	word-wrap: normal;
@@ -340,20 +337,21 @@ pre {
 	-moz-hyphens:    none;
 	hyphens:         none;
 	-ms-hyphens:     none;
+	/* Reset above <code> styles when nested inside <pre> tags */
+	code {
+		display: block;
+		overflow: auto;
+		margin: 0;
+		padding: 0;
+		height: 100%;
+		border: none;
+		.border-radius(0);
+		background: transparent;
+		white-space: pre;
+	}
 }
 
-/* Reset above <code> styles when nested inside <pre> tags */
-pre code {
-	display: block;
-	overflow: auto;
-	margin: 0;
-	padding: 0;
-	height: 100%;
-	border: none;
-	.border-radius(0);
-	background: transparent;
-	white-space: pre;
-}
+
 
 small {
 	display: inline-block;

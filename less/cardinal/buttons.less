@@ -58,9 +58,7 @@
 
 .button:active {
 	background: @button-active-color;
-	-webkit-box-shadow: inset 0 0 6px hsla(0, 0%, 0%, 0.20);
-	-moz-box-shadow:    inset 0 0 6px hsla(0, 0%, 0%, 0.20);
-	box-shadow:         inset 0 0 6px hsla(0, 0%, 0%, 0.20);
+	.box-shadow(inset 0 0 6px hsla(0, 0%, 0%, 0.20));
 }
 
 .button:focus {
@@ -72,35 +70,25 @@
 /* Styles */
 .button.hollow {
 	background: transparent;
-	-webkit-box-shadow: inset 0 0 0 3px hsla(0, 0%, 92%, 1.0);
-	-moz-box-shadow:    inset 0 0 0 3px hsla(0, 0%, 92%, 1.0);
-	box-shadow:         inset 0 0 0 3px hsla(0, 0%, 92%, 1.0);
+	.box-shadow(inset 0 0 0 3px hsla(0, 0%, 92%, 1.0));
 }
 
 .button.hollow:hover {
 	background: lighten(@button-bg-color, 10%);
-	-webkit-box-shadow: inset 0 0 0 3px hsla(0, 0%, 93%, 1.0);
-	-moz-box-shadow:    inset 0 0 0 3px hsla(0, 0%, 93%, 1.0);
-	box-shadow:         inset 0 0 0 3px hsla(0, 0%, 93%, 1.0);
+	.box-shadow(inset 0 0 0 3px hsla(0, 0%, 93%, 1.0));
 }
 
 .button.hollow:active {
 	background: @button-active-color;
-	-webkit-box-shadow: inset 0 0 6px hsla(0, 0%, 0%, 0.20);
-	-moz-box-shadow:    inset 0 0 6px hsla(0, 0%, 0%, 0.20);
-	box-shadow:         inset 0 0 6px hsla(0, 0%, 0%, 0.20);
+	.box-shadow(inset 0 0 6px hsla(0, 0%, 0%, 0.20));
 }
 
 .button.chunky {
-	-webkit-box-shadow: inset 0 -2px 0 hsla(0, 0%, 0%, 0.12);
-	-moz-box-shadow:    inset 0 -2px 0 hsla(0, 0%, 0%, 0.12);
-	box-shadow:         inset 0 -2px 0 hsla(0, 0%, 0%, 0.12);
+	.box-shadow(inset 0 -2px 0 hsla(0, 0%, 0%, 0.12));
 }
 
 .button.chunky:active {
-	-webkit-box-shadow: inset 0 2px 3px hsla(0, 0%, 0%, 0.20);
-	-moz-box-shadow:    inset 0 2px 3px hsla(0, 0%, 0%, 0.20);
-	box-shadow:         inset 0 2px 3px hsla(0, 0%, 0%, 0.20);
+	.box-shadow(inset 0 2px 3px hsla(0, 0%, 0%, 0.20));
 }
 
 .button.glossy {
@@ -266,7 +254,5 @@
 .button.hollow.disabled:active,
 .button.hollow[disabled] {
 	background: transparent !important;
-	-webkit-box-shadow: inset 0 0 0 3px #eaeaea !important;
-	-moz-box-shadow:    inset 0 0 0 3px #eaeaea !important;
-	box-shadow:         inset 0 0 0 3px #eaeaea !important;
+	.box-shadow(inset 0 0 0 3px #eaeaea) !important;
 }
