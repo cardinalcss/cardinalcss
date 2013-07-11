@@ -1,0 +1,362 @@
+/* ================================================================== *\
+   Typography ($typography)
+
+   Modular scale:    12px @ 1:1.333 (perfect fourth)
+   Important number: 24px (maximum <html> `font-size`)
+   http://modularscale.com/scale/?px1=12&px2=24&ra1=1.333&ra2=0
+
+   Description
+   --------------------
+   Cardinal uses a combination of modular scale, unit-less line heights,
+   and `rem` units so that it is easy to scale the type and layout
+   across your entire project.
+
+   How it works
+   --------------------
+   The root font size is first set to a value that feels comfortable on
+   small feature phones (mobile devices with a viewport width less than
+   320px).
+
+   Then, using `@media` queries, Cardinal increases the root font size
+   at several common viewport widths, called breakpoints. You can tweak
+   these `@media` queries and percentage values to suit your project.
+   This is how the type and layout scale globally.
+
+   NOTE: IE9 & IE10 do not recognize `rem` units when used with the
+   `font` shorthand property.
+\* ========================================================================= */
+
+html { font-size: 75%; } /* 12px */
+@media only screen and (min-width: 320px)  { html { font-size: 81.25%; } } /* 13px */
+@media only screen and (min-width: 480px)  { html { font-size: 87.5%;  } } /* 14px */
+@media only screen and (min-width: 640px)  { html { font-size: 100%;   } } /* 16px */
+@media only screen and (min-width: 960px)  { html { font-size: 112.5%; } } /* 18px */
+@media only screen and (min-width: 1140px) { html { font-size: 125%;   } } /* 20px */
+@media only screen and (min-width: 1440px) { html { font-size: 150%;   } } /* 24px */
+
+/**
+ * 1. Inherits percentage declared on above <html> as root `font-size`
+ * 2. Unitless `line-height`, which acts as multiple of root `font-size`
+ */
+
+body {
+	color: @fg-color;
+	font-size: 1rem;  /* 1 */
+	font-family: "Helvetica Neue", Arial, sans-serif;
+	line-height: 1.5; /* 2 */
+}
+
+/* Define a mobile tap highlight color (iOS 1.1.1+) */
+a:link {
+	-webkit-tap-highlight-color: #b3d4fc;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+abbr,
+acronym,
+dfn[title] {
+	cursor: help;
+}
+
+abbr a {
+	text-decoration: none;
+}
+
+acronym {
+	text-transform: uppercase;
+}
+
+blockquote {
+	padding-left: 1rem;
+	border-left: 5px solid @bg-light-color;
+	font-style: italic;
+	font-family: Baskerville, "Baskerville Old Face", "Hoefler Text",
+		Garamond, "Times New Roman", serif;
+}
+
+blockquote p {
+	margin: 0;
+}
+
+blockquote p + p {
+	margin-top: 1rem;
+}
+
+/**
+ * TIP: Use <footer> tag instead of <cite> inside blockquotes -
+ * http://cbrac.co/TCVK4P
+ */
+
+blockquote footer:before {
+	content: "\2014 \2009";
+}
+
+blockquote footer {
+	color: @heading-color;
+	font-style: italic;
+	font-size: 0.8125rem;
+}
+
+blockquote,
+dl,
+hr,
+menu,
+ol,
+p,
+pre,
+summary,
+table,
+ul {
+	margin: 0 0 1rem;
+}
+
+code,
+pre {
+	font-size: 0.8125rem;
+	font-family: Monaco, "Lucida Sans Typewriter", Consolas,
+		"Courier New", monospace;
+}
+
+code {
+	padding: 0 0.3rem;
+	border: 1px solid @border-code-color;
+	.border-radius(3px);
+	background: @bg-current-color;
+	white-space: nowrap;
+}
+
+/* Increase `font-size` and `padding` for <kbd> on larger devices */
+@media only screen and (min-width: 480px) {
+	code {
+		padding: 0.1rem 0.3rem;
+	}
+}
+
+dl dt {
+	font-weight: 700;
+	color: @nav-hover;
+}
+
+dl dd {
+	margin: 0;
+}
+
+del {
+	color: @heading-color;
+	text-decoration: line-through;
+}
+
+details {
+	cursor: pointer;
+}
+
+em,
+i,
+cite {
+	font-style: italic;
+}
+
+/* NOTE: Use `text-rendering` with caution - http://cbrac.co/SJt8p1 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h1.text_huge, h2.text_huge, h3.text_huge, h4.text_huge, h5.text_huge, h6.text_huge,
+h1.text_xxl, h2.text_xxl, h3.text_xxl, h4.text_xxl, h5.text_xxl, h6.text_xxl,
+h1.text_xl, h2.text_xl, h3.text_xl, h4.text_xl, h5.text_xl, h6.text_xl,
+h1.text_large, h2.text_large, h3.text_large, h4.text_large, h5.text_large, h6.text_large,
+h1.text_medium, h2.text_medium, h3.text_medium, h4.text_medium, h5.text_medium, h6.text_medium,
+h1.text_normal, h2.text_normal, h3.text_normal, h4.text_normal, h5.text_normal, h6.text_normal,
+h1.text_small, h2.text_small, h3.text_small, h4.text_small, h5.text_small, h6.text_small {
+	margin: 0 0 0.75rem;
+	color: @nav-hover;
+	font-weight: 700;
+	font-family: "Helvetica Neue", sans-serif;
+	line-height: 1.5;
+	text-rendering: optimizeLegibility;
+}
+
+.text_huge,
+.text_xxl,
+.text_xl,
+.text_large,
+.text_medium,
+.text_normal,
+.text_small {
+	color: inherit;
+	font-weight: inherit;
+}
+
+h1,
+h2,
+.text_huge,
+.text_xxl {
+	line-height: 1.333;
+}
+
+.text_huge {
+	font-size: 4.209rem;
+}
+
+h1,
+.text_xxl {
+	font-size: 3.157rem;
+}
+
+h2,
+.text_xl {
+	font-size: 2.369rem;
+}
+
+h3,
+.text_large {
+	font-size: 1.777rem;
+}
+
+h4,
+.text_medium {
+	font-size: 1.333rem;
+}
+
+h5,
+h6,
+.text_normal {
+	font-size: 1rem;
+}
+
+.text_small {
+	font-size: 0.75rem;
+}
+
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small {
+	color: @heading-color;
+	line-height: inherit;
+}
+
+h1.subheading,
+h2.subheading,
+h3.subheading,
+h4.subheading,
+h5.subheading,
+h6.subheading {
+	color: @heading-color;
+	font-weight: 300;
+}
+
+hr {
+	border: 0;
+	border-bottom: 1px solid @fieldset-color;
+}
+
+ins,
+mark {
+	background: @mark-color;
+	color: @black;
+	text-decoration: none;
+}
+
+kbd {
+	position: relative;
+	top: -1px;
+	margin-bottom: 1px;
+	padding: 0 0.3rem;
+	border: 1px solid @border-code-color;
+	.border-radius(4px);
+	background: @bg-current-color;
+	-webkit-box-shadow:
+		0 1px 0px @border-code-color,
+		inset 0 0 0 1px @white;
+	-moz-box-shadow:
+		0 1px 0px @border-code-color,
+		inset 0 0 0 1px @white;
+	box-shadow:
+		0 1px 0px @border-code-color,
+		inset 0 0 0 1px @white;
+	white-space: nowrap;
+	font-size: 10px;
+	font-family: Monaco, "Lucida Sans Typewriter", Consolas,
+		"Courier New", monospace;
+}
+
+/* Increase `font-size` and `padding` for <kbd> on larger devices */
+@media only screen and (min-width: 480px) {
+	kbd {
+		padding: 0.1rem 0.3rem;
+		font-size: 0.75rem;
+	}
+}
+
+/* Nested `list-style` types for ordered lists */
+ol          { list-style: decimal; }
+ol ol       { list-style: upper-alpha; }
+ol ol ol    { list-style: lower-roman; }
+ol ol ol ol { list-style: lower-alpha; }
+
+ol li ol,
+ol li ul,
+ul li ul,
+ul li ol {
+	margin-bottom: 0;
+}
+
+p,
+table,
+textarea,
+td,
+th {
+	-webkit-hyphens: auto;
+	-moz-hyphens:    auto;
+	-ms-hyphens:     auto;
+	hyphens:         auto;
+	word-wrap: break-word;
+}
+
+pre {
+	position: relative;
+	overflow: auto;
+	padding: 1rem;
+	background: @pre-bg-color;
+	-webkit-box-shadow: inset 0 0 5px hsla(0, 0%, 0%, 0.6);
+	-moz-box-shadow:    inset 0 0 5px hsla(0, 0%, 0%, 0.6);
+	box-shadow:         inset 0 0 5px hsla(0, 0%, 0%, 0.6);
+	color: @pre-color;
+	white-space: pre;
+	word-wrap: normal;
+	word-break: normal;
+	-moz-tab-size: 4;
+	-o-tab-size:   4;
+	tab-size:      4;
+	-webkit-hyphens: none;
+	-moz-hyphens:    none;
+	hyphens:         none;
+	-ms-hyphens:     none;
+}
+
+/* Reset above <code> styles when nested inside <pre> tags */
+pre code {
+	display: block;
+	overflow: auto;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	border: none;
+	.border-radius(0);
+	background: transparent;
+	white-space: pre;
+}
+
+small {
+	display: inline-block;
+	font-size: 75%;
+	line-height: 1.333;
+}

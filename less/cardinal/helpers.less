@@ -1,0 +1,116 @@
+/* ================================================================== *\
+   Helpers ($helpers)
+\* ================================================================== */
+
+/* Floats */
+.float_left  { float: left;  }
+.float_right { float: right; }
+.float_none  { float: none;  }
+
+/* Margins */
+.margin_top    { margin-top: 1rem !important;    }
+.margin_right  { margin-right: 1rem !important;  }
+.margin_bottom { margin-bottom: 1rem !important; }
+.margin_left   { margin-left: 1rem !important;   }
+.margin_none   { margin: 0 !important;           }
+
+/* Paddings */
+.padding_top    { padding-top: 1rem !important;    }
+.padding_right  { padding-right: 1rem !important;  }
+.padding_bottom { padding-bottom: 1rem !important; }
+.padding_left   { padding-left: 1rem !important;   }
+.padding_none   { padding: 0 !important;           }
+
+/* Text alignment */
+.text_left    { text-align: left;    }
+.text_right   { text-align: right;   }
+.text_center  { text-align: center;  }
+.text_justify { text-align: justify; }
+
+/* Image replacement */
+.ir {
+	overflow: hidden;
+	border: 0;
+	background-color: transparent;
+}
+
+.ir:before {
+	display: block;
+	width: 0;
+	height: 100%;
+	content: "";
+}
+
+/* Hide from both screenreaders and browsers - http://cbrac.co/ZaoIxf */
+.hidden {
+	display: none !important;
+	visibility: hidden;
+}
+
+/**
+ * Hide only visually, but have it available for screenreaders -
+ * http://cbrac.co/TUcUgH
+ */
+
+.visuallyhidden {
+	position: absolute;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	margin: -1px;
+	padding: 0;
+	width: 1px;
+	height: 1px;
+	border: 0;
+}
+
+/**
+ * Extends the `.visuallyhidden` class to allow the element to be
+ * focusable when navigated to via the keyboard - http://cbrac.co/RR8gO6
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+	position: static;
+	overflow: visible;
+	clip: auto;
+	margin: 0;
+	width: auto;
+	height: auto;
+}
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible {
+	visibility: hidden;
+}
+
+/* Clear floats manually - http://cbrac.co/SFv1Ua */
+.clear {
+	display: block;
+	visibility: hidden;
+	clear: both;
+	overflow: hidden;
+	width: 0;
+	height: 0;
+}
+
+/**
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The use of `table` rather than `block` is only necessary if using
+ * `:before` to contain the top-margins of child elements.
+ * 2. The space content is one way to avoid an Opera bug when the
+ * `contenteditable` attribute is included anywhere else on the page.
+ * Otherwise it causes space to appear at the top and bottom of elements
+ * that receive the `clearfix` class.
+ */
+
+.cf:before,
+.cf:after {
+	display: table; /* 1 */
+	content: " ";   /* 2 */
+}
+
+.cf:after {
+	clear: both;
+}
