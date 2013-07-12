@@ -608,15 +608,9 @@ textarea {
 
 .grid-item {
 	display: inline-block;
-	margin-bottom: 1rem;
 	padding-left: 2rem;  /* 1 */
 	vertical-align: top; /* 2 */
 	font-size: 1rem;     /* 3 */
-}
-
-/* Remove bottom margin on the last element inside each `.grid_item` */
-.grid-item > *:last-child {
-	margin-bottom: 0;
 }
 
 /* Widths */
@@ -705,7 +699,6 @@ textarea {
 /* 100% width container */
 .strip {
 	margin: 0;
-	margin-bottom: 1rem;
 	padding: 0;
 	width: 100%;
 	background-color: #efefef;
