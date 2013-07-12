@@ -1,3 +1,7 @@
+# 0.3.5 (July 12, 2013)
+
+- Removed `margin-bottom: 1rem;` from the `.strip` and `.grid-item` classes.
+
 # 0.3.4 (June 25, 2013)
 
 - Updated comment line length to have a maximum of 72 characters.
