@@ -2054,13 +2054,13 @@ video {
 					</section>
 
 					<div class="grid">
-						<section id="helpers" class="grid-item lap-one_half">
+						<section id="helpers" class="grid-item lap-one_third">
 							<h2>Helpers</h2>
 
 							<p>A lot of helpers from the fantastic <a href="http://cbrac.co/Zt9YqM">HTML5 Boilerplate</a> are included here, along with some custom helpers for quick control over text alignment, margins, paddings, and floats.</p>
 						</section>
 
-						<section id="print" class="grid-item lap-one_half">
+						<section id="print" class="grid-item lap-one_third">
 							<h2>Print</h2>
 
 							<p>These styles make your project more printer-friendly. They were also copy and pasted directly from the <a href="http://cbrac.co/Zt9YqM">HTML5 Boilerplate</a> project, and inlined to avoid an extra HTTP request.</p>
@@ -2073,13 +2073,15 @@ video {
 
 							<p>An asynchronous Google Analytics snippet is also present at the bottom of <code>index.html</code>.</p>
 						</section>
+					</div>
 
-						<section id="browsers" class="grid-item lap-two_thirds">
+					<section id="browsers" class="grid">
+						<div class="grid-item lap-one_half">
 							<h2>Browser support</h2>
 
 							<p>Cardinal supports most modern browsers:</p>
 
-							<div class="island">
+							<div class="well">
 								<ul class="margin_none">
 									<li>Google Chrome 25+</li>
 									<li>Mozilla Firefox 19+</li>
@@ -2090,10 +2092,19 @@ video {
 									<li>Internet Explorer 9+</li>
 								</ul>
 							</div>
+						</div>
 
-							<p>For a quick look at device support for the <code>rem</code> unit, <a href="http://caniuse.com/#search=rem">visit here</a>.</p>
-						</section>
-					</div>
+							<div class="grid-item lap-one_half">
+								<h3>What about IE8?</h3>
+
+								<p>I realize that for many web applications, IE8 cannot be ignored. By including the <a href="https://github.com/chuckcarpenter/REM-unit-polyfill">REM unit polyfill</a> and Scott Jehl’s <a href="https://github.com/scottjehl/Respond">Respond.js</a>, Cardinal should work in IE8, but you will lose the scalable layout and typography because the REM unit polyfill converts all the rem values to pixels.</p>
+
+								<p>A better option might be to include an IE-only stylesheet that serves a “fixed-layout” version of your application, instead of bothering with polyfills and other bandaid solutions.</p>
+							</div>
+
+							<!-- <p>For a quick look at device support for the <code>rem</code> unit, <a href="http://caniuse.com/#search=rem">visit here</a>.</p> -->
+						</div>
+					</section>
 				</div>
 			</div>
 
