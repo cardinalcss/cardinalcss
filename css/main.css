@@ -98,12 +98,12 @@ img::-moz-selection {
 
    Then, using `@media` queries, Cardinal increases the root font size
    at several common viewport widths, called breakpoints. You can tweak
-   these `@media` queries and percentage values to suit your project.
-   This is how the type and layout scale globally.
+   these `@media` queries and percentage values to suit the content in
+   your project. This is how the type and layout scale globally.
 
    NOTE: IE9 & IE10 do not recognize `rem` units when used with the
    `font` shorthand property.
-\* ========================================================================= */
+\* ================================================================== */
 
 html { font-size: 75%; } /* 12px */
 @media only screen and (min-width: 320px)  { html { font-size: 81.25%; } }
@@ -1129,6 +1129,60 @@ textarea {
 .text_right   { text-align: right;   }
 .text_center  { text-align: center;  }
 .text_justify { text-align: justify; }
+
+@media only screen and (min-width: 640px) {
+	/* Floats */
+	.lap-float_left  { float: left !important;  }
+	.lap-float_right { float: right !important; }
+	.lap-float_none  { float: none !important;  }
+
+	/* Margins */
+	.lap-margin_top    { margin-top: 1rem !important;    }
+	.lap-margin_right  { margin-right: 1rem !important;  }
+	.lap-margin_bottom { margin-bottom: 1rem !important; }
+	.lap-margin_left   { margin-left: 1rem !important;   }
+	.lap-margin_none   { margin: 0 !important;           }
+
+	/* Paddings */
+	.lap-padding_top    { padding-top: 1rem !important;    }
+	.lap-padding_right  { padding-right: 1rem !important;  }
+	.lap-padding_bottom { padding-bottom: 1rem !important; }
+	.lap-padding_left   { padding-left: 1rem !important;   }
+	.lap-padding_none   { padding: 0 !important;           }
+
+	/* Text alignment */
+	.lap-text_left    { text-align: left !important;    }
+	.lap-text_right   { text-align: right !important;   }
+	.lap-text_center  { text-align: center !important;  }
+	.lap-text_justify { text-align: justify !important; }
+}
+
+@media only screen and (min-width: 960px) {
+	/* Floats */
+	.desk-float_left  { float: left !important;  }
+	.desk-float_right { float: right !important; }
+	.desk-float_none  { float: none !important;  }
+
+	/* Margins */
+	.desk-margin_top    { margin-top: 1rem !important;    }
+	.desk-margin_right  { margin-right: 1rem !important;  }
+	.desk-margin_bottom { margin-bottom: 1rem !important; }
+	.desk-margin_left   { margin-left: 1rem !important;   }
+	.desk-margin_none   { margin: 0 !important;           }
+
+	/* Paddings */
+	.desk-padding_top    { padding-top: 1rem !important;    }
+	.desk-padding_right  { padding-right: 1rem !important;  }
+	.desk-padding_bottom { padding-bottom: 1rem !important; }
+	.desk-padding_left   { padding-left: 1rem !important;   }
+	.desk-padding_none   { padding: 0 !important;           }
+
+	/* Text alignment */
+	.desk-text_left    { text-align: left !important;    }
+	.desk-text_right   { text-align: right !important;   }
+	.desk-text_center  { text-align: center !important;  }
+	.desk-text_justify { text-align: justify !important; }
+}
 
 /* Image replacement */
 .ir {
