@@ -1,3 +1,8 @@
+# 0.3.6 (July 18, 2013)
+
+- Added `lap-*` and `desk-*` queries for helper classes.
+- Fixed a small comment issue.
+
 # 0.3.5 (July 12, 2013)
 
 - Removed `margin-bottom: 1rem;` from the `.strip` and `.grid-item` classes.
