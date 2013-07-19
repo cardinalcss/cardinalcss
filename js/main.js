@@ -98,4 +98,15 @@ $(function() {
 
 	// Request version number once a minute
 	setInterval(updateVersion(), 60 * 1000);
+
+	/**
+	 * Google Analytics event tracking
+	 */
+	$("#download").on("click", function() {
+		ga("send", "event", "Header actions", "click", "Download");
+	});
+
+	$("#github_repo").on("click", function() {
+		ga("send", "event", "Header actions", "click", "GitHub Repo");
+	});
 });
