@@ -245,14 +245,7 @@ h2,
 h3,
 h4,
 h5,
-h6,
-h1.text_huge, h2.text_huge, h3.text_huge, h4.text_huge, h5.text_huge, h6.text_huge,
-h1.text_xxl, h2.text_xxl, h3.text_xxl, h4.text_xxl, h5.text_xxl, h6.text_xxl,
-h1.text_xl, h2.text_xl, h3.text_xl, h4.text_xl, h5.text_xl, h6.text_xl,
-h1.text_large, h2.text_large, h3.text_large, h4.text_large, h5.text_large, h6.text_large,
-h1.text_medium, h2.text_medium, h3.text_medium, h4.text_medium, h5.text_medium, h6.text_medium,
-h1.text_normal, h2.text_normal, h3.text_normal, h4.text_normal, h5.text_normal, h6.text_normal,
-h1.text_small, h2.text_small, h3.text_small, h4.text_small, h5.text_small, h6.text_small {
+h6 {
 	margin: 0 0 0.75rem;
 	color: #222;
 	font-weight: 700;
@@ -261,57 +254,15 @@ h1.text_small, h2.text_small, h3.text_small, h4.text_small, h5.text_small, h6.te
 	text-rendering: optimizeLegibility;
 }
 
-.text_huge,
-.text_xxl,
-.text_xl,
-.text_large,
-.text_medium,
-.text_normal,
-.text_small {
-	color: inherit;
-	font-weight: inherit;
-}
-
 h1,
-h2,
-.text_huge,
-.text_xxl {
-	line-height: 1.333;
-}
+h2 { line-height: 1.333; }
 
-.text_huge {
-	font-size: 4.209rem;
-}
-
-h1,
-.text_xxl {
-	font-size: 3.157rem;
-}
-
-h2,
-.text_xl {
-	font-size: 2.369rem;
-}
-
-h3,
-.text_large {
-	font-size: 1.777rem;
-}
-
-h4,
-.text_medium {
-	font-size: 1.333rem;
-}
-
-h5,
-h6,
-.text_normal {
-	font-size: 1rem;
-}
-
-.text_small {
-	font-size: 0.75rem;
-}
+h1 { font-size: 3.157rem; }
+h2 { font-size: 2.369rem; }
+h3 { font-size: 1.777rem; }
+h4 { font-size: 1.333rem; }
+h5 { font-size: 1rem;     }
+h6 { font-size: 0.75rem;  }
 
 h1 small,
 h2 small,
@@ -448,7 +399,7 @@ pre code {
 
 small {
 	display: inline-block;
-	font-size: 75%;
+	font-size: 0.75rem;
 	line-height: 1.333;
 }
 
@@ -1106,9 +1057,9 @@ textarea {
 \* ================================================================== */
 
 /* Floats */
-.float_left  { float: left;  }
-.float_right { float: right; }
-.float_none  { float: none;  }
+.float_left  { float: left !important;  }
+.float_right { float: right !important; }
+.float_none  { float: none !important;  }
 
 /* Margins */
 .margin_top    { margin-top: 1rem !important;    }
@@ -1125,10 +1076,35 @@ textarea {
 .padding_none   { padding: 0 !important;           }
 
 /* Text alignment */
-.text_left    { text-align: left;    }
-.text_right   { text-align: right;   }
-.text_center  { text-align: center;  }
-.text_justify { text-align: justify; }
+.text_left    { text-align: left !important;    }
+.text_right   { text-align: right !important;   }
+.text_center  { text-align: center !important;  }
+.text_justify { text-align: justify !important; }
+
+/* Text sizing */
+.text_huge,
+.text_xxl,
+.text_xl,
+.text_large,
+.text_medium,
+.text_normal,
+.text_small {
+	color: inherit;
+	font-weight: inherit;
+}
+
+.text_huge,
+.text_xxl {
+	line-height: 1.333 !important;
+}
+
+.text_huge   { font-size: 4.209rem !important; }
+.text_xxl    { font-size: 3.157rem !important; }
+.text_xl     { font-size: 2.369rem !important; }
+.text_large  { font-size: 1.777rem !important; }
+.text_medium { font-size: 1.333rem !important; }
+.text_normal { font-size: 1rem !important;     }
+.text_small  { font-size: 0.75rem !important;  }
 
 @media only screen and (min-width: 640px) {
 	/* Floats */
@@ -1155,6 +1131,15 @@ textarea {
 	.lap-text_right   { text-align: right !important;   }
 	.lap-text_center  { text-align: center !important;  }
 	.lap-text_justify { text-align: justify !important; }
+
+	/* Text sizes */
+	.lap-text_huge   { font-size: 4.209rem !important; }
+	.lap-text_xxl    { font-size: 3.157rem !important; }
+	.lap-text_xl     { font-size: 2.369rem !important; }
+	.lap-text_large  { font-size: 1.777rem !important; }
+	.lap-text_medium { font-size: 1.333rem !important; }
+	.lap-text_normal { font-size: 1rem !important;     }
+	.lap-text_small  { font-size: 0.75rem !important;  }
 }
 
 @media only screen and (min-width: 960px) {
@@ -1182,6 +1167,15 @@ textarea {
 	.desk-text_right   { text-align: right !important;   }
 	.desk-text_center  { text-align: center !important;  }
 	.desk-text_justify { text-align: justify !important; }
+
+	/* Text sizes */
+	.desk-text_huge   { font-size: 4.209rem !important; }
+	.desk-text_xxl    { font-size: 3.157rem !important; }
+	.desk-text_xl     { font-size: 2.369rem !important; }
+	.desk-text_large  { font-size: 1.777rem !important; }
+	.desk-text_medium { font-size: 1.333rem !important; }
+	.desk-text_normal { font-size: 1rem !important;     }
+	.desk-text_small  { font-size: 0.75rem !important;  }
 }
 
 /* Image replacement */
