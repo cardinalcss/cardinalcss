@@ -1,3 +1,9 @@
+# 0.3.7 (July 23, 2013)
+
+- moved .text_* classes to the helpers section so they can be used on .grid-item classes
+- resized `<h6>` from `1rem` to `0.75rem`
+- added `!important` to helper classes that were missing them.
+
 # 0.3.6 (July 18, 2013)
 
 - Added `lap-*` and `desk-*` queries for helper classes.
