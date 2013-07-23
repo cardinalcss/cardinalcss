@@ -13,14 +13,14 @@
 
 .table th,
 .table tfoot td {
-	color: @nav-hover;
+	color: @table-foot-fg;
 	text-align: left;
 	font-weight: bold;
 }
 
 .table thead th,
 .table tfoot td  {
-	background-color: @bg-light-color;
+	background-color: @table-t-bg;
 }
 
 .table th,
@@ -32,20 +32,20 @@
 
 /* Border */
 .table.border {
-	border: 1px solid @border-color;
+	border: 1px solid @table-border;
 }
 
 /* Borders for rows & columns */
 .table.border_all th,
 .table.border_all td {
-	border-top: 1px solid @border-color;
-	border-left: 1px solid @border-color;
+	border-top: 1px solid @table-border;
+	border-left: 1px solid @table-border;
 }
 
 /* Border for rows only */
 .table.border_rows th,
 .table.border_rows td {
-	border-top: 1px solid @border-color;
+	border-top: 1px solid @table-border;
 }
 
 /* Remove top border to avoid double border on .border tables */
@@ -68,10 +68,10 @@
 
 /* Add bottom border to last row in the table */
 .table.border_rows tr:last-child td {
-	border-bottom: 1px solid @border-color;
+	border-bottom: 1px solid @table-border;
 }
 
 /* Stripe */
 .table.stripe tbody > tr:nth-child(odd) > td {
-	background-color: @bg-current-color;
+	background-color: @table-odd-bg;
 }

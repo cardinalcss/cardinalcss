@@ -3,9 +3,9 @@
 \* ================================================================== */
 
 /* Floats */
-.float_left  { float: left;  }
-.float_right { float: right; }
-.float_none  { float: none;  }
+.float_left  { float: left !important;  }
+.float_right { float: right !important; }
+.float_none  { float: none !important;  }
 
 /* Margins */
 .margin_top    { margin-top: 1rem !important;    }
@@ -22,10 +22,107 @@
 .padding_none   { padding: 0 !important;           }
 
 /* Text alignment */
-.text_left    { text-align: left;    }
-.text_right   { text-align: right;   }
-.text_center  { text-align: center;  }
-.text_justify { text-align: justify; }
+.text_left    { text-align: left !important;    }
+.text_right   { text-align: right !important;   }
+.text_center  { text-align: center !important;  }
+.text_justify { text-align: justify !important; }
+
+/* Text sizing */
+.text_huge,
+.text_xxl,
+.text_xl,
+.text_large,
+.text_medium,
+.text_normal,
+.text_small {
+  color: inherit;
+  font-weight: inherit;
+}
+
+.text_huge,
+.text_xxl {
+  line-height: 1.333 !important;
+}
+
+.text_huge   { font-size: 4.209rem !important; }
+.text_xxl    { font-size: 3.157rem !important; }
+.text_xl     { font-size: 2.369rem !important; }
+.text_large  { font-size: 1.777rem !important; }
+.text_medium { font-size: 1.333rem !important; }
+.text_normal { font-size: 1rem !important;     }
+.text_small  { font-size: 0.75rem !important;  }
+
+@media only screen and (min-width: 640px) {
+	/* Floats */
+	.lap-float_left  { float: left !important;  }
+	.lap-float_right { float: right !important; }
+	.lap-float_none  { float: none !important;  }
+
+	/* Margins */
+	.lap-margin_top    { margin-top: 1rem !important;    }
+	.lap-margin_right  { margin-right: 1rem !important;  }
+	.lap-margin_bottom { margin-bottom: 1rem !important; }
+	.lap-margin_left   { margin-left: 1rem !important;   }
+	.lap-margin_none   { margin: 0 !important;           }
+
+	/* Paddings */
+	.lap-padding_top    { padding-top: 1rem !important;    }
+	.lap-padding_right  { padding-right: 1rem !important;  }
+	.lap-padding_bottom { padding-bottom: 1rem !important; }
+	.lap-padding_left   { padding-left: 1rem !important;   }
+	.lap-padding_none   { padding: 0 !important;           }
+
+	/* Text alignment */
+	.lap-text_left    { text-align: left !important;    }
+	.lap-text_right   { text-align: right !important;   }
+	.lap-text_center  { text-align: center !important;  }
+	.lap-text_justify { text-align: justify !important; }
+
+	/* Text sizes */
+	.lap-text_huge   { font-size: 4.209rem !important; }
+	.lap-text_xxl    { font-size: 3.157rem !important; }
+	.lap-text_xl     { font-size: 2.369rem !important; }
+	.lap-text_large  { font-size: 1.777rem !important; }
+	.lap-text_medium { font-size: 1.333rem !important; }
+	.lap-text_normal { font-size: 1rem !important;     }
+	.lap-text_small  { font-size: 0.75rem !important;  }
+}
+
+@media only screen and (min-width: 960px) {
+	/* Floats */
+	.desk-float_left  { float: left !important;  }
+	.desk-float_right { float: right !important; }
+	.desk-float_none  { float: none !important;  }
+
+	/* Margins */
+	.desk-margin_top    { margin-top: 1rem !important;    }
+	.desk-margin_right  { margin-right: 1rem !important;  }
+	.desk-margin_bottom { margin-bottom: 1rem !important; }
+	.desk-margin_left   { margin-left: 1rem !important;   }
+	.desk-margin_none   { margin: 0 !important;           }
+
+	/* Paddings */
+	.desk-padding_top    { padding-top: 1rem !important;    }
+	.desk-padding_right  { padding-right: 1rem !important;  }
+	.desk-padding_bottom { padding-bottom: 1rem !important; }
+	.desk-padding_left   { padding-left: 1rem !important;   }
+	.desk-padding_none   { padding: 0 !important;           }
+
+	/* Text alignment */
+	.desk-text_left    { text-align: left !important;    }
+	.desk-text_right   { text-align: right !important;   }
+	.desk-text_center  { text-align: center !important;  }
+	.desk-text_justify { text-align: justify !important; }
+
+	/* Text sizes */
+	.desk-text_huge   { font-size: 4.209rem !important; }
+	.desk-text_xxl    { font-size: 3.157rem !important; }
+	.desk-text_xl     { font-size: 2.369rem !important; }
+	.desk-text_large  { font-size: 1.777rem !important; }
+	.desk-text_medium { font-size: 1.333rem !important; }
+	.desk-text_normal { font-size: 1rem !important;     }
+	.desk-text_small  { font-size: 0.75rem !important;  }
+}
 
 /* Image replacement */
 .ir {
