@@ -1,0 +1,308 @@
+/* ================================================================== *\
+   Typography ($typography)
+
+   Modular scale:    12px @ 1:1.333 (perfect fourth)
+   Important number: 24px (maximum <html> `font-size`)
+   http://modularscale.com/scale/?px1=12&px2=24&ra1=1.333&ra2=0
+
+   Description
+   --------------------
+   Cardinal uses a combination of modular scale, unit-less line heights,
+   and `rem` units so that it is easy to scale the type and layout
+   across your entire project.
+
+   How it works
+   --------------------
+   The root font size is first set to a value that feels comfortable on
+   small feature phones (mobile devices with a viewport width less than
+   320px).
+
+   Then, using `@media` queries, Cardinal increases the root font size
+   at several common viewport widths, called breakpoints. You can tweak
+   these `@media` queries and percentage values to suit your project.
+   This is how the type and layout scale globally.
+
+   NOTE: IE9 & IE10 do not recognize `rem` units when used with the
+   `font` shorthand property.
+\* ========================================================================= */
+
+html { font-size: 75%; } /* 12px */
+@media only screen and (min-width: 320px)  { html { font-size: 81.25%; } } /* 13px */
+@media only screen and (min-width: 480px)  { html { font-size: 87.5%;  } } /* 14px */
+@media only screen and (min-width: 640px)  { html { font-size: 100%;   } } /* 16px */
+@media only screen and (min-width: 960px)  { html { font-size: 112.5%; } } /* 18px */
+@media only screen and (min-width: 1140px) { html { font-size: 125%;   } } /* 20px */
+@media only screen and (min-width: 1440px) { html { font-size: 150%;   } } /* 24px */
+
+/**
+ * 1. Inherits percentage declared on above <html> as root `font-size`
+ * 2. Unitless `line-height`, which acts as multiple of root `font-size`
+ */
+
+body {
+	color: @fg-color;
+	font-size: 1rem;  /* 1 */
+	font-family: "Helvetica Neue", Arial, sans-serif;
+	line-height: 1.5; /* 2 */
+}
+
+/* Define a mobile tap highlight color (iOS 1.1.1+) */
+a:link {
+	-webkit-tap-highlight-color: #b3d4fc;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+abbr,
+acronym,
+dfn[title] {
+	cursor: help;
+}
+
+abbr a {
+	text-decoration: none;
+}
+
+acronym {
+	text-transform: uppercase;
+}
+
+blockquote {
+	padding-left: 1rem;
+	border-left: 5px solid @quote-fg;
+	font-style: italic;
+	font-family: Baskerville, "Baskerville Old Face", "Hoefler Text",
+		Garamond, "Times New Roman", serif;
+
+	p {
+		margin: 0;
+	}
+
+	p + p {
+		margin-top: 1rem;
+	}
+
+	/**
+	 * TIP: Use <footer> tag instead of <cite> inside blockquotes -
+	 * http://cbrac.co/TCVK4P
+	 */
+	footer {
+		color: @quote-foot-fg;
+		font-style: italic;
+		font-size: 0.8125rem;
+		&:before {
+			content: "\2014 \2009";
+		}
+	}
+}
+
+
+blockquote,
+dl,
+hr,
+menu,
+ol,
+p,
+pre,
+summary,
+table,
+ul {
+	margin: 0 0 1rem;
+}
+
+code,
+pre {
+	font-size: 0.8125rem;
+	font-family: Monaco, "Lucida Sans Typewriter", Consolas,
+		"Courier New", monospace;
+}
+
+code {
+	padding: 0 0.3rem;
+	border: 1px solid @code-border;
+	.border-radius(3px);
+	background: @code-bg;
+	white-space: nowrap;
+}
+
+/* Increase `font-size` and `padding` for <kbd> on larger devices */
+@media only screen and (min-width: 480px) {
+	code {
+		padding: 0.1rem 0.3rem;
+	}
+}
+
+dl dt {
+	font-weight: 700;
+}
+
+dl dd {
+	margin: 0;
+}
+
+del {
+	color: @del-fg;
+	text-decoration: line-through;
+}
+
+details {
+	cursor: pointer;
+}
+
+em,
+i,
+cite {
+	font-style: italic;
+}
+
+/* NOTE: Use `text-rendering` with caution - http://cbrac.co/SJt8p1 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0 0 0.75rem;
+	color: @head-fg;
+	font-weight: 700;
+	font-family: "Helvetica Neue", sans-serif;
+	line-height: 1.5;
+	text-rendering: optimizeLegibility;
+}
+
+h2 { line-height: 1.333; }
+h1 { font-size: 3.157rem; }
+h2 { font-size: 2.369rem; }
+h3 { font-size: 1.777rem; }
+h4 { font-size: 1.333rem; }
+h5 { font-size: 1rem;     }
+h6 { font-size: 0.75rem;  }
+
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small {
+	color: @head-sub-fg;
+	line-height: inherit;
+}
+
+h1.subheading,
+h2.subheading,
+h3.subheading,
+h4.subheading,
+h5.subheading,
+h6.subheading {
+	color: @head-sub-fg;
+	font-weight: 300;
+}
+
+hr {
+	border: 0;
+	border-bottom: 1px solid @fieldset-color;
+}
+
+ins,
+mark {
+	background: @mark-color;
+	color: @black;
+	text-decoration: none;
+}
+
+kbd {
+	position: relative;
+	top: -1px;
+	margin-bottom: 1px;
+	padding: 0 0.3rem;
+	border: 1px solid @code-border;
+	.border-radius(4px);
+	.box-shadow(0 1px 0px @code-border);
+	white-space: nowrap;
+	font-size: 10px;
+	font-family: Monaco, "Lucida Sans Typewriter", Consolas,
+		"Courier New", monospace;
+}
+
+/* Increase `font-size` and `padding` for <kbd> on larger devices */
+@media only screen and (min-width: 480px) {
+	kbd {
+		padding: 0.1rem 0.3rem;
+		font-size: 0.75rem;
+	}
+}
+
+/* Nested `list-style` types for ordered lists */
+ol { 
+	list-style: decimal; 
+	ol { 
+		list-style: upper-alpha; 
+		ol { 
+			list-style: lower-roman;
+			ol { 
+				list-style: lower-alpha;
+			}
+		}
+	}
+}
+
+
+ol li ol,
+ol li ul,
+ul li ul,
+ul li ol {
+	margin-bottom: 0;
+}
+
+p,
+table,
+textarea,
+td,
+th {
+	-webkit-hyphens: auto;
+	-moz-hyphens:    auto;
+	-ms-hyphens:     auto;
+	hyphens:         auto;
+	word-wrap: break-word;
+}
+
+pre {
+	position: relative;
+	overflow: auto;
+	padding: 1rem;
+	background: @pre-bg;
+	.box-shadow(inset 0 0 5px hsla(0, 0%, 0%, 0.6));
+	color: @pre-fg;
+	white-space: pre;
+	word-wrap: normal;
+	word-break: normal;
+	-moz-tab-size: 4;
+	-o-tab-size:   4;
+	tab-size:      4;
+	-webkit-hyphens: none;
+	-moz-hyphens:    none;
+	hyphens:         none;
+	-ms-hyphens:     none;
+	/* Reset above <code> styles when nested inside <pre> tags */
+	code {
+		display: block;
+		overflow: auto;
+		margin: 0;
+		padding: 0;
+		height: 100%;
+		border: none;
+		.border-radius(0);
+		background: transparent;
+		white-space: pre;
+	}
+}
+
+
+
+small {
+	display: inline-block;
+	font-size: 0.75rem;
+	line-height: 1.333;
+}

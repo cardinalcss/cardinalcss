@@ -1,0 +1,101 @@
+/* ================================================================== *\
+   Navigation ($navigation)
+\* ================================================================== */
+
+/**
+ * Menus
+ */
+
+.menu,
+.menu-heading,
+.menu a {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.menu,
+.menu ol,
+.menu ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.menu-heading,
+.menu a {
+	padding: 0.356rem 0.75rem;
+	font-size: 1rem;
+}
+
+.menu-heading {
+	margin-bottom: 0;
+	background-color: @menu-h-bg-color;
+}
+
+.menu a {
+	display: block;
+	text-decoration: none;
+}
+
+.menu a:hover,
+.menu a:active,
+.menu li.current a,
+.menu a.current {
+	background-color: @menu-act-color;
+}
+
+.menu a:hover {
+	color: @menu-hover-color;
+}
+
+.menu a:active,
+.menu li.current a,
+.menu a.current {
+	.box-shadow(inset 0 0 6px fade(@black, 20%));
+}
+
+/* Horizontal orientation */
+.menu.horizontal {
+	font-size: 0;
+}
+
+.menu.horizontal .menu-heading,
+.menu.horizontal a {
+	font-size: 1rem;
+}
+
+.menu.horizontal .menu-heading,
+.menu.horizontal ol,
+.menu.horizontal ul,
+.menu.horizontal li,
+.menu.horizontal a {
+	display: inline-block;
+}
+
+/* Alignment */
+.menu.centered {
+	text-align: center;
+}
+
+/* Borders */
+.menu.bordered {
+	border: 1px solid @menu-border;
+}
+
+/* Sizes */
+.menu.block,
+.menu.block .menu-heading,
+.menu.block a {
+	display: block;
+}
+
+.menu.horizontal.block .menu-heading,
+.menu.horizontal.block a {
+	display: inline-block;
+}
+
+/**
+ * Toolbars
+ */
+
+.toolbar { }

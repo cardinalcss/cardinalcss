@@ -1,0 +1,184 @@
+/* ================================================================== *\
+   Grids ($grids)
+
+   Description
+   --------------------
+   Cardinal includes a simple, responsive grid system that uses fluid
+   item widths and fixed gutters. Grid items can be divided into halves,
+   thirds, fourths, fifths, and sixths.
+
+   The item widths are set in percentages, and the gutters are set in
+   `rem` units. Due to the change in the root font size above, the fixed
+   gutters grow and shrink proportionally, depending on the width of the
+   viewport.
+
+   You can also change how a `.grid_item` behaves at specified viewport
+   widths & breakpoints, by simply adding helper classes to any element
+   with the `.grid_item` class.
+
+   Additionally, the `.one_half`, `.three_fourths`, etc helper classes
+   can be used outside of the grid context, if you simply want an
+   element to have a width that is a specific percentage of its parent.
+
+   If you want smaller or larger gutters, simply change the values for
+   the `margin-left` property on the `.grid` class and the
+   `padding-left` property on the `.grid-item` class to be mirror
+   opposites. Use a `rem` value derived from the modular scale for the
+   typography above to keep everything “harmonious.”
+
+   Usage
+   --------------------
+   * .grid - element becomes a grid wrapper.
+   * .grid-item - element becomes a grid item.
+   * .one_half,
+     .two_thirds,
+     .four_fifths, etc. - element becomes specific width of its parent.
+   * .lap-* - element’s width changes on devices you place in your lap.
+   * .desk-* - element’s width changes on devices that remain on a desk.
+
+   Example
+   --------------------
+   The below example reads as: “a grid with four 100% width items, which
+   become 50% width items on devices that rest in your lap, and 25%
+   width items on larger devices that rest on top of your desk.”
+
+   <div class="grid">
+       <div class="grid-item lap-one_half desk-one_fourth"></div>
+       <div class="grid-item lap-one_half desk-one_fourth"></div>
+       <div class="grid-item lap-one_half desk-one_fourth"></div>
+       <div class="grid-item lap-one_half desk-one_fourth"></div>
+   </div>
+
+   White space issues
+   --------------------
+   Since the grids use `display: inline-block;` instead of floats, a
+   hack is used to remove that white-space in modern browsers. However,
+   this hack does not work in Safari < 6, and Android < 4.2.
+
+   If you need to support these older browsers, simply remove the white
+   space in between the grid items manually, in the HTML, like so:
+
+   <div class="grid">
+       <div class="grid-item lap-one_half desk-one_fourth"></div
+       ><div class="grid-item lap-one_half desk-one_fourth"></div
+       ><div class="grid-item lap-one_half desk-one_fourth"></div
+       ><div class="grid-item lap-one_half desk-one_fourth"></div>
+   </div>
+\* ================================================================== */
+
+/**
+ * Grid container
+ * 1. Default gutter width, change if desired
+ * 2. Remove `list-style` in case `.grid` is on a <ul> element
+ * 3. Hack to remove `inline-block` whitespace - http://cbrac.co/16xcjcl
+ */
+
+.grid {
+	margin: 0;
+	margin-left: -2rem; /* 1 */
+	padding: 0;
+	list-style: none;   /* 2 */
+	font-size: 0;       /* 3 */
+}
+
+/* Gutters */
+.grid_gutter_none              { margin-left: 0;     }
+.grid_gutter_none .grid-item   { padding-left: 0;    }
+.grid_gutter_half              { margin-left: -1rem; }
+.grid_gutter_half .grid-item   { padding-left: 1rem; }
+.grid_gutter_double            { margin-left: -4rem; }
+.grid_gutter_double .grid-item { padding-left: 4rem; }
+
+/**
+ * Grid item
+ * 1. Default gutter width, change if desired
+ * 2. Ensures elements within `.grid-item` start at the top
+ * 3. Reset `font-size` back to normal
+ */
+
+.grid-item {
+	display: inline-block;
+	padding-left: 2rem;  /* 1 */
+	vertical-align: top; /* 2 */
+	font-size: 1rem;     /* 3 */
+}
+
+
+/* Widths */
+.grid-item,
+.one_whole     { width: 100%;    }
+.one_half      { width: 50%;     }
+.one_third     { width: 33.333%; }
+.two_thirds    { width: 66.666%; }
+.one_fourth    { width: 25%;     }
+.two_fourths   { width: 50%;     }
+.three_fourths { width: 75%;     }
+.one_fifth     { width: 20%;     }
+.two_fifths    { width: 40%;     }
+.three_fifths  { width: 60%;     }
+.four_fifths   { width: 80%;     }
+.one_sixth     { width: 16.666%; }
+.two_sixths    { width: 33.333%; }
+.three_sixths  { width: 50%;     }
+.four_sixths   { width: 66.666%; }
+.five_sixths   { width: 83.333%; }
+
+/* Grid breakpoint for devices that sit in your lap (eg. tablets) */
+@media only screen and (min-width: 640px) {
+	/* Gutter options */
+	.lap-grid_gutter_none              { margin-left: 0;     }
+	.lap-grid_gutter_none .grid-item   { padding-left: 0;    }
+	.lap-grid_gutter_half              { margin-left: -1rem; }
+	.lap-grid_gutter_half .grid-item   { padding-left: 1rem; }
+	.lap-grid_gutter_whole             { margin-left: -2rem; }
+	.lap-grid_gutter_whole .grid-item  { padding-left: 2rem; }
+	.lap-grid_gutter_double            { margin-left: -4rem; }
+	.lap-grid_gutter_double .grid-item { padding-left: 4rem; }
+
+	/* Widths */
+	.lap-one_whole      { width: 100%;    }
+	.lap-one_half       { width: 50%;     }
+	.lap-one_third      { width: 33.333%; }
+	.lap-two_thirds     { width: 66.666%; }
+	.lap-one_fourth     { width: 25%;     }
+	.lap-three_fourths  { width: 75%;     }
+	.lap-one_fifth      { width: 20%;     }
+	.lap-two_fifths     { width: 40%;     }
+	.lap-three_fifths   { width: 60%;     }
+	.lap-four_fifths    { width: 80%;     }
+	.lap-one_sixth      { width: 16.666%; }
+	.lap-two_sixths     { width: 33.333%; }
+	.lap-three_sixths   { width: 50%;     }
+	.lap-four_sixths    { width: 66.666%; }
+	.lap-five_sixths    { width: 83.333%; }
+}
+
+/* Grid breakpoint for devices that remain on your desk (eg. iMac) */
+@media only screen and (min-width: 960px) {
+	/* Gutter options */
+	.desk-grid_gutter_none              { margin-left: 0;     }
+	.desk-grid_gutter_none .grid-item   { padding-left: 0;    }
+	.desk-grid_gutter_half              { margin-left: -1rem; }
+	.desk-grid_gutter_half .grid-item   { padding-left: 1rem; }
+	.desk-grid_gutter_whole             { margin-left: -2rem; }
+	.desk-grid_gutter_whole .grid-item  { padding-left: 2rem; }
+	.desk-grid_gutter_double            { margin-left: -4rem; }
+	.desk-grid_gutter_double .grid-item { padding-left: 4rem; }
+
+	/* Widths */
+	.desk-one_whole     { width: 100%;    }
+	.desk-one_half      { width: 50%;     }
+	.desk-one_third     { width: 33.333%; }
+	.desk-two_thirds    { width: 66.666%; }
+	.desk-one_fourth    { width: 25%;     }
+	.desk-three_fourths { width: 75%;     }
+	.desk-one_fifth     { width: 20%;     }
+	.desk-two_fifths    { width: 40%;     }
+	.desk-three_fifths  { width: 60%;     }
+	.desk-four_fifths   { width: 80%;     }
+	.desk-one_sixth     { width: 16.666%; }
+	.desk-two_sixths    { width: 33.333%; }
+	.desk-three_sixths  { width: 50%;     }
+	.desk-four_sixths   { width: 66.666%; }
+	.desk-five_sixths   { width: 83.333%; }
+}
