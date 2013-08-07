@@ -100,7 +100,7 @@ $(function() {
 	setInterval(updateVersion(), 60 * 1000);
 
 	/**
-	 * Google Analytics event tracking
+	 * Google Analytics event tracking for header actions
 	 */
 	$("#download").on("click", function() {
 		ga("send", "event", "Header actions", "click", "Download");
@@ -108,5 +108,13 @@ $(function() {
 
 	$("#github_repo").on("click", function() {
 		ga("send", "event", "Header actions", "click", "GitHub Repo");
+	});
+
+	$("#pivotal").on("click", function() {
+		ga("send", "event", "Header actions", "click", "Pivotal Tracker");
+	});
+
+	$("#changelog").on("click", function() {
+		ga("send", "event", "Header actions", "click", "Changelog");
 	});
 });
