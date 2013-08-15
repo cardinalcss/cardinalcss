@@ -1,8 +1,21 @@
+# 0.4.0
+
+- Reduced file size of main.css by ~3kb! Woot!
+- Scaled back `.button` classes, removing glossy style and hover states.
+- Added `.h1`, `.h2`, `.h3`, `.h4`, `.h5`, `.h6` classes.
+- Picked apart [normalize.css](https://github.com/necolas/normalize.css) and placed declarations in their appropriate sections, instead of lazily including the whole thing up top.
+- Fixed issues with color consistency, and added their hex values to the top comment block.
+- Removed `.table` class, instead applying Cardinal’s default table styles directly on the `<table>` element.
+- Changed `.float_*` classes to `.align_*`, and added the `.align_center` class.
+- Changed `.text_[size]` classes to `.font_[size]` to better distinguish between the text alignment and font sizing helper classes.
+- Re-ordered the `@print` style declarations alphabetically.
+- Fixed font-sizing issues with `code`, `figcaption`, `small`, `sup`, and `sub` elements so that they work better in nested situations.
+
 # 0.3.7 (July 23, 2013)
 
-- moved .text_* classes to the helpers section so they can be used on .grid-item classes
+- moved `.text_*` classes to the helpers section so they can be used on `.grid-item` classes
 - resized `<h6>` from `1rem` to `0.75rem`
-- added `!important` to helper classes that were missing them.
+- added `!important` to some helper classes that needed them.
 
 # 0.3.6 (July 18, 2013)
 
