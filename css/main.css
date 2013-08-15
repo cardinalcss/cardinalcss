@@ -1,10 +1,11 @@
 /* ================================================================== *\
 
    Name: Cardinal
-   Info: a small, “mobile first” CSS framework by Chris Bracco.
+   Info: a small, “mobile first” CSS framework by Chris Bracco
    Link: http://cardinalcss.com
 
    TABLE OF CONTENTS
+   ----------------------
    (Ctrl/Cmd + F, and search for `$section` to jump to a section)
    01. Base................Lay the foundation
    02. Links...............Default styles for anchor links
@@ -19,6 +20,23 @@
    11. Main................Your styles go here!
    12. Helpers.............Some useful, global classes
    13. Print...............Inlined, barebones print styles
+
+   COLORS
+   ----------------------
+   Primary:   #1fa3ec (blue)
+   Secondary: #e98724 (orange)
+
+   GRAYSCALE
+   ----------------------
+   Black:         #222
+   Darkest gray:  #444
+   Darker gray:   #777
+   Dark gray:     #aaa
+   Gray:          #ccc
+   Light gray:    #dedede
+   Lighter gray:  #efefef
+   Lightest gray: #f8f8f8
+   White:         #fff
 
 \* ================================================================== */
 
@@ -105,7 +123,7 @@ html {
 
 /* Change `background` for text selections when browser is unfocused */
 ::selection:window-inactive {
-	background: #d0d0d0;
+	background: #dedede;
 }
 
 /* Remove `background` on images when selected */
@@ -124,6 +142,7 @@ img::-moz-selection {
 /* 1. Remove the gray background color from active links in IE 10 */
 a {
 	background: transparent; /* 1 */
+	color: #1fa3ec;
 }
 
 a:hover {
@@ -197,7 +216,7 @@ strong {
 
 blockquote {
 	padding-left: 1rem;
-	border-left: 5px solid #efefef;
+	border-left: 5px solid #e5e5e5;
 	font-style: italic;
 	font-family: Baskerville, "Baskerville Old Face", "Hoefler Text",
 		Garamond, "Times New Roman", serif;
@@ -222,7 +241,7 @@ blockquote footer:before {
 }
 
 blockquote footer {
-	color: #686868;
+	color: #777;
 	font-style: italic;
 	font-size: 0.8125rem;
 }
@@ -251,7 +270,7 @@ dl dd {
 }
 
 del {
-	color: #686868;
+	color: #777;
 	text-decoration: line-through;
 }
 
@@ -273,51 +292,48 @@ cite {
 
 figcaption {
 	margin: 0.75rem 0 0;
-	font-size: 0.75rem;
+	font-size: 75%;
 }
 
 /* NOTE: Use `text-rendering` with caution - http://cbrac.co/SJt8p1 */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
 	margin: 0 0 0.75rem;
 	color: #222;
 	font-weight: 700;
 	font-family: "Helvetica Neue", sans-serif;
-	line-height: 1.5;
+	line-height: 1.333;
 	text-rendering: optimizeLegibility;
 }
 
-h1,
-h2 { line-height: 1.333; }
+h1, .h1 { font-size: 3.157rem; }
+h2, .h2 { font-size: 2.369rem; }
+h3, .h3 { font-size: 1.777rem; }
+h4, .h4 { font-size: 1.333rem; }
+h5, .h5 { font-size: 1rem;     }
+h6, .h6 { font-size: 0.75rem;  }
 
-h1 { font-size: 3.157rem; }
-h2 { font-size: 2.369rem; }
-h3 { font-size: 1.777rem; }
-h4 { font-size: 1.333rem; }
-h5 { font-size: 1rem;     }
-h6 { font-size: 0.75rem;  }
-
-h1 small,
-h2 small,
-h3 small,
-h4 small,
-h5 small,
-h6 small {
-	color: #686868;
+h1.subheading, h1 small,
+h2.subheading, h2 small,
+h3.subheading, h3 small,
+h4.subheading, h4 small,
+h5.subheading, h5 small,
+h6.subheading, h6 small {
+	color: #777;
 	line-height: inherit;
 }
 
+/* Give subheadings a lighter `font-weight` */
 h1.subheading,
 h2.subheading,
 h3.subheading,
 h4.subheading,
 h5.subheading,
 h6.subheading {
-	color: #686868;
 	font-weight: 300;
 }
 
@@ -328,14 +344,14 @@ hr {
 	box-sizing:         content-box;
 	height: 0;
 	border: 0;
-	border-bottom: 1px solid #c0c0c0;
+	border-bottom: 1px solid #dedede;
 }
 
 /* Address styling not present in IE 8/9 */
 ins,
 mark {
 	background: #ff9;
-	color: #000;
+	color: #222;
 	text-decoration: none;
 }
 
@@ -352,10 +368,10 @@ ol ol       { list-style: upper-alpha; }
 ol ol ol    { list-style: lower-roman; }
 ol ol ol ol { list-style: lower-alpha; }
 
-ol li ol,
-ol li ul,
-ul li ul,
-ul li ol {
+ol ol,
+ol ul,
+ul ul,
+ul ol {
 	margin-bottom: 0;
 }
 
@@ -379,14 +395,14 @@ q {
 /* 1. Address inconsistent and variable `font-size` in all browsers */
 small {
 	display: inline-block;
-	font-size: 0.75rem; /* 1 */
+	font-size: 87.5%; /* 1 */
 	line-height: 1.333;
 }
 
 /* Prevent <sub> and <sup> affecting `line-height` in all browsers */
 sub,
 sup {
-	font-size: 0.75rem;
+	font-size: 75%;
 	line-height: 0;
 	position: relative;
 	vertical-align: baseline;
@@ -409,14 +425,19 @@ code,
 kbd,
 pre,
 samp {
-	font-size: 0.8125rem;
+	color: #444;
 	font-family: Monaco, "Lucida Sans Typewriter", Consolas,
 		"Courier New", monospace;
 }
 
+code,
+kbd {
+	font-size: 75%;
+}
+
 code {
 	padding: 0 0.3rem;
-	border: 1px solid #d6d6d6;
+	border: 1px solid #dedede;
 	-webkit-border-radius: 3px;
 	-moz-border-radius:    3px;
 	border-radius:         3px;
@@ -436,29 +457,27 @@ kbd {
 	top: -1px;
 	margin-bottom: 1px;
 	padding: 0 0.3rem;
-	border: 1px solid #d6d6d6;
+	border: 1px solid #dedede;
 	-webkit-border-radius: 4px;
 	-moz-border-radius:    4px;
 	border-radius:         4px;
 	background: #f8f8f8;
 	-webkit-box-shadow:
-		0 1px 0px #d6d6d6,
+		0 1px 0px #dedede,
 		inset 0 0 0 1px #fff;
 	-moz-box-shadow:
-		0 1px 0px #d6d6d6,
+		0 1px 0px #dedede,
 		inset 0 0 0 1px #fff;
 	box-shadow:
-		0 1px 0px #d6d6d6,
+		0 1px 0px #dedede,
 		inset 0 0 0 1px #fff;
 	white-space: nowrap;
-	font-size: 10px;
 }
 
-/* Increase `padding` and `font-size` at larger viewport widths */
+/* Increase `padding` at larger viewport widths */
 @media only screen and (min-width: 480px) {
 	kbd {
 		padding: 0.1rem 0.3rem;
-		font-size: 0.75rem;
 	}
 }
 
@@ -466,11 +485,11 @@ pre {
 	position: relative;
 	overflow: auto;
 	padding: 1rem;
-	background: #333;
+	background: #222;
 	-webkit-box-shadow: inset 0 0 5px hsla(0, 0%, 0%, 0.6);
 	-moz-box-shadow:    inset 0 0 5px hsla(0, 0%, 0%, 0.6);
 	box-shadow:         inset 0 0 5px hsla(0, 0%, 0%, 0.6);
-	color: #d6cba9;
+	color: #ccc;
 	white-space: pre;
 	word-wrap: normal;
 	word-break: normal;
@@ -495,6 +514,7 @@ pre code {
 	-moz-border-radius:    0;
 	border-radius:         0;
 	background: transparent;
+	color: inherit;
 	white-space: pre;
 }
 
@@ -572,7 +592,7 @@ textarea {
 
 /**
  * Address Firefox 4+ setting `line-height` on <input> using
- * `!important` in the UA stylesheet.
+ * `!important` in the UA stylesheet
  */
 
 button,
@@ -714,20 +734,20 @@ table td {
 
 /* Outer border only */
 table.border {
-	border: 1px solid #d0d0d0;
+	border: 1px solid #dedede;
 }
 
 /* Borders for rows & columns */
 table.border_all th,
 table.border_all td {
-	border-top: 1px solid #d0d0d0;
-	border-left: 1px solid #d0d0d0;
+	border-top: 1px solid #dedede;
+	border-left: 1px solid #dedede;
 }
 
 /* Border for rows only */
 table.border_rows th,
 table.border_rows td {
-	border-top: 1px solid #d0d0d0;
+	border-top: 1px solid #dedede;
 }
 
 /* Remove top border to avoid double border on .border tables */
@@ -750,7 +770,7 @@ table.border_all thead:first-child tr:first-child th {
 
 /* Add bottom border to last row in the table */
 table.border_rows tr:last-child td {
-	border-bottom: 1px solid #d0d0d0;
+	border-bottom: 1px solid #dedede;
 }
 
 /* Stripes */
@@ -935,7 +955,7 @@ table.stripes tbody > tr:nth-child(odd) > td {
 	margin: 0;
 	padding: 0.563rem 0.844rem;
 	border: 0 none;
-	background: #e5e5e5;
+	background: #dedede;
 	color: #444;
 	text-align: center;
 	text-decoration: none;
@@ -944,21 +964,14 @@ table.stripes tbody > tr:nth-child(odd) > td {
 	cursor: pointer;
 }
 
-.button:hover {
-	background: #ececec;
-	color: #222;
-	cursor: pointer;
-}
-
 .button:active {
-	background: #e7e7e7;
 	-webkit-box-shadow: inset 0 0 6px hsla(0, 0%, 0%, 0.20);
 	-moz-box-shadow:    inset 0 0 6px hsla(0, 0%, 0%, 0.20);
 	box-shadow:         inset 0 0 6px hsla(0, 0%, 0%, 0.20);
 }
 
 .button:focus {
-	outline: thin dotted #333;
+	outline: thin dotted #444;
 	outline: 5px auto -webkit-focus-ring-color;
 	outline-offset: -2px;
 }
@@ -971,15 +984,8 @@ table.stripes tbody > tr:nth-child(odd) > td {
 	box-shadow:         inset 0 0 0 3px hsla(0, 0%, 92%, 1.0);
 }
 
-.button.hollow:hover {
-	background: #ececec;
-	-webkit-box-shadow: inset 0 0 0 3px hsla(0, 0%, 93%, 1.0);
-	-moz-box-shadow:    inset 0 0 0 3px hsla(0, 0%, 93%, 1.0);
-	box-shadow:         inset 0 0 0 3px hsla(0, 0%, 93%, 1.0);
-}
-
 .button.hollow:active {
-	background: #e7e7e7;
+	background: #efefef;
 	-webkit-box-shadow: inset 0 0 6px hsla(0, 0%, 0%, 0.20);
 	-moz-box-shadow:    inset 0 0 6px hsla(0, 0%, 0%, 0.20);
 	box-shadow:         inset 0 0 6px hsla(0, 0%, 0%, 0.20);
@@ -1040,14 +1046,13 @@ table.stripes tbody > tr:nth-child(odd) > td {
 
 /* States */
 .button.disabled,
-.button.disabled:hover,
 .button.disabled:active,
 .button[disabled] {
-	background: #e6e6e6 !important;
+	background: #ddd !important;
 	-webkit-box-shadow: none !important;
 	-moz-box-shadow:    none !important;
 	box-shadow:         none !important;
-	color: #505050 !important;
+	color: #777 !important;
 	text-shadow: none !important;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=65)";
 	opacity: 0.65;
@@ -1055,13 +1060,22 @@ table.stripes tbody > tr:nth-child(odd) > td {
 }
 
 .button.hollow.disabled,
-.button.hollow.disabled:hover,
 .button.hollow.disabled:active,
 .button.hollow[disabled] {
 	background: transparent !important;
-	-webkit-box-shadow: inset 0 0 0 3px #eaeaea !important;
-	-moz-box-shadow:    inset 0 0 0 3px #eaeaea !important;
-	box-shadow:         inset 0 0 0 3px #eaeaea !important;
+	-webkit-box-shadow: inset 0 0 0 3px #ddd !important;
+	-moz-box-shadow:    inset 0 0 0 3px #ddd !important;
+	box-shadow:         inset 0 0 0 3px #ddd !important;
+}
+
+.button.primary {
+	background: #1fa3ec;
+	color: #fff;
+}
+
+.button.secondary {
+	background: #e98724;
+	color: #fff;
 }
 
 /* ================================================================== *\
@@ -1263,7 +1277,7 @@ table.stripes tbody > tr:nth-child(odd) > td {
 	visibility: hidden;
 }
 
-/* Clear floats manually - http://cbrac.co/SFv1Ua */
+/* Clear floats with an extra markup element - http://cbrac.co/SFv1Ua */
 .clear {
 	display: block;
 	visibility: hidden;
@@ -1273,18 +1287,7 @@ table.stripes tbody > tr:nth-child(odd) > td {
 	height: 0;
 }
 
-/**
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The use of `table` rather than `block` is only necessary if using
- * `:before` to contain the top-margins of child elements.
- * 2. The space content is one way to avoid an Opera bug when the
- * `contenteditable` attribute is included anywhere else on the page.
- * Otherwise it causes space to appear at the top and bottom of elements
- * that receive the `clearfix` class.
- */
-
+/* Clearfix to contain floats */
 .cf:before,
 .cf:after {
 	display: table; /* 1 */
@@ -1335,7 +1338,7 @@ table.stripes tbody > tr:nth-child(odd) > td {
 
 	blockquote,
 	pre {
-		border: 1px solid #999;
+		border: 1px solid #777;
 		page-break-inside: avoid;
 	}
 
