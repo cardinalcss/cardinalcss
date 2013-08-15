@@ -1,26 +1,43 @@
 /* ================================================================== *\
-   Table of contents
+
+   Name: Cardinal
+   Info: a small, “mobile first” CSS framework by Chris Bracco.
+   Link: http://cardinalcss.com
+
+   TABLE OF CONTENTS
    (Ctrl/Cmd + F, and search for `$section` to jump to a section)
-   01. Base................Normalize.css (minified), important styles
-   02. Typography..........Basic typography elements
-   03. Non-typography......Important elements that are not type-based
-   04. Grids...............A simple grid system & handy width classes
-   05. Layout..............Common layout items (wrappers, islands, etc)
-   06. Buttons.............Basic styles, sizes, and shapes
+   01. Base................Lay the foundation
+   02. Links...............Default styles for anchor links
+   03. Typography..........Basic typography elements
+   04. Code................Pre-formatted text and other code styles
+   05. Embedded content....Markup elements that use external content
+   06. Forms...............Styling for elements that make up a form
    07. Tables..............Styles for tabular data
-   08. Main................Your styles go here!
-   09. Helpers.............Some useful, global classes
-   10. Print...............Inlined, barebones print styles
+   08. Layout..............Common layout items (wrappers, islands, etc)
+   09. Grids...............A simple grid system & handy width classes
+   10. Buttons.............Basic styles, sizes, and shapes
+   11. Main................Your styles go here!
+   12. Helpers.............Some useful, global classes
+   13. Print...............Inlined, barebones print styles
+
 \* ================================================================== */
 
 /* ================================================================== *\
    Base ($base)
 \* ================================================================== */
 
-/*! normalize.css v2.1.2 | MIT License | git.io/normalize */
-article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,video{display:inline-block}audio:not([controls]){display:none;height:0}[hidden]{display:none}html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}a:focus{outline:thin dotted}a:active,a:hover{outline:0}h1{font-size:2em;margin:.67em 0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}mark{background:#ff0;color:#000}code,kbd,pre,samp{font-family:monospace,serif;font-size:1em}pre{white-space:pre-wrap}q{quotes:"\201C" "\201D" "\2018" "\2019"}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:0}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}button,input{line-height:normal}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}
+/* Viewport resizing */
+@-webkit-viewport { width: device-width; zoom: 1.0; }
+@-moz-viewport    { width: device-width; zoom: 1.0; }
+@-ms-viewport     { width: device-width; zoom: 1.0; }
+@-o-viewport      { width: device-width; zoom: 1.0; }
+@viewport         { width: device-width; zoom: 1.0; }
 
-/* `border-box`... ALL THE THINGS - http://cbrac.co/RQrDL5 */
+/**
+ * Box model adjustments
+ * `border-box`... ALL THE THINGS - http://cbrac.co/RQrDL5
+ */
+
 *,
 *:before,
 *:after {
@@ -29,22 +46,45 @@ article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,su
 	box-sizing:         border-box;
 }
 
-/* Set <html> and <body> to inherit the height of the viewport */
-html,
-body {
-	min-height: 100%;
+/* Correct `block` display not defined in IE 8/9 */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+	display: block;
 }
 
 /**
+ * Address [hidden] styling not present in IE 8/9
+ * Hide the <template> element in IE, Safari, and Firefox < 22
+ */
+
+[hidden],
+template {
+	display: none;
+}
+
+/**
+ * 1. Force a vertical scrollbar - http://cbrac.co/163MspB
+ * 2. Remove text size adjustments without disabling user zoom
  * NOTE: Use `text-rendering` with caution - http://cbrac.co/SJt8p1
  * NOTE: Avoid the webkit anti-aliasing trap - http://cbrac.co/TAdhbH
- * 1. Force a vertical scrollbar - http://cbrac.co/163MspB
- * 2. Remove iOS text size adjust without disabling user zoom
+ * NOTE: IE for Windows Phone 8 ignores `-ms-text-size-adjust` if the
+ *       viewport <meta> tag is used - http://cbrac.co/1cFrAvl
  */
 
 html {
 	overflow-y: scroll;             /* 1 */
 	-webkit-text-size-adjust: 100%; /* 2 */
+	-ms-text-size-adjust:     100%; /* 2 */
 	text-size-adjust:         100%; /* 2 */
 }
 
@@ -78,31 +118,35 @@ img::-moz-selection {
 }
 
 /* ================================================================== *\
+   Links ($links)
+\* ================================================================== */
+
+/* 1. Remove the gray background color from active links in IE 10 */
+a {
+	background: transparent; /* 1 */
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+/* Improve readability when focused or hovered in all browsers */
+a:active,
+a:hover {
+	outline: 0;
+}
+
+/* Address `outline` inconsistency between Chrome and other browsers */
+a:focus {
+	outline: thin dotted;
+}
+
+/* ================================================================== *\
    Typography ($typography)
 
    Modular scale:    12px @ 1:1.333 (perfect fourth)
    Important number: 18px (maximum <html> `font-size`)
    http://modularscale.com/scale/?px1=12&px2=18&ra1=1.333&ra2=0
-
-   Description
-   --------------------
-   Cardinal uses a combination of modular scale, unit-less line heights,
-   and `rem` units so that it is easy to scale the type and layout
-   across your entire project.
-
-   How it works
-   --------------------
-   The root font size is first set to a value that feels comfortable on
-   small feature phones (mobile devices with a viewport width less than
-   320px).
-
-   Then, using `@media` queries, Cardinal increases the root font size
-   at several common viewport widths, called breakpoints. You can tweak
-   these `@media` queries and percentage values to suit the content in
-   your project. This is how the type and layout scale globally.
-
-   NOTE: IE9 & IE10 do not recognize `rem` units when used with the
-   `font` shorthand property.
 \* ================================================================== */
 
 html { font-size: 75%; } /* 12px */
@@ -113,24 +157,17 @@ html { font-size: 75%; } /* 12px */
 @media only screen and (min-width: 1440px) { html { font-size: 150%;   } }
 
 /**
- * 1. Inherits percentage declared on above <html> as root `font-size`
- * 2. Unitless `line-height`, which acts as multiple of root `font-size`
+ * 1. Remove default `margin`
+ * 2. Inherits percentage declared on above <html> as root `font-size`
+ * 3. Unitless `line-height`, which acts as multiple of root `font-size`
  */
 
 body {
+	margin: 0;        /* 1 */
 	color: #444;
-	font-size: 1rem;  /* 1 */
+	font-size: 1rem;  /* 2 */
 	font-family: "Helvetica Neue", Arial, sans-serif;
-	line-height: 1.5; /* 2 */
-}
-
-/* Define a mobile tap highlight color (iOS 1.1.1+) */
-a:link {
-	-webkit-tap-highlight-color: #b3d4fc;
-}
-
-a:hover {
-	text-decoration: none;
+	line-height: 1.5; /* 3 */
 }
 
 abbr,
@@ -139,12 +176,23 @@ dfn[title] {
 	cursor: help;
 }
 
+/* Address styling not present in IE 8/9, Safari 5, and Chrome */
+abbr[title] {
+	border-bottom: 1px dotted;
+}
+
 abbr a {
 	text-decoration: none;
 }
 
 acronym {
 	text-transform: uppercase;
+}
+
+/* Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome */
+b,
+strong {
+	font-weight: bold;
 }
 
 blockquote {
@@ -164,12 +212,13 @@ blockquote p + p {
 }
 
 /**
+ * 1. Add an m-dash character before the <footer> tag
  * TIP: Use <footer> tag instead of <cite> inside blockquotes -
- * http://cbrac.co/TCVK4P
+ *      http://cbrac.co/TCVK4P
  */
 
 blockquote footer:before {
-	content: "\2014 \2009";
+	content: "\2014 \2009"; /* 1 */
 }
 
 blockquote footer {
@@ -180,6 +229,7 @@ blockquote footer {
 
 blockquote,
 dl,
+figure,
 hr,
 menu,
 ol,
@@ -189,30 +239,6 @@ summary,
 table,
 ul {
 	margin: 0 0 1rem;
-}
-
-code,
-pre {
-	font-size: 0.8125rem;
-	font-family: Monaco, "Lucida Sans Typewriter", Consolas,
-		"Courier New", monospace;
-}
-
-code {
-	padding: 0 0.3rem;
-	border: 1px solid #d6d6d6;
-	-webkit-border-radius: 3px;
-	-moz-border-radius:    3px;
-	border-radius:         3px;
-	background: #f8f8f8;
-	white-space: nowrap;
-}
-
-/* Increase `font-size` and `padding` for <kbd> on larger devices */
-@media only screen and (min-width: 480px) {
-	code {
-		padding: 0.1rem 0.3rem;
-	}
 }
 
 dl dt {
@@ -233,10 +259,21 @@ details {
 	cursor: pointer;
 }
 
+/* Address styling not present in Safari 5 and Chrome */
+dfn {
+	font-style: italic;
+}
+
 em,
+figcaption,
 i,
 cite {
 	font-style: italic;
+}
+
+figcaption {
+	margin: 0.75rem 0 0;
+	font-size: 0.75rem;
 }
 
 /* NOTE: Use `text-rendering` with caution - http://cbrac.co/SJt8p1 */
@@ -284,49 +321,22 @@ h6.subheading {
 	font-weight: 300;
 }
 
+/* Address differences between Firefox and other browsers */
 hr {
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing:    content-box;
+	box-sizing:         content-box;
+	height: 0;
 	border: 0;
 	border-bottom: 1px solid #c0c0c0;
 }
 
+/* Address styling not present in IE 8/9 */
 ins,
 mark {
 	background: #ff9;
 	color: #000;
 	text-decoration: none;
-}
-
-kbd {
-	position: relative;
-	top: -1px;
-	margin-bottom: 1px;
-	padding: 0 0.3rem;
-	border: 1px solid #d6d6d6;
-	-webkit-border-radius: 4px;
-	-moz-border-radius:    4px;
-	border-radius:         4px;
-	background: #f8f8f8;
-	-webkit-box-shadow:
-		0 1px 0px #d6d6d6,
-		inset 0 0 0 1px #fff;
-	-moz-box-shadow:
-		0 1px 0px #d6d6d6,
-		inset 0 0 0 1px #fff;
-	box-shadow:
-		0 1px 0px #d6d6d6,
-		inset 0 0 0 1px #fff;
-	white-space: nowrap;
-	font-size: 10px;
-	font-family: Monaco, "Lucida Sans Typewriter", Consolas,
-		"Courier New", monospace;
-}
-
-/* Increase `font-size` and `padding` for <kbd> on larger devices */
-@media only screen and (min-width: 480px) {
-	kbd {
-		padding: 0.1rem 0.3rem;
-		font-size: 0.75rem;
-	}
 }
 
 nav ul,
@@ -359,6 +369,97 @@ th {
 	-ms-hyphens:     auto;
 	hyphens:         auto;
 	word-wrap: break-word;
+}
+
+/* Set consistent <q> types */
+q {
+	quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/* 1. Address inconsistent and variable `font-size` in all browsers */
+small {
+	display: inline-block;
+	font-size: 0.75rem; /* 1 */
+	line-height: 1.333;
+}
+
+/* Prevent <sub> and <sup> affecting `line-height` in all browsers */
+sub,
+sup {
+	font-size: 0.75rem;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sup {
+	top: -0.5em;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+/* ================================================================== *\
+   Code ($code)
+\* ================================================================== */
+
+/* Correct `font-family` set oddly in Safari 5 and Chrome */
+code,
+kbd,
+pre,
+samp {
+	font-size: 0.8125rem;
+	font-family: Monaco, "Lucida Sans Typewriter", Consolas,
+		"Courier New", monospace;
+}
+
+code {
+	padding: 0 0.3rem;
+	border: 1px solid #d6d6d6;
+	-webkit-border-radius: 3px;
+	-moz-border-radius:    3px;
+	border-radius:         3px;
+	background: #f8f8f8;
+	white-space: nowrap;
+}
+
+/* Increase `padding` at larger viewport widths */
+@media only screen and (min-width: 480px) {
+	code {
+		padding: 0.1rem 0.3rem;
+	}
+}
+
+kbd {
+	position: relative;
+	top: -1px;
+	margin-bottom: 1px;
+	padding: 0 0.3rem;
+	border: 1px solid #d6d6d6;
+	-webkit-border-radius: 4px;
+	-moz-border-radius:    4px;
+	border-radius:         4px;
+	background: #f8f8f8;
+	-webkit-box-shadow:
+		0 1px 0px #d6d6d6,
+		inset 0 0 0 1px #fff;
+	-moz-box-shadow:
+		0 1px 0px #d6d6d6,
+		inset 0 0 0 1px #fff;
+	box-shadow:
+		0 1px 0px #d6d6d6,
+		inset 0 0 0 1px #fff;
+	white-space: nowrap;
+	font-size: 10px;
+}
+
+/* Increase `padding` and `font-size` at larger viewport widths */
+@media only screen and (min-width: 480px) {
+	kbd {
+		padding: 0.1rem 0.3rem;
+		font-size: 0.75rem;
+	}
 }
 
 pre {
@@ -397,53 +498,44 @@ pre code {
 	white-space: pre;
 }
 
-small {
+/* ================================================================== *\
+   Embedded content ($embedded-content)
+\* ================================================================== */
+
+/**
+ * Correct `inline-block` display not defined in IE 8/9
+ */
+
+audio,
+canvas,
+video {
 	display: inline-block;
-	font-size: 0.75rem;
-	line-height: 1.333;
 }
 
-/* ================================================================== *\
-   Non-typography ($non-typography)
-\* ================================================================== */
+/**
+ * 1. Prevent modern browsers from displaying <audio> without controls
+ * 2. Remove excess `height` in iOS 5 devices
+ */
+
+audio:not([controls]) {
+	display: none; /* 1 */
+	height: 0;     /* 2 */
+}
 
 /* Fluid-width <audio> elements */
 audio {
 	width: 100%;
 }
 
-/* Remove <fieldset> styles from normalize.css */
-fieldset {
-	margin: 0;
-	padding: 0;
-	border: 0;
-}
-
-figure {
-	margin-bottom: 1rem;
-}
-
-figcaption {
-	font-style: italic;
-	font-size: 75%;
-}
-
-figcaption {
-	margin-top: 0.5rem;
-}
-
-legend {
-	margin-bottom: 1rem;
-	font-weight: 700;
-}
-
 /**
- * Remove the gap between <img> elements and the bottom of their
- * containers - http://cbrac.co/Q6smqV
+ * 1. Remove the gap between <img> elements and the bottom of their
+ *    containers - http://cbrac.co/Q6smqV
+ * 2. Remove the `border` when inside an <a> element in IE 8/9
  */
 
 img {
-	vertical-align: middle;
+	vertical-align: middle; /* 1 */
+	border: 0;              /* 2 */
 }
 
 /* Fluid-width media that maintain their aspect ratios */
@@ -454,77 +546,267 @@ video {
 	height: auto !important;
 }
 
-/* Restrict <textarea> elements to vertical resizing only */
+/* Correct `overflow` displayed oddly in IE 9 */
+svg:not(:root) {
+	overflow: hidden;
+}
+
+/* ================================================================== *\
+   Forms ($forms)
+\* ================================================================== */
+
+/**
+ * 1. Correct `font-family` not being inherited in all browsers
+ * 2. Correct `font-size` not being inherited in all browsers
+ * 3. Address `margin` set differently in Firefox 4+, Safari 5, & Chrome
+ */
+
+button,
+input,
+select,
 textarea {
-	resize: vertical;
+	font-family: inherit; /* 1 */
+	font-size: 1rem;      /* 2 */
+	margin: 0;            /* 3 */
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on <input> using
+ * `!important` in the UA stylesheet.
+ */
+
+button,
+input {
+	line-height: normal;
+}
+
+/**
+ * Fix inconsistent `text-transform` for <button> and <select>
+ * All other form control elements do not inherit `text-transform`
+ */
+
+button,
+select {
+	text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native
+ *    <audio> and <video> controls
+ * 2. Correct inability to style clickable <input> types in iOS
+ * 3. Improve usability and consistency of cursor style between
+ *    image-type <input> and others
+ */
+
+button,
+html input[type="button"],      /* 1 */
+input[type="reset"],
+input[type="submit"] {
+	-webkit-appearance: button; /* 2 */
+	cursor: pointer;            /* 3 */
+}
+
+/* Reset default `cursor` for disabled elements */
+button[disabled],
+html input[disabled] {
+	cursor: default;
+}
+
+/* Remove default <fieldset> styles for all browsers */
+fieldset {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+/**
+ * 1. Address `box-sizing` set to `content-box` in IE 8/9
+ * 2. Remove excess padding in IE 8/9
+ */
+
+input[type="checkbox"],
+input[type="radio"] {
+	box-sizing: border-box; /* 1 */
+	padding: 0;             /* 2 */
+}
+
+/**
+ * 1. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof)
+ * 2. Address `appearance` set to `searchfield` in Safari 5 and Chrome
+ */
+
+input[type="search"] {
+	-webkit-box-sizing: content-box; /* 1 */
+	-moz-box-sizing:    content-box;
+	box-sizing:         content-box;
+	-webkit-appearance: textfield;   /* 2 */
+}
+
+/* Remove decoration & cancel button in Safari 5 and Chrome on OS X */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+/* Remove inner padding and border in Firefox 4+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+/* Give <legend> some basic styles for all browsers */
+legend {
+	margin: 0 0 1rem;
+	padding: 0;
+	border: 0;
+	font-weight: bold;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 8/9
+ * 2. Improve readability and alignment in all browsers
+ * 3. Restrict <textarea> elements to vertical resizing only
+ */
+
+textarea {
+	overflow: auto;      /* 1 */
+	vertical-align: top; /* 2 */
+	resize: vertical;    /* 3 */
+}
+
+/* ================================================================== *\
+   Tables ($tables)
+\* ================================================================== */
+
+/**
+ * Default (borderless)
+ * 1. Remove most spacing between <table> cells
+ */
+
+table {
+	max-width: 100%;
+	width: 100%;
+	border-spacing: 0; /* 1 */
+	border-collapse: collapse; /* 1 */
+	empty-cells: show;
+}
+
+table th,
+table tfoot td {
+	color: #222;
+	text-align: left;
+	font-weight: bold;
+}
+
+table thead th,
+table tfoot td  {
+	background-color: #efefef;
+}
+
+table th,
+table td {
+	overflow: visible;
+	padding: 0.633rem;
+	vertical-align: top;
+}
+
+/* Outer border only */
+table.border {
+	border: 1px solid #d0d0d0;
+}
+
+/* Borders for rows & columns */
+table.border_all th,
+table.border_all td {
+	border-top: 1px solid #d0d0d0;
+	border-left: 1px solid #d0d0d0;
+}
+
+/* Border for rows only */
+table.border_rows th,
+table.border_rows td {
+	border-top: 1px solid #d0d0d0;
+}
+
+/* Remove top border to avoid double border on .border tables */
+table.border.border_all thead:first-child tr:first-child th,
+table.border.border_all thead:first-child tr:first-child td,
+table.border.border_rows thead:first-child tr:first-child th,
+table.border.border_rows thead:first-child tr:first-child td {
+	border-top: 0;
+}
+
+table.border_all tr th:first-child,
+table.border_all tr td:first-child {
+	border-left: 0;
+}
+
+table.border_all tr:first-child th,
+table.border_all thead:first-child tr:first-child th {
+	border-top: 0;
+}
+
+/* Add bottom border to last row in the table */
+table.border_rows tr:last-child td {
+	border-bottom: 1px solid #d0d0d0;
+}
+
+/* Stripes */
+table.stripes tbody > tr:nth-child(odd) > td {
+	background-color: #f8f8f8;
+}
+
+/* ================================================================== *\
+   Layout ($layout)
+\* ================================================================== */
+
+/* 100% width container */
+.strip {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	background-color: #efefef;
+	list-style: none;
+}
+
+.strip .wrapper {
+	padding: 1rem 0;
+}
+
+/* Page wrapper */
+.wrapper {
+	margin: 0 auto;
+	max-width: 1140px;
+	width: 90%;
+}
+
+.island,
+.well {
+	margin: 0 0 1rem;
+}
+
+.island {
+	padding: 1rem;
+	background: #efefef;
+}
+
+.well {
+	padding: 1rem;
+	background: #efefef;
+	-webkit-box-shadow: inset 0 0 8px hsla(0, 0%, 0%, 0.15);
+	-moz-box-shadow:    inset 0 0 8px hsla(0, 0%, 0%, 0.15);
+	box-shadow:         inset 0 0 8px hsla(0, 0%, 0%, 0.15);
+}
+
+.island .island,
+.well .well {
+	background: #dedede;
 }
 
 /* ================================================================== *\
    Grids ($grids)
-
-   Description
-   --------------------
-   Cardinal includes a simple, responsive grid system that uses fluid
-   item widths and fixed gutters. Grid items can be divided into halves,
-   thirds, fourths, fifths, and sixths.
-
-   The item widths are set in percentages, and the gutters are set in
-   `rem` units. Due to the change in the root font size above, the fixed
-   gutters grow and shrink proportionally, depending on the width of the
-   viewport.
-
-   You can also change how a `.grid_item` behaves at specified viewport
-   widths & breakpoints, by simply adding helper classes to any element
-   with the `.grid_item` class.
-
-   Additionally, the `.one_half`, `.three_fourths`, etc helper classes
-   can be used outside of the grid context, if you simply want an
-   element to have a width that is a specific percentage of its parent.
-
-   If you want smaller or larger gutters, simply change the values for
-   the `margin-left` property on the `.grid` class and the
-   `padding-left` property on the `.grid-item` class to be mirror
-   opposites. Use a `rem` value derived from the modular scale for the
-   typography above to keep everything “harmonious.”
-
-   Usage
-   --------------------
-   * .grid - element becomes a grid wrapper.
-   * .grid-item - element becomes a grid item.
-   * .one_half,
-     .two_thirds,
-     .four_fifths, etc. - element becomes specific width of its parent.
-   * .lap-* - element’s width changes on devices you place in your lap.
-   * .desk-* - element’s width changes on devices that remain on a desk.
-
-   Example
-   --------------------
-   The below example reads as: “a grid with four 100% width items, which
-   become 50% width items on devices that rest in your lap, and 25%
-   width items on larger devices that rest on top of your desk.”
-
-   <div class="grid">
-       <div class="grid-item lap-one_half desk-one_fourth"></div>
-       <div class="grid-item lap-one_half desk-one_fourth"></div>
-       <div class="grid-item lap-one_half desk-one_fourth"></div>
-       <div class="grid-item lap-one_half desk-one_fourth"></div>
-   </div>
-
-   White space issues
-   --------------------
-   Since the grids use `display: inline-block;` instead of floats, a
-   hack is used to remove that white-space in modern browsers. However,
-   this hack does not work in Safari < 6, and Android < 4.2.
-
-   If you need to support these older browsers, simply remove the white
-   space in between the grid items manually, in the HTML, like so:
-
-   <div class="grid">
-       <div class="grid-item lap-one_half desk-one_fourth"></div
-       ><div class="grid-item lap-one_half desk-one_fourth"></div
-       ><div class="grid-item lap-one_half desk-one_fourth"></div
-       ><div class="grid-item lap-one_half desk-one_fourth"></div>
-   </div>
 \* ================================================================== */
 
 /**
@@ -644,83 +926,10 @@ textarea {
 }
 
 /* ================================================================== *\
-   Layout ($layout)
-\* ================================================================== */
-
-/* 100% width container */
-.strip {
-	margin: 0;
-	padding: 0;
-	width: 100%;
-	background-color: #efefef;
-	list-style: none;
-}
-
-.strip .wrapper {
-	padding: 1rem 0;
-}
-
-/* Page wrapper */
-.wrapper {
-	margin: 0 auto;
-	max-width: 1140px;
-	width: 90%;
-}
-
-.island,
-.well {
-	margin: 0 0 1rem;
-}
-
-.island {
-	padding: 1rem;
-	background: #efefef;
-}
-
-.well {
-	padding: 1rem;
-	background: #efefef;
-	-webkit-box-shadow: inset 0 0 8px hsla(0, 0%, 0%, 0.15);
-	-moz-box-shadow:    inset 0 0 8px hsla(0, 0%, 0%, 0.15);
-	box-shadow:         inset 0 0 8px hsla(0, 0%, 0%, 0.15);
-}
-
-.island .island,
-.well .well {
-	background: #dedede;
-}
-
-/* ================================================================== *\
    Buttons ($buttons)
-
-   Usage
-   --------------------
-   class="button [style] [size && || width] [shape && || state]"
-
-   * .button - element becomes the default, “flat” style button.
-   * .hollow,
-     .chunky,
-     .glossy - element becomes the specified button style.
-   * .mini,
-     .small,
-     .large,
-     .block - element becomes the specified button size.
-   * .one_half,
-     .two_thirds,
-     .four_fifths, etc. - element becomes specific width of its parent.
-   * .rounded,
-     .pill - element becomes the specified button shape.
-   * .disabled,
-     .button[disabled] - element becomes a button that is not usable.
-
-   Examples
-   --------------------
-   * <button type="button" class="button large one_whole pill"></button>
-   * <a href="" class="button mini chunky one_half pill disabled"></a>
-   * <input type="submit" class="button glossy" value="Send message">
 \* ================================================================== */
 
-/* Base */
+/* Default (flat) */
 .button {
 	display: inline-block;
 	margin: 0;
@@ -786,111 +995,6 @@ textarea {
 	-webkit-box-shadow: inset 0 2px 3px hsla(0, 0%, 0%, 0.2);
 	-moz-box-shadow:    inset 0 2px 3px hsla(0, 0%, 0%, 0.2);
 	box-shadow:         inset 0 2px 3px hsla(0, 0%, 0%, 0.2);
-}
-
-.button.glossy {
-	border: 1px solid #c5c5c5;
-	background-image: -moz-linear-gradient(
-		top,
-		hsla(0, 0%, 100%, 1.0) 0%,
-		hsla(0, 0%, 95%, 1.0) 50%,
-		hsla(0, 0%, 88%, 1.0) 51%,
-		hsla(0, 0%, 96%, 1.0) 100%
-	); /* FF 3.6+ */
-	background-image: -webkit-gradient(
-		linear,
-		left top,
-		left bottom,
-		color-stop(0%,   hsla(0, 0%, 100%, 1.0)),
-		color-stop(50%,  hsla(0, 0%, 95%, 1.0)),
-		color-stop(51%,  hsla(0, 0%, 88%, 1.0)),
-		color-stop(100%, hsla(0, 0%, 96%, 1.0))
-	); /* Chrome, Safari 4+ */
-	background-image: -webkit-linear-gradient(
-		top,
-		hsla(0, 0%, 100%, 1.0) 0%,
-		hsla(0, 0%, 95%, 1.0) 50%,
-		hsla(0, 0%, 88%, 1.0) 51%,
-		hsla(0, 0%, 96%, 1.0) 100%
-	); /* Chrome 10+, Safari 5.1+ */
-	background-image: -o-linear-gradient(
-		top,
-		hsla(0, 0%, 100%, 1.0) 0%,
-		hsla(0, 0%, 95%, 1.0) 50%,
-		hsla(0, 0%, 88%, 1.0) 51%,
-		hsla(0, 0%, 96%, 1.0) 100%
-	); /* Opera 11.10+ */
-	background-image: -ms-linear-gradient(
-		top,
-		hsla(0, 0%, 100%, 1.0) 0%,
-		hsla(0, 0%, 95%, 1.0) 50%,
-		hsla(0, 0%, 88%, 1.0) 51%,
-		hsla(0, 0%, 96%, 1.0) 100%
-	); /* IE 10+ */
-	background-image: linear-gradient(
-		to bottom,
-		hsla(0, 0%, 100%, 1.0) 0%,
-		hsla(0, 0%, 95%, 1.0) 50%,
-		hsla(0, 0%, 88%, 1.0) 51%,
-		hsla(0, 0%, 96%, 1.0) 100%
-	); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient(
-		startColorstr='#ffffff',
-		endColorstr='#f6f6f6',
-		GradientType=0
-	); /* IE 6-9 */
-}
-
-.button.glossy:hover {
-	background-image: -moz-linear-gradient(
-		top,
-		hsla(0, 0%, 100%, 1.0) 0%,
-		hsla(0, 0%, 98%, 1.0) 50%,
-		hsla(0, 0%, 91%, 1.0) 51%,
-		hsla(0, 0%, 99%, 1.0) 100%
-	); /* FF3.6+ */
-	background-image: -webkit-gradient(
-		linear,
-		left top,
-		left bottom,
-		color-stop(0%, hsla(0, 0%, 100%, 1.0)),
-		color-stop(50%, hsla(0, 0%, 98%, 1.0)),
-		color-stop(51%, hsla(0, 0%, 91%, 1.0)),
-		color-stop(100%, hsla(0, 0%, 99%, 1.0))
-	); /* Chrome, Safari4+ */
-	background-image: -webkit-linear-gradient(
-		top,
-		hsla(0, 0%, 100%, 1.0) 0%,
-		hsla(0, 0%, 98%, 1.0) 50%,
-		hsla(0, 0%, 91%, 1.0) 51%,
-		hsla(0, 0%, 99%, 1.0) 100%
-	); /* Chrome10+, Safari5.1+ */
-	background-image: -o-linear-gradient(
-		top,
-		hsla(0, 0%, 100%, 1.0) 0%,
-		hsla(0, 0%, 98%, 1.0) 50%,
-		hsla(0, 0%, 91%, 1.0) 51%,
-		hsla(0, 0%, 99%, 1.0) 100%
-	); /* Opera 11.10+ */
-	background-image: -ms-linear-gradient(
-		top,
-		hsla(0, 0%, 100%, 1.0) 0%,
-		hsla(0, 0%, 98%, 1.0) 50%,
-		hsla(0, 0%, 91%, 1.0) 51%,
-		hsla(0, 0%, 99%, 1.0) 100%
-	); /* IE10+ */
-	background-image: linear-gradient(
-		to bottom,
-		hsla(0, 0%, 100%, 1.0) 0%,
-		hsla(0, 0%, 98%, 1.0) 50%,
-		hsla(0, 0%, 91%, 1.0) 51%,
-		hsla(0, 0%, 99%, 1.0) 100%
-	); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient(
-		startColorstr='#ffffff',
-		endColorstr='#fafafa',
-		GradientType=0
-	); /* IE6-9 */
 }
 
 /* Sizes */
@@ -961,84 +1065,6 @@ textarea {
 }
 
 /* ================================================================== *\
-   Tables ($tables)
-\* ================================================================== */
-
-/* Borderless */
-.table {
-	max-width: 100%;
-	width: 100%;
-	border-spacing: 0;
-	border-collapse: collapse;
-	empty-cells: show;
-}
-
-.table th,
-.table tfoot td {
-	color: #222;
-	text-align: left;
-	font-weight: bold;
-}
-
-.table thead th,
-.table tfoot td  {
-	background-color: #efefef;
-}
-
-.table th,
-.table td {
-	overflow: visible;
-	padding: 0.633rem;
-	vertical-align: top;
-}
-
-/* Border */
-.table.border {
-	border: 1px solid #d0d0d0;
-}
-
-/* Borders for rows & columns */
-.table.border_all th,
-.table.border_all td {
-	border-top: 1px solid #d0d0d0;
-	border-left: 1px solid #d0d0d0;
-}
-
-/* Border for rows only */
-.table.border_rows th,
-.table.border_rows td {
-	border-top: 1px solid #d0d0d0;
-}
-
-/* Remove top border to avoid double border on .border tables */
-.table.border.border_all thead:first-child tr:first-child th,
-.table.border.border_all thead:first-child tr:first-child td,
-.table.border.border_rows thead:first-child tr:first-child th,
-.table.border.border_rows thead:first-child tr:first-child td {
-	border-top: 0;
-}
-
-.table.border_all tr th:first-child,
-.table.border_all tr td:first-child {
-	border-left: 0;
-}
-
-.table.border_all tr:first-child th,
-.table.border_all thead:first-child tr:first-child th {
-	border-top: 0;
-}
-
-/* Add bottom border to last row in the table */
-.table.border_rows tr:last-child td {
-	border-bottom: 1px solid #d0d0d0;
-}
-
-/* Stripe */
-.table.stripe tbody > tr:nth-child(odd) > td {
-	background-color: #f8f8f8;
-}
-
-/* ================================================================== *\
    Main ($main)
 \* ================================================================== */
 
@@ -1056,10 +1082,11 @@ textarea {
    Helpers ($helpers)
 \* ================================================================== */
 
-/* Floats */
-.float_left  { float: left !important;  }
-.float_right { float: right !important; }
-.float_none  { float: none !important;  }
+/* Alignment */
+.align_left   { float: left !important;  }
+.align_center { float: none; margin-left: auto; margin-right: auto; }
+.align_right  { float: right !important; }
+.align_none   { float: none !important;  }
 
 /* Margins */
 .margin_top    { margin-top: 1rem !important;    }
@@ -1077,40 +1104,41 @@ textarea {
 
 /* Text alignment */
 .text_left    { text-align: left !important;    }
-.text_right   { text-align: right !important;   }
 .text_center  { text-align: center !important;  }
+.text_right   { text-align: right !important;   }
 .text_justify { text-align: justify !important; }
 
-/* Text sizing */
-.text_huge,
-.text_xxl,
-.text_xl,
-.text_large,
-.text_medium,
-.text_normal,
-.text_small {
+/* Font sizing */
+.font_huge,
+.font_xxl,
+.font_xl,
+.font_large,
+.font_medium,
+.font_normal,
+.font_small {
 	color: inherit;
 	font-weight: inherit;
 }
 
-.text_huge,
-.text_xxl {
+.font_huge,
+.font_xxl {
 	line-height: 1.333 !important;
 }
 
-.text_huge   { font-size: 4.209rem !important; }
-.text_xxl    { font-size: 3.157rem !important; }
-.text_xl     { font-size: 2.369rem !important; }
-.text_large  { font-size: 1.777rem !important; }
-.text_medium { font-size: 1.333rem !important; }
-.text_normal { font-size: 1rem !important;     }
-.text_small  { font-size: 0.75rem !important;  }
+.font_huge   { font-size: 4.209rem !important; }
+.font_xxl    { font-size: 3.157rem !important; }
+.font_xl     { font-size: 2.369rem !important; }
+.font_large  { font-size: 1.777rem !important; }
+.font_medium { font-size: 1.333rem !important; }
+.font_normal { font-size: 1rem !important;     }
+.font_small  { font-size: 0.75rem !important;  }
 
 @media only screen and (min-width: 640px) {
-	/* Floats */
-	.lap-float_left  { float: left !important;  }
-	.lap-float_right { float: right !important; }
-	.lap-float_none  { float: none !important;  }
+	/* Alignment */
+	.lap-align_left   { float: left !important;  }
+	.lap-align_center { float: none; margin-left: auto; margin-right: auto; }
+	.lap-align_right  { float: right !important; }
+	.lap-align_none   { float: none !important;  }
 
 	/* Margins */
 	.lap-margin_top    { margin-top: 1rem !important;    }
@@ -1128,25 +1156,26 @@ textarea {
 
 	/* Text alignment */
 	.lap-text_left    { text-align: left !important;    }
-	.lap-text_right   { text-align: right !important;   }
 	.lap-text_center  { text-align: center !important;  }
+	.lap-text_right   { text-align: right !important;   }
 	.lap-text_justify { text-align: justify !important; }
 
-	/* Text sizes */
-	.lap-text_huge   { font-size: 4.209rem !important; }
-	.lap-text_xxl    { font-size: 3.157rem !important; }
-	.lap-text_xl     { font-size: 2.369rem !important; }
-	.lap-text_large  { font-size: 1.777rem !important; }
-	.lap-text_medium { font-size: 1.333rem !important; }
-	.lap-text_normal { font-size: 1rem !important;     }
-	.lap-text_small  { font-size: 0.75rem !important;  }
+	/* Font sizing */
+	.lap-font_huge   { font-size: 4.209rem !important; }
+	.lap-font_xxl    { font-size: 3.157rem !important; }
+	.lap-font_xl     { font-size: 2.369rem !important; }
+	.lap-font_large  { font-size: 1.777rem !important; }
+	.lap-font_medium { font-size: 1.333rem !important; }
+	.lap-font_normal { font-size: 1rem !important;     }
+	.lap-font_small  { font-size: 0.75rem !important;  }
 }
 
 @media only screen and (min-width: 960px) {
-	/* Floats */
-	.desk-float_left  { float: left !important;  }
-	.desk-float_right { float: right !important; }
-	.desk-float_none  { float: none !important;  }
+	/* Alignment */
+	.desk-align_left   { float: left !important;  }
+	.desk-align_center { float: none; margin-left: auto; margin-right: auto; }
+	.desk-align_right  { float: right !important; }
+	.desk-align_none   { float: none !important;  }
 
 	/* Margins */
 	.desk-margin_top    { margin-top: 1rem !important;    }
@@ -1164,18 +1193,18 @@ textarea {
 
 	/* Text alignment */
 	.desk-text_left    { text-align: left !important;    }
-	.desk-text_right   { text-align: right !important;   }
 	.desk-text_center  { text-align: center !important;  }
+	.desk-text_right   { text-align: right !important;   }
 	.desk-text_justify { text-align: justify !important; }
 
-	/* Text sizes */
-	.desk-text_huge   { font-size: 4.209rem !important; }
-	.desk-text_xxl    { font-size: 3.157rem !important; }
-	.desk-text_xl     { font-size: 2.369rem !important; }
-	.desk-text_large  { font-size: 1.777rem !important; }
-	.desk-text_medium { font-size: 1.333rem !important; }
-	.desk-text_normal { font-size: 1rem !important;     }
-	.desk-text_small  { font-size: 0.75rem !important;  }
+	/* Font sizing */
+	.desk-font_huge   { font-size: 4.209rem !important; }
+	.desk-font_xxl    { font-size: 3.157rem !important; }
+	.desk-font_xl     { font-size: 2.369rem !important; }
+	.desk-font_large  { font-size: 1.777rem !important; }
+	.desk-font_medium { font-size: 1.333rem !important; }
+	.desk-font_normal { font-size: 1rem !important;     }
+	.desk-font_small  { font-size: 0.75rem !important;  }
 }
 
 /* Image replacement */
@@ -1272,15 +1301,16 @@ textarea {
 \* ================================================================== */
 
 @media print {
-	/**
-	 * 1. Black prints faster - http://cbrac.co/XvusCs
-	 */
-
+	/* 1. Black prints faster - http://cbrac.co/XvusCs */
 	* {
 		background: transparent !important;
 		box-shadow: none !important;
 		color: #000 !important; /* 1 */
 		text-shadow: none !important;
+	}
+
+	@page {
+		margin: 0.5cm;
 	}
 
 	a,
@@ -1292,43 +1322,26 @@ textarea {
 		content: " (" attr(href) ")";
 	}
 
+	/* Don’t show links for images, or javascript/internal links */
+	a[href^="#"]:after,
+	a[href^="javascript:"]:after,
+	.ir a:after {
+		content: "";
+	}
+
 	abbr[title]:after {
 		content: " (" attr(title) ")";
 	}
 
-	/* Don’t show links for images, or javascript/internal links */
-	.ir a:after,
-	a[href^="javascript:"]:after,
-	a[href^="#"]:after {
-		content: "";
-	}
-
-	pre,
-	blockquote {
+	blockquote,
+	pre {
 		border: 1px solid #999;
 		page-break-inside: avoid;
 	}
 
-	thead {
-		display: table-header-group; /* http://cbrac.co/Q6s1o2 */
-	}
-
-	tr,
-	img {
-		page-break-inside: avoid;
-	}
-
-	img {
-		max-width: 100% !important;
-	}
-
-	@page {
-		margin: 0.5cm;
-	}
-
-	p,
 	h2,
-	h3 {
+	h3,
+	p {
 		orphans: 3;
 		widows: 3;
 	}
@@ -1336,5 +1349,18 @@ textarea {
 	h2,
 	h3 {
 		page-break-after: avoid;
+	}
+
+	img,
+	tr {
+		page-break-inside: avoid;
+	}
+
+	img {
+		max-width: 100% !important;
+	}
+
+	thead {
+		display: table-header-group; /* http://cbrac.co/Q6s1o2 */
 	}
 }
