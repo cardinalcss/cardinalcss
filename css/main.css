@@ -318,22 +318,22 @@ h5, .h5 { font-size: 1rem;     }
 h6, .h6 { font-size: 0.75rem;  }
 
 /* Give subheadings a lighter `font-weight` */
-h1.subheading,
-h2.subheading,
-h3.subheading,
-h4.subheading,
-h5.subheading,
-h6.subheading {
+h1.subheading, .h1.subheading,
+h2.subheading, .h2.subheading,
+h3.subheading, .h3.subheading,
+h4.subheading, .h4.subheading,
+h5.subheading, .h5.subheading,
+h6.subheading .h6.subheading {
 	font-weight: 300;
 }
 
 /* Use `.muted` with `.subheading` to give them a lighter color */
-h1.subheading.muted,
-h2.subheading.muted,
-h3.subheading.muted,
-h4.subheading.muted,
-h5.subheading.muted,
-h6.subheading.muted {
+h1.subheading.muted, .h1.subheading.muted,
+h2.subheading.muted, .h2.subheading.muted,
+h3.subheading.muted, .h3.subheading.muted,
+h4.subheading.muted, .h4.subheading.muted,
+h5.subheading.muted, .h5.subheading.muted,
+h6.subheading.muted .h6.subheading.muted {
 	color: #777;
 }
 
