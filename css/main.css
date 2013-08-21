@@ -542,8 +542,9 @@ audio:not([controls]) {
 	height: 0;     /* 2 */
 }
 
-/* Fluid-width <audio> elements */
-audio {
+/* Fluid-width <audio> & <video> elements */
+audio,
+video {
 	width: 100%;
 }
 
