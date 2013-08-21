@@ -532,6 +532,12 @@ video {
 	display: inline-block;
 }
 
+/* Fluid-width <audio> & <video> elements */
+audio,
+video {
+	width: 100%;
+}
+
 /**
  * 1. Prevent modern browsers from displaying <audio> without controls
  * 2. Remove excess `height` in iOS 5 devices
@@ -540,12 +546,6 @@ video {
 audio:not([controls]) {
 	display: none; /* 1 */
 	height: 0;     /* 2 */
-}
-
-/* Fluid-width <audio> & <video> elements */
-audio,
-video {
-	width: 100%;
 }
 
 /**
