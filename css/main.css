@@ -23,6 +23,7 @@
 
    COLORS
    ---------------------------
+   Brand:     #c12026 (red)
    Primary:   #1fa3ec (blue)
    Secondary: #e98724 (orange)
 
@@ -88,6 +89,12 @@ summary {
 [hidden],
 template {
 	display: none;
+}
+
+/* Set <html> and <body> to inherit the height of the viewport */
+html,
+body {
+	min-height: 100%;
 }
 
 /**
@@ -164,16 +171,16 @@ a:focus {
    Typography ($typography)
 
    Modular scale:    12px @ 1:1.333 (perfect fourth)
-   Important number: 18px (maximum <html> `font-size`)
-   http://modularscale.com/scale/?px1=12&px2=18&ra1=1.333&ra2=0
+   Important number: 20px (maximum <html> `font-size`)
+   http://modularscale.com/scale/?px1=12&px2=20&ra1=1.333&ra2=0
 \* ================================================================== */
 
 html { font-size: 75%; } /* 12px */
-@media only screen and (min-width: 320px)  { html { font-size: 81.25%; } }
-@media only screen and (min-width: 480px)  { html { font-size: 87.5%;  } }
-@media only screen and (min-width: 640px)  { html { font-size: 100%;   } }
-@media only screen and (min-width: 960px)  { html { font-size: 112.5%; } }
-@media only screen and (min-width: 1440px) { html { font-size: 150%;   } }
+@media only screen and (min-width: 320px)  { html { font-size: 81.25%; } } /* 13px */
+@media only screen and (min-width: 480px)  { html { font-size: 87.5%;  } } /* 14px */
+@media only screen and (min-width: 640px)  { html { font-size: 100%;   } } /* 16px */
+@media only screen and (min-width: 960px)  { html { font-size: 112.5%; } } /* 18px */
+@media only screen and (min-width: 1440px) { html { font-size: 125%;   } } /* 20px */
 
 /**
  * 1. Remove default `margin`
@@ -261,8 +268,8 @@ ul {
 }
 
 dl dt {
-	font-weight: 700;
 	color: #222;
+	font-weight: 700;
 }
 
 dl dd {
@@ -380,11 +387,11 @@ table,
 textarea,
 td,
 th {
+	word-wrap: break-word;
 	-webkit-hyphens: auto;
 	-moz-hyphens:    auto;
 	-ms-hyphens:     auto;
 	hyphens:         auto;
-	word-wrap: break-word;
 }
 
 /* Set consistent <q> types */
@@ -402,10 +409,10 @@ small {
 /* Prevent <sub> and <sup> affecting `line-height` in all browsers */
 sub,
 sup {
-	font-size: 75%;
-	line-height: 0;
 	position: relative;
 	vertical-align: baseline;
+	font-size: 75%;
+	line-height: 0;
 }
 
 sup {
@@ -549,14 +556,14 @@ audio:not([controls]) {
 }
 
 /**
- * 1. Remove the gap between <img> elements and the bottom of their
+ * 1. Remove the `border` when inside an <a> element in IE 8/9
+ * 2. Remove the gap between <img> elements and the bottom of their
  *    containers - http://cbrac.co/Q6smqV
- * 2. Remove the `border` when inside an <a> element in IE 8/9
  */
 
 img {
-	vertical-align: middle; /* 1 */
-	border: 0;              /* 2 */
+	border: 0;              /* 1 */
+	vertical-align: middle; /* 2 */
 }
 
 /* Fluid-width media that maintain their aspect ratios */
@@ -577,18 +584,18 @@ svg:not(:root) {
 \* ================================================================== */
 
 /**
- * 1. Correct `font-family` not being inherited in all browsers
+ * 1. Address `margin` set differently in Firefox 4+, Safari 5, & Chrome
  * 2. Correct `font-size` not being inherited in all browsers
- * 3. Address `margin` set differently in Firefox 4+, Safari 5, & Chrome
+ * 3. Correct `font-family` not being inherited in all browsers
  */
 
 button,
 input,
 select,
 textarea {
-	font-family: inherit; /* 1 */
+	margin: 0;            /* 1 */
 	font-size: 1rem;      /* 2 */
-	margin: 0;            /* 3 */
+	font-family: inherit; /* 3 */
 }
 
 /**
@@ -614,17 +621,17 @@ select {
 /**
  * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native
  *    <audio> and <video> controls
- * 2. Correct inability to style clickable <input> types in iOS
- * 3. Improve usability and consistency of cursor style between
+ * 2. Improve usability and consistency of cursor style between
  *    image-type <input> and others
+ * 3. Correct inability to style clickable <input> types in iOS
  */
 
 button,
 html input[type="button"],      /* 1 */
 input[type="reset"],
 input[type="submit"] {
-	-webkit-appearance: button; /* 2 */
-	cursor: pointer;            /* 3 */
+	cursor: pointer;            /* 2 */
+	-webkit-appearance: button; /* 3 */
 }
 
 /* Reset default `cursor` for disabled elements */
@@ -640,6 +647,24 @@ fieldset {
 	border: 0;
 }
 
+/* Make most inputs, select boxes, and textareas as `block` elements */
+input,
+select,
+textarea {
+	display: block;
+	width: 100%;
+	vertical-align: middle;
+}
+
+/* Make checkbox, image, and radio inputs `inline-block` by default */
+input[type="checkbox"],
+input[type="image"],
+input[type="radio"] {
+	display: inline-block;
+	width: auto;
+	cursor: pointer;
+}
+
 /**
  * 1. Address `box-sizing` set to `content-box` in IE 8/9
  * 2. Remove excess padding in IE 8/9
@@ -648,6 +673,7 @@ fieldset {
 input[type="checkbox"],
 input[type="radio"] {
 	box-sizing: border-box; /* 1 */
+	margin: 0 0.422rem 0.238rem 0;
 	padding: 0;             /* 2 */
 }
 
@@ -670,11 +696,23 @@ input[type="search"]::-webkit-search-decoration {
 	-webkit-appearance: none;
 }
 
+/**
+ * Make button, reset, and submit inputs to be `inline-block`, unless
+ * otherwise specified by `.button` classes
+ */
+
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	display: inline-block;
+	width: auto;
+}
+
 /* Remove inner padding and border in Firefox 4+ */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
-	border: 0;
 	padding: 0;
+	border: 0;
 }
 
 /* Give labels a pointer cursor by default */
@@ -687,6 +725,7 @@ legend {
 	margin: 0 0 1rem;
 	padding: 0;
 	border: 0;
+	color: #222;
 	font-weight: bold;
 }
 
