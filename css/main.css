@@ -677,6 +677,11 @@ input::-moz-focus-inner {
 	padding: 0;
 }
 
+/* Give labels a pointer cursor by default */
+label {
+	cursor: pointer;
+}
+
 /* Give <legend> some basic styles for all browsers */
 legend {
 	margin: 0 0 1rem;
