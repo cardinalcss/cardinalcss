@@ -21,6 +21,16 @@ Designers and developers who want to build well-organized, responsive web applic
 
 The purpose of this framework is to make it easier to rapidly prototype, build, scale, and maintain CSS for responsive web applications. Cardinal omits many aesthetic design decisions often bog down larger, more complicated CSS frameworks, leaving the design and creativity up to you.
 
+## Installing
+
+* [Download it](https://github.com/cbracco/Cardinal/archive/master.zip)
+
+There is a minified version of Cardinal that is included in the `css/` directory of this project, but I would recommend developing with the uncompressed version and using your own build process to minify your CSS for production. That way you only have one HTTP request, and you aren’t just slapping Cardinal onto your project (which sort of defeats the purpose of using the framework, anyways).
+
+## Getting started
+
+You can [read the full documentation](http://cardinalcss.com) to get started. It provides detailed explanations and examples. These docs will improve over time, but there is plenty of information already there to digest.
+
 ## Browser support
 
 Cardinal supports most modern browsers:
@@ -74,16 +84,6 @@ Cardinal defines all images to have `max-width: 100%`, which can interfere with 
 There is a bug in IE9 (big surprise) when `box-sizing: border-box;`, `position: fixed;`, and `overflow: auto;` are declared on the same element. The scrollbar’s width is subtracted twice, making the element’s width incorrect. I came across this bug while making the off-canvas navigation for this project’s [documentation website](http://cardinalcss.com).
 
 To fix this, simply change the element’s `box-sizing` value to `content-box` instead of `border-box`, and voila.
-
-## Installing
-
-* [Download it](https://github.com/cbracco/Cardinal/archive/master.zip)
-
-There is a minified version of Cardinal that is included in the `css/` directory of this project, but I would recommend developing with the uncompressed version and using your own build process to minify your CSS for production. That way you only have one HTTP request, and you aren’t just slapping Cardinal onto your project (which sort of defeats the purpose of using the framework, anyways).
-
-## Getting started
-
-You can [read the full documentation](http://cardinalcss.com) to get started. It provides detailed explanations and examples. These docs will improve over time, but there is plenty of information already there to digest.
 
 ## Versioning
 
