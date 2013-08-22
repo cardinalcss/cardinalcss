@@ -1,6 +1,5 @@
-# 0.4.0
+# 1.0
 
-- Reduced file size of main.css by ~3kb! Woot!
 - Scaled back `.button` classes, removing glossy style and hover states.
 - Added `.h1`, `.h2`, `.h3`, `.h4`, `.h5`, `.h6` classes.
 - Picked apart [normalize.css](https://github.com/necolas/normalize.css) and placed declarations in their appropriate sections, instead of lazily including the whole thing up top.

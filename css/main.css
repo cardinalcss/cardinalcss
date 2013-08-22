@@ -21,12 +21,6 @@
    12. Helpers.............Some useful, global classes
    13. Print...............Inlined, barebones print styles
 
-   COLORS
-   ---------------------------
-   Brand:     #c12026 (red)
-   Primary:   #1fa3ec (blue)
-   Secondary: #e98724 (orange)
-
    GRAYSCALE
    ---------------------------
    Black:         #222
@@ -1111,16 +1105,6 @@ table.stripes tbody > tr:nth-child(odd) > td {
 	-webkit-box-shadow: inset 0 0 0 3px #ddd !important;
 	-moz-box-shadow:    inset 0 0 0 3px #ddd !important;
 	box-shadow:         inset 0 0 0 3px #ddd !important;
-}
-
-.button.primary {
-	background: #1fa3ec;
-	color: #fff;
-}
-
-.button.secondary {
-	background: #e98724;
-	color: #fff;
 }
 
 /* ================================================================== *\
