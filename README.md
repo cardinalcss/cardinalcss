@@ -1,7 +1,3 @@
-<a href="http://cardinalcss.com">
-	<img src="http://cardinalcss.com/img/logo.png" width="150px">
-</a>
-
 # Cardinal - 1.0
 
 Cardinal is a small, “[mobile first](http://cbrac.co/116bQqk)” CSS framework with some useful default styles, scalable typography, reusable modules, and a simple responsive grid system.
