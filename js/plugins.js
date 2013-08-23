@@ -24,21 +24,22 @@
 	}
 }());
 
-
-// //
-// Place your Javascript code, plugins, etc here
-// //
+/**
+ * Grab the latest version tag from GitHub and append it
+ */
 
 function updateVersion() {
-	$.ajax(
-		{
-			url: "https://api.github.com/repos/cbracco/cardinal/tags",
-			dataType: "jsonp",
-			timeout: 60 * 1000,
-			success: function(results) {
-				var tag = results.data;
-				$(".version").append("&nbsp;<span class=\"version\">" + tag[0]["name"] + "</span>");
-			}
+
+	$.ajax({
+		url: "https://api.github.com/repos/cbracco/cardinal/tags",
+		dataType: "jsonp",
+		timeout: 60 * 1000,
+		success: function(results) {
+			var tag = results.data;
+			$(".version").each(function() {
+				$(this).append("&nbsp;<span class=\"version\">" + tag[0]["name"] + "</span>");
+			});
 		}
-	);
+	});
+
 }

@@ -1,8 +1,6 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no_js lt_ie9 lt_ie8 lt_ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no_js lt_ie9 lt_ie8 ie7"> <![endif]-->
-<!--[if IE 8]>         <html class="no_js lt_ie9 ie8"> <![endif]-->
-<!--[if IE 9]>         <html class="no_js lt_ie10 ie9"> <![endif]-->
+<!--[if lt IE 9]> <html class="no-js lt_ie9"> <![endif]-->
+<!--[if IE 9]> <html class="no-js lt_ie10 ie9"> <![endif]-->
 <!--[if gt IE 9]><!--> <html class="no-js"> <!--<![endif]-->
 	<head>
 		<!-- Meta -->
@@ -15,7 +13,7 @@
 		<link rel="dns-prefetch" href="//www.google-analytics.com">
 
 		<!-- Title, desc -->
-		<title>Cardinal &mdash; Build more with less.</title>
+		<title>Cardinal &bull; Build more with less.</title>
 		<meta name="description" content="Cardinal is a small, “mobile first” CSS framework with some useful default styles, scalable typography, reusable modules, and a simple responsive grid system.">
 
 		<!-- Favicons: http://cbrac.co/11ZzQkJ -->
@@ -27,154 +25,130 @@
 		<script src="js/vendor/modernizr-2.6.2.min.js"></script>
 	</head>
 
-	<body>
-		<div id="top" class="page">
-			<button type="button" class="menu-button">
-				<svg width="26" height="26">
-					<path d="M0,8 26,8" stroke="#fff" stroke-width="4"></path>
-					<path d="M0,15 26,15" stroke="#fff" stroke-width="4"></path>
-					<path d="M0,22 26,22" stroke="#fff" stroke-width="4"></path>
-				</svg>
-			</button>
+	<body id="top">
+		<a href="#menu" class="menu-anchor">Menu</a>
 
-			<nav class="menu">
-				<div class="menu-inner">
-					<ul>
-						<a href="#top"><h3 class="menu-heading">Cardinal</h3></a>
-						<li><a href="#overview">Overview</a></li>
-						<li><a href="#naming">Class names</a></li>
-						<li><a href="#meta">&lt;meta&gt; tags</a></li>
-						<li><a href="#base">Base</a></li>
-						<li><a href="#typography">Typography</a></li>
-						<li><a href="#non-typography">Non-typography</a></li>
-						<li><a href="#grids">Grids</a></li>
-						<li><a href="#layout">Layout</a></li>
-						<li><a href="#buttons">Buttons</a></li>
-						<li><a href="#tables">Tables</a></li>
-						<li><a href="#main">Main</a></li>
-						<li><a href="#helpers">Helpers</a></li>
-						<li><a href="#print">Print</a></li>
-						<li><a href="#js">Javascript</a></li>
-						<li><a href="#browsers">Browser support</a></li>
-					</ul>
-				</div>
-			</nav>
+		<button type="button" class="menu-button">
+			<svg width="26" height="26">
+				<path d="M0,8 26,8" stroke="#efefef" stroke-width="4"></path>
+				<path d="M0,15 26,15" stroke="#efefef" stroke-width="4"></path>
+				<path d="M0,22 26,22" stroke="#efefef" stroke-width="4"></path>
+			</svg>
+		</button>
 
-			<div class="content">
-				<header class="branding strip">
-					<div class="wrapper">
-						<img src="img/logo.svg" alt="Cardinal" class="branding-logo one_third lap-one_fourth">
+		<div class="page" role="page">
+			<header class="masthead text_center" role="header">
+				<hgroup>
+					<h1 class="masthead-title">Cardinal</h1>
+					<h2 class="masthead-tagline h3 subheading">Build more with less.</h2>
+				</hgroup>
 
-						<hgroup class="branding-info">
-							<h1 class="branding-name">Cardinal</h1>
-							<h2 class="branding-slogan text_large subheading">Build more with less.</h2>
+				<nav class="masthead-actions">
+					<a href="https://github.com/cbracco/cardinal/archive/master.zip" title="Download from Github" id="download" class="button chunky pill primary version margin_bottom">Download</a>
 
-							<p class="branding-buttons">
-								<a href="https://github.com/cbracco/cardinal/archive/master.zip" title="Download from Github" id="download" class="button chunky pill primary version">Download</a>
-								<a href="https://github.com/cbracco/cardinal" title="View & contribute on Github" id="github_repo" class="button chunky pill secondary">View on Github</a>
-							</p>
+					<a href="https://github.com/cbracco/cardinal" title="View & contribute on Github" id="github_repo" class="button chunky pill secondary margin_bottom">View on Github</a>
 
-							<p class="branding-links"><a href="https://www.pivotaltracker.com/s/projects/803361" id="pivotal">Pivotal Tracker</a> &bull; <a href="https://github.com/cbracco/cardinal/blob/master/CHANGELOG.md" id="changelog">CHANGELOG</a> </p>
-						</hgroup>
-					</div>
-				</header>
-				<div class="wrapper">
-					<p class="text_large">Cardinal is a small, “<a href="http://cbrac.co/113eY5h">mobile first</a>” CSS framework with some useful default styles, scalable typography, reusable modules, and a simple responsive grid system.</p>
+					<br>
 
-					<section id="overview">
-						<h2>Overview</h2>
+					<a href="https://www.pivotaltracker.com/s/projects/803361" id="pivotal" class="masthead-link">Pivotal Tracker</a> &bull; <a href="https://github.com/cbracco/cardinal/blob/master/CHANGELOG.md" id="changelog" class="masthead-link">CHANGELOG</a>
+				</nav>
+			</header>
 
-						<p class="text_medium">Designers and developers who want to build well-organized, responsive web applications without <em>losing their minds</em>, should use Cardinal.</p>
+			<section class="intro wrapper" role="introduction">
+				<h3 class="subheading desk-text_center">Cardinal is a small, “<a href="http://cbrac.co/113eY5h">mobile first</a>” CSS framework with useful default styles, fluid typography, and a responsive grid system.</h3>
+			</section>
 
-						<p>Cardinal provides a new approach to scaling web typography and layout across multiple devices. It places <em>little emphasis</em> on pixel-precision, but does not restrict its usage. Instead, Cardinal leverages <a href="http://alistapart.com/article/more-meaningful-typography">modular scale</a>, <a href="http://meyerweb.com/eric/thoughts/2006/02/08/unitless-line-heights/">unit-less line heights</a>, and the power of the <a href="http://snook.ca/archives/html_and_css/font-size-with-rem">REM unit</a> to make it simpler to resize the typography and layout of <strong>your entire application</strong> across different devices.</p>
+			<div class="content wrapper" role="content">
+				<section id="get_started">
+					<h2>Getting started</h2>
 
-						<p>This framework is for building responsive web applications. It’s not meant to be simply “bolted on” to a project, like you can do with <a href="http://getbootstrap.com/">Twitter Bootstrap</a> or <a href="http://foundation.zurb.com/">Zurb’s Foundation</a>; it’s a starting point that you will want to customize and build upon to suit your application or project.</p>
+					<p>Designers and developers who want to build well-organized, responsive web applications without <em>losing their minds</em>, should use Cardinal.</p>
 
-						<p>Cardinal omits many aesthetic design decisions that often bog down larger, more complicated CSS frameworks. <strong>It leaves the design and creativity up to you.</strong></p>
-					</section>
+					<p>This framework omits aesthetic design decisions that can weigh down larger, more complicated CSS frameworks. It’s <strong>style-agnostic</strong>. The design and creativity is up to you.</p>
 
-					<section id="naming">
-						<h2>Naming conventions</h2>
+					<p>Cardinal supports a “<a href="http://www.lukew.com/resources/mobile_first.asp">mobile first</a>,” <a href="http://coding.smashingmagazine.com/2012/03/22/device-agnostic-approach-to-responsive-web-design/">device</a>-<a href="http://tympanus.net/codrops/2012/10/30/becoming-device-agnostic/">agnostic</a> approach to responsive design. That is, your application’s design shouldn’t care about the pixel dimension of the device it’s being viewed upon. The content within the design should dictate how and where the layout should change or respond.</p>
 
-						<div class="grid">
-							<div class="grid-item lap-one_half">
-								<p>Cardinal uses simple naming conventions for CSS classes that are human readable and easier for developers to interpret. While inspired by the <a href="http://bem.info/method/definitions/">BEM approach</a>, the class-naming conventions used in Cardinal are far less complex.</p>
+					<p>The idea is that if you design for the smallest devices (and least capable browsers) first, it forces you to prioritize and determine what are the most important data and actions in your application.</p>
 
-								<pre><code>.block_name              {} /* Block */
+					<p>The end result is an application that is focused on the key tasks a user is supposed to complete, without the performance issues, extraneous content, and interface fluff that plagues many applications that take a top-down, “PC first” approach.</p>
+
+					<h3>Class-name conventions</h3>
+
+					<p>Cardinal uses simple naming conventions for CSS classes that are human readable and easy to interpret. While inspired by the <a href="http://bem.info/method/definitions/">BEM approach</a>, the naming conventions used in Cardinal are far less complex.</p>
+
+					<pre><code>.block_name              {} /* Block */
 .block_name-element_name {} /* Element */
 .modifier_name           {} /* Modifier */</code></pre>
-							</div>
 
-							<div class="grid-item lap-one_half">
-								<p>Use hyphens to separate the name of the block from the name of the element, and use underscores to separate words in long names.</p>
+					<p>Use hyphens to separate the name of the block from the name of the element, and use underscores to separate words in long names. Modifiers can stand alone, or be chained to blocks and elements, as depicted below.</p>
 
-								<pre><code>.post         {} /* Block */
-.post-image   {} /* Element */
+					<pre><code>.post         {} /* Block */
 .post-title   {} /* Element */
-.post-date    {} /* Element */
 .post-excerpt {} /* Element */
-.post.last    {} /* Modifier */</code></pre>
-							</div>
+.post.last    {} /* Modifier */
+.one_fifth    {} /* Modifier */</code></pre>
+
+					<nav class="section-menu island rounded">
+						<a href="#menu" class="button chunky rounded primary">Menu</a>
+						<a href="#top" class="button chunky rounded">Back to top</a>
+					</nav>
+				</section>
+
+				<section id="base">
+					<h2>Base</h2>
+
+					<p>Cardinal starts with some useful default styles to provide a solid base for building responsive applications.</p>
+
+					<div class="grid">
+						<div class="grid-item one_half">
+							<h3 class="h5">normalize.css</h3>
+
+							<p>Instead of a traditional CSS reset, Cardinal uses <a href="http://cbrac.co/11gtlnj" title="normalize.css">normalize.css</a> to render HTML elements consistently.</p>
 						</div>
-					</section>
 
-					<section id="meta">
-						<h2>&lt;meta&gt; tags</h2>
-					</section>
+						<div class="grid-item one_half">
+							<h3 class="h5">CSS Box Model</h3>
 
-					<pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></pre>
-
-					<p>Even though this is a CSS framework, there is a very important HTML <code>meta</code> tag that must be included to get everything playing nicely.</p>
-
-					<p>The <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag">viewport meta tag</a> determines how your application will display on mobile browsers. The <code>width</code> property specifies the size of the viewport, and <code>initial-scale</code> specifies the zoom level of your application when it is first loaded.</p>
-
-					<p>Cardinal uses the popular combination of <code>width=device-width</code> and <code>initial-scale=1.0</code>, which tells mobile browsers to load your application at the width of the device (in pixels), with a scale of 100%.</p>
-
-					<section id="base">
-						<h2>Base</h2>
-
-						<pre><code>article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,video{display:inline-block}audio:not([controls]){display:none;height:0}[hidden]{display:none}html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}a:focus{outline:thin dotted}a:active,a:hover{outline:0}h1{font-size:2em;margin:.67em 0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}mark{background:#ff0;color:#000}code,kbd,pre,samp{font-family:monospace,serif;font-size:1em}pre{white-space:pre-wrap}q{quotes:"\201C" "\201D" "\2018" "\2019"}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:0}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}button,input{line-height:normal}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}</code></pre>
-
-						<p>Instead of a traditional CSS reset, Cardinal includes a minified version of <a href="http://cbrac.co/11gtlnj" title="normalize.css">normalize.css</a> by <a href="http://cbrac.co/10l8rJQ" title="Nicolas Gallagher">Nicolas Gallagher</a> to help render HTML elements more consistently across browsers.</p>
-
-						<div class="grid">
-							<div class="grid-item lap-one_half">
-								<p>Cardinal declares some useful default styles on the <code>&lt;html&gt;</code> and <code>&lt;body&gt;</code> elements to get them to play nice across browsers. It also adds basic styles to text selections, and applies <code>box-sizing: border-box;</code> to <a href="http://gifboop.com/border-box.jpg">everything</a> to fix the <a href="http://paulirish.com/2012/box-sizing-border-box-ftw/">flawed CSS box model</a>.</p>
-							</div>
-
-							<div class="grid-item lap-one_half">
-								<pre><code>*,
-*:before,
-*:after {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing:    border-box;
-	box-sizing:         border-box;
-}</code></pre>
-							</div>
+							<p>Cardinal modifies the default <code>box-sizing</code> behavior to fix the <a href="http://paulirish.com/2012/box-sizing-border-box-ftw/">flawed CSS box model</a>.</p>
 						</div>
-					</section>
 
-					<section id="typography">
-						<h2>Typography</h2>
+						<div class="grid-item one_half">
+							<h3 class="h5">Viewport resizing</h3>
 
-						<p>Following a “<a href="http://cbrac.co/113eY5h">mobile first</a>” approach, Cardinal starts with small devices and cascades up to desktop and larger screen resolutions.</p>
+							<p>The appropriate HTML <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag">meta tag</a> and CSS <a href="http://menacingcloud.com/?c=cssViewportOrMetaTag">@viewport</a> declarations are included by default.</p>
+						</div>
 
-						<p>Cardinal is built so that you do not have to keep track of cascading <code>em</code> values, but can still build a web application that is flexible, zoom-friendly, and pixel precise when needed.</p>
+						<div class="grid-item one_half">
+							<h3 class="h5">Anchor links</h3>
 
-						<h3>Scalability with REMs and unit-less line heights</h3>
+							<p>Styles for basic anchor links are provided to improve readability across browsers.</p>
+						</div>
+					</div>
 
-						<p>The root font size is first set to a value that feels comfortable on small feature phones (mobile devices with a viewport width > 320px).</p>
+					<nav class="section-menu island rounded">
+						<a href="#menu" class="button chunky rounded primary">Menu</a>
+						<a href="#top" class="button chunky rounded">Back to top</a>
+					</nav>
+				</section>
 
-						<pre><code>html { font-size: 75%; } /* 12px */</code></pre>
+				<section id="typography">
+					<h2>Typography</h2>
 
-						<p>Then, using media queries, Cardinal increases the root font size percentage value at a few common viewport widths. <strong>You can tweak these media queries and percentage values to suit your project.</strong> This is how the type and layout scale globally.</p>
+					<p>Instead of trying to maintain a <a href="http://coding.smashingmagazine.com/2012/12/17/css-baseline-the-good-the-bad-and-the-ugly/">baseline grid</a>, Cardinal leverages <a href="http://alistapart.com/article/more-meaningful-typography">modular scale</a>, <a href="http://meyerweb.com/eric/thoughts/2006/02/08/unitless-line-heights/">unit-less line heights</a>, and the power of the <a href="http://snook.ca/archives/html_and_css/font-size-with-rem">REM unit</a> to make it possible to resize the typography and layout of <strong>your entire application</strong> across different devices.</p>
 
-						<pre><code>@media only screen and (min-width: 320px) { html { font-size: 81.25%; } } /* 13px */
+					<pre><code>html { font-size: 75%; } /* 12px */
+@media only screen and (min-width: 320px) { html { font-size: 81.25%; } } /* 13px */
 @media only screen and (min-width: 480px) { html { font-size: 87.5%;  } } /* 14px */
 @media only screen and (min-width: 768px) { html { font-size: 100%;   } } /* 16px */
 @media only screen and (min-width: 960px) { html { font-size: 112.5%; } } /* 18px */</code></pre>
 
-						<p>After the root font size is declared for different viewport widths, the <code>font-size</code> property on the <code>&lt;body&gt;</code> element is set to <code>1rem</code>, and the <code>line-height</code> property is given a unit-less value.</p>
+					<h3>Root font size</h3>
+
+					<p>By default, Cardinal’s root font size ranges from <code>12px</code> to <code>20px</code>, depending on the viewport width. <strong>These breakpoints and font sizes should be changed</strong> to suit your application. Altering the root font size by one-pixel, up or down, can <a href="http://blog.typekit.com/2011/01/26/css-properties-that-affect-type-rendering/">completely change</a> how a typeface is rendered. Also, your project may require more or less breakpoints where the root font size should change. Or none. It’s your call.</p>
+
+					<h3>REMs and line height</h3>
+
+					<p>After declaring the root font size(s) on the <code>&lt;html&gt;</code> element, Cardinal sets the <code>font-size</code> property on the <code>&lt;body&gt;</code> element to <code>1rem</code>, and the <code>line-height</code> property to a unit-less value.</p>
 
 						<pre><code>body {
 	color: #444;
@@ -183,1940 +157,863 @@
 	line-height: 1.5;
 }</code></pre>
 
-						<p>In other words, <code>1rem</code> = the percentage on the <code>&lt;html&gt;</code> element, which causes all the <code>rem</code> units in your application resize when that initial percentage value changes at different viewport widths.</p>
+					<p>In other words, <code>1rem</code> = the root font size(s) on the <code>&lt;html&gt;</code> element. When the root font size changes at different viewport widths, this base <code>rem</code> unit will inherit the new value. As a result, all <code>rem</code> units in your application will resize every time the root font size changes.</p>
 
-						<div class="grid">
-							<div class="grid-item desk-one_half">
-								<h3>Bye bye, baseline grid</h3>
+					<h3>Modular scale</h3>
 
-								<p><strong>Instead of trying to maintain a <a href="http://coding.smashingmagazine.com/2012/12/17/css-baseline-the-good-the-bad-and-the-ugly/">baseline grid</a></strong>, Cardinal uses a unit-less value for the <code>line-height</code> property on the <code>&lt;body&gt;</code> element. A unit-less value is used on other common typographical elements in Cardinal too, like headings. This means that the line height is calculated as a multiple of the root font size, so it scales proportionally too when the root font size changes at different viewport widths.</p>
+					<p>A <a href="http://alistapart.com/article/more-meaningful-typography">modular scale</a> is then <a href="http://modularscale.com/scale/?px1=12&px2=20&ra1=1.333&ra2=0">calculated</a> with <a href="http://modularscale.com/">this tool</a> based on the minimum and maximum root font size, in pixels. The scale also uses the “<a href="https://en.wikipedia.org/wiki/Perfect_fourth">perfect fourth</a>” ratio found commonly in music.</p>
+
+					<p>Cardinal uses the values that are generated for sizing the type and layout (font size, line height, margin, padding, etc.) in the framework. <strong>You should calculate your own values</strong> and use them as you build your responsive application.</p>
+
+					<nav class="section-menu island rounded">
+						<a href="#menu" class="button chunky rounded primary">Menu</a>
+						<a href="#top" class="button chunky rounded">Back to top</a>
+					</nav>
+				</section>
+
+				<section id="code">
+					<h2>Code</h2>
+
+					<p>If you are building an application that features code samples or keyboard shortcuts, Cardinal has some basic styles available for use.</p>
+
+					<div class="grid">
+						<div class="grid-item one_half">
+							<h3 class="h5">Keyboard shortcuts</h3>
+							<p>Styles are automatically applied to the <samp>&lt;kbd&gt;</samp> HTML element.</p>
+							<p><kbd>⌘</kbd> + <kbd>Space</kbd></p>
+						</div>
+
+						<div class="grid-item one_half">
+							<h3 class="h5">Inline code</h3>
+							<p>Styles are automatically applied to the <samp>&lt;code&gt;</samp> HTML element.</p>
+							<p><code>font-size: 16px;</code></p>
+						</div>
+
+						<div class="grid-item">
+							<h3 class="h5">Code blocks</h3>
+
+							<p>When you use <samp>&lt;code&gt;</samp> tags nested within <samp>&lt;pre&gt;</samp> tags, you get a neatly-styled block of code.</p>
+
+							<pre><code>Here is some lovely code.</code></pre>
+						</div>
+					</div>
+
+					<nav class="section-menu island rounded">
+						<a href="#menu" class="button chunky rounded primary">Menu</a>
+						<a href="#top" class="button chunky rounded">Back to top</a>
+					</nav>
+				</section>
+
+				<section id="embedded">
+					<h2>Embedded content</h2>
+
+					<p>Cardinal also normalizes and defines sensible default styles for embedded content. For instance, <code>&lt;audio&gt;</code>, <code>&lt;img&gt;</code>, and <code>&lt;video&gt;</code> tags are all given fluid properties.</p>
+
+					<div class="grid">
+						<div class="grid-item">
+							<h3 class="h5">HTML5 audio</h3>
+							<p><audio controls></audio></p>
+						</div>
+
+						<div class="grid-item one_half">
+							<h3 class="h5">Image</h3>
+							<p><img src="http://placesheen.com/300/200" alt=""></p>
+						</div>
+
+						<div class="grid-item one_half">
+							<h3 class="h5">HTML5 video</h3>
+							<p><video controls></video></p>
+						</div>
+					</div>
+
+					<nav class="section-menu island rounded">
+						<a href="#menu" class="button chunky rounded primary">Menu</a>
+						<a href="#top" class="button chunky rounded">Back to top</a>
+					</nav>
+				</section>
+
+				<section id="forms">
+					<h2>Forms</h2>
+
+					<p>Forms styles are mostly extracted from <a href="http://necolas.github.io/normalize.css/">normalize.css</a>, to fix some basic inconsistencies between browsers. Most inputs, select boxes, and textareas are styled as full-width block elements (with the exception of radio and checkboxes).</p>
+
+					<form action="">
+						<legend>Basic form</legend>
+
+						<fieldset>
+							<div class="margin_bottom">
+								<label for="form1-input-text">Text input 1</label><br>
+								<input type="text" id="form1-input-text" placeholder="Text input 1">
 							</div>
 
-							<div class="grid-item desk-one_half">
-								<h3>Modular scale FTW!</h3>
+							<div class="margin_bottom">
+								<label for="form1-input-select">Select input 1</label><br>
 
-								<p>By default, Cardinal’s root font size ranges from <code>12px</code> to <code>18px</code>, depending on the viewport width. A <a href="http://alistapart.com/article/more-meaningful-typography">modular scale</a> is then <a href="http://modularscale.com/scale/?px1=12&px2=18&ra1=1.333&ra2=0">calculated</a> with <a href="http://modularscale.com/">this tool</a> based on the minimum and maximum root font size (in pixels), and uses the “perfect fourth” ratio (1:1.333) found commonly in music to generate values that can be used for sizing type and layout elements across the project.</p>
-
-								<p><em>The values in the second column entitled “Ems” are the values you want to use throughout your project.</em></p>
+								<select id="form1-input-select">
+									<option>Option 1</option>
+									<option>Option 2</option>
+									<option>Option 3</option>
+								</select>
 							</div>
 
-							<div class="grid-item">
-								<h3>Pixel precision</h3>
+							<div class="margin_bottom">
+								<label for="form1-input_cb1"><input type="checkbox" id="form1-input_cb1">Checkbox 1</label><br>
 
-								<p>If you need pixel precision for a particular element or property (eg. 1px border width on menu buttons, regardless of viewport width), simply use the <code>px</code> unit instead of the <code>rem</code> unit and it <strong>will not</strong> be affected by any changes in the root font size.</p>
+								<label for="form1-input_cb2"><input type="checkbox" id="form1-input_cb2">Checkbox 2</label>
+							</div>
+
+							<div class="margin_bottom">
+								<label for="form1-input_radio1"><input type="radio" id="form1-input_radio1" name="form1-input_radioset">Radio 1</label><br>
+								<label for="form1-input_radio2"><input type="radio" id="form1-input_radio2" name="form1-input_radioset">Radio 2</label>
+							</div>
+
+							<div class="margin_bottom">
+								<label for="form1-textarea1">Text area 1</label>
+								<textarea name="textarea" id="form1-textarea1" rows="10" placeholder="Text area 1"></textarea>
+							</div>
+
+							<div class="margin_bottom">
+								<input type="submit" class="button rounded primary">
+								<input type="reset" class="button rounded" value="Clear">
+							</div>
+						</fieldset>
+					</form>
+
+					<p>You can also make use of Cardinal’s grid system and width classes to build some basic form layouts.</p>
+
+					<form action="">
+						<legend>Form with a grid layout</legend>
+
+						<fieldset class="grid">
+							<div class="grid-item lap-one_fourth desk-one_third">
+								<label for="form2-input-email">E-mail address</label>
+							</div>
+
+							<div class="grid-item lap-three_fourths desk-two_thirds margin_bottom">
+								<input type="email" id="form2-input-email" placeholder="E-mail address">
+							</div>
+
+							<div class="grid-item lap-one_fourth desk-one_third">
+								<label for="form2-input-fn">First name</label>
+							</div>
+
+							<div class="grid-item lap-three_fourths desk-two_thirds margin_bottom">
+								<input type="text" id="form2-input-fn" placeholder="First name">
+							</div>
+
+							<div class="grid-item lap-one_fourth desk-one_third">
+								<label for="form2-input-ln">Last name</label>
+							</div>
+
+							<div class="grid-item lap-three_fourths desk-two_thirds margin_bottom">
+								<input type="text" id="form2-input-ln" placeholder="Last name">
+							</div>
+
+							<div class="grid-item lap-one_fourth desk-one_third">
+								<label for="form2-input_radioset">Gender</label>
+							</div>
+
+							<div class="grid-item lap-three_fourths desk-two_thirds margin_bottom">
+								<label for="form2-input_male"><input type="radio" id="form2-input_male" name="form2-input_radioset">Male</label><br>
+								<label for="form2-input_female"><input type="radio" id="form2-input_female" name="form2-input_radioset">Female</label>
+							</div>
+
+							<div class="grid-item lap-one_fourth desk-one_third">
+								<label for="form2-textarea1">Additional comments</label>
+							</div>
+
+							<div class="grid-item lap-three_fourths desk-two_thirds margin_bottom">
+								<textarea name="textarea" id="form2-textarea1" rows="10" placeholder="Add any additional remarks here"></textarea>
+							</div>
+
+							<div class="grid-item lap-one_fourth desk-one_third"></div>
+
+							<div class="grid-item lap-three_fourths desk-two_thirds margin_bottom">
+								<input type="submit" class="button rounded primary">
+								<input type="reset" class="button rounded" value="Clear">
+							</div>
+						</fieldset>
+					</form>
+
+					<nav class="section-menu island rounded">
+						<a href="#menu" class="button chunky rounded primary">Menu</a>
+						<a href="#top" class="button chunky rounded">Back to top</a>
+					</nav>
+				</section>
+
+				<section id="tables">
+					<h2>Tables</h2>
+
+					<p>Tables can be tricky to style across multiple devices. Cardinal includes some simple table styles and classes to get you going.</p>
+
+					<p>By default, the <code>&lt;table&gt;</code> element is given a basic layout with flexible table cells.</p>
+
+					<table>
+						<caption>Default, no classes</caption>
+						<tr>
+							<th>#</th>
+							<th>Thing 1</th>
+							<th>Thing 2</th>
+							<th>Thing 3</th>
+						</tr>
+
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>1246</td>
+								<td>Hello</td>
+								<td>true</td>
+							</tr>
+
+							<tr>
+								<td>2</td>
+								<td>4652</td>
+								<td>Goodbye</td>
+								<td>false</td>
+							</tr>
+
+							<tr>
+								<td>3</td>
+								<td>1657</td>
+								<td>Cheers</td>
+								<td>false</td>
+							</tr>
+
+							<tr>
+								<td>4</td>
+								<td>1498</td>
+								<td>Beers</td>
+								<td>true</td>
+							</tr>
+
+							<tr>
+								<td>5</td>
+								<td>3286</td>
+								<td>Awesome</td>
+								<td>true</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<p>By simply adding classes, you can introduce borders and backgrounds to table cells.</p>
+
+					<table class="border_rows">
+						<caption>.border_rows</caption>
+						<tr>
+							<th>#</th>
+							<th>Thing 1</th>
+							<th>Thing 2</th>
+							<th>Thing 3</th>
+						</tr>
+
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>1246</td>
+								<td>Hello</td>
+								<td>true</td>
+							</tr>
+
+							<tr>
+								<td>2</td>
+								<td>4652</td>
+								<td>Goodbye</td>
+								<td>false</td>
+							</tr>
+
+							<tr>
+								<td>3</td>
+								<td>1657</td>
+								<td>Cheers</td>
+								<td>false</td>
+							</tr>
+
+							<tr>
+								<td>4</td>
+								<td>1498</td>
+								<td>Beers</td>
+								<td>true</td>
+							</tr>
+
+							<tr>
+								<td>5</td>
+								<td>3286</td>
+								<td>Awesome</td>
+								<td>true</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<table class="border_all">
+						<caption>.border_all</caption>
+						<tr>
+							<th>#</th>
+							<th>Thing 1</th>
+							<th>Thing 2</th>
+							<th>Thing 3</th>
+						</tr>
+
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>1246</td>
+								<td>Hello</td>
+								<td>true</td>
+							</tr>
+
+							<tr>
+								<td>2</td>
+								<td>4652</td>
+								<td>Goodbye</td>
+								<td>false</td>
+							</tr>
+
+							<tr>
+								<td>3</td>
+								<td>1657</td>
+								<td>Cheers</td>
+								<td>false</td>
+							</tr>
+
+							<tr>
+								<td>4</td>
+								<td>1498</td>
+								<td>Beers</td>
+								<td>true</td>
+							</tr>
+
+							<tr>
+								<td>5</td>
+								<td>3286</td>
+								<td>Awesome</td>
+								<td>true</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<p>If you want to make the table headers/footers stand out, simply wrap a table row with the <code>&lt;thead&gt;</code> or <code>&lt;tfoot&gt;</code> element, using <code>&lt;th&gt;</code> elements for header cells and <code>&lt;td&gt;</code> elements for footer cells.</p>
+
+					<table class="border_all">
+						<caption>.border_all, with <code>&lt;thead&gt;</code> and <code>&lt;tfoot&gt;</code></caption>
+						<thead>
+							<th>#</th>
+							<th>Thing 1</th>
+							<th>Thing 2</th>
+							<th>Thing 3</th>
+						</thead>
+
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>1246</td>
+								<td>Hello</td>
+								<td>true</td>
+							</tr>
+
+							<tr>
+								<td>2</td>
+								<td>4652</td>
+								<td>Goodbye</td>
+								<td>false</td>
+							</tr>
+
+							<tr>
+								<td>3</td>
+								<td>1657</td>
+								<td>Cheers</td>
+								<td>false</td>
+							</tr>
+
+							<tr>
+								<td>4</td>
+								<td>1498</td>
+								<td>Beers</td>
+								<td>true</td>
+							</tr>
+
+							<tr>
+								<td>5</td>
+								<td>3286</td>
+								<td>Awesome</td>
+								<td>true</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<td>#</td>
+							<td>Thing 1</td>
+							<td>Thing 2</td>
+							<td>Thing 3</td>
+						</tfoot>
+					</table>
+
+					<p>You can also add a border around the entire table, and striped background colors for each row.</p>
+
+					<table class="border border_all stripes">
+						<caption>.border.border_all.stripes</caption>
+						<thead>
+							<th>#</th>
+							<th>Thing 1</th>
+							<th>Thing 2</th>
+							<th>Thing 3</th>
+						</thead>
+
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>1246</td>
+								<td>Hello</td>
+								<td>true</td>
+							</tr>
+
+							<tr>
+								<td>2</td>
+								<td>4652</td>
+								<td>Goodbye</td>
+								<td>false</td>
+							</tr>
+
+							<tr>
+								<td>3</td>
+								<td>1657</td>
+								<td>Cheers</td>
+								<td>false</td>
+							</tr>
+
+							<tr>
+								<td>4</td>
+								<td>1498</td>
+								<td>Beers</td>
+								<td>true</td>
+							</tr>
+
+							<tr>
+								<td>5</td>
+								<td>3286</td>
+								<td>Awesome</td>
+								<td>true</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<nav class="section-menu island rounded">
+						<a href="#menu" class="button chunky rounded primary">Menu</a>
+						<a href="#top" class="button chunky rounded">Back to top</a>
+					</nav>
+				</section>
+
+				<section id="layout">
+					<h2>Layout</h2>
+
+					<p>Cardinal has several classes for common layout modules, too, like page wrappers and 100% width containers.</p>
+
+					<div class="grid">
+						<div class="grid-item lap-one_half">
+							<h3 class="h5">Strips</h3>
+
+							<pre><code>.strip {}</code></pre>
+
+							<p>A strip is useful when you want an element to span the entire width of the viewport.</p>
+						</div>
+
+						<div class="grid-item lap-one_half">
+							<h3 class="h5">Wrappers</h3>
+
+							<pre><code>.wrapper {}</code></pre>
+
+							<p>A wrapper provides a <code>max-width</code> for the content within it, and centers the content.</p>
+						</div>
+
+						<div class="grid-item lap-one_half">
+							<h3 class="h5">Islands</h3>
+
+							<pre><code>.island {}</code></pre>
+
+							<p>An island is a content block that you want to stand out from its surrounding area.</p>
+						</div>
+
+						<div class="grid-item lap-one_half">
+							<h3 class="h5">Wells</h3>
+
+							<pre><code>.well {}</code></pre>
+
+							<p>A well is a content block that you want to appear sunken beneath its surrounding area.</p>
+						</div>
+					</div>
+
+					<nav class="section-menu island rounded">
+						<a href="#menu" class="button chunky rounded primary">Menu</a>
+						<a href="#top" class="button chunky rounded">Back to top</a>
+					</nav>
+				</section>
+
+				<section id="grids">
+					<h2>Grids</h2>
+
+					<div class="grid grid_gutter_half text_center">
+						<div class="grid-item one_sixth">
+							<div class="island">1</div>
+						</div>
+						<div class="grid-item one_sixth">
+							<div class="island">2</div>
+						</div>
+						<div class="grid-item one_sixth">
+							<div class="island">3</div>
+						</div>
+						<div class="grid-item one_sixth">
+							<div class="island">4</div>
+						</div>
+						<div class="grid-item one_sixth">
+							<div class="island">5</div>
+						</div>
+						<div class="grid-item one_sixth">
+							<div class="island">6</div>
+						</div>
+					</div>
+
+					<p>Cardinal’s grid system has 6 columns by default, and uses <em>fluid</em> item widths and <em>fixed</em> gutters. Nesting grid elements is a breeze, and you can change how a grid item behaves with human-readable CSS classes.</p>
+
+					<p>Grid item widths have percentage values, and the gutters have <code>rem</code> values. The classes for grid item widths are not grid-specific, <strong>on purpose</strong>, so that they can be used outside of grids, too.</p>
+
+					<pre><code>&lt;div class=&quot;grid grid_gutter_half text_center&quot;&gt;
+	&lt;div class=&quot;grid-item one_sixth&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;grid-item one_sixth&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;grid-item one_sixth&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;grid-item one_sixth&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;grid-item one_sixth&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;grid-item one_sixth&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+					<p>You can also change how a grid behaves at common breakpoints. Instead of device-specific class names like <code>.ipad-one_half</code> or <code>.samsung-two_fifths</code>, Cardinal uses <strong>“lap-*”</strong> to represent devices you can place in your lap (eg. a tablet or small laptop), and <strong>“desk-*”</strong> to represent devices that rest primarily on your desk.</p>
+
+					<p>By default, the <code>min-width</code> values for the <code>@media</code> queries containing these classes are set to <code>640px</code> and <code>960px</code>, respectively. <strong>Again,</strong> you are encouraged to modify these values based on where your own design breaks or looks best.</p>
+
+					<p>Using these classes, you can control the grid item width and grid gutter width.</p>
+
+					<div class="grid">
+						<div class="grid-item lap-one_third desk-one_sixth">
+							<div class="island">&nbsp;</div>
+						</div>
+
+						<div class="grid-item lap-one_third desk-one_sixth">
+							<div class="island">&nbsp;</div>
+						</div>
+
+						<div class="grid-item lap-one_third desk-one_sixth">
+							<div class="island">&nbsp;</div>
+						</div>
+
+						<div class="grid-item lap-one_third desk-one_sixth">
+							<div class="island">&nbsp;</div>
+						</div>
+
+						<div class="grid-item lap-one_third desk-one_sixth">
+							<div class="island">&nbsp;</div>
+						</div>
+
+						<div class="grid-item lap-one_third desk-one_sixth">
+							<div class="island">&nbsp;</div>
+						</div>
+
+						<div class="grid-item lap-one_fifth desk-one_fifth">
+							<div class="island">&nbsp;</div>
+						</div>
+
+						<div class="grid-item lap-three_fifths desk-one_fifth">
+							<div class="island">&nbsp;</div>
+						</div>
+
+						<div class="grid-item lap-one_fifth desk-one_fifth">
+							<div class="island">&nbsp;</div>
+						</div>
+
+						<div class="grid-item lap-two_fifths desk-one_fifth">
+							<div class="island">&nbsp;</div>
+						</div>
+
+						<div class="grid-item lap-three_fifths desk-one_fifth">
+							<div class="island">&nbsp;</div>
+						</div>
+
+						<div class="grid-item lap-one_half desk-one_fourth">
+							<div class="island">&nbsp;</div>
+						</div>
+
+						<div class="grid-item lap-one_half desk-one_fourth">
+							<div class="island">&nbsp;</div>
+						</div>
+
+						<div class="grid-item lap-one_half desk-one_fourth">
+							<div class="island">&nbsp;</div>
+						</div>
+
+						<div class="grid-item lap-one_half desk-one_fourth">
+							<div class="island">&nbsp;</div>
+						</div>
+
+						<div class="grid-item lap-two_thirds desk-one_third">
+							<div class="island">&nbsp;</div>
+						</div>
+
+						<div class="grid-item lap-one_third">
+							<div class="island">&nbsp;</div>
+						</div>
+
+						<div class="grid-item lap-one_whole desk-one_third">
+							<div class="island">&nbsp;</div>
+						</div>
+
+						<div class="grid-item lap-one_half">
+							<div class="island">&nbsp;</div>
+						</div>
+
+						<div class="grid-item lap-one_half">
+							<div class="island padding_none">
+								<div class="grid">
+									<div class="grid-item one_half"><div class="island margin_none">&nbsp;</div></div>
+									<div class="grid-item one_half"><div class="island margin_none">&nbsp;</div></div>
+								</div>
 							</div>
 						</div>
 
-					<section id="non-typography">
-						<h2>Non-typography</h2>
-
-						<p>There are also some sensible default styles for non-typographical elements included with Cardinal. For instance, all <code>&lt;img&gt;</code> and <code>&lt;video&gt;</code> tags are given fluid properties, and <code>&lt;textarea&gt;</code> elements are restricted to vertical resizing only.</p>
-
-						<pre><code>img,
-video {
-	max-width: 100%;
-	width: auto\9;
-	height: auto !important;
-}</code></pre>
-
-						<pre><code>textarea {
-	resize: vertical;
-}</code></pre>
-					</section>
-
-					<section id="grids">
-						<h2>Grids</h2>
-
-						<div class="grid">
-							<div class="grid-item desk-one_half">
-								<p>Inspired by the clever ideas of <a href="http://builtbyboon.com/blog/proportional-grids">Matt Berridge</a>, Cardinal’s grid system uses <em>fluid</em> item widths and <em>fixed</em> gutters. Grid items can be divided into halves, thirds, fourths, fifths, or sixths. Nesting grid elements is a breeze, and you can change how a grid item behaves with human-readable CSS classes.</p>
-
-								<p>The item widths have percentage values, and the gutters have <code>rem</code> values. Due to the change in the root font size (<a href="#typography">as described above</a>), the fixed gutters increase or decrease proportionally, depending on the width of the viewport.</p>
-
-								<p>The classes for default item widths are not grid-specific, <strong>on purpose</strong>, so that they can be used on any element in your project.</p>
-							</div>
-
-							<div class="grid-item desk-one_half">
-								<dl class="island">
-									<h3>Usage</h3>
-									<hr>
-									<dt>.grid</dt>
-									<dd>Element becomes a grid wrapper.</dd>
-
-									<dt>.grid-item</dt>
-									<dd>Element becomes a grid item.</dd>
-
-									<dt>.one_half, .two_thirds, .four_fifths, etc.</dt>
-									<dd>Element becomes a specific width of its parent.</dd>
-
-									<dt>.lap-*</dt>
-									<dd>Element’s width changes on devices you rest in your lap (eg. tablets).</dd>
-
-									<dt>.desk-*</dt>
-									<dd>Element’s width changes on devices that remain on your desk (eg. an iMac).</dd>
-								</dl>
-							</div>
+						<div class="grid-item one_whole">
+							<div class="island">&nbsp;</div>
 						</div>
+					</div>
 
-						<h3>“lap-*” and “desk-*” classes</h3>
+					<nav class="section-menu island rounded">
+						<a href="#menu" class="button chunky rounded primary">Menu</a>
+						<a href="#top" class="button chunky rounded">Back to top</a>
+					</nav>
+				</section>
 
-						<p>Cardinal supports the <a href="http://coding.smashingmagazine.com/2012/03/22/device-agnostic-approach-to-responsive-web-design/">device</a>-<a href="http://tympanus.net/codrops/2012/10/30/becoming-device-agnostic/">agnostic</a> approach to responsive design. The design for an application that uses Cardinal shouldn’t care about the pixel dimension of the device it’s being viewed upon. The dimensions of the content and layout within the design should dictate how it changes across the vast spectrum of devices that exist today.</p>
+				<section id="buttons">
+					<h2>Buttons</h2>
 
-						<p>The words “lap” and “desk” are used in this grid system to define common breakpoints, instead of specific device names like iPad or Samsung Galaxy Nexus. The <code>min-width</code> values for the <code>@media</code> queries containing these classes are set to common widths (640px and 960px) by default.</p>
+					<p>Buttons are common web UI components, and some basic button styles are available with Cardinal. While minimal, there is a large variety of style, shape, and size combinations that you can create.</p>
 
-						<p>You are encouraged to change these values based on where your own design breaks or looks best. You are also encouraged to add more breakpoints as you need them, to ensure your design looks great across all device dimensions.</p>
+					<p>To begin, simply add the <code>.button</code> class to an element. This provides the base styles that can be further modified by adding more specific classes.</p>
 
-						<h3 style="color: red;">White space issues</h3>
+					<pre><code>&lt;a href="" class="button"&gt;Button text&lt;/a&gt;</code></pre>
 
-						<p>Since the <code>.grid-item</code> class uses <code>display: inline-block;</code> instead of floats, the <code>font-size: 0;</code> hack is used on the <code>.grid</code> element to remove the white space between <code>.grid-item</code> elements in modern browsers. However, this hack does not work in older versions of Safari and Android (Safari < 6, Android < 4.2).</p>
+					<p>By chaining CSS classes together, you can quickly style anchor links <code>&lt;a href=""&gt;</code>, button tags <code>&lt;button&gt;</code>, and input elements <code>&lt;input type="submit"&gt;</code> to taste.</p>
 
-						<p>If you need to support these older browsers, simply remove the white space in between each <code>.grid-item</code> manually, in the HTML, like so:
+					<pre><code>&lt;a href="" class="button [style] [size] [width] [shape] [state]"&gt;</code></pre>
 
-						<pre><code>&lt;div class="grid"&gt;
+					<h3 class="h5">Styles</h3>
+
+					<div class="margin_bottom">
+						<button type="button" class="button">Default</button>
+						<button type="button" class="button hollow">Hollow</button>
+						<button type="button" class="button chunky">Chunky</button>
+					</div>
+
+					<h3 class="h5">Sizes</h3>
+
+					<div class="margin_bottom">
+						<button type="button" class="button large">Large</button>
+						<button type="button" class="button">Normal</button>
+						<button type="button" class="button small">Small</button>
+						<button type="button" class="button mini">Mini</button>
+					</div>
+
+					<h3 class="h5">Widths</h3>
+
+					<div class="margin_bottom">
+						<button type="button" class="button block one_whole">100% Block</button>
+					</div>
+					<div class="margin_bottom">
+						<button type="button" class="button block three_fourths">75% Block</button>
+					</div>
+					<div class="margin_bottom">
+						<button type="button" class="button block one_half">50% Block</button>
+					</div>
+					<div class="margin_bottom">
+						<button type="button" class="button block one_fourth">25% Block</button>
+					</div>
+
+					<p><small><strong style="color: red;">NOTE:</strong> When using the <code>.block</code> class, you must also specify the button width by using the “widths” classes that are mentioned in the <a href="#section_grids">“Grids” section</a> above.</small></p>
+
+					<h3 class="h5">Shapes</h3>
+
+					<div class="margin_bottom">
+						<button type="button" class="button rounded">Rounded</button>
+						<button type="button" class="button pill">Pill-shaped</button>
+					</div>
+
+					<h3 class="h5">States</h3>
+
+					<button type="button" class="button disabled margin_bottom" disabled>Disabled</button>
+					<button type="button" class="button hollow disabled margin_bottom" disabled>Disabled</button>
+					<button type="button" class="button chunky disabled margin_bottom" disabled>Disabled</button>
+					<button type="button" class="button rounded disabled margin_bottom" disabled>Disabled</button>
+					<button type="button" class="button pill disabled margin_bottom" disabled>Disabled</button>
+
+					<nav class="section-menu island rounded">
+						<a href="#menu" class="button chunky rounded primary">Menu</a>
+						<a href="#top" class="button chunky rounded">Back to top</a>
+					</nav>
+				</section>
+
+				<section id="main">
+					<h2>Main</h2>
+
+					<pre><code>/* ================================================================== *\
+   Main ($main)
+\* ================================================================== */</code></pre>
+
+					<p>This is where you place all of <em>your</em> custom, application-specific styles.</p>
+
+					<nav class="section-menu island rounded">
+						<a href="#menu" class="button chunky rounded primary">Menu</a>
+						<a href="#top" class="button chunky rounded">Back to top</a>
+					</nav>
+				</section>
+
+				<section id="helpers">
+					<h2>Helpers</h2>
+
+					<p>A lot of helpers from the fantastic <a href="http://cbrac.co/Zt9YqM">HTML5 Boilerplate</a> are included here, along with custom helpers for quick control over font sizes, alignment, and spacing.</p>
+
+					<nav class="section-menu island rounded">
+						<a href="#menu" class="button chunky rounded primary">Menu</a>
+						<a href="#top" class="button chunky rounded">Back to top</a>
+					</nav>
+				</section>
+
+				<section id="print">
+					<h2>Print</h2>
+
+					<p>These styles make your application more printer-friendly. They were also extracted directly from the <a href="http://cbrac.co/Zt9YqM">HTML5 Boilerplate</a> project, and inlined to avoid an extra HTTP request.</p>
+
+					<nav class="section-menu island rounded">
+						<a href="#menu" class="button chunky rounded primary">Menu</a>
+						<a href="#top" class="button chunky rounded">Back to top</a>
+					</nav>
+				</section>
+
+				<section id="javascript">
+					<h2>Javascript</h2>
+
+					<p>Pulled from the <a href="http://cbrac.co/Zt9YqM">HTML5 Boilerplate</a>, the <code>plugins.js</code> file includes a small function to avoid console errors in browsers that lack a console. An asynchronous Google Analytics snippet is also present at the bottom of <code>index.html</code>.</p>
+
+					<nav class="section-menu island rounded">
+						<a href="#menu" class="button chunky rounded primary">Menu</a>
+						<a href="#top" class="button chunky rounded">Back to top</a>
+					</nav>
+				</section>
+
+				<section id="browsers">
+					<h2>Browser support</h2>
+
+					<div class="well">
+						<p>Cardinal supports most modern browsers:</p>
+
+						<ul class="margin_none">
+							<li>Google Chrome 25+</li>
+							<li>Mozilla Firefox 19+</li>
+							<li>Safari 6.0+</li>
+							<li>iOS Safari 4.0+</li>
+							<li>Opera 12.1+</li>
+							<li>Android 4.2+</li>
+							<li>Internet Explorer 9+</li>
+						</ul>
+					</div>
+
+					<h3>What about IE8?</h3>
+
+					<p>I realize that for many web applications, IE8 cannot be ignored. By including the <a href="https://github.com/chuckcarpenter/REM-unit-polyfill">REM unit polyfill</a> and Scott Jehl’s <a href="https://github.com/scottjehl/Respond">Respond.js</a>, Cardinal should work in IE8, but you will lose the scalable layout and typography because the REM unit polyfill converts all the REM values to pixels.</p>
+
+					<p>A better option might be to use IE-specific classes, or include an IE-only stylesheet that serves a “fixed-layout” version of your application, instead of bothering with polyfills and other bandaid solutions.</p>
+
+					<nav class="section-menu island rounded">
+						<a href="#menu" class="button chunky rounded primary">Menu</a>
+						<a href="#top" class="button chunky rounded">Back to top</a>
+					</nav>
+				</section>
+
+				<section id="issues">
+					<h2>Known issues</h2>
+
+					<h3 class="h4">“display: inline-block;” whitespace hack</h3>
+
+					<p><a href="http://css-tricks.com/fighting-the-space-between-inline-block-elements/">More info here</a></p>
+
+					<p>Since the <code>.grid-item</code> class uses <code>display: inline-block;</code> instead of floats, the <code>font-size: 0;</code> hack is used on the <code>.grid</code> element to remove the white space between <code>.grid-item</code> elements in modern browsers. However, <strong>this hack does not work</strong> in older versions of Safari, Android, and Internet Explorer (Safari < 6, Android < 4.2, IE8 and below).</p>
+
+					<p>If you need to support these older browsers, simply remove the white space in between each .grid-item manually, in the HTML, like so:</p>
+
+					<pre><code>&lt;div class="grid"&gt;
 	&lt;div class="grid-item lap-one_half desk-one_fourth"&gt;&lt;/div
 	&gt;&lt;div class="grid-item lap-one_half desk-one_fourth"&gt;&lt;/div
 	&gt;&lt;div class="grid-item lap-one_half desk-one_fourth"&gt;&lt;/div
 	&gt;&lt;div class="grid-item lap-one_half desk-one_fourth"&gt;&lt;/div&gt;
-&lt;/div&gt;</code></pre>
+	&lt;/div&gt;</code></pre>
 
-						<p><strong>Alternatively</strong>, if you use a build process (and you should) to minify your HTML for the production/live site, then the problematic white space is removed anyways. This way you can keep your HTML syntax normal in your development environment, and support a few more legacy browsers on the live site.</p>
+					<p><strong>Alternatively</strong>, if you use a build process (and you should) to minify your HTML for the production/live site, then the problematic white space is removed anyways. This way you can keep your HTML syntax normal in your development environment, and support a few more legacy browsers on the live site.</p>
 
-						<h3>Grid examples</h3>
+					<h3 class="h4">Google Maps</h3>
 
-						<p>Below are some example grids. <strong>View the source code</strong> of this page to see how the they behave.</p>
+					<p><a href="https://github.com/cbracco/cardinal/issues/6">More info here</a></p>
 
-						<h4>Basic grid</h4>
+					<p>Cardinal defines all images to have <code>max-width: 100%</code>, which can interfere with the Google Maps “info window.” To fix this issue, you must change <code>100%</code> to <code>none</code> for all images inside your Google Maps, like so:</p>
 
-						<pre class="max_height"><code>&lt;div class=&quot;grid&quot;&gt;
-	&lt;div class=&quot;grid-item one_fourth&quot;&gt;&lt;/div&gt;
-	&lt;div class=&quot;grid-item one_fourth&quot;&gt;&lt;/div&gt;
-	&lt;div class=&quot;grid-item one_fourth&quot;&gt;&lt;/div&gt;
-	&lt;div class=&quot;grid-item one_fourth&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;</code></pre>
+					<pre><code>img[src*="gstatic.com/"],
+	img[src*="googleapis.com/"] {
+	max-width: none;
+	}</code></pre>
 
-						<div class="grid text_center">
-							<div class="grid-item one_fourth"><div class="island">&nbsp;</div></div>
-							<div class="grid-item one_fourth"><div class="island">&nbsp;</div></div>
-							<div class="grid-item one_fourth"><div class="island">&nbsp;</div></div>
-							<div class="grid-item one_fourth"><div class="island">&nbsp;</div></div>
-						</div>
+					<h3 class="h4">box-sizing: border-box; in IE9</h3>
 
-						<h4>Half gutter grid</h4>
+					<p>There is a bug in IE9 (big surprise) when <code>box-sizing: border-box;</code>, <code>position: fixed;</code>, and <code>overflow: auto;</code> are declared on the same element. The scrollbar’s width is subtracted twice, making the element’s width incorrect. I came across this bug while making the off-canvas navigation for <a href="http://cardinalcss.com/">this project’s documentation website</a>.</p>
 
-						<pre class="max_height"><code>&lt;div class=&quot;grid grid_gutter_half&quot;&gt;
-	&lt;div class=&quot;grid-item one_half desk-one_fourth&quot;&gt;&lt;/div&gt;
-	&lt;div class=&quot;grid-item one_half desk-one_fourth&quot;&gt;&lt;/div&gt;
-	&lt;div class=&quot;grid-item one_half desk-one_fourth&quot;&gt;&lt;/div&gt;
-	&lt;div class=&quot;grid-item one_half desk-one_fourth&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;</code></pre>
+					<p>To fix this, simply change the element’s <code>box-sizing</code> value to <code>content-box</code> instead of <code>border-box</code>, and voila.</p>
 
-						<div class="grid grid_gutter_half text_center">
-							<div class="grid-item one_half desk-one_fourth"><div class="island">&nbsp;</div></div>
-							<div class="grid-item one_half desk-one_fourth"><div class="island">&nbsp;</div></div>
-							<div class="grid-item one_half desk-one_fourth"><div class="island">&nbsp;</div></div>
-							<div class="grid-item one_half desk-one_fourth"><div class="island">&nbsp;</div></div>
-						</div>
-
-						<h4>Double gutter grid</h4>
-
-						<pre class="max_height"><code>&lt;div class=&quot;grid grid_gutter_double&quot;&gt;
-	&lt;div class=&quot;grid-item one_half desk-one_fourth&quot;&gt;&lt;/div&gt;
-	&lt;div class=&quot;grid-item one_half desk-one_fourth&quot;&gt;&lt;/div&gt;
-	&lt;div class=&quot;grid-item one_half desk-one_fourth&quot;&gt;&lt;/div&gt;
-	&lt;div class=&quot;grid-item one_half desk-one_fourth&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-
-						<div class="grid grid_gutter_double text_center">
-							<div class="grid-item one_half desk-one_fourth"><div class="island">&nbsp;</div></div>
-							<div class="grid-item one_half desk-one_fourth"><div class="island">&nbsp;</div></div>
-							<div class="grid-item one_half desk-one_fourth"><div class="island">&nbsp;</div></div>
-							<div class="grid-item one_half desk-one_fourth"><div class="island">&nbsp;</div></div>
-						</div>
-
-						<h4>Basic, responsive grid</h4>
-
-						<pre class="max_height"><code>&lt;div class=&quot;grid&quot;&gt;
-	&lt;div class=&quot;grid-item lap-one_half desk-one_fourth&quot;&gt;&lt;/div&gt;
-	&lt;div class=&quot;grid-item lap-one_half desk-one_fourth&quot;&gt;&lt;/div&gt;
-	&lt;div class=&quot;grid-item lap-one_half desk-one_fourth&quot;&gt;&lt;/div&gt;
-	&lt;div class=&quot;grid-item lap-one_half desk-one_fourth&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-
-						<div class="grid text_center">
-							<div class="grid-item lap-one_half desk-one_fourth"><div class="island">&nbsp;</div></div>
-							<div class="grid-item lap-one_half desk-one_fourth"><div class="island">&nbsp;</div></div>
-							<div class="grid-item lap-one_half desk-one_fourth"><div class="island">&nbsp;</div></div>
-							<div class="grid-item lap-one_half desk-one_fourth"><div class="island">&nbsp;</div></div>
-						</div>
-
-						<h4>Nested grid</h4>
-
-						<pre class="max_height"><code>&lt;div class=&quot;grid&quot;&gt;
-	&lt;div class=&quot;grid-item one_half&quot;&gt;
-		&lt;div class=&quot;grid&quot;&gt;
-			&lt;div class=&quot;grid-item one_half&quot;&gt;&lt;/div&gt;
-			&lt;div class=&quot;grid-item one_half&quot;&gt;&lt;/div&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
-	&lt;div class=&quot;grid-item one_fourth&quot;&gt;&lt;/div&gt;
-	&lt;div class=&quot;grid-item one_fourth&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-
-						<div class="grid text_center">
-							<div class="grid-item one_half">
-								<div class="island padding_none">
-									<div class="grid">
-										<div class="grid-item one_half margin_none"><div class="island">&nbsp;</div></div>
-										<div class="grid-item one_half margin_none"><div class="island">&nbsp;</div></div>
-									</div>
-								</div>
-							</div>
-							<div class="grid-item one_fourth"><div class="island">&nbsp;</div></div>
-							<div class="grid-item one_fourth"><div class="island">&nbsp;</div></div>
-						</div>
-
-						<h4>Nested, responsive grid</h4>
-
-						<pre class="max_height"><code>&lt;div class=&quot;grid&quot;&gt;
-	&lt;div class=&quot;grid-item lap-one_half&quot;&gt;
-		&lt;div class=&quot;grid&quot;&gt;
-			&lt;div class=&quot;grid-item one_half&quot;&gt;&lt;/div&gt;
-			&lt;div class=&quot;grid-item one_half&quot;&gt;&lt;/div&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
-	&lt;div class=&quot;grid-item lap-one_fourth&quot;&gt;&lt;/div&gt;
-	&lt;div class=&quot;grid-item lap-one_fourth&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-
-						<div class="grid text_center">
-							<div class="grid-item lap-one_half">
-								<div class="island padding_none">
-									<div class="grid">
-										<div class="grid-item one_half margin_none"><div class="island">&nbsp;</div></div>
-										<div class="grid-item one_half margin_none"><div class="island">&nbsp;</div></div>
-									</div>
-								</div>
-							</div>
-							<div class="grid-item lap-one_fourth"><div class="island">&nbsp;</div></div>
-							<div class="grid-item lap-one_fourth"><div class="island">&nbsp;</div></div>
-						</div>
-
-						<h4>“Kitchen sink” grid</h4>
-
-						<pre class="max_height"><code>&lt;div class=&quot;grid&quot;&gt;
-	&lt;div class=&quot;grid-item one_sixth&quot;&gt;&lt;/div&gt;
-	&lt;div class=&quot;grid-item one_sixth&quot;&gt;&lt;/div&gt;
-	&lt;div class=&quot;grid-item one_sixth&quot;&gt;&lt;/div&gt;
-	&lt;div class=&quot;grid-item one_sixth&quot;&gt;&lt;/div&gt;
-	&lt;div class=&quot;grid-item one_sixth&quot;&gt;&lt;/div&gt;
-	&lt;div class=&quot;grid-item one_sixth&quot;&gt;&lt;/div&gt;
-	&lt;div class=&quot;grid-item one_fifth&quot;&gt;&lt;/div&gt;
-	&lt;div class=&quot;grid-item one_fifth&quot;&gt;&lt;/div&gt;
-	&lt;div class=&quot;grid-item one_fifth&quot;&gt;&lt;/div&gt;
-	&lt;div class=&quot;grid-item one_fifth&quot;&gt;&lt;/div&gt;
-	&lt;div class=&quot;grid-item one_fifth&quot;&gt;&lt;/div&gt;
-	&lt;div class=&quot;grid-item one_fourth&quot;&gt;&lt;/div&gt;
-	&lt;div class=&quot;grid-item one_fourth&quot;&gt;&lt;/div&gt;
-	&lt;div class=&quot;grid-item one_fourth&quot;&gt;&lt;/div&gt;
-	&lt;div class=&quot;grid-item one_fourth&quot;&gt;&lt;/div&gt;
-	&lt;div class=&quot;grid-item one_third&quot;&gt;&lt;/div&gt;
-	&lt;div class=&quot;grid-item one_third&quot;&gt;&lt;/div&gt;
-	&lt;div class=&quot;grid-item one_third&quot;&gt;&lt;/div&gt;
-	&lt;div class=&quot;grid-item one_half&quot;&gt;
-		&lt;div class=&quot;grid&quot;&gt;
-			&lt;div class=&quot;grid-item one_half&quot;&gt;&lt;/div&gt;
-			&lt;div class=&quot;grid-item one_half&quot;&gt;&lt;/div&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
-	&lt;div class=&quot;grid-item one_half&quot;&gt;&lt;/div&gt;
-	&lt;div class=&quot;grid-item one_whole&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-
-						<div class="grid text_center">
-							<div class="grid-item one_sixth">
-								<div class="island">&nbsp;</div>
-							</div>
-
-							<div class="grid-item one_sixth">
-								<div class="island">&nbsp;</div>
-							</div>
-
-							<div class="grid-item one_sixth">
-								<div class="island">&nbsp;</div>
-							</div>
-
-							<div class="grid-item one_sixth">
-								<div class="island">&nbsp;</div>
-							</div>
-
-							<div class="grid-item one_sixth">
-								<div class="island">&nbsp;</div>
-							</div>
-
-							<div class="grid-item one_sixth">
-								<div class="island">&nbsp;</div>
-							</div>
-
-							<div class="grid-item one_fifth">
-								<div class="island">&nbsp;</div>
-							</div>
-
-							<div class="grid-item one_fifth">
-								<div class="island">&nbsp;</div>
-							</div>
-
-							<div class="grid-item one_fifth">
-								<div class="island">&nbsp;</div>
-							</div>
-
-							<div class="grid-item one_fifth">
-								<div class="island">&nbsp;</div>
-							</div>
-
-							<div class="grid-item one_fifth">
-								<div class="island">&nbsp;</div>
-							</div>
-
-							<div class="grid-item one_fourth">
-								<div class="island">&nbsp;</div>
-							</div>
-
-							<div class="grid-item one_fourth">
-								<div class="island">&nbsp;</div>
-							</div>
-
-							<div class="grid-item one_fourth">
-								<div class="island">&nbsp;</div>
-							</div>
-
-							<div class="grid-item one_fourth">
-								<div class="island">&nbsp;</div>
-							</div>
-
-							<div class="grid-item one_third">
-								<div class="island">&nbsp;</div>
-							</div>
-
-							<div class="grid-item one_third">
-								<div class="island">&nbsp;</div>
-							</div>
-
-							<div class="grid-item one_third">
-								<div class="island">&nbsp;</div>
-							</div>
-
-							<div class="grid-item one_half">
-								<div class="island">&nbsp;</div>
-							</div>
-
-							<div class="grid-item one_half">
-								<div class="island padding_none">
-									<div class="grid">
-										<div class="grid-item one_half margin_none"><div class="island">&nbsp;</div></div>
-										<div class="grid-item one_half margin_none"><div class="island">&nbsp;</div></div>
-									</div>
-								</div>
-							</div>
-
-							<div class="grid-item one_whole">
-								<div class="island">&nbsp;</div>
-							</div>
-						</div>
-
-						<h4>“Kitchen sink”, responsive grid</h4>
-
-						<pre class="max_height"><code>&lt;div class=&quot;grid&quot;&gt;
-	&lt;div class=&quot;grid-item lap-one_third desk-one_sixth&quot;&gt;&lt;/div&gt;
-	&lt;div class=&quot;grid-item lap-one_third desk-one_sixth&quot;&gt;&lt;/div&gt;
-	&lt;div class=&quot;grid-item lap-one_third desk-one_sixth&quot;&gt;&lt;/div&gt;
-	&lt;div class=&quot;grid-item lap-one_third desk-one_sixth&quot;&gt;&lt;/div&gt;
-	&lt;div class=&quot;grid-item lap-one_third desk-one_sixth&quot;&gt;&lt;/div&gt;
-	&lt;div class=&quot;grid-item lap-one_third desk-one_sixth&quot;&gt;&lt;/div&gt;
-	&lt;div class=&quot;grid-item lap-one_fifth desk-one_fifth&quot;&gt;&lt;/div&gt;
-	&lt;div class=&quot;grid-item lap-three_fifths desk-one_fifth&quot;&gt;&lt;/div&gt;
-	&lt;div class=&quot;grid-item lap-one_fifth desk-one_fifth&quot;&gt;&lt;/div&gt;
-	&lt;div class=&quot;grid-item lap-two_fifths desk-one_fifth&quot;&gt;&lt;/div&gt;
-	&lt;div class=&quot;grid-item lap-three_fifths desk-one_fifth&quot;&gt;&lt;/div&gt;
-	&lt;div class=&quot;grid-item lap-one_half desk-one_fourth&quot;&gt;&lt;/div&gt;
-	&lt;div class=&quot;grid-item lap-one_half desk-one_fourth&quot;&gt;&lt;/div&gt;
-	&lt;div class=&quot;grid-item lap-one_half desk-one_fourth&quot;&gt;&lt;/div&gt;
-	&lt;div class=&quot;grid-item lap-one_half desk-one_fourth&quot;&gt;&lt;/div&gt;
-	&lt;div class=&quot;grid-item lap-two_thirds desk-one_third&quot;&gt;&lt;/div&gt;
-	&lt;div class=&quot;grid-item lap-one_third&quot;&gt;&lt;/div&gt;
-	&lt;div class=&quot;grid-item lap-one_whole desk-one_third&quot;&gt;&lt;/div&gt;
-	&lt;div class=&quot;grid-item lap-one_half&quot;&gt;
-		&lt;div class=&quot;grid&quot;&gt;
-			&lt;div class=&quot;grid-item one_half&quot;&gt;&lt;/div&gt;
-			&lt;div class=&quot;grid-item one_half&quot;&gt;&lt;/div&gt;
-		&lt;/div&gt;
-	&lt;/div&gt;
-	&lt;div class=&quot;grid-item lap-one_half&quot;&gt;&lt;/div&gt;
-	&lt;div class=&quot;grid-item one_whole&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-
-						<div class="grid text_center">
-							<div class="grid-item lap-one_third desk-one_sixth">
-								<div class="island">&nbsp;</div>
-							</div>
-
-							<div class="grid-item lap-one_third desk-one_sixth">
-								<div class="island">&nbsp;</div>
-							</div>
-
-							<div class="grid-item lap-one_third desk-one_sixth">
-								<div class="island">&nbsp;</div>
-							</div>
-
-							<div class="grid-item lap-one_third desk-one_sixth">
-								<div class="island">&nbsp;</div>
-							</div>
-
-							<div class="grid-item lap-one_third desk-one_sixth">
-								<div class="island">&nbsp;</div>
-							</div>
-
-							<div class="grid-item lap-one_third desk-one_sixth">
-								<div class="island">&nbsp;</div>
-							</div>
-
-							<div class="grid-item lap-one_fifth desk-one_fifth">
-								<div class="island">&nbsp;</div>
-							</div>
-
-							<div class="grid-item lap-three_fifths desk-one_fifth">
-								<div class="island">&nbsp;</div>
-							</div>
-
-							<div class="grid-item lap-one_fifth desk-one_fifth">
-								<div class="island">&nbsp;</div>
-							</div>
-
-							<div class="grid-item lap-two_fifths desk-one_fifth">
-								<div class="island">&nbsp;</div>
-							</div>
-
-							<div class="grid-item lap-three_fifths desk-one_fifth">
-								<div class="island">&nbsp;</div>
-							</div>
-
-							<div class="grid-item lap-one_half desk-one_fourth">
-								<div class="island">&nbsp;</div>
-							</div>
-
-							<div class="grid-item lap-one_half desk-one_fourth">
-								<div class="island">&nbsp;</div>
-							</div>
-
-							<div class="grid-item lap-one_half desk-one_fourth">
-								<div class="island">&nbsp;</div>
-							</div>
-
-							<div class="grid-item lap-one_half desk-one_fourth">
-								<div class="island">&nbsp;</div>
-							</div>
-
-							<div class="grid-item lap-two_thirds desk-one_third">
-								<div class="island">&nbsp;</div>
-							</div>
-
-							<div class="grid-item lap-one_third">
-								<div class="island">&nbsp;</div>
-							</div>
-
-							<div class="grid-item lap-one_whole desk-one_third">
-								<div class="island">&nbsp;</div>
-							</div>
-
-							<div class="grid-item lap-one_half">
-								<div class="island">&nbsp;</div>
-							</div>
-
-							<div class="grid-item lap-one_half">
-								<div class="island padding_none">
-									<div class="grid">
-										<div class="grid-item one_half margin_none"><div class="island">&nbsp;</div></div>
-										<div class="grid-item one_half margin_none"><div class="island">&nbsp;</div></div>
-									</div>
-								</div>
-							</div>
-
-							<div class="grid-item one_whole">
-								<div class="island">&nbsp;</div>
-							</div>
-						</div>
-					</section>
-
-					<section id="layout">
-						<h2>Layout</h2>
-
-						<p>Cardinal also includes some reusable classes for common layout modules like page wrappers, content wells, and 100% width containers.</p>
-
-						<div class="grid">
-							<div class="grid-item lap-one_half desk-one_fourth">
-								<h3 class="text_medium">Strips</h3>
-
-								<p><pre><code>.strip {}</code></pre></p>
-
-								<p>A strip is useful when you want a background color, image, or content to span the entire width of the viewport.</p>
-							</div>
-
-							<div class="grid-item lap-one_half desk-one_fourth">
-								<h3 class="text_medium">Wrappers</h3>
-
-								<p><pre><code>.wrapper {}</code></pre></p>
-
-								<p>A wrapper provides a <code>max-width</code> for the content within it, and centers the content.</p>
-							</div>
-
-							<div class="grid-item lap-one_half desk-one_fourth">
-								<h3 class="text_medium">Islands</h3>
-
-								<p><pre><code>.island {}</code></pre></p>
-
-								<p>An island is a content block that you want to appear raised from its surrounding area.</p>
-							</div>
-
-							<div class="grid-item lap-one_half desk-one_fourth">
-								<h3 class="text_medium">Wells</h3>
-
-								<p><pre><code>.well {}</code></pre></p>
-
-								<p>A well is a content block that you want to appear sunken from its surrounding area.</p>
-							</div>
-						</div>
-					</section>
-
-					<section id="buttons">
-						<h2>Buttons</h2>
-
-						<div class="grid">
-							<div class="grid-item">
-								<pre><code>&lt;button type="button" class="button [style] [size || width] [shape || state]"&gt;Button text&lt;/button&gt;</code></pre>
-							</div>
-
-							<div class="grid-item lap-one_half">
-								<p>Buttons are common web UI components, and some basic button styles are available with Cardinal. While minimal, there is a large variety of style, shape, and size combinations that you can create.</p>
-
-								<p>By chaining CSS classes together, you can quickly style anchor links <code>&lt;a href=""&gt;</code>, button tags <code>&lt;button&gt;</code>, and input <code>&lt;input type="submit"&gt;</code> elements.</p>
-
-								<p>To start, simply add the <code>.button</code> class to an element. This provides the base styles that can be further modified by adding more specific classes.</p>
-
-								<p><em>When using the <code>.block</code> class, you must also specify the button width by using the “widths” classes that were mentioned in the <a href="#grids">“Grids” section</a> above.</em></p>
-							</div>
-
-							<div class="grid-item lap-one_half">
-								<dl class="island">
-									<h3>Usage</h3>
-
-									<hr>
-
-									<dt>.button</dt>
-									<dd>Element becomes the default, “flat” style button.</dd>
-
-									<dt>.hollow, .chunky, .glossy</dt>
-									<dd>Element becomes the specified button style.</dd>
-
-									<dt>.mini, .small, .large, .block</dt>
-									<dd>Element becomes the specified button size.</dd>
-
-									<dt>.one_half, .two_thirds, .four_fifths, etc.</dt>
-									<dd>Element becomes a specific width of its parent.</dd>
-
-									<dt>.rounded, .pill</dt>
-									<dd>Element becomes the specified button shape.</dd>
-
-									<dt>.disabled, .button[disabled]</dt>
-									<dd>Element becomes a button that is not usable.</dd>
-								</dl>
-							</div>
-						</div>
-
-						<h3>Flat style</h3>
-
-						<h4>Default shape</h4>
-
-						<p>
-							<button type="button" class="button mini">.button.mini</button>
-							<button type="button" class="button mini disabled">.button.mini.disabled</button>
-						</p>
-
-						<p>
-							<button type="button" class="button small">.button.small</button>
-							<button type="button" class="button small disabled">.button.small.disabled</button>
-						</p>
-
-						<p>
-							<button type="button" class="button">.button</button>
-							<button type="button" class="button disabled">.button.disabled</button>
-						</p>
-
-						<p>
-							<button type="button" class="button large">.button.large</button>
-							<button type="button" class="button large disabled">.button.large.disabled</button>
-						</p>
-
-						<p><button type="button" class="button block one_whole">.button.block.one_whole</button></p>
-						<p><button type="button" class="button block one_whole disabled">.button.block.one_whole.disabled</button></p>
-
-						<h4>Rounded shape</h4>
-
-						<p>
-							<button type="button" class="button mini rounded">.button.mini.rounded</button>
-							<button type="button" class="button mini rounded disabled">.button.mini.rounded.disabled</button>
-						</p>
-
-						<p>
-							<button type="button" class="button small rounded">.button.small.rounded</button>
-							<button type="button" class="button small rounded disabled">.button.small.rounded.disabled</button>
-						</p>
-
-						<p>
-							<button type="button" class="button rounded">.button.rounded</button>
-							<button type="button" class="button rounded disabled">.button.rounded.disabled</button>
-						</p>
-
-						<p>
-							<button type="button" class="button large rounded">.button.large.rounded</button>
-							<button type="button" class="button large rounded disabled">.button.large.rounded.disabled</button>
-						</p>
-
-						<p><button type="button" class="button block one_whole rounded">.button.block.one_whole.rounded</button></p>
-						<p><button type="button" class="button block one_whole rounded disabled">.button.block.one_whole.rounded.disabled</button></p>
-
-						<h4>“Pill” shape</h4>
-
-						<p>
-							<button type="button" class="button mini pill">.button.mini.pill</button>
-							<button type="button" class="button mini pill disabled">.button.mini.pill.disabled</button>
-						</p>
-
-						<p>
-							<button type="button" class="button small pill">.button.small.pill</button>
-							<button type="button" class="button small pill disabled">.button.small.pill.disabled</button>
-						</p>
-
-						<p>
-							<button type="button" class="button pill">.button.pill</button>
-							<button type="button" class="button pill disabled">.button.pill.disabled</button>
-						</p>
-
-						<p>
-							<button type="button" class="button large pill">.button.large.pill</button>
-							<button type="button" class="button large pill disabled">.button.large.pill.disabled</button>
-						</p>
-
-						<p><button type="button" class="button block pill one_whole">.button.block.one_whole.pill</button></p>
-						<p><button type="button" class="button block pill one_whole disabled">.button.block.one_whole.pill.disabled</button></p>
-
-						<h3>Hollow style</h3>
-
-						<h4>Default shape</h4>
-
-						<p>
-							<button type="button" class="button hollow mini">.button.hollow.mini</button>
-							<button type="button" class="button hollow mini disabled">.button.hollow.mini.disabled</button>
-						</p>
-
-						<p>
-							<button type="button" class="button hollow small">.button.hollow.small</button>
-							<button type="button" class="button hollow small disabled">.button.hollow.small.disabled</button>
-						</p>
-
-						<p>
-							<button type="button" class="button hollow">.button.hollow</button>
-							<button type="button" class="button hollow disabled">.button.hollow.disabled</button>
-						</p>
-
-						<p>
-							<button type="button" class="button hollow large">.button.hollow.large</button>
-							<button type="button" class="button hollow large disabled">.button.hollow.large.disabled</button>
-						</p>
-
-						<p><button type="button" class="button hollow block one_whole">.button.hollow.block.one_whole</button></p>
-						<p><button type="button" class="button hollow block one_whole disabled">.button.hollow.block.one_whole.disabled</button></p>
-
-						<h4>Rounded shape</h4>
-
-						<p>
-							<button type="button" class="button hollow mini rounded">.button.hollow.mini.rounded</button>
-							<button type="button" class="button hollow mini rounded disabled">.button.hollow.mini.rounded.disabled</button>
-						</p>
-
-						<p>
-							<button type="button" class="button hollow small rounded">.button.hollow.small.rounded</button>
-							<button type="button" class="button hollow small rounded disabled">.button.hollow.small.rounded.disabled</button>
-						</p>
-
-						<p>
-							<button type="button" class="button hollow rounded">.button.hollow.rounded</button>
-							<button type="button" class="button hollow rounded disabled">.button.hollow.rounded.disabled</button>
-						</p>
-
-						<p>
-							<button type="button" class="button hollow large rounded">.button.hollow.large.rounded</button>
-							<button type="button" class="button hollow large rounded disabled">.button.hollow.large.rounded.disabled</button>
-						</p>
-
-						<p><button type="button" class="button hollow block one_whole rounded">.button.hollow.block.one_whole.rounded</button></p>
-						<p><button type="button" class="button hollow block one_whole rounded disabled">.button.hollow.block.one_whole.rounded.disabled</button></p>
-
-						<h4>“Pill” shape</h4>
-
-						<p>
-							<button type="button" class="button hollow mini pill">.button.hollow.mini.pill</button>
-							<button type="button" class="button hollow mini pill disabled">.button.hollow.mini.pill.disabled</button>
-						</p>
-
-						<p>
-							<button type="button" class="button hollow small pill">.button.hollow.small.pill</button>
-							<button type="button" class="button hollow small pill disabled">.button.hollow.small.pill.disabled</button>
-						</p>
-
-						<p>
-							<button type="button" class="button hollow pill">.button.hollow.pill</button>
-							<button type="button" class="button hollow pill disabled">.button.hollow.pill.disabled</button>
-						</p>
-
-						<p>
-							<button type="button" class="button hollow large pill">.button.hollow.large.pill</button>
-							<button type="button" class="button hollow large pill disabled">.button.hollow.large.pill.disabled</button>
-						</p>
-
-						<p><button type="button" class="button hollow block one_whole pill">.button.hollow.block.one_whole.pill</button></p>
-						<p><button type="button" class="button hollow block one_whole pill disabled">.button.hollow.block.one_whole.pill.disabled</button></p>
-
-						<h3>Chunky style</h3>
-
-						<h4>Default shape</h4>
-
-						<p>
-							<button type="button" class="button chunky mini">.button.chunky.mini</button>
-							<button type="button" class="button chunky mini disabled">.button.chunky.mini.disabled</button>
-						</p>
-
-						<p>
-							<button type="button" class="button chunky small">.button.chunky.small</button>
-							<button type="button" class="button chunky small disabled">.button.chunky.small.disabled</button>
-						</p>
-
-						<p>
-							<button type="button" class="button chunky">.button.chunky</button>
-							<button type="button" class="button chunky disabled">.button.chunky.disabled</button>
-						</p>
-
-						<p>
-							<button type="button" class="button chunky large">.button.chunky.large</button>
-							<button type="button" class="button chunky large disabled">.button.chunky.large.disabled</button>
-						</p>
-
-						<p><button type="button" class="button chunky block one_whole">.button.chunky.block.one_whole</button></p>
-						<p><button type="button" class="button chunky block one_whole disabled">.button.chunky.block.one_whole.disabled</button></p>
-
-						<h4>Rounded shape</h4>
-
-						<p>
-							<button type="button" class="button chunky mini rounded">.button.chunky.mini.rounded</button>
-							<button type="button" class="button chunky mini rounded disabled">.button.chunky.mini.rounded.disabled</button>
-						</p>
-
-						<p>
-							<button type="button" class="button chunky small rounded">.button.chunky.small.rounded</button>
-							<button type="button" class="button chunky small rounded disabled">.button.chunky.small.rounded.disabled</button>
-						</p>
-
-						<p>
-							<button type="button" class="button chunky rounded">.button.chunky.rounded</button>
-							<button type="button" class="button chunky rounded disabled">.button.chunky.rounded.disabled</button>
-						</p>
-
-						<p>
-							<button type="button" class="button chunky large rounded">.button.chunky.large.rounded</button>
-							<button type="button" class="button chunky large rounded disabled">.button.chunky.large.rounded.disabled</button>
-						</p>
-
-						<p><button type="button" class="button chunky block one_whole rounded">.button.chunky.block.one_whole.rounded</button></p>
-						<p><button type="button" class="button chunky block one_whole rounded disabled">.button.chunky.block.one_whole.rounded.disabled</button></p>
-
-						<h4>“Pill” shape</h4>
-
-						<p>
-							<button type="button" class="button chunky mini pill">.button.chunky.mini.pill</button>
-							<button type="button" class="button chunky mini pill disabled">.button.chunky.mini.pill.disabled</button>
-						</p>
-
-						<p>
-							<button type="button" class="button chunky small pill">.button.chunky.small.pill</button>
-							<button type="button" class="button chunky small pill disabled">.button.chunky.small.pill.disabled</button>
-						</p>
-
-						<p>
-							<button type="button" class="button chunky pill">.button.chunky.pill</button>
-							<button type="button" class="button chunky pill disabled">.button.chunky.pill.disabled</button>
-						</p>
-
-						<p>
-							<button type="button" class="button chunky large pill">.button.chunky.large.pill</button>
-							<button type="button" class="button chunky large pill disabled">.button.chunky.large.pill.disabled</button>
-						</p>
-
-						<p><button type="button" class="button chunky block one_whole pill">.button.chunky.block.one_whole.pill</button></p>
-						<p><button type="button" class="button chunky block one_whole pill disabled">.button.chunky.block.one_whole.pill.disabled</button></p>
-
-						<h3>Glossy style</h3>
-
-						<h4>Default shape</h4>
-
-						<p>
-							<button type="button" class="button glossy mini">.button.glossy.mini</button>
-							<button type="button" class="button glossy mini disabled">.button.glossy.mini.disabled</button>
-						</p>
-
-						<p>
-							<button type="button" class="button glossy small">.button.glossy.small</button>
-							<button type="button" class="button glossy small disabled">.button.glossy.small.disabled</button>
-						</p>
-
-						<p>
-							<button type="button" class="button glossy">.button.glossy</button>
-							<button type="button" class="button glossy disabled">.button.glossy.disabled</button>
-						</p>
-
-						<p>
-							<button type="button" class="button glossy large">.button.glossy.large</button>
-							<button type="button" class="button glossy large disabled">.button.glossy.large.disabled</button>
-						</p>
-
-						<p><button type="button" class="button glossy block one_whole">.button.glossy.block.one_whole</button></p>
-						<p><button type="button" class="button glossy block one_whole disabled">.button.glossy.block.one_whole.disabled</button></p>
-
-						<h4>Rounded shape</h4>
-
-						<p>
-							<button type="button" class="button glossy mini rounded">.button.glossy.mini.rounded</button>
-							<button type="button" class="button glossy mini rounded disabled">.button.glossy.mini.rounded.disabled</button>
-						</p>
-
-						<p>
-							<button type="button" class="button glossy small rounded">.button.glossy.small.rounded</button>
-							<button type="button" class="button glossy small rounded disabled">.button.glossy.small.rounded.disabled</button>
-						</p>
-
-						<p>
-							<button type="button" class="button glossy rounded">.button.glossy.rounded</button>
-							<button type="button" class="button glossy rounded disabled">.button.glossy.rounded.disabled</button>
-						</p>
-
-						<p>
-							<button type="button" class="button glossy large rounded">.button.glossy.large.rounded</button>
-							<button type="button" class="button glossy large rounded disabled">.button.glossy.large.rounded.disabled</button>
-						</p>
-
-						<p><button type="button" class="button glossy block one_whole rounded">.button.glossy.block.one_whole.rounded</button></p>
-						<p><button type="button" class="button glossy block one_whole rounded disabled">.button.glossy.block.one_whole.rounded.disabled</button></p>
-
-						<h4>“Pill” shape</h4>
-
-						<p>
-							<button type="button" class="button glossy mini pill">.button.glossy.mini.pill</button>
-							<button type="button" class="button glossy mini pill disabled">.button.glossy.mini.pill.disabled</button>
-						</p>
-
-						<p>
-							<button type="button" class="button glossy small pill">.button.glossy.small.pill</button>
-							<button type="button" class="button glossy small pill disabled">.button.glossy.small.pill.disabled</button>
-						</p>
-
-						<p>
-							<button type="button" class="button glossy pill">.button.glossy.pill</button>
-							<button type="button" class="button glossy pill disabled">.button.glossy.pill.disabled</button>
-						</p>
-
-						<p>
-							<button type="button" class="button glossy large pill">.button.glossy.large.pill</button>
-							<button type="button" class="button glossy large pill disabled">.button.glossy.large.pill.disabled</button>
-						</p>
-
-						<p><button type="button" class="button glossy block one_whole pill">.button.glossy.block.one_whole.pill</button></p>
-						<p><button type="button" class="button glossy block one_whole pill disabled">.button.glossy.block.one_whole.pill.disabled</button></p>
-					</section>
-
-					<section id="tables">
-						<h2>Tables</h2>
-
-						<div class="grid">
-							<div class="grid-item desk-one_third">
-								<p>Tables are important HTML elements that can be tricky to style across multiple devices. Cardinal makes it easy for you add some basic table layouts and styles.</p>
-
-								<p>Start by adding the <code>.table</code> class to a <code>&lt;table&gt;</code> element. This gives the table a basic layout with flexible table cells.</p>
-
-								<p>If you want to use a table header and make it stand out, simply wrap that table row with the <code>&lt;thead&gt;</code> element, and use <code>&lt;th&gt;</code> elements for the cells instead of <code>&lt;td&gt;</code>.</p>
-
-								<p>For table footers, use the <code>&lt;tfoot&gt;</code> element, and use <code>&lt;td&gt;</code> for the cells.</p>
-							</div>
-
-							<div class="grid-item desk-two_thirds">
-								<dl class="well">
-									<h3>Usage</h3>
-
-									<hr>
-
-									<dt>.table</dt>
-									<dd>Table is given the default layout.</dd>
-
-									<dt>.table.border_rows</dt>
-									<dd>Table is given border styles on the rows only.</dd>
-
-									<dt>.table.border_all</dt>
-									<dd>Table is given border styles on all table cells.</dd>
-
-									<dt>.table.border</dt>
-									<dd>Table is given an outer border.</dd>
-
-									<dt>.table.border.border_rows</dt>
-									<dd>Table is given an outer border, and border styles on the rows.</dd>
-
-									<dt>.table.border.border_all</dt>
-									<dd>Table is given an outer border, and border styles on all table cells.</dd>
-
-									<dt>.table.stripe</dt>
-									<dd>Table is given rows with alternating background colors.</dd>
-								</dl>
-							</div>
-						</div>
-
-						<h3>Examples</h3>
-
-						<div class="grid">
-							<div class="grid-item lap-one_half">
-								<h4>Borderless</h4>
-								<p>No <code>&lt;thead&gt;</code> or <code>&lt;tfoot&gt;</code></p>
-
-								<pre><code>&lt;table class="table"&gt;
-	&lt;tr&gt;
-		&lt;th&gt;#&lt;/th&gt;
-		&lt;th&gt;Thing 1&lt;/th&gt;
-		&lt;th&gt;Thing 2&lt;/th&gt;
-		&lt;th&gt;Thing 3&lt;/th&gt;
-	&lt;/tr&gt;
-	...
-&lt;/table&gt;</code></pre>
-
-								<table class="table">
-									<tr>
-										<th>#</th>
-										<th>Thing 1</th>
-										<th>Thing 2</th>
-										<th>Thing 3</th>
-									</tr>
-
-									<tbody>
-										<tr>
-											<td>1</td>
-											<td>1246</td>
-											<td>Hello</td>
-											<td>true</td>
-										</tr>
-
-										<tr>
-											<td>2</td>
-											<td>4652</td>
-											<td>Goodbye</td>
-											<td>false</td>
-										</tr>
-
-										<tr>
-											<td>3</td>
-											<td>1657</td>
-											<td>Cheers</td>
-											<td>false</td>
-										</tr>
-
-										<tr>
-											<td>4</td>
-											<td>1498</td>
-											<td>Beers</td>
-											<td>true</td>
-										</tr>
-
-										<tr>
-											<td>5</td>
-											<td>3286</td>
-											<td>Awesome</td>
-											<td>true</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-
-							<div class="grid-item lap-one_half">
-								<h4>Borderless</h4>
-								<p><code>thead&gt;</code> & <code>&lt;tfoot&gt;</code></p>
-
-								<pre><code>&lt;table class="table"&gt;
-	&lt;thead&gt;
-		&lt;tr&gt;
-			&lt;th&gt;#&lt;/th&gt;
-			&lt;th&gt;Thing 1&lt;/th&gt;
-			&lt;th&gt;Thing 2&lt;/th&gt;
-			&lt;th&gt;Thing 3&lt;/th&gt;
-		&lt;/tr&gt;
-	&lt;/thead&gt;
-
-	&lt;tfoot&gt;
-		&lt;tr&gt;
-			&lt;td&gt;#&lt;/td&gt;
-			&lt;td&gt;Thing 1&lt;/td&gt;
-			&lt;td&gt;Thing 2&lt;/td&gt;
-			&lt;td&gt;Thing 3&lt;/td&gt;
-		&lt;/tr&gt;
-	&lt;/tfoot&gt;
-	...
-&lt;/table&gt;</code></pre>
-
-								<table class="table">
-									<thead>
-										<tr>
-											<th>#</th>
-											<th>Thing 1</th>
-											<th>Thing 2</th>
-											<th>Thing 3</th>
-										</tr>
-									</thead>
-
-									<tfoot>
-										<tr>
-											<td>#</td>
-											<td>Thing 1</td>
-											<td>Thing 2</td>
-											<td>Thing 3</td>
-										</tr>
-									</tfoot>
-
-									<tbody>
-										<tr>
-											<td>1</td>
-											<td>1246</td>
-											<td>Hello</td>
-											<td>true</td>
-										</tr>
-
-										<tr>
-											<td>2</td>
-											<td>4652</td>
-											<td>Goodbye</td>
-											<td>false</td>
-										</tr>
-
-										<tr>
-											<td>3</td>
-											<td>1657</td>
-											<td>Cheers</td>
-											<td>false</td>
-										</tr>
-
-										<tr>
-											<td>4</td>
-											<td>1498</td>
-											<td>Beers</td>
-											<td>true</td>
-										</tr>
-
-										<tr>
-											<td>5</td>
-											<td>3286</td>
-											<td>Awesome</td>
-											<td>true</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-
-							<div class="grid-item lap-one_half">
-								<h4>Row borders</h4>
-								<p>No <code>&lt;thead&gt;</code> or <code>&lt;tfoot&gt;</code></p>
-
-								<pre><code>&lt;table class="table border_rows"&gt;
-	&lt;tr&gt;
-		&lt;th&gt;#&lt;/th&gt;
-		&lt;th&gt;Thing 1&lt;/th&gt;
-		&lt;th&gt;Thing 2&lt;/th&gt;
-		&lt;th&gt;Thing 3&lt;/th&gt;
-	&lt;/tr&gt;
-	...
-&lt;/table&gt;</code></pre>
-
-								<table class="table border_rows">
-									<tr>
-										<th>#</th>
-										<th>Thing 1</th>
-										<th>Thing 2</th>
-										<th>Thing 3</th>
-									</tr>
-
-									<tbody>
-										<tr>
-											<td>1</td>
-											<td>1246</td>
-											<td>Hello</td>
-											<td>true</td>
-										</tr>
-
-										<tr>
-											<td>2</td>
-											<td>4652</td>
-											<td>Goodbye</td>
-											<td>false</td>
-										</tr>
-
-										<tr>
-											<td>3</td>
-											<td>1657</td>
-											<td>Cheers</td>
-											<td>false</td>
-										</tr>
-
-										<tr>
-											<td>4</td>
-											<td>1498</td>
-											<td>Beers</td>
-											<td>true</td>
-										</tr>
-
-										<tr>
-											<td>5</td>
-											<td>3286</td>
-											<td>Awesome</td>
-											<td>true</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-
-							<div class="grid-item lap-one_half">
-								<h4>Row borders</h4>
-								<p><code>thead&gt;</code> & <code>&lt;tfoot&gt;</code></p>
-
-								<pre><code>&lt;table class="table border_rows"&gt;
-	&lt;thead&gt;
-		&lt;tr&gt;
-			&lt;th&gt;#&lt;/th&gt;
-			&lt;th&gt;Thing 1&lt;/th&gt;
-			&lt;th&gt;Thing 2&lt;/th&gt;
-			&lt;th&gt;Thing 3&lt;/th&gt;
-		&lt;/tr&gt;
-	&lt;/thead&gt;
-	...
-&lt;/table&gt;</code></pre>
-
-								<table class="table border_rows">
-									<thead>
-										<tr>
-											<th>#</th>
-											<th>Thing 1</th>
-											<th>Thing 2</th>
-											<th>Thing 3</th>
-										</tr>
-									</thead>
-
-									<tfoot>
-										<tr>
-											<td>#</td>
-											<td>Thing 1</td>
-											<td>Thing 2</td>
-											<td>Thing 3</td>
-										</tr>
-									</tfoot>
-
-									<tbody>
-										<tr>
-											<td>1</td>
-											<td>1246</td>
-											<td>Hello</td>
-											<td>true</td>
-										</tr>
-
-										<tr>
-											<td>2</td>
-											<td>4652</td>
-											<td>Goodbye</td>
-											<td>false</td>
-										</tr>
-
-										<tr>
-											<td>3</td>
-											<td>1657</td>
-											<td>Cheers</td>
-											<td>false</td>
-										</tr>
-
-										<tr>
-											<td>4</td>
-											<td>1498</td>
-											<td>Beers</td>
-											<td>true</td>
-										</tr>
-
-										<tr>
-											<td>5</td>
-											<td>3286</td>
-											<td>Awesome</td>
-											<td>true</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-
-							<div class="grid-item lap-one_half">
-								<h4>Row & column borders</h4>
-								<p>No <code>&lt;thead&gt;</code> or <code>&lt;tfoot&gt;</code></p>
-
-								<pre><code>&lt;table class="table border_all"&gt;
-	&lt;tr&gt;
-		&lt;th&gt;#&lt;/th&gt;
-		&lt;th&gt;Thing 1&lt;/th&gt;
-		&lt;th&gt;Thing 2&lt;/th&gt;
-		&lt;th&gt;Thing 3&lt;/th&gt;
-	&lt;/tr&gt;
-	...
-&lt;/table&gt;</code></pre>
-
-								<table class="table border_all">
-									<tr>
-										<th>#</th>
-										<th>Thing 1</th>
-										<th>Thing 2</th>
-										<th>Thing 3</th>
-									</tr>
-
-									<tbody>
-										<tr>
-											<td>1</td>
-											<td>1246</td>
-											<td>Hello</td>
-											<td>true</td>
-										</tr>
-
-										<tr>
-											<td>2</td>
-											<td>4652</td>
-											<td>Goodbye</td>
-											<td>false</td>
-										</tr>
-
-										<tr>
-											<td>3</td>
-											<td>1657</td>
-											<td>Cheers</td>
-											<td>false</td>
-										</tr>
-
-										<tr>
-											<td>4</td>
-											<td>1498</td>
-											<td>Beers</td>
-											<td>true</td>
-										</tr>
-
-										<tr>
-											<td>5</td>
-											<td>3286</td>
-											<td>Awesome</td>
-											<td>true</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-
-							<div class="grid-item lap-one_half">
-								<h4>Row & column borders</h4>
-								<p><code>thead&gt;</code> & <code>&lt;tfoot&gt;</code></p>
-
-								<pre><code>&lt;table class="table border_all"&gt;
-	&lt;thead&gt;
-		&lt;tr&gt;
-			&lt;th&gt;#&lt;/th&gt;
-			&lt;th&gt;Thing 1&lt;/th&gt;
-			&lt;th&gt;Thing 2&lt;/th&gt;
-			&lt;th&gt;Thing 3&lt;/th&gt;
-		&lt;/tr&gt;
-	&lt;/thead&gt;
-	...
-&lt;/table&gt;</code></pre>
-
-								<table class="table border_all">
-									<thead>
-										<tr>
-											<th>#</th>
-											<th>Thing 1</th>
-											<th>Thing 2</th>
-											<th>Thing 3</th>
-										</tr>
-									</thead>
-
-									<tfoot>
-										<tr>
-											<td>#</td>
-											<td>Thing 1</td>
-											<td>Thing 2</td>
-											<td>Thing 3</td>
-										</tr>
-									</tfoot>
-
-									<tbody>
-										<tr>
-											<td>1</td>
-											<td>1246</td>
-											<td>Hello</td>
-											<td>true</td>
-										</tr>
-
-										<tr>
-											<td>2</td>
-											<td>4652</td>
-											<td>Goodbye</td>
-											<td>false</td>
-										</tr>
-
-										<tr>
-											<td>3</td>
-											<td>1657</td>
-											<td>Cheers</td>
-											<td>false</td>
-										</tr>
-
-										<tr>
-											<td>4</td>
-											<td>1498</td>
-											<td>Beers</td>
-											<td>true</td>
-										</tr>
-
-										<tr>
-											<td>5</td>
-											<td>3286</td>
-											<td>Awesome</td>
-											<td>true</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-
-							<div class="grid-item lap-one_half">
-								<h4>Outer border</h4>
-								<p>No <code>&lt;thead&gt;</code> or <code>&lt;tfoot&gt;</code></p>
-
-								<pre><code>&lt;table class="table border"&gt;
-	&lt;tr&gt;
-		&lt;th&gt;#&lt;/th&gt;
-		&lt;th&gt;Thing 1&lt;/th&gt;
-		&lt;th&gt;Thing 2&lt;/th&gt;
-		&lt;th&gt;Thing 3&lt;/th&gt;
-	&lt;/tr&gt;
-	...
-&lt;/table&gt;</code></pre>
-
-								<table class="table border">
-									<tr>
-										<th>#</th>
-										<th>Thing 1</th>
-										<th>Thing 2</th>
-										<th>Thing 3</th>
-									</tr>
-
-									<tbody>
-										<tr>
-											<td>1</td>
-											<td>1246</td>
-											<td>Hello</td>
-											<td>true</td>
-										</tr>
-
-										<tr>
-											<td>2</td>
-											<td>4652</td>
-											<td>Goodbye</td>
-											<td>false</td>
-										</tr>
-
-										<tr>
-											<td>3</td>
-											<td>1657</td>
-											<td>Cheers</td>
-											<td>false</td>
-										</tr>
-
-										<tr>
-											<td>4</td>
-											<td>1498</td>
-											<td>Beers</td>
-											<td>true</td>
-										</tr>
-
-										<tr>
-											<td>5</td>
-											<td>3286</td>
-											<td>Awesome</td>
-											<td>true</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-
-							<div class="grid-item lap-one_half">
-								<h4>Outer border</h4>
-								<p><code>thead&gt;</code> & <code>&lt;tfoot&gt;</code></p>
-
-								<pre><code>&lt;table class="table border"&gt;
-	&lt;thead&gt;
-		&lt;tr&gt;
-			&lt;th&gt;#&lt;/th&gt;
-			&lt;th&gt;Thing 1&lt;/th&gt;
-			&lt;th&gt;Thing 2&lt;/th&gt;
-			&lt;th&gt;Thing 3&lt;/th&gt;
-		&lt;/tr&gt;
-	&lt;/thead&gt;
-	...
-&lt;/table&gt;</code></pre>
-
-								<table class="table border">
-									<thead>
-										<tr>
-											<th>#</th>
-											<th>Thing 1</th>
-											<th>Thing 2</th>
-											<th>Thing 3</th>
-										</tr>
-									</thead>
-
-									<tfoot>
-										<tr>
-											<td>#</td>
-											<td>Thing 1</td>
-											<td>Thing 2</td>
-											<td>Thing 3</td>
-										</tr>
-									</tfoot>
-
-									<tbody>
-										<tr>
-											<td>1</td>
-											<td>1246</td>
-											<td>Hello</td>
-											<td>true</td>
-										</tr>
-
-										<tr>
-											<td>2</td>
-											<td>4652</td>
-											<td>Goodbye</td>
-											<td>false</td>
-										</tr>
-
-										<tr>
-											<td>3</td>
-											<td>1657</td>
-											<td>Cheers</td>
-											<td>false</td>
-										</tr>
-
-										<tr>
-											<td>4</td>
-											<td>1498</td>
-											<td>Beers</td>
-											<td>true</td>
-										</tr>
-
-										<tr>
-											<td>5</td>
-											<td>3286</td>
-											<td>Awesome</td>
-											<td>true</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-
-							<div class="grid-item lap-one_half">
-								<h4>Outer & row borders</h4>
-								<p>No <code>&lt;thead&gt;</code> or <code>&lt;tfoot&gt;</code></p>
-
-								<pre><code>&lt;table class="table border border_rows"&gt;
-	&lt;tr&gt;
-		&lt;th&gt;#&lt;/th&gt;
-		&lt;th&gt;Thing 1&lt;/th&gt;
-		&lt;th&gt;Thing 2&lt;/th&gt;
-		&lt;th&gt;Thing 3&lt;/th&gt;
-	&lt;/tr&gt;
-	...
-&lt;/table&gt;</code></pre>
-
-								<table class="table border border_rows">
-									<tr>
-										<th>#</th>
-										<th>Thing 1</th>
-										<th>Thing 2</th>
-										<th>Thing 3</th>
-									</tr>
-
-									<tbody>
-										<tr>
-											<td>1</td>
-											<td>1246</td>
-											<td>Hello</td>
-											<td>true</td>
-										</tr>
-
-										<tr>
-											<td>2</td>
-											<td>4652</td>
-											<td>Goodbye</td>
-											<td>false</td>
-										</tr>
-
-										<tr>
-											<td>3</td>
-											<td>1657</td>
-											<td>Cheers</td>
-											<td>false</td>
-										</tr>
-
-										<tr>
-											<td>4</td>
-											<td>1498</td>
-											<td>Beers</td>
-											<td>true</td>
-										</tr>
-
-										<tr>
-											<td>5</td>
-											<td>3286</td>
-											<td>Awesome</td>
-											<td>true</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-
-							<div class="grid-item lap-one_half">
-								<h4>Outer & row borders</h4>
-								<p><code>thead&gt;</code> & <code>&lt;tfoot&gt;</code></p>
-
-								<pre><code>&lt;table class="table border border_rows"&gt;
-	&lt;thead&gt;
-		&lt;tr&gt;
-			&lt;th&gt;#&lt;/th&gt;
-			&lt;th&gt;Thing 1&lt;/th&gt;
-			&lt;th&gt;Thing 2&lt;/th&gt;
-			&lt;th&gt;Thing 3&lt;/th&gt;
-		&lt;/tr&gt;
-	&lt;/thead&gt;
-	...
-&lt;/table&gt;</code></pre>
-
-								<table class="table border border_rows">
-									<thead>
-										<tr>
-											<th>#</th>
-											<th>Thing 1</th>
-											<th>Thing 2</th>
-											<th>Thing 3</th>
-										</tr>
-									</thead>
-
-									<tfoot>
-										<tr>
-											<td>#</td>
-											<td>Thing 1</td>
-											<td>Thing 2</td>
-											<td>Thing 3</td>
-										</tr>
-									</tfoot>
-
-									<tbody>
-										<tr>
-											<td>1</td>
-											<td>1246</td>
-											<td>Hello</td>
-											<td>true</td>
-										</tr>
-
-										<tr>
-											<td>2</td>
-											<td>4652</td>
-											<td>Goodbye</td>
-											<td>false</td>
-										</tr>
-
-										<tr>
-											<td>3</td>
-											<td>1657</td>
-											<td>Cheers</td>
-											<td>false</td>
-										</tr>
-
-										<tr>
-											<td>4</td>
-											<td>1498</td>
-											<td>Beers</td>
-											<td>true</td>
-										</tr>
-
-										<tr>
-											<td>5</td>
-											<td>3286</td>
-											<td>Awesome</td>
-											<td>true</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-
-							<div class="grid-item lap-one_half">
-								<h4>All borders</h4>
-								<p>No <code>&lt;thead&gt;</code> or <code>&lt;tfoot&gt;</code></p>
-
-								<pre><code>&lt;table class="table border border_all"&gt;
-	&lt;tr&gt;
-		&lt;th&gt;#&lt;/th&gt;
-		&lt;th&gt;Thing 1&lt;/th&gt;
-		&lt;th&gt;Thing 2&lt;/th&gt;
-		&lt;th&gt;Thing 3&lt;/th&gt;
-	&lt;/tr&gt;
-	...
-&lt;/table&gt;</code></pre>
-
-								<table class="table border border_all">
-									<tr>
-										<th>#</th>
-										<th>Thing 1</th>
-										<th>Thing 2</th>
-										<th>Thing 3</th>
-									</tr>
-
-									<tbody>
-										<tr>
-											<td>1</td>
-											<td>1246</td>
-											<td>Hello</td>
-											<td>true</td>
-										</tr>
-
-										<tr>
-											<td>2</td>
-											<td>4652</td>
-											<td>Goodbye</td>
-											<td>false</td>
-										</tr>
-
-										<tr>
-											<td>3</td>
-											<td>1657</td>
-											<td>Cheers</td>
-											<td>false</td>
-										</tr>
-
-										<tr>
-											<td>4</td>
-											<td>1498</td>
-											<td>Beers</td>
-											<td>true</td>
-										</tr>
-
-										<tr>
-											<td>5</td>
-											<td>3286</td>
-											<td>Awesome</td>
-											<td>true</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-
-							<div class="grid-item lap-one_half">
-								<h4>All borders</h4>
-								<p><code>thead&gt;</code> & <code>&lt;tfoot&gt;</code></p>
-
-								<pre><code>&lt;table class="table border border_all"&gt;
-	&lt;thead&gt;
-		&lt;tr&gt;
-			&lt;th&gt;#&lt;/th&gt;
-			&lt;th&gt;Thing 1&lt;/th&gt;
-			&lt;th&gt;Thing 2&lt;/th&gt;
-			&lt;th&gt;Thing 3&lt;/th&gt;
-		&lt;/tr&gt;
-	&lt;/thead&gt;
-	...
-&lt;/table&gt;</code></pre>
-
-								<table class="table border border_all">
-									<thead>
-										<tr>
-											<th>#</th>
-											<th>Thing 1</th>
-											<th>Thing 2</th>
-											<th>Thing 3</th>
-										</tr>
-									</thead>
-
-									<tfoot>
-										<tr>
-											<td>#</td>
-											<td>Thing 1</td>
-											<td>Thing 2</td>
-											<td>Thing 3</td>
-										</tr>
-									</tfoot>
-
-									<tbody>
-										<tr>
-											<td>1</td>
-											<td>1246</td>
-											<td>Hello</td>
-											<td>true</td>
-										</tr>
-
-										<tr>
-											<td>2</td>
-											<td>4652</td>
-											<td>Goodbye</td>
-											<td>false</td>
-										</tr>
-
-										<tr>
-											<td>3</td>
-											<td>1657</td>
-											<td>Cheers</td>
-											<td>false</td>
-										</tr>
-
-										<tr>
-											<td>4</td>
-											<td>1498</td>
-											<td>Beers</td>
-											<td>true</td>
-										</tr>
-
-										<tr>
-											<td>5</td>
-											<td>3286</td>
-											<td>Awesome</td>
-											<td>true</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-
-							<div class="grid-item lap-one_half">
-								<h4>Stripes</h4>
-								<p>No <code>&lt;thead&gt;</code> or <code>&lt;tfoot&gt;</code></p>
-
-								<pre><code>&lt;table class="table stripe"&gt;
-	&lt;tr&gt;
-		&lt;th&gt;#&lt;/th&gt;
-		&lt;th&gt;Thing 1&lt;/th&gt;
-		&lt;th&gt;Thing 2&lt;/th&gt;
-		&lt;th&gt;Thing 3&lt;/th&gt;
-	&lt;/tr&gt;
-	...
-&lt;/table&gt;</code></pre>
-
-								<table class="table stripe">
-									<tr>
-										<th>#</th>
-										<th>Thing 1</th>
-										<th>Thing 2</th>
-										<th>Thing 3</th>
-									</tr>
-
-									<tbody>
-										<tr>
-											<td>1</td>
-											<td>1246</td>
-											<td>Hello</td>
-											<td>true</td>
-										</tr>
-
-										<tr>
-											<td>2</td>
-											<td>4652</td>
-											<td>Goodbye</td>
-											<td>false</td>
-										</tr>
-
-										<tr>
-											<td>3</td>
-											<td>1657</td>
-											<td>Cheers</td>
-											<td>false</td>
-										</tr>
-
-										<tr>
-											<td>4</td>
-											<td>1498</td>
-											<td>Beers</td>
-											<td>true</td>
-										</tr>
-
-										<tr>
-											<td>5</td>
-											<td>3286</td>
-											<td>Awesome</td>
-											<td>true</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-
-							<div class="grid-item lap-one_half">
-								<h4>Stripes</h4>
-								<p><code>thead&gt;</code> & <code>&lt;tfoot&gt;</code></p>
-
-								<pre><code>&lt;table class="table stripe"&gt;
-	&lt;thead&gt;
-		&lt;tr&gt;
-			&lt;th&gt;#&lt;/th&gt;
-			&lt;th&gt;Thing 1&lt;/th&gt;
-			&lt;th&gt;Thing 2&lt;/th&gt;
-			&lt;th&gt;Thing 3&lt;/th&gt;
-		&lt;/tr&gt;
-	&lt;/thead&gt;
-	...
-&lt;/table&gt;</code></pre>
-
-								<table class="table stripe">
-									<thead>
-										<tr>
-											<th>#</th>
-											<th>Thing 1</th>
-											<th>Thing 2</th>
-											<th>Thing 3</th>
-										</tr>
-									</thead>
-
-									<tfoot>
-										<tr>
-											<td>#</td>
-											<td>Thing 1</td>
-											<td>Thing 2</td>
-											<td>Thing 3</td>
-										</tr>
-									</tfoot>
-
-									<tbody>
-										<tr>
-											<td>1</td>
-											<td>1246</td>
-											<td>Hello</td>
-											<td>true</td>
-										</tr>
-
-										<tr>
-											<td>2</td>
-											<td>4652</td>
-											<td>Goodbye</td>
-											<td>false</td>
-										</tr>
-
-										<tr>
-											<td>3</td>
-											<td>1657</td>
-											<td>Cheers</td>
-											<td>false</td>
-										</tr>
-
-										<tr>
-											<td>4</td>
-											<td>1498</td>
-											<td>Beers</td>
-											<td>true</td>
-										</tr>
-
-										<tr>
-											<td>5</td>
-											<td>3286</td>
-											<td>Awesome</td>
-											<td>true</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-						</div>
-					</section>
-
-					<section id="main">
-						<h2>Main</h2>
-
-						<pre><code>/*  =======================================================================  *\
-	Main ($main)
-\*  =======================================================================  */</code></pre>
-
-						<p>This is where you place all of <em>your</em> custom, project-specific styles.</p>
-					</section>
-
-					<div class="grid">
-						<section id="helpers" class="grid-item lap-one_third">
-							<h2>Helpers</h2>
-
-							<p>A lot of helpers from the fantastic <a href="http://cbrac.co/Zt9YqM">HTML5 Boilerplate</a> are included here, along with some custom helpers for quick control over text alignment, margins, paddings, and floats.</p>
-						</section>
-
-						<section id="print" class="grid-item lap-one_third">
-							<h2>Print</h2>
-
-							<p>These styles make your project more printer-friendly. They were also copy and pasted directly from the <a href="http://cbrac.co/Zt9YqM">HTML5 Boilerplate</a> project, and inlined to avoid an extra HTTP request.</p>
-						</section>
-
-						<section id="js" class="grid-item lap-one_third">
-							<h2>Javascript</h2>
-
-							<p>Pulled from the <a href="http://cbrac.co/Zt9YqM">HTML5 Boilerplate</a>, the <code>plugins.js</code> file includes a small function to avoid console errors in browsers that lack a console.</p>
-
-							<p>An asynchronous Google Analytics snippet is also present at the bottom of <code>index.html</code>.</p>
-						</section>
-					</div>
-
-					<section id="browsers" class="grid">
-						<div class="grid-item lap-one_half">
-							<h2>Browser support</h2>
-
-							<p>Cardinal supports most modern browsers:</p>
-
-							<div class="well">
-								<ul class="margin_none">
-									<li>Google Chrome 25+</li>
-									<li>Mozilla Firefox 19+</li>
-									<li>Safari 6.0+</li>
-									<li>iOS Safari 4.0+</li>
-									<li>Opera 12.1+</li>
-									<li>Android 4.2+</li>
-									<li>Internet Explorer 9+</li>
-								</ul>
-							</div>
-						</div>
-
-						<div class="grid-item lap-one_half">
-							<h3>What about IE8?</h3>
-
-							<p>I realize that for many web applications, IE8 cannot be ignored. By including the <a href="https://github.com/chuckcarpenter/REM-unit-polyfill">REM unit polyfill</a> and Scott Jehl’s <a href="https://github.com/scottjehl/Respond">Respond.js</a>, Cardinal should work in IE8, but you will lose the scalable layout and typography because the REM unit polyfill converts all the rem values to pixels.</p>
-
-							<p>A better option might be to include an IE-only stylesheet that serves a “fixed-layout” version of your application, instead of bothering with polyfills and other bandaid solutions.</p>
-						</div>
-					</section>
-				</div>
+					<nav class="section-menu island rounded">
+						<a href="#menu" class="button chunky rounded primary">Menu</a>
+						<a href="#top" class="button chunky rounded">Back to top</a>
+					</nav>
+				</section>
 			</div>
 
-			<footer class="credits strip margin_none">
-				<div class="wrapper">
-					<p class="margin_none">code by @<a href="http://cbracco.me">cbracco</a> // illustration by @<a href="http://bigroomstudios.com">varberakis</a></p>
+			<footer class="footer strip" role="downloads">
+				<h2 class="footer-tagline h3 subheading">Build something great.</h2>
 
-					<a href="#top" class="button back_to_top"><i class="icon icon-arrow_up"></i></a>
-				</div>
+				<nav class="footer-actions">
+					<a href="https://github.com/cbracco/cardinal/archive/master.zip" title="Download from Github" id="footer-download" class="button chunky pill primary version margin_bottom">Download</a>
+
+					<a href="https://github.com/cbracco/cardinal" title="View & contribute on Github" id="footer-github_repo" class="button chunky pill secondary margin_bottom">View on Github</a>
+				</nav>
+
+				<p class="footer-credits margin_none">Made by <a href="http://cbracco.me" id="footer-cbracco">Chris Bracco</a>.</p>
 			</footer>
 		</div>
 
+		<nav id="menu" class="menu" role="navigation">
+			<a href="#top" class="menu-anchor">&larr; Go back</a>
+			<a href="#top" class="menu-heading h3">Cardinal</a>
+			<ul class="cf">
+				<li><a href="#get_started">Get started</a></li>
+				<li><a href="#base">Base</a></li>
+				<li><a href="#typography">Typography</a></li>
+				<li><a href="#code">Code</a></li>
+				<li><a href="#embedded">Embedded</a></li>
+				<li><a href="#forms">Forms</a></li>
+				<li><a href="#tables">Tables</a></li>
+				<li><a href="#layout">Layout</a></li>
+				<li><a href="#grids">Grids</a></li>
+				<li><a href="#buttons">Buttons</a></li>
+				<li><a href="#main">Main</a></li>
+				<li><a href="#helpers">Helpers</a></li>
+				<li><a href="#print">Print</a></li>
+				<li><a href="#javascript">Javascript</a></li>
+				<li><a href="#browsers">Browsers</a></li>
+				<li><a href="#issues">Issues</a></li>
+			</ul>
+		</nav>
+
 		<!-- jQuery -->
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
-		<script>window.jQuery || document.write("<script src=\"js/vendor/jquery-1.10.0.min.js\"><\/script>")</script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script>window.jQuery || document.write("<script src=\"js/vendor/jquery-1.10.2.min.js\"><\/script>")</script>
 
 		<!-- Scripts -->
 		<script src="js/plugins.js"></script>
@@ -2124,13 +1021,13 @@ video {
 
 		<!-- Google Analytics (async) -->
 		<script>
-			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
 			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			})(window,document,"script","//www.google-analytics.com/analytics.js","ga");
 
-			ga('create', 'UA-12953082-13', 'cardinalcss.com');
-			ga('send', 'pageview');
+			ga("create", "UA-12953082-13", "cardinalcss.com");
+			ga("send", "pageview");
 		</script>
 	</body>
 </html>

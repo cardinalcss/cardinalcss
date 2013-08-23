@@ -1,27 +1,62 @@
 /* ================================================================== *\
-   Table of contents
+
+   Name: Cardinal
+   Info: a small, “mobile first” CSS framework by Chris Bracco
+   Link: http://cardinalcss.com
+
+   TABLE OF CONTENTS
+   ---------------------------
    (Ctrl/Cmd + F, and search for `$section` to jump to a section)
-   01. Base................Normalize.css (minified), important styles
-   02. Typography..........Basic typography elements
-   03. Non-typography......Important elements that are not type-based
-   04. Grids...............A simple grid system & handy width classes
-   05. Layout..............Common layout items (wrappers, islands, etc)
-   06. Buttons.............Basic styles, sizes, and shapes
-   07. Icons...............Useful classes to display icons
-   08. Tables..............Styles for tabular data
-   09. Main................Your styles go here!
-   10. Helpers.............Some useful, global classes
-   11. Print...............Inlined, barebones print styles
+   01. Base................Lay the foundation
+   02. Links...............Default styles for anchor links
+   03. Typography..........Basic typography elements
+   04. Code................Pre-formatted text and other code styles
+   05. Embedded content....Markup elements that use external content
+   06. Forms...............Styling for elements that make up a form
+   07. Tables..............Styles for tabular data
+   08. Layout..............Common layout items (wrappers, islands, etc)
+   09. Grids...............A simple grid system & handy width classes
+   10. Buttons.............Basic styles, sizes, and shapes
+   11. Main................Your styles go here!
+   12. Helpers.............Some useful, global classes
+   13. Print...............Inlined, barebones print styles
+
+   COLORS
+   ---------------------------
+   Brand:     #c12026 (red)
+   Primary:   #1fa3ec (blue)
+   Secondary: #e98724 (orange)
+
+   GRAYSCALE
+   ---------------------------
+   Black:         #222
+   Darkest gray:  #444
+   Darker gray:   #777
+   Dark gray:     #aaa
+   Gray:          #ccc
+   Light gray:    #dedede
+   Lighter gray:  #efefef
+   Lightest gray: #f8f8f8
+   White:         #fff
+
 \* ================================================================== */
 
 /* ================================================================== *\
    Base ($base)
 \* ================================================================== */
 
-/*! normalize.css v2.1.2 | MIT License | git.io/normalize */
-article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,video{display:inline-block}audio:not([controls]){display:none;height:0}[hidden]{display:none}html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}a:focus{outline:thin dotted}a:active,a:hover{outline:0}h1{font-size:2em;margin:.67em 0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}mark{background:#ff0;color:#000}code,kbd,pre,samp{font-family:monospace,serif;font-size:1em}pre{white-space:pre-wrap}q{quotes:"\201C" "\201D" "\2018" "\2019"}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:0}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}button,input{line-height:normal}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}
+/* Viewport resizing */
+@-webkit-viewport { width: device-width; zoom: 1.0; }
+@-moz-viewport    { width: device-width; zoom: 1.0; }
+@-ms-viewport     { width: device-width; zoom: 1.0; }
+@-o-viewport      { width: device-width; zoom: 1.0; }
+@viewport         { width: device-width; zoom: 1.0; }
 
-/* `border-box`... ALL THE THINGS - http://cbrac.co/RQrDL5 */
+/**
+ * Box model adjustments
+ * `border-box`... ALL THE THINGS - http://cbrac.co/RQrDL5
+ */
+
 *,
 *:before,
 *:after {
@@ -30,22 +65,51 @@ article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,su
 	box-sizing:         border-box;
 }
 
-/* Set <html> and <body> to inherit the height of the viewport */
-html,
-body {
-	min-height: 100%;
+/* Correct `block` display not defined in IE 8/9 */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+	display: block;
 }
 
 /**
+ * Address [hidden] styling not present in IE 8/9
+ * Hide the <template> element in IE, Safari, and Firefox < 22
+ */
+
+[hidden],
+template {
+	display: none;
+}
+
+/* Set <html> and <body> to inherit the height of the viewport */
+html,
+body {
+	height: 100%;
+}
+
+/**
+ * 1. Force a vertical scrollbar - http://cbrac.co/163MspB
+ * 2. Remove text size adjustments without disabling user zoom
  * NOTE: Use `text-rendering` with caution - http://cbrac.co/SJt8p1
  * NOTE: Avoid the webkit anti-aliasing trap - http://cbrac.co/TAdhbH
- * 1. Force a vertical scrollbar - http://cbrac.co/163MspB
- * 2. Remove iOS text size adjust without disabling user zoom
+ * NOTE: IE for Windows Phone 8 ignores `-ms-text-size-adjust` if the
+ *       viewport <meta> tag is used - http://cbrac.co/1cFrAvl
  */
 
 html {
 	overflow-y: scroll;             /* 1 */
 	-webkit-text-size-adjust: 100%; /* 2 */
+	-ms-text-size-adjust:     100%; /* 2 */
 	text-size-adjust:         100%; /* 2 */
 }
 
@@ -66,7 +130,7 @@ html {
 
 /* Change `background` for text selections when browser is unfocused */
 ::selection:window-inactive {
-	background: #d0d0d0;
+	background: #dedede;
 }
 
 /* Remove `background` on images when selected */
@@ -79,65 +143,68 @@ img::-moz-selection {
 }
 
 /* ================================================================== *\
-   Typography ($typography)
+   Links ($links)
+\* ================================================================== */
 
-   Modular scale:    12px @ 1:1.333 (perfect fourth)
-   Important number: 24px (maximum <html> `font-size`)
-   http://modularscale.com/scale/?px1=12&px2=24&ra1=1.333&ra2=0
-
-   Description
-   --------------------
-   Cardinal uses a combination of modular scale, unit-less line heights,
-   and `rem` units so that it is easy to scale the type and layout
-   across your entire project.
-
-   How it works
-   --------------------
-   The root font size is first set to a value that feels comfortable on
-   small feature phones (mobile devices with a viewport width less than
-   320px).
-
-   Then, using `@media` queries, Cardinal increases the root font size
-   at several common viewport widths, called breakpoints. You can tweak
-   these `@media` queries and percentage values to suit your project.
-   This is how the type and layout scale globally.
-
-   NOTE: IE9 & IE10 do not recognize `rem` units when used with the
-   `font` shorthand property.
-\* ========================================================================= */
-
-html { font-size: 75%; } /* 12px */
-@media only screen and (min-width: 320px)  { html { font-size: 81.25%; } }
-@media only screen and (min-width: 480px)  { html { font-size: 87.5%;  } }
-@media only screen and (min-width: 640px)  { html { font-size: 100%;   } }
-@media only screen and (min-width: 960px)  { html { font-size: 112.5%; } }
-@media only screen and (min-width: 1440px) { html { font-size: 150%;   } }
-
-/**
- * 1. Inherits percentage declared on above <html> as the root `font-size`
- * 2. Unitless `line-height`, which acts as a multiple of the root `font-size`
- */
-
-body {
-	color: #444;
-	font-size: 1rem;  /* 1 */
-	font-family: "Helvetica Neue", Arial, sans-serif;
-	line-height: 1.5; /* 2 */
-}
-
-/* Define a mobile tap highlight color (iOS 1.1.1+) */
-a:link {
-	-webkit-tap-highlight-color: #b3d4fc;
+/* 1. Remove the gray background color from active links in IE 10 */
+a {
+	background: transparent; /* 1 */
+	color: #1fa3ec;
 }
 
 a:hover {
 	text-decoration: none;
 }
 
+/* Improve readability when focused or hovered in all browsers */
+a:active,
+a:hover {
+	outline: 0;
+}
+
+/* Address `outline` inconsistency between Chrome and other browsers */
+a:focus {
+	outline: thin dotted;
+}
+
+/* ================================================================== *\
+   Typography ($typography)
+
+   Modular scale:    12px @ 1:1.333 (perfect fourth)
+   Important number: 20px (maximum <html> `font-size`)
+   http://modularscale.com/scale/?px1=12&px2=20&ra1=1.333&ra2=0
+\* ================================================================== */
+
+html { font-size: 75%; } /* 12px */
+@media only screen and (min-width: 320px)  { html { font-size: 81.25%; } } /* 13px */
+@media only screen and (min-width: 480px)  { html { font-size: 87.5%;  } } /* 14px */
+@media only screen and (min-width: 640px)  { html { font-size: 100%;   } } /* 16px */
+@media only screen and (min-width: 960px)  { html { font-size: 112.5%; } } /* 18px */
+@media only screen and (min-width: 1440px)  { html { font-size: 125%; } }  /* 20px */
+
+/**
+ * 1. Remove default `margin`
+ * 2. Inherits percentage declared on above <html> as root `font-size`
+ * 3. Unitless `line-height`, which acts as multiple of root `font-size`
+ */
+
+body {
+	margin: 0;        /* 1 */
+	color: #444;
+	font-size: 1rem;  /* 2 */
+	font-family: "Helvetica Neue", Arial, sans-serif;
+	line-height: 1.5; /* 3 */
+}
+
 abbr,
 acronym,
 dfn[title] {
 	cursor: help;
+}
+
+/* Address styling not present in IE 8/9, Safari 5, and Chrome */
+abbr[title] {
+	border-bottom: 1px dotted;
 }
 
 abbr a {
@@ -148,9 +215,15 @@ acronym {
 	text-transform: uppercase;
 }
 
+/* Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome */
+b,
+strong {
+	font-weight: bold;
+}
+
 blockquote {
 	padding-left: 1rem;
-	border-left: 5px solid #efefef;
+	border-left: 5px solid #e5e5e5;
 	font-style: italic;
 	font-family: Baskerville, "Baskerville Old Face", "Hoefler Text",
 		Garamond, "Times New Roman", serif;
@@ -165,22 +238,24 @@ blockquote p + p {
 }
 
 /**
+ * 1. Add an m-dash character before the <footer> tag
  * TIP: Use <footer> tag instead of <cite> inside blockquotes -
- * http://cbrac.co/TCVK4P
+ *      http://cbrac.co/TCVK4P
  */
 
 blockquote footer:before {
-	content: "\2014 \2009";
+	content: "\2014 \2009"; /* 1 */
 }
 
 blockquote footer {
-	color: #686868;
+	color: #777;
 	font-style: italic;
 	font-size: 0.8125rem;
 }
 
 blockquote,
 dl,
+figure,
 hr,
 menu,
 ol,
@@ -192,33 +267,9 @@ ul {
 	margin: 0 0 1rem;
 }
 
-code,
-pre {
-	font-size: 0.8125rem;
-	font-family: Monaco, "Lucida Sans Typewriter", Consolas,
-		"Courier New", monospace;
-}
-
-code {
-	padding: 0 0.3rem;
-	border: 1px solid #d6d6d6;
-	-webkit-border-radius: 3px;
-	-moz-border-radius:    3px;
-	border-radius:         3px;
-	background: #f8f8f8;
-	white-space: nowrap;
-}
-
-/* Increase `font-size` and `padding` for <kbd> on larger devices */
-@media only screen and (min-width: 480px) {
-	code {
-		padding: 0.1rem 0.3rem;
-	}
-}
-
 dl dt {
-	font-weight: 700;
 	color: #222;
+	font-weight: 700;
 }
 
 dl dd {
@@ -226,7 +277,7 @@ dl dd {
 }
 
 del {
-	color: #686868;
+	color: #777;
 	text-decoration: line-through;
 }
 
@@ -234,149 +285,81 @@ details {
 	cursor: pointer;
 }
 
+/* Address styling not present in Safari 5 and Chrome */
+dfn {
+	font-style: italic;
+}
+
 em,
+figcaption,
 i,
 cite {
 	font-style: italic;
 }
 
+figcaption {
+	margin: 0.75rem 0 0;
+	font-size: 75%;
+}
+
 /* NOTE: Use `text-rendering` with caution - http://cbrac.co/SJt8p1 */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-h1.text_huge, h2.text_huge, h3.text_huge, h4.text_huge, h5.text_huge, h6.text_huge,
-h1.text_xxl, h2.text_xxl, h3.text_xxl, h4.text_xxl, h5.text_xxl, h6.text_xxl,
-h1.text_xl, h2.text_xl, h3.text_xl, h4.text_xl, h5.text_xl, h6.text_xl,
-h1.text_large, h2.text_large, h3.text_large, h4.text_large, h5.text_large, h6.text_large,
-h1.text_medium, h2.text_medium, h3.text_medium, h4.text_medium, h5.text_medium, h6.text_medium,
-h1.text_normal, h2.text_normal, h3.text_normal, h4.text_normal, h5.text_normal, h6.text_normal,
-h1.text_small, h2.text_small, h3.text_small, h4.text_small, h5.text_small, h6.text_small {
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
 	margin: 0 0 0.75rem;
 	color: #222;
 	font-weight: 700;
 	font-family: "Helvetica Neue", sans-serif;
-	line-height: 1.5;
+	line-height: 1.333;
 	text-rendering: optimizeLegibility;
 }
 
-.text_huge,
-.text_xxl,
-.text_xl,
-.text_large,
-.text_medium,
-.text_normal,
-.text_small {
-	color: inherit;
-	font-weight: inherit;
-}
+h1, .h1 { font-size: 3.157rem; }
+h2, .h2 { font-size: 2.369rem; }
+h3, .h3 { font-size: 1.777rem; }
+h4, .h4 { font-size: 1.333rem; }
+h5, .h5 { font-size: 1rem;     }
+h6, .h6 { font-size: 0.75rem;  }
 
-h1,
-h2,
-.text_huge,
-.text_xxl {
-	line-height: 1.333;
-}
-
-.text_huge {
-	font-size: 4.209rem;
-}
-
-h1,
-.text_xxl {
-	font-size: 3.157rem;
-}
-
-h2,
-.text_xl {
-	font-size: 2.369rem;
-}
-
-h3,
-.text_large {
-	font-size: 1.777rem;
-}
-
-h4,
-.text_medium {
-	font-size: 1.333rem;
-}
-
-h5,
-h6,
-.text_normal {
-	font-size: 1rem;
-}
-
-.text_small {
-	font-size: 0.75rem;
-}
-
-h1 small,
-h2 small,
-h3 small,
-h4 small,
-h5 small,
-h6 small {
-	color: #686868;
-	line-height: inherit;
-}
-
-h1.subheading,
-h2.subheading,
-h3.subheading,
-h4.subheading,
-h5.subheading,
-h6.subheading {
-	color: #686868;
+/* Give subheadings a lighter `font-weight` */
+h1.subheading, .h1.subheading,
+h2.subheading, .h2.subheading,
+h3.subheading, .h3.subheading,
+h4.subheading, .h4.subheading,
+h5.subheading, .h5.subheading,
+h6.subheading .h6.subheading {
 	font-weight: 300;
 }
 
-hr {
-	border: 0;
-	border-bottom: 1px solid #c0c0c0;
+/* Use `.muted` with `.subheading` to give them a lighter color */
+h1.subheading.muted, .h1.subheading.muted,
+h2.subheading.muted, .h2.subheading.muted,
+h3.subheading.muted, .h3.subheading.muted,
+h4.subheading.muted, .h4.subheading.muted,
+h5.subheading.muted, .h5.subheading.muted,
+h6.subheading.muted .h6.subheading.muted {
+	color: #777;
 }
 
+/* Address differences between Firefox and other browsers */
+hr {
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing:    content-box;
+	box-sizing:         content-box;
+	height: 0;
+	border: 0;
+	border-bottom: 1px solid #ccc;
+}
+
+/* Address styling not present in IE 8/9 */
 ins,
 mark {
 	background: #ff9;
-	color: #000;
+	color: #222;
 	text-decoration: none;
-}
-
-kbd {
-	position: relative;
-	top: -1px;
-	margin-bottom: 1px;
-	padding: 0 0.3rem;
-	border: 1px solid #d6d6d6;
-	-webkit-border-radius: 4px;
-	-moz-border-radius:    4px;
-	border-radius:         4px;
-	background: #f8f8f8;
-	-webkit-box-shadow:
-		0 1px 0px #d6d6d6,
-		inset 0 0 0 1px #fff;
-	-moz-box-shadow:
-		0 1px 0px #d6d6d6,
-		inset 0 0 0 1px #fff;
-	box-shadow:
-		0 1px 0px #d6d6d6,
-		inset 0 0 0 1px #fff;
-	white-space: nowrap;
-	font-size: 10px;
-	font-family: Monaco, "Lucida Sans Typewriter", Consolas,
-		"Courier New", monospace;
-}
-
-/* Increase `font-size` and `padding` for <kbd> on larger devices */
-@media only screen and (min-width: 480px) {
-	kbd {
-		padding: 0.1rem 0.3rem;
-		font-size: 0.75rem;
-	}
 }
 
 nav ul,
@@ -392,10 +375,10 @@ ol ol       { list-style: upper-alpha; }
 ol ol ol    { list-style: lower-roman; }
 ol ol ol ol { list-style: lower-alpha; }
 
-ol li ol,
-ol li ul,
-ul li ul,
-ul li ol {
+ol ol,
+ol ul,
+ul ul,
+ul ol {
 	margin-bottom: 0;
 }
 
@@ -404,22 +387,116 @@ table,
 textarea,
 td,
 th {
+	word-wrap: break-word;
 	-webkit-hyphens: auto;
 	-moz-hyphens:    auto;
 	-ms-hyphens:     auto;
 	hyphens:         auto;
-	word-wrap: break-word;
+}
+
+/* Set consistent <q> types */
+q {
+	quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/* 1. Address inconsistent and variable `font-size` in all browsers */
+small {
+	display: inline-block;
+	font-size: 87.5%; /* 1 */
+	line-height: 1.333;
+}
+
+/* Prevent <sub> and <sup> affecting `line-height` in all browsers */
+sub,
+sup {
+	position: relative;
+	vertical-align: baseline;
+	font-size: 75%;
+	line-height: 0;
+}
+
+sup {
+	top: -0.5em;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+/* ================================================================== *\
+   Code ($code)
+\* ================================================================== */
+
+/* Correct `font-family` set oddly in Safari 5 and Chrome */
+code,
+kbd,
+pre,
+samp {
+	color: #444;
+	font-family: Monaco, "Lucida Sans Typewriter", Consolas,
+		"Courier New", monospace;
+}
+
+code,
+kbd {
+	font-size: 75%;
+}
+
+code {
+	padding: 0 0.3rem;
+	border: 1px solid #dedede;
+	-webkit-border-radius: 3px;
+	-moz-border-radius:    3px;
+	border-radius:         3px;
+	background: #f8f8f8;
+	white-space: nowrap;
+}
+
+/* Increase `padding` at larger viewport widths */
+@media only screen and (min-width: 480px) {
+	code {
+		padding: 0.1rem 0.3rem;
+	}
+}
+
+kbd {
+	position: relative;
+	top: -1px;
+	margin-bottom: 1px;
+	padding: 0 0.3rem;
+	border: 1px solid #dedede;
+	-webkit-border-radius: 4px;
+	-moz-border-radius:    4px;
+	border-radius:         4px;
+	background: #f8f8f8;
+	-webkit-box-shadow:
+		0 1px 0px #dedede,
+		inset 0 0 0 1px #fff;
+	-moz-box-shadow:
+		0 1px 0px #dedede,
+		inset 0 0 0 1px #fff;
+	box-shadow:
+		0 1px 0px #dedede,
+		inset 0 0 0 1px #fff;
+	white-space: nowrap;
+}
+
+/* Increase `padding` at larger viewport widths */
+@media only screen and (min-width: 480px) {
+	kbd {
+		padding: 0.1rem 0.3rem;
+	}
 }
 
 pre {
 	position: relative;
 	overflow: auto;
 	padding: 1rem;
-	background: #333;
+	background: #222;
 	-webkit-box-shadow: inset 0 0 5px hsla(0, 0%, 0%, 0.6);
 	-moz-box-shadow:    inset 0 0 5px hsla(0, 0%, 0%, 0.6);
 	box-shadow:         inset 0 0 5px hsla(0, 0%, 0%, 0.6);
-	color: #d6cba9;
+	color: #ccc;
 	white-space: pre;
 	word-wrap: normal;
 	word-break: normal;
@@ -444,56 +521,49 @@ pre code {
 	-moz-border-radius:    0;
 	border-radius:         0;
 	background: transparent;
+	color: inherit;
 	white-space: pre;
 }
 
-small {
-	display: inline-block;
-	font-size: 75%;
-	line-height: 1.333;
-}
-
 /* ================================================================== *\
-   Non-typography ($non-typography)
+   Embedded content ($embedded-content)
 \* ================================================================== */
 
-/* Fluid-width <audio> elements */
-audio {
+/**
+ * Correct `inline-block` display not defined in IE 8/9
+ */
+
+audio,
+canvas,
+video {
+	display: inline-block;
+}
+
+/* Fluid-width <audio> & <video> elements */
+audio,
+video {
 	width: 100%;
 }
 
-/* Remove <fieldset> styles from normalize.css */
-fieldset {
-	margin: 0;
-	padding: 0;
-	border: 0;
-}
+/**
+ * 1. Prevent modern browsers from displaying <audio> without controls
+ * 2. Remove excess `height` in iOS 5 devices
+ */
 
-figure {
-	margin-bottom: 1rem;
-}
-
-figcaption {
-	font-style: italic;
-	font-size: 75%;
-}
-
-figcaption {
-	margin-top: 0.5rem;
-}
-
-legend {
-	margin-bottom: 1rem;
-	font-weight: 700;
+audio:not([controls]) {
+	display: none; /* 1 */
+	height: 0;     /* 2 */
 }
 
 /**
- * Remove the gap between <img> elements and the bottom of their
- * containers - http://cbrac.co/Q6smqV
+ * 1. Remove the `border` when inside an <a> element in IE 8/9
+ * 2. Remove the gap between <img> elements and the bottom of their
+ *    containers - http://cbrac.co/Q6smqV
  */
 
 img {
-	vertical-align: middle;
+	border: 0;              /* 1 */
+	vertical-align: middle; /* 2 */
 }
 
 /* Fluid-width media that maintain their aspect ratios */
@@ -504,77 +574,325 @@ video {
 	height: auto !important;
 }
 
-/* Restrict <textarea> elements to vertical resizing only */
+/* Correct `overflow` displayed oddly in IE 9 */
+svg:not(:root) {
+	overflow: hidden;
+}
+
+/* ================================================================== *\
+   Forms ($forms)
+\* ================================================================== */
+
+/**
+ * 1. Address `margin` set differently in Firefox 4+, Safari 5, & Chrome
+ * 2. Correct `font-size` not being inherited in all browsers
+ * 3. Correct `font-family` not being inherited in all browsers
+ */
+
+button,
+input,
+select,
 textarea {
-	resize: vertical;
+	margin: 0;            /* 1 */
+	font-size: 1rem;      /* 2 */
+	font-family: inherit; /* 3 */
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on <input> using
+ * `!important` in the UA stylesheet
+ */
+
+button,
+input {
+	line-height: normal;
+}
+
+/**
+ * Fix inconsistent `text-transform` for <button> and <select>
+ * All other form control elements do not inherit `text-transform`
+ */
+
+button,
+select {
+	text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native
+ *    <audio> and <video> controls
+ * 2. Improve usability and consistency of cursor style between
+ *    image-type <input> and others
+ * 3. Correct inability to style clickable <input> types in iOS
+ */
+
+button,
+html input[type="button"],      /* 1 */
+input[type="reset"],
+input[type="submit"] {
+	cursor: pointer;            /* 2 */
+	-webkit-appearance: button; /* 3 */
+}
+
+/* Reset default `cursor` for disabled elements */
+button[disabled],
+html input[disabled] {
+	cursor: default;
+}
+
+/* Remove default <fieldset> styles for all browsers */
+fieldset {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+/* Make most inputs, select boxes, and textareas as `block` elements */
+input,
+select,
+textarea {
+	display: block;
+	width: 100%;
+	vertical-align: middle;
+}
+
+/* Make checkbox, image, and radio inputs `inline-block` by default */
+input[type="checkbox"],
+input[type="image"],
+input[type="radio"] {
+	display: inline-block;
+	width: auto;
+	cursor: pointer;
+}
+
+/**
+ * 1. Address `box-sizing` set to `content-box` in IE 8/9
+ * 2. Remove excess padding in IE 8/9
+ */
+
+input[type="checkbox"],
+input[type="radio"] {
+	box-sizing: border-box; /* 1 */
+	margin: 0 0.422rem 0.238rem 0;
+	padding: 0;             /* 2 */
+}
+
+/**
+ * 1. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof)
+ * 2. Address `appearance` set to `searchfield` in Safari 5 and Chrome
+ */
+
+input[type="search"] {
+	-webkit-box-sizing: content-box; /* 1 */
+	-moz-box-sizing:    content-box;
+	box-sizing:         content-box;
+	-webkit-appearance: textfield;   /* 2 */
+}
+
+/* Remove decoration & cancel button in Safari 5 and Chrome on OS X */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+/**
+ * Make button, reset, and submit inputs to be `inline-block`, unless
+ * otherwise specified by `.button` classes
+ */
+
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	display: inline-block;
+	width: auto;
+}
+
+/* Remove inner padding and border in Firefox 4+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+
+/* Give labels a pointer cursor by default */
+label {
+	cursor: pointer;
+}
+
+/* Give <legend> some basic styles for all browsers */
+legend {
+	margin: 0 0 1rem;
+	padding: 0;
+	border: 0;
+	color: #222;
+	font-weight: bold;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 8/9
+ * 2. Improve readability and alignment in all browsers
+ * 3. Restrict <textarea> elements to vertical resizing only
+ */
+
+textarea {
+	overflow: auto;      /* 1 */
+	vertical-align: top; /* 2 */
+	resize: vertical;    /* 3 */
+}
+
+/* ================================================================== *\
+   Tables ($tables)
+\* ================================================================== */
+
+caption {
+	font-weight: 700;
+	font-style: italic;
+	padding-bottom: 0.317rem;
+}
+
+/**
+ * Default (borderless)
+ * 1. Remove most spacing between <table> cells
+ */
+
+table {
+	max-width: 100%;
+	width: 100%;
+	border-spacing: 0;         /* 1 */
+	border-collapse: collapse; /* 1 */
+	empty-cells: show;
+}
+
+table th,
+table tfoot td {
+	color: #222;
+	text-align: left;
+	font-weight: bold;
+}
+
+table thead th,
+table tfoot td  {
+	background-color: #efefef;
+}
+
+table th,
+table td {
+	overflow: visible;
+	padding: 0.633rem;
+	vertical-align: top;
+}
+
+/* Outer border only */
+table.border {
+	border: 1px solid #dedede;
+}
+
+/* Borders for rows & columns */
+table.border_all th,
+table.border_all td {
+	border-top: 1px solid #dedede;
+	border-left: 1px solid #dedede;
+}
+
+/* Border for rows only */
+table.border_rows th,
+table.border_rows td {
+	border-top: 1px solid #dedede;
+}
+
+/* Remove top border to avoid double border on .border tables */
+table.border.border_all thead:first-child tr:first-child th,
+table.border.border_all thead:first-child tr:first-child td,
+table.border.border_rows thead:first-child tr:first-child th,
+table.border.border_rows thead:first-child tr:first-child td {
+	border-top: 0;
+}
+
+table.border_all tr th:first-child,
+table.border_all tr td:first-child {
+	border-left: 0;
+}
+
+table.border_all tr:first-child th,
+table.border_all thead:first-child tr:first-child th {
+	border-top: 0;
+}
+
+/* Add bottom border to last row in the table */
+table.border_rows tr:last-child td {
+	border-bottom: 1px solid #dedede;
+}
+
+/* Stripes */
+table.stripes tbody > tr:nth-child(odd) > td {
+	background-color: #f8f8f8;
+}
+
+/* ================================================================== *\
+   Layout ($layout)
+\* ================================================================== */
+
+/* 100% width container */
+.strip {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	background-color: #efefef;
+	list-style: none;
+}
+
+.strip .wrapper {
+	padding: 1rem 0;
+}
+
+/* Page wrapper */
+.wrapper {
+	margin: 0 auto;
+	max-width: 1000px;
+	width: 90%;
+}
+
+.island,
+.well {
+	margin: 0 0 1rem;
+}
+
+.island {
+	padding: 1rem;
+	background: #efefef;
+}
+
+.well {
+	padding: 1rem;
+	background: #efefef;
+	-webkit-box-shadow: inset 0 0 8px hsla(0, 0%, 0%, 0.15);
+	-moz-box-shadow:    inset 0 0 8px hsla(0, 0%, 0%, 0.15);
+	box-shadow:         inset 0 0 8px hsla(0, 0%, 0%, 0.15);
+}
+
+.island .island,
+.well .well {
+	background: #dedede;
+}
+
+.island.hollow,
+.well.hollow {
+	background: transparent;
+	-webkit-box-shadow: inset 0 0 0 3px hsla(0, 0%, 94%, 1.0);
+	-moz-box-shadow:    inset 0 0 0 3px hsla(0, 0%, 94%, 1.0);
+	box-shadow:         inset 0 0 0 3px hsla(0, 0%, 94%, 1.0);
+}
+
+.island.rounded,
+.well.rounded {
+	-webkit-border-radius: 0.356rem;
+	-moz-border-radius:    0.356rem;
+	border-radius:         0.356rem;
 }
 
 /* ================================================================== *\
    Grids ($grids)
-
-   Description
-   --------------------
-   Cardinal includes a simple, responsive grid system that uses fluid
-   item widths and fixed gutters. Grid items can be divided into halves,
-   thirds, fourths, fifths, and sixths.
-
-   The item widths are set in percentages, and the gutters are set in
-   `rem` units. Due to the change in the root font size above, the fixed
-   gutters grow and shrink proportionally, depending on the width of the
-   viewport.
-
-   You can also change how a `.grid_item` behaves at specified viewport
-   widths & breakpoints, by simply adding helper classes to any element
-   with the `.grid_item` class.
-
-   Additionally, the `.one_half`, `.three_fourths`, etc helper classes
-   can be used outside of the grid context, if you simply want an
-   element to have a width that is a specific percentage of its parent.
-
-   If you want smaller or larger gutters, simply change the values for
-   the `margin-left` property on the `.grid` class and the
-   `padding-left` property on the `.grid-item` class to be mirror
-   opposites. Use a `rem` value derived from the modular scale for the
-   typography above to keep everything “harmonious.”
-
-   Usage
-   --------------------
-   * .grid - element becomes a grid wrapper.
-   * .grid-item - element becomes a grid item.
-   * .one_half,
-     .two_thirds,
-     .four_fifths, etc. - element becomes specific width of its parent.
-   * .lap-* - element’s width changes on devices you place in your lap.
-   * .desk-* - element’s width changes on devices that remain on a desk.
-
-   Example
-   --------------------
-   The below example reads as: “a grid with four 100% width items, which
-   become 50% width items on devices that rest in your lap, and 25%
-   width items on larger devices that rest on top of your desk.”
-
-   <div class="grid">
-       <div class="grid-item lap-one_half desk-one_fourth"></div>
-       <div class="grid-item lap-one_half desk-one_fourth"></div>
-       <div class="grid-item lap-one_half desk-one_fourth"></div>
-       <div class="grid-item lap-one_half desk-one_fourth"></div>
-   </div>
-
-   White space issues
-   --------------------
-   Since the grids use `display: inline-block;` instead of floats, a
-   hack is used to remove that white-space in modern browsers. However,
-   this hack does not work in Safari < 6, and Android < 4.2.
-
-   If you need to support these older browsers, simply remove the white
-   space in between the grid items manually, in the HTML, like so:
-
-   <div class="grid">
-       <div class="grid-item lap-one_half desk-one_fourth"></div
-       ><div class="grid-item lap-one_half desk-one_fourth"></div
-       ><div class="grid-item lap-one_half desk-one_fourth"></div
-       ><div class="grid-item lap-one_half desk-one_fourth"></div>
-   </div>
 \* ================================================================== */
 
 /**
@@ -609,15 +927,9 @@ textarea {
 
 .grid-item {
 	display: inline-block;
-	margin-bottom: 1rem;
 	padding-left: 2rem;  /* 1 */
 	vertical-align: top; /* 2 */
 	font-size: 1rem;     /* 3 */
-}
-
-/* Remove bottom margin on the last element inside each `.grid_item` */
-.grid-item > *:last-child {
-	margin-bottom: 0;
 }
 
 /* Widths */
@@ -700,90 +1012,16 @@ textarea {
 }
 
 /* ================================================================== *\
-   Layout ($layout)
-\* ================================================================== */
-
-/* 100% width container */
-.strip {
-	margin: 0;
-	margin-bottom: 1rem;
-	padding: 0;
-	width: 100%;
-	background-color: #efefef;
-	list-style: none;
-}
-
-.strip .wrapper {
-	padding: 1rem 0;
-}
-
-/* Page wrapper */
-.wrapper {
-	margin: 0 auto;
-	max-width: 1140px;
-	width: 90%;
-}
-
-.island,
-.well {
-	margin: 0 0 1rem;
-}
-
-.island {
-	padding: 1rem;
-	background: #efefef;
-}
-
-.well {
-	padding: 1rem;
-	background: #efefef;
-	-webkit-box-shadow: inset 0 0 8px hsla(0, 0%, 0%, 0.15);
-	-moz-box-shadow:    inset 0 0 8px hsla(0, 0%, 0%, 0.15);
-	box-shadow:         inset 0 0 8px hsla(0, 0%, 0%, 0.15);
-}
-
-.island .island,
-.well .well {
-	background: #dedede;
-}
-
-/* ================================================================== *\
    Buttons ($buttons)
-
-   Usage
-   --------------------
-   class="button [style] [size && || width] [shape && || state]"
-
-   * .button - element becomes the default, “flat” style button.
-   * .hollow,
-     .chunky,
-     .glossy - element becomes the specified button style.
-   * .mini,
-     .small,
-     .large,
-     .block - element becomes the specified button size.
-   * .one_half,
-     .two_thirds,
-     .four_fifths, etc. - element becomes specific width of its parent.
-   * .rounded,
-     .pill - element becomes the specified button shape.
-   * .disabled,
-     .button[disabled] - element becomes a button that is not usable.
-
-   Examples
-   --------------------
-   * <button type="button" class="button large one_whole pill"></button>
-   * <a href="" class="button mini chunky one_half pill disabled"></a>
-   * <input type="submit" class="button glossy" value="Send message">
 \* ================================================================== */
 
-/* Base */
+/* Default (flat) */
 .button {
 	display: inline-block;
 	margin: 0;
 	padding: 0.563rem 0.844rem;
 	border: 0 none;
-	background: #e5e5e5;
+	background: #dedede;
 	color: #444;
 	text-align: center;
 	text-decoration: none;
@@ -792,21 +1030,14 @@ textarea {
 	cursor: pointer;
 }
 
-.button:hover {
-	background: #ececec;
-	color: #222;
-	cursor: pointer;
-}
-
 .button:active {
-	background: #e7e7e7;
-	-webkit-box-shadow: inset 0 0 6px hsla(0, 0%, 0%, 0.20);
-	-moz-box-shadow:    inset 0 0 6px hsla(0, 0%, 0%, 0.20);
-	box-shadow:         inset 0 0 6px hsla(0, 0%, 0%, 0.20);
+	-webkit-box-shadow: inset 0 3px 6px hsla(0, 0%, 0%, 0.20);
+	-moz-box-shadow:    inset 0 3px 6px hsla(0, 0%, 0%, 0.20);
+	box-shadow:         inset 0 3px 6px hsla(0, 0%, 0%, 0.20);
 }
 
 .button:focus {
-	outline: thin dotted #333;
+	outline: thin dotted #444;
 	outline: 5px auto -webkit-focus-ring-color;
 	outline-offset: -2px;
 }
@@ -819,18 +1050,13 @@ textarea {
 	box-shadow:         inset 0 0 0 3px hsla(0, 0%, 92%, 1.0);
 }
 
-.button.hollow:hover {
-	background: #ececec;
-	-webkit-box-shadow: inset 0 0 0 3px hsla(0, 0%, 93%, 1.0);
-	-moz-box-shadow:    inset 0 0 0 3px hsla(0, 0%, 93%, 1.0);
-	box-shadow:         inset 0 0 0 3px hsla(0, 0%, 93%, 1.0);
-}
-
-.button.hollow:active {
-	background: #e7e7e7;
-	-webkit-box-shadow: inset 0 0 6px hsla(0, 0%, 0%, 0.20);
-	-moz-box-shadow:    inset 0 0 6px hsla(0, 0%, 0%, 0.20);
-	box-shadow:         inset 0 0 6px hsla(0, 0%, 0%, 0.20);
+.button.hollow:active,
+.button.primary.hollow:active,
+.button.secondary.hollow:active {
+	background: #efefef;
+	-webkit-box-shadow: inset 0 3px 6px hsla(0, 0%, 0%, 0.20);
+	-moz-box-shadow:    inset 0 3px 6px hsla(0, 0%, 0%, 0.20);
+	box-shadow:         inset 0 3px 6px hsla(0, 0%, 0%, 0.20);
 }
 
 .button.chunky {
@@ -840,114 +1066,9 @@ textarea {
 }
 
 .button.chunky:active {
-	-webkit-box-shadow: inset 0 2px 3px hsla(0, 0%, 0%, 0.2);
-	-moz-box-shadow:    inset 0 2px 3px hsla(0, 0%, 0%, 0.2);
-	box-shadow:         inset 0 2px 3px hsla(0, 0%, 0%, 0.2);
-}
-
-.button.glossy {
-	border: 1px solid #c5c5c5;
-	background-image: -moz-linear-gradient(
-		top,
-		hsla(0, 0%, 100%, 1.0) 0%,
-		hsla(0, 0%, 95%, 1.0) 50%,
-		hsla(0, 0%, 88%, 1.0) 51%,
-		hsla(0, 0%, 96%, 1.0) 100%
-	); /* FF 3.6+ */
-	background-image: -webkit-gradient(
-		linear,
-		left top,
-		left bottom,
-		color-stop(0%,   hsla(0, 0%, 100%, 1.0)),
-		color-stop(50%,  hsla(0, 0%, 95%, 1.0)),
-		color-stop(51%,  hsla(0, 0%, 88%, 1.0)),
-		color-stop(100%, hsla(0, 0%, 96%, 1.0))
-	); /* Chrome, Safari 4+ */
-	background-image: -webkit-linear-gradient(
-		top,
-		hsla(0, 0%, 100%, 1.0) 0%,
-		hsla(0, 0%, 95%, 1.0) 50%,
-		hsla(0, 0%, 88%, 1.0) 51%,
-		hsla(0, 0%, 96%, 1.0) 100%
-	); /* Chrome 10+, Safari 5.1+ */
-	background-image: -o-linear-gradient(
-		top,
-		hsla(0, 0%, 100%, 1.0) 0%,
-		hsla(0, 0%, 95%, 1.0) 50%,
-		hsla(0, 0%, 88%, 1.0) 51%,
-		hsla(0, 0%, 96%, 1.0) 100%
-	); /* Opera 11.10+ */
-	background-image: -ms-linear-gradient(
-		top,
-		hsla(0, 0%, 100%, 1.0) 0%,
-		hsla(0, 0%, 95%, 1.0) 50%,
-		hsla(0, 0%, 88%, 1.0) 51%,
-		hsla(0, 0%, 96%, 1.0) 100%
-	); /* IE 10+ */
-	background-image: linear-gradient(
-		to bottom,
-		hsla(0, 0%, 100%, 1.0) 0%,
-		hsla(0, 0%, 95%, 1.0) 50%,
-		hsla(0, 0%, 88%, 1.0) 51%,
-		hsla(0, 0%, 96%, 1.0) 100%
-	); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient(
-		startColorstr='#ffffff',
-		endColorstr='#f6f6f6',
-		GradientType=0
-	); /* IE 6-9 */
-}
-
-.button.glossy:hover {
-	background-image: -moz-linear-gradient(
-		top,
-		hsla(0, 0%, 100%, 1.0) 0%,
-		hsla(0, 0%, 98%, 1.0) 50%,
-		hsla(0, 0%, 91%, 1.0) 51%,
-		hsla(0, 0%, 99%, 1.0) 100%
-	); /* FF3.6+ */
-	background-image: -webkit-gradient(
-		linear,
-		left top,
-		left bottom,
-		color-stop(0%, hsla(0, 0%, 100%, 1.0)),
-		color-stop(50%, hsla(0, 0%, 98%, 1.0)),
-		color-stop(51%, hsla(0, 0%, 91%, 1.0)),
-		color-stop(100%, hsla(0, 0%, 99%, 1.0))
-	); /* Chrome, Safari4+ */
-	background-image: -webkit-linear-gradient(
-		top,
-		hsla(0, 0%, 100%, 1.0) 0%,
-		hsla(0, 0%, 98%, 1.0) 50%,
-		hsla(0, 0%, 91%, 1.0) 51%,
-		hsla(0, 0%, 99%, 1.0) 100%
-	); /* Chrome10+, Safari5.1+ */
-	background-image: -o-linear-gradient(
-		top,
-		hsla(0, 0%, 100%, 1.0) 0%,
-		hsla(0, 0%, 98%, 1.0) 50%,
-		hsla(0, 0%, 91%, 1.0) 51%,
-		hsla(0, 0%, 99%, 1.0) 100%
-	); /* Opera 11.10+ */
-	background-image: -ms-linear-gradient(
-		top,
-		hsla(0, 0%, 100%, 1.0) 0%,
-		hsla(0, 0%, 98%, 1.0) 50%,
-		hsla(0, 0%, 91%, 1.0) 51%,
-		hsla(0, 0%, 99%, 1.0) 100%
-	); /* IE10+ */
-	background-image: linear-gradient(
-		to bottom,
-		hsla(0, 0%, 100%, 1.0) 0%,
-		hsla(0, 0%, 98%, 1.0) 50%,
-		hsla(0, 0%, 91%, 1.0) 51%,
-		hsla(0, 0%, 99%, 1.0) 100%
-	); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient(
-		startColorstr='#ffffff',
-		endColorstr='#fafafa',
-		GradientType=0
-	); /* IE6-9 */
+	-webkit-box-shadow: inset 0 3px 5px hsla(0, 0%, 0%, 0.2);
+	-moz-box-shadow:    inset 0 3px 5px hsla(0, 0%, 0%, 0.2);
+	box-shadow:         inset 0 3px 5px hsla(0, 0%, 0%, 0.2);
 }
 
 /* Sizes */
@@ -993,14 +1114,13 @@ textarea {
 
 /* States */
 .button.disabled,
-.button.disabled:hover,
 .button.disabled:active,
 .button[disabled] {
-	background: #e6e6e6 !important;
+	background: #ddd !important;
 	-webkit-box-shadow: none !important;
 	-moz-box-shadow:    none !important;
 	box-shadow:         none !important;
-	color: #505050 !important;
+	color: #777 !important;
 	text-shadow: none !important;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=65)";
 	opacity: 0.65;
@@ -1008,36 +1128,49 @@ textarea {
 }
 
 .button.hollow.disabled,
-.button.hollow.disabled:hover,
 .button.hollow.disabled:active,
 .button.hollow[disabled] {
 	background: transparent !important;
-	-webkit-box-shadow: inset 0 0 0 3px #eaeaea !important;
-	-moz-box-shadow:    inset 0 0 0 3px #eaeaea !important;
-	box-shadow:         inset 0 0 0 3px #eaeaea !important;
+	-webkit-box-shadow: inset 0 0 0 3px #ddd !important;
+	-moz-box-shadow:    inset 0 0 0 3px #ddd !important;
+	box-shadow:         inset 0 0 0 3px #ddd !important;
 }
 
-/* Primary & secondary buttons */
-.button.primary,
-.button.secondary {
-	color: #fff;
-	text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.25);
-}
-
+/* Colors */
 .button.primary {
-	background: #1FA3EC;
+	background: #1fa3ec;
+	color: #fff;
 }
 
-.button.primary:hover {
-	background: #4CB3EC;
+.button.primary.hollow {
+	background: transparent;
+	color: #1fa3ec;
+	-webkit-box-shadow: inset 0 0 0 3px #1fa3ec;
+	-moz-box-shadow:    inset 0 0 0 3px #1fa3ec;
+	box-shadow:         inset 0 0 0 3px #1fa3ec;
+}
+
+.button.primary.hollow:active {
+	background: #1fa3ec;
+	color: #fff;
 }
 
 .button.secondary {
-	background: #686868;
+	background: #e98724;
+	color: #fff;
 }
 
-.button.secondary:hover {
-	background: #787878;
+.button.secondary.hollow {
+	background: transparent;
+	color: #e98724;
+	-webkit-box-shadow: inset 0 0 0 3px #e98724;
+	-moz-box-shadow:    inset 0 0 0 3px #e98724;
+	box-shadow:         inset 0 0 0 3px #e98724;
+}
+
+.button.secondary.hollow:active {
+	background: #e98724;
+	color: #fff;
 }
 
 /* “Back to top” button */
@@ -1065,166 +1198,56 @@ textarea {
 }
 
 /* ================================================================== *\
-   Icons ($icons)
-\* ================================================================== */
-
-/* Icons */
-.icon {
-	display: inline-block;
-	width: 1.5rem;
-	height: 1.5rem;
-	background-image: url("../img/icons.svg");
-	-webkit-background-size: 100% 100%;
-	-moz-background-size:    100% 100%;
-	background-size:         100% 100%;
-	background-repeat: no-repeat;
-}
-
-.icon-arrow_up {
-	background-position: 0 0;
-}
-
-/* ================================================================== *\
-   Tables ($tables)
-\* ================================================================== */
-
-/* Borderless */
-.table {
-	max-width: 100%;
-	width: 100%;
-	border-spacing: 0;
-	border-collapse: collapse;
-	empty-cells: show;
-}
-
-.table th,
-.table tfoot td {
-	color: #222;
-	text-align: left;
-	font-weight: bold;
-}
-
-.table thead th,
-.table tfoot td  {
-	background-color: #efefef;
-}
-
-.table th,
-.table td {
-	overflow: visible;
-	padding: 0.633rem;
-	vertical-align: top;
-}
-
-/* Border */
-.table.border {
-	border: 1px solid #d0d0d0;
-}
-
-/* Borders for rows & columns */
-.table.border_all th,
-.table.border_all td {
-	border-top: 1px solid #d0d0d0;
-	border-left: 1px solid #d0d0d0;
-}
-
-/* Border for rows only */
-.table.border_rows th,
-.table.border_rows td {
-	border-top: 1px solid #d0d0d0;
-}
-
-/* Remove top border to avoid double border on .border tables */
-.table.border.border_all thead:first-child tr:first-child th,
-.table.border.border_all thead:first-child tr:first-child td,
-.table.border.border_rows thead:first-child tr:first-child th,
-.table.border.border_rows thead:first-child tr:first-child td {
-	border-top: 0;
-}
-
-.table.border_all tr th:first-child,
-.table.border_all tr td:first-child {
-	border-left: 0;
-}
-
-.table.border_all tr:first-child th,
-.table.border_all thead:first-child tr:first-child th {
-	border-top: 0;
-}
-
-/* Add bottom border to last row in the table */
-.table.border_rows tr:last-child td {
-	border-bottom: 1px solid #d0d0d0;
-}
-
-/* Stripe */
-.table.stripe tbody > tr:nth-child(odd) > td {
-	background-color: #f8f8f8;
-}
-
-/* ================================================================== *\
    Main ($main)
 \* ================================================================== */
 
-/* Page */
+/**
+ * Menu ($menu)
+ */
+
 .menu_open {
 	position: relative;
 }
 
-.menu_open,
-.menu_open .menu-button,
-.menu_open .menu {
+/* Force `.page` and `.menu` to inherit the height of the viewport */
+.menu,
+.page {
+	min-height: 100%;
+}
+
+.js .menu,
+.js .menu-button,
+.js .page {
+	-webkit-transition: all .2s ease;
+	-moz-transition:    all .2s ease;
+	-o-transition:      all .2s ease;
+	transition:         all .2s ease;
+}
+
+.menu {
+	background-color: #444;
+}
+
+.js .menu_open .menu-button,
+.js .menu_open .page {
 	left: 180px;
 }
 
-@media only screen and (min-width: 768px) {
-	.page {
-		padding-left: 180px;
-	}
-
-	.menu_open {
-		left: 0;
-	}
-}
-
-/* Menu button */
-.menu-button {
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 2;
-	padding: 10px 16px;
-	border: 0 none;
-	background-color: hsla(0, 0%, 13%, 0.7);
-	color: #fff;
-	text-decoration: none;
-	-webkit-tap-highlight-color: rgba(0,0,0,0);
-}
-
-.menu_open .menu-button {
-	background-color: #555;
-}
-
-@media only screen and (min-width: 768px) {
-	.menu-button {
-		display: none;
-	}
-}
-
-/* Menu */
-.menu {
+.js .menu {
 	position: fixed;
 	top: 0;
 	bottom: 0;
-	left: 0;
-	z-index: 2;
+	left: -180px;
+	z-index: 1;
 	overflow-y: auto;
-	margin-left: -180px;
 	width: 180px;
 	height: 100%;
 	background-color: #222;
-	font-size: 15px;
 	-webkit-overflow-scroll: touch;
+}
+
+.js .menu_open .menu {
+	left: 0;
 }
 
 /* Fix vertical scrollbar issue in IE9 */
@@ -1232,161 +1255,238 @@ textarea {
 	box-sizing: content-box;
 }
 
-@media only screen and (min-width: 768px) {
-	.menu {
-		left: 180px;
-	}
+.menu-heading,
+.menu ul a {
+	padding: 0.75rem 1.333rem;
 }
 
-.menu,
+/* Menu heading */
 .menu-heading {
+	display: block;
+	margin-bottom: 0;
+	border-bottom: 1px solid #777;
 	color: #fff;
+	text-align: center;
 	text-decoration: none;
 	-webkit-font-smoothing: antialiased;
 }
 
-.menu-heading {
-	margin: 0;
-	font-size: 28px;
-}
-
-.menu ul > a:first-child {
-	border-bottom: 1px solid #444;
-}
-
-.menu a {
+.js .menu-heading {
 	display: block;
-	padding: 1rem 0.75rem;
+	border-bottom-color: #444;
+	text-align: left;
+}
+
+/* Menu items */
+.menu ul a {
+	float: left;
+	width: 50%;
+	border-right: 1px solid #777;
+	border-bottom: 1px solid #777;
+	color: #ccc;
+	text-align: center;
+	text-decoration: none;
+}
+
+.menu ul li:nth-child(even) a {
+	border-right: 0 none;
+}
+
+.js .menu ul a {
+	display: block;
+	float: none;
+	width: auto;
+	border-right: 0 none;
+	border-bottom-color: #444;
+	color: #aaa;
+	text-align: left;
+}
+
+.js .menu li.current a,
+.js .menu li.current a:hover {
+	background-color: #444;
+	-webkit-box-shadow: inset 0 3px 6px hsla(0, 0%, 0%, 0.20);
+	-moz-box-shadow:    inset 0 3px 6px hsla(0, 0%, 0%, 0.20);
+	box-shadow:         inset 0 3px 6px hsla(0, 0%, 0%, 0.20);
+	color: #fff;
+}
+
+/* Menu anchor */
+.menu-anchor {
+	display: block;
+	padding: 1rem 1.333rem;
+	width: 100%;
+	background-color: #222;
+	color: #ccc;
+	text-align: center;
+	text-decoration: none;
+	font-size: 1.125rem;
+	line-height: 1.333;
+}
+
+.js .menu-anchor {
+	display: none;
+}
+
+.menu-anchor:active,
+.menu ul a:active {
+	-webkit-box-shadow: inset 0 3px 6px hsla(0, 0%, 0%, 0.20);
+	-moz-box-shadow:    inset 0 3px 6px hsla(0, 0%, 0%, 0.20);
+	box-shadow:         inset 0 3px 6px hsla(0, 0%, 0%, 0.20);
+}
+
+/* Menu button */
+.menu-button {
+	display: none;
+}
+
+.js .menu-button {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 3;
+	display: block;
+	padding: 8px 14px;
+	border: 0 none;
+	background-color: hsla(0, 0%, 13%, 0.7);
+	color: #fff;
 	text-decoration: none;
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
-.menu li a {
-	color: #787878;
-	font-weight: bold;
+.js .menu_open .menu-button {
+	background-color: #444;
+}
+
+@media only screen and (min-width: 640px) {
+	.js .menu {
+		font-size: 15px;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.js .page {
+		padding-left: 180px;
+	}
+
+	.js .menu_open .page {
+		left: 0;
+	}
+
+	.js .menu {
+		left: 0;
+	}
+
+	.js .menu-button {
+		display: none;
+	}
+
+	.js .menu-heading {
+		font-size: 32px;
+	}
 }
 
 @media only screen and (min-width: 960px) {
-	/* To avoid hover state weirdness on touch events */
-	.menu-button:hover {
-		background-color: #222;
+	.js .menu-button:hover {
+		background-color: #444;
 	}
 
-	.menu li a:hover {
+	.js .menu li a:hover {
 		background-color: #333;
-		color: #c0c0c0;
+		color: #fff;
+	}
+
+	.js .menu li a:active {
+		background-color: #444;
 	}
 }
 
-.menu li.current a {
-	background-color: #444;
-	color: #c0c0c0;
+/**
+ * Page ($page)
+ */
+
+.js .page {
+	position: relative;
 }
 
-/* Header */
-.branding {
-	margin-bottom: 0;
+/**
+ * Masthead ($masthead)
+ */
+
+.masthead,
+.footer {
+	padding: 2rem 5%;
+	background: #c12026 url("../img/bg.svg") repeat;
+}
+
+.no-svg .masthead,
+.no-svg .footer {
+	background-image: url("../img/bg.png");
+}
+
+.masthead,
+.masthead-tagline,
+.footer,
+.footer-tagline {
+	color: #ef9c9f;
+}
+
+.masthead-title,
+.masthead-link,
+.footer a {
+	color: #fff;
+}
+
+.masthead-title {
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+/**
+ * Intro ($intro)
+ */
+
+.intro {
+	margin: 2rem auto 0;
+}
+
+/**
+ * Content ($content)
+ */
+
+.content.wrapper {
+	margin-top: 1.333rem;
+	margin-bottom: 2rem;
+	max-width: 640px;
+}
+
+.js .section-menu .primary {
+	display: none;
+}
+
+/**
+ * Footer ($footer)
+ */
+
+.footer {
+	position: relative;
 	text-align: center;
 }
 
-.branding-logo {
-	margin-bottom: 0.75rem;
-}
-
-.branding-name {
+.footer-tagline {
 	line-height: 1;
-}
-
-.branding-buttons .button.primary {
-	margin-right: 0.475rem;
-}
-
-.branding-links {
-	margin: 0.75rem 0 0;
-	font-size: 0.8125rem;
-}
-
-.branding-links a {
-	color: #969696;
-}
-
-@media only screen and (min-width: 480px) {
-	.branding {
-		text-align: left;
-	}
-
-	.branding-logo,
-	.branding-info {
-		display: inline-block;
-		vertical-align: middle;
-	}
-
-	.branding-logo {
-		margin-bottom: 0;
-		margin-right: 5%;
-	}
-}
-
-@media only screen and (min-width: 960px) {
-	.branding .wrapper {
-		padding-top: 2rem;
-		padding-bottom: 2rem;
-	}
-}
-
-@media only screen and (min-width: 1140px) {
-	.branding {
-		text-align: center;
-	}
-}
-
-/* Content */
-.content .wrapper {
-	width: 100%;
-	margin: 0;
-	padding: 2rem 5%;
-}
-
-.content h2,
-.content h3,
-.content h4,
-.content h5,
-.content h6 {
-	letter-spacing: 1px;
-}
-
-.content pre {
-	max-height: 300px;
-}
-
-#tables pre {
-	max-height: 200px;
-}
-
-/* Footer */
-.credits .wrapper {
-	position: relative;
-	width: 100%;
-	padding: 1rem 5%;
-	margin: 0;
-}
-
-@media only screen and (min-width: 1280px) {
-	.content .wrapper,
-	.credits .wrapper {
-		margin: 0 auto;
-		max-width: 1440px;
-	}
+	margin-bottom: 1rem;
 }
 
 /* ================================================================== *\
    Helpers ($helpers)
 \* ================================================================== */
 
-/* Floats */
-.float_left  { float: left;  }
-.float_right { float: right; }
-.float_none  { float: none;  }
+/* Alignment */
+.align_left   { float: left !important;  }
+.align_center { float: none; margin-left: auto; margin-right: auto; }
+.align_right  { float: right !important; }
+.align_none   { float: none !important;  }
 
 /* Margins */
 .margin_top    { margin-top: 1rem !important;    }
@@ -1403,10 +1503,109 @@ textarea {
 .padding_none   { padding: 0 !important;           }
 
 /* Text alignment */
-.text_left    { text-align: left;    }
-.text_right   { text-align: right;   }
-.text_center  { text-align: center;  }
-.text_justify { text-align: justify; }
+.text_left    { text-align: left !important;    }
+.text_center  { text-align: center !important;  }
+.text_right   { text-align: right !important;   }
+.text_justify { text-align: justify !important; }
+
+/* Font sizing */
+.font_huge,
+.font_xxl,
+.font_xl,
+.font_large,
+.font_medium,
+.font_normal,
+.font_small {
+	color: inherit;
+	font-weight: inherit;
+}
+
+.font_huge,
+.font_xxl {
+	line-height: 1.333 !important;
+}
+
+.font_huge   { font-size: 4.209rem !important; }
+.font_xxl    { font-size: 3.157rem !important; }
+.font_xl     { font-size: 2.369rem !important; }
+.font_large  { font-size: 1.777rem !important; }
+.font_medium { font-size: 1.333rem !important; }
+.font_normal { font-size: 1rem !important;     }
+.font_small  { font-size: 0.75rem !important;  }
+
+@media only screen and (min-width: 640px) {
+	/* Alignment */
+	.lap-align_left   { float: left !important;  }
+	.lap-align_center { float: none; margin-left: auto; margin-right: auto; }
+	.lap-align_right  { float: right !important; }
+	.lap-align_none   { float: none !important;  }
+
+	/* Margins */
+	.lap-margin_top    { margin-top: 1rem !important;    }
+	.lap-margin_right  { margin-right: 1rem !important;  }
+	.lap-margin_bottom { margin-bottom: 1rem !important; }
+	.lap-margin_left   { margin-left: 1rem !important;   }
+	.lap-margin_none   { margin: 0 !important;           }
+
+	/* Paddings */
+	.lap-padding_top    { padding-top: 1rem !important;    }
+	.lap-padding_right  { padding-right: 1rem !important;  }
+	.lap-padding_bottom { padding-bottom: 1rem !important; }
+	.lap-padding_left   { padding-left: 1rem !important;   }
+	.lap-padding_none   { padding: 0 !important;           }
+
+	/* Text alignment */
+	.lap-text_left    { text-align: left !important;    }
+	.lap-text_center  { text-align: center !important;  }
+	.lap-text_right   { text-align: right !important;   }
+	.lap-text_justify { text-align: justify !important; }
+
+	/* Font sizing */
+	.lap-font_huge   { font-size: 4.209rem !important; }
+	.lap-font_xxl    { font-size: 3.157rem !important; }
+	.lap-font_xl     { font-size: 2.369rem !important; }
+	.lap-font_large  { font-size: 1.777rem !important; }
+	.lap-font_medium { font-size: 1.333rem !important; }
+	.lap-font_normal { font-size: 1rem !important;     }
+	.lap-font_small  { font-size: 0.75rem !important;  }
+}
+
+@media only screen and (min-width: 960px) {
+	/* Alignment */
+	.desk-align_left   { float: left !important;  }
+	.desk-align_center { float: none; margin-left: auto; margin-right: auto; }
+	.desk-align_right  { float: right !important; }
+	.desk-align_none   { float: none !important;  }
+
+	/* Margins */
+	.desk-margin_top    { margin-top: 1rem !important;    }
+	.desk-margin_right  { margin-right: 1rem !important;  }
+	.desk-margin_bottom { margin-bottom: 1rem !important; }
+	.desk-margin_left   { margin-left: 1rem !important;   }
+	.desk-margin_none   { margin: 0 !important;           }
+
+	/* Paddings */
+	.desk-padding_top    { padding-top: 1rem !important;    }
+	.desk-padding_right  { padding-right: 1rem !important;  }
+	.desk-padding_bottom { padding-bottom: 1rem !important; }
+	.desk-padding_left   { padding-left: 1rem !important;   }
+	.desk-padding_none   { padding: 0 !important;           }
+
+	/* Text alignment */
+	.desk-text_left    { text-align: left !important;    }
+	.desk-text_center  { text-align: center !important;  }
+	.desk-text_right   { text-align: right !important;   }
+	.desk-text_justify { text-align: justify !important; }
+
+	/* Font sizing */
+	.desk-font_huge   { font-size: 4.209rem !important; }
+	.desk-font_xxl    { font-size: 3.157rem !important; }
+	.desk-font_xl     { font-size: 2.369rem !important; }
+	.desk-font_large  { font-size: 1.777rem !important; }
+	.desk-font_medium { font-size: 1.333rem !important; }
+	.desk-font_normal { font-size: 1rem !important;     }
+	.desk-font_small  { font-size: 0.75rem !important;  }
+}
 
 /* Image replacement */
 .ir {
@@ -1464,7 +1663,7 @@ textarea {
 	visibility: hidden;
 }
 
-/* Clear floats manually - http://cbrac.co/SFv1Ua */
+/* Clear floats with an extra markup element - http://cbrac.co/SFv1Ua */
 .clear {
 	display: block;
 	visibility: hidden;
@@ -1474,18 +1673,7 @@ textarea {
 	height: 0;
 }
 
-/**
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The use of `table` rather than `block` is only necessary if using
- * `:before` to contain the top-margins of child elements.
- * 2. The space content is one way to avoid an Opera bug when the
- * `contenteditable` attribute is included anywhere else on the page.
- * Otherwise it causes space to appear at the top and bottom of elements
- * that receive the `clearfix` class.
- */
-
+/* Clearfix to contain floats */
 .cf:before,
 .cf:after {
 	display: table; /* 1 */
@@ -1502,15 +1690,16 @@ textarea {
 \* ================================================================== */
 
 @media print {
-	/**
-	 * 1. Black prints faster - http://cbrac.co/XvusCs
-	 */
-
+	/* 1. Black prints faster - http://cbrac.co/XvusCs */
 	* {
 		background: transparent !important;
 		box-shadow: none !important;
 		color: #000 !important; /* 1 */
 		text-shadow: none !important;
+	}
+
+	@page {
+		margin: 0.5cm;
 	}
 
 	a,
@@ -1522,43 +1711,26 @@ textarea {
 		content: " (" attr(href) ")";
 	}
 
+	/* Don’t show links for images, or javascript/internal links */
+	a[href^="#"]:after,
+	a[href^="javascript:"]:after,
+	.ir a:after {
+		content: "";
+	}
+
 	abbr[title]:after {
 		content: " (" attr(title) ")";
 	}
 
-	/* Don’t show links for images, or javascript/internal links */
-	.ir a:after,
-	a[href^="javascript:"]:after,
-	a[href^="#"]:after {
-		content: "";
-	}
-
-	pre,
-	blockquote {
-		border: 1px solid #999;
+	blockquote,
+	pre {
+		border: 1px solid #777;
 		page-break-inside: avoid;
 	}
 
-	thead {
-		display: table-header-group; /* http://cbrac.co/Q6s1o2 */
-	}
-
-	tr,
-	img {
-		page-break-inside: avoid;
-	}
-
-	img {
-		max-width: 100% !important;
-	}
-
-	@page {
-		margin: 0.5cm;
-	}
-
-	p,
 	h2,
-	h3 {
+	h3,
+	p {
 		orphans: 3;
 		widows: 3;
 	}
@@ -1566,5 +1738,18 @@ textarea {
 	h2,
 	h3 {
 		page-break-after: avoid;
+	}
+
+	img,
+	tr {
+		page-break-inside: avoid;
+	}
+
+	img {
+		max-width: 100% !important;
+	}
+
+	thead {
+		display: table-header-group; /* http://cbrac.co/Q6s1o2 */
 	}
 }

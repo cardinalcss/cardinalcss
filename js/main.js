@@ -1,120 +1,154 @@
-// When the DOM is ready,
-$(function() {
-	/**
-	 * Sidebar menu
-	 */
+/**
+ * Sidebar menu
+ */
 
-	// Global variables
-	var html_body = $("html, body"),
-		page = $(".page"),
-		menu = $(".menu"),
-		menu_list = $(".menu ul"),
-		menu_button = $(".menu-button"),
-		menu_link = $(".menu a"),
+// Cache menu selectors
+var flag = false,
+	body = $("html, body"),
+	last_id,
+	menu = $(".menu"),
+	menu_button = $(".menu-button"),
+	menu_items = menu.find("a"),
+	scroll_items = menu_items.map(function() {
+		var item = $($(this).attr("href"));
+		if (item.length) { return item; }
+	});
+
+// Prevent scrolling the entire page when scrolling inside the menu
+menu.on("DOMMouseScroll mousewheel", function(e) {
+	// Scroll variables
+	var $this = $(this),
+		scroll_top = this.scrollTop,
+		scroll_height = this.scrollHeight,
+		height = $this.height(),
+		delta = (e.type == "DOMMouseScroll" ?
+			e.originalEvent.detail * -40 : // Firefox
+			e.originalEvent.wheelDelta),   // The rest
+		up = delta > 0;
+
+	// Prevent the scroll event
+	var prevent = function() {
+		e.stopPropagation();
+		e.preventDefault();
+		e.returnValue = false;
+		return false;
+	}
+
+	// Cancel the event if the scrollable area is at top or bottom
+	if (!up && -delta > scroll_height - height - scroll_top) {
+		$this.scrollTop(scroll_height);
+		return prevent();
+	} else if (up && delta > scroll_top) {
+		$this.scrollTop(0);
+		return prevent();
+	}
+});
+
+// Set a flag on drag
+menu_items.on("touchmove", function() { flag = true; });
+
+// Move to appropriate content section on tap / click
+menu_items.on("touchend click", function(e) {
+	// Prevent the default event
+	e.stopPropagation();
+	e.preventDefault();
+
+	// If it was a drag, do nothing, and reset the flag
+	if(flag) {
 		flag = false;
-
-	// Prevent scrolling the entire page while scrolling inside the menu
-	// http://cbrac.co/1bt2GJg
-	menu.on("DOMMouseScroll mousewheel", function(e) {
-		// Scroll variables
-		var $this = $(this),
-			scroll_top = this.scrollTop,
-			scroll_height = this.scrollHeight,
-			height = $this.height(),
-			delta = (e.type == "DOMMouseScroll" ?
-				e.originalEvent.detail * -40 : // Firefox
-				e.originalEvent.wheelDelta),   // The rest
-			up = delta > 0;
-
-		// Prevent the scroll event
-		var prevent = function() {
-			e.stopPropagation();
-			e.preventDefault();
-			e.returnValue = false;
-			return false;
-		}
-
-		// Cancel the event if the scrollable area is at top or bottom
-		if (!up && -delta > scroll_height - height - scroll_top) {
-			$this.scrollTop(scroll_height);
-			return prevent();
-		} else if (up && delta > scroll_top) {
-			$this.scrollTop(0);
-			return prevent();
-		}
-	});
-
-	// Set a flag on drag
-	menu_link.on("touchmove", function() { flag = true; });
-
-	// Move to appropriate content section on tap / click
-	menu_link.on("touchend click", function(e) {
-		// Prevent the default event
-		e.stopPropagation();
-		e.preventDefault();
-
-		// If it was a drag, do nothing, and reset the flag
-		if(flag) {
-			flag = false;
-			return;
-		} else {
-			if(e.handled !== true) {
-				// Navigate to the corresponding section
-				html_body.scrollTop($(this.hash).offset().top);
-
-				// Remove the “active” class from other parent items
-				menu_list.children().removeClass();
-
-				// Add the class to current item’s parent
-				$(this).parent().addClass("current");
-
-				// Set e.handled to true
-				e.handled = true;
-			} else {
-				return false;
-			}
-		}
-	});
-
-	// Menu button toggle
-	menu_button.on("touchstart click", function(e) {
-		// Prevent the default event
-		e.stopPropagation();
-		e.preventDefault();
-
+		return;
+	} else {
 		if(e.handled !== true) {
-			page.toggleClass("menu_open");
+			// Navigate to the corresponding section
+			body.scrollTop($(this.hash).offset().top + 1);
 
 			// Set e.handled to true
 			e.handled = true;
 		} else {
 			return false;
 		}
+	}
+});
+
+// Menu button toggle
+menu_button.on("touchstart click", function(e) {
+	// Prevent the default event
+	e.stopPropagation();
+	e.preventDefault();
+
+	if(e.handled !== true) {
+		body.toggleClass("menu_open");
+
+		// Set e.handled to true
+		e.handled = true;
+	} else {
+		return false;
+	}
+});
+
+// Minimalist scrollspy for menu
+$(window).scroll(function() {
+	// Get container scroll position
+	var from_top = $(this).scrollTop();
+
+	// Get ID of the current scroll item
+	var cur = scroll_items.map(function() {
+		if($(this).offset().top < from_top)
+			return this;
 	});
 
+	// Get ID of the current element
+	cur = cur[cur.length - 1];
+	var id = cur && cur.length ? cur[0].id : "";
+
+	if(last_id !== id) {
+		last_id = id;
+
+		// Remove and set the `.current` class
+		menu_items
+			.parent().removeClass("current")
+			.end().filter("[href=#" + id + "]").parent().addClass("current");
+	}
+});
+
+$(function() {
+
 	/**
-	 * Grab latest version from the Github repo
+	 * Google Analytics event tracking for click actions
 	 */
 
-	// Request version number once a minute
-	setInterval(updateVersion(), 60 * 1000);
-
-	/**
-	 * Google Analytics event tracking for header actions
-	 */
-	$("#download").on("click", function() {
+	$("#masthead-download").on("click", function() {
 		ga("send", "event", "Header actions", "click", "Download");
 	});
 
-	$("#github_repo").on("click", function() {
+	$("#masthead-github_repo").on("click", function() {
 		ga("send", "event", "Header actions", "click", "GitHub Repo");
 	});
 
-	$("#pivotal").on("click", function() {
+	$("#masthead-pivotal").on("click", function() {
 		ga("send", "event", "Header actions", "click", "Pivotal Tracker");
 	});
 
-	$("#changelog").on("click", function() {
+	$("#masthead-changelog").on("click", function() {
 		ga("send", "event", "Header actions", "click", "Changelog");
 	});
+
+	$("#footer-download").on("click", function() {
+		ga("send", "event", "Header actions", "click", "Download");
+	});
+
+	$("#footer-github_repo").on("click", function() {
+		ga("send", "event", "Header actions", "click", "GitHub Repo");
+	});
+
+	$("#footer-cbracco").on("click", function() {
+		ga("send", "event", "Header actions", "click", "cbracco.me");
+	});
+
+	/**
+	 * Request the latest version number from GitHub once a minute
+	 */
+
+	setInterval(updateVersion(), 60 * 1000);
+
 });
