@@ -1019,9 +1019,9 @@ table.stripes tbody > tr:nth-child(odd) > td {
 }
 
 .button:active {
-	-webkit-box-shadow: inset 0 0 6px hsla(0, 0%, 0%, 0.20);
-	-moz-box-shadow:    inset 0 0 6px hsla(0, 0%, 0%, 0.20);
-	box-shadow:         inset 0 0 6px hsla(0, 0%, 0%, 0.20);
+	-webkit-box-shadow: inset 0 3px 6px hsla(0, 0%, 0%, 0.20);
+	-moz-box-shadow:    inset 0 3px 6px hsla(0, 0%, 0%, 0.20);
+	box-shadow:         inset 0 3px 6px hsla(0, 0%, 0%, 0.20);
 }
 
 .button:focus {
