@@ -324,7 +324,7 @@ h2.subheading, .h2.subheading,
 h3.subheading, .h3.subheading,
 h4.subheading, .h4.subheading,
 h5.subheading, .h5.subheading,
-h6.subheading .h6.subheading {
+h6.subheading, .h6.subheading {
 	font-weight: 300;
 }
 
@@ -334,7 +334,7 @@ h2.subheading.muted, .h2.subheading.muted,
 h3.subheading.muted, .h3.subheading.muted,
 h4.subheading.muted, .h4.subheading.muted,
 h5.subheading.muted, .h5.subheading.muted,
-h6.subheading.muted .h6.subheading.muted {
+h6.subheading.muted, .h6.subheading.muted {
 	color: #777;
 }
 
