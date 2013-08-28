@@ -1,0 +1,251 @@
+/* ================================================================== *\
+   Forms ($forms)
+\* ================================================================== */
+
+/**
+ * 1. Address `margin` set differently in Firefox 4+, Safari 5, & Chrome
+ * 2. Correct `font-size` not being inherited in all browsers
+ * 3. Correct `font-family` not being inherited in all browsers
+ */
+
+button,
+input,
+select,
+textarea
+  margin: 0             /* 1 */
+  font-size: FONT_SIZE  /* 2 */
+  font-family: inherit  /* 3 */
+
+/**
+ * Address Firefox 4+ setting `line-height` on <input> using
+ * `!important` in the UA stylesheet
+ */
+button,
+input
+  line-height: normal
+
+/**
+ * Fix inconsistent `text-transform` for <button> and <select>
+ * All other form control elements do not inherit `text-transform`
+ */
+button,
+select
+  text-transform: none
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native
+ *    <audio> and <video> controls
+ * 2. Improve usability and consistency of cursor style between
+ *    image-type <input> and others
+ * 3. Correct inability to style clickable <input> types in iOS
+ */
+button,
+html input[type="button"],    /* 1 */   
+input[type="reset"],
+input[type="submit"]
+  cursor: pointer             /* 2 */
+  -webkit-appearance: button  /* 3 */
+
+/* Reset default `cursor` for disabled elements */
+button[disabled],
+html input[disabled]
+  cursor: default
+
+/* Remove default <fieldset> styles for all browsers */
+fieldset
+  margin: 0
+  padding: 0
+  border: 0
+
+/* Make most inputs, select boxes, and textareas as `block` elements */
+input,
+select,
+textarea
+  display: block
+  width: 100%
+  vertical-align: middle
+
+/* Make checkbox, image, and radio inputs `inline-block` by default */
+input[type="checkbox"],
+input[type="image"],
+input[type="radio"]
+  display: inline-block
+  width: auto
+  cursor: pointer
+
+/**
+ * 1. Address `box-sizing` set to `content-box` in IE 8/9
+ * 2. Remove excess padding in IE 8/9
+ */
+input[type="checkbox"],
+input[type="radio"]
+  box-sizing: border-box  /* 1 */
+  margin: 0 0.422rem 0.238rem 0
+  padding: 0              /* 2 */
+
+/**
+ * 1. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof)
+ * 2. Address `appearance` set to `searchfield` in Safari 5 and Chrome
+ */
+input[type="search"]
+  box-sizing: content-box       /* 1 */
+  -webkit-appearance: textfield /* 2 */
+
+/* Remove decoration & cancel button in Safari 5 and Chrome on OS X */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration
+  -webkit-appearance: none
+
+/**
+ * Make button, reset, and submit inputs to be `inline-block`, unless
+ * otherwise specified by `.button` classes
+ */
+input[type="button"],
+input[type="reset"],
+input[type="submit"]
+  display: inline-block
+  width: auto
+
+/* Remove inner padding and border in Firefox 4+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner
+  padding: 0
+  border: 0
+
+/* Give labels a pointer cursor by default */
+label
+  cursor: pointer
+
+/* Give <legend> some basic styles for all browsers */
+legend
+  margin: 0 0 1rem
+  padding: 0
+  border: 0
+  color: BLACK
+  font-weight: bold
+
+/**
+ * 1. Remove default vertical scrollbar in IE 8/9
+ * 2. Improve readability and alignment in all browsers
+ * 3. Restrict <textarea> elements to vertical resizing only
+ */
+textarea
+  overflow: auto
+  vertical-align: top
+  resize: vertical
+
+/* ================================================================== *\
+   Tables ($tables)
+\* ================================================================== */
+
+/**
+ * Default (borderless)
+ * 1. Remove most spacing between <table> cells
+ */
+table
+  max-width: 100%
+  width: 100%
+  border-spacing: 0         /* 1 */
+  border-collapse: collapse /* 1 */
+  empty-cells: show
+
+  & th,
+  & tfoot td
+    color: BLACK
+    text-align: left
+    font-weight: bold
+
+  & thead th,
+  & tfoot td
+    background-color: LIGHTER_GRAY
+
+  & th,
+  & td
+    overflow: visible
+    padding: 0.633rem
+    vertical-align: top
+
+  /* Outer border only */
+  .border
+    border: 1px solid LIGHT_GRAY
+
+  /* Borders for rows & columns */
+  .border_all th,
+  .border_all td
+    border-top: 1px solid LIGHT_GRAY
+    border-left: 1px solid LIGHT_GRAY
+  /* Border for rows only */
+  .border_rows th,
+  .border_rows td
+    border-top: 1px solid LIGHT_GRAY
+
+  /* Remove top border to avoid double border on .border tables */
+  .border.border_all thead:first-child tr:first-child th,
+  .border.border_all thead:first-child tr:first-child td,
+  .border.border_rows thead:first-child tr:first-child th,
+  .border.border_rows thead:first-child tr:first-child td
+    border-top: 0
+
+  .border_all tr th:first-child,
+  .border_all tr td:first-child
+    border-left: 0
+
+  .border_all tr:first-child th,
+  .border_all thead:first-child tr:first-child th
+    border-top: 0
+
+  /* Add bottom border to last row in the table */
+  .border_rows tr:last-child td
+    border-bottom: 1px solid LIGHT_GRAY
+
+  /* Stripes */
+  .stripes tbody > tr:nth-child(odd) > td
+    background-color: LIGHTEST_GRAY
+
+/* ================================================================== *\
+   Layout ($layout)
+\* ================================================================== */
+
+/* 100% width container */
+.strip
+  margin: 0
+  padding: 0
+  width: 100%
+  background-color: LIGHTER_GRAY
+  list-style: none
+
+.strip .wrapper
+  padding: 1rem 0
+
+/* Page wrapper */
+.wrapper
+  margin: 0 auto
+  max-width: 1140px
+  width: 90%
+
+.island,
+.well
+  margin: 0 0 1rem
+
+.island
+  padding: 1rem
+  background: LIGHTER_GRAY
+
+.well
+  padding: 1rem
+  background: LIGHTER_GRAY
+  box-shadow: inset 0 0 8px hsla(0, 0%, 0%, 0.15)
+
+.island .island,
+.well .well
+  background: LIGHT_GRAY
+
+.island.hollow,
+.well.hollow
+  background: transparent
+  box-shadow: inset 0 0 0 3px hsla(0, 0%, 94%, 1.0)
+
+.island.rounded,
+.well.rounded
+  border-radius: 0.356rem

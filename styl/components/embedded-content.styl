@@ -1,0 +1,44 @@
+/* ================================================================== *\
+   Embedded content ($embedded-content)
+\* ================================================================== */
+
+/**
+ * Correct `inline-block` display not defined in IE 8/9
+ */
+audio,
+canvas,
+video
+  display: inline-block
+
+/* Fluid-width <audio> & <video> elements */
+audio,
+video
+  width: 100%
+
+/**
+ * 1. Prevent modern browsers from displaying <audio> without controls
+ * 2. Remove excess `height` in iOS 5 devices
+ */
+audio:not([controls])
+  display: none
+  height: 0
+
+/**
+ * 1. Remove the `border` when inside an <a> element in IE 8/9
+ * 2. Remove the gap between <img> elements and the bottom of their
+ *    containers - http://cbrac.co/Q6smqV
+ */
+img
+  border: 0               /* 1 */
+  vertical-align: middle  /* 2 */
+
+/* Fluid-width media that maintain their aspect ratios */
+img,
+video
+  max-width: 100%
+  width: auto\9
+  height: auto !important
+
+/* Correct `overflow` displayed oddly in IE 9 */
+svg:not(:root)
+  overflow: hidden
