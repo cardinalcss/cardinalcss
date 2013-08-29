@@ -2,13 +2,13 @@
    Base ($base)
 \* ================================================================== */
 /* Viewport resizing */
-@-webkit-viewport, 
-@-moz-viewport, 
-@-ms-viewport, 
-@-o-viewport, 
-@viewport
-  width: device-width
-  zoom: 1.0
+@css{
+@-webkit-viewport { width: device-width; zoom: 1.0; }
+@-moz-viewport    { width: device-width; zoom: 1.0; }
+@-ms-viewport     { width: device-width; zoom: 1.0; }
+@-o-viewport      { width: device-width; zoom: 1.0; }
+@viewport         { width: device-width; zoom: 1.0; }
+}
 /**
  * Box model adjustments
  * `border-box`... ALL THE THINGS - http://cbrac.co/RQrDL5
