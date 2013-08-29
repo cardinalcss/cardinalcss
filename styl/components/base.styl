@@ -1,0 +1,75 @@
+/* ================================================================== *\
+   Base ($base)
+\* ================================================================== */
+/* Viewport resizing */
+@css{
+@-webkit-viewport { width: device-width; zoom: 1.0; }
+@-moz-viewport    { width: device-width; zoom: 1.0; }
+@-ms-viewport     { width: device-width; zoom: 1.0; }
+@-o-viewport      { width: device-width; zoom: 1.0; }
+@viewport         { width: device-width; zoom: 1.0; }
+}
+/**
+ * Box model adjustments
+ * `border-box`... ALL THE THINGS - http://cbrac.co/RQrDL5
+ */
+*,
+*:before,
+*:after
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+/* Correct `block` display not defined in IE 8/9 */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary
+  display: block
+/**
+ * Address [hidden] styling not present in IE 8/9
+ * Hide the <template> element in IE, Safari, and Firefox < 22
+ */
+[hidden],
+template
+  display: none
+/* Set <html> and <body> to inherit the height of the viewport */
+html,
+body
+  min-height: 100%
+/**
+ * 1. Force a vertical scrollbar - http://cbrac.co/163MspB
+ * 2. Remove text size adjustments without disabling user zoom
+ * NOTE: Use `text-rendering` with caution - http://cbrac.co/SJt8p1
+ * NOTE: Avoid the webkit anti-aliasing trap - http://cbrac.co/TAdhbH
+ * NOTE: IE for Windows Phone 8 ignores `-ms-text-size-adjust` if the
+ *       viewport <meta> tag is used - http://cbrac.co/1cFrAvl
+ */
+html
+  overflow-y: scroll              /* 1 */
+  -webkit-text-size-adjust: 100%  /* 2 */
+  -ms-text-size-adjust: 100%      /* 2 */
+  text-size-adjust: 100%          /* 2 */
+
+/**
+ * 1. Customize `background` for text selections
+ * 2. Remove `text-shadow` selection highlight - http://cbrac.co/Q6swON
+ */
+::-moz-selection, ::selection
+  background: #b3d4fc /* 1 */
+  text-shadow: none   /* 2 */
+
+/* Change `background` for text selections when browser is unfocused */
+::selection:window-inactive
+  background: LIGHT_GRAY
+
+/* Remove `background` on images when selected */
+img::selection, img::-moz-selection
+  background: transparent

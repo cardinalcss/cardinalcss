@@ -1,0 +1,215 @@
+/* ================================================================== *\
+   Typography ($typography)
+
+   Modular scale:    12px @ 1:1.333 (perfect fourth)
+   Important number: 20px (maximum <html> `font-size`)
+   http://modularscale.com/scale/?px1=12&px2=20&ra1=1.333&ra2=0
+\* ================================================================== */
+
+html
+  font-size: 75% /* 12px */
+
+@media only screen and (min-width: 320px)
+  html
+    font-size: 81.25% /* 13px */
+
+@media only screen and (min-width: 480px)
+  html
+    font-size: 87.5%  /* 14px */
+
+@media only screen and (min-width: 640px)
+  html
+    font-size: 100%   /* 16px */
+
+@media only screen and (min-width: 960px)
+  html
+    font-size: 112.5% /* 18px */
+
+@media only screen and (min-width: 1440px)
+  html
+    font-size: 125%   /* 20px */
+
+/**
+ * 1. Remove default `margin`
+ * 2. Inherits percentage declared on above <html> as root `font-size`
+ * 3. Unitless `line-height`, which acts as multiple of root `font-size`
+ */
+body
+  margin: 0        /* 1 */
+  color: DARKEST_GRAY
+  font-size: FONT_SIZE  /* 2 */
+  font-family: "Helvetica Neue", Arial, sans-serif
+  line-height: 1.5 /* 3 */
+
+abbr,acronym,dfn[title]
+  cursor: help
+
+/* Address styling not present in IE 8/9, Safari 5, and Chrome */
+abbr[title]
+  border-bottom: 1px dotted
+
+abbr a
+  text-decoration: none
+
+acronym
+  text-transform: uppercase
+
+/* Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome */
+b,strong
+  font-weight: bold
+
+blockquote
+  padding-left: 1rem
+  border-left: 5px solid #e5e5e5
+  font-style: italic
+  font-family: "Baskerville", "Baskerville Old Face", "Hoefler Text",Garamond, "Times New Roman", serif
+
+blockquote p
+  margin: 0
+
+blockquote p + p
+  margin-top: 1rem
+
+/**
+ * 1. Add an m-dash character before the <footer> tag
+ * TIP: Use <footer> tag instead of <cite> inside blockquotes -
+ *      http://cbrac.co/TCVK4P
+ */
+blockquote footer:before
+  content: "\2014 \2009" /* 1 */
+
+blockquote footer
+  color: DARKER_GRAY
+  font-style: italic
+  font-size: 0.8125rem
+
+blockquote
+dl
+figure
+hr
+menu
+ol
+p
+pre
+summary
+table
+ul
+  margin: 0 0 1rem
+
+dl dt
+  color: BLACK
+  font-weight: 700
+
+dl dd
+  margin: 0
+
+del
+  color: DARKER_GRAY
+  text-decoration: line-through
+
+details
+  cursor: pointer
+
+/* Address styling not present in Safari 5 and Chrome */
+dfn
+  font-style: italic
+
+em
+figcaption
+i
+cite
+  font-style: italic
+
+figcaption
+  margin: 0.75rem 0 0
+  font-size: 75%
+
+/* NOTE: Use `text-rendering` with caution - http://cbrac.co/SJt8p1 */
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6
+  margin: 0 0 0.75rem
+  color: BLACK
+  font-weight: 700
+  font-family: "Helvetica Neue", sans-serif
+  line-height: 1.333
+  text-rendering: optimizeLegibility
+  &.subheading
+    font-weight 300
+    &.muted
+      color #777
+
+/* Give subheadings a lighter `font-weight` */
+h1, .h1
+  font-size: 3.157rem
+h2, .h2
+  font-size: 2.369rem
+h3, .h3
+  font-size: 1.777rem
+h4, .h4
+  font-size: 1.333rem
+h5, .h5
+  font-size: FONT_SIZE
+h6, .h6
+  font-size: 0.75rem
+
+/* Address differences between Firefox and other browsers */
+hr
+  box-sizing: content-box
+  height: 0
+  border: 0
+  border-bottom: 1px solid LIGHT_GRAY
+
+/* Address styling not present in IE 8/9 */
+ins
+mark
+  background: #ff9
+  color: BLACK
+  text-decoration: none
+
+nav ul, nav ol
+  margin: 0
+  padding: 0
+  list-style: none
+
+/* Nested `list-style` types for ordered lists */
+ol
+  list-style: decimal
+  & ol
+    list-style: upper-alpha
+    & ol
+      list-style: lower-roman
+      & ol
+        list-style: lower-alpha
+
+ol ol, ol ul, ul ul, ul ol
+  margin-bottom: 0
+
+p
+table
+textarea
+td
+th
+  word-wrap: break-word
+  hyphens: auto
+
+/* Set consistent <q> types */
+q
+  quotes: "\201C" "\201D" "\2018" "\2019"
+
+/* 1. Address inconsistent and variable `font-size` in all browsers */
+small
+  display: inline-block
+  font-size: 87.5%      /* 1 */
+  line-height: 1.333
+
+/* Prevent <sub> and <sup> affecting `line-height` in all browsers */
+sub, sup
+  position: relative
+  vertical-align: baseline
+  font-size: 75%
+  line-height: 0
+
+sup
+  top: -0.5em
+
+sub
+  bottom: -0.25em

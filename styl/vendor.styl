@@ -1,0 +1,22 @@
+// vendor prefixes, thanks Stylus
+/* http://learnboost.github.io/stylus/docs/interpolation.html */ 
+
+//schema of all prefixes
+vendor(prop,arguments)
+	-webkit-{prop} arguments
+	-moz-{prop} arguments
+	-ms-{prop} arguments
+	-o-{prop} arguments
+	{prop} arguments
+
+// Propertys and values(arguments)
+box-sizing()
+	vendor('box-sizing', arguments)
+hyphens()
+	vendor('hyphens', arguments)
+border-radius()
+	vendor('border-radius', arguments)
+box-shadow()
+	vendor('box-shadow', arguments)
+tab-size()
+	vendor('tab-size', arguments)
