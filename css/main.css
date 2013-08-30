@@ -538,10 +538,6 @@ audio:not([controls]) {
 	height: 0;     /* 2 */
 }
 
-figure {
-	margin-bottom: 1rem;
-}
-
 figcaption {
 	margin-top: 0.563rem;
 	font-style: italic;
