@@ -285,15 +285,9 @@ dfn {
 }
 
 em,
-figcaption,
 i,
 cite {
 	font-style: italic;
-}
-
-figcaption {
-	margin: 0.75rem 0 0;
-	font-size: 75%;
 }
 
 /* NOTE: Use `text-rendering` with caution - http://cbrac.co/SJt8p1 */
@@ -542,6 +536,16 @@ video {
 audio:not([controls]) {
 	display: none; /* 1 */
 	height: 0;     /* 2 */
+}
+
+figure {
+	margin-bottom: 1rem;
+}
+
+figcaption {
+	margin-top: 0.563rem;
+	font-style: italic;
+	font-size: 75%;
 }
 
 /**
