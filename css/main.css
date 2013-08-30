@@ -297,12 +297,12 @@ figcaption {
 }
 
 /* NOTE: Use `text-rendering` with caution - http://cbrac.co/SJt8p1 */
-h1, .h1,
-h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5,
-h6, .h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	margin: 0 0 0.75rem;
 	color: #222;
 	font-weight: 700;
@@ -311,20 +311,15 @@ h6, .h6 {
 	text-rendering: optimizeLegibility;
 }
 
-h1, .h1 { font-size: 3.157rem; }
-h2, .h2 { font-size: 2.369rem; }
-h3, .h3 { font-size: 1.777rem; }
-h4, .h4 { font-size: 1.333rem; }
-h5, .h5 { font-size: 1rem;     }
-h6, .h6 { font-size: 0.75rem;  }
+h1 { font-size: 3.157rem; }
+h2 { font-size: 2.369rem; }
+h3 { font-size: 1.777rem; }
+h4 { font-size: 1.333rem; }
+h5 { font-size: 1rem;     }
+h6 { font-size: 0.75rem;  }
 
-/* Give subheadings a lighter `font-weight` */
-h1.subheading, .h1.subheading,
-h2.subheading, .h2.subheading,
-h3.subheading, .h3.subheading,
-h4.subheading, .h4.subheading,
-h5.subheading, .h5.subheading,
-h6.subheading, .h6.subheading {
+/* Subheadings have a lighter `font-weight` */
+.subheading {
 	font-weight: 300;
 }
 
@@ -1191,6 +1186,15 @@ table.stripes tbody > tr:nth-child(odd) > td {
 .font_normal { font-size: 1rem !important;     }
 .font_small  { font-size: 0.75rem !important;  }
 
+/* Font styles */
+.font_thin {
+	font-weight: 300;
+}
+
+.font_muted {
+	color: #777;
+}
+
 @media only screen and (min-width: 640px) {
 	/* Alignment */
 	.lap-align_left   { float: left !important;  }
@@ -1226,6 +1230,10 @@ table.stripes tbody > tr:nth-child(odd) > td {
 	.lap-font_medium { font-size: 1.333rem !important; }
 	.lap-font_normal { font-size: 1rem !important;     }
 	.lap-font_small  { font-size: 0.75rem !important;  }
+
+	/* Font styles */
+	.lap-font_thin  { font-weight: 300; }
+	.lap-font_muted { color: #777;      }
 }
 
 @media only screen and (min-width: 960px) {
@@ -1263,6 +1271,10 @@ table.stripes tbody > tr:nth-child(odd) > td {
 	.desk-font_medium { font-size: 1.333rem !important; }
 	.desk-font_normal { font-size: 1rem !important;     }
 	.desk-font_small  { font-size: 0.75rem !important;  }
+
+	/* Font styles */
+	.desk-font_thin  { font-weight: 300; }
+	.desk-font_muted { color: #777;      }
 }
 
 /* Image replacement */

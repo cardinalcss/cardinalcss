@@ -1,4 +1,9 @@
-# 1.0
+# 1.1.0 (August 30, 2013)
+
+- Removed `.h1`, `.h2`, etc. classes. Use `.font_[size]` instead.
+- Replaced `.subheading` and `.subheading.muted` with `.font_thin` and `.font_muted`, added `.lap-*` and `.desk-*` versions, and moved the classes to the "Helpers" section. They can be used on any element now, not just headings.
+
+# 1.0 (August 23, 2013)
 
 - Scaled back `.button` classes, removing glossy style and hover states.
 - Added `.h1`, `.h2`, `.h3`, `.h4`, `.h5`, `.h6` classes.

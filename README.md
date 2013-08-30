@@ -1,4 +1,4 @@
-# Cardinal - 1.0
+# Cardinal - 1.1.0
 
 Cardinal is a small, “[mobile first](http://cbrac.co/116bQqk)” CSS framework with some useful default styles, scalable typography, reusable modules, and a simple responsive grid system.
 
@@ -19,7 +19,7 @@ The purpose of this framework is to make it easier to rapidly prototype, build, 
 
 ## Installing
 
-* [Download it](https://github.com/cbracco/Cardinal/archive/master.zip)
+* [Download it](https://github.com/cbracco/cardinal/archive/master.zip)
 
 There is a minified version of Cardinal that is included in the `css/` directory of this project, but I would recommend developing with the uncompressed version and using your own build process to minify your CSS for production. That way you only have one HTTP request, and you aren’t just slapping Cardinal onto your project (which sort of defeats the purpose of using the framework, anyways).
 
@@ -99,4 +99,4 @@ When doing so, please checkout a new feature branch, and submit your pull reques
 
 ## Colophon
 
-Cardinal is a project by [Chris Bracco](http://cbracco.me). Illustration by [Justin Varberakis](http://twitter.com/varberakis).
+Cardinal is a project by [Chris Bracco](http://cbracco.me).
