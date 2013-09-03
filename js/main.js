@@ -2,13 +2,13 @@
  * Sidebar menu
  */
 
-// Cache menu selectors
-var flag = false,
-	body = $("html, body"),
+// Cache some selectors
+var flag         = false,
+	body         = $("html, body"),
 	last_id,
-	menu = $(".menu"),
-	menu_button = $(".menu-button"),
-	menu_items = menu.find("a"),
+	menu         = $(".menu"),
+	menu_button  = $(".menu-button"),
+	menu_items   = menu.find("a"),
 	scroll_items = menu_items.map(function() {
 		var item = $($(this).attr("href"));
 		if (item.length) { return item; }
@@ -83,6 +83,15 @@ menu_button.on("touchstart click", function(e) {
 		e.handled = true;
 	} else {
 		return false;
+	}
+});
+
+// Click or tap anywhere except the menu to close the menu
+body.on("touchstart click", function(e) {
+	var target = e.target;
+
+	if(!$(target).is(menu) && !$(target).parents().is(menu)) {
+		body.removeClass("menu_open");
 	}
 });
 
