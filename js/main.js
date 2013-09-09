@@ -1,8 +1,7 @@
 /**
- * Sidebar menu
+ * Cache some selectors
  */
 
-// Cache some selectors
 var flag         = false,
 	body         = $("html, body"),
 	last_id,
@@ -14,7 +13,10 @@ var flag         = false,
 		if (item.length) { return item; }
 	});
 
-// Prevent scrolling the entire page when scrolling inside the menu
+/**
+ * Prevent scrolling the entire page when scrolling inside the menu
+ */
+
 menu.on("DOMMouseScroll mousewheel", function(e) {
 	// Scroll variables
 	var $this = $(this),
@@ -44,10 +46,16 @@ menu.on("DOMMouseScroll mousewheel", function(e) {
 	}
 });
 
-// Set a flag on drag
+/**
+ * Set a flag on drag
+ */
+
 menu_items.on("touchmove", function() { flag = true; });
 
-// Move to appropriate content section on tap / click
+/**
+ * Move to appropriate content section on tap / click
+ */
+
 menu_items.on("touchend click", function(e) {
 	// Prevent the default event
 	e.stopPropagation();
@@ -70,7 +78,10 @@ menu_items.on("touchend click", function(e) {
 	}
 });
 
-// Menu button toggle
+/**
+ * Menu button toggle
+ */
+
 menu_button.on("touchstart click", function(e) {
 	// Prevent the default event
 	e.stopPropagation();
@@ -86,7 +97,10 @@ menu_button.on("touchstart click", function(e) {
 	}
 });
 
-// Click or tap anywhere except the menu to close the menu
+/**
+ * Click or tap anywhere except the menu to close the menu
+ */
+
 body.on("touchstart click", function(e) {
 	var target = e.target;
 
@@ -95,7 +109,10 @@ body.on("touchstart click", function(e) {
 	}
 });
 
-// Minimalist scrollspy for menu
+/**
+ * Minimalist scrollspy for menu
+ */
+
 $(window).scroll(function() {
 	// Get container scroll position
 	var from_top = $(this).scrollTop();
@@ -120,12 +137,12 @@ $(window).scroll(function() {
 	}
 });
 
+/**
+ * When the DOM is ready,
+ */
+
 $(function() {
-
-	/**
-	 * Google Analytics event tracking for click actions
-	 */
-
+	// Set GA event tracking for click actions
 	$("#masthead-download").on("click", function() {
 		ga("send", "event", "Header actions", "click", "Download");
 	});
@@ -154,10 +171,6 @@ $(function() {
 		ga("send", "event", "Header actions", "click", "cbracco.me");
 	});
 
-	/**
-	 * Request the latest version number from GitHub once a minute
-	 */
-
+	// Request the latest version number from GitHub once a minute
 	setInterval(updateVersion(), 60 * 1000);
-
 });
