@@ -1,3 +1,7 @@
+# 1.1.1 (September 17, 2013)
+
+- Added a DNS prefetch to the `<head>` of `index.html` for the version of jQuery being retrieved from Google’s CDN.
+
 # 1.1.0 (August 30, 2013)
 
 - Removed `.h1`, `.h2`, etc. classes. Use `.font_[size]` instead.
