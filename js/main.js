@@ -2,12 +2,6 @@
  * Cache some selectors
  */
 
-if("ontouchstart" in window) {
-	var click = "touchstart";
-} else {
-	var click = "click";
-}
-
 var flag         = false,
 	body         = $("html, body"),
 	last_id,
@@ -62,7 +56,7 @@ menu_items.on("touchmove", function() { flag = true; });
  * Move to appropriate content section on tap / click
  */
 
-menu_items.on(click, function(e) {
+menu_items.on("touchend click", function(e) {
 	// Prevent the default event
 	e.stopPropagation();
 	e.preventDefault();
@@ -88,7 +82,7 @@ menu_items.on(click, function(e) {
  * Menu button toggle
  */
 
-menu_button.on(click, function(e) {
+menu_button.on("touchstart click", function(e) {
 	// Prevent the default event
 	e.stopPropagation();
 	e.preventDefault();
@@ -107,7 +101,7 @@ menu_button.on(click, function(e) {
  * Click or tap anywhere except the menu to close the menu
  */
 
-body.on(click, function(e) {
+body.on("touchstart click", function(e) {
 	var target = e.target;
 
 	if(!$(target).is(menu) && !$(target).parents().is(menu)) {
