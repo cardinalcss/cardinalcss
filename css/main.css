@@ -1389,18 +1389,6 @@ table.stripes tbody > tr:nth-child(odd) > td {
 }
 
 @media only screen and (min-width: 768px) {
-	/*.js .page {
-		padding-left: 180px;
-	}
-
-	.js .menu_open .page {
-		left: 0;
-	}
-
-	.js .menu {
-		left: 0;
-	}*/
-
 	.js .page {
 		padding-left: 12rem;
 	}
