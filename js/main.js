@@ -1,6 +1,3 @@
-/* Add an event listener to the page */
-document.addEventListener("touchstart", function(){}, true)
-
 /**
  * Cache some selectors
  */
@@ -15,6 +12,13 @@ var flag         = false,
 		var item = $($(this).attr("href"));
 		if (item.length) { return item; }
 	});
+
+/**
+ * Add an event listener for `touchstart` to the page so that buttons
+ * feel quick after removing their default tap highlight color with CSS
+ */
+
+document.addEventListener("touchstart", function(){}, true);
 
 /**
  * Prevent scrolling the entire page when scrolling inside the menu
@@ -163,15 +167,15 @@ $(function() {
 	});
 
 	$("#footer-download").on("click", function() {
-		ga("send", "event", "Header actions", "click", "Download");
+		ga("send", "event", "Footer actions", "click", "Download");
 	});
 
 	$("#footer-github_repo").on("click", function() {
-		ga("send", "event", "Header actions", "click", "GitHub Repo");
+		ga("send", "event", "Footer actions", "click", "GitHub Repo");
 	});
 
 	$("#footer-cbracco").on("click", function() {
-		ga("send", "event", "Header actions", "click", "cbracco.me");
+		ga("send", "event", "Footer actions", "click", "cbracco.me");
 	});
 
 	// Request the latest version number from GitHub once a minute

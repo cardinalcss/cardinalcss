@@ -1243,11 +1243,11 @@ table.stripes tbody > tr:nth-child(odd) > td {
 	width: 180px;
 	height: 100%;
 	background-color: #222;
-	-webkit-overflow-scroll: touch;
 }
 
 .js .menu_open .menu {
 	left: 0;
+	-webkit-overflow-scrolling: touch;
 }
 
 /* Fix vertical scrollbar issue in IE9 */
