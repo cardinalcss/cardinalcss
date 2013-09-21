@@ -1215,13 +1215,22 @@ table.stripes tbody > tr:nth-child(odd) > td {
 	min-height: 100%;
 }
 
-.js .menu,
+.js .menu-button,
+.js .page,
+.js .menu {
+	-webkit-transition: 500ms;
+	-moz-transition:    500ms;
+	-o-transition:      500ms;
+	transition:         500ms;
+}
+
 .js .menu-button,
 .js .page {
-	-webkit-transition: all .2s ease;
-	-moz-transition:    all .2s ease;
-	-o-transition:      all .2s ease;
-	transition:         all .2s ease;
+	-webkit-transform: translateX(0);
+	-moz-transform:    translateX(0);
+	-ms-transform:     translateX(0);
+	-o-transform:      translateX(0);
+	transform:         translateX(0);
 }
 
 .menu {
@@ -1230,23 +1239,38 @@ table.stripes tbody > tr:nth-child(odd) > td {
 
 .js .menu_open .menu-button,
 .js .menu_open .page {
-	left: 180px;
+	-webkit-transform: translateX(12rem);
+	-moz-transform:    translateX(12rem);
+	-ms-transform:     translateX(12rem);
+	-o-transform:      translateX(12rem);
+	transform:         translateX(12rem);
 }
 
 .js .menu {
 	position: fixed;
 	top: 0;
 	bottom: 0;
-	left: -180px;
+	left: 0;
 	z-index: 1;
+	visibility: hidden;
 	overflow-y: auto;
-	width: 180px;
+	width: 12rem;
 	height: 100%;
 	background-color: #222;
+	-webkit-transform: translateX(-12rem);
+	-moz-transform:    translateX(-12rem);
+	-ms-transform:     translateX(-12rem);
+	-o-transform:      translateX(-12rem);
+	transform:         translateX(-12rem);
 }
 
 .js .menu_open .menu {
-	left: 0;
+	visibility: visible;
+	-webkit-transform: translateX(0);
+	-moz-transform:    translateX(0);
+	-ms-transform:     translateX(0);
+	-o-transform:      translateX(0);
+	transform:         translateX(0);
 	-webkit-overflow-scrolling: touch;
 }
 
@@ -1365,7 +1389,7 @@ table.stripes tbody > tr:nth-child(odd) > td {
 }
 
 @media only screen and (min-width: 768px) {
-	.js .page {
+	/*.js .page {
 		padding-left: 180px;
 	}
 
@@ -1375,6 +1399,19 @@ table.stripes tbody > tr:nth-child(odd) > td {
 
 	.js .menu {
 		left: 0;
+	}*/
+
+	.js .page {
+		padding-left: 12rem;
+	}
+
+	.js .menu {
+		visibility: visible;
+		-webkit-transform: translateX(0);
+		-moz-transform:    translateX(0);
+		-ms-transform:     translateX(0);
+		-o-transform:      translateX(0);
+		transform:         translateX(0);
 	}
 
 	.js .menu-button {
