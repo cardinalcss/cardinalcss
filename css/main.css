@@ -1401,6 +1401,14 @@ table.stripes tbody > tr:nth-child(odd) > td {
 	}
 }
 
+/* Remove highlight color from buttons for perceived performance */
+.button,
+.menu-anchor,
+.menu-button,
+.menu li a {
+	-webkit-tap-highlight-color: hsla(0, 0%, 0%, 0);
+}
+
 /**
  * Page ($page)
  */

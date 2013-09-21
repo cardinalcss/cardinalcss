@@ -1,3 +1,6 @@
+/* Add an event listener to the page */
+document.addEventListener("touchstart", function(){}, true)
+
 /**
  * Cache some selectors
  */
