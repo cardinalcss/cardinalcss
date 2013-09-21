@@ -212,7 +212,7 @@ acronym {
 /* Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome */
 b,
 strong {
-	font-weight: bold;
+	font-weight: 700;
 }
 
 blockquote {
@@ -700,7 +700,7 @@ legend {
 	padding: 0;
 	border: 0;
 	color: #222;
-	font-weight: bold;
+	font-weight: 700;
 }
 
 /**
@@ -736,7 +736,7 @@ table th,
 table tfoot td {
 	color: #222;
 	text-align: left;
-	font-weight: bold;
+	font-weight: 700;
 }
 
 table thead th,
