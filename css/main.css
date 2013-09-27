@@ -752,48 +752,48 @@ table td {
 }
 
 /* Outer border only */
-table.border {
+table.table_border {
 	border: 1px solid #dedede;
 }
 
 /* Borders for rows & columns */
-table.border_all th,
-table.border_all td {
+table.table_border_cells th,
+table.table_border_cells td {
 	border-top: 1px solid #dedede;
 	border-left: 1px solid #dedede;
 }
 
 /* Border for rows only */
-table.border_rows th,
-table.border_rows td {
+table.table_border_rows th,
+table.table_border_rows td {
 	border-top: 1px solid #dedede;
 }
 
-/* Remove top border to avoid double border on .border tables */
-table.border.border_all thead:first-child tr:first-child th,
-table.border.border_all thead:first-child tr:first-child td,
-table.border.border_rows thead:first-child tr:first-child th,
-table.border.border_rows thead:first-child tr:first-child td {
+/* Remove top border to avoid double border on `.border` tables */
+table.table_border.table_border_cells thead:first-child tr:first-child th,
+table.table_border.table_border_cells thead:first-child tr:first-child td,
+table.table_border.table_border_rows thead:first-child tr:first-child th,
+table.table_border.table_border_rows thead:first-child tr:first-child td {
 	border-top: 0;
 }
 
-table.border_all tr th:first-child,
-table.border_all tr td:first-child {
+table.table_border_cells tr th:first-child,
+table.table_border_cells tr td:first-child {
 	border-left: 0;
 }
 
-table.border_all tr:first-child th,
-table.border_all thead:first-child tr:first-child th {
+table.table_border_cells tr:first-child th,
+table.table_border_cells thead:first-child tr:first-child th {
 	border-top: 0;
 }
 
 /* Add bottom border to last row in the table */
-table.border_rows tr:last-child td {
+table.table_border_rows tr:last-child td {
 	border-bottom: 1px solid #dedede;
 }
 
 /* Stripes */
-table.stripes tbody > tr:nth-child(odd) > td {
+table.table_stripes tbody > tr:nth-child(odd) > td {
 	background-color: #f8f8f8;
 }
 
@@ -844,16 +844,16 @@ table.stripes tbody > tr:nth-child(odd) > td {
 	background: #dedede;
 }
 
-.island.hollow,
-.well.hollow {
+.island.island_hollow,
+.well.well_hollow {
 	background: transparent;
 	-webkit-box-shadow: inset 0 0 0 3px hsla(0, 0%, 94%, 1.0);
 	-moz-box-shadow:    inset 0 0 0 3px hsla(0, 0%, 94%, 1.0);
 	box-shadow:         inset 0 0 0 3px hsla(0, 0%, 94%, 1.0);
 }
 
-.island.rounded,
-.well.rounded {
+.island.island_rounded,
+.well.well_rounded {
 	-webkit-border-radius: 0.356rem;
 	-moz-border-radius:    0.356rem;
 	border-radius:         0.356rem;
@@ -1011,76 +1011,76 @@ table.stripes tbody > tr:nth-child(odd) > td {
 }
 
 /* Styles */
-.button.hollow {
+.button.button_hollow {
 	background: transparent;
 	-webkit-box-shadow: inset 0 0 0 3px hsla(0, 0%, 92%, 1.0);
 	-moz-box-shadow:    inset 0 0 0 3px hsla(0, 0%, 92%, 1.0);
 	box-shadow:         inset 0 0 0 3px hsla(0, 0%, 92%, 1.0);
 }
 
-.button.hollow:active {
+.button.button_hollow:active {
 	background: #efefef;
 	-webkit-box-shadow: inset 0 0 6px hsla(0, 0%, 0%, 0.20);
 	-moz-box-shadow:    inset 0 0 6px hsla(0, 0%, 0%, 0.20);
 	box-shadow:         inset 0 0 6px hsla(0, 0%, 0%, 0.20);
 }
 
-.button.chunky {
+.button.button_chunky {
 	-webkit-box-shadow: inset 0 -2px 0 hsla(0, 0%, 0%, 0.12);
 	-moz-box-shadow:    inset 0 -2px 0 hsla(0, 0%, 0%, 0.12);
 	box-shadow:         inset 0 -2px 0 hsla(0, 0%, 0%, 0.12);
 }
 
-.button.chunky:active {
+.button.button_chunky:active {
 	-webkit-box-shadow: inset 0 2px 3px hsla(0, 0%, 0%, 0.2);
 	-moz-box-shadow:    inset 0 2px 3px hsla(0, 0%, 0%, 0.2);
 	box-shadow:         inset 0 2px 3px hsla(0, 0%, 0%, 0.2);
 }
 
 /* Sizes */
-.button.mini {
+.button.button_mini {
 	padding: 0.238rem 0.563rem;
 	font-size: 0.8125rem;
 }
 
 @media only screen and (min-width: 640px) {
-	.button.mini {
+	.button.button_mini {
 		font-size: 0.75rem;
 	}
 }
 
-.button.small {
+.button.button_small {
 	padding: 0.317rem 0.75rem;
 	font-size: 0.875rem;
 }
 
-.button.large,
-.button.block {
+.button.button_large,
+.button.button_block {
 	padding: 1rem 1.333rem;
 	font-size: 1.125rem;
 	line-height: 1.333;
 }
 
-.button.block {
+.button.button_block {
 	display: block;
 }
 
 /* Shapes */
-.button.rounded {
+.button.button_rounded {
 	-webkit-border-radius: 0.356rem;
 	-moz-border-radius:    0.356rem;
 	border-radius:         0.356rem;
 }
 
-.button.pill {
+.button.button_pill {
 	-webkit-border-radius: 9999rem;
 	-moz-border-radius:    9999rem;
 	border-radius:         9999rem;
 }
 
 /* States */
-.button.disabled,
-.button.disabled:active,
+.button.button_disabled,
+.button.button_disabled:active,
 .button[disabled] {
 	background: #ddd !important;
 	-webkit-box-shadow: none !important;
@@ -1093,9 +1093,9 @@ table.stripes tbody > tr:nth-child(odd) > td {
 	cursor: not-allowed !important;
 }
 
-.button.hollow.disabled,
-.button.hollow.disabled:active,
-.button.hollow[disabled] {
+.button.button_hollow.button_disabled,
+.button.button_hollow.button_disabled:active,
+.button.button_hollow[disabled] {
 	background: transparent !important;
 	-webkit-box-shadow: inset 0 0 0 3px #ddd !important;
 	-moz-box-shadow:    inset 0 0 0 3px #ddd !important;
@@ -1126,6 +1126,25 @@ table.stripes tbody > tr:nth-child(odd) > td {
 .align_right  { float: right !important; }
 .align_none   { float: none !important;  }
 
+/* Auto-width */
+.width_auto { width: auto; }
+
+/* Font sizing */
+.font_huge,
+.font_xxl    { line-height: 1.333 !important; }
+
+.font_huge   { font-size: 4.209rem !important; }
+.font_xxl    { font-size: 3.157rem !important; }
+.font_xl     { font-size: 2.369rem !important; }
+.font_large  { font-size: 1.777rem !important; }
+.font_medium { font-size: 1.333rem !important; }
+.font_normal { font-size: 1rem !important;     }
+.font_small  { font-size: 0.75rem !important;  }
+
+/* Font styles */
+.font_thin  { font-weight: 300; }
+.font_muted { color: #777;      }
+
 /* Margins */
 .margin_top    { margin-top: 1rem !important;    }
 .margin_right  { margin-right: 1rem !important;  }
@@ -1146,46 +1165,28 @@ table.stripes tbody > tr:nth-child(odd) > td {
 .text_right   { text-align: right !important;   }
 .text_justify { text-align: justify !important; }
 
-/* Font sizing */
-.font_huge,
-.font_xxl,
-.font_xl,
-.font_large,
-.font_medium,
-.font_normal,
-.font_small {
-	color: inherit;
-	font-weight: inherit;
-}
-
-.font_huge,
-.font_xxl {
-	line-height: 1.333 !important;
-}
-
-.font_huge   { font-size: 4.209rem !important; }
-.font_xxl    { font-size: 3.157rem !important; }
-.font_xl     { font-size: 2.369rem !important; }
-.font_large  { font-size: 1.777rem !important; }
-.font_medium { font-size: 1.333rem !important; }
-.font_normal { font-size: 1rem !important;     }
-.font_small  { font-size: 0.75rem !important;  }
-
-/* Font styles */
-.font_thin {
-	font-weight: 300;
-}
-
-.font_muted {
-	color: #777;
-}
-
 @media only screen and (min-width: 640px) {
 	/* Alignment */
 	.lap-align_left   { float: left !important;  }
 	.lap-align_center { float: none; margin-left: auto; margin-right: auto; }
 	.lap-align_right  { float: right !important; }
 	.lap-align_none   { float: none !important;  }
+
+	/* Auto-width */
+	.lap-width_auto { width: auto; }
+
+	/* Font sizing */
+	.lap-font_huge   { font-size: 4.209rem !important; }
+	.lap-font_xxl    { font-size: 3.157rem !important; }
+	.lap-font_xl     { font-size: 2.369rem !important; }
+	.lap-font_large  { font-size: 1.777rem !important; }
+	.lap-font_medium { font-size: 1.333rem !important; }
+	.lap-font_normal { font-size: 1rem !important;     }
+	.lap-font_small  { font-size: 0.75rem !important;  }
+
+	/* Font styles */
+	.lap-font_thin  { font-weight: 300; }
+	.lap-font_muted { color: #777;      }
 
 	/* Margins */
 	.lap-margin_top    { margin-top: 1rem !important;    }
@@ -1206,19 +1207,6 @@ table.stripes tbody > tr:nth-child(odd) > td {
 	.lap-text_center  { text-align: center !important;  }
 	.lap-text_right   { text-align: right !important;   }
 	.lap-text_justify { text-align: justify !important; }
-
-	/* Font sizing */
-	.lap-font_huge   { font-size: 4.209rem !important; }
-	.lap-font_xxl    { font-size: 3.157rem !important; }
-	.lap-font_xl     { font-size: 2.369rem !important; }
-	.lap-font_large  { font-size: 1.777rem !important; }
-	.lap-font_medium { font-size: 1.333rem !important; }
-	.lap-font_normal { font-size: 1rem !important;     }
-	.lap-font_small  { font-size: 0.75rem !important;  }
-
-	/* Font styles */
-	.lap-font_thin  { font-weight: 300; }
-	.lap-font_muted { color: #777;      }
 }
 
 @media only screen and (min-width: 960px) {
@@ -1227,6 +1215,22 @@ table.stripes tbody > tr:nth-child(odd) > td {
 	.desk-align_center { float: none; margin-left: auto; margin-right: auto; }
 	.desk-align_right  { float: right !important; }
 	.desk-align_none   { float: none !important;  }
+
+	/* Auto-width */
+	.desk-width_auto { width: auto; }
+
+	/* Font sizing */
+	.desk-font_huge   { font-size: 4.209rem !important; }
+	.desk-font_xxl    { font-size: 3.157rem !important; }
+	.desk-font_xl     { font-size: 2.369rem !important; }
+	.desk-font_large  { font-size: 1.777rem !important; }
+	.desk-font_medium { font-size: 1.333rem !important; }
+	.desk-font_normal { font-size: 1rem !important;     }
+	.desk-font_small  { font-size: 0.75rem !important;  }
+
+	/* Font styles */
+	.desk-font_thin  { font-weight: 300; }
+	.desk-font_muted { color: #777;      }
 
 	/* Margins */
 	.desk-margin_top    { margin-top: 1rem !important;    }
@@ -1247,19 +1251,6 @@ table.stripes tbody > tr:nth-child(odd) > td {
 	.desk-text_center  { text-align: center !important;  }
 	.desk-text_right   { text-align: right !important;   }
 	.desk-text_justify { text-align: justify !important; }
-
-	/* Font sizing */
-	.desk-font_huge   { font-size: 4.209rem !important; }
-	.desk-font_xxl    { font-size: 3.157rem !important; }
-	.desk-font_xl     { font-size: 2.369rem !important; }
-	.desk-font_large  { font-size: 1.777rem !important; }
-	.desk-font_medium { font-size: 1.333rem !important; }
-	.desk-font_normal { font-size: 1rem !important;     }
-	.desk-font_small  { font-size: 0.75rem !important;  }
-
-	/* Font styles */
-	.desk-font_thin  { font-weight: 300; }
-	.desk-font_muted { color: #777;      }
 }
 
 /* Image replacement */

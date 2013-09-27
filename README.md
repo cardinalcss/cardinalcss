@@ -1,4 +1,4 @@
-# Cardinal - 1.1.2
+# Cardinal - 1.2.0
 
 Cardinal is a small, “[mobile first](http://cbrac.co/116bQqk)” CSS framework with some useful default styles, scalable typography, reusable modules, and a simple responsive grid system.
 

@@ -1,3 +1,10 @@
+# 1.2.0 (September 27, 2013)
+
+- Added `.width_auto` class in case you want to change a width class to `width: auto;` at some breakpoint.
+- Changed class-naming conventions to avoid possible conflicts. All class names for block/element modifiers are now prefixed with the name of that block/element (eg. `.button_chunky` instead of `.button.chunky`).
+- Changed `.table_border_all` to `.table_border_cells` because that makes more sense.
+- Removed the `inherit` property from font sizing helper classes because it was causing inheritance issues.
+
 # 1.1.2 (September 20, 2013)
 
 - Added `Arial` to the font stack for headings.
