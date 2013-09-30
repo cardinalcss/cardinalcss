@@ -3,6 +3,7 @@
 Cardinal is a small, “[mobile first](http://cbrac.co/116bQqk)” CSS framework with some useful default styles, scalable typography, reusable modules, and a simple responsive grid system.
 
 * [Read the documentation](http://cardinalcss.com)
+* [See the CHANGELOG](https://github.com/cbracco/cardinal/blob/master/CHANGELOG.md)
 * [View progress on Pivotal Tracker](https://www.pivotaltracker.com/s/projects/803361)
 
 ### What does that mean?
