@@ -967,9 +967,14 @@
 
 					<h3 class="font_medium">box-sizing: border-box; in IE9</h3>
 
-					<p>There is a bug in IE9 (big surprise) when <code>box-sizing: border-box;</code>, <code>position: fixed;</code>, and <code>overflow: auto;</code> are declared on the same element. The scrollbar’s width is subtracted twice, making the element’s width incorrect. I came across this bug while making the off-canvas navigation for <a href="http://cardinalcss.com/">this project’s documentation website</a>.</p>
+					<p>There is a bug in IE9 (big surprise) when <code>box-sizing: border-box;</code>, <code>position: fixed;</code>, and <code>overflow: auto;</code> are declared on the same element. The scrollbar’s width is subtracted twice, making the element’s width incorrect. I came across this bug while making the off-canvas menu on this page.</p>
 
-					<p>To fix this, simply change the element’s <code>box-sizing</code> value to <code>content-box</code> instead of <code>border-box</code>, and voila.</p>
+					<p>To fix this, I simply changed my menu’s <code>box-sizing</code> value to <code>content-box</code> instead of <code>border-box</code>, and voila:</p>
+
+					<pre><code>/* Fix vertical scrollbar issue in IE9 */
+.ie9 .menu {
+	box-sizing: content-box;
+}</code></pre>
 
 					<nav class="section-menu island island_rounded">
 						<a href="#menu" class="button button_chunky button_rounded button_primary">Menu</a>
