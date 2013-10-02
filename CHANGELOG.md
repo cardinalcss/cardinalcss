@@ -1,3 +1,8 @@
+# 1.2.1 (October 1, 2013)
+
+- Added more helper classes for font weights.
+- Changed `.font_thin` to `.font_light` for consistency.
+
 # 1.2.0 (September 27, 2013)
 
 - Added `.width_auto` class in case you want to change a width class to `width: auto;` at some breakpoint.

@@ -1143,8 +1143,13 @@ table td {
 .font_small  { font-size: 0.75rem !important;  }
 
 /* Font styles */
-.font_thin  { font-weight: 300; }
-.font_muted { color: #777;      }
+.font_ultralight { font-weight: 100; }
+.font_light      { font-weight: 300; }
+.font_normal     { font-weight: 400; }
+.font_semibold   { font-weight: 600; }
+.font_bold       { font-weight: 700; }
+.font_black      { font-weight: 900; }
+.font_muted      { color: #777;      }
 
 /* Margins */
 .margin_top    { margin-top: 1rem !important;    }
@@ -1186,8 +1191,13 @@ table td {
 	.lap-font_small  { font-size: 0.75rem !important;  }
 
 	/* Font styles */
-	.lap-font_thin  { font-weight: 300; }
-	.lap-font_muted { color: #777;      }
+	.lap-font_ultralight { font-weight: 100; }
+	.lap-font_light      { font-weight: 300; }
+	.lap-font_normal     { font-weight: 400; }
+	.lap-font_semibold   { font-weight: 600; }
+	.lap-font_bold       { font-weight: 700; }
+	.lap-font_black      { font-weight: 900; }
+	.lap-font_muted      { color: #777;      }
 
 	/* Margins */
 	.lap-margin_top    { margin-top: 1rem !important;    }
@@ -1230,8 +1240,13 @@ table td {
 	.desk-font_small  { font-size: 0.75rem !important;  }
 
 	/* Font styles */
-	.desk-font_thin  { font-weight: 300; }
-	.desk-font_muted { color: #777;      }
+	.desk-font_ultralight { font-weight: 100; }
+	.desk-font_light      { font-weight: 300; }
+	.desk-font_normal     { font-weight: 400; }
+	.desk-font_semibold   { font-weight: 600; }
+	.desk-font_bold       { font-weight: 700; }
+	.desk-font_black      { font-weight: 900; }
+	.desk-font_muted      { color: #777;      }
 
 	/* Margins */
 	.desk-margin_top    { margin-top: 1rem !important;    }
