@@ -1545,13 +1545,13 @@ table.table_stripes tbody > tr:nth-child(odd) > td {
 .font_huge,
 .font_xxl    { line-height: 1.333 !important; }
 
-.font_huge   { font-size: 4.209rem !important; }
-.font_xxl    { font-size: 3.157rem !important; }
-.font_xl     { font-size: 2.369rem !important; }
-.font_large  { font-size: 1.777rem !important; }
-.font_medium { font-size: 1.333rem !important; }
-.font_normal { font-size: 1rem !important;     }
-.font_small  { font-size: 0.75rem !important;  }
+.font_huge    { font-size: 4.209rem !important; }
+.font_xxl     { font-size: 3.157rem !important; }
+.font_xl      { font-size: 2.369rem !important; }
+.font_large   { font-size: 1.777rem !important; }
+.font_medium  { font-size: 1.333rem !important; }
+.font_regular { font-size: 1rem !important;     }
+.font_small   { font-size: 0.75rem !important;  }
 
 /* Font styles */
 .font_ultralight { font-weight: 100; }
@@ -1593,13 +1593,13 @@ table.table_stripes tbody > tr:nth-child(odd) > td {
 	.lap-width_auto { width: auto; }
 
 	/* Font sizing */
-	.lap-font_huge   { font-size: 4.209rem !important; }
-	.lap-font_xxl    { font-size: 3.157rem !important; }
-	.lap-font_xl     { font-size: 2.369rem !important; }
-	.lap-font_large  { font-size: 1.777rem !important; }
-	.lap-font_medium { font-size: 1.333rem !important; }
-	.lap-font_normal { font-size: 1rem !important;     }
-	.lap-font_small  { font-size: 0.75rem !important;  }
+	.lap-font_huge    { font-size: 4.209rem !important; }
+	.lap-font_xxl     { font-size: 3.157rem !important; }
+	.lap-font_xl      { font-size: 2.369rem !important; }
+	.lap-font_large   { font-size: 1.777rem !important; }
+	.lap-font_medium  { font-size: 1.333rem !important; }
+	.lap-font_regular { font-size: 1rem !important;     }
+	.lap-font_small   { font-size: 0.75rem !important;  }
 
 	/* Font styles */
 	.lap-font_ultralight { font-weight: 100; }
@@ -1642,13 +1642,13 @@ table.table_stripes tbody > tr:nth-child(odd) > td {
 	.desk-width_auto { width: auto; }
 
 	/* Font sizing */
-	.desk-font_huge   { font-size: 4.209rem !important; }
-	.desk-font_xxl    { font-size: 3.157rem !important; }
-	.desk-font_xl     { font-size: 2.369rem !important; }
-	.desk-font_large  { font-size: 1.777rem !important; }
-	.desk-font_medium { font-size: 1.333rem !important; }
-	.desk-font_normal { font-size: 1rem !important;     }
-	.desk-font_small  { font-size: 0.75rem !important;  }
+	.desk-font_huge    { font-size: 4.209rem !important; }
+	.desk-font_xxl     { font-size: 3.157rem !important; }
+	.desk-font_xl      { font-size: 2.369rem !important; }
+	.desk-font_large   { font-size: 1.777rem !important; }
+	.desk-font_medium  { font-size: 1.333rem !important; }
+	.desk-font_regular { font-size: 1rem !important;     }
+	.desk-font_small   { font-size: 0.75rem !important;  }
 
 	/* Font styles */
 	.desk-font_ultralight { font-weight: 100; }
