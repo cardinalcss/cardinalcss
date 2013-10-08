@@ -1,3 +1,7 @@
+# 1.2.2 (October 7, 2013)
+
+- Fixed class conflict with `.font_normal` being used twice (derp). Changed the font sizing helper class to `.font_regular` instead.
+
 # 1.2.1 (October 1, 2013)
 
 - Added more helper classes for font weights.
