@@ -1,3 +1,7 @@
+# 1.2.3 (October 11, 2013)
+
+- Added some default styles for table captions
+
 # 1.2.2 (October 7, 2013)
 
 - Fixed class conflict with `.font_normal` being used twice (derp). Changed the font sizing helper class to `.font_regular` instead.

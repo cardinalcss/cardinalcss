@@ -732,6 +732,12 @@ table {
 	empty-cells: show;
 }
 
+caption {
+	font-weight: 700;
+	font-style: italic;
+	padding-bottom: 0.317rem;
+}
+
 table th,
 table tfoot td {
 	color: #222;
