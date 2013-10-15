@@ -4,7 +4,7 @@
 
 # 1.2.3 (October 11, 2013)
 
-- Added some default styles for table captions
+- Added some default styles for the caption element.
 
 # 1.2.2 (October 7, 2013)
 
