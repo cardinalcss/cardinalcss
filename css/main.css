@@ -261,6 +261,25 @@ ul {
 	margin: 0 0 1rem;
 }
 
+/**
+ * 1. Non-standard fallback for older WebKit
+ */
+
+caption,
+p,
+table,
+textarea,
+td,
+th {
+	-ms-word-break: break-all;
+	word-break:     break-all;
+	word-break:     break-word; /* 1 */
+	-webkit-hyphens: auto;
+	-moz-hyphens:    auto;
+	-ms-hyphens:     auto;
+	hyphens:         auto;
+}
+
 dl dt {
 	color: #222;
 	font-weight: 700;
@@ -348,18 +367,6 @@ ol ul,
 ul ul,
 ul ol {
 	margin-bottom: 0;
-}
-
-p,
-table,
-textarea,
-td,
-th {
-	word-wrap: break-word;
-	-webkit-hyphens: auto;
-	-moz-hyphens:    auto;
-	-ms-hyphens:     auto;
-	hyphens:         auto;
 }
 
 /* Set consistent <q> types */
