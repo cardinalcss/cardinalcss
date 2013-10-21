@@ -628,13 +628,22 @@ fieldset {
 	border: 0;
 }
 
-/* Make most inputs, select boxes, and textareas as `block` elements */
+/**
+ * 1. 100% width inputs, select boxes, and textareas by default
+ * 2. Give elements same styles as `.button` elements
+ */
 input,
 select,
 textarea {
-	display: block;
-	width: 100%;
+	display: block;                  /* 1 */
+	padding: 0.563rem;               /* 2 */
+	width: 100%;                     /* 1 */
+	border: 1px solid #aaa;
+	-webkit-border-radius: 0.356rem; /* 2 */
+	-moz-border-radius:    0.356rem; /* 2 */
+	border-radius:         0.356rem; /* 2 */
 	vertical-align: middle;
+	line-height: 1.5;                /* 2 */
 }
 
 /* Make checkbox, image, and radio inputs `inline-block` by default */

@@ -1,3 +1,7 @@
+# 1.3.0 (October 21, 2013)
+
+- Updates to make form styles more consistent with `.button` styles.
+
 # 1.2.4 (October 15, 2013)
 
 - Updated word wrapping and hyphenation declaration to include `caption` element and use [a more bulletproof solution](http://kenneth.io/blog/2012/03/04/word-wrapping-hypernation-using-css/) that works in IE8+, Firefox 6+, iOS 4.2+, Safari 5.1+, and Chrome 13+.
