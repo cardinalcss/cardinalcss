@@ -1474,6 +1474,7 @@ table.table_stripes tbody > tr:nth-child(odd) > td {
 
 .masthead,
 .footer {
+	position: relative;
 	padding: 2rem 5%;
 	background: #c12026 url("../img/bg.svg") repeat;
 }
@@ -1499,6 +1500,19 @@ table.table_stripes tbody > tr:nth-child(odd) > td {
 .masthead-title {
 	line-height: 1;
 	-webkit-font-smoothing: antialiased;
+}
+
+.opl_award {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+
+@media only screen and (min-width: 768px) {
+	.opl_award {
+		top: 1.333rem;
+		bottom: auto;
+	}
 }
 
 /**
