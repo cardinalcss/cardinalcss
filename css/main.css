@@ -1505,7 +1505,17 @@ table.table_stripes tbody > tr:nth-child(odd) > td {
 .opl_award {
 	position: absolute;
 	left: 0;
-	bottom: 0;
+	bottom: 0.5rem;
+}
+
+.opl_award img {
+	max-width: 65px;
+}
+
+@media only screen and (min-width: 480px) {
+	.opl_award img {
+		max-width: 100%;
+	}
 }
 
 @media only screen and (min-width: 768px) {
