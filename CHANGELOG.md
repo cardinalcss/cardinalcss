@@ -1,3 +1,9 @@
+# 1.4.0 (November 8, 2013)
+
+- Removed some helper classes for alignment, margins, and paddings. Classes were cluttering HTML markup, and it started to feel like inline styling.
+- Moved `.width_auto` classes into the Grid section, where they belong.
+- Reverted Google Analytics tracking code back to the version found in [HTML5BP](https://github.com/h5bp/html5-boilerplate/blob/master).
+
 # 1.3.0 (October 21, 2013)
 
 - Updates to make form styles more consistent with `.button` styles.
