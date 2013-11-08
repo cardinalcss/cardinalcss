@@ -1564,6 +1564,10 @@ table.table_stripes tbody > tr:nth-child(odd) > td {
 	margin-bottom: 1rem;
 }
 
+.footer-credits {
+	margin-bottom: 0;
+}
+
 /* ================================================================== *\
    Helpers ($helpers)
 \* ================================================================== */
