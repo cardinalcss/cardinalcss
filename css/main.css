@@ -33,6 +33,10 @@
    Lightest gray: #f8f8f8
    White:         #fff
 
+   COLORS
+   ---------------------------
+   Primary (blue): #1fa3ec
+
 \* ================================================================== */
 
 /* ================================================================== *\
@@ -608,7 +612,7 @@ select {
  */
 
 button,
-html input[type="button"],      /* 1 */
+html input[type="button"], /* 1 */
 input[type="reset"],
 input[type="submit"] {
 	cursor: pointer;            /* 2 */
@@ -657,14 +661,17 @@ input[type="radio"] {
 
 /**
  * 1. Address `box-sizing` set to `content-box` in IE 8/9
- * 2. Remove excess padding in IE 8/9
+ * 2. Add some margin so they look better grouped and with inline labels
+ * 3. Remove excess padding in IE 8/9
  */
 
 input[type="checkbox"],
 input[type="radio"] {
-	box-sizing: border-box; /* 1 */
-	margin: 0 0.422rem 0.238rem 0;
-	padding: 0;             /* 2 */
+	-webkit-box-sizing: border-box; /* 1 */
+	-moz-box-sizing:    border-box; /* 1 */
+	box-sizing:         border-box; /* 1 */
+	margin: 0 0.422rem 0.238rem 0;  /* 2 */
+	padding: 0;                     /* 3 */
 }
 
 /**
@@ -675,8 +682,8 @@ input[type="radio"] {
 
 input[type="search"] {
 	-webkit-box-sizing: content-box; /* 1 */
-	-moz-box-sizing:    content-box;
-	box-sizing:         content-box;
+	-moz-box-sizing:    content-box; /* 1 */
+	box-sizing:         content-box; /* 1 */
 	-webkit-appearance: textfield;   /* 2 */
 }
 
@@ -941,6 +948,7 @@ table td {
 .three_sixths  { width: 50%;     }
 .four_sixths   { width: 66.666%; }
 .five_sixths   { width: 83.333%; }
+.width_auto    { width: auto;    }
 
 /* Grid breakpoint for devices that sit in your lap (eg. tablets) */
 @media only screen and (min-width: 640px) {
@@ -970,6 +978,7 @@ table td {
 	.lap-three_sixths   { width: 50%;     }
 	.lap-four_sixths    { width: 66.666%; }
 	.lap-five_sixths    { width: 83.333%; }
+	.lap-width_auto     { width: auto;    }
 }
 
 /* Grid breakpoint for devices that remain on your desk (eg. iMac) */
@@ -1000,6 +1009,7 @@ table td {
 	.desk-three_sixths  { width: 50%;     }
 	.desk-four_sixths   { width: 66.666%; }
 	.desk-five_sixths   { width: 83.333%; }
+	.desk-width_auto    { width: auto;    }
 }
 
 /* ================================================================== *\
@@ -1142,154 +1152,6 @@ table td {
 /* ================================================================== *\
    Helpers ($helpers)
 \* ================================================================== */
-
-/* Alignment */
-.align_left   { float: left !important;  }
-.align_center { float: none; margin-left: auto; margin-right: auto; }
-.align_right  { float: right !important; }
-.align_none   { float: none !important;  }
-
-/* Auto-width */
-.width_auto { width: auto; }
-
-/* Font sizing */
-.font_huge,
-.font_xxl    { line-height: 1.333 !important; }
-
-.font_huge    { font-size: 4.209rem !important; }
-.font_xxl     { font-size: 3.157rem !important; }
-.font_xl      { font-size: 2.369rem !important; }
-.font_large   { font-size: 1.777rem !important; }
-.font_medium  { font-size: 1.333rem !important; }
-.font_regular { font-size: 1rem !important;     }
-.font_small   { font-size: 0.75rem !important;  }
-
-/* Font styles */
-.font_ultralight { font-weight: 100; }
-.font_light      { font-weight: 300; }
-.font_normal     { font-weight: 400; }
-.font_semibold   { font-weight: 600; }
-.font_bold       { font-weight: 700; }
-.font_black      { font-weight: 900; }
-.font_muted      { color: #777;      }
-
-/* Margins */
-.margin_top    { margin-top: 1rem !important;    }
-.margin_right  { margin-right: 1rem !important;  }
-.margin_bottom { margin-bottom: 1rem !important; }
-.margin_left   { margin-left: 1rem !important;   }
-.margin_none   { margin: 0 !important;           }
-
-/* Paddings */
-.padding_top    { padding-top: 1rem !important;    }
-.padding_right  { padding-right: 1rem !important;  }
-.padding_bottom { padding-bottom: 1rem !important; }
-.padding_left   { padding-left: 1rem !important;   }
-.padding_none   { padding: 0 !important;           }
-
-/* Text alignment */
-.text_left    { text-align: left !important;    }
-.text_center  { text-align: center !important;  }
-.text_right   { text-align: right !important;   }
-.text_justify { text-align: justify !important; }
-
-@media only screen and (min-width: 640px) {
-	/* Alignment */
-	.lap-align_left   { float: left !important;  }
-	.lap-align_center { float: none; margin-left: auto; margin-right: auto; }
-	.lap-align_right  { float: right !important; }
-	.lap-align_none   { float: none !important;  }
-
-	/* Auto-width */
-	.lap-width_auto { width: auto; }
-
-	/* Font sizing */
-	.lap-font_huge    { font-size: 4.209rem !important; }
-	.lap-font_xxl     { font-size: 3.157rem !important; }
-	.lap-font_xl      { font-size: 2.369rem !important; }
-	.lap-font_large   { font-size: 1.777rem !important; }
-	.lap-font_medium  { font-size: 1.333rem !important; }
-	.lap-font_regular { font-size: 1rem !important;     }
-	.lap-font_small   { font-size: 0.75rem !important;  }
-
-	/* Font styles */
-	.lap-font_ultralight { font-weight: 100; }
-	.lap-font_light      { font-weight: 300; }
-	.lap-font_normal     { font-weight: 400; }
-	.lap-font_semibold   { font-weight: 600; }
-	.lap-font_bold       { font-weight: 700; }
-	.lap-font_black      { font-weight: 900; }
-	.lap-font_muted      { color: #777;      }
-
-	/* Margins */
-	.lap-margin_top    { margin-top: 1rem !important;    }
-	.lap-margin_right  { margin-right: 1rem !important;  }
-	.lap-margin_bottom { margin-bottom: 1rem !important; }
-	.lap-margin_left   { margin-left: 1rem !important;   }
-	.lap-margin_none   { margin: 0 !important;           }
-
-	/* Paddings */
-	.lap-padding_top    { padding-top: 1rem !important;    }
-	.lap-padding_right  { padding-right: 1rem !important;  }
-	.lap-padding_bottom { padding-bottom: 1rem !important; }
-	.lap-padding_left   { padding-left: 1rem !important;   }
-	.lap-padding_none   { padding: 0 !important;           }
-
-	/* Text alignment */
-	.lap-text_left    { text-align: left !important;    }
-	.lap-text_center  { text-align: center !important;  }
-	.lap-text_right   { text-align: right !important;   }
-	.lap-text_justify { text-align: justify !important; }
-}
-
-@media only screen and (min-width: 960px) {
-	/* Alignment */
-	.desk-align_left   { float: left !important;  }
-	.desk-align_center { float: none; margin-left: auto; margin-right: auto; }
-	.desk-align_right  { float: right !important; }
-	.desk-align_none   { float: none !important;  }
-
-	/* Auto-width */
-	.desk-width_auto { width: auto; }
-
-	/* Font sizing */
-	.desk-font_huge    { font-size: 4.209rem !important; }
-	.desk-font_xxl     { font-size: 3.157rem !important; }
-	.desk-font_xl      { font-size: 2.369rem !important; }
-	.desk-font_large   { font-size: 1.777rem !important; }
-	.desk-font_medium  { font-size: 1.333rem !important; }
-	.desk-font_regular { font-size: 1rem !important;     }
-	.desk-font_small   { font-size: 0.75rem !important;  }
-
-	/* Font styles */
-	.desk-font_ultralight { font-weight: 100; }
-	.desk-font_light      { font-weight: 300; }
-	.desk-font_normal     { font-weight: 400; }
-	.desk-font_semibold   { font-weight: 600; }
-	.desk-font_bold       { font-weight: 700; }
-	.desk-font_black      { font-weight: 900; }
-	.desk-font_muted      { color: #777;      }
-
-	/* Margins */
-	.desk-margin_top    { margin-top: 1rem !important;    }
-	.desk-margin_right  { margin-right: 1rem !important;  }
-	.desk-margin_bottom { margin-bottom: 1rem !important; }
-	.desk-margin_left   { margin-left: 1rem !important;   }
-	.desk-margin_none   { margin: 0 !important;           }
-
-	/* Paddings */
-	.desk-padding_top    { padding-top: 1rem !important;    }
-	.desk-padding_right  { padding-right: 1rem !important;  }
-	.desk-padding_bottom { padding-bottom: 1rem !important; }
-	.desk-padding_left   { padding-left: 1rem !important;   }
-	.desk-padding_none   { padding: 0 !important;           }
-
-	/* Text alignment */
-	.desk-text_left    { text-align: left !important;    }
-	.desk-text_center  { text-align: center !important;  }
-	.desk-text_right   { text-align: right !important;   }
-	.desk-text_justify { text-align: justify !important; }
-}
 
 /* Image replacement */
 .ir {

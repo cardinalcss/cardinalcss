@@ -1,3 +1,8 @@
+# 1.4.0 (November 8, 2013)
+
+- Removed many helper classes for alignment, margins, paddings, text alignment, font size, and font weight. Classes were cluttering HTML markup, and it started to feel like inline styling.
+- Reverted Google Analytics tracking code back to the version found in [HTML5BP](https://github.com/h5bp/html5-boilerplate/blob/master).
+
 # 1.3.0 (October 21, 2013)
 
 - Updates to make form styles more consistent with `.button` styles.
