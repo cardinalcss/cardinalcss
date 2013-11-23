@@ -98,6 +98,10 @@ Find something broken? Have ideas or feature requests? Please [submit an issue](
 
 When doing so, please checkout a new feature branch, and submit your pull request from it. Do not submit pull requests from your `master` branch. Please and thank you.
 
+## License
+
+Cardinal is licensed under the MIT Open Source license. For more information, see the LICENSE file in this repository.
+
 ## Colophon
 
 Cardinal is a project by [Chris Bracco](http://cbracco.me).
