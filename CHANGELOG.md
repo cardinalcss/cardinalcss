@@ -1,3 +1,30 @@
+# 2.0.0 (January 9, 2014)
+
+- Updated the [documentation website](http://cardinalcss.com)!
+- Added LESS support via the ["less" branch]()!
+- Updated jQuery to 1.10.2.
+- Updated Modernizr to 2.7.1.
+- Removed minified version of Cardinal.
+- Added Chrome Frame support to IE rendering `<meta>` tag.
+- Removed `@media` queries on `html` element to resize the entire project.
+- Re-ordered and re-grouped styles in `main.css`.
+- Added 5 carriage returns in between sections in `main.css` so its easier to see section breaks when scrolling.
+- Fixed some overflow issues with form elements.
+- Removed `.island` and `.well` classes.
+- Removed a bunch of helper classes.
+- Added practical font-sizing classes for headings (`.h1`, `.h2`, etc).
+- Switched indentation from tabs to spaces.
+- Updated `<blockquote>` styles and structure.
+- Renamed `.lap-*` to `.medium-*`, and `.desk-*` to `.large-*`.
+- Changed default styles for form elements.
+- Added `.fieldset-border`, and `.flex-video` classes.
+- Changed class naming conventions to all hyphens.
+- Added default `humans.txt` and `robots.txt` files to the root directory.
+- Added an empty `img/` folder since I usually end up creating one anyways.
+- Added some default HTML elements to `index.html`.
+- Removed a bunch of `.button` classes.
+- Changed `.wrapper`’s maximum width to `64rem`, or `1024px`.
+
 # 1.4.0 (November 8, 2013)
 
 - Removed some helper classes for alignment, margins, and paddings. Classes were cluttering HTML markup, and it started to feel like inline styling.
