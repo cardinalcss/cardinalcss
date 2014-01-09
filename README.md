@@ -1,6 +1,6 @@
-# Cardinal - 1.4.0
+# Cardinal - 1.5.0
 
-Cardinal is a small “[mobile first](http://cbrac.co/116bQqk)” CSS framework, with useful default styles, fluid typography, and a responsive grid system.
+Cardinal is a small "[mobile first](http://cbrac.co/116bQqk)" CSS framework, with useful default styles, fluid typography, and a responsive grid system.
 
 * [Read the documentation](http://cardinalcss.com)
 * [See the CHANGELOG](https://github.com/cbracco/cardinal/blob/master/CHANGELOG.md)
@@ -8,7 +8,7 @@ Cardinal is a small “[mobile first](http://cbrac.co/116bQqk)” CSS framework,
 
 ### What does that mean?
 
-This framework is for building responsive web applications. It’s not meant to be simply “bolted on” to a project like [Twitter Bootstrap](http://getbootstrap.com) or [Zurb’s Foundation](http://foundation.zurb.com); it’s a starting point that you will want to customize and build upon to suit your application or project.
+This framework is for building responsive web applications. It’s not meant to be simply "bolted on" to a project like [Twitter Bootstrap](http://getbootstrap.com) or [Zurb’s Foundation](http://foundation.zurb.com); it’s a starting point that you will want to customize and build upon to suit your application or project.
 
 Cardinal provides a new approach to scaling web typography and layout across multiple devices. It places **little emphasis on pixel-precision**, but does not restrict its usage. Instead, Cardinal leverages the power of the `rem` unit to make it simpler to scale the type and layout of **the entire application** for different devices.
 
@@ -22,7 +22,7 @@ The purpose of this framework is to make it easier to rapidly prototype, build, 
 
 * [Download it](https://github.com/cbracco/cardinal/archive/master.zip)
 
-There is a minified version of Cardinal that is included in the `css/` directory of this project, but I would recommend developing with the uncompressed version and using your own build process to minify your CSS for production. That way you only have one HTTP request, and you aren’t just slapping Cardinal onto your project (which sort of defeats the purpose of using the framework, anyways).
+There is a compressed & minified and uncompressed & unminified version of Cardinal that is included in the `css/` directory of this project, but I would recommend developing with the uncompressed version and using your own build process to minify your CSS for production. That way you only have one HTTP request, and you aren’t just slapping Cardinal onto your project (which sort of defeats the purpose of using the framework, anyways).
 
 ## Getting started
 
@@ -44,11 +44,11 @@ Cardinal supports most modern browsers:
 
 I realize that for many web applications, IE8 cannot be ignored. By including the [REM unit polyfill](https://github.com/chuckcarpenter/REM-unit-polyfill) and Scott Jehl’s [Respond.js](https://github.com/scottjehl/Respond), Cardinal should work in IE8, but you will lose the scalable layout and typography because the REM unit polyfill converts all the `rem` values to pixels.
 
-A better option might be to include an IE-only stylesheet that serves a “fixed-layout” version of your application, instead of bothering with polyfills and other bandaid solutions.
+A better option might be to include an IE-only stylesheet that serves a "fixed-layout" version of your application, instead of bothering with polyfills and other bandaid solutions.
 
 ## Known issues
 
-### “display: inline-block” whitespace hack
+### "display: inline-block" whitespace hack
 
 - [More info here](http://css-tricks.com/fighting-the-space-between-inline-block-elements/)
 
@@ -69,7 +69,7 @@ If you need to support these older browsers, simply remove the white space in be
 
 - [More info here](https://github.com/cbracco/cardinal/issues/6)
 
-Cardinal defines all images to have `max-width: 100%`, which can interfere with the Google Maps “info window.” To fix this issue, you must change `100%` to `none` for all images inside your Google Maps, like so:
+Cardinal defines all images to have `max-width: 100%`, which can interfere with the Google Maps "info window." To fix this issue, you must change `100%` to `none` for all images inside your Google Maps, like so:
 
 	img[src*="gstatic.com/"],
 	img[src*="googleapis.com/"] {
@@ -97,6 +97,18 @@ Cardinal will be maintained using the [Semantic Versioning](http://semver.org/) 
 Find something broken? Have ideas or feature requests? Please [submit an issue](https://github.com/cbracco/Cardinal/issues/new) here on Github. Or, if you are feeling especially motivated, write some code and submit a pull request!
 
 When doing so, please checkout a new feature branch, and submit your pull request from it. Do not submit pull requests from your `master` branch. Please and thank you.
+
+How to contribute:
+
+	git clone https://github.com/cbracco/cardinal.git
+	cd cardinal
+	git checkout -b topic-branch-name
+	npm install
+	npm install -g grunt-cli
+
+[`grunt`](http://gruntjs.com/) is used to build the LESS and compile the CSS which also handles browser prefixing automatically against the caniuse.org database
+
+- Run `grunt` when you want to compile your CSS when you're testing
 
 ## License
 

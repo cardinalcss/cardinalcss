@@ -1,0 +1,157 @@
+//
+// Helpers
+// --------------------------------------------------
+
+// Font sizing
+.font_huge,
+.font_xxl { line-height: 1.333 !important; }
+
+.font_huge    { font-size: 4.209rem !important; }
+.font_xxl     { font-size: 3.157rem !important; }
+.font_xl      { font-size: 2.369rem !important; }
+.font_large   { font-size: 1.777rem !important; }
+.font_medium  { font-size: 1.333rem !important; }
+.font_regular { font-size: 1rem !important;     }
+.font_small   { font-size: 0.75rem !important;  }
+
+// Font styles
+.font_ultralight { font-weight: 100; }
+.font_light      { font-weight: 300; }
+.font_normal     { font-weight: 400; }
+.font_semibold   { font-weight: 600; }
+.font_bold       { font-weight: 700; }
+.font_black      { font-weight: 900; }
+.font_muted      { color: @base-muted-color;      }
+
+// Text alignment
+.text_left    { text-align: left !important;    }
+.text_center  { text-align: center !important;  }
+.text_right   { text-align: right !important;   }
+.text_justify { text-align: justify !important; }
+
+@media only screen and (min-width: 60em) {
+    // Font sizing
+    .lap-font_huge    { font-size: 4.209rem !important; }
+    .lap-font_xxl     { font-size: 3.157rem !important; }
+    .lap-font_xl      { font-size: 2.369rem !important; }
+    .lap-font_large   { font-size: 1.777rem !important; }
+    .lap-font_medium  { font-size: 1.333rem !important; }
+    .lap-font_regular { font-size: 1rem !important;     }
+    .lap-font_small   { font-size: 0.75rem !important;  }
+
+    // Font styles
+    .lap-font_ultralight { font-weight: 100; }
+    .lap-font_light      { font-weight: 300; }
+    .lap-font_normal     { font-weight: 400; }
+    .lap-font_semibold   { font-weight: 600; }
+    .lap-font_bold       { font-weight: 700; }
+    .lap-font_black      { font-weight: 900; }
+    .lap-font_muted      { color: #777;      }
+
+    // Text alignment
+    .lap-text_left    { text-align: left !important;    }
+    .lap-text_center  { text-align: center !important;  }
+    .lap-text_right   { text-align: right !important;   }
+    .lap-text_justify { text-align: justify !important; }
+}
+
+@media only screen and (min-width: 90em) {
+    // Font sizing
+    .desk-font_huge    { font-size: 4.209rem !important; }
+    .desk-font_xxl     { font-size: 3.157rem !important; }
+    .desk-font_xl      { font-size: 2.369rem !important; }
+    .desk-font_large   { font-size: 1.777rem !important; }
+    .desk-font_medium  { font-size: 1.333rem !important; }
+    .desk-font_regular { font-size: 1rem !important;     }
+    .desk-font_small   { font-size: 0.75rem !important;  }
+
+    // Font styles
+    .desk-font_ultralight { font-weight: 100; }
+    .desk-font_light      { font-weight: 300; }
+    .desk-font_normal     { font-weight: 400; }
+    .desk-font_semibold   { font-weight: 600; }
+    .desk-font_bold       { font-weight: 700; }
+    .desk-font_black      { font-weight: 900; }
+    .desk-font_muted      { color: #777;      }
+
+    // Text alignment
+    .desk-text_left    { text-align: left !important;    }
+    .desk-text_center  { text-align: center !important;  }
+    .desk-text_right   { text-align: right !important;   }
+    .desk-text_justify { text-align: justify !important; }
+}
+
+// Image replacement
+.ir {
+    overflow: hidden;
+    border: 0;
+    background-color: transparent;
+
+    &:before {
+        display: block;
+        width: 0;
+        height: 100%;
+        content: "";
+    }
+}
+
+
+// Hide from both screenreaders and browsers - http://cbrac.co/ZaoIxf
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+// Hide only visually, but have it available for screenreaders -
+// http://cbrac.co/TUcUgH
+
+.visuallyhidden {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -.0625rem;
+    padding: 0;
+    width: .0625rem;
+    height: .0625rem;
+    border: 0;
+
+    // Extends the `.visuallyhidden` class to allow the element to be
+    // focusable when navigated to via the keyboard - http://cbrac.co/RR8gO6
+
+    &.focusable:active,
+    &.focusable:focus {
+        position: static;
+        overflow: visible;
+        clip: auto;
+        margin: 0;
+        width: auto;
+        height: auto;
+    }
+}
+
+
+// Hide visually and from screenreaders, but maintain layout
+.invisible {
+    visibility: hidden;
+}
+
+// Clear floats with an extra markup element - http://cbrac.co/SFv1Ua
+.clear {
+    display: block;
+    visibility: hidden;
+    clear: both;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+}
+
+// Clearfix to contain floats
+.cf:before,
+.cf:after {
+    display: table; // 1
+    content: " ";   // 2
+}
+
+.cf:after {
+    clear: both;
+}

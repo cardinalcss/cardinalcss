@@ -1,0 +1,55 @@
+//
+// Layout
+// --------------------------------------------------
+
+// 100% width container
+.strip {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #efefef;
+    list-style: none;
+}
+
+.strip .wrapper {
+    padding: 1rem 0;
+}
+
+// Page wrapper
+.wrapper {
+    margin: 0 auto;
+    width: 90%;
+}
+
+// Island and wells
+.island,
+.well {
+    margin: 0 0 1rem;
+
+    &.island_hollow,
+    &.well_hollow {
+        background: transparent;
+        box-shadow: inset 0 0 0 .1875rem hsla(0, 0%, 94%, 1.0);
+    }
+
+    &.island_rounded,
+    &.well_rounded {
+        border-radius: 0.356rem;
+    }
+
+    .island,
+    .well {
+        background: #dedede;
+    }
+}
+
+.island {
+    padding: 1rem;
+    background: #efefef;
+}
+
+.well {
+    padding: 1rem;
+    background: #efefef;
+    box-shadow: inset 0 0 .5rem hsla(0, 0%, 0%, 0.15);
+}

@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]> <html class="no-js lt_ie9"> <![endif]-->
+<!--[if IE 9]> <html class="no-js lt_ie10 ie9"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Cardinal Demo</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- DNS prefetch -->
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+
+    <meta name="description" content="">
+
+    <!-- Favicons: http://cbrac.co/11ZzQkJ -->
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/cardinal.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Modernizr - Latest -->
+    <script src="js/vendor/modernizr-2.7.1.min.js"></script>
+</head>
+<body>
+
+    <div class="content wrapper" role="content">
+        <section id="getting_started" class="content-block">
+            <h2>Getting started</h2>
+
+            <p>Designers and developers who want to build well-organized, responsive web applications without <em>losing their minds</em>, should use Cardinal.</p>
+
+            <p>This framework omits aesthetic design decisions that can weigh down larger, more complicated CSS frameworks. It’s <strong>style-agnostic</strong>. The design and creativity is up to you.</p>
+
+            <p>Cardinal supports a “<a href="http://www.lukew.com/resources/mobile_first.asp">mobile first</a>,” <a href="http://coding.smashingmagazine.com/2012/03/22/device-agnostic-approach-to-responsive-web-design/">device</a>-<a href="http://tympanus.net/codrops/2012/10/30/becoming-device-agnostic/">agnostic</a> approach to responsive design. That is, your application’s design shouldn’t care about the pixel dimension of the device it’s being viewed upon. The content within the design should dictate how and where the layout should change or respond.</p>
+
+            <p>The idea is that if you design for the smallest devices (and least capable browsers) first, it forces you to prioritize and determine what are the most important data and actions in your application.</p>
+
+            <p>The end result is an application that is focused on the key tasks a user is supposed to complete, without the performance issues, extraneous content, and interface fluff that plagues many applications that take a top-down, “PC first” approach.</p>
+
+            <h3>Class-name conventions</h3>
+
+            <p>Cardinal uses simple naming conventions for CSS classes that are human readable and easy to interpret. While inspired by the <a href="http://bem.info/method/definitions/">BEM approach</a>, the naming conventions used in Cardinal are far less complex.</p>
+
+            <pre><code>.block_name              {} // Block
+.block_name-element_name {} // Element
+.modifier_name           {} // Modifier</code></pre>
+
+            <p>Use hyphens to separate the name of the block from the name of the element, and use underscores to separate words in long names. Modifiers can stand alone, or be chained to blocks and elements, as depicted below.</p>
+
+            <pre><code>.post         {} // Block
+.post-title   {} // Element
+.post-excerpt {} // Element
+.post_last    {} // Specific Modifier
+.one_fifth    {} // Generic Modifier</code></pre>
+
+            <nav class="section-menu island island_rounded">
+                <a href="#top" class="button button_chunky button_rounded">Back to top</a>
+            </nav>
+        </section>
+
+        <section id="base" class="content-block">
+            <h2>Base</h2>
+
+            <p>Cardinal starts with some useful default styles to provide a solid base for building responsive applications.</p>
+
+            <div class="grid">
+                <div class="grid-item one_half">
+                    <h3 class="font_regular">normalize.css</h3>
+
+                    <p>Instead of a traditional CSS reset, Cardinal uses <a href="http://cbrac.co/11gtlnj" title="normalize.css">normalize.css</a> to render HTML elements consistently.</p>
+                </div>
+
+                <div class="grid-item one_half">
+                    <h3 class="font_regular">CSS Box Model</h3>
+
+                    <p>Cardinal modifies the default <code>box-sizing</code> behavior to fix the <a href="http://paulirish.com/2012/box-sizing-border-box-ftw/">flawed CSS box model</a>.</p>
+                </div>
+
+                <div class="grid-item one_half">
+                    <h3 class="font_regular">Viewport resizing</h3>
+
+                    <p>The appropriate HTML <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag">meta tag</a> and CSS <a href="http://menacingcloud.com/?c=cssViewportOrMetaTag">@viewport</a> declarations are included by default.</p>
+                </div>
+
+                <div class="grid-item one_half">
+                    <h3 class="font_regular">Anchor links</h3>
+
+                    <p>Styles for basic anchor links are provided to improve readability across browsers.</p>
+                </div>
+            </div>
+
+            <nav class="section-menu island island_rounded">
+                <a href="#top" class="button button_chunky button_rounded">Back to top</a>
+            </nav>
+        </section>
+
+        <section id="typography" class="content-block">
+            <h2>Typography</h2>
+
+            <p>Instead of trying to maintain a <a href="http://coding.smashingmagazine.com/2012/12/17/css-baseline-the-good-the-bad-and-the-ugly/">baseline grid</a>, Cardinal leverages <a href="http://alistapart.com/article/more-meaningful-typography">modular scale</a>, <a href="http://meyerweb.com/eric/thoughts/2006/02/08/unitless-line-heights/">unit-less line heights</a>, and the power of the <a href="http://snook.ca/archives/html_and_css/font-size-with-rem">REM unit</a> to make it possible to resize the typography and layout of <strong>your entire application</strong> across different devices.</p>
+
+            <pre><code>html { font-size: 100%; } // 16px
+@media only screen and (min-width: 480px) { html { font-size: 87.5%;  } } // 14px
+@media only screen and (min-width: 960px) { html { font-size: 112.5%; } } // 18px</code></pre>
+
+            <h3>Root font size</h3>
+
+            <p>By default, Cardinal’s root font size ranges from <code>16px</code> to <code>20px</code>, depending on the viewport width. <strong>These breakpoints and font sizes should be changed</strong> to suit your application. Altering the root font size by one-pixel, up or down, can <a href="http://blog.typekit.com/2011/01/26/css-properties-that-affect-type-rendering/">completely change</a> how a typeface is rendered. Also, your project may require more or less breakpoints where the root font size should change. Or none. It’s your call.</p>
+
+            <h3>REMs and line height</h3>
+
+            <p>After declaring the root font size(s) on the <code>&lt;html&gt;</code> element, Cardinal sets the <code>font-size</code> property on the <code>&lt;body&gt;</code> element to <code>1rem</code>, and the <code>line-height</code> property to a unit-less value.</p>
+
+                <pre><code>body {
+    color: #444;
+    font-size: 1rem;
+    font-family: "Helvetica Neue", sans-serif;
+    line-height: 1.5;
+}</code></pre>
+
+            <p>In other words, <code>1rem</code> = the root font size(s) on the <code>&lt;html&gt;</code> element. When the root font size changes at different viewport widths, this base <code>rem</code> unit will inherit the new value. As a result, all <code>rem</code> units in your application will resize every time the root font size changes.</p>
+
+            <h3>Modular scale</h3>
+
+            <p>A <a href="http://alistapart.com/article/more-meaningful-typography">modular scale</a> is then <a href="http://modularscale.com/scale/?px1=12&amp;px2=20&amp;ra1=1.333&amp;ra2=0">calculated</a> with <a href="http://modularscale.com/">this tool</a> based on the minimum and maximum root font size, in pixels. The scale also uses the “<a href="https://en.wikipedia.org/wiki/Perfect_fourth">perfect fourth</a>” ratio found commonly in music.</p>
+
+            <p>Cardinal uses the values that are generated for sizing the type and layout (font size, line height, margin, padding, etc.) in the framework. <strong>You should calculate your own values</strong> and use them as you build your responsive application.</p>
+
+            <nav class="section-menu island island_rounded">
+                <a href="#top" class="button button_chunky button_rounded">Back to top</a>
+            </nav>
+        </section>
+
+        <section id="code" class="content-block">
+            <h2>Code</h2>
+
+            <p>If you are building an application that features code samples or keyboard shortcuts, Cardinal has some basic styles available for use.</p>
+
+            <div class="grid">
+                <div class="grid-item one_half">
+                    <h3 class="font_regular">Keyboard shortcuts</h3>
+                    <p>Styles are automatically applied to the <samp>&lt;kbd&gt;</samp> HTML element.</p>
+                    <p><kbd>⌘</kbd> + <kbd>Space</kbd></p>
+                </div>
+
+                <div class="grid-item one_half">
+                    <h3 class="font_regular">Inline code</h3>
+                    <p>Styles are automatically applied to the <samp>&lt;code&gt;</samp> HTML element.</p>
+                    <p><code>font-size: 16px;</code></p>
+                </div>
+
+                <div class="grid-item">
+                    <h3 class="font_regular">Code blocks</h3>
+
+                    <p>When you use <samp>&lt;code&gt;</samp> tags nested within <samp>&lt;pre&gt;</samp> tags, you get a neatly-styled block of code.</p>
+
+                    <pre><code>Here is some lovely code.</code></pre>
+                </div>
+            </div>
+
+            <nav class="section-menu island island_rounded">
+                <a href="#top" class="button button_chunky button_rounded">Back to top</a>
+            </nav>
+        </section>
+
+        <section id="embedded" class="content-block">
+            <h2>Embedded content</h2>
+
+            <p>Cardinal also normalizes and defines sensible default styles for embedded content. For instance, <code>&lt;audio&gt;</code>, <code>&lt;img&gt;</code>, and <code>&lt;video&gt;</code> tags are all given fluid properties.</p>
+
+            <div class="grid">
+                <div class="grid-item">
+                    <h3 class="font_regular">HTML5 audio</h3>
+                    <p><audio controls=""></audio></p>
+                </div>
+
+                <div class="grid-item one_half">
+                    <h3 class="font_regular">Image</h3>
+                    <p><img src="http://placesheen.com/300/200" alt=""></p>
+                </div>
+
+                <div class="grid-item one_half">
+                    <h3 class="font_regular">HTML5 video</h3>
+                    <p><video controls=""></video></p>
+                </div>
+            </div>
+
+            <nav class="section-menu island island_rounded">
+                <a href="#top" class="button button_chunky button_rounded">Back to top</a>
+            </nav>
+        </section>
+
+        <section id="forms" class="content-block">
+            <h2>Forms</h2>
+
+            <p>Forms styles are mostly extracted from <a href="http://necolas.github.io/normalize.css/">normalize.css</a>, to fix some basic inconsistencies between browsers. Most inputs, select boxes, and textareas are styled as full-width block elements (with the exception of radio and checkboxes).</p>
+
+            <form action="">
+                <legend>Basic form</legend>
+
+                <fieldset>
+                    <p>
+                        <label>Text input 1<br>
+                            <input type="text" placeholder="Text input 1">
+                        </label>
+                    </p>
+
+                    <p>
+                        <label>Select input 1<br>
+                            <select id="form1-input-select">
+                                <option>Option 1</option>
+                                <option>Option 2</option>
+                                <option>Option 3</option>
+                            </select>
+                        </label>
+                    </p>
+
+                    <p>
+                        <label><input type="checkbox" id="form1-input_cb1">Checkbox 1</label>
+                        <br>
+                        <label><input type="checkbox" id="form1-input_cb2">Checkbox 2</label>
+                    </p>
+
+                    <p>
+                        <label><input type="radio" name="form1-input_radioset">Radio 1</label>
+                        <br>
+                        <label><input type="radio" name="form1-input_radioset">Radio 2</label>
+                    </p>
+
+                    <p>
+                        <label>Text area 1
+                            <textarea name="textarea" id="form1-textarea1" rows="10" placeholder="Text area 1"></textarea>
+                        </label>
+                    </p>
+
+                    <p>
+                        <input type="submit" class="button button_rounded button_primary">
+                        <input type="reset" class="button button_rounded" value="Clear">
+                    </p>
+                </fieldset>
+            </form>
+
+            <p>You can also make use of Cardinal’s grid system and width classes to build some basic form layouts.</p>
+
+            <form action="">
+                <legend>Form with a grid layout</legend>
+
+                <fieldset class="grid">
+                    <div class="grid-item lap-one_fourth desk-one_third">
+                        <label for="form2-input-email">E-mail address</label>
+                    </div>
+
+                    <p class="grid-item lap-three_fourths desk-two_thirds">
+                        <input type="email" id="form2-input-email" placeholder="E-mail address">
+                    </p>
+
+                    <div class="grid-item lap-one_fourth desk-one_third">
+                        <label for="form2-input-fn">First name</label>
+                    </div>
+
+                    <p class="grid-item lap-three_fourths desk-two_thirds">
+                        <input type="text" id="form2-input-fn" placeholder="First name">
+                    </p>
+
+                    <div class="grid-item lap-one_fourth desk-one_third">
+                        <label for="form2-input-ln">Last name</label>
+                    </div>
+
+                    <p class="grid-item lap-three_fourths desk-two_thirds">
+                        <input type="text" id="form2-input-ln" placeholder="Last name">
+                    </p>
+
+                    <div class="grid-item lap-one_fourth desk-one_third">
+                        <label for="form2-input_radioset">Gender</label>
+                    </div>
+
+                    <p class="grid-item lap-three_fourths desk-two_thirds">
+                        <label for="form2-input_male"><input type="radio" id="form2-input_male" name="form2-input_radioset">Male</label><br>
+                        <label for="form2-input_female"><input type="radio" id="form2-input_female" name="form2-input_radioset">Female</label>
+                    </p>
+
+                    <div class="grid-item lap-one_fourth desk-one_third">
+                        <label for="form2-textarea1">Additional comments</label>
+                    </div>
+
+                    <p class="grid-item lap-three_fourths desk-two_thirds">
+                        <textarea name="textarea" id="form2-textarea1" rows="10" placeholder="Add any additional remarks here"></textarea>
+                    </p>
+
+                    <div class="grid-item lap-one_fourth desk-one_third"></div>
+
+                    <p class="grid-item lap-three_fourths desk-two_thirds">
+                        <input type="submit" class="button button_rounded button_primary">
+                        <input type="reset" class="button button_rounded" value="Clear">
+                    </p>
+                </fieldset>
+            </form>
+
+            <nav class="section-menu island island_rounded">
+                <a href="#top" class="button button_chunky button_rounded">Back to top</a>
+            </nav>
+        </section>
+
+        <section id="tables" class="content-block">
+            <h2>Tables</h2>
+
+            <p>Tables can be tricky to style across multiple devices. Cardinal includes some simple table styles and classes to get you going.</p>
+
+            <p>The <code>&lt;table&gt;</code> element is first given a basic layout with flexible table cells.</p>
+
+            <table>
+                <caption>Default, no classes</caption>
+                <tbody><tr>
+                    <th>#</th>
+                    <th>Thing 1</th>
+                    <th>Thing 2</th>
+                    <th>Thing 3</th>
+                </tr>
+
+                </tbody><tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>1246</td>
+                        <td>Hello</td>
+                        <td>true</td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>4652</td>
+                        <td>Goodbye</td>
+                        <td>false</td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td>1657</td>
+                        <td>Cheers</td>
+                        <td>false</td>
+                    </tr>
+
+                    <tr>
+                        <td>4</td>
+                        <td>1498</td>
+                        <td>Beers</td>
+                        <td>true</td>
+                    </tr>
+
+                    <tr>
+                        <td>5</td>
+                        <td>3286</td>
+                        <td>Awesome</td>
+                        <td>true</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>By simply adding classes, you can introduce borders and backgrounds to table cells.</p>
+
+            <table class="table_border_rows">
+                <caption>.table_border_rows</caption>
+                <tbody><tr>
+                    <th>#</th>
+                    <th>Thing 1</th>
+                    <th>Thing 2</th>
+                    <th>Thing 3</th>
+                </tr>
+
+                </tbody><tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>1246</td>
+                        <td>Hello</td>
+                        <td>true</td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>4652</td>
+                        <td>Goodbye</td>
+                        <td>false</td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td>1657</td>
+                        <td>Cheers</td>
+                        <td>false</td>
+                    </tr>
+
+                    <tr>
+                        <td>4</td>
+                        <td>1498</td>
+                        <td>Beers</td>
+                        <td>true</td>
+                    </tr>
+
+                    <tr>
+                        <td>5</td>
+                        <td>3286</td>
+                        <td>Awesome</td>
+                        <td>true</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table class="table_border_cells">
+                <caption>.table_border_cells</caption>
+                <tbody><tr>
+                    <th>#</th>
+                    <th>Thing 1</th>
+                    <th>Thing 2</th>
+                    <th>Thing 3</th>
+                </tr>
+
+                </tbody><tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>1246</td>
+                        <td>Hello</td>
+                        <td>true</td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>4652</td>
+                        <td>Goodbye</td>
+                        <td>false</td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td>1657</td>
+                        <td>Cheers</td>
+                        <td>false</td>
+                    </tr>
+
+                    <tr>
+                        <td>4</td>
+                        <td>1498</td>
+                        <td>Beers</td>
+                        <td>true</td>
+                    </tr>
+
+                    <tr>
+                        <td>5</td>
+                        <td>3286</td>
+                        <td>Awesome</td>
+                        <td>true</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>If you want to make the table headers/footers stand out, simply wrap a table row with the <code>&lt;thead&gt;</code> or <code>&lt;tfoot&gt;</code> element, using <code>&lt;th&gt;</code> elements for header cells and <code>&lt;td&gt;</code> elements for footer cells.</p>
+
+            <table class="table_border_cells">
+                <caption>.table_border_cells, with <code>&lt;thead&gt;</code> and <code>&lt;tfoot&gt;</code></caption>
+                <thead>
+                    <tr><th>#</th>
+                    <th>Thing 1</th>
+                    <th>Thing 2</th>
+                    <th>Thing 3</th>
+                </tr></thead>
+
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>1246</td>
+                        <td>Hello</td>
+                        <td>true</td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>4652</td>
+                        <td>Goodbye</td>
+                        <td>false</td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td>1657</td>
+                        <td>Cheers</td>
+                        <td>false</td>
+                    </tr>
+
+                    <tr>
+                        <td>4</td>
+                        <td>1498</td>
+                        <td>Beers</td>
+                        <td>true</td>
+                    </tr>
+
+                    <tr>
+                        <td>5</td>
+                        <td>3286</td>
+                        <td>Awesome</td>
+                        <td>true</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr><td>#</td>
+                    <td>Thing 1</td>
+                    <td>Thing 2</td>
+                    <td>Thing 3</td>
+                </tr></tfoot>
+            </table>
+
+            <p>You can also add a border around the entire table, and striped background colors for each row.</p>
+
+            <table class="table_border table_border_cells table_stripes">
+                <caption>.table_border.table_border_cells.table_stripes</caption>
+                <thead>
+                    <tr><th>#</th>
+                    <th>Thing 1</th>
+                    <th>Thing 2</th>
+                    <th>Thing 3</th>
+                </tr></thead>
+
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>1246</td>
+                        <td>Hello</td>
+                        <td>true</td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>4652</td>
+                        <td>Goodbye</td>
+                        <td>false</td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td>1657</td>
+                        <td>Cheers</td>
+                        <td>false</td>
+                    </tr>
+
+                    <tr>
+                        <td>4</td>
+                        <td>1498</td>
+                        <td>Beers</td>
+                        <td>true</td>
+                    </tr>
+
+                    <tr>
+                        <td>5</td>
+                        <td>3286</td>
+                        <td>Awesome</td>
+                        <td>true</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <nav class="section-menu island island_rounded">
+                <a href="#top" class="button button_chunky button_rounded">Back to top</a>
+            </nav>
+        </section>
+
+        <section id="layout" class="content-block">
+            <h2>Layout</h2>
+
+            <p>Cardinal has several classes for common layout modules, too, like page wrappers and 100% width containers.</p>
+
+            <div class="grid">
+                <div class="grid-item lap-one_half">
+                    <h3 class="font_regular">Strips</h3>
+
+                    <pre><code>.strip {}</code></pre>
+
+                    <p>A strip is useful when you want an element to span the entire width of the viewport.</p>
+                </div>
+
+                <div class="grid-item lap-one_half">
+                    <h3 class="font_regular">Wrappers</h3>
+
+                    <pre><code>.wrapper {}</code></pre>
+
+                    <p>A wrapper provides a <code>max-width</code> for the content within it, and centers the content.</p>
+                </div>
+
+                <div class="grid-item lap-one_half">
+                    <h3 class="font_regular">Islands</h3>
+
+                    <pre><code>.island {}</code></pre>
+
+                    <p class="island">An island is a content block that you want to stand out from its surrounding area.</p>
+                </div>
+
+                <div class="grid-item lap-one_half">
+                    <h3 class="font_regular">Wells</h3>
+
+                    <pre><code>.well {}</code></pre>
+
+                    <p class="well">A well is a content block that you want to appear sunken beneath its surrounding area.</p>
+                </div>
+            </div>
+
+            <nav class="section-menu island island_rounded">
+                <a href="#top" class="button button_chunky button_rounded">Back to top</a>
+            </nav>
+        </section>
+
+        <section id="grids" class="content-block">
+            <h2>Grids</h2>
+
+            <div class="grid grid_gutter_half text_center">
+                <div class="grid-item one_sixth">
+                    <div class="island">1</div>
+                </div>
+                <div class="grid-item one_sixth">
+                    <div class="island">2</div>
+                </div>
+                <div class="grid-item one_sixth">
+                    <div class="island">3</div>
+                </div>
+                <div class="grid-item one_sixth">
+                    <div class="island">4</div>
+                </div>
+                <div class="grid-item one_sixth">
+                    <div class="island">5</div>
+                </div>
+                <div class="grid-item one_sixth">
+                    <div class="island">6</div>
+                </div>
+            </div>
+
+            <p>Cardinal’s grid system has 6 columns by default, and uses <em>fluid</em> item widths and <em>fixed</em> gutters. Nesting grid elements is a breeze, and you can change how a grid item behaves with human-readable CSS classes.</p>
+
+            <p>Grid item widths have percentage values, and the gutters have <code>rem</code> values. The classes for grid item widths are not grid-specific, <strong>on purpose</strong>, so that they can be used outside of grids, too.</p>
+
+            <pre><code>&lt;div class="grid grid_gutter_half text_center"&gt;
+    &lt;div class="grid-item one_sixth"&gt;&lt;/div&gt;
+    &lt;div class="grid-item one_sixth"&gt;&lt;/div&gt;
+    &lt;div class="grid-item one_sixth"&gt;&lt;/div&gt;
+    &lt;div class="grid-item one_sixth"&gt;&lt;/div&gt;
+    &lt;div class="grid-item one_sixth"&gt;&lt;/div&gt;
+    &lt;div class="grid-item one_sixth"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+            <p>You can also change how a grid behaves at common breakpoints. Instead of device-specific class names like <code>.ipad-one_half</code> or <code>.samsung-two_fifths</code>, Cardinal uses <strong>“lap-*”</strong> to represent devices you can place in your lap (eg. a tablet or small laptop), and <strong>“desk-*”</strong> to represent devices that rest primarily on your desk.</p>
+
+            <p>By default, the <code>min-width</code> values for the <code>@media</code> queries containing these classes are set to <code>640px</code> and <code>960px</code>, respectively. <strong>Again,</strong> you are encouraged to modify these values based on where your own design breaks or looks best.</p>
+
+            <p>Using these classes, you can control the grid item width and grid gutter width.</p>
+
+            <div class="grid">
+                <div class="grid-item lap-one_third desk-one_sixth">
+                    <div class="island">&nbsp;</div>
+                </div>
+
+                <div class="grid-item lap-one_third desk-one_sixth">
+                    <div class="island">&nbsp;</div>
+                </div>
+
+                <div class="grid-item lap-one_third desk-one_sixth">
+                    <div class="island">&nbsp;</div>
+                </div>
+
+                <div class="grid-item lap-one_third desk-one_sixth">
+                    <div class="island">&nbsp;</div>
+                </div>
+
+                <div class="grid-item lap-one_third desk-one_sixth">
+                    <div class="island">&nbsp;</div>
+                </div>
+
+                <div class="grid-item lap-one_third desk-one_sixth">
+                    <div class="island">&nbsp;</div>
+                </div>
+
+                <div class="grid-item lap-one_fifth desk-one_fifth">
+                    <div class="island">&nbsp;</div>
+                </div>
+
+                <div class="grid-item lap-three_fifths desk-one_fifth">
+                    <div class="island">&nbsp;</div>
+                </div>
+
+                <div class="grid-item lap-one_fifth desk-one_fifth">
+                    <div class="island">&nbsp;</div>
+                </div>
+
+                <div class="grid-item lap-two_fifths desk-one_fifth">
+                    <div class="island">&nbsp;</div>
+                </div>
+
+                <div class="grid-item lap-three_fifths desk-one_fifth">
+                    <div class="island">&nbsp;</div>
+                </div>
+
+                <div class="grid-item lap-one_half desk-one_fourth">
+                    <div class="island">&nbsp;</div>
+                </div>
+
+                <div class="grid-item lap-one_half desk-one_fourth">
+                    <div class="island">&nbsp;</div>
+                </div>
+
+                <div class="grid-item lap-one_half desk-one_fourth">
+                    <div class="island">&nbsp;</div>
+                </div>
+
+                <div class="grid-item lap-one_half desk-one_fourth">
+                    <div class="island">&nbsp;</div>
+                </div>
+
+                <div class="grid-item lap-two_thirds desk-one_third">
+                    <div class="island">&nbsp;</div>
+                </div>
+
+                <div class="grid-item lap-one_third">
+                    <div class="island">&nbsp;</div>
+                </div>
+
+                <div class="grid-item lap-one_whole desk-one_third">
+                    <div class="island">&nbsp;</div>
+                </div>
+
+                <div class="grid-item lap-one_half">
+                    <div class="island">&nbsp;</div>
+                </div>
+
+                <div class="grid-item lap-one_half">
+                    <div class="island" style="padding:0">
+                        <div class="grid">
+                            <div class="grid-item one_half"><div class="island" style="margin-bottom:0">&nbsp;</div></div>
+                            <div class="grid-item one_half"><div class="island" style="margin-bottom:0">&nbsp;</div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-item one_whole">
+                    <div class="island">&nbsp;</div>
+                </div>
+            </div>
+
+            <nav class="section-menu island island_rounded">
+                <a href="#top" class="button button_chunky button_rounded">Back to top</a>
+            </nav>
+        </section>
+
+        <section id="buttons" class="content-block">
+            <h2>Buttons</h2>
+
+            <p>Buttons are common web UI components, and some basic button styles are available with Cardinal. While minimal, there is a large variety of style, shape, and size combinations that you can create.</p>
+
+            <p>To begin, simply add the <code>.button</code> class to an element. This provides the base styles that can be further modified by adding more specific classes.</p>
+
+            <pre><code>&lt;a href="" class="button"&gt;Button text&lt;/a&gt;</code></pre>
+
+            <p>By chaining CSS classes together, you can quickly style anchor links <code>&lt;a href=""&gt;</code>, button tags <code>&lt;button&gt;</code>, and input elements <code>&lt;input type="submit"&gt;</code> to taste.</p>
+
+            <pre><code>&lt;a href="" class="button [style] [size] [width] [shape] [state]"&gt;</code></pre>
+
+            <h3 class="font_regular">Styles</h3>
+
+            <p>
+                <button type="button" class="button">Default</button>
+                <button type="button" class="button button_hollow">Hollow</button>
+                <button type="button" class="button button_chunky">Chunky</button>
+            </p>
+
+            <h3 class="font_regular">Sizes</h3>
+
+            <p>
+                <button type="button" class="button button_large">Large</button>
+                <button type="button" class="button">Normal</button>
+                <button type="button" class="button button_small">Small</button>
+                <button type="button" class="button button_mini">Mini</button>
+            </p>
+
+            <h3 class="font_regular">Widths</h3>
+
+            <p>
+                <button type="button" class="button button_block one_whole">100% Block</button>
+            </p>
+            <p>
+                <button type="button" class="button button_block three_fourths">75% Block</button>
+            </p>
+            <p>
+                <button type="button" class="button button_block one_half">50% Block</button>
+            </p>
+            <p>
+                <button type="button" class="button button_block one_fourth">25% Block</button>
+            </p>
+
+            <p><small><strong style="color: red;">NOTE:</strong> When using the <code>.block</code> class, you must also specify the button width by using the “widths” classes that are mentioned in the <a href="#section_grids">“Grids” section</a> above.</small></p>
+
+            <h3 class="font_regular">Shapes</h3>
+
+            <p>
+                <button type="button" class="button button_rounded">Rounded</button>
+                <button type="button" class="button button_pill">Pill-shaped</button>
+            </p>
+
+            <h3 class="font_regular">States</h3>
+
+            <p>
+                <button type="button" class="button button_disabled" disabled="">Disabled</button>
+                <button type="button" class="button button_hollow button_disabled" disabled="">Disabled</button>
+            </p>
+
+            <nav class="section-menu island island_rounded">
+                <a href="#top" class="button button_chunky button_rounded">Back to top</a>
+            </nav>
+        </section>
+    </div>
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-2.0.3.min.js"><\/script>')</script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+</body>
+</html>
