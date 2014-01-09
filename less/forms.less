@@ -1,0 +1,85 @@
+//
+// Forms
+// --------------------------------------------------
+
+button,
+input {
+    // Remove inner padding and border in Firefox 4+
+    &::-moz-focus-inner {
+        padding: 0;
+        border: 0;
+    }
+}
+
+// Remove default <fieldset> styles for all browsers
+fieldset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+// 1. 100% width inputs, select boxes, and textareas by default
+// 2. Give elements same styles as `.button` elements
+
+input,
+select,
+textarea {
+    display: block;                 // 1
+    padding: 0.563rem;              // 2
+    width: 100%;                    // 1
+    border: .0625rem solid #aaa;
+    border-radius: 0.356rem;        // 2
+    vertical-align: middle;
+    line-height: @base-line-height; // 2
+
+    transition: border-color .2s ease-in-out,
+                box-shadow .2s ease-in-out;
+
+    &:focus {
+        border-color: @base-border-color;
+        outline: 0;
+        box-shadow: 0 0 .5rem rgba(red(@base-border-color), green(@base-border-color), blue(@base-border-color), 0.6);
+    }
+}
+
+// Make checkbox, image, and radio inputs `inline-block` by default
+input[type="checkbox"],
+input[type="image"],
+input[type="radio"] {
+    display: inline-block;
+    width: auto;
+    cursor: pointer;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    margin: 0 0.422rem 0.238rem 0;
+}
+
+// Make button, reset, and submit inputs to be `inline-block`, unless
+// otherwise specified by `.button` classes
+
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    display: inline-block;
+    width: auto;
+}
+
+// Give labels a pointer cursor by default
+label {
+    cursor: pointer;
+}
+
+// Give <legend> some basic styles for all browsers
+legend {
+    margin: 0 0 1rem;
+    color: @black;
+    font-weight: 700;
+}
+
+// 1. Remove default vertical scrollbar in IE 8/9
+
+textarea {
+    resize: vertical; // 1
+}

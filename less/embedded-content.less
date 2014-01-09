@@ -1,0 +1,30 @@
+//
+// Embedded content
+// --------------------------------------------------
+
+// Fluid-width <audio> & <video> elements
+audio,
+video {
+    width: 100%;
+}
+
+figcaption {
+    margin-top: 0.563rem;
+    font-style: italic;
+    font-size: 75%;
+}
+
+// 1. Remove the gap between <img> elements and the bottom of their
+//    containers - http://cbrac.co/Q6smqV
+
+img {
+    vertical-align: middle; // 1
+}
+
+// Fluid-width media that maintain their aspect ratios
+img,
+video {
+    max-width: 100%;
+    width: auto\9;
+    height: auto !important;
+}

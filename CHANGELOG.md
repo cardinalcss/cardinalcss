@@ -1,3 +1,12 @@
+# 1.5.0 (January, 8 2014)
+- Add packages.json and gruntfile,js for LESS grunt build which includes autoprefixing, minification, and compression
+- Add normalize.less and remove all relevant code from LESS files to consolidate normalization
+- Add jQuery 2.0.3 because we don't need support for older browsers
+- Add demo.html (can be removed if deemed unnecessary, mainly for testing CSS changes)
+- Clean up index.html as per HTML5 boilerplate
+- Move files to LESS for modularization
+- Remove links.less and move CSS to typography.less because it just makes sense
+
 # 1.4.0 (November 8, 2013)
 
 - Removed some helper classes for alignment, margins, and paddings. Classes were cluttering HTML markup, and it started to feel like inline styling.

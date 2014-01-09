@@ -1,0 +1,216 @@
+//
+// Typography
+//
+// Modular scale:    16px @ 1:1.333 (perfect fourth)
+// Important number: 20px (maximum <html> `font-size`)
+// http://modularscale.com/scale/?px1=16&px2=21&ra1=1.333&ra2=0
+//
+// To get REM values, multply the px value you want by the base font-size
+// Example: 5px = 5/16 = .3125rem
+//          23px = 23/16 = 1.4375rem
+// --------------------------------------------------
+
+html { font-size: 100%; } // 16px default
+@media only screen and (min-width: 20em) { html { font-size: 81.25%; } } // 13px @ 320px width
+@media only screen and (min-width: 30em) { html { font-size: 87.5%;  } } // 14px @ 480px width
+@media only screen and (min-width: 60em) { html { font-size: 112.5%; } } // 18px @ 960px width
+@media only screen and (min-width: 90em) { html { font-size: 125%;   } } // 20px @ 1440px width
+
+// 1. Remove default `margin`
+// 2. Inherits percentage declared on above <html> as root `font-size`
+// 3. Unitless `line-height`, which acts as multiple of root `font-size`
+
+body {
+    margin: 0;                      // 1
+    color: @base-font-color;
+    font-size: @base-font-size;     // 2
+    font-family: @base-font-family;
+    line-height: @base-line-height; // 3
+}
+
+abbr,
+acronym,
+dfn[title] {
+    cursor: help;
+}
+
+abbr a {
+    text-decoration: none;
+}
+
+acronym {
+    text-transform: uppercase;
+}
+
+// Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome
+b, strong {
+    font-weight: 700;
+}
+
+blockquote {
+    padding-left: 1rem;
+    border-left: .3125rem solid #e5e5e5;
+    font-style: italic;
+    font-family: @blockquote-font-family;
+
+    p {
+        margin: 0;
+
+        + p {
+            margin-top: 1rem;
+        }
+    }
+
+    // 1. Add an m-dash character before the <footer> tag
+    // TIP: Use <footer> tag instead of <cite> inside blockquotes -
+    //      http://cbrac.co/TCVK4P
+
+    footer {
+        color: #777;
+        font-style: italic;
+        font-size: 0.8125rem;
+
+        &:before {
+            content: "\2014 \2009"; // 1
+        }
+    }
+}
+
+
+blockquote,
+dl,
+figure,
+hr,
+menu,
+ol,
+p,
+pre,
+summary,
+table,
+ul {
+    margin: 0 0 1rem;
+}
+
+// 1. Non-standard fallback for older WebKit
+
+caption,
+p,
+table,
+textarea,
+td,
+th {
+    word-break:     break-all;
+    word-break:     break-word; // 1
+    hyphens:         auto;
+}
+
+dl {
+    dt {
+        color: #222;
+        font-weight: 700;
+    }
+
+    dd {
+        margin: 0;
+    }
+}
+
+del {
+    color: #777;
+    text-decoration: line-through;
+}
+
+details {
+    cursor: pointer;
+}
+
+// Address styling not present in Safari 5 and Chrome
+dfn {
+    font-style: italic;
+}
+
+em,
+i,
+cite {
+    font-style: italic;
+}
+
+// NOTE: Use `text-rendering` with caution - http://cbrac.co/SJt8p1
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 0.75rem;
+    color: @heading-font-color;
+    font-weight: @heading-font-weight;
+    font-family: @heading-font-family;
+    line-height: @heading-line-height;
+    text-rendering: optimizeLegibility;
+}
+
+h1 { font-size: 3.157rem; }
+h2 { font-size: 2.369rem; }
+h3 { font-size: 1.777rem; }
+h4 { font-size: 1.333rem; }
+h5 { font-size: 1rem;     }
+h6 { font-size: 0.75rem;  }
+
+// 1. Remove the gray background color from active links in IE 10
+a {
+    background: transparent; // 1
+    color: @base-link-color;
+
+    &:hover {
+        text-decoration: none;
+    }
+
+    // Improve readability when focused or hovered in all browsers
+    &:active,
+    &:hover {
+        outline: 0;
+    }
+
+    // Address `outline` inconsistency between Chrome and other browsers
+    &:focus {
+        outline: thin dotted;
+    }
+}
+
+// Address differences between Firefox and other browsers
+hr {
+    height: 0;
+    border: 0;
+    border-bottom: .0625rem solid #dedede;
+}
+
+// Address styling not present in IE 8/9
+ins,
+mark {
+    background: #ff9;
+    color: #222;
+    text-decoration: none;
+}
+
+nav ul,
+nav ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+// Nested `list-style` types for ordered lists
+ol          { list-style: decimal; }
+ol ol       { list-style: upper-alpha; }
+ol ol ol    { list-style: lower-roman; }
+ol ol ol ol { list-style: lower-alpha; }
+
+ol ol,
+ol ul,
+ul ul,
+ul ol {
+    margin-bottom: 0;
+}
+
+// 1. Address inconsistent and variable `font-size` in all browsers
+small {
+    display: inline-block;
+    font-size: 87.5%; // 1
+    line-height: @base-line-height;
+}

@@ -1,0 +1,51 @@
+//
+// Base
+// --------------------------------------------------
+
+// Viewport resizing
+@viewport { width: device-width; zoom: 1.0; }
+
+// Box model adjustments
+// `border-box`... ALL THE THINGS - http://cbrac.co/RQrDL5
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+// Set <html> and <body> to inherit the height of the viewport
+html,
+body {
+    min-height: 100%;
+}
+
+// 1. Force a vertical scrollbar - http://cbrac.co/163MspB
+// 2. Remove text size adjustments without disabling user zoom
+// NOTE: Use `text-rendering` with caution - http://cbrac.co/SJt8p1
+// NOTE: Avoid the webkit anti-aliasing trap - http://cbrac.co/TAdhbH
+// NOTE: IE for Windows Phone 8 ignores `-ms-text-size-adjust` if the
+//       viewport <meta> tag is used - http://cbrac.co/1cFrAvl
+
+html {
+    overflow-y: scroll;     // 1
+    text-size-adjust: 100%; // 2
+}
+
+// 1. Customize `background` for text selections
+// 2. Remove `text-shadow` selection highlight - http://cbrac.co/Q6swON
+
+::selection {
+    // background: @selection-background-color; 1
+    // text-shadow: none;   2
+
+    // Change `background` for text selections when browser is unfocused
+    &:window-inactive {
+        background: #dedede;
+    }
+
+    // Remove `background` on images when selected
+    img& {
+        background: transparent;
+    }
+}
