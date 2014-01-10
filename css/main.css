@@ -294,8 +294,8 @@ th {
     word-break:     break-word; /* 1 */
     -webkit-hyphens: auto;
     -moz-hyphens:    auto;
-    hyphens:         auto;
     -ms-hyphens:     auto;
+    hyphens:         auto;
 }
 
 dl dt {
