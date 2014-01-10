@@ -199,7 +199,6 @@ a {
 
 a:hover {
     text-decoration: none;
-
 }
 
 /* Improve readability when focused or hovered in all browsers */
@@ -235,8 +234,6 @@ abbr a {
 acronym {
     text-transform: uppercase;
 }
-
-.antialiased { -webkit-font-smoothing: antialiased; }
 
 /* Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome */
 b,
