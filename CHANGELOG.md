@@ -1,7 +1,6 @@
 # 2.0.0 (January 9, 2014)
 
 - Updated the [documentation website](http://cardinalcss.com)!
-- Added LESS support via the ["less" branch]()!
 - Updated jQuery to 1.10.2.
 - Updated Modernizr to 2.7.1.
 - Removed minified version of Cardinal.
