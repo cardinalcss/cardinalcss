@@ -22,7 +22,7 @@
 - Added an empty `img/` folder since I usually end up creating one anyways.
 - Added some default HTML elements to `index.html`.
 - Removed a bunch of `.button` classes.
-- Changed `.wrapper`’s maximum width to `64rem`, or `1024px`.
+- Changed `.wrapper`’s maximum width to `1024px`.
 
 # 1.4.0 (November 8, 2013)
 

@@ -424,7 +424,7 @@ sub {
 /* Page wrapper */
 .wrapper {
     margin: 0 auto;
-    max-width: 64rem; /* 1024px */
+    max-width: 1024px;
     width: 90%;
 }
 
