@@ -1,0 +1,29 @@
+{
+  "name": "Cardinal",
+  "description": "a small, mobile-first CSS framework",
+  "version": "2.0.0",
+  "homepage": "http://cardinalcss.com",
+  "author": "Chris Bracco",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cbracco/cardinal.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cbracco/cardinal/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    }
+  ],
+  "private": true,
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-autoprefixer": "~0.6.4",
+    "grunt-banner": "~0.2.0",
+    "grunt-contrib-less": "~0.8.3",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-cssmin": "~0.7.0"
+  }
+}
