@@ -1213,7 +1213,8 @@ body {
 
 .menu-link {
     display: block;
-    padding: 0.75rem;
+    padding: 0.633rem 0.875rem;
+    background-color: #222;
     color: #ccc;
     text-decoration: none;
     font-weight: 700;
@@ -1221,6 +1222,7 @@ body {
 }
 
 .menu-link:hover {
+    background-color: #282828;
     color: #fff;
 }
 
@@ -1230,23 +1232,23 @@ body {
     box-shadow:         inset 1px 1px 3px hsla(0, 0%, 0%, 0.35);
 }
 
-.navigation .menu-link {
+.menu .menu-link {
     border-bottom: 1px solid #444;
 }
-
-.navigation .menu-link:hover {
-    background-color: #282828;
-}
-
-.menu-link.menu-jump       { background-color: #444;    }
-.menu-link.menu-jump:hover { background-color: #484848; }
 
 .menu-jump {
     text-align: center;
 }
 
-.page .menu-jump       { background-color: #222;    }
-.page .menu-jump:hover { background-color: #282828; }
+.navigation .menu-jump {
+    border-bottom: 0;
+    background-color: #1fa3ec;
+    color: #fff;
+}
+
+.navigation .menu-jump:hover {
+    background-color: #3eb0ef;
+}
 
 /**
  * Header ($header)
@@ -1277,9 +1279,9 @@ body {
 }
 
 .page-tagline {
-    font-weight: 400;
-    color: #ef9c9f;
     margin-bottom: 1rem;
+    color: #ef9c9f;
+    font-weight: 400;
 }
 
 .header-button {
@@ -1296,16 +1298,16 @@ body {
 .page-header .divider {
     display: inline-block;
     padding: 0 2px;
+    color: #ef9c9f;
     vertical-align: middle;
     font-size: 1.777rem;
     line-height: 1;
-    color: #ef9c9f;
 }
 
 @media screen and (min-width: 480px) {
     .header-button {
-        font-size: 1rem;
         padding: 0.633rem 0.875rem;
+        font-size: 1rem;
     }
 }
 
