@@ -1074,15 +1074,20 @@ textarea {
     margin: 0;
     padding: 0.633rem 0.875rem;
     border: 0 none;
+    -webkit-border-radius: 3px;
+    -moz-border-radius:    3px;
+    border-radius:         3px;
     background-color: #dedede;
     color: #444;
     vertical-align: middle;
     text-align: center;
     text-decoration: none;
     white-space: nowrap;
+    font-weight: 700;
     font-family: inherit;
     line-height: 1.5;
     cursor: pointer;
+    -webkit-font-smoothing: antialiased;
 }
 
 .button:hover {
@@ -1156,6 +1161,20 @@ textarea {
     background-color: #1291d7;
 }
 
+.button-secondary {
+    background-color: #e98724;
+    color: #fff;
+}
+
+.button-secondary:hover {
+    background-color: #ec9843;
+}
+
+.button-secondary:active,
+.button-secondary.active {
+    background-color: #d67615;
+}
+
 
 
 
@@ -1164,11 +1183,130 @@ textarea {
    Main ($main)
 \* ================================================================== */
 
+/* Set document height equal to viewport height */
+html,
+body {
+    height: 100%;
+}
+
 .browsehappy {
     padding: 10px;
     border-bottom: 2px solid #ececa3;
     background-color: #ffc;
     text-align: center;
+}
+
+/* Ensure `.page` and `.navigation` inherit the viewport height */
+.page,
+.navigation {
+    min-height: 100%;
+}
+
+/**
+ * Navigation ($navigation)
+ */
+
+.navigation {
+    background-color: #222;
+    text-align: center;
+}
+
+.menu-link {
+    display: block;
+    padding: 0.75rem;
+    color: #ccc;
+    text-decoration: none;
+    font-weight: 700;
+    -webkit-font-smoothing: antialiased;
+}
+
+.menu-link:hover {
+    color: #fff;
+}
+
+.menu-link:active {
+    -webkit-box-shadow: inset 1px 1px 3px hsla(0, 0%, 0%, 0.35);
+    -moz-box-shadow:    inset 1px 1px 3px hsla(0, 0%, 0%, 0.35);
+    box-shadow:         inset 1px 1px 3px hsla(0, 0%, 0%, 0.35);
+}
+
+.navigation .menu-link {
+    border-bottom: 1px solid #444;
+}
+
+.navigation .menu-link:hover {
+    background-color: #282828;
+}
+
+.menu-link.menu-jump       { background-color: #444;    }
+.menu-link.menu-jump:hover { background-color: #484848; }
+
+.menu-jump {
+    text-align: center;
+}
+
+.page .menu-jump       { background-color: #222;    }
+.page .menu-jump:hover { background-color: #282828; }
+
+/**
+ * Header ($header)
+ */
+
+.page-header {
+    padding: 2rem 0;
+    background-color: #c12026;
+    background-image: url("../img/bg.svg");
+    -webkit-background-size: 250px;
+    -moz-background-size:    250px;
+    background-size:         250px;
+    background-repeat: repeat;
+    color: #fff;
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Use a PNG fallback in case SVG is not supported */
+.no-svg .page-header {
+    background-image: url("../img/bg.png");
+}
+
+.page-title,
+.page-tagline {
+    color: #fff;
+    line-height: 1;
+}
+
+.page-tagline {
+    font-weight: 400;
+    color: #ef9c9f;
+    margin-bottom: 1rem;
+}
+
+.header-button {
+    margin-bottom: 1rem;
+    padding: 0.475rem 0.633rem;
+    font-size: 0.875rem;
+}
+
+.header-link {
+    color: #fff;
+    font-weight: 700;
+}
+
+.page-header .divider {
+    display: inline-block;
+    padding: 0 2px;
+    vertical-align: middle;
+    font-size: 1.777rem;
+    line-height: 1;
+    color: #ef9c9f;
+}
+
+@media screen and (min-width: 480px) {
+    .header-button {
+        font-size: 1rem;
+        padding: 0.633rem 0.875rem;
+    }
 }
 
 

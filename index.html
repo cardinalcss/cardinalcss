@@ -31,13 +31,51 @@
             <p class="browsehappy">It looks like you are using an outdated browser. Please <a href="http://whatbrowser.org">consider upgrading</a> for a faster, better, and safer web experience.</p>
         <![endif]-->
 
-        <div role="document">
-            <header role="banner"></header>
-            <nav role="navigation"></nav>
-            <main role="main"></main>
-            <aside role="complementary"></aside>
-            <footer role="contentinfo"></footer>
+        <div id="top" class="page" role="document">
+            <a href="#menu" class="menu-jump menu-link">Menu &rarr;</a>
+
+            <header class="page-header" role="banner">
+                <h1 class="page-title">Cardinal</h1>
+                <h2 class="page-tagline">Build more with less.</h2>
+
+                <nav class="header-actions">
+                    <a href="https://github.com/cbracco/cardinal/archive/master.zip" title="Download from Github" id="header-download" class="header-button button button-primary">Download 2.0.0</a>
+
+                    <a href="https://github.com/cbracco/cardinal" title="View & contribute on Github" id="header-view" class="header-button button button-secondary">View on GitHub</a>
+
+                    <div>
+                        <a href="https://www.pivotaltracker.com/s/projects/803361" id="header-pivotal" class="header-link">Pivotal Tracker</a>
+                        <span class="divider">&bull;</span>
+                        <a href="https://github.com/cbracco/cardinal/blob/master/CHANGELOG.md" id="header-changelog" class="header-link">CHANGELOG</a>
+                    </div>
+                </nav>
+            </header>
+
+            <main class="page-content" role="main">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, quis, veniam, nihil nesciunt nisi nemo laborum aspernatur accusantium eligendi id iure dicta odit inventore incidunt eos molestias illum. Necessitatibus, tempore.</p>
+            </main>
+
+            <footer class="page-footer" role="contentinfo"></footer>
         </div>
+
+        <nav id="menu" class="navigation" role="navigation">
+            <a href="#top" class="menu-jump menu-link">&larr; Back to top</a>
+            <ul class="menu">
+                <li><a href="#getting_started" class="menu-link">Get started</a></li>
+                <li><a href="#base" class="menu-link">Base</a></li>
+                <li><a href="#typography" class="menu-link">Typography</a></li>
+                <li><a href="#layout" class="menu-link">Layout</a></li>
+                <li><a href="#embedded_content" class="menu-link">Embedded content</a></li>
+                <li><a href="#syntax" class="menu-link">Syntax</a></li>
+                <li><a href="#tables" class="menu-link">Tables</a></li>
+                <li><a href="#forms" class="menu-link">Forms</a></li>
+                <li><a href="#buttons" class="menu-link">Buttons</a></li>
+                <li><a href="#main" class="menu-link">Main</a></li>
+                <li><a href="#print" class="menu-link">Print</a></li>
+                <li><a href="#javascript" class="menu-link">JavaScript</a></li>
+                <li><a href="#known_issues" class="menu-link">Known issues</a></li>
+            </ul>
+        </nav>
 
         <!-- jQuery -->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
