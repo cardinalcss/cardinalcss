@@ -1185,7 +1185,8 @@ textarea {
 
 /* Set document height equal to viewport height */
 html,
-body {
+body,
+.page {
     height: 100%;
 }
 
@@ -1196,58 +1197,10 @@ body {
     text-align: center;
 }
 
-/* Ensure `.page` and `.navigation` inherit the viewport height */
-.page,
+/* Ensure `.page-header` and `.navigation` inherit viewport height */
+.page-header,
 .navigation {
     min-height: 100%;
-}
-
-/**
- * Navigation ($navigation)
- */
-
-.navigation {
-    background-color: #222;
-    text-align: center;
-}
-
-.menu-link {
-    display: block;
-    padding: 0.633rem 0.875rem;
-    background-color: #222;
-    color: #ccc;
-    text-decoration: none;
-    font-weight: 700;
-    -webkit-font-smoothing: antialiased;
-}
-
-.menu-link:hover {
-    background-color: #282828;
-    color: #fff;
-}
-
-.menu-link:active {
-    -webkit-box-shadow: inset 1px 1px 3px hsla(0, 0%, 0%, 0.35);
-    -moz-box-shadow:    inset 1px 1px 3px hsla(0, 0%, 0%, 0.35);
-    box-shadow:         inset 1px 1px 3px hsla(0, 0%, 0%, 0.35);
-}
-
-.menu .menu-link {
-    border-bottom: 1px solid #444;
-}
-
-.menu-jump {
-    text-align: center;
-}
-
-.navigation .menu-jump {
-    border-bottom: 0;
-    background-color: #1fa3ec;
-    color: #fff;
-}
-
-.navigation .menu-jump:hover {
-    background-color: #3eb0ef;
 }
 
 /**
@@ -1309,6 +1262,54 @@ body {
         padding: 0.633rem 0.875rem;
         font-size: 1rem;
     }
+}
+
+/**
+ * Navigation ($navigation)
+ */
+
+.navigation {
+    background-color: #222;
+    text-align: center;
+}
+
+.menu-link {
+    display: block;
+    padding: 0.633rem 0.875rem;
+    background-color: #222;
+    color: #ccc;
+    text-decoration: none;
+    font-weight: 700;
+    -webkit-font-smoothing: antialiased;
+}
+
+.menu-link:hover {
+    background-color: #282828;
+    color: #fff;
+}
+
+.menu-link:active {
+    -webkit-box-shadow: inset 1px 1px 3px hsla(0, 0%, 0%, 0.35);
+    -moz-box-shadow:    inset 1px 1px 3px hsla(0, 0%, 0%, 0.35);
+    box-shadow:         inset 1px 1px 3px hsla(0, 0%, 0%, 0.35);
+}
+
+.menu .menu-link {
+    border-bottom: 1px solid #444;
+}
+
+.menu-jump {
+    text-align: center;
+}
+
+.navigation .menu-jump {
+    border-bottom: 0;
+    background-color: #1fa3ec;
+    color: #fff;
+}
+
+.navigation .menu-jump:hover {
+    background-color: #3eb0ef;
 }
 
 
