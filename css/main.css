@@ -40,7 +40,8 @@
 
    COLORS
    ---------------------------
-   Primary (blue): #1fa3ec
+   Primary (blue):  #1fa3ec
+   Text selections: #b3d4fc
 
 \* ================================================================== */
 
@@ -98,13 +99,13 @@ ul {
  */
 
 ::-moz-selection {
-    background: hsla(201, 84%, 52%, 0.45); /* 1 */
-    text-shadow: none;                     /* 2 */
+    background: #b3d4fc; /* 1 */
+    text-shadow: none;   /* 2 */
 }
 
 ::selection {
-    background: hsla(201, 84%, 52%, 0.45); /* 1 */
-    text-shadow: none;                     /* 2 */
+    background: #b3d4fc; /* 1 */
+    text-shadow: none;   /* 2 */
 }
 
 /* Change `background` for text selections when browser is unfocused */
