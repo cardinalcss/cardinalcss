@@ -3,11 +3,7 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
-
-# THANKS
-
-    <name>
+    Chris Bracco -- creator -- @cbracco
 
 # TECHNOLOGY COLOPHON
 

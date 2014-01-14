@@ -1164,9 +1164,12 @@ textarea {
    Main ($main)
 \* ================================================================== */
 
-/**
- * YOUR MAGICAL CSS GOES HERE!
- */
+.browsehappy {
+    padding: 10px;
+    border-bottom: 2px solid #ececa3;
+    background-color: #ffc;
+    text-align: center;
+}
 
 
 
