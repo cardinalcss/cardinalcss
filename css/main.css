@@ -724,20 +724,13 @@ samp {
 }
 
 code {
-    padding: 0 0.317rem;
+    padding: 0.064rem 0.317rem;
     border: 1px solid #dedede;
     -webkit-border-radius: 0.178rem;
     -moz-border-radius:    0.178rem;
     border-radius:         0.178rem;
     background: #f8f8f8;
     white-space: nowrap;
-}
-
-/* Increase `padding` at larger viewport widths */
-@media only screen and (min-width: 480px) {
-    code {
-        padding: 0.1rem 0.317rem;
-    }
 }
 
 kbd {
@@ -1343,16 +1336,16 @@ body,
  * Content ($content)
  */
 
-.intro-heading {
-    font-weight: 300;
-    margin: 1rem 0;
+.page-content .wrapper {
+    width: 100%;
 }
 
-@media screen and (min-width: 600px) {
-    .intro-heading {
-        font-size: 1.777rem;
-        text-align: center;
-    }
+.content-block {
+    padding: 1rem 1rem 0;
+}
+
+.content-block:last-of-type {
+    margin-bottom: 1rem;
 }
 
 .content-nav {
@@ -1360,6 +1353,68 @@ body,
     margin-left: 1rem;
 }
 
+.js .content-nav {
+    display: none;
+}
+
+.intro-heading {
+    font-weight: 300;
+    margin: 1rem 0;
+}
+
+.example-grid .island {
+    display: block;
+    padding: 0.75rem 0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius:    3px;
+    border-radius:         3px;
+    background-color: #e5e5e5;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.example-grid .island:hover {
+    background-color: #dedede;
+}
+
+.example-grid .grid .island {
+    background-color: #ccc;
+}
+
+.example-grid .grid .island:hover {
+    background-color: #bbb;
+}
+
+@media screen and (min-width: 600px) {
+    .content-block {
+        padding: 2rem 2rem 0;
+    }
+
+    .content-block:last-of-type {
+        margin-bottom: 2rem;
+    }
+
+    .content-nav .button {
+        padding: 0.633rem 0.875rem;
+        font-size: 1rem;
+    }
+
+    .intro-heading {
+        font-size: 1.777rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .content-nav {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1080px) {
+    .intro-heading {
+        font-size: 2.369rem;
+    }
+}
 
 
 
