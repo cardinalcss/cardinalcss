@@ -722,20 +722,13 @@ samp {
 }
 
 code {
-    padding: 0 0.317rem;
+    padding: 0.064rem 0.317rem;
     border: 1px solid #dedede;
     -webkit-border-radius: 0.178rem;
     -moz-border-radius:    0.178rem;
     border-radius:         0.178rem;
     background: #f8f8f8;
     white-space: nowrap;
-}
-
-/* Increase `padding` at larger viewport widths */
-@media only screen and (min-width: 480px) {
-    code {
-        padding: 0.1rem 0.317rem;
-    }
 }
 
 kbd {
