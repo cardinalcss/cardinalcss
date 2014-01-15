@@ -32,22 +32,30 @@
         <![endif]-->
 
         <div id="top" class="page" role="document">
-            <a href="#menu" class="menu-jump menu-link">Menu &rarr;</a>
-
             <header class="page-header" role="banner">
-                <div class="header-container">
-                    <h1 class="page-title">Cardinal</h1>
-                    <h2 class="page-tagline">Build more with less.</h2>
+                <a href="#main-nav" class="nav-jump nav-link">Menu</a>
+
+                <!-- <button type="button" class="nav-button">
+                    <svg width="32" height="22">
+                        <path d="M0,2 32,2" stroke="#efefef" stroke-width="4"></path>
+                        <path d="M0,11 32,11" stroke="#efefef" stroke-width="4"></path>
+                        <path d="M0,20 32,20" stroke="#efefef" stroke-width="4"></path>
+                    </svg>
+                </button> -->
+
+                <div class="header-container cf">
+                    <h1 class="header-title">Cardinal</h1>
+                    <h2 class="header-tagline">Build more with less.</h2>
 
                     <nav class="header-actions">
-                        <a href="https://github.com/cbracco/cardinal/archive/master.zip" title="Download from Github" id="header-download" class="header-button button button-primary">Download 2.0.0</a>
+                        <a href="https://github.com/cbracco/cardinal/archive/master.zip" title="Download from Github" id="header-download" class="header-button button button-primary">Download</a>
 
                         <a href="https://github.com/cbracco/cardinal" title="View & contribute on Github" id="header-view" class="header-button button button-secondary">View on GitHub</a>
 
                         <div>
                             <a href="https://www.pivotaltracker.com/s/projects/803361" id="header-pivotal" class="header-link">Pivotal Tracker</a>
                             <span class="divider">&bull;</span>
-                            <a href="https://github.com/cbracco/cardinal/blob/master/CHANGELOG.md" id="header-changelog" class="header-link">CHANGELOG</a>
+                            <a href="https://github.com/cbracco/cardinal/blob/master/CHANGELOG.md" id="header-changelog" class="header-link">Changelog</a>
                         </div>
                     </nav>
                 </div>
@@ -61,7 +69,7 @@
 
                     <section id="get-started" class="content-block">
                         <nav class="content-nav">
-                            <a href="#menu" class="button button-mini button-primary">Menu</a>
+                            <a href="#main-nav" class="button button-mini button-primary">Menu</a>
                             <a href="#top" class="button button-mini">Top</a>
                         </nav>
 
@@ -76,7 +84,7 @@
 
                     <section id="base" class="content-block">
                         <nav class="content-nav">
-                            <a href="#menu" class="button button-mini button-primary">Menu</a>
+                            <a href="#main-nav" class="button button-mini button-primary">Menu</a>
                             <a href="#top" class="button button-mini">Top</a>
                         </nav>
 
@@ -113,7 +121,7 @@
 
                     <section id="typography" class="content-block">
                         <nav class="content-nav">
-                            <a href="#menu" class="button button-mini button-primary">Menu</a>
+                            <a href="#main-nav" class="button button-mini button-primary">Menu</a>
                             <a href="#top" class="button button-mini">Top</a>
                         </nav>
 
@@ -130,7 +138,7 @@
 
                     <section id="layout" class="content-block">
                         <nav class="content-nav">
-                            <a href="#menu" class="button button-mini button-primary">Menu</a>
+                            <a href="#main-nav" class="button button-mini button-primary">Menu</a>
                             <a href="#top" class="button button-mini">Top</a>
                         </nav>
 
@@ -288,7 +296,7 @@
 
                     <section id="embedded-content" class="content-block">
                         <nav class="content-nav">
-                            <a href="#menu" class="button button-mini button-primary">Menu</a>
+                            <a href="#main-nav" class="button button-mini button-primary">Menu</a>
                             <a href="#top" class="button button-mini">Top</a>
                         </nav>
 
@@ -316,7 +324,7 @@
 
                     <section id="syntax" class="content-block">
                         <nav class="content-nav">
-                            <a href="#menu" class="button button-mini button-primary">Menu</a>
+                            <a href="#main-nav" class="button button-mini button-primary">Menu</a>
                             <a href="#top" class="button button-mini">Top</a>
                         </nav>
 
@@ -349,7 +357,7 @@
 
                     <section id="tables" class="content-block">
                         <nav class="content-nav">
-                            <a href="#menu" class="button button-mini button-primary">Menu</a>
+                            <a href="#main-nav" class="button button-mini button-primary">Menu</a>
                             <a href="#top" class="button button-mini">Top</a>
                         </nav>
 
@@ -606,7 +614,7 @@
 
                     <section id="forms" class="content-block">
                         <nav class="content-nav">
-                            <a href="#menu" class="button button-mini button-primary">Menu</a>
+                            <a href="#main-nav" class="button button-mini button-primary">Menu</a>
                             <a href="#top" class="button button-mini">Top</a>
                         </nav>
 
@@ -737,7 +745,7 @@
 
                     <section id="buttons" class="content-block">
                         <nav class="content-nav">
-                            <a href="#menu" class="button button-mini button-primary">Menu</a>
+                            <a href="#main-nav" class="button button-mini button-primary">Menu</a>
                             <a href="#top" class="button button-mini">Top</a>
                         </nav>
 
@@ -752,8 +760,19 @@
                         <h3 class="h4">Styles</h3>
 
                         <p>
-                            <button class="button">Default</button>
-                            <button class="button button-primary">Primary</button>
+                            <button class="button">.button</button>
+                            <button class="button button-primary">.button-primary</button>
+                        </p>
+
+                        <h3 class="h4">States</h3>
+
+                        <p>
+                            <button class="button disabled">.disabled</button>
+                            <button class="button button-primary disabled">.disabled</button>
+                        </p>
+                        <p>
+                            <button class="button active">.active</button>
+                            <button class="button button-primary active">.active</button>
                         </p>
 
                         <h3 class="h4">Sizes</h3>
@@ -765,24 +784,9 @@
                         <p><button class="button button-block one-whole">.button-block.one-whole</button></p>
                     </section>
 
-                    <section id="main" class="content-block">
-                        <nav class="content-nav">
-                            <a href="#menu" class="button button-mini button-primary">Menu</a>
-                            <a href="#top" class="button button-mini">Top</a>
-                        </nav>
-
-                        <h2 class="content-heading">Main</h2>
-
-                        <pre><code>/* ================================================================== *\
-   Main ($main)
-\* ================================================================== */</code></pre>
-
-                        <p>This is where you place all of <em>your</em> custom, application-specific styles. Go nuts!</p>
-                    </section>
-
                     <section id="misc" class="content-block">
                         <nav class="content-nav">
-                            <a href="#menu" class="button button-mini button-primary">Menu</a>
+                            <a href="#main-nav" class="button button-mini button-primary">Menu</a>
                             <a href="#top" class="button button-mini">Top</a>
                         </nav>
 
@@ -807,7 +811,7 @@
 
                     <section id="known-issues" class="content-block">
                         <nav class="content-nav">
-                            <a href="#menu" class="button button-mini button-primary">Menu</a>
+                            <a href="#main-nav" class="button button-mini button-primary">Menu</a>
                             <a href="#top" class="button button-mini">Top</a>
                         </nav>
 
@@ -853,29 +857,77 @@ img[src*="googleapis.com/"] {
     box-sizing: content-box;
 }</code></pre>
                     </section>
+
+                    <section id="browser-support" class="content-block">
+                        <nav class="content-nav">
+                            <a href="#main-nav" class="button button-mini button-primary">Menu</a>
+                            <a href="#top" class="button button-mini">Top</a>
+                        </nav>
+
+                        <h2 class="content-heading">Browser support</h2>
+
+                        <p>Cardinal supports most modern browsers:</p>
+
+                        <div class="grid">
+                            <div class="grid-item medium-one-half">
+                                <div class="island">
+                                    <ul style="margin:0">
+                                        <li>Google Chrome 25+</li>
+                                        <li>Mozilla Firefox 19+</li>
+                                        <li>Safari 6.0+</li>
+                                        <li>iOS Safari 4.0+</li>
+                                        <li>Opera 12.1+</li>
+                                        <li>Android 4.2+</li>
+                                        <li>Internet Explorer 9+</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="grid-item medium-one-half">
+                                <h3 class="h4">What about IE8?</h3>
+
+                                <p>By including the <a href="https://github.com/chuckcarpenter/REM-unit-polyfill">REM unit polyfill</a> and Scott Jehl’s <a href="https://github.com/scottjehl/Respond">Respond.js</a>, Cardinal should work in IE8.</p>
+
+                                <p>A better option might be to use IE-specific classes, or include an IE-only stylesheet, instead of bothering with polyfills and other bandaid solutions.</p>
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </main>
 
-            <footer class="page-footer" role="contentinfo"></footer>
+            <footer class="page-footer" role="contentinfo">
+                <h2 class="footer-heading">Build something great.</h2>
 
-            <nav id="menu" class="navigation" role="navigation">
-                <a href="#top" class="menu-jump menu-link">&larr; Back to top</a>
-                <ul class="menu cf">
-                    <li><a href="#get-started" class="menu-link">Get started</a></li>
-                    <li><a href="#base" class="menu-link">Base</a></li>
-                    <li><a href="#typography" class="menu-link">Typography</a></li>
-                    <li><a href="#layout" class="menu-link">Layout</a></li>
-                    <li><a href="#embedded-content" class="menu-link">Embedded</a></li>
-                    <li><a href="#syntax" class="menu-link">Syntax</a></li>
-                    <li><a href="#tables" class="menu-link">Tables</a></li>
-                    <li><a href="#forms" class="menu-link">Forms</a></li>
-                    <li><a href="#buttons" class="menu-link">Buttons</a></li>
-                    <li><a href="#misc" class="menu-link">Miscellaneous</a></li>
-                    <li><a href="#known-issues" class="menu-link">Issues</a></li>
-                    <li><a href="#browser-support" class="menu-link">Browsers</a></li>
-                </ul>
-            </nav>
+                <nav class="footer-actions">
+                    <a href="https://github.com/cbracco/cardinal/archive/master.zip" title="Download from Github" id="header-download" class="header-button button button-primary">Download</a>
+
+                    <a href="https://github.com/cbracco/cardinal" title="View & contribute on Github" id="header-view" class="header-button button button-secondary">View on GitHub</a>
+                </nav>
+
+                <div class="footer-credits">Made by <a id="footer-cbracco" href="http://cbracco.me" class="footer-link">Chris Bracco</a>.</div>
+            </footer>
         </div>
+
+        <nav id="main-nav" class="nav" role="navigation">
+            <a href="#top" class="nav-heading"><span class="logo"></span></a>
+            <a href="#top" class="nav-jump nav-link">Back to top</a>
+
+            <div class="nav-container">
+                <ul class="nav-menu cf">
+                    <li><a href="#get-started" class="nav-link">Get started</a></li>
+                    <li><a href="#base" class="nav-link">Base</a></li>
+                    <li><a href="#typography" class="nav-link">Typography</a></li>
+                    <li><a href="#layout" class="nav-link">Layout</a></li>
+                    <li><a href="#embedded-content" class="nav-link">Embedded</a></li>
+                    <li><a href="#syntax" class="nav-link">Syntax</a></li>
+                    <li><a href="#tables" class="nav-link">Tables</a></li>
+                    <li><a href="#forms" class="nav-link">Forms</a></li>
+                    <li><a href="#buttons" class="nav-link">Buttons</a></li>
+                    <li><a href="#misc" class="nav-link">Miscellaneous</a></li>
+                    <li><a href="#known-issues" class="nav-link">Issues</a></li>
+                    <li><a href="#browser-support" class="nav-link">Browsers</a></li>
+                </ul>
+            </div>
+        </nav>
 
         <!-- jQuery -->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
