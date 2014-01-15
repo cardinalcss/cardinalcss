@@ -40,8 +40,10 @@
 
    COLORS
    ---------------------------
-   Primary (blue):  #1fa3ec
-   Text selections: #b3d4fc
+   Brand:           #c12026 (red)
+   Primary:         #1fa3ec (blue)
+   Secondary:       #e98724 (orange)
+   Text selections: #b3d4fc (blue)
 
 \* ================================================================== */
 
@@ -1126,7 +1128,7 @@ textarea {
 
 /* Sizes */
 .button-mini {
-    padding: 0.267rem 0.475rem;
+    padding: 0.238rem 0.475rem;
     font-size: 0.75rem;
 }
 
@@ -1208,7 +1210,9 @@ body,
  */
 
 .page-header {
+    display: table;
     padding: 2rem 0;
+    width: 100%;
     background-color: #c12026;
     background-image: url("../img/bg.svg");
     -webkit-background-size: 250px;
@@ -1223,6 +1227,11 @@ body,
 /* Use a PNG fallback in case SVG is not supported */
 .no-svg .page-header {
     background-image: url("../img/bg.png");
+}
+
+.header-container {
+    display: table-cell;
+    vertical-align: middle;
 }
 
 .page-title,
@@ -1261,6 +1270,24 @@ body,
     .header-button {
         padding: 0.633rem 0.875rem;
         font-size: 1rem;
+        margin-left: 3px;
+        margin-right: 3px;
+    }
+}
+
+/* Shrink header height on viewports larger than 500px */
+@media screen and (min-height: 500px) {
+    .page-header,
+    .header-container {
+        display: block;
+    }
+
+    .page-header {
+        min-height: 0;
+    }
+
+    .header-container {
+        vertical-align: inherit;
     }
 }
 
@@ -1310,6 +1337,27 @@ body,
 
 .navigation .menu-jump:hover {
     background-color: #3eb0ef;
+}
+
+/**
+ * Content ($content)
+ */
+
+.intro-heading {
+    font-weight: 300;
+    margin: 1rem 0;
+}
+
+@media screen and (min-width: 600px) {
+    .intro-heading {
+        font-size: 1.777rem;
+        text-align: center;
+    }
+}
+
+.content-nav {
+    float: right;
+    margin-left: 1rem;
 }
 
 
