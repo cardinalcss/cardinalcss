@@ -1,4 +1,4 @@
-# 2.0.0 (January 9, 2014)
+# 2.0.0 (January 16, 2014)
 
 - Updated the [documentation website](http://cardinalcss.com)!
 - Updated jQuery to 1.10.2.
@@ -9,20 +9,22 @@
 - Re-ordered and re-grouped styles in `main.css`.
 - Added 5 carriage returns in between sections in `main.css` so its easier to see section breaks when scrolling.
 - Fixed some overflow issues with form elements.
-- Removed `.island` and `.well` classes.
-- Removed a bunch of helper classes.
+- Removed the “Helpers” section as well as some unused classes.
 - Added practical font-sizing classes for headings (`.h1`, `.h2`, etc).
 - Switched indentation from tabs to spaces.
 - Updated `<blockquote>` styles and structure.
 - Renamed `.lap-*` to `.medium-*`, and `.desk-*` to `.large-*`.
-- Changed default styles for form elements.
-- Added `.fieldset-border`, and `.flex-video` classes.
-- Changed class naming conventions to all hyphens.
-- Added default `humans.txt` and `robots.txt` files to the root directory.
+- Removed rounded and hollow variations of `.island` and `.well` classes.
+- Changed default styles for form elements, and added a `.fieldset-border` class.
+- Added a `.flex-video` class.
+- Changed naming conventions to all hyphens (fuck BEM).
+- Added boilerplate `humans.txt` and `robots.txt` files to the root directory.
 - Added an empty `img/` folder since I usually end up creating one anyways.
-- Added some default HTML elements to `index.html`.
-- Removed a bunch of `.button` classes.
-- Changed `.wrapper`’s maximum width to `1024px`.
+- Added some default HTML elements with appropriate ARIA roles to `index.html`.
+- Removed a bunch of `.button` classes and variations.
+- Decreased `.wrapper`’s maximum width to `1024px`.
+- Added an alternative `.asterisks` style for `<hr>` elements.
+- Added `.drop-cap`, `.run-in`, and `.small-caps` classes for some more variety in typographical hierarchy.
 
 # 1.4.0 (November 8, 2013)
 
