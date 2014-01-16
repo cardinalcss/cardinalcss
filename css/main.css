@@ -722,6 +722,7 @@ samp {
 }
 
 code {
+    margin: 0 0.064rem;
     padding: 0.064rem 0.317rem;
     border: 1px solid #dedede;
     -webkit-border-radius: 0.178rem;
