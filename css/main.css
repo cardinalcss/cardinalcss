@@ -1553,16 +1553,13 @@ textarea {
 
 .page-content .wrapper {
     margin: 0;
-    max-width: 768px;
+    padding: 1rem 0;
+    max-width: 640px;
     width: 100%;
 }
 
 .content-block {
-    padding: 1rem 1rem 0;
-}
-
-.content-block:last-of-type {
-    margin-bottom: 1rem;
+    padding: 0 1rem;
 }
 
 .content-nav {
@@ -1575,7 +1572,6 @@ textarea {
 }
 
 .intro-heading {
-    margin: 1rem 0;
     font-weight: 300;
 }
 
@@ -1586,7 +1582,7 @@ textarea {
     -webkit-border-radius: 3px;
     -moz-border-radius:    3px;
     border-radius:         3px;
-    background-color: #e5e5e5;
+    background-color: #efefef;
     text-align: center;
 }
 
@@ -1620,12 +1616,12 @@ textarea {
 }
 
 @media screen and (min-width: 600px) {
-    .content-block {
-        padding: 2rem 2rem 0;
+    .page-content .wrapper {
+        padding: 2rem 0;
     }
 
-    .content-block:last-of-type {
-        margin-bottom: 2rem;
+    .content-block {
+        padding: 0 2rem;
     }
 
     .content-nav .button {
@@ -1634,8 +1630,8 @@ textarea {
     }
 
     .intro-heading {
-        margin: 0;
         font-size: 1.777rem;
+        margin: 0 0 1.333rem;
     }
 }
 
