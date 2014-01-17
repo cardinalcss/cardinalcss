@@ -754,6 +754,11 @@ video {
     width: 100%;
 }
 
+audio:focus,
+video:focus {
+    outline: 1px dotted #222;
+}
+
 /* Fluid-width media that maintain their aspect ratios */
 embed,
 img,
