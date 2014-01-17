@@ -1063,6 +1063,12 @@ input[type="radio"] {
     width: auto;
 }
 
+input[type="checkbox"]:focus,
+input[type="image"]:focus,
+input[type="radio"]:focus {
+    outline: 1px dotted #222;
+}
+
 /**
  * Give inputs, selects, and textareas some basic styles
  * 1. Remove `word-break` in case fields are wrapped with <p> tags
@@ -1112,6 +1118,7 @@ input[type="url"]:focus,
 input[type="week"]:focus,
 select:focus,
 textarea:focus {
+    outline: 0 none;
     -webkit-box-shadow: inset 0.1rem 0.1rem 0.238rem hsla(0, 0%, 0%, 0.15);
     -moz-box-shadow:    inset 0.1rem 0.1rem 0.238rem hsla(0, 0%, 0%, 0.15);
     box-shadow:         inset 0.1rem 0.1rem 0.238rem hsla(0, 0%, 0%, 0.15);
@@ -1158,6 +1165,10 @@ select {
     -webkit-border-radius: 0;
     -moz-border-radius:    0;
     border-radius:         0;
+}
+
+select:focus {
+    outline: 1px dotted #222;
 }
 
 /* Set a `max-height` on <select> in Firefox only */
@@ -1224,7 +1235,6 @@ textarea {
 
 .button:focus {
     outline: 1px dotted #222;
-    outline-offset: 1px;
 }
 
 .button[disabled],
