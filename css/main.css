@@ -1730,7 +1730,7 @@ textarea {
 
 @media screen and (min-width: 600px) {
     .content-block {
-        padding: 2rem;
+        padding: 1rem 2rem 2rem;
     }
 
     .content-nav .button {
