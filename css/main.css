@@ -1739,6 +1739,10 @@ textarea {
         margin-top: 0.5rem;
     }
 
+    #intro {
+        padding-top: 2rem;
+    }
+
     .intro-heading {
         font-size: 1.777rem;
     }
