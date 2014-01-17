@@ -1466,7 +1466,7 @@ textarea {
 @media screen and (min-width: 860px) {
     .header-actions {
         position: absolute;
-        top: 2rem;
+        top: 2.369rem;
         right: 2rem;
         text-align: right;
     }
