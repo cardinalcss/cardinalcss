@@ -207,6 +207,98 @@
                         </table>
 
                         <p><span class="run-in">Remember:</span> Pixel percentages are always rounded to whole values in web browsers.</p>
+
+                        <h3>Headings</h3>
+
+                        <p>Using headings effectively across devices can be tricky, which is why Cardinal sets some sensible defaults that automatically resize them for you.</p>
+
+                        <div class="island">
+                            <h1>Heading 1</h1>
+                            <h2>Heading 2</h2>
+                            <h3>Heading 3</h3>
+                            <h4>Heading 4</h4>
+                            <h5>Heading 5</h5>
+                            <h6>Heading 6</h6>
+                        </div>
+
+                        <p>There are also some helper classes that you can use to change the sizes of your headings (eg. if you want an <code>&lt;h2&gt;</code> to look like an <code>&lt;h5&gt;</code>).</p>
+
+                        <table class="table-border table-border-rows table-border-cells table-stripes">
+                            <thead>
+                                <th>Class</th>
+                                <th>Heading</th>
+                            </thead>
+                            <tr>
+                                <td><code>.h6</code></td>
+                                <td><h1 class="h6">Heading 1</h1></td>
+                            </tr>
+                            <tr>
+                                <td><code>.h5</code></td>
+                                <td><h1 class="h5">Heading 2</h1></td>
+                            </tr>
+                            <tr>
+                                <td><code>.h4</code></td>
+                                <td><h1 class="h4">Heading 3</h1></td>
+                            </tr>
+                            <tr>
+                                <td><code>.h3</code></td>
+                                <td><h1 class="h3">Heading 4</h1></td>
+                            </tr>
+                            <tr>
+                                <td><code>.h2</code></td>
+                                <td><h1 class="h2">Heading 5</h1></td>
+                            </tr>
+                            <tr>
+                                <td><code>.h1</code></td>
+                                <td><h1 class="h1">Heading 6</h1></td>
+                            </tr>
+                        </table>
+
+                        <h3>Type variations</h3>
+
+                        <p>As of Cardinal 2.0.0, some type variations have been added so that you can introduce hierarchy and alternative styles to your content.</p>
+
+                        <h4>Crossbars</h4>
+
+                        <pre><code>&lt;header style="overflow:hidden"&gt;
+    &lt;h3 class="crossbars"&gt;Hello World!&lt;/h3&gt;
+&lt;/header&gt;</code></pre>
+
+                        <header style="overflow:hidden">
+                            <h3 class="crossbars">Hello World!</h3>
+                        </header>
+
+                        <p>This subheading style centers the text and adds gray bars on each side of the content. It is typically used with headings or subheadings, and requires it’s parent element to have <code>overflow: hidden</code> so that the gray bars do not break outside the parent.</p>
+
+                        <h4>Drop-caps</h4>
+
+                        <pre><code>&lt;p class="drop-cap"&gt;Drop caps float and resize the first letter in an element to make it stand out from the rest of the text. You see this style implemented often in printed books.&lt;/p&gt;</code></pre>
+
+                        <p class="drop-cap">Drop caps float and resize the first letter in an element to make it stand out from the rest of the text. You see this style implemented often in printed books.</p>
+
+                        <h4>Run-ins</h4>
+
+                        <pre><code>&lt;p&gt;&lt;span class="run-in"&gt;Running-in subheadings are another technique&lt;/span&gt; you see in books all the time, where the first line or couple of lines in a new chapter is given a different style treatment from the rest of the body text.&lt;/p&gt;</code></pre>
+
+                        <p><span class="run-in">Running-in subheadings are another technique</span> you see in books all the time, where the first line or couple of lines in a new chapter is given a different style treatment from the rest of the body text.</p>
+
+                        <h4>Small-caps</h4>
+
+                        <pre><code>&lt;h4 class="small-caps"&gt;I’m in small caps!&lt;/h4&gt;</code></pre>
+
+                        <h4 class="small-caps">I’m in small caps!</h4>
+
+                        <p>This technique is typically used on headings to give a body of text some hierarchy and an alternative style from the default capitalization.</p>
+
+                        <h4>Non-alphabet symbol dividers</h4>
+
+                        <pre><code>&lt;hr class="asterisks"&gt;</code></pre>
+
+                        <p>As of Cardinal 2.0.0, there is an alternative style for <code>&lt;hr&gt;</code> elements that uses a group of asterisks instead of a hard line that spans the width of its parent.</p>
+
+                        <hr class="asterisks">
+
+                        <p>This sort of divider may be more appropriate in other situations, or layouts that already have a lot of hard lines.</p>
                     </section>
 
                     <hr class="asterisks">
