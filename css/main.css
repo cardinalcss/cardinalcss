@@ -367,14 +367,14 @@ hr {
     border-bottom: 1px solid #ccc;
 }
 
-hr.asterisks {
-    margin: 0;
+hr.symbol {
+    margin: 0 0 1rem;
     padding: 1rem 0;
     height: 1.333rem;
     border: 0;
 }
 
-hr.asterisks:before {
+hr.symbol:before {
     display: block;
     width: 100%;
     border: 0;

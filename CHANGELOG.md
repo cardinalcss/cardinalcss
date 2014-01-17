@@ -1,3 +1,8 @@
+# 2.0.1  (January 17, 2014)
+
+- Changed hr.asterisks to `hr.symbol` for better semantics.
+- Added a bottom margin to `hr.symbol`.
+
 # 2.0.0 (January 16, 2014)
 
 - Updated the [documentation website](http://cardinalcss.com)!
