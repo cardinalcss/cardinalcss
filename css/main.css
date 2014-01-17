@@ -756,6 +756,11 @@ video {
     width: 100%;
 }
 
+audio:focus,
+video:focus {
+    outline: 1px dotted #222;
+}
+
 /* Fluid-width media that maintain their aspect ratios */
 embed,
 img,
@@ -1165,6 +1170,10 @@ select {
     -webkit-border-radius: 0;
     -moz-border-radius:    0;
     border-radius:         0;
+}
+
+select:focus {
+    outline: 1px dotted #222;
 }
 
 select:focus {
