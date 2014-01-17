@@ -175,6 +175,10 @@ a:hover {
     text-decoration: none;
 }
 
+a:focus {
+    outline: 1px dotted #222;
+}
+
 /**
  * Common typographical elements
  */
@@ -1082,8 +1086,6 @@ textarea {
     display: block;
     padding: 0.563rem;
     width: 100%;
-    outline: 0 none;
-   *outline: thin dotted #222 \9; /* IE 6-8 */
     border: 1px solid #ccc;
     -webkit-border-radius: 0;
     -moz-border-radius:    0;
@@ -1153,6 +1155,9 @@ legend {
 select {
     height: 44px;
     background: #f8f8f8;
+    -webkit-border-radius: 0;
+    -moz-border-radius:    0;
+    border-radius:         0;
 }
 
 /* Set a `max-height` on <select> in Firefox only */
@@ -1217,9 +1222,9 @@ textarea {
     outline: 0 none;
 }
 
-/* Consistent button focus style across browsers */
 .button:focus {
-    outline: thin dotted #222;
+    outline: 1px dotted #222;
+    outline-offset: 1px;
 }
 
 .button[disabled],
@@ -1491,6 +1496,12 @@ textarea {
     box-shadow:         inset 1px 1px 3px hsla(0, 0%, 0%, 0.35);
 }
 
+.nav-link:focus,
+.nav-heading:focus {
+    outline: 1px dotted #fff;
+    outline-offset: -2px;
+}
+
 .nav-menu .nav-link {
     border-bottom: 1px solid #444;
 }
@@ -1672,6 +1683,12 @@ textarea {
 
 .footer-link {
     color: #fff;
+}
+
+.page-footer .button:focus,
+.footer-link:focus {
+    outline: 1px dotted #fff;
+    outline-offset: 1px;
 }
 
 @media screen and (min-width: 600px) {
