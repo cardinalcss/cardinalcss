@@ -65,6 +65,10 @@ When doing so, **please checkout a new feature branch, and submit your pull requ
 
 Cardinal is licensed under the MIT Open Source license. For more information, see the [LICENSE.md](https://github.com/cbracco/cardinal/blob/master/LICENSE.md) file in this repository.
 
+## License
+
+Cardinal is licensed under the MIT Open Source license. For more information, see the LICENSE file in this repository.
+
 ## Colophon
 
 Cardinal is a project by [Chris Bracco](http://cbracco.me).

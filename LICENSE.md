@@ -1,4 +1,11 @@
+<<<<<<< HEAD:LICENSE.md
 Copyright (c) Chris Bracco
+=======
+Copyright © Chris Bracco
+http://cardinalcss.com
+
+MIT License
+>>>>>>> 11343721eba6a002bd7b3fbd50fd6f6b5562acad:LICENSE
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
