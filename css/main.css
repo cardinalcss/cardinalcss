@@ -1333,6 +1333,12 @@ textarea {
     text-align: center;
 }
 
+/* Make buttons and navigation links feel faster on `touchstart` */
+.page .button,
+.nav a {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
 /**
  * Header ($header)
  */
@@ -1506,13 +1512,22 @@ textarea {
     background-color: #3eb0ef;
 }
 
+/**
+ * 1. REM units round weirdly and the border-bottom doesn’t show, so I
+ * use pixels instead
+ */
+
 .nav-link {
     display: block;
-    padding: 0.633rem 0.875rem;
+    padding: 10px 14px; /* 1 */
     background-color: #222;
     color: #ccc;
     text-decoration: none;
     font-weight: 700;
+}
+
+.nav-menu .nav-link {
+    border-bottom: 1px solid #444;
 }
 
 .nav-link:hover {
@@ -1532,8 +1547,16 @@ textarea {
     outline-offset: -2px;
 }
 
-.nav-menu .nav-link {
-    border-bottom: 1px solid #444;
+@media screen and (min-width: 480px) {
+    .nav-menu .nav-link {
+        float: left;
+        width: 50%;
+        border-right: 1px solid #444;
+    }
+
+    .nav-menu .nav-link:nth-child(even) {
+        border-right: 0;
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -1553,7 +1576,7 @@ textarea {
     .nav-heading {
         position: relative;
         display: block;
-        height: 128px;
+        height: 155px;
         border-bottom: 1px solid #de363c;
         background-color: #c12026;
         background-repeat: repeat;
@@ -1565,9 +1588,13 @@ textarea {
     }
 
     .nav-heading:hover {
-        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=95)";
-        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=95);
-        opacity: 0.95;
+        background-color: #d02229;
+    }
+
+    .nav-heading:active {
+        -webkit-box-shadow: inset 2px 2px 6px hsla(0, 0%, 0%, 0.3);
+        -moz-box-shadow:    inset 2px 2px 6px hsla(0, 0%, 0%, 0.3);
+        box-shadow:         inset 2px 2px 6px hsla(0, 0%, 0%, 0.3);
     }
 
     .nav .nav-jump {
@@ -1580,11 +1607,17 @@ textarea {
 
     .nav-container {
         position: absolute;
-        top: 128px;
+        top: 155px;
         bottom: 44px;
         overflow-y: auto;
         width: 100%;
         -webkit-overflow-scrolling: touch;
+    }
+
+    .nav-menu .nav-link {
+        float: none;
+        width: auto;
+        border-right: 0;
     }
 }
 
@@ -1594,13 +1627,51 @@ textarea {
 
 .page-content .wrapper {
     margin: 0;
-    padding: 1rem 0;
     max-width: 640px;
     width: 100%;
 }
 
 .content-block {
-    padding: 0 1rem;
+    padding: 1rem;
+}
+
+/* Animations for :target headings */
+@-webkit-keyframes target {
+    0%   { background-color: transparent; }
+    10%  { background-color: #dbf2ff;     }
+    100% { background-color: transparent; }
+}
+
+@-moz-keyframes target {
+    0%   { background-color: transparent; }
+    10%  { background-color: #dbf2ff;     }
+    100% { background-color: transparent; }
+}
+
+@-ms-keyframes target {
+    0%   { background-color: transparent; }
+    10%  { background-color: #dbf2ff;     }
+    100% { background-color: transparent; }
+}
+
+@-o-keyframes target {
+    0%   { background-color: transparent; }
+    10%  { background-color: #dbf2ff;     }
+    100% { background-color: transparent; }
+}
+
+@keyframes target {
+    0%   { background-color: transparent; }
+    10%  { background-color: #dbf2ff;     }
+    100% { background-color: transparent; }
+}
+
+.content-block:target .content-heading {
+    -webkit-animation: target 2s ease;
+    -moz-animation:    target 2s ease;
+    -ms-animation:     target 2s ease;
+    -o-animation:      target 2s ease;
+    animation:         target 2s ease;
 }
 
 .content-nav {
@@ -1608,12 +1679,13 @@ textarea {
     margin-left: 1rem;
 }
 
-.js .content-nav {
-    display: none;
+#intro {
+    padding-bottom: 0;
 }
 
 .intro-heading {
     font-weight: 300;
+    margin: 0;
 }
 
 .example-grid .island {
@@ -1642,11 +1714,11 @@ textarea {
 #browser-support .island {
     margin-bottom: 1rem;
     padding: 1rem;
-    border: 1px solid #e5e5bd;
+    border: 1px solid #e6dcbe;
     -webkit-border-radius: 3px;
     -moz-border-radius:    3px;
     border-radius:         3px;
-    background-color: #ffe;
+    background: #fffbee;
     -webkit-box-shadow: 1px 1px 2px hsla(0, 0%, 0%, 0.08);
     -moz-box-shadow:    1px 1px 2px hsla(0, 0%, 0%, 0.08);
     box-shadow:         1px 1px 2px hsla(0, 0%, 0%, 0.08);
@@ -1657,22 +1729,18 @@ textarea {
 }
 
 @media screen and (min-width: 600px) {
-    .page-content .wrapper {
-        padding: 2rem 0;
-    }
-
     .content-block {
-        padding: 0 2rem;
+        padding: 2rem;
     }
 
     .content-nav .button {
-        padding: 0.633rem 0.875rem;
-        font-size: 1rem;
+        padding: 0.356rem 0.633rem;
+        font-size: 0.875rem;
+        margin-top: 0.5rem;
     }
 
     .intro-heading {
         font-size: 1.777rem;
-        margin: 0 0 1.333rem;
     }
 }
 

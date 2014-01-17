@@ -12,6 +12,13 @@ $(function() {
         nav_container = $('.nav-container');
 
     /**
+     * Add an event listener for `touchstart` to the page so that buttons
+     * feel quick after removing their default tap highlight color with CSS
+     */
+
+    document.addEventListener("touchstart", function(){}, true);
+
+    /**
      * Nav button toggle
      */
 
@@ -62,5 +69,43 @@ $(function() {
             return prevent();
         }
     });
+
+    /**
+     * Google Analytics event click tracking
+     */
+
+    $("#header-download").on("click", function() {
+        ga("send", "event", "Header actions", "click", "Download");
+    });
+
+    $("#header-view").on("click", function() {
+        ga("send", "event", "Header actions", "click", "GitHub Repo");
+    });
+
+    $("#header-pivotal").on("click", function() {
+        ga("send", "event", "Header actions", "click", "Pivotal Tracker");
+    });
+
+    $("#header-changelog").on("click", function() {
+        ga("send", "event", "Header actions", "click", "Changelog");
+    });
+
+    $("#footer-download").on("click", function() {
+        ga("send", "event", "Footer actions", "click", "Download");
+    });
+
+    $("#footer-view").on("click", function() {
+        ga("send", "event", "Footer actions", "click", "GitHub Repo");
+    });
+
+    $("#footer-cbracco").on("click", function() {
+        ga("send", "event", "Footer actions", "click", "cbracco.me");
+    });
+
+    /**
+     * Request the latest version number from GitHub once a minute
+     */
+
+    setInterval(updateVersion(), 60 * 1000);
 
 });
