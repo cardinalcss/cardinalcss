@@ -1,43 +1,33 @@
-//
-// Code
-// --------------------------------------------------
+/* ================================================================== *\
+   Syntax ($syntax)
+\* ================================================================== */
 
-// Correct `font-family` set oddly in Safari 5 and Chrome
+/* Correct `font-family` set oddly in Safari 5 and Chrome */
 code,
 kbd,
 pre,
 samp {
-    color: #444;
-    font-family: @code-font-family;
-}
-
-code,
-kbd {
-    font-size: 75%;
+    color: @syntax-font-color;
+    font-size: @syntax-font-size;
+    font-family: @syntax-font-family;
 }
 
 code {
-    padding: 0 0.3rem;
+    margin: 0 0.064rem;
+    padding: 0.064rem 0.317rem;
     border: .0625rem solid @gray-light;
-    border-radius: .1875rem;
+    border-radius: 0.178rem;
     background: @gray-lightest;
     white-space: nowrap;
-}
-
-// Increase `padding` at larger viewport widths
-@media only screen and (min-width: 30em) {
-    code {
-        padding: 0.1rem 0.3rem;
-    }
 }
 
 kbd {
     position: relative;
     top: -.0625rem;
     margin-bottom: .0625rem;
-    padding: 0 0.3rem;
+    padding: 0 0.317rem;
     border: .0625rem solid @gray-light;
-    border-radius: .25rem;
+    border-radius: 0.238rem;
     background: @gray-lightest;
     box-shadow:
         0 .0625rem 0 @gray-light,
@@ -45,27 +35,27 @@ kbd {
     white-space: nowrap;
 }
 
-// Increase `padding` at larger viewport widths
-@media only screen and (min-width: 30em) {
+/* Increase `padding` at larger viewport widths */
+@media only screen and (min-width: 480px) {
     kbd {
-        padding: 0.1rem 0.3rem;
+        padding: 0.1rem 0.317rem;
     }
 }
 
 pre {
     position: relative;
     overflow: auto;
-    padding: 1rem;
-    background: #222;
-    box-shadow: inset 0 0 .3125rem hsla(0, 0%, 0%, 0.6);
-    color: #ccc;
+    padding: @base-rem-unit;
+    background: @black;
+    box-shadow: inset 0 0 0.356rem hsla(0, 0%, 0%, 0.6);
+    color: @gray;
     white-space: pre;
     word-wrap: normal;
     word-break: normal;
     tab-size: 4;
     hyphens: none;
 
-    // Reset above <code> styles when nested inside <pre> tags
+    /* Reset above <code> styles when nested inside <pre> tags */
     code {
         display: block;
         overflow: auto;

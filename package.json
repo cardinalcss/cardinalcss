@@ -1,7 +1,7 @@
 {
   "name": "cardinal",
-  "description": "A small mobile-first CSS framework, with useful default styles, fluid typography, and a responsive grid system.",
-  "version": "1.4.0",
+  "description": "a small, \"mobile first\" CSS framework by Chris Bracco",
+  "version": "2.0.0",
   "homepage": "http://cardinalcss.com",
   "author": "Chris Bracco",
   "repository": {
@@ -23,7 +23,6 @@
     "grunt-autoprefixer": "~0.6.4",
     "grunt-banner": "~0.2.0",
     "grunt-contrib-less": "~0.8.3",
-    "grunt-contrib-watch": "~0.5.3",
-    "grunt-contrib-cssmin": "~0.7.0"
+    "grunt-contrib-watch": "~0.5.3"
   }
 }

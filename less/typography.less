@@ -1,32 +1,40 @@
-//
-// Typography
-//
-// Modular scale:    16px @ 1:1.333 (perfect fourth)
-// Important number: 20px (maximum <html> `font-size`)
-// http://modularscale.com/scale/?px1=16&px2=21&ra1=1.333&ra2=0
-//
-// To get REM values, multply the px value you want by the base font-size
-// Example: 5px = 5/16 = .3125rem
-//          23px = 23/16 = 1.4375rem
-// --------------------------------------------------
+/* ================================================================== *\
+   Typography ($typography)
 
-html { font-size: 100%; } // 16px default
-@media only screen and (min-width: 20em) { html { font-size: 81.25%; } } // 13px @ 320px width
-@media only screen and (min-width: 30em) { html { font-size: 87.5%;  } } // 14px @ 480px width
-@media only screen and (min-width: 60em) { html { font-size: 112.5%; } } // 18px @ 960px width
-@media only screen and (min-width: 90em) { html { font-size: 125%;   } } // 20px @ 1440px width
+   Modular scale:    16px @ 1:1.333 (perfect fourth)
+   Important number: 24px (base line-height)
+   http://modularscale.com/scale/?px1=16&px2=24&ra1=1.333&ra2=0
+\* ================================================================== */
 
-// 1. Remove default `margin`
-// 2. Inherits percentage declared on above <html> as root `font-size`
-// 3. Unitless `line-height`, which acts as multiple of root `font-size`
+/**
+ * 1. Inherits percentage declared on above <html> as root `font-size`
+ * 2. Unitless `line-height`, which acts as multiple of base `font-size`
+ */
 
 body {
-    margin: 0;                      // 1
     color: @base-font-color;
-    font-size: @base-font-size;     // 2
+    font-size: @base-font-size;  /* 1 */
     font-family: @base-font-family;
-    line-height: @base-line-height; // 3
+    font-weight: @base-font-weight;
+    line-height: @base-line-height; /* 2 */
 }
+
+/**
+ * Links ($links)
+ */
+
+a {
+    color: @base-link-color;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+
+/**
+ * Common typographical elements
+ */
 
 abbr,
 acronym,
@@ -42,56 +50,50 @@ acronym {
     text-transform: uppercase;
 }
 
-// Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome
-b, strong {
-    font-weight: 700;
-}
-
 blockquote {
-    padding-left: 1rem;
-    border-left: .3125rem solid #e5e5e5;
+    padding-left: @base-rem-unit;
+    border-left: @blockquote-border-width solid @gray-lighter;
     font-style: italic;
+    font-size: @blockquote-font-size;
     font-family: @blockquote-font-family;
 
     p {
         margin: 0;
 
         + p {
-            margin-top: 1rem;
+            margin-top: @base-rem-unit;
         }
     }
 
-    // 1. Add an m-dash character before the <footer> tag
-    // TIP: Use <footer> tag instead of <cite> inside blockquotes -
-    //      http://cbrac.co/TCVK4P
-
-    footer {
-        color: #777;
+    cite {
+        color: @gray-darker;
         font-style: italic;
-        font-size: 0.8125rem;
+        font-size: 0.75rem;
+        font-family: @base-font-family;
+
+        /**
+         * 1. Add an m-dash character before the <footer> tag
+         * TIP: Use <cite> inside blockquotes - http://cbrac.co/18LWCOw
+         */
 
         &:before {
-            content: "\2014 \2009"; // 1
+            content: "\2014 \0020"; /* 1 */
+        }
+
+        a {
+            color: @gray-darker;
         }
     }
 }
 
 
-blockquote,
-dl,
-figure,
-hr,
-menu,
-ol,
-p,
-pre,
-summary,
-table,
-ul {
-    margin: 0 0 1rem;
-}
 
-// 1. Non-standard fallback for older WebKit
+
+/**
+ * Add basic word wrapping and hyphenation to common elements
+ * - http://css-tricks.com/almanac/properties/h/hyphenate/
+ * 1. Non-standard fallback for older WebKit
+ */
 
 caption,
 p,
@@ -99,14 +101,48 @@ table,
 textarea,
 td,
 th {
-    word-break:     break-all;
-    word-break:     break-word; // 1
-    hyphens:         auto;
+    word-break: break-all;
+    word-break: break-word; /* 1 */
+    hyphens: auto;
+}
+
+/**
+ * The parent of every `.crossbars` element must have `overflow:
+ * hidden` to prevent pseudo elements from breaking outside
+ */
+
+.crossbars {
+    position: relative;
+    display: table;
+    margin: 0 auto 0.75rem;
+    padding: 0 @base-rem-unit;
+    width: auto;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .125rem;
+    font-size: 1.125rem;
+    line-height: 1.125;
+
+    &:before,
+    &:after {
+        position: absolute;
+        top: 50%;
+        display: block;
+        overflow: hidden;
+        margin-top: -0.5rem;
+        width: 9999%;
+        height: @base-rem-unit;
+        background: @gray-light;
+        content: " ";
+    }
+
+    &:before { left: -9999%;  }
+    &:after  { right: -9999%; }
 }
 
 dl {
     dt {
-        color: #222;
+        color: @black;
         font-weight: 700;
     }
 
@@ -116,7 +152,7 @@ dl {
 }
 
 del {
-    color: #777;
+    color: @gray-darker;
     text-decoration: line-through;
 }
 
@@ -124,9 +160,17 @@ details {
     cursor: pointer;
 }
 
-// Address styling not present in Safari 5 and Chrome
-dfn {
-    font-style: italic;
+.drop-cap {
+    &:first-letter {
+        float: left;
+        margin-right: 0.75rem;
+        color: @black;
+        text-transform: uppercase;
+        font-weight: @heading-font-weight;
+        font-size: 4.209rem;
+        font-family: @blockquote-font-family;
+        line-height: 1;
+    }
 }
 
 em,
@@ -135,56 +179,74 @@ cite {
     font-style: italic;
 }
 
-// NOTE: Use `text-rendering` with caution - http://cbrac.co/SJt8p1
-h1, h2, h3, h4, h5, h6 {
+/**
+ * Headings ($headings)
+ * NOTE: Use `text-rendering` with caution - http://cbrac.co/SJt8p1
+ */
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
     margin: 0 0 0.75rem;
-    color: @heading-font-color;
+    color: @black;
     font-weight: @heading-font-weight;
     font-family: @heading-font-family;
     line-height: @heading-line-height;
     text-rendering: optimizeLegibility;
 }
 
-h1 { font-size: 3.157rem; }
-h2 { font-size: 2.369rem; }
-h3 { font-size: 1.777rem; }
-h4 { font-size: 1.333rem; }
-h5 { font-size: 1rem;     }
-h6 { font-size: 0.75rem;  }
+h1, .h1 { font-size: 1.777rem; }
+h2, .h2 { font-size: 1.333rem; }
+h3, .h3 { font-size: 1.125rem; }
 
-// 1. Remove the gray background color from active links in IE 10
-a {
-    background: transparent; // 1
-    color: @base-link-color;
+h4, .h4,
+h5, .h5,
+h6, .h6 { font-size: @base-font-size; }
 
-    &:hover {
-        text-decoration: none;
-    }
+@media only screen and (min-width: 600px) {
+    h1, .h1 { font-size: 3.157rem; }
+    h2, .h2 { font-size: 2.369rem; }
+    h3, .h3 { font-size: 1.777rem; }
+    h4, .h4 { font-size: 1.333rem; }
 
-    // Improve readability when focused or hovered in all browsers
-    &:active,
-    &:hover {
-        outline: 0;
-    }
-
-    // Address `outline` inconsistency between Chrome and other browsers
-    &:focus {
-        outline: thin dotted;
-    }
+    h5, .h5,
+    h6, .h6 { font-size: @base-font-size; }
 }
 
-// Address differences between Firefox and other browsers
 hr {
-    height: 0;
+    margin: @base-rem-unit 0;
     border: 0;
-    border-bottom: .0625rem solid #dedede;
+    border-bottom: .0625rem solid @gray;
+
+    &.asterisks {
+        margin: 0;
+        padding: @base-rem-unit 0;
+        height: 1.333rem;
+        border: 0;
+
+        &:before {
+            display: block;
+            width: 100%;
+            border: 0;
+            color: @black;
+            content: "⁂";
+            text-align: center;
+            font-size: 1.333rem;
+            line-height: 1;
+        }
+    }
 }
 
-// Address styling not present in IE 8/9
+
+
+/* Address styling not present in IE 8/9 */
 ins,
 mark {
     background: #ff9;
-    color: #222;
+    color: @black;
     text-decoration: none;
 }
 
@@ -195,8 +257,8 @@ nav ol {
     list-style: none;
 }
 
-// Nested `list-style` types for ordered lists
-ol          { list-style: decimal; }
+/* Nested `list-style` types for ordered lists */
+ol          { list-style: decimal;     }
 ol ol       { list-style: upper-alpha; }
 ol ol ol    { list-style: lower-roman; }
 ol ol ol ol { list-style: lower-alpha; }
@@ -208,9 +270,67 @@ ul ol {
     margin-bottom: 0;
 }
 
-// 1. Address inconsistent and variable `font-size` in all browsers
+.run-in {
+    float: left;
+    margin: 0;
+    margin-right: 0.317rem;
+    color: @black;
+    text-transform: uppercase;
+    letter-spacing: .125rem;
+    font-weight: 700;
+    font-size: @base-font-size;
+}
+
+/* 1. Address inconsistent and variable `font-size` in all browsers */
 small {
     display: inline-block;
-    font-size: 87.5%; // 1
-    line-height: @base-line-height;
+    font-size: 0.875rem; /* 1 */
+    line-height: 1.333;
+}
+
+.small-caps {
+    text-transform: uppercase;
+    letter-spacing: .125rem;
+    font-weight: 700;
+    font-size: 1.125rem;
+    font-family: inherit;
+    line-height: inherit;
+}
+
+sub,
+sup {
+    font-size: 0.75rem;
+}
+
+sup {
+    top: -0.475rem;
+}
+
+sub {
+    bottom: -0.238rem;
+}
+
+/**
+ * Text alignment ($text-alignment)
+ */
+
+.text-left    { text-align: left;    }
+.text-right   { text-align: right;   }
+.text-center  { text-align: center;  }
+.text-justify { text-align: justify; }
+
+/* Medium-sized breakpoint */
+@media only screen and (min-width: 600px) {
+    .medium-text-left    { text-align: left;    }
+    .medium-text-right   { text-align: right;   }
+    .medium-text-center  { text-align: center;  }
+    .medium-text-justify { text-align: justify; }
+}
+
+/* Large-sized breakpoint */
+@media only screen and (min-width: 960px) {
+    .large-text-left    { text-align: left;    }
+    .large-text-right   { text-align: right;   }
+    .large-text-center  { text-align: center;  }
+    .large-text-justify { text-align: justify; }
 }

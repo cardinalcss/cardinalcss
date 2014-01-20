@@ -9,17 +9,11 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg : grunt.file.readJSON('package.json'),
 
-        banner: '/*!\n' +
-                ' * Name: Cardinal v<%= pkg.version %> (<%= pkg.homepage %>)\n' +
-                ' * Info: <%= pkg.description %>\n' +
-                ' * Copyright <%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
-                ' * Licensed under <%= _.pluck(pkg.licenses, "type") %> (<%= _.pluck(pkg.licenses, "url") %>)\n' +
-                ' */\n',
+        banner: '/*! Cardinal v<%= pkg.version %> | <%= _.pluck(pkg.licenses, "type") %> License | <%= pkg.homepage %> */',
 
         // Directory variables
         lessDir : 'less/',
         cssDir  : 'css/',
-        jsDir  : 'js/',
 
         // Run LESS CSS compilation
         less: {
@@ -34,14 +28,14 @@ module.exports = function(grunt) {
                     report: 'min'
                 },
                 files: {
-                    'css/<%= pkg.name %>.min.css': 'css/<%= pkg.name %>.css',
+                    "<%= cssDir %><%= pkg.name %>.min.css": "<%= cssDir %><%= pkg.name %>.css"
                 }
             }
         },
 
-        // Automatically prefix CSS based on Can I Use database
+        // Automatically prefix CSS based on Can I Use database for the following browsers versions
         autoprefixer: {
-            options: {
+            development: {
                 browsers: [
                     'chrome 25',
                     'firefox 19',
@@ -50,66 +44,43 @@ module.exports = function(grunt) {
                     'opera 12.1',
                     'ios 4',
                     'android 4.2'
-                ]
-            },
-            files: {
-                src: [
-                    'css/<%= pkg.name %>.css',
-                    'css/<%= pkg.name %>.min.css',
-                ]
+                ],
+                files: {
+                    "<%= cssDir %><%= pkg.name %>.css": "<%= cssDir %><%= pkg.name %>.css"
+                }
             }
         },
 
-        // Remove comments final CSS
-        cssmin: {
-            options: {
-                keepSpecialComments: 0
-            },
-            single_file: {
-                src: 'css/<%= pkg.name %>.min.css',
-                dest: 'css/<%= pkg.name %>.min.css'
-            }
-        },
-
-        // Add a nice banner to the compiled CSS
+        // Add a nice banner to the CSS files
         usebanner: {
             options: {
                 position: 'top',
                 banner: '<%= banner %>'
             },
-            files: {
-                src: [
-                    'css/<%= pkg.name %>.css',
-                    'css/<%= pkg.name %>.min.css',
-                ]
-            }
+            src: '<%= cssDir %>**/*.css',
+            dest: '<%= cssDir %>'
         },
 
         // Watch for changes on these files and recompile when changed
         watch: {
-            options: {
-                nospawn: true
-            },
             less: {
                 files: ['<%= lessDir %>**/*.less'],
-                tasks: ['less', 'usebanner']
+                tasks: ['less', 'autoprefixer', 'usebanner']
             }
         }
     })
 
-
     // Grunt plugins
     grunt.loadNpmTasks('grunt-autoprefixer')
     grunt.loadNpmTasks('grunt-banner')
-    grunt.loadNpmTasks('grunt-contrib-cssmin')
     grunt.loadNpmTasks('grunt-contrib-less')
     grunt.loadNpmTasks('grunt-contrib-watch')
 
     // Registered Grunt tasks
     grunt.registerTask('default', [
-        'less',
+        'less:compile',
         'autoprefixer',
-        'cssmin',
+        'less:minify',
         'usebanner',
         'watch'
     ])

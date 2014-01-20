@@ -1,85 +1,168 @@
-//
-// Forms
-// --------------------------------------------------
+/* ================================================================== *\
+   Forms ($forms)
+\* ================================================================== */
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native
+ *    <audio> and <video> controls
+ * 2. Improve usability and consistency of cursor style between
+ *    image-type <input> and others
+ */
 
 button,
-input {
-    // Remove inner padding and border in Firefox 4+
-    &::-moz-focus-inner {
-        padding: 0;
-        border: 0;
-    }
+html input[type="button"], /* 1 */
+input[type="checkbox"],
+input[type="file"],
+input[type="image"],
+input[type="radio"],
+input[type="reset"],
+input[type="submit"],
+label,
+select {
+    cursor: pointer;       /* 2 */
 }
 
-// Remove default <fieldset> styles for all browsers
+/**
+ * 1. Remove default `border` and `padding` across browsers
+ * 2. Set `min-width` to 0 to avoid overflow issues in Chrome
+ */
+
 fieldset {
-    margin: 0;
-    padding: 0;
-    border: 0;
+    padding: 0;   /* 1 */
+    min-width: 0; /* 2 */
+    border: 0;    /* 1 */
 }
 
-// 1. 100% width inputs, select boxes, and textareas by default
-// 2. Give elements same styles as `.button` elements
+/* Remove `margin-bottom` from the last element in a <fieldset> */
+fieldset > *:last-child {
+    margin-bottom: 0;
+}
 
-input,
-select,
-textarea {
-    display: block;                 // 1
-    padding: 0.563rem;              // 2
-    width: 100%;                    // 1
-    border: .0625rem solid #aaa;
-    border-radius: 0.356rem;        // 2
-    vertical-align: middle;
-    line-height: @base-line-height; // 2
-
-    transition: border-color .2s ease-in-out,
-                box-shadow .2s ease-in-out;
-
-    &:focus {
-        border-color: @base-border-color;
-        outline: 0;
-        box-shadow: 0 0 .5rem rgba(red(@base-border-color), green(@base-border-color), blue(@base-border-color), 0.6);
+@media screen and (min-width: 600px) {
+    fieldset {
+        font-size: 1.125rem;
     }
 }
 
-// Make checkbox, image, and radio inputs `inline-block` by default
+/* Add this class for a bordered <fieldset> */
+.fieldset-border {
+    padding: @base-rem-unit;
+    border: .0625rem solid @gray-light;
+}
+
+/* Make checkbox, image, and radio inputs `inline-block` by default */
 input[type="checkbox"],
 input[type="image"],
 input[type="radio"] {
     display: inline-block;
     width: auto;
+}
+
+/**
+ * Give inputs, selects, and textareas some basic styles
+ * 1. Remove `word-break` in case fields are wrapped with <p> tags
+ */
+
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+select,
+textarea {
+    box-sizing: border-box;
+    display: block;
+    padding: @input-padding;
+    width: 100%;
+    outline: 0 none;
+   *outline: thin dotted #222 \9; /* IE 6-8 */
+    border: @input-border-width solid @input-border-color;
+    border-radius: 0;
+    vertical-align: middle;
+    word-break: normal; /* 1 */
+    // line-height: @input-line-height;
+
+    &:focus {
+        box-shadow: inset 0.1rem 0.1rem 0.238rem hsla(0, 0%, 0%, 0.15);
+    }
+}
+
+
+/**
+ * 1. Constrict `max-width` for file inputs to avoid overflow issues
+ */
+
+input[type="file"] {
+    max-width: 100%; /* 1 */
     cursor: pointer;
 }
 
-input[type="checkbox"],
-input[type="radio"] {
-    margin: 0 0.422rem 0.238rem 0;
+/**
+ * 1. Remove default Webkit styling
+ */
+
+input[type="search"] {
+    box-sizing: border-box;
+    -webkit-appearance: textfield; /* 1 */
+
+    &::-webkit-search-cancel-button,
+    &::-webkit-search-decoration { /* 1 */
+      -webkit-appearance: none;
+    }
 }
 
-// Make button, reset, and submit inputs to be `inline-block`, unless
-// otherwise specified by `.button` classes
+/**
+ * 1. Remove `padding` so people aren't caught out if they zero out fieldsets
+ * 2. Correct `color` not being inherited in IE 8/9
+ */
 
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-    display: inline-block;
-    width: auto;
-}
-
-// Give labels a pointer cursor by default
-label {
-    cursor: pointer;
-}
-
-// Give <legend> some basic styles for all browsers
 legend {
-    margin: 0 0 1rem;
+    padding: 0; /* 1 */
+    border: 0;  /* 2 */
     color: @black;
-    font-weight: 700;
+    font-weight: @heading-font-weight;
 }
 
-// 1. Remove default vertical scrollbar in IE 8/9
+/* If <fieldset> has a border, give its <legend> different styles */
+.fieldset-border legend {
+    margin: 0;
+    padding: 0 0.356rem;
+    background: @white;
+}
+
+/* Give <select> menus a different background */
+select {
+    height: @select-height;
+    background: @select-background;
+}
+
+/**
+ * 1. Set a `max-height` on <select> in Firefox only
+ * 2. Reset background to white in Firefox
+ */
+
+@-moz-document url-prefix() {
+    select {
+        max-height: 2.5rem; /* 1 */
+        height: auto;
+        background: @white; /* 2 */
+    }
+}
+
+/**
+ * 1. Restrict <textarea> elements to vertical resizing only
+ */
 
 textarea {
-    resize: vertical; // 1
+    resize: vertical; /* 1 */
+    overflow: auto;
+    vertical-align: top;
 }
