@@ -1,4 +1,4 @@
-# 2.0.1 (January, 17 2014)
+# LESS port
 - Add packages.json and gruntfile,js for LESS grunt build which includes autoprefixing, minification, and compression
 - Add normalize.less and remove all relevant code from LESS files to consolidate normalization
 - Move files to LESS for modularization

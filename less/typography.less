@@ -27,7 +27,12 @@ a {
     color: @base-link-color;
 
     &:hover {
+        color: @base-link-hover-color;
         text-decoration: none;
+    }
+
+    &:focus {
+        outline: 1px dotted @black;
     }
 }
 
@@ -90,9 +95,7 @@ blockquote {
 
 
 /**
- * Add basic word wrapping and hyphenation to common elements
- * - http://css-tricks.com/almanac/properties/h/hyphenate/
- * 1. Non-standard fallback for older WebKit
+ * Add word wrapping and hyphenation to common elements
  */
 
 caption,
@@ -101,8 +104,7 @@ table,
 textarea,
 td,
 th {
-    word-break: break-all;
-    word-break: break-word; /* 1 */
+    word-wrap: break-word;
     hyphens: auto;
 }
 
@@ -221,7 +223,7 @@ hr {
     border: 0;
     border-bottom: .0625rem solid @gray;
 
-    &.asterisks {
+    &.symbol {
         margin: 0;
         padding: @base-rem-unit 0;
         height: 1.333rem;
