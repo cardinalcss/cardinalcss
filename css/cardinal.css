@@ -426,13 +426,21 @@ ul {
  * 1. Customize `background` for text selections
  * 2. Remove `text-shadow` selection highlight - http://cbrac.co/Q6swON
  */
-::-moz-selection:window-inactive {
-  background: #dedede;
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
 }
 /**
  * 1. Customize `background` for text selections
  * 2. Remove `text-shadow` selection highlight - http://cbrac.co/Q6swON
  */
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+::-moz-selection:window-inactive {
+  background: #dedede;
+}
 ::selection:window-inactive {
   background: #dedede;
 }
