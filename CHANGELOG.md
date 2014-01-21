@@ -1,3 +1,7 @@
+# 2.0.2  (January 21, 2014)
+
+- Removed `word-break: break-all` from common typographical elements because it was causing weird wrapping issues in Firefox ([more info here](https://miketaylr.com/posts/2014/01/word-break-break-word.html))
+
 # 2.0.1  (January 17, 2014)
 
 - Changed hr.asterisks to `hr.symbol` for better semantics.

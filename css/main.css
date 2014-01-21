@@ -1,4 +1,4 @@
-/*! Cardinal v2.0.1 | MIT License | http://cardinalcss.com */
+/*! Cardinal v2.0.2 | MIT License | http://cardinalcss.com */
 /* ================================================================== *\
 
    Name: Cardinal
@@ -233,8 +233,7 @@ blockquote cite a {
 }
 
 /**
- * Add basic word wrapping and hyphenation to common elements
- * 1. Non-standard fallback for older WebKit
+ * Add word wrapping and hyphenation to common elements
  */
 
 caption,
@@ -243,9 +242,7 @@ table,
 textarea,
 td,
 th {
-    -ms-word-break: break-all;
-    word-break:     break-all;
-    word-break:     break-word; /* 1 */
+    word-wrap: break-word;
     -webkit-hyphens: auto;
     -moz-hyphens:    auto;
     -ms-hyphens:     auto;
