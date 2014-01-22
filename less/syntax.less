@@ -1,0 +1,64 @@
+/* ================================================================== *\
+   Syntax ($syntax)
+\* ================================================================== */
+
+/* Correct `font-family` set oddly in Safari 5 and Chrome */
+code,
+kbd,
+pre,
+samp {
+    color: @syntax-font-color;
+    font-size: @syntax-font-size;
+    font-family: @syntax-font-family;
+}
+
+code {
+    margin: 0;
+    padding: 0.064rem 0.317rem;
+    border: 1px solid @gray-light;
+    border-radius: 0.178rem;
+    background: @gray-lightest;
+    white-space: nowrap;
+}
+
+kbd {
+    position: relative;
+    top: -1px;
+    margin-bottom: 1px;
+    padding: 0.064rem 0.317rem;
+    border: 1pxrem solid @gray-light;
+    border-radius: 0.238rem;
+    background: @gray-lightest;
+    box-shadow:
+        0 1px 0 @gray-light,
+        inset 0 0 0 1px @white;
+    white-space: nowrap;
+}
+
+pre {
+    position: relative;
+    overflow: auto;
+    padding: @base-rem-unit;
+    background: @black;
+    box-shadow: inset 0 0 0.356rem hsla(0, 0%, 0%, 0.6);
+    color: @gray;
+    white-space: pre;
+    word-wrap: normal;
+    word-break: normal;
+    tab-size: 4;
+    hyphens: none;
+
+    /* Reset above <code> styles when nested inside <pre> tags */
+    code {
+        display: block;
+        overflow: auto;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        border: none;
+        border-radius: 0;
+        background: transparent;
+        color: inherit;
+        white-space: pre;
+    }
+}

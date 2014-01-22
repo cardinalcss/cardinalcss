@@ -1,0 +1,81 @@
+/* ================================================================== *\
+   Tables ($tables)
+\* ================================================================== */
+
+/* Default, borderless */
+table {
+    max-width: 100%;
+    width: 100%;
+    empty-cells: show;
+
+    caption {
+        padding-bottom: 0.317rem;
+        font-weight: 700;
+        font-style: italic;
+    }
+
+    th,
+    tfoot td {
+        color: @black;
+        text-align: left;
+        font-weight: @heading-font-weight;
+    }
+
+    thead th,
+    tfoot td  {
+        background-color: @gray-lighter;
+    }
+
+    th,
+    td {
+        overflow: visible;
+        padding: 0.633rem;
+        vertical-align: top;
+    }
+}
+
+/* Outer border only */
+.table-border {
+    border: 1px solid @gray-light;
+}
+
+/* Borders for inner table cells */
+.table-border-cells th,
+.table-border-cells td {
+    border-top: 1px solid @gray-light;
+    border-left: 1px solid @gray-light;
+}
+
+/* Border for rows only */
+.table-border-rows th,
+.table-border-rows td {
+    border-top: 1px solid @gray-light;
+}
+
+/* Remove top border to avoid double border on `.border` tables */
+.table-border.table-border-cells thead:first-child tr:first-child th,
+.table-border.table-border-cells thead:first-child tr:first-child td,
+.table-border.table-border-rows thead:first-child tr:first-child th,
+.table-border.table-border-rows thead:first-child tr:first-child td {
+    border-top: 0;
+}
+
+.table-border-cells tr th:first-child,
+.table-border-cells tr td:first-child {
+    border-left: 0;
+}
+
+.table-border-cells tr:first-child th,
+.table-border-cells thead:first-child tr:first-child th {
+    border-top: 0;
+}
+
+/* Add bottom border to last row in the table */
+.table-border-rows tr:last-child td {
+    border-bottom: 1px solid @gray-light;
+}
+
+/* Alternate background colors for table rows */
+.table-stripes tbody > tr:nth-child(odd) > td {
+    background-color: @gray-lightest;
+}

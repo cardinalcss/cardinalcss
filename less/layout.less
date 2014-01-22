@@ -1,0 +1,259 @@
+/* ================================================================== *\
+   Layout ($layout)
+\* ================================================================== */
+
+/**
+ * Areas ($areas)
+ */
+
+/* 100% width strip */
+.strip {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    list-style: none;
+
+    .wrapper {
+        padding: 1rem 0;
+
+        /* Remove bottom margin of the last element inside a strip wrapper */
+        > *:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    @media only screen and (min-width: @grid-breakpoint-medium) {
+        .wrapper {
+            padding: 2rem 0;
+        }
+    }
+}
+
+/* Page wrapper */
+.wrapper {
+    margin: 0 auto;
+    max-width: 64rem; /* 1024px */
+    width: 90%;
+}
+
+/* Island and wells */
+.island,
+.well {
+    margin: 0 0 @base-rem-unit;
+}
+
+.island {
+    padding: @base-rem-unit;
+    background: @gray-lighter;
+}
+
+.well {
+    padding: @base-rem-unit;
+    background: @gray-lighter;
+    box-shadow: inset 0 0 0.5rem hsla(0, 0%, 0%, 0.15);
+}
+
+.island .island,
+.well .well {
+    background: @gray-light;
+}
+
+/**
+ * Grids ($grids)
+ * Includes verbose and shorthand methods
+ * 1. Default gutter width, change if desired
+ * 2. Remove `list-style` in case `.grid` is on a <ul> element
+ * 3. Hack to remove `inline-block` whitespace - http://cbrac.co/16xcjcl
+ */
+
+.grid {
+    margin: 0;
+    margin-left: -@grid-gutter; /* 1 */
+    padding: 0;
+    list-style: none;           /* 2 */
+    font-size: 0;               /* 3 */
+}
+
+/* Grid gutters */
+.grid-gutter-none              { margin-left: 0;                   }
+.grid-gutter-none .grid-item   { padding-left: 0;                  }
+.grid-gutter-half              { margin-left: -(@grid-gutter / 2); }
+.grid-gutter-half .grid-item   { padding-left: (@grid-gutter / 2); }
+.grid-gutter-double            { margin-left: -(@grid-gutter * 2); }
+.grid-gutter-double .grid-item { padding-left: (@grid-gutter * 2); }
+
+/**
+ * Grid items
+ * 1. Default gutter width, change if desired
+ * 2. Ensures elements within `.grid-item` start at the top
+ * 3. Reset `font-size` back to normal
+ */
+
+.grid-item {
+    display: inline-block;
+    padding-left: @grid-gutter; /* 1 */
+    vertical-align: top;        /* 2 */
+    font-size: @base-font-size; /* 3 */
+}
+
+/* Widths */
+.grid-item,
+.one-whole     { width: 100%;    }
+.one-half      { width: 50%;     }
+.one-third     { width: 33.333%; }
+.two-thirds    { width: 66.666%; }
+.one-fourth    { width: 25%;     }
+.two-fourths   { width: 50%;     }
+.three-fourths { width: 75%;     }
+.one-fifth     { width: 20%;     }
+.two-fifths    { width: 40%;     }
+.three-fifths  { width: 60%;     }
+.four-fifths   { width: 80%;     }
+.one-sixth     { width: 16.666%; }
+.two-sixths    { width: 33.333%; }
+.three-sixths  { width: 50%;     }
+.four-sixths   { width: 66.666%; }
+.five-sixths   { width: 83.333%; }
+.width-auto    { width: auto;    }
+
+/* Medium-sized breakpoint */
+@media only screen and (min-width: @grid-breakpoint-medium) {
+    /* Grid gutters */
+    .medium-grid-gutter-none              { margin-left: 0;                   }
+    .medium-grid-gutter-none .grid-item   { padding-left: 0;                  }
+    .medium-grid-gutter-half              { margin-left: -(@grid-gutter / 2); }
+    .medium-grid-gutter-half .grid-item   { padding-left: (@grid-gutter / 2); }
+    .medium-grid-gutter-whole             { margin-left: -(@grid-gutter);     }
+    .medium-grid-gutter-whole .grid-item  { padding-left: (@grid-gutter);     }
+    .medium-grid-gutter-double            { margin-left: -(@grid-gutter * 2); }
+    .medium-grid-gutter-double .grid-item { padding-left: (@grid-gutter * 2); }
+
+    /* Widths */
+    .medium-one-whole      { width: 100%;    }
+    .medium-one-half       { width: 50%;     }
+    .medium-one-third      { width: 33.333%; }
+    .medium-two-thirds     { width: 66.666%; }
+    .medium-one-fourth     { width: 25%;     }
+    .medium-three-fourths  { width: 75%;     }
+    .medium-one-fifth      { width: 20%;     }
+    .medium-two-fifths     { width: 40%;     }
+    .medium-three-fifths   { width: 60%;     }
+    .medium-four-fifths    { width: 80%;     }
+    .medium-one-sixth      { width: 16.666%; }
+    .medium-two-sixths     { width: 33.333%; }
+    .medium-three-sixths   { width: 50%;     }
+    .medium-four-sixths    { width: 66.666%; }
+    .medium-five-sixths    { width: 83.333%; }
+    .medium-width-auto     { width: auto;    }
+}
+
+/* Large-sized breakpoint */
+@media only screen and (min-width: @grid-breakpoint-large) {
+    /* Grid gutters */
+    .large-grid-gutter-none              { margin-left: 0;                   }
+    .large-grid-gutter-none .grid-item   { padding-left: 0;                  }
+    .large-grid-gutter-half              { margin-left: -(@grid-gutter / 2); }
+    .large-grid-gutter-half .grid-item   { padding-left: (@grid-gutter / 2); }
+    .large-grid-gutter-whole             { margin-left: -(@grid-gutter);     }
+    .large-grid-gutter-whole .grid-item  { padding-left: (@grid-gutter);     }
+    .large-grid-gutter-double            { margin-left: -(@grid-gutter * 2); }
+    .large-grid-gutter-double .grid-item { padding-left: (@grid-gutter * 2); }
+
+    /* Widths */
+    .large-one-whole     { width: 100%;    }
+    .large-one-half      { width: 50%;     }
+    .large-one-third     { width: 33.333%; }
+    .large-two-thirds    { width: 66.666%; }
+    .large-one-fourth    { width: 25%;     }
+    .large-three-fourths { width: 75%;     }
+    .large-one-fifth     { width: 20%;     }
+    .large-two-fifths    { width: 40%;     }
+    .large-three-fifths  { width: 60%;     }
+    .large-four-fifths   { width: 80%;     }
+    .large-one-sixth     { width: 16.666%; }
+    .large-two-sixths    { width: 33.333%; }
+    .large-three-sixths  { width: 50%;     }
+    .large-four-sixths   { width: 66.666%; }
+    .large-five-sixths   { width: 83.333%; }
+    .large-width-auto    { width: auto;    }
+}
+
+/**
+ * Floats ($floats)
+ */
+
+.float-left   { float: left;  }
+.float-right  { float: right; }
+.float-none   { float: none;  }
+
+/* Medium-sized breakpoint */
+@media only screen and (min-width: @grid-breakpoint-medium) {
+    .medium-float-left   { float: left;  }
+    .medium-float-right  { float: right; }
+    .medium-float-none   { float: none;  }
+}
+
+/* Large-sized breakpoint */
+@media only screen and (min-width: @grid-breakpoint-large) {
+    .large-float-left   { float: left;  }
+    .large-float-right  { float: right; }
+    .large-float-none   { float: none;  }
+}
+
+/* Clear floats with an extra markup element - http://cbrac.co/SFv1Ua */
+.clear {
+    display: block;
+    visibility: hidden;
+    clear: both;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+}
+
+/* Clearfix to contain floats */
+.cf {
+    &:before,
+    &:after {
+        display: table; /* 1 */
+        content: " ";   /* 2 */
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+/**
+ * Show/hide ($show-hide)
+ */
+
+/**
+ * Hide only visually, but have it available for screenreaders -
+ * http://cbrac.co/TUcUgH
+ */
+
+.visuallyhidden {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -.0625rem;
+    padding: 0;
+    width: .0625rem;
+    height: .0625rem;
+    border: 0;
+
+    /**
+     * Extends the `.visuallyhidden` class to allow the element to be
+     * focusable when navigated to via the keyboard - http://cbrac.co/RR8gO6
+     */
+
+    &.focusable:active,
+    &.focusable:focus {
+        position: static;
+        overflow: visible;
+        clip: auto;
+        margin: 0;
+        width: auto;
+        height: auto;
+    }
+}

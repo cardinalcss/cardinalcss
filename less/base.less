@@ -1,0 +1,72 @@
+/* ================================================================== *\
+   Base ($base)
+\* ================================================================== */
+
+/* Viewport resizing */
+@viewport {
+    width: device-width;
+    zoom: 1.0;
+}
+
+/**
+ * Box model adjustments
+ * `border-box`... ALL THE THINGS - http://cbrac.co/RQrDL5
+ */
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+/* Add a margin to elements that typically need it */
+address,
+blockquote,
+dl,
+fieldset,
+figure,
+form,
+legend,
+menu,
+ol,
+p,
+pre,
+summary,
+table,
+ul {
+    margin: 0 0 @base-rem-unit;
+}
+
+/**
+ * 1. Customize `background` for text selections
+ * 2. Remove `text-shadow` selection highlight - http://cbrac.co/Q6swON
+ */
+
+::selection {
+    background: @selection-background-color; /* 1 */
+    text-shadow: none;                       /* 2 */
+
+    // Change `background` for text selections when browser is unfocused
+    &:window-inactive {
+        background: @gray-light;
+    }
+
+    // Remove `background` on images when selected
+    img& {
+        background: transparent;
+    }
+}
+
+/**
+ * 1. Force a vertical scrollbar - http://cbrac.co/163MspB
+ * NOTE: Use `text-rendering` with caution - http://cbrac.co/SJt8p1
+ * NOTE: Avoid the webkit anti-aliasing trap - http://cbrac.co/TAdhbH
+ * NOTE: IE for Windows Phone 8 ignores `-ms-text-size-adjust` if the
+ *       viewport <meta> tag is used - http://cbrac.co/1cFrAvl
+ */
+
+html {
+    overflow-y: scroll; /* 1 */
+    min-height: 100%;
+    font-size: 100%;
+}

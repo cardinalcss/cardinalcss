@@ -1,3 +1,12 @@
+# 2.1.0 (January 22, 2014)
+
+- Added LESS support (thanks [@brandonb927](https://github.com/brandonb927))! `master` now ships with a `/less` directory and a simple [Grunt](http://gruntjs.com/) build process.
+- Added an empty `img/` folder since I usually end up creating one anyways.
+- Updated the Table Of Contents heading to include example project information instead.
+- Removed `@media` query for extra padding on `<kbd>` elements.
+- Nested `caption` styles inside the `table` element.
+- Changed some `px` values to `rem` here and there.
+
 # 2.0.2  (January 21, 2014)
 
 - Removed `word-break: break-all` from common typographical elements because it was causing weird wrapping issues in Firefox ([more info here](https://miketaylr.com/posts/2014/01/word-break-break-word.html))
@@ -28,7 +37,6 @@
 - Added a `.flex-video` class.
 - Changed naming conventions to all hyphens (fuck BEM).
 - Added boilerplate `humans.txt` and `robots.txt` files to the root directory.
-- Added an empty `img/` folder since I usually end up creating one anyways.
 - Added some default HTML elements with appropriate ARIA roles to `index.html`.
 - Removed a bunch of `.button` classes and variations.
 - Decreased `.wrapper`’s maximum width to `1024px`.

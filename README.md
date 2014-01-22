@@ -1,4 +1,4 @@
-# Cardinal - 2.0.2
+# Cardinal - 2.1.0
 
 Cardinal is a small “[mobile first](http://cbrac.co/116bQqk)” CSS framework for front-end developers who build responsive web applications.
 
@@ -12,6 +12,8 @@ Cardinal is a small “[mobile first](http://cbrac.co/116bQqk)” CSS framework 
 This framework includes a minimal file structure and useful CSS styles to kickstart your next responsive web project.
 
 Cardinal focuses on performance, accessibility, and readability first. It’s a starting point that you will want to customize and build upon to suit your application or project.
+
+As of version 2.1.0, **Cardinal supports the LESS preprocessor** (thanks [@brandonb927](https://github.com/brandonb927)), and includes **a simple [Grunt](http://gruntjs.com/) build process** to compile and minify the CSS.
 
 ### Who should use this?
 
