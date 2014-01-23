@@ -1,3 +1,6 @@
+# 2.1.1 (January 22, 2014)
+- Fix duplicate LICENSE line in README
+
 # 2.1.0 (January 22, 2014)
 
 - Added LESS support (thanks [@brandonb927](https://github.com/brandonb927))! `master` now ships with a `/less` directory and a simple [Grunt](http://gruntjs.com/) build process.
