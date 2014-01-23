@@ -1,9 +1,9 @@
-/*! Cardinal v2.0.1 | MIT License | http://cardinalcss.com */
+/*! Cardinal v2.1.1 | MIT License | http://cardinalcss.com */
 /* ================================================================== *\
 
-   Name: Cardinal
-   Info: a small, "mobile first" CSS framework by Chris Bracco
-   Link: http://cardinalcss.com
+   Name: Your Project Name
+   Info: a short description of this project.
+   Link: http://yourdomain.com
 
    TABLE OF CONTENTS
    ---------------------------
@@ -40,10 +40,8 @@
 
    COLORS
    ---------------------------
-   Brand:           #c12026 (red)
-   Primary:         #1fa3ec (blue)
-   Secondary:       #e98724 (orange)
-   Text selections: #b3d4fc (blue)
+   Primary (blue):  #1fa3ec
+   Text selections: #b3d4fc
 
 \* ================================================================== */
 
@@ -78,7 +76,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,su
     box-sizing:         border-box;
 }
 
-/* Add a bottom margin to elements that typically need it */
+/* Add a margin to elements that typically need it */
 address,
 blockquote,
 dl,
@@ -199,7 +197,7 @@ acronym {
 
 blockquote {
     padding-left: 1rem;
-    border-left: 5px solid #efefef;
+    border-left: 0.375rem solid #efefef;
     font-style: italic;
     font-size: 1.333rem;
     font-family: Baskerville, "Baskerville Old Face", "Hoefler Text",
@@ -235,8 +233,7 @@ blockquote cite a {
 }
 
 /**
- * Add basic word wrapping and hyphenation to common elements
- * 1. Non-standard fallback for older WebKit
+ * Add word wrapping and hyphenation to common elements
  */
 
 caption,
@@ -245,9 +242,7 @@ table,
 textarea,
 td,
 th {
-    -ms-word-break: break-all;
-    word-break:     break-all;
-    word-break:     break-word; /* 1 */
+    word-wrap: break-word;
     -webkit-hyphens: auto;
     -moz-hyphens:    auto;
     -ms-hyphens:     auto;
@@ -267,7 +262,7 @@ th {
     width: auto;
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 0.125rem;
     font-size: 1.125rem;
     line-height: 1.125;
 }
@@ -516,7 +511,7 @@ sub {
 /* Page wrapper */
 .wrapper {
     margin: 0 auto;
-    max-width: 1024px;
+    max-width: 64rem; /* 1024px */
     width: 90%;
 }
 
@@ -534,9 +529,9 @@ sub {
 .well {
     padding: 1rem;
     background: #efefef;
-    -webkit-box-shadow: inset 0 0 8px hsla(0, 0%, 0%, 0.15);
-    -moz-box-shadow:    inset 0 0 8px hsla(0, 0%, 0%, 0.15);
-    box-shadow:         inset 0 0 8px hsla(0, 0%, 0%, 0.15);
+    -webkit-box-shadow: inset 0 0 0.5rem hsla(0, 0%, 0%, 0.15);
+    -moz-box-shadow:    inset 0 0 0.5rem hsla(0, 0%, 0%, 0.15);
+    box-shadow:         inset 0 0 0.5rem hsla(0, 0%, 0%, 0.15);
 }
 
 .island .island,
@@ -776,7 +771,7 @@ object {
 }
 
 figcaption {
-    margin-top: 0.563rem;
+    margin-top: 0.5rem;
     font-style: italic;
     font-size: 0.75rem;
 }
@@ -842,7 +837,7 @@ samp {
 }
 
 code {
-    margin: 0 0.064rem;
+    margin: 0;
     padding: 0.064rem 0.317rem;
     border: 1px solid #dedede;
     -webkit-border-radius: 0.178rem;
@@ -856,7 +851,7 @@ kbd {
     position: relative;
     top: -1px;
     margin-bottom: 1px;
-    padding: 0 0.317rem;
+    padding: 0.064rem 0.317rem;
     border: 1px solid #dedede;
     -webkit-border-radius: 0.238rem;
     -moz-border-radius:    0.238rem;
@@ -872,13 +867,6 @@ kbd {
         0 1px 0 #dedede,
         inset 0 0 0 1px #fff;
     white-space: nowrap;
-}
-
-/* Increase `padding` at larger viewport widths */
-@media only screen and (min-width: 480px) {
-    kbd {
-        padding: 0.1rem 0.317rem;
-    }
 }
 
 pre {
@@ -933,7 +921,7 @@ table {
     empty-cells: show;
 }
 
-caption {
+table caption {
     padding-bottom: 0.317rem;
     font-weight: 700;
     font-style: italic;
@@ -1029,7 +1017,7 @@ input[type="reset"],
 input[type="submit"],
 label,
 select {
-    cursor: pointer;       /* 2 */
+    cursor: pointer; /* 2 */
 }
 
 /**
@@ -1048,7 +1036,7 @@ fieldset > *:last-child {
     margin-bottom: 0;
 }
 
-@media screen and (min-width: 600px) {
+@media only screen and (min-width: 600px) {
     fieldset {
         font-size: 1.125rem;
     }
@@ -1068,15 +1056,8 @@ input[type="radio"] {
     width: auto;
 }
 
-input[type="checkbox"]:focus,
-input[type="image"]:focus,
-input[type="radio"]:focus {
-    outline: 1px dotted #222;
-}
-
 /**
  * Give inputs, selects, and textareas some basic styles
- * 1. Remove `word-break` in case fields are wrapped with <p> tags
  */
 
 input[type="date"],
@@ -1097,14 +1078,13 @@ textarea {
     display: block;
     padding: 0.563rem;
     width: 100%;
+    outline: 0 none;
+   *outline: thin dotted #222 \9; /* IE 6-8 */
     border: 1px solid #ccc;
     -webkit-border-radius: 0;
     -moz-border-radius:    0;
     border-radius:         0;
     vertical-align: middle;
-    -ms-word-break: normal; /* 1 */
-    word-break:     normal; /* 1 */
-    word-break:     normal; /* 1 */
     line-height: 1.5;
 }
 
@@ -1167,21 +1147,6 @@ legend {
 select {
     height: 44px;
     background: #f8f8f8;
-    -webkit-border-radius: 0;
-    -moz-border-radius:    0;
-    border-radius:         0;
-}
-
-select:focus {
-    outline: 1px dotted #222;
-}
-
-select:focus {
-    outline: 1px dotted #222;
-}
-
-select:focus {
-    outline: 1px dotted #222;
 }
 
 select:focus {
@@ -1212,26 +1177,25 @@ textarea {
    Buttons ($buttons)
 \* ================================================================== */
 
+/* ================================================================== *\
+   Buttons ($buttons)
+\* ================================================================== */
+
 /* States */
 .button {
     display: inline-block;
     margin: 0;
     padding: 0.633rem 0.875rem;
     border: 0 none;
-    -webkit-border-radius: 3px;
-    -moz-border-radius:    3px;
-    border-radius:         3px;
     background-color: #dedede;
     color: #444;
     vertical-align: middle;
     text-align: center;
     text-decoration: none;
     white-space: nowrap;
-    font-weight: 700;
     font-family: inherit;
     line-height: 1.5;
     cursor: pointer;
-    -webkit-font-smoothing: antialiased;
 }
 
 .button:hover {
@@ -1241,17 +1205,18 @@ textarea {
 .button:active,
 .button.active {
     background-color: #ccc;
-    -webkit-box-shadow: inset 0 0 6px hsla(0, 0%, 0%, 0.25);
-    -moz-box-shadow:    inset 0 0 6px hsla(0, 0%, 0%, 0.25);
-    box-shadow:         inset 0 0 6px hsla(0, 0%, 0%, 0.25);
+    -webkit-box-shadow: inset 0 0 0.317rem hsla(0, 0%, 0%, 0.25);
+    -moz-box-shadow:    inset 0 0 0.317rem hsla(0, 0%, 0%, 0.25);
+    box-shadow:         inset 0 0 0.317rem hsla(0, 0%, 0%, 0.25);
 }
 
 .button:active:focus {
     outline: 0 none;
 }
 
+/* Consistent button focus style across browsers */
 .button:focus {
-    outline: 1px dotted #222;
+    outline: thin dotted #222;
 }
 
 .button[disabled],
