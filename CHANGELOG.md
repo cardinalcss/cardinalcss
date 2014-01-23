@@ -1,4 +1,5 @@
 # 2.1.1 (January 22, 2014)
+
 - Fix duplicate LICENSE line in README
 
 # 2.1.0 (January 22, 2014)
