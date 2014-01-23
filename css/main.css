@@ -1177,22 +1177,22 @@ textarea {
    Buttons ($buttons)
 \* ================================================================== */
 
-/* ================================================================== *\
-   Buttons ($buttons)
-\* ================================================================== */
-
 /* States */
 .button {
     display: inline-block;
     margin: 0;
     padding: 0.633rem 0.875rem;
     border: 0 none;
+    -webkit-border-radius: 3px;
+    -moz-border-radius:    3px;
+    border-radius:         3px;
     background-color: #dedede;
     color: #444;
     vertical-align: middle;
     text-align: center;
     text-decoration: none;
     white-space: nowrap;
+    font-weight: 700;
     font-family: inherit;
     line-height: 1.5;
     cursor: pointer;
