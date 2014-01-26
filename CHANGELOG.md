@@ -1,3 +1,9 @@
+# 2.1.2 (January 25, 2014)
+- Fix buttons.less variable name for button-mini padding and font-size
+- Fix Github Gist not rendering
+- Change grunt build to output minified and unminified main.css instead of cardinal.css
+- Add grunt instructions to README
+
 # 2.1.1 (January 22, 2014)
 - Fix duplicate LICENSE line in README
 

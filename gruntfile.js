@@ -19,7 +19,7 @@ module.exports = function(grunt) {
         less: {
             compile: {
                 files: {
-                    "<%= cssDir %><%= pkg.name.toLowerCase() %>.css": "<%= lessDir %><%= pkg.name.toLowerCase() %>.less"
+                    "<%= cssDir %>main.css": "<%= lessDir %>cardinal.less"
                 }
             },
             minify: {
@@ -28,7 +28,7 @@ module.exports = function(grunt) {
                     report: 'min'
                 },
                 files: {
-                    "<%= cssDir %><%= pkg.name.toLowerCase() %>.min.css": "<%= cssDir %><%= pkg.name.toLowerCase() %>.css"
+                    "<%= cssDir %>main.min.css": "<%= cssDir %>main.css"
                 }
             }
         },
@@ -46,7 +46,7 @@ module.exports = function(grunt) {
                     'android 4.2'
                 ],
                 files: {
-                    "<%= cssDir %><%= pkg.name.toLowerCase() %>.css": "<%= cssDir %><%= pkg.name.toLowerCase() %>.css"
+                    "<%= cssDir %>main.css": "<%= cssDir %>main.css"
                 }
             }
         },

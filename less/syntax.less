@@ -35,7 +35,10 @@ kbd {
     white-space: nowrap;
 }
 
-pre {
+/**
+ * Fix Github Gist <pre> block not rendoring correctly
+ */
+pre:not(.line-pre) {
     position: relative;
     overflow: auto;
     padding: @base-rem-unit;
@@ -62,3 +65,21 @@ pre {
         white-space: pre;
     }
 }
+
+/**
+ * Fix Github Gist not rendoring correctly
+ * 1. Reset margin and width of table used to house code
+ * 2. Reset broken font-size from REM units
+ */
+.gist {
+    .gist-file {
+        .gist-data {
+            table {
+                margin: 0;       /* 1 */
+                width: auto;     /* 1 */
+                font-size: 13px; /* 2 */
+            }
+        }
+    }
+}
+
