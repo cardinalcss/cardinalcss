@@ -1592,7 +1592,6 @@ textarea {
 
 .page-content .wrapper {
     margin: 0;
-    max-width: 640px;
     width: 100%;
 }
 
@@ -1714,6 +1713,10 @@ textarea {
 }
 
 @media screen and (min-width: 768px) {
+    .page-content .wrapper {
+        max-width: 640px;
+    }
+
     .content-nav {
         display: none;
     }
