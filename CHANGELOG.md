@@ -1,3 +1,7 @@
+# 2.1.2 (January 30, 2014)
+
+- Fixed LESS button size referencing the wrong variable, because I’m a bonehead (thanks [@progsource](https://github.com/progsource)!).
+
 # 2.1.1 (January 22, 2014)
 
 - Fix duplicate LICENSE line in README
