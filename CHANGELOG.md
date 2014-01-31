@@ -2,6 +2,7 @@
 - Change grunt build to output minified and unminified main.css instead of cardinal.css
 - Add grunt instructions to README
 - Add Github Gist fix to README
+- Comprimise with grunt build ouput to dist/ and not css/ ??
 
 # 2.1.2 (January 30, 2014)
 
