@@ -78,6 +78,17 @@ Cardinal will be maintained using the [Semantic Versioning](http://semver.org/) 
 * New code that does not break backwards compatibility increments `minor`, while resetting `patch`.
 * Bug fixes and other small changes increment `patch`.
 
+## Developing with [Grunt](http://gruntjs.com/getting-started)
+
+When developing with Cardinal, you can use `grunt` to build the LESS files and output the minified and unminified `main.css` file in the CSS folder.
+
+If you have `node`installed already, then change directories to project root  install `grunt` and `npm`.
+
+	npm install grunt
+	npm install -g grunt-cli
+
+When you're in the root directory of the project, run the command `grunt` to compile the LESS files to output the project CSS.
+
 ## Contributing
 
 Is something broken? Do you have ideas or feature requests? Please [submit an issue](https://github.com/cbracco/Cardinal/issues/new) here on GitHub. Or, if you are feeling especially motivated, write some code and submit a pull request!
