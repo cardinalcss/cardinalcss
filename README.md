@@ -1,4 +1,4 @@
-# Cardinal - 2.1.2
+# Cardinal - 2.1.3
 
 Cardinal is a small “[mobile first](http://cbrac.co/116bQqk)” CSS framework for front-end developers who build responsive web applications.
 
@@ -47,6 +47,27 @@ I realize that for many web applications, IE8 and below cannot be ignored. By in
 
 A better option might be to include an IE-only stylesheet that serves a “fixed-layout” version of your application, instead of bothering with polyfills and other band-aid solutions.
 
+## Fix Github Gist rendering
+
+There is an issue with Github Gist that causes the rendering to be alittle wonky. This is caused by the use of REM values and including this snippet in your CSS will fix it:
+
+    /**
+     * Fix Github Gist not rendoring correctly
+     * 1. Reset margin and width of table used to house code
+     * 2. Reset broken font-size from REM units
+     */
+    .gist {
+        .gist-file {
+            .gist-data {
+                table {
+                    margin: 0;       /* 1 */
+                    width: auto;     /* 1 */
+                    font-size: 13px; /* 2 */
+                }
+            }
+        }
+    }
+
 ## Versioning
 
 Cardinal will be maintained using the [Semantic Versioning](http://semver.org/) guidelines. From here on out, releases will be numbered using the following format:
@@ -56,6 +77,17 @@ Cardinal will be maintained using the [Semantic Versioning](http://semver.org/) 
 * Breaking backwards compatibility increments `major`, while resetting `minor` and `patch`.
 * New code that does not break backwards compatibility increments `minor`, while resetting `patch`.
 * Bug fixes and other small changes increment `patch`.
+
+## Developing with [Grunt](http://gruntjs.com/getting-started)
+
+When developing with Cardinal, you can use `grunt` to build the LESS files and output the minified and unminified `main.css` file in the CSS folder.
+
+If you have `node`installed already, then change directories to project root  install `grunt` and `npm`.
+
+	npm install grunt
+	npm install -g grunt-cli
+
+When you're in the root directory of the project, run the command `grunt` to compile the LESS files to output the project CSS.
 
 ## Contributing
 

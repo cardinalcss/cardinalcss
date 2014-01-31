@@ -14,12 +14,13 @@ module.exports = function(grunt) {
         // Directory variables
         lessDir : 'less/',
         cssDir  : 'css/',
+        distDir : 'dist/',
 
         // Run LESS CSS compilation
         less: {
             compile: {
                 files: {
-                    "<%= cssDir %><%= pkg.name.toLowerCase() %>.css": "<%= lessDir %><%= pkg.name.toLowerCase() %>.less"
+                    "<%= distDir %><%= pkg.name.toLowerCase() %>.css": "<%= lessDir %><%= pkg.name.toLowerCase() %>.less"
                 }
             },
             minify: {
@@ -28,7 +29,7 @@ module.exports = function(grunt) {
                     report: 'min'
                 },
                 files: {
-                    "<%= cssDir %><%= pkg.name.toLowerCase() %>.min.css": "<%= cssDir %><%= pkg.name.toLowerCase() %>.css"
+                    "<%= distDir %><%= pkg.name.toLowerCase() %>.min.css": "<%= distDir %><%= pkg.name.toLowerCase() %>.css"
                 }
             }
         },
@@ -46,7 +47,7 @@ module.exports = function(grunt) {
                     'android 4.2'
                 ],
                 files: {
-                    "<%= cssDir %><%= pkg.name.toLowerCase() %>.css": "<%= cssDir %><%= pkg.name.toLowerCase() %>.css"
+                    "<%= distDir %><%= pkg.name.toLowerCase() %>.css": "<%= distDir %><%= pkg.name.toLowerCase() %>.css"
                 }
             }
         },
@@ -57,8 +58,8 @@ module.exports = function(grunt) {
                 position: 'top',
                 banner: '<%= banner %>'
             },
-            src: '<%= cssDir %>**/*.css',
-            dest: '<%= cssDir %>'
+            src: '<%= distDir %>**/*.css',
+            dest: '<%= distDir %>'
         },
 
         // Watch for changes on these files and recompile when changed
