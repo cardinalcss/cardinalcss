@@ -47,6 +47,27 @@ I realize that for many web applications, IE8 and below cannot be ignored. By in
 
 A better option might be to include an IE-only stylesheet that serves a “fixed-layout” version of your application, instead of bothering with polyfills and other band-aid solutions.
 
+## Fix Github Gist rendering
+
+There is an issue with Github Gist that causes the rendering to be alittle wonky. This is caused by the use of REM values and including this snippet in your CSS will fix it:
+
+    /**
+     * Fix Github Gist not rendoring correctly
+     * 1. Reset margin and width of table used to house code
+     * 2. Reset broken font-size from REM units
+     */
+    .gist {
+        .gist-file {
+            .gist-data {
+                table {
+                    margin: 0;       /* 1 */
+                    width: auto;     /* 1 */
+                    font-size: 13px; /* 2 */
+                }
+            }
+        }
+    }
+
 ## Versioning
 
 Cardinal will be maintained using the [Semantic Versioning](http://semver.org/) guidelines. From here on out, releases will be numbered using the following format:
