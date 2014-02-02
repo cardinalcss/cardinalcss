@@ -1,3 +1,7 @@
+# 2.1.3 (February 2, 2014)
+
+- Changed IE conditional classes to use hyphens instead of underscores.
+
 # 2.1.2 (January 30, 2014)
 
 - Fixed LESS button size referencing the wrong variable, because I’m a bonehead (thanks [@progsource](https://github.com/progsource)!).
