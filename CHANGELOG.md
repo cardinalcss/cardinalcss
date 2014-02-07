@@ -1,3 +1,7 @@
+# 2.1.4 (February 7, 2014)
+
+- Added a `bower.json` file so Cardinal can be added to the bower registry (thanks [@progsource](https://github.com/progsource)!).
+
 # 2.1.3 (February 2, 2014)
 
 - Changed IE conditional classes to use hyphens instead of underscores.
