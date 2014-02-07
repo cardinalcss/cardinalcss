@@ -1,3 +1,7 @@
+# 2.2.4 (February 7, 2014)
+
+- Updated normalize.css to 3.0.0.
+
 # 2.1.4 (February 7, 2014)
 
 - Added a `bower.json` file so Cardinal can be added to the bower registry (thanks [@progsource](https://github.com/progsource)!).
