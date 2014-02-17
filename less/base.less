@@ -3,10 +3,11 @@
 \* ================================================================== */
 
 /* Viewport resizing */
-@viewport {
-    width: device-width;
-    zoom: 1.0;
-}
+@-webkit-viewport { width: device-width; zoom: 1.0; }
+@-moz-viewport    { width: device-width; zoom: 1.0; }
+@-ms-viewport     { width: device-width; zoom: 1.0; }
+@-o-viewport      { width: device-width; zoom: 1.0; }
+@viewport         { width: device-width; zoom: 1.0; }
 
 /**
  * Box model adjustments
@@ -16,7 +17,7 @@
 *,
 *:before,
 *:after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* Add a margin to elements that typically need it */
@@ -34,7 +35,7 @@ pre,
 summary,
 table,
 ul {
-    margin: 0 0 @base-rem-unit;
+  margin: 0 0 @base-rem-unit;
 }
 
 /**
@@ -43,18 +44,18 @@ ul {
  */
 
 ::selection {
-    background: @selection-background-color; /* 1 */
-    text-shadow: none;                       /* 2 */
+  background: @selection-background-color; /* 1 */
+  text-shadow: none;                       /* 2 */
 
-    // Change `background` for text selections when browser is unfocused
-    &:window-inactive {
-        background: @gray-light;
-    }
+  // Change `background` for text selections when browser is unfocused
+  &:window-inactive {
+    background: @gray-light;
+  }
 
-    // Remove `background` on images when selected
-    img& {
-        background: transparent;
-    }
+  // Remove `background` on images when selected
+  img& {
+    background: transparent;
+  }
 }
 
 /**
@@ -62,11 +63,11 @@ ul {
  * NOTE: Use `text-rendering` with caution - http://cbrac.co/SJt8p1
  * NOTE: Avoid the webkit anti-aliasing trap - http://cbrac.co/TAdhbH
  * NOTE: IE for Windows Phone 8 ignores `-ms-text-size-adjust` if the
- *       viewport <meta> tag is used - http://cbrac.co/1cFrAvl
+*       viewport <meta> tag is used - http://cbrac.co/1cFrAvl
  */
 
 html {
-    overflow-y: scroll; /* 1 */
-    min-height: 100%;
-    font-size: 100%;
+  overflow-y: scroll; /* 1 */
+  min-height: 100%;
+  font-size: 100%;
 }
