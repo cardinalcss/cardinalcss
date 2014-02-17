@@ -1,87 +1,112 @@
 module.exports = function(grunt) {
-    'use strict'
+  'use strict'
 
-    var path = require('path')
+  var path = require('path')
 
-    // Force use of Unix newlines
-    grunt.util.linefeed = '\n'
+  // Force use of Unix newlines
+  grunt.util.linefeed = '\n'
 
-    grunt.initConfig({
-        pkg : grunt.file.readJSON('package.json'),
+  grunt.initConfig({
+    pkg: grunt.file.readJSON('package.json'),
 
-        banner: '/*! <%= pkg.name %> v<%= pkg.version %> | <%= _.pluck(pkg.licenses, "type") %> License | <%= pkg.homepage %> */',
+    packageName: '<%= pkg.name.toLowerCase() %>',
+    banner     : '/*! <%= pkg.name %> v<%= pkg.version %> | <%= _.pluck(pkg.licenses, "type") %> License | <%= pkg.homepage %> */',
 
-        // Directory variables
-        lessDir : 'less/',
-        cssDir  : 'css/',
+    // Directory variables
+    distDir    : 'dist/',
+    cssDir     : 'css/',
+    lessDir    : 'less/',
+    jsDir      : 'js/',
 
-        // Run LESS CSS compilation
-        less: {
-            compile: {
-                files: {
-                    "<%= cssDir %><%= pkg.name.toLowerCase() %>.css": "<%= lessDir %><%= pkg.name.toLowerCase() %>.less"
-                }
-            },
-            minify: {
-                options: {
-                    cleancss: true,
-                    report: 'min'
-                },
-                files: {
-                    "<%= cssDir %><%= pkg.name.toLowerCase() %>.min.css": "<%= cssDir %><%= pkg.name.toLowerCase() %>.css"
-                }
-            }
-        },
-
-        // Automatically prefix CSS based on Can I Use database for the following browsers versions
-        autoprefixer: {
-            development: {
-                browsers: [
-                    'chrome 25',
-                    'firefox 19',
-                    'safari 6',
-                    'ie 9',
-                    'opera 12.1',
-                    'ios 4',
-                    'android 4.2'
-                ],
-                files: {
-                    "<%= cssDir %><%= pkg.name.toLowerCase() %>.css": "<%= cssDir %><%= pkg.name.toLowerCase() %>.css"
-                }
-            }
-        },
-
-        // Add a nice banner to the CSS files
-        usebanner: {
-            options: {
-                position: 'top',
-                banner: '<%= banner %>'
-            },
-            src: '<%= cssDir %>**/*.css',
-            dest: '<%= cssDir %>'
-        },
-
-        // Watch for changes on these files and recompile when changed
-        watch: {
-            less: {
-                files: ['<%= lessDir %>**/*.less'],
-                tasks: ['less', 'autoprefixer', 'usebanner']
-            }
+    // Run LESS CSS compilation
+    less: {
+      compile: {
+        files: {
+          "<%= distDir %><%= cssDir %><%= packageName %>.css": "<%= lessDir %><%= packageName %>.less"
         }
-    })
+      },
+      minify: {
+        options: {
+          cleancss: true,
+          report: 'min'
+        },
+        files: {
+          "<%= distDir %><%= cssDir %><%= packageName %>.min.css": "<%= distDir %><%= cssDir %><%= packageName %>.css"
+        }
+      }
+    },
 
-    // Grunt plugins
-    grunt.loadNpmTasks('grunt-autoprefixer')
-    grunt.loadNpmTasks('grunt-banner')
-    grunt.loadNpmTasks('grunt-contrib-less')
-    grunt.loadNpmTasks('grunt-contrib-watch')
+    // Automatically prefix CSS based on Can I Use database for the following browsers versions
+    autoprefixer: {
+      development: {
+        browsers: [
+          'chrome 25',
+          'firefox 19',
+          'safari 6',
+          'ie 9',
+          'opera 12.1',
+          'ios 4',
+          'android 4.2'
+        ],
+        files: {
+          "<%= distDir %><%= cssDir %><%= packageName %>.css": "<%= distDir %><%= cssDir %><%= packageName %>.css"
+        }
+      }
+    },
 
-    // Registered Grunt tasks
-    grunt.registerTask('default', [
-        'less:compile',
-        'autoprefixer',
-        'less:minify',
-        'usebanner',
-        'watch'
-    ])
+    copy: {
+      dist: {
+        files: [
+          {
+            expand: true,
+            // flatten: true,
+            src: ['<%= jsDir %>**/*.js'],
+            dest: '<%= distDir %>'
+          }
+        ]
+      }
+    },
+
+    // Add a nice banner to the CSS files
+    usebanner: {
+      options: {
+        position: 'top',
+        banner: '<%= banner %>'
+      },
+      src: '<%= distDir %><%= cssDir %>**/*.css',
+      dest: '<%= distDir %>'
+    },
+
+    // Watch for changes on these files and recompile when changed
+    watch: {
+      less: {
+        files: ['<%= lessDir %>**/*.less'],
+        tasks: ['less', 'autoprefixer', 'usebanner']
+      }
+    }
+  })
+
+  // Grunt plugins
+  grunt.loadNpmTasks('grunt-autoprefixer')
+  grunt.loadNpmTasks('grunt-banner')
+  grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-less')
+  grunt.loadNpmTasks('grunt-contrib-watch')
+
+  // Registered Grunt tasks
+  grunt.registerTask('default', [
+    'less:compile',
+    'autoprefixer',
+    'less:minify',
+    'usebanner',
+    'watch'
+  ])
+
+  grunt.registerTask('dist', [
+    'less:compile',
+    'autoprefixer',
+    'less:minify',
+    'usebanner',
+    'copy:dist'
+  ])
 }

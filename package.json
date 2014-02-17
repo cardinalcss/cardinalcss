@@ -1,7 +1,7 @@
 {
-  "name": "Cardinal",
-  "description": "a small, \"mobile first\" CSS framework by Chris Bracco",
-  "version": "2.2.4",
+  "name": "cardinal",
+  "description": "A small, \"mobile first\" CSS framework by Chris Bracco",
+  "version": "2.2.5",
   "homepage": "http://cardinalcss.com",
   "author": "Chris Bracco",
   "repository": {
@@ -22,6 +22,7 @@
     "grunt": "~0.4.2",
     "grunt-autoprefixer": "~0.6.4",
     "grunt-banner": "~0.2.0",
+    "grunt-contrib-copy": "~0.5.0",
     "grunt-contrib-less": "~0.8.3",
     "grunt-contrib-watch": "~0.5.3"
   }
