@@ -47,6 +47,10 @@ I realize that for many web applications, IE8 and below cannot be ignored. By in
 
 A better option might be to include an IE-only stylesheet that serves a “fixed-layout” version of your application, instead of bothering with polyfills and other band-aid solutions.
 
+## Grunt build support
+
+Cardinal uses Grunt to build the LESS into minified and unminified CSS. When modifying the LESS files, run `grunt` to build and outmup nonminified CSS to the `dist/` folder. Run `grunt dist` to build and output the final minified CSS to the `dist/` folder in the project.
+
 ## Versioning
 
 Cardinal will be maintained using the [Semantic Versioning](http://semver.org/) guidelines. From here on out, releases will be numbered using the following format:

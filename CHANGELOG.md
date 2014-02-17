@@ -1,3 +1,10 @@
+# 2.3.0 (February 17, 2014)
+
+- Fix `border-radius` issue in buttons.less
+- Fix `@viewport` issue in base.less
+- Fix gruntfile to output `js` and and `less` to `dist/js` and `dist/js` respectively for easier integration into other projects
+- Remove blank `img` folder
+
 # 2.2.4 (February 7, 2014)
 
 - Updated normalize.css to 3.0.0.
