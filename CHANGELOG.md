@@ -1,8 +1,9 @@
-# 2.3.0 (February 18, 2014)
+# 2.3.0 (February 21, 2014)
 
 - Fix `border-radius` issue in buttons.less
 - Fix `@viewport` issue in base.less
 - Fix gruntfile to output `js` and and `less` to `dist/js` and `dist/js` respectively for easier integration into other projects
+- Fix Autoprefixr issue when compiling for Firefox
 - Remove blank `img` folder
 
 # 2.2.5 (February 18, 2014)

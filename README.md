@@ -1,4 +1,4 @@
-# Cardinal - 2.2.5
+# Cardinal - 2.3.0
 
 Cardinal is a small “[mobile first](http://cbrac.co/116bQqk)” CSS framework for front-end developers who build responsive web applications.
 
@@ -49,7 +49,13 @@ A better option might be to include an IE-only stylesheet that serves a “fixed
 
 ## Grunt build support
 
-Cardinal uses Grunt to build the LESS into minified and unminified CSS. When modifying the LESS files, run `grunt` to build and outmup nonminified CSS to the `dist/` folder. Run `grunt dist` to build and output the final minified CSS to the `dist/` folder in the project.
+Cardinal uses Grunt to build the LESS into minified and unminified CSS. If you want to modify the LESS files and re-run the build, ensure that you have `node` installed, then install `grunt` and the project dependencies.
+
+    npm install && npm install -g grunt-cli
+
+When modifying the LESS files, run the command `grunt` to build and output non-minified CSS with proper vender-prefixes to the `dist/` folder and listen for more changes when you save a LESS file in the project folder.
+
+Run `grunt dist` to build and output the final minified and prefixed CSS to the `dist/` folder in the project.
 
 ## Versioning
 
