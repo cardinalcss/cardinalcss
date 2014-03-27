@@ -1,3 +1,7 @@
+# 2.2.6 (March 27, 2014)
+
+- Updated normalize.css to 3.0.1.
+
 # 2.2.5 (February 18, 2014)
 
 - Changed headings to inherit the font stack from the body since it is identical (thanks @louisremi!).
