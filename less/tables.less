@@ -36,43 +36,51 @@ table {
 
 /* Outer border only */
 .table-border {
-    border: 1px solid @gray-light;
-}
+    .light-border;
 
-/* Borders for inner table cells */
-.table-border-cells th,
-.table-border-cells td {
-    border-top: 1px solid @gray-light;
-    border-left: 1px solid @gray-light;
-}
+    &-cells{
+        th, td {
+            /* Borders for inner table cells */
+            border-top: 1px solid @gray-light;
+            border-left: 1px solid @gray-light;
+        }
 
-/* Border for rows only */
-.table-border-rows th,
-.table-border-rows td {
-    border-top: 1px solid @gray-light;
-}
 
-/* Remove top border to avoid double border on `.border` tables */
-.table-border.table-border-cells thead:first-child tr:first-child th,
-.table-border.table-border-cells thead:first-child tr:first-child td,
-.table-border.table-border-rows thead:first-child tr:first-child th,
-.table-border.table-border-rows thead:first-child tr:first-child td {
-    border-top: 0;
-}
+        tr {
+            th:first-child, td:first-child{
+                /* Remove top border to avoid double border on `.border` tables */
+                border-left: 0;
+            }
+        }
+        thead:first-child{
+            tr:first-child {
+                th, td {
+                    /* Remove top border to avoid double border on `.border` tables */
+                    border-top:0;
+                }
+            }
+        }
+    }
 
-.table-border-cells tr th:first-child,
-.table-border-cells tr td:first-child {
-    border-left: 0;
-}
+    /* Border for rows only */
+    &-rows {
+        th, td{
+            border-top: 1px solid @gray-light;
+        }
 
-.table-border-cells tr:first-child th,
-.table-border-cells thead:first-child tr:first-child th {
-    border-top: 0;
-}
+        thead:first-child{
+            tr:first-child {
+                th, td {
 
-/* Add bottom border to last row in the table */
-.table-border-rows tr:last-child td {
-    border-bottom: 1px solid @gray-light;
+                    border-top:0; /* Remove top border to avoid double border on `.border` tables */
+                }
+            }
+        }
+
+        tr:last-child td {
+            border-bottom: 1px solid @gray-light; /* Add bottom border to last row in the table */
+        }
+    }
 }
 
 /* Alternate background colors for table rows */
