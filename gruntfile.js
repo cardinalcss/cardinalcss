@@ -1,10 +1,10 @@
 module.exports = function(grunt) {
-    'use strict'
+    'use strict';
 
-    var path = require('path')
+    var path = require('path');
 
     // Force use of Unix newlines
-    grunt.util.linefeed = '\n'
+    grunt.util.linefeed = '\n';
 
     grunt.initConfig({
         pkg : grunt.file.readJSON('package.json'),
@@ -65,23 +65,22 @@ module.exports = function(grunt) {
         watch: {
             less: {
                 files: ['<%= lessDir %>**/*.less'],
-                tasks: ['less', 'autoprefixer', 'usebanner']
+                tasks: ['default']
             }
         }
-    })
+    });
 
     // Grunt plugins
-    grunt.loadNpmTasks('grunt-autoprefixer')
-    grunt.loadNpmTasks('grunt-banner')
-    grunt.loadNpmTasks('grunt-contrib-less')
-    grunt.loadNpmTasks('grunt-contrib-watch')
+    grunt.loadNpmTasks('grunt-autoprefixer');
+    grunt.loadNpmTasks('grunt-banner');
+    grunt.loadNpmTasks('grunt-contrib-less');
+    grunt.loadNpmTasks('grunt-contrib-watch');
 
     // Registered Grunt tasks
     grunt.registerTask('default', [
         'less:compile',
         'autoprefixer',
         'less:minify',
-        'usebanner',
-        'watch'
-    ])
-}
+        'usebanner'
+    ]);
+};
