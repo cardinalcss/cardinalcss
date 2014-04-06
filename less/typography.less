@@ -13,7 +13,7 @@
 
 body {
     color: @base-font-color;
-    font-size: @base-font-size;     /* 1 */
+    font-size: @base-font-size; /* 1 */
     font-family: @base-font-family;
     line-height: @base-line-height; /* 2 */
 }
@@ -215,19 +215,19 @@ h6, .h6 { font-size: @base-font-size; }
 
 hr {
     margin: @base-rem-unit 0;
-    border: 0;
+    .no-border;
     border-bottom: 1px solid @gray;
 
     &.symbol {
         margin: 0 0 @base-rem-unit;
         padding: @base-rem-unit 0;
         height: 1.333rem;
-        border: 0;
+        .no-border;
 
         &:before {
             display: block;
             width: 100%;
-            border: 0;
+            .no-border;
             color: @black;
             content: "⁂";
             text-align: center;
@@ -245,24 +245,36 @@ mark {
     text-decoration: none;
 }
 
-nav ul,
-nav ol {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+nav {
+    ul, ol {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
 }
 
 /* Nested `list-style` types for ordered lists */
-ol          { list-style: decimal;     }
-ol ol       { list-style: upper-alpha; }
-ol ol ol    { list-style: lower-roman; }
-ol ol ol ol { list-style: lower-alpha; }
+ol {
+    list-style: decimal;
+    ol {
+        list-style: upper-alpha;
+        margin-bottom: 0;
+        ol {
+            list-style: lower-roman;
+            ol {
+                list-style: lower-alpha;
+            }
+        }
+    }
+    ul {
+        margin-bottom: 0;
+    }
+}
 
-ol ol,
-ol ul,
-ul ul,
-ul ol {
-    margin-bottom: 0;
+ul {
+    ul, ol {
+        margin-bottom: 0;
+    }
 }
 
 .run-in {
@@ -309,23 +321,23 @@ sub {
  * Text alignment ($text-alignment)
  */
 
-.text-left    { text-align: left;    }
-.text-right   { text-align: right;   }
-.text-center  { text-align: center;  }
-.text-justify { text-align: justify; }
+.text-left      {text-align: left;}
+.text-right     {text-align: right;}
+.text-center    {text-align: center;}
+.text-justify   {text-align: justify;}
 
 /* Medium-sized breakpoint */
 @media only screen and (min-width: @grid-breakpoint-medium) {
-    .medium-text-left    { text-align: left;    }
-    .medium-text-right   { text-align: right;   }
-    .medium-text-center  { text-align: center;  }
-    .medium-text-justify { text-align: justify; }
+    .medium-text-left:extend(.text-left) {}
+    .medium-text-right:extend(.text-right) {}
+    .medium-text-center:extend(.text-center) {}
+    .medium-text-justify:extend(.text-justify) {}
 }
 
 /* Large-sized breakpoint */
 @media only screen and (min-width: @grid-breakpoint-large) {
-    .large-text-left    { text-align: left;    }
-    .large-text-right   { text-align: right;   }
-    .large-text-center  { text-align: center;  }
-    .large-text-justify { text-align: justify; }
+    .large-text-left:extend(.text-left) {}
+    .large-text-right:extend(.text-right) {}
+    .large-text-center:extend(.text-center) {}
+    .large-text-justify:extend(.text-justify) {}
 }

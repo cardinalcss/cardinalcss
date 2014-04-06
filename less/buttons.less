@@ -2,14 +2,13 @@
    Buttons ($buttons)
 \* ================================================================== */
 
-/* States */
 .button {
     display: inline-block;
     margin: 0;
     padding: @button-default-padding;
-    border: 0 none;
+    .no-border;
     background-color: @gray-light;
-    color: #444;
+    color: @gray-darkest;
     vertical-align: middle;
     text-align: center;
     text-decoration: none;
@@ -18,8 +17,9 @@
     line-height: @button-default-line-height;
     cursor: pointer;
 
+    /* States */
     &:hover {
-        background-color: #e5e5e5;
+        background-color: @gray-light;
     }
 
     &:active,
@@ -45,42 +45,41 @@
         cursor: not-allowed;
         pointer-events: none;
     }
-}
 
-
-/* Sizes */
-.button-mini {
-    padding: @button-mini-padding;
-    font-size: @button-mini-font-size;
-}
-
-.button-small {
-    padding: @button-small-padding;
-    font-size: @button-small-font-size;
-}
-
-.button-large,
-.button-block {
-    padding: @button-large-padding;
-    font-size: @button-large-font-size;
-    line-height: @button-large-line-height;
-}
-
-.button-block {
-    display: block;
-}
-
-/* Colors */
-.button-primary {
-    background-color: @button-primary-background;
-    color: @white;
-
-    &:hover {
-        background-color: @button-primary-hover-background;
+    /* Sizes */
+    &-mini {
+        padding: @button-mini-padding;
+        font-size: @button-mini-font-size;
     }
 
-    &:active,
-    &.active {
-        background-color: @button-primary-active-background;
+    &-small {
+        padding: @button-small-padding;
+        font-size: @button-small-font-size;
+    }
+
+    &-large,
+    &-block {
+        padding: @button-large-padding;
+        font-size: @button-large-font-size;
+        line-height: @button-large-line-height;
+    }
+
+    &-block {
+        display: block;
+    }
+
+    /* Colors */
+    &-primary {
+        background-color: @button-primary-background;
+        color: @white;
+
+        &:hover {
+            background-color: @button-primary-hover-background;
+        }
+
+        &:active,
+        &.active {
+            background-color: @button-primary-active-background;
+        }
     }
 }

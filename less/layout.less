@@ -39,23 +39,15 @@
 /* Island and wells */
 .island,
 .well {
+    padding: @base-rem-unit;
+    background: @gray-lighter;
     margin: 0 0 @base-rem-unit;
+    .island, .well {
+        background: @gray-light;
+    }
 }
-
-.island {
-    padding: @base-rem-unit;
-    background: @gray-lighter;
-}
-
 .well {
-    padding: @base-rem-unit;
-    background: @gray-lighter;
     box-shadow: inset 0 0 0.5rem hsla(0, 0%, 0%, 0.15);
-}
-
-.island .island,
-.well .well {
-    background: @gray-light;
 }
 
 /**
@@ -99,21 +91,27 @@
 /* Widths */
 .grid-item,
 .one-whole     { width: 100%;    }
+
 .one-half      { width: 50%;     }
+
 .one-third     { width: 33.333%; }
 .two-thirds    { width: 66.666%; }
+
 .one-fourth    { width: 25%;     }
 .two-fourths   { width: 50%;     }
 .three-fourths { width: 75%;     }
+
 .one-fifth     { width: 20%;     }
 .two-fifths    { width: 40%;     }
 .three-fifths  { width: 60%;     }
 .four-fifths   { width: 80%;     }
+
 .one-sixth     { width: 16.666%; }
 .two-sixths    { width: 33.333%; }
 .three-sixths  { width: 50%;     }
 .four-sixths   { width: 66.666%; }
 .five-sixths   { width: 83.333%; }
+
 .width-auto    { width: auto;    }
 
 /* Medium-sized breakpoint */
@@ -188,16 +186,16 @@
 
 /* Medium-sized breakpoint */
 @media only screen and (min-width: @grid-breakpoint-medium) {
-    .medium-float-left   { float: left;  }
-    .medium-float-right  { float: right; }
-    .medium-float-none   { float: none;  }
+    .medium-float-left:extend(.float-left) {};
+    .medium-float-right:extend(.float-right) {};
+    .medium-float-none:extend(.float-none) {};
 }
 
 /* Large-sized breakpoint */
 @media only screen and (min-width: @grid-breakpoint-large) {
-    .large-float-left   { float: left;  }
-    .large-float-right  { float: right; }
-    .large-float-none   { float: none;  }
+    .large-float-left:extend(.float-left) {};
+    .large-float-right:extend(.float-right) {};
+    .large-float-none:extend(.float-none) {};
 }
 
 /* Clear floats with an extra markup element - http://cbrac.co/SFv1Ua */
@@ -240,7 +238,7 @@
     padding: 0;
     width: .0625rem;
     height: .0625rem;
-    border: 0;
+    .no-border;
 
     /**
      * Extends the `.visuallyhidden` class to allow the element to be

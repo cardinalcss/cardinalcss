@@ -30,7 +30,7 @@ select {
 fieldset {
     padding: 0;   /* 1 */
     min-width: 0; /* 2 */
-    border: 0;    /* 1 */
+    .no-border;    /* 1 */
 
     /* Remove `margin-bottom` from the last element in a <fieldset> */
     > *:last-child {
@@ -47,7 +47,7 @@ fieldset {
 /* Add this class for a bordered <fieldset> */
 .fieldset-border {
     padding: @base-rem-unit;
-    border: 1px solid @gray-light;
+    .light-border;
 }
 
 /* Make checkbox, image, and radio inputs `inline-block` by default */
@@ -114,7 +114,7 @@ input[type="search"] {
 
 legend {
     padding: 0; /* 1 */
-    border: 0;  /* 2 */
+    .no-border;  /* 2 */
     color: @black;
     font-weight: @heading-font-weight;
 }
