@@ -1,25 +1,27 @@
 module.exports = function(grunt) {
-    'use strict'
+    'use strict';
 
-    var path = require('path')
+    var path = require('path');
 
     // Force use of Unix newlines
-    grunt.util.linefeed = '\n'
+    grunt.util.linefeed = '\n';
 
     grunt.initConfig({
-        pkg : grunt.file.readJSON('package.json'),
-
-        banner: '/*! <%= pkg.name %> v<%= pkg.version %> | <%= _.pluck(pkg.licenses, "type") %> License | <%= pkg.homepage %> */',
+        pkg: grunt.file.readJSON('package.json'),
+        pkgName: '<%= pkg.name.toLowerCase() %>',
+        banner: '/*! <%= pkgName %> v<%= pkg.version %> | <%= _.pluck(pkg.licenses, "type") %> License | <%= pkg.homepage %> */',
 
         // Directory variables
-        lessDir : 'less/',
-        cssDir  : 'css/',
+        cssDir: 'css/',
+        distDir: 'dist/',
+        jsDir: 'js/',
+        lessDir: 'less/',
 
         // Run LESS CSS compilation
         less: {
             compile: {
                 files: {
-                    "<%= cssDir %><%= pkg.name.toLowerCase() %>.css": "<%= lessDir %><%= pkg.name.toLowerCase() %>.less"
+                    '<%= distDir %><%= cssDir %><%= pkgName %>.css': '<%= lessDir %><%= pkgName %>.less'
                 }
             },
             minify: {
@@ -28,7 +30,7 @@ module.exports = function(grunt) {
                     report: 'min'
                 },
                 files: {
-                    "<%= cssDir %><%= pkg.name.toLowerCase() %>.min.css": "<%= cssDir %><%= pkg.name.toLowerCase() %>.css"
+                    '<%= distDir %><%= cssDir %><%= pkgName %>.min.css': '<%= distDir %><%= cssDir %><%= pkgName %>.css'
                 }
             }
         },
@@ -46,8 +48,20 @@ module.exports = function(grunt) {
                     'android 4.2'
                 ],
                 files: {
-                    "<%= cssDir %><%= pkg.name.toLowerCase() %>.css": "<%= cssDir %><%= pkg.name.toLowerCase() %>.css"
+                    '<%= distDir %><%= cssDir %><%= pkgName %>.css': '<%= distDir %><%= cssDir %><%= pkgName %>.css'
                 }
+            }
+        },
+
+        copy: {
+            dist: {
+                files: [
+                    {
+                        expand: true,
+                        src: ['<%= jsDir %>**/*.js'],
+                        dest: '<%= distDir %>'
+                    }
+                ]
             }
         },
 
@@ -57,24 +71,25 @@ module.exports = function(grunt) {
                 position: 'top',
                 banner: '<%= banner %>'
             },
-            src: '<%= cssDir %>**/*.css',
-            dest: '<%= cssDir %>'
+            src: '<%= distDir %><%= cssDir %>**/*.css',
+            dest: '<%= distDir %>'
         },
 
         // Watch for changes on these files and recompile when changed
         watch: {
             less: {
                 files: ['<%= lessDir %>**/*.less'],
-                tasks: ['less', 'autoprefixer', 'usebanner']
+                tasks: ['default']
             }
         }
-    })
+    });
 
     // Grunt plugins
-    grunt.loadNpmTasks('grunt-autoprefixer')
-    grunt.loadNpmTasks('grunt-banner')
-    grunt.loadNpmTasks('grunt-contrib-less')
-    grunt.loadNpmTasks('grunt-contrib-watch')
+    grunt.loadNpmTasks('grunt-autoprefixer');
+    grunt.loadNpmTasks('grunt-banner');
+    grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-less');
+    grunt.loadNpmTasks('grunt-contrib-watch');
 
     // Registered Grunt tasks
     grunt.registerTask('default', [
@@ -83,5 +98,13 @@ module.exports = function(grunt) {
         'less:minify',
         'usebanner',
         'watch'
-    ])
-}
+    ]);
+
+    grunt.registerTask('dist', [
+        'less:compile',
+        'autoprefixer',
+        'less:minify',
+        'usebanner',
+        'copy:dist'
+    ]);
+};
