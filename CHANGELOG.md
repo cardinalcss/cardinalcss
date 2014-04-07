@@ -1,3 +1,14 @@
+# 2.3.0 (April 7, 2014)
+
+- Added my [html5-test-page](https://github.com/cbracco/html5-test-page) so you can see how some common HTML elements react to Cardinal (thanks [@petsagouris](https://github.com/petsagouris) for getting this going).
+- Added a `CONTRIBUTING.md` file with stricter guidelines on how to contribute in hopes that people will actually read it before submitting pull requests.
+- Updated `README.md` to mention the new `CONTRIBUTING.md` file.
+- Moved uncompressed assets into their own directory.
+- Updated `.gitignore` file to ignore new `/dist` directory.
+- Cleaned up `gruntfile.js`. It was missing some semicolons, and the default and watch tasks were separated (thanks [@petsagouris](https://github.com/petsagouris)).
+- Added `@button-border-radius` LESS variable (thanks [brandonb927](https://github.com/brandonb927)).
+- Added `font-weight: 700;` to buttons by default (thanks [brandonb927](https://github.com/brandonb927)).
+
 # 2.2.6 (March 27, 2014)
 
 - Updated normalize.css to 3.0.1.
