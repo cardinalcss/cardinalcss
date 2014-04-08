@@ -1,6 +1,6 @@
 # Contributing to this project
 
-*This is mostly extracted from [this CONTRIBUTING.md document](https://github.com/necolas/cardinal/edit/master/CONTRIBUTING.md).*
+*This information is heavily based on [this CONTRIBUTING.md document](https://github.com/necolas/normalize.css/edit/master/CONTRIBUTING.md).*
 
 Before making a contribution, please take a moment to review this document. It will make the process easier and more enjoyable for everyone involved.
 
