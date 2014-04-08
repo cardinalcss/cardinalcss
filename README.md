@@ -9,11 +9,9 @@ Cardinal is a small “[mobile first](http://cbrac.co/116bQqk)” CSS framework 
 
 ### What does that mean?
 
-This framework includes a minimal file structure and useful CSS styles to kick-start your next responsive web project.
-
-Cardinal focuses on performance, accessibility, and readability first. It’s a starting point that you will want to customize and build upon to suit your application or project.
-
 The purpose of this framework is to make it easier to rapidly prototype, build, scale, and maintain CSS for responsive web applications. Cardinal omits many aesthetic design decisions often bog down larger, more complicated CSS frameworks, leaving the design and creativity up to you.
+
+Cardinal focuses on performance, accessibility, and readability first. It’s a starting point with a minimal file structure and useful CSS styles that you will want to customize and build upon to suit your application or project.
 
 ### Who should use this?
 
