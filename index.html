@@ -59,21 +59,19 @@
                         <h2 class="intro-heading content-heading">Cardinal is a small “<a href="http://cbrac.co/113eY5h">mobile first</a>” CSS framework for front-end developers who build responsive web applications.</h2>
                     </section>
 
-                    <section id="get-started" class="content-block">
+                    <section id="what" class="content-block">
                         <nav class="content-nav">
                             <a href="#main-nav" class="button button-mini button-primary">Menu</a>
                             <a href="#top" class="button button-mini">Top</a>
                         </nav>
 
-                        <h2 class="content-heading">Get started</h2>
+                        <h2 class="content-heading">What?</h2>
 
                         <p>This framework includes a minimal file structure and useful CSS styles to kickstart your next responsive web project.</p>
 
                         <p>Cardinal focuses on performance, accessibility, and readability first. It’s a starting point that you will want to customize and build upon to suit your application or project.</p>
 
                         <p>The purpose of this framework is to make it easier to rapidly prototype, build, scale, and maintain CSS for responsive web applications. Cardinal omits many aesthetic design decisions often bog down larger, more complicated CSS frameworks, leaving the design and creativity up to you.</p>
-
-                        <p><strong>As of version <a href="https://github.com/cbracco/cardinal/tree/2.1.0">2.1.0</a></strong>, Cardinal supports the <strong>LESS preprocessor</strong> (thanks <a href="https://github.com/brandonb927">@brandonb927</a>), and includes <strong>a simple <a href="http://gruntjs.com/">Grunt</a> build process</strong> to compile and minify the CSS.</p>
                     </section>
 
                     <hr class="symbol">
@@ -1006,6 +1004,27 @@
 
                     <hr class="symbol">
 
+                    <section id="less-grunt" class="content-block">
+                        <nav class="content-nav">
+                            <a href="#main-nav" class="button button-mini button-primary">Menu</a>
+                            <a href="#top" class="button button-mini">Top</a>
+                        </nav>
+
+                        <h2 class="content-heading">LESS / Grunt</h2>
+
+                        <p>As of version 2.1.0, Cardinal supports the LESS preprocessor (thanks <a href="https://github.com/brandonb927">@brandonb927</a>), and includes a simple Grunt build process to compile and minify CSS/JS files.</p>
+
+                        <p>If you want to use Grunt to compile your LESS code, you must have Node, Grunt, and Grunt’s dependencies already installed on your machine.</p>
+
+                        <pre><code>npm install && npm install -g grunt-cli</code></pre>
+
+                        <p>To compile your LESS files and watch for future changes, simply run the <code>grunt</code> command from the root directory of your project. This will build and output your LESS code with proper vendor prefixes to the <code>dist/</code> directory.</p>
+
+                        <p>Run the <code>grunt dist</code> command to compile and minify your finished code to the <code>dist/</code> directory.</p>
+                    </section>
+
+                    <hr class="symbol">
+
                     <section id="known-issues" class="content-block">
                         <nav class="content-nav">
                             <a href="#main-nav" class="button button-mini button-primary">Menu</a>
@@ -1110,7 +1129,7 @@ img[src*="googleapis.com/"] {
 
             <div class="nav-container">
                 <ul class="nav-menu cf">
-                    <li><a href="#get-started" class="nav-link">Get started</a></li>
+                    <li><a href="#what" class="nav-link">What?</a></li>
                     <li><a href="#base" class="nav-link">Base</a></li>
                     <li><a href="#typography" class="nav-link">Typography</a></li>
                     <li><a href="#layout" class="nav-link">Layout</a></li>
@@ -1120,7 +1139,8 @@ img[src*="googleapis.com/"] {
                     <li><a href="#forms" class="nav-link">Forms</a></li>
                     <li><a href="#buttons" class="nav-link">Buttons</a></li>
                     <li><a href="#misc" class="nav-link">Miscellaneous</a></li>
-                    <li><a href="#known-issues" class="nav-link">Issues</a></li>
+                    <li><a href="#less-grunt" class="nav-link">LESS / Grunt</a></li>
+                    <li><a href="#known-issues" class="nav-link">Known issues</a></li>
                     <li><a href="#browser-support" class="nav-link">Browsers</a></li>
                 </ul>
             </div>
