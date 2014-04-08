@@ -1,3 +1,7 @@
+# 2.3.1 (April 8, 2014)
+
+- Updated `test.html` because it was missing many tests. Not sure how they disappeared, but they are back now.
+
 # 2.3.0 (April 7, 2014)
 
 - Added my [html5-test-page](https://github.com/cbracco/html5-test-page) so you can see how some common HTML elements react to Cardinal (thanks [@petsagouris](https://github.com/petsagouris) for getting this going).
