@@ -9,11 +9,11 @@ Cardinal is a small “[mobile first](http://cbrac.co/116bQqk)” CSS framework 
 
 ### What does that mean?
 
-This framework includes a minimal file structure and useful CSS styles to kickstart your next responsive web project.
+This framework includes a minimal file structure and useful CSS styles to kick-start your next responsive web project.
 
 Cardinal focuses on performance, accessibility, and readability first. It’s a starting point that you will want to customize and build upon to suit your application or project.
 
-As of version 2.1.0, **Cardinal supports the LESS preprocessor** (thanks [@brandonb927](https://github.com/brandonb927)), and includes **a simple [Grunt](http://gruntjs.com/) build process** to compile and minify the CSS.
+The purpose of this framework is to make it easier to rapidly prototype, build, scale, and maintain CSS for responsive web applications. Cardinal omits many aesthetic design decisions often bog down larger, more complicated CSS frameworks, leaving the design and creativity up to you.
 
 ### Who should use this?
 
@@ -28,6 +28,20 @@ The purpose of this framework is to make it easier to rapidly prototype, build, 
 ## Documentation
 
 You can [read the documentation site](http://cardinalcss.com) to help you get started. It provides detailed explanations, examples, and known issues. The site itself is a demo!
+
+## LESS Support / Grunt build script
+
+As of version 2.1.0, **Cardinal supports the LESS preprocessor** (thanks [@brandonb927](https://github.com/brandonb927)), and includes **a simple [Grunt](http://gruntjs.com/) build process** to compile and minify CSS/JS files.
+
+If you want to use Grunt to compile your LESS code, you must have Node, Grunt, and Grunt’s dependencies already installed on your machine.
+
+```bash
+npm install && npm install -g grunt-cli
+```
+
+To compile your LESS files and watch for future changes, simply run the `grunt` command from the root directory of your project. This will build and output your LESS code with proper vendor prefixes to the `dist/` directory.
+
+Run the `grunt dist` command to compile and minify your finished code to the `dist/` directory.
 
 ## Browser support
 
@@ -61,7 +75,7 @@ Cardinal will be maintained using the [Semantic Versioning](http://semver.org/) 
 
 Is something broken? Do you have ideas or feature requests? Please [submit an issue](https://github.com/cbracco/Cardinal/issues/new) here on GitHub. Or, if you are feeling especially motivated, write some code and submit a pull request!
 
-When doing so, **please checkout a new feature branch, and submit your pull request from it.** Do not submit pull requests from your `master` branch. Please and thank you.
+**IMPORTANT**: Before doing a bunch of work, please consult the [CONTRIBUTING.md document](https://github.com/cbracco/cardinal/blob/master/CONTRIBUTING.md), which gives detailed instructions on how to contribute to this project. If you do not follow the instructions, your code will probably not make it into this project.
 
 ## License
 
@@ -69,4 +83,4 @@ Cardinal is licensed under the MIT Open Source license. For more information, se
 
 ## Colophon
 
-Cardinal is a project by [Chris Bracco](http://cbracco.me).
+Cardinal is a project by [@cbracco](http://twitter.com/cbracco).
