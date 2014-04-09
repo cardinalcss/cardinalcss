@@ -1,3 +1,8 @@
+# 2.3.2 (April 9, 2014)
+
+- Add stylesheet to `test.html`.
+- Remove `<nav>` element from `test.html`.
+
 # 2.3.1 (April 8, 2014)
 
 - Updated `test.html` because it was missing many tests. Not sure how they disappeared, but they are back now.
