@@ -1,3 +1,8 @@
+# 2.4.0 (May 15, 2014)
+
+- Update jQuery to 2.1.1.
+- Update Modernizr to 2.8.1.
+
 # 2.3.2 (April 9, 2014)
 
 - Add stylesheet to `test.html`.
