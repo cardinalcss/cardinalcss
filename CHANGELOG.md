@@ -1,3 +1,8 @@
+# 2.4.1 (May 15, 2014)
+
+- Added `node_modules/` to the `.gitignore` file.
+- Added missing grunt dependency to `package.json` file.
+
 # 2.4.0 (May 15, 2014)
 
 - Update jQuery to 2.1.1.
