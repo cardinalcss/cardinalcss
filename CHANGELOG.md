@@ -1,7 +1,11 @@
-# 2.4.1 (May 15, 2014)
+# 2.4.2 (July 31, 2014)
 
-- Added `node_modules/` to the `.gitignore` file.
-- Added missing grunt dependency to `package.json` file.
+- Added missing width classes in `layout.less` (via @nastasiu).
+
+# 2.4.1 (July 31, 2014)
+
+- Added `node_modules/` to the `.gitignore` file (via @brandonb927).
+- Added missing grunt dependency to `package.json` file (via @brandonb927).
 
 # 2.4.0 (May 15, 2014)
 
