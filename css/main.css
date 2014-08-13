@@ -556,12 +556,12 @@ sub {
 }
 
 /* Grid gutters */
-.grid-gutter-none              { margin-left: 0;     }
-.grid-gutter-none .grid-item   { padding-left: 0;    }
-.grid-gutter-half              { margin-left: -1rem; }
-.grid-gutter-half .grid-item   { padding-left: 1rem; }
-.grid-gutter-double            { margin-left: -4rem; }
-.grid-gutter-double .grid-item { padding-left: 4rem; }
+.grid-gutter-none                { margin-left: 0;     }
+.grid-gutter-none > .grid-item   { padding-left: 0;    }
+.grid-gutter-half                { margin-left: -1rem; }
+.grid-gutter-half > .grid-item   { padding-left: 1rem; }
+.grid-gutter-double              { margin-left: -4rem; }
+.grid-gutter-double > .grid-item { padding-left: 4rem; }
 
 /**
  * Grid items
@@ -600,14 +600,14 @@ sub {
 /* Medium-sized breakpoint */
 @media only screen and (min-width: 600px) {
     /* Grid gutters */
-    .medium-grid-gutter-none              { margin-left: 0;     }
-    .medium-grid-gutter-none .grid-item   { padding-left: 0;    }
-    .medium-grid-gutter-half              { margin-left: -1rem; }
-    .medium-grid-gutter-half .grid-item   { padding-left: 1rem; }
-    .medium-grid-gutter-whole             { margin-left: -2rem; }
-    .medium-grid-gutter-whole .grid-item  { padding-left: 2rem; }
-    .medium-grid-gutter-double            { margin-left: -4rem; }
-    .medium-grid-gutter-double .grid-item { padding-left: 4rem; }
+    .medium-grid-gutter-none                { margin-left: 0;     }
+    .medium-grid-gutter-none > .grid-item   { padding-left: 0;    }
+    .medium-grid-gutter-half                { margin-left: -1rem; }
+    .medium-grid-gutter-half > .grid-item   { padding-left: 1rem; }
+    .medium-grid-gutter-whole               { margin-left: -2rem; }
+    .medium-grid-gutter-whole > .grid-item  { padding-left: 2rem; }
+    .medium-grid-gutter-double              { margin-left: -4rem; }
+    .medium-grid-gutter-double > .grid-item { padding-left: 4rem; }
 
     /* Widths */
     .medium-one-whole      { width: 100%;    }
@@ -631,14 +631,14 @@ sub {
 /* Large-sized breakpoint */
 @media only screen and (min-width: 960px) {
     /* Grid gutters */
-    .large-grid-gutter-none              { margin-left: 0;     }
-    .large-grid-gutter-none .grid-item   { padding-left: 0;    }
-    .large-grid-gutter-half              { margin-left: -1rem; }
-    .large-grid-gutter-half .grid-item   { padding-left: 1rem; }
-    .large-grid-gutter-whole             { margin-left: -2rem; }
-    .large-grid-gutter-whole .grid-item  { padding-left: 2rem; }
-    .large-grid-gutter-double            { margin-left: -4rem; }
-    .large-grid-gutter-double .grid-item { padding-left: 4rem; }
+    .large-grid-gutter-none                { margin-left: 0;     }
+    .large-grid-gutter-none > .grid-item   { padding-left: 0;    }
+    .large-grid-gutter-half                { margin-left: -1rem; }
+    .large-grid-gutter-half > .grid-item   { padding-left: 1rem; }
+    .large-grid-gutter-whole               { margin-left: -2rem; }
+    .large-grid-gutter-whole > .grid-item  { padding-left: 2rem; }
+    .large-grid-gutter-double              { margin-left: -4rem; }
+    .large-grid-gutter-double > .grid-item { padding-left: 4rem; }
 
     /* Widths */
     .large-one-whole     { width: 100%;    }
