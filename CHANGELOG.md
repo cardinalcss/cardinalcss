@@ -1,3 +1,7 @@
+# 2.4.3 (August 13, 2014)
+
+- Fixed parent grid gutter styles being applied to nested child grids that may need different gutter styles (via @nastasiu).
+
 # 2.4.2 (July 31, 2014)
 
 - Added missing width classes in `layout.less` (via @nastasiu).
