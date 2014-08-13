@@ -1,3 +1,7 @@
+# 2.4.4 (August 14, 2014)
+
+- Added whole gutter styles that were missing in previous versions (via @nastasiu).
+
 # 2.4.3 (August 13, 2014)
 
 - Fixed parent grid gutter styles being applied to nested child grids that may need different gutter styles (via @nastasiu).
