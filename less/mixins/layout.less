@@ -13,11 +13,11 @@
 .@{prefix}grid-gutter-double > .grid-item { padding-left: (@grid-gutter * 2); }
 }
 
-.gutters(@prefix:~"") when (default()){
-.prefixedgutters(@prefix);
+.gutters(){
+.prefixedgutters(~"");
 }
 
-.gutters(@prefix) when not (@prefix=""){
+.gutters(@prefix) {
 .prefixedgutters(~"@{prefix}-");
 }
 
@@ -43,11 +43,11 @@
 .@{prefix}width-auto    { width: auto;    }
 }
 
-.widths(@prefix:~"") when (default()){
-.prefixedwidths(@prefix);
+.widths() {
+.prefixedwidths(~"");
 }
 
-.widths(@prefix) when not (@prefix=""){
+.widths(@prefix) {
 .prefixedwidths(~"@{prefix}-");
 }
 
@@ -61,10 +61,10 @@
 .@{prefix}float-none   { float: none;  }
 }
 
-.floats(@prefix:~"") when (default()){
-.prefixedfloats(@prefix);
+.floats() {
+.prefixedfloats(~"");
 }
 
-.floats(@prefix) when not (@prefix=""){
+.floats(@prefix) {
 .prefixedfloats(~"@{prefix}-");
 }
