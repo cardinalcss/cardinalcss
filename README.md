@@ -1,4 +1,4 @@
-# Cardinal - 2.4.4
+# Cardinal - 2.4.5
 
 Cardinal is a small “[mobile first](http://cbrac.co/116bQqk)” CSS framework for front-end developers who build responsive web applications.
 

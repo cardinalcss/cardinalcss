@@ -1,3 +1,6 @@
+# 2.4.5 (November 7, 2014)
+- Removed `@viewport` CSS rules because they break Google Chrome’s "device mode" tool. They will be added back when they are needed, or when the bug has been fixed (whichever comes first).
+
 # 2.4.4 (August 14, 2014)
 
 - Added whole gutter styles that were missing in previous versions (via @nastasiu).
