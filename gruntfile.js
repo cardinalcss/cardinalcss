@@ -16,6 +16,7 @@ module.exports = function(grunt) {
         distDir: 'dist/',
         jsDir: 'js/',
         lessDir: 'less/',
+        sassDir: 'sass/',
 
         // Run LESS CSS compilation
         less: {
@@ -31,6 +32,23 @@ module.exports = function(grunt) {
                 },
                 files: {
                     '<%= distDir %><%= cssDir %><%= pkgName %>.min.css': '<%= distDir %><%= cssDir %><%= pkgName %>.css'
+                }
+            }
+        },
+
+        // Run SASS CSS compilation
+        sass: {
+            compile: {
+                files: {
+                    '<%= distDir %><%= cssDir %><%= pkgName %>.sass.css': '<%= sassDir %><%= pkgName %>.scss'
+                }
+            },
+            minify: {
+                options: {
+                    style: 'compressed'
+                },
+                files: {
+                    '<%= distDir %><%= cssDir %><%= pkgName %>.sass.min.css': '<%= distDir %><%= cssDir %><%= pkgName %>.sass.css'
                 }
             }
         },
@@ -80,6 +98,10 @@ module.exports = function(grunt) {
             less: {
                 files: ['<%= lessDir %>**/*.less'],
                 tasks: ['default']
+            },
+            sass: {
+                files: ['<%= sassDir %>**/*.scss'],
+                tasks: ['default']
             }
         }
     });
@@ -89,21 +111,26 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-banner');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-less');
+    grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     // Registered Grunt tasks
     grunt.registerTask('default', [
         'less:compile',
+        'sass:compile',
         'autoprefixer',
         'less:minify',
+        'sass:minify',
         'usebanner',
         'watch'
     ]);
 
     grunt.registerTask('dist', [
         'less:compile',
+        'sass:compile',
         'autoprefixer',
         'less:minify',
+        'sass:minify',
         'usebanner',
         'copy:dist'
     ]);
