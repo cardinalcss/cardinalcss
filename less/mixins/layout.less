@@ -1,0 +1,70 @@
+/* mixins */
+
+/* Grid gutters */
+
+.prefixedgutters(@prefix) {
+.@{prefix}grid-gutter-none                { margin-left: 0;                   }
+.@{prefix}grid-gutter-none > .grid-item   { padding-left: 0;                  }
+.@{prefix}grid-gutter-half                { margin-left: -(@grid-gutter / 2); }
+.@{prefix}grid-gutter-half > .grid-item   { padding-left: (@grid-gutter / 2); }
+.@{prefix}grid-gutter-whole               { margin-left: -(@grid-gutter);     }
+.@{prefix}grid-gutter-whole > .grid-item  { padding-left: (@grid-gutter);     }
+.@{prefix}grid-gutter-double              { margin-left: -(@grid-gutter * 2); }
+.@{prefix}grid-gutter-double > .grid-item { padding-left: (@grid-gutter * 2); }
+}
+
+.gutters(){
+.prefixedgutters(~"");
+}
+
+.gutters(@prefix) {
+.prefixedgutters(~"@{prefix}-");
+}
+
+/* Widths */
+
+.prefixedwidths(@prefix) {
+.@{prefix}one-whole     { width: 100%;    }
+.@{prefix}one-half      { width: 50%;     }
+.@{prefix}one-third     { width: 33.333%; }
+.@{prefix}two-thirds    { width: 66.666%; }
+.@{prefix}one-fourth    { width: 25%;     }
+.@{prefix}two-fourths   { width: 50%;     }
+.@{prefix}three-fourths { width: 75%;     }
+.@{prefix}one-fifth     { width: 20%;     }
+.@{prefix}two-fifths    { width: 40%;     }
+.@{prefix}three-fifths  { width: 60%;     }
+.@{prefix}four-fifths   { width: 80%;     }
+.@{prefix}one-sixth     { width: 16.666%; }
+.@{prefix}two-sixths    { width: 33.333%; }
+.@{prefix}three-sixths  { width: 50%;     }
+.@{prefix}four-sixths   { width: 66.666%; }
+.@{prefix}five-sixths   { width: 83.333%; }
+.@{prefix}width-auto    { width: auto;    }
+}
+
+.widths() {
+.prefixedwidths(~"");
+}
+
+.widths(@prefix) {
+.prefixedwidths(~"@{prefix}-");
+}
+
+/**
+ * Floats ($floats)
+ */
+
+.prefixedfloats(@prefix) {
+.@{prefix}float-left   { float: left;  }
+.@{prefix}float-right  { float: right; }
+.@{prefix}float-none   { float: none;  }
+}
+
+.floats() {
+.prefixedfloats(~"");
+}
+
+.floats(@prefix) {
+.prefixedfloats(~"@{prefix}-");
+}
