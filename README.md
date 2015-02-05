@@ -1,47 +1,136 @@
-# Cardinal - 2.4.5
+# Cardinal
 
-Cardinal is a small “[mobile first](http://cbrac.co/116bQqk)” CSS framework for front-end developers who build responsive web applications.
+Build more with less.
 
-* [Download it](https://github.com/cbracco/cardinal/archive/master.zip)
-* [Read the documentation](http://cardinalcss.com)
-* [Review the CHANGELOG](https://github.com/cbracco/cardinal/blob/master/CHANGELOG.md)
-* [Track the progress](https://www.pivotaltracker.com/s/projects/803361)
+- [Go to Website](http://cardinalcss.com)
+- [Review the CHANGELOG](https://github.com/cbracco/cardinal/blob/master/CHANGELOG.md)
 
-### What does that mean?
+# Table of Contents
 
-The purpose of this framework is to make it easier to rapidly prototype, build, scale, and maintain CSS for responsive web applications. Cardinal omits many aesthetic design decisions often bog down larger, more complicated CSS frameworks, leaving the design and creativity up to you.
+- [What is Cardinal?](#what-is-cardinal)
+- [Principles](#principles)
+- [Features](#features)
+- [Dependencies](#dependencies)
+- [Getting Started](#getting-started)
+  - [Package Managers](#package-managers)
+    - [Updating Cardinal](#updating-cardinal)
+  - [Direct Download](#direct-download)
+- [Browser Support](#browser-support)
+- [Contributing](#contributing)
+- [Versioning](#versioning)
+- [Licensing](#licensing)
+- [Colophon](#colophon)
 
-Cardinal focuses on performance, accessibility, and readability first. It’s a starting point with a minimal file structure and useful CSS styles that you will want to customize and build upon to suit your application or project.
+# What is Cardinal?
 
-### Who should use this?
+Cardinal is a modular, “mobile-first” CSS framework built with performance and scalability in mind.
 
-Front-end web developers who want to build well-organized, responsive web applications *without losing their minds* should use Cardinal.
+The purpose of this framework is to make it easier for front-end web developers to prototype, build, scale, and maintain CSS for responsive websites, user interfaces, and applications. Cardinal omits many aesthetic design decisions that often bog down other CSS frameworks (which are often [UI toolkits, not frameworks](https://speakerdeck.com/csswizardry/what-is-a-css-framework-anyway)), leaving the design and creativity up to you.
 
-The purpose of this framework is to make it easier to rapidly prototype, build, scale, and maintain CSS for responsive web applications. Cardinal omits many aesthetic design decisions often bog down larger, more complicated CSS frameworks, leaving the design and creativity up to you.
+# Principles
 
-## Installation
+Cardinal adheres to the following principles whenever possible:
 
-* [Download it](https://github.com/cbracco/cardinal/archive/master.zip)
+- [**Open / Closed](http://en.wikipedia.org/wiki/Open/closed_principle):** Styles should be open for extension, but closed for modification. Avoid styles that are highly specific to context.
+- **Reuse:** Content-agnostic, modular styles allow for design flexibility and will have a longer lifespan.
+- **Don’t Make Assumptions:** Try not to make too many assumptions too early, because design and development are both iterative processes.
+- **Clarity Over Cleverness:** Avoid creating styles that have ambiguous applications, or are rarely used. Obvious styles are easier for humans to internalize, and will be more widely adopted.
 
-## Documentation
+# Features
 
-You can [read the documentation site](http://cardinalcss.com) to help you get started. It provides detailed explanations, examples, and known issues. The site itself is a demo!
+- “Mobile-first” CSS written for the [LESS preprocessor](http://lesscss.org/)
+- [normalize.css](https://github.com/necolas/normalize.css)
+- Sensible global styles, variables, and useful mixins
+- A flexible grid system and encapsulated styles for common UI objects (buttons, forms, tables, etc.)
+- A collections of utility classes optimized for great gzip compression
+- The entire framework, minified and gzipped, clocks in at a mere **11.13kB**.
 
-## LESS Support / Grunt build script
+# Dependencies
 
-As of version 2.1.0, **Cardinal supports the LESS preprocessor** (thanks [@brandonb927](https://github.com/brandonb927)), and includes **a simple [Grunt](http://gruntjs.com/) build process** to compile and minify CSS/JS files.
+If you would like to install Cardinal with either [Bower](http://bower.io/) or [npm](https://www.npmjs.com/) package management tools, you will first need to install [Node.js](http://nodejs.org/) on your machine or server. Once you have Node.js installed, make sure npm installed ([info here](http://blog.npmjs.org/post/85484771375/how-to-install-npm)), and use it to install Bower, like so:
 
-If you want to use Grunt to compile your LESS code, you must have Node, Grunt, and Grunt’s dependencies already installed on your machine.
+Also, Cardinal depends on the awesome tool [Autoprefixer](https://github.com/postcss/autoprefixer), which adds the proper vendor prefixes that provide the [specified browser support](#browser-support) for this project. This way, you don’t have to worry about manually including the correct prefixes while writing LESS/CSS. You are encouraged to incorporate Autoprefixer into your build process (this is easy to do with tools like [Grunt](http://gruntjs.com/) or [Gulp](http://gulpjs.com/)).
 
-```bash
-npm install && npm install -g grunt-cli
+```
+npm install -g bower
 ```
 
-To compile your LESS files and watch for future changes, simply run the `grunt` command from the root directory of your project. This will build and output your LESS code with proper vendor prefixes to the `dist/` directory.
+# Getting Started
 
-Run the `grunt dist` command to compile and minify your finished code to the `dist/` directory.
+There are several ways that you can use Cardinal in your new and existing web projects.
 
-## Browser support
+## Package Managers
+
+The fastest way to get up-and-running with Cardinal is by using a package manager, like so:
+
+**Bower**
+
+Run the following commands from your terminal:
+
+```
+cd your-project-directory
+bower install --save cardinal
+```
+Once installed, you can find Cardinal here:
+
+```
+project root
+│
+└───node_modules
+    │
+    └───cardinal
+```
+
+**npm**
+
+Run the following commands from your terminal:
+
+```
+cd your-project-directory
+npm install --save cardinal
+```
+
+Once installed, you can find Cardinal here:
+
+```
+project root
+│
+└───bower_components
+    │
+    └───cardinal
+```
+
+### Updating Cardinal
+
+With package managers, you can easily grab the latest version of Cardinal by running either of the following commands:
+
+- **npm:** `npm update cardinal`
+- **Bower:** `bower update cardinal`
+
+**NOTE:** This is the recommended way to use Cardinal. It should never be edited directly so you can keep it updated in this way. Instead of modifying Cardinal’s source, you are encouraged `@import` Cardinal into your project and create your own `.less` files where you can override default variables and extend styles.
+
+## Direct Download
+
+If you do not want to use a package manager to integrate Cardinal into your project, you can also download it directly:
+
+**Build from Source**
+
+To do so, you need to already have Node.js and npm installed on your machine. Cardinal uses Gulp to build and watch the CSS files.
+
+```
+git clone git@github.com:cbracco/cardinal.git
+cd cardinal
+npm install
+gulp
+```
+
+**Download the Zip**
+
+You can also download the `.zip` file and proceed however you wish. Include the minified CSS file in the `<head>` of your project, or modify the LESS files directly (not recommended, since it will be difficult to update to future versions). It’s your world!
+
+- [Download the zip](https://github.com/cbracco/cardinal/archive/master.zip)
+
+# Browser support
 
 Cardinal supports most modern browsers:
 
@@ -53,11 +142,11 @@ Cardinal supports most modern browsers:
 * Android 4.2+
 * Internet Explorer 9+
 
-### What about IE8?
+## Contributing
 
-I realize that for many web applications, IE8 and below cannot be ignored. By including the [REM unit polyfill](https://github.com/chuckcarpenter/REM-unit-polyfill) and Scott Jehl’s [Respond.js](https://github.com/scottjehl/Respond), Cardinal should work in IE8.
+Is something broken? Do you have ideas or feature requests? Please [submit an issue](https://github.com/cbracco/cardinal/issues/new) here on GitHub. Or, if you are feeling especially motivated, write some code and submit a pull request!
 
-A better option might be to include an IE-only stylesheet that serves a “fixed-layout” version of your application, instead of bothering with polyfills and other band-aid solutions.
+**IMPORTANT**: Before doing a bunch of work, please consult the [CONTRIBUTING.md document](https://github.com/cbracco/cardinal/blob/master/CONTRIBUTING.md), which gives detailed instructions on how to contribute to this project. If you do not follow the instructions, your code will probably not make it into this project.
 
 ## Versioning
 
@@ -68,12 +157,6 @@ Cardinal will be maintained using the [Semantic Versioning](http://semver.org/) 
 * Breaking backwards compatibility increments `major`, while resetting `minor` and `patch`.
 * New code that does not break backwards compatibility increments `minor`, while resetting `patch`.
 * Bug fixes and other small changes increment `patch`.
-
-## Contributing
-
-Is something broken? Do you have ideas or feature requests? Please [submit an issue](https://github.com/cbracco/Cardinal/issues/new) here on GitHub. Or, if you are feeling especially motivated, write some code and submit a pull request!
-
-**IMPORTANT**: Before doing a bunch of work, please consult the [CONTRIBUTING.md document](https://github.com/cbracco/cardinal/blob/master/CONTRIBUTING.md), which gives detailed instructions on how to contribute to this project. If you do not follow the instructions, your code will probably not make it into this project.
 
 ## License
 
