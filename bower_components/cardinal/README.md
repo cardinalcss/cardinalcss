@@ -47,13 +47,13 @@ Cardinal adheres to the following principles whenever possible:
 
 # Dependencies
 
-If you would like to install Cardinal with either [Bower](http://bower.io/) or [npm](https://www.npmjs.com/) package management tools, you will first need to install [Node.js](http://nodejs.org/) on your machine or server. Once you have Node.js installed, make sure npm is installed ([info here](http://blog.npmjs.org/post/85484771375/how-to-install-npm)), and use it to install Bower, like so:
-
-Also, Cardinal depends on the awesome tool [Autoprefixer](https://github.com/postcss/autoprefixer), which adds the proper vendor prefixes that provide the [specified browser support](#browser-support) for this project. This way, you don’t have to worry about manually including the correct prefixes while writing LESS/CSS. You are encouraged to incorporate Autoprefixer into your build process (this is easy to do with tools like [Grunt](http://gruntjs.com/) or [Gulp](http://gulpjs.com/)).
+If you would like to install Cardinal the [Bower](http://bower.io/) package manager tool, you will first need to install [Node.js](http://nodejs.org/) on your machine or server. Once you have Node.js installed, make sure npm is installed ([info here](http://blog.npmjs.org/post/85484771375/how-to-install-npm)), and use it to install Bower, like so:
 
 ```
 npm install -g bower
 ```
+
+Also, Cardinal depends on the awesome tool [Autoprefixer](https://github.com/postcss/autoprefixer), which adds the proper vendor prefixes that provide the [specified browser support](#browser-support) for this project. This way, you don’t have to worry about manually including the correct prefixes while writing LESS/CSS. You are encouraged to incorporate Autoprefixer into your build process (this is easy to do with tools like [Grunt](http://gruntjs.com/) or [Gulp](http://gulpjs.com/)).
 
 # Getting Started
 
@@ -81,31 +81,13 @@ your-project-directory
     └───cardinal
 ```
 
-**npm**
-
-Run the following commands from your terminal:
-
-```
-cd your-project-directory
-npm install --save cardinal
-```
-
-Once installed, you can find Cardinal here:
-
-```
-your-project-directory
-│
-└───bower_components
-    │
-    └───cardinal
-```
-
 ### Updating Cardinal
 
-With package managers, you can easily grab the latest version of Cardinal by running either of the following commands:
+With Bower, you can easily grab the latest version of Cardinal by running the following command:
 
-- **Bower:** `bower update cardinal`
-- **npm:** `npm update cardinal`
+```
+bower update cardinal
+```
 
 **NOTE:** This is the recommended way to use Cardinal. It should never be edited directly so you can keep it updated. Instead of modifying Cardinal’s source, you are encouraged `@import` Cardinal into your own `your-project.less` file and create your own `.less` files where you can override default variables and extend styles.
 

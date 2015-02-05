@@ -1,3 +1,7 @@
+# 3.0.1 (Feb 5, 2014)
+
+- Update `bower.json` and `README.md`.
+
 # 3.0.0 (Feb 5, 2014)
 
 - Overhauled Cardinal (huzzah!) to function as a CSS framework only.

@@ -1,6 +1,6 @@
 {
   "name": "cardinal",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "homepage": "http://cardinalcss.com",
   "main": "cardinal.css",
   "authors": [
@@ -20,10 +20,6 @@
   "ignore": [
     "**/.*",
     "package.json",
-    "index.html",
-    "gulpfile.js",
-    "*.css",
-    "*.map",
     "CONTRIBUTING.md"
   ]
 }
