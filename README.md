@@ -104,8 +104,8 @@ your-project-directory
 
 With package managers, you can easily grab the latest version of Cardinal by running either of the following commands:
 
-- **npm:** `npm update cardinal`
 - **Bower:** `bower update cardinal`
+- **npm:** `npm update cardinal`
 
 **NOTE:** This is the recommended way to use Cardinal. It should never be edited directly so you can keep it updated in this way. Instead of modifying Cardinal’s source, you are encouraged `@import` Cardinal into your project and create your own `.less` files where you can override default variables and extend styles.
 
