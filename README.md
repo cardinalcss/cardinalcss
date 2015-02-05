@@ -18,7 +18,7 @@ Build more with less.
 - [Browser Support](#browser-support)
 - [Contributing](#contributing)
 - [Versioning](#versioning)
-- [Licensing](#licensing)
+- [License](#license)
 - [Colophon](#colophon)
 
 # What is Cardinal?
