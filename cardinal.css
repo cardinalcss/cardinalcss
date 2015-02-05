@@ -1967,7 +1967,7 @@ td {
 /**
  * Shapes
  */
-.btn-rounded {
+.btn-round {
   /*px*/ border-radius: 3px;
   /*rem*/ border-radius: 0.1875rem;
 }

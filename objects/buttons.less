@@ -16,7 +16,7 @@
   text-decoration: none;
   color: @btn-text-color;
   border: 0 none;
-  background-color: @btn-bg-color;
+  background-color: @btn-background-color;
 
   .antialiasing();
 
@@ -25,12 +25,12 @@
    */
 
   &:hover {
-    background-color: lighten(@btn-bg-color, 2%);
+    background-color: lighten(@btn-background-color, 2%);
   }
 
   &:active,
   &.is-active {
-    background-color: darken(@btn-bg-color, 2%);
+    background-color: darken(@btn-background-color, 2%);
     .to-rem(box-shadow, 0 0 @spacing-third, hsla(0, 0%, 0%, 0.25) inset);
   }
 
@@ -60,7 +60,7 @@
  * Shapes
  */
 
-.btn-rounded {
+.btn-round {
   .to-rem(border-radius, @btn-border-radius);
 }
 
