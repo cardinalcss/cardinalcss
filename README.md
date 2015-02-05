@@ -47,7 +47,7 @@ Cardinal adheres to the following principles whenever possible:
 
 # Dependencies
 
-If you would like to install Cardinal with either [Bower](http://bower.io/) or [npm](https://www.npmjs.com/) package management tools, you will first need to install [Node.js](http://nodejs.org/) on your machine or server. Once you have Node.js installed, make sure npm installed ([info here](http://blog.npmjs.org/post/85484771375/how-to-install-npm)), and use it to install Bower, like so:
+If you would like to install Cardinal with either [Bower](http://bower.io/) or [npm](https://www.npmjs.com/) package management tools, you will first need to install [Node.js](http://nodejs.org/) on your machine or server. Once you have Node.js installed, make sure npm is installed ([info here](http://blog.npmjs.org/post/85484771375/how-to-install-npm)), and use it to install Bower, like so:
 
 Also, Cardinal depends on the awesome tool [Autoprefixer](https://github.com/postcss/autoprefixer), which adds the proper vendor prefixes that provide the [specified browser support](#browser-support) for this project. This way, you don’t have to worry about manually including the correct prefixes while writing LESS/CSS. You are encouraged to incorporate Autoprefixer into your build process (this is easy to do with tools like [Grunt](http://gruntjs.com/) or [Gulp](http://gulpjs.com/)).
 
