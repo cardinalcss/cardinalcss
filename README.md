@@ -74,7 +74,7 @@ bower install --save cardinal
 Once installed, you can find Cardinal here:
 
 ```
-project root
+your-project-directory
 │
 └───node_modules
     │
@@ -93,7 +93,7 @@ npm install --save cardinal
 Once installed, you can find Cardinal here:
 
 ```
-project root
+your-project-directory
 │
 └───bower_components
     │
