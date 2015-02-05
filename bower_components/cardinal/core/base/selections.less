@@ -1,0 +1,30 @@
+/* ========================================================================== *\
+   Core -> Base -> Selections ($core-base-selections)
+\* ========================================================================== */
+
+/**
+ * 1. Customize `background` for text selections.
+ * 2. Remove `text-shadow` selection highlight.
+ *    @link http://cbrac.co/Q6swON
+ */
+
+::selection {
+  background: @selection-background-color; /* 1 */
+  text-shadow: none;                       /* 2 */
+
+  /**
+   * Change `background` for text selections when browser is unfocused
+   */
+
+  &:window-inactive {
+    background: @selection-inactive-background-color;
+  }
+
+  /**
+   * Remove `background` on images when selected
+   */
+
+  img& {
+    background: transparent;
+  }
+}

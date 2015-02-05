@@ -2,4 +2,3 @@
 # Read about how to use .gitignore: https://help.github.com/articles/ignoring-files
 
 node_modules/
-bower_components/
