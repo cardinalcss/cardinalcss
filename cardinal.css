@@ -2101,7 +2101,7 @@ td {
   background: #f8f8f8;
   /* 2 */
 }
-.form-input-rounded {
+.form-input-round {
   /*px*/ border-radius: 3px;
   /*rem*/ border-radius: 0.1875rem;
 }
