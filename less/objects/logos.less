@@ -1,0 +1,17 @@
+/* ========================================================================== *\
+   Objects -> Logos ($objects-logos)
+\* ========================================================================== */
+
+.logo {
+  text-decoration: none;
+}
+
+.logo-img {
+  .to-rem(width, @logo-img-width-sm);
+}
+
+.screen-md-min({
+  .logo-img {
+    .to-rem(width, @logo-img-width-lg);
+  }
+});

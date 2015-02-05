@@ -613,7 +613,7 @@ html {
   /* 2 */
   height: 100%;
   /* 3 */
-  background-color: #ffffff;
+  background-color: #e5d8b9;
   color: #444444;
 }
 /**
@@ -938,8 +938,8 @@ hr {
   display: block;
   padding: 0;
   border: 0;
-  /*px*/ border-top: 1px solid #dedede;
-  /*rem*/ border-top: 0.0625rem solid #dedede;
+  /*px*/ border-top: 1px solid #beb293;
+  /*rem*/ border-top: 0.0625rem solid #beb293;
 }
 /* ========================================================================== *\
    Objects -> Code ($objects-code)
@@ -1298,8 +1298,8 @@ td {
 \* ========================================================================== */
 .wrapper {
   width: 94%;
-  /*px*/ max-width: 1024px;
-  /*rem*/ max-width: 64rem;
+  /*px*/ max-width: 560px;
+  /*rem*/ max-width: 35rem;
   margin: 0 auto;
 }
 @print {
@@ -2002,14 +2002,14 @@ td {
  */
 .btn-primary {
   color: #ffffff;
-  background-color: #1fa3ec;
+  background-color: #a41d1c;
 }
 .btn-primary:hover {
-  background-color: #32abee;
+  background-color: #b5201f;
 }
 .btn-primary:active,
 .btn-primary.is-active {
-  background-color: #1399e3;
+  background-color: #931a19;
 }
 /**
  * Groups
@@ -2086,7 +2086,7 @@ td {
 .form-input[type="week"]:focus,
 .form-select:focus,
 .form-textarea:focus {
-  border-color: #1fa3ec;
+  border-color: #a41d1c;
   outline: 0 none;
 }
 /**
@@ -7079,5 +7079,38 @@ td {
   [class~="xxl-11/12"],
   .xxl-eleven-twelfths {
     width: 91.6666666%;
+  }
+}
+/* ========================================================================== *\
+   Objects -> Buttons ($objects-buttons)
+\* ========================================================================== */
+/**
+ * Colors
+ */
+.btn-secondary {
+  color: #ffffff;
+  background-color: #f4b13b;
+}
+.btn-secondary:hover {
+  background-color: #f5b94e;
+}
+.btn-secondary:active,
+.btn-secondary.is-active {
+  background-color: #f3a928;
+}
+/* ========================================================================== *\
+   Objects -> Logos ($objects-logos)
+\* ========================================================================== */
+.logo {
+  text-decoration: none;
+}
+.logo-img {
+  /*px*/ width: 180px;
+  /*rem*/ width: 11.25rem;
+}
+@media (min-width: 768px) {
+  .logo-img {
+    /*px*/ width: 240px;
+    /*rem*/ width: 15rem;
   }
 }

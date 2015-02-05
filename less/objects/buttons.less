@@ -1,0 +1,21 @@
+/* ========================================================================== *\
+   Objects -> Buttons ($objects-buttons)
+\* ========================================================================== */
+
+/**
+ * Colors
+ */
+
+.btn-secondary {
+  color: @btn-secondary-text-color;
+  background-color: @btn-secondary-bg-color;
+}
+
+.btn-secondary:hover {
+  background-color: lighten(@btn-secondary-bg-color, 4%);
+}
+
+.btn-secondary:active,
+.btn-secondary.is-active {
+  background-color: darken(@btn-secondary-bg-color, 4%);
+}
