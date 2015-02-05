@@ -107,7 +107,7 @@ With package managers, you can easily grab the latest version of Cardinal by run
 - **Bower:** `bower update cardinal`
 - **npm:** `npm update cardinal`
 
-**NOTE:** This is the recommended way to use Cardinal. It should never be edited directly so you can keep it updated in this way. Instead of modifying Cardinal’s source, you are encouraged `@import` Cardinal into your project and create your own `.less` files where you can override default variables and extend styles.
+**NOTE:** This is the recommended way to use Cardinal. It should never be edited directly so you can keep it updated. Instead of modifying Cardinal’s source, you are encouraged `@import` Cardinal into your own `your-project.less` file and create your own `.less` files where you can override default variables and extend styles.
 
 ## Direct Download
 
