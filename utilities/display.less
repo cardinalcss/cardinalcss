@@ -1,0 +1,355 @@
+/* ========================================================================== *\
+   Utilities -> Display ($utilities-display)
+\* ========================================================================== */
+
+//
+// d    = display
+// n    = none
+// i    = inline
+// b    = block
+// ib   = inline-block
+// it   = inline-table
+// t    = table
+// tr   = table-row
+// trg  = table-row-group
+// tc   = table-cell
+// col  = table-column
+// colg = table-column-group
+//
+
+.dn {
+  display: none;
+}
+
+.di {
+  display: inline;
+}
+
+.db {
+  display: block;
+}
+
+/**
+ * 1. Fix Firefox bug where an <img> styled with `max-width: 100%` inside a
+ *    parent styled `inline-block` displays at its default size, not 100% of the
+ *    parent container.
+ */
+
+.dib {
+  display: inline-block;
+  max-width: 100%; /* 1 */
+}
+
+.dit {
+  display: inline-table;
+}
+
+.dt {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.dtr {
+  display: table-row;
+}
+
+.dtrg {
+  display: table-row-group;
+}
+
+.dtc {
+  display: table-cell;
+}
+
+.dtcol {
+  display: table-column;
+}
+
+.dtcolg {
+  display: table-column-group;
+}
+
+.screens({
+  .xs-dn {
+    display: none;
+  }
+
+  .xs-di {
+    display: inline;
+  }
+
+  .xs-db {
+    display: block;
+  }
+
+  .xs-dib {
+    display: inline-block;
+    max-width: 100%;
+  }
+
+  .xs-dit {
+    display: inline-table;
+  }
+
+  .xs-dt {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+  }
+
+  .xs-dtr {
+    display: table-row;
+  }
+
+  .xs-dtrg {
+    display: table-row-group;
+  }
+
+  .xs-dtc {
+    display: table-cell;
+  }
+
+  .xs-dtcol {
+    display: table-column;
+  }
+
+  .xs-dtcolg {
+    display: table-column-group;
+  }
+},{
+  .sm-dn {
+    display: none;
+  }
+
+  .sm-di {
+    display: inline;
+  }
+
+  .sm-db {
+    display: block;
+  }
+
+  .sm-dib {
+    display: inline-block;
+    max-width: 100%;
+  }
+
+  .sm-dit {
+    display: inline-table;
+  }
+
+  .sm-dt {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+  }
+
+  .sm-dtr {
+    display: table-row;
+  }
+
+  .sm-dtrg {
+    display: table-row-group;
+  }
+
+  .sm-dtc {
+    display: table-cell;
+  }
+
+  .sm-dtcol {
+    display: table-column;
+  }
+
+  .sm-dtcolg {
+    display: table-column-group;
+  }
+},{
+  .md-dn {
+    display: none;
+  }
+
+  .md-di {
+    display: inline;
+  }
+
+  .md-db {
+    display: block;
+  }
+
+  .md-dib {
+    display: inline-block;
+    max-width: 100%;
+  }
+
+  .md-dit {
+    display: inline-table;
+  }
+
+  .md-dt {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+  }
+
+  .md-dtr {
+    display: table-row;
+  }
+
+  .md-dtrg {
+    display: table-row-group;
+  }
+
+  .md-dtc {
+    display: table-cell;
+  }
+
+  .md-dtcol {
+    display: table-column;
+  }
+
+  .md-dtcolg {
+    display: table-column-group;
+  }
+},{
+  .lg-dn {
+    display: none;
+  }
+
+  .lg-di {
+    display: inline;
+  }
+
+  .lg-db {
+    display: block;
+  }
+
+  .lg-dib {
+    display: inline-block;
+    max-width: 100%;
+  }
+
+  .lg-dit {
+    display: inline-table;
+  }
+
+  .lg-dt {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+  }
+
+  .lg-dtr {
+    display: table-row;
+  }
+
+  .lg-dtrg {
+    display: table-row-group;
+  }
+
+  .lg-dtc {
+    display: table-cell;
+  }
+
+  .lg-dtcol {
+    display: table-column;
+  }
+
+  .lg-dtcolg {
+    display: table-column-group;
+  }
+},{
+  .xl-dn {
+    display: none;
+  }
+
+  .xl-di {
+    display: inline;
+  }
+
+  .xl-db {
+    display: block;
+  }
+
+  .xl-dib {
+    display: inline-block;
+    max-width: 100%;
+  }
+
+  .xl-dit {
+    display: inline-table;
+  }
+
+  .xl-dt {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+  }
+
+  .xl-dtr {
+    display: table-row;
+  }
+
+  .xl-dtrg {
+    display: table-row-group;
+  }
+
+  .xl-dtc {
+    display: table-cell;
+  }
+
+  .xl-dtcol {
+    display: table-column;
+  }
+
+  .xl-dtcolg {
+    display: table-column-group;
+  }
+},{
+  .xxl-dn {
+    display: none;
+  }
+
+  .xxl-di {
+    display: inline;
+  }
+
+  .xxl-db {
+    display: block;
+  }
+
+  .xxl-dib {
+    display: inline-block;
+    max-width: 100%;
+  }
+
+  .xxl-dit {
+    display: inline-table;
+  }
+
+  .xxl-dt {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+  }
+
+  .xxl-dtr {
+    display: table-row;
+  }
+
+  .xxl-dtrg {
+    display: table-row-group;
+  }
+
+  .xxl-dtc {
+    display: table-cell;
+  }
+
+  .xxl-dtcol {
+    display: table-column;
+  }
+
+  .xxl-dtcolg {
+    display: table-column-group;
+  }
+});
