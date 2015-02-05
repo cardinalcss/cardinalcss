@@ -1,9 +1,12 @@
 {
   "name": "Cardinal",
-  "description": "a small, \"mobile first\" CSS framework by Chris Bracco",
-  "version": "2.4.5",
+  "version": "3.0.0",
   "homepage": "http://cardinalcss.com",
-  "author": "Chris Bracco",
+  "main": "cardinal.css",
+  "author": {
+    "name": "Chris Bracco"
+  },
+  "description": "Cardinal is a modular, 'mobile-first' CSS framework built with performance and scalability in mind.",
   "repository": {
     "type": "git",
     "url": "https://github.com/cbracco/cardinal.git"
@@ -11,19 +14,24 @@
   "bugs": {
     "url": "https://github.com/cbracco/cardinal/issues"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "http://opensource.org/licenses/MIT"
-    }
-  ],
-  "private": true,
+  "license": "MIT",
   "devDependencies": {
-    "grunt": "~0.4.2",
-    "grunt-autoprefixer": "~0.6.4",
-    "grunt-banner": "~0.2.0",
-    "grunt-contrib-copy": "^0.5.0",
-    "grunt-contrib-less": "^0.8.3",
-    "grunt-contrib-watch": "^0.5.3"
+    "browser-sync": "~2.0.0-rc3",
+    "del": "~1.1.1",
+    "gulp": "~3.8.10",
+    "gulp-autoprefixer": "~2.1.0",
+    "gulp-csscomb": "~3.0.3",
+    "gulp-csslint": "~0.1.5",
+    "gulp-header": "~1.2.2",
+    "gulp-less": "~2.0.1",
+    "gulp-load-plugins": "~0.8.0",
+    "gulp-minify-css": "~0.4.3",
+    "gulp-plumber": "~0.6.6",
+    "gulp-rename": "~1.2.0",
+    "gulp-size": "~1.2.0",
+    "gulp-sourcemaps": "~1.3.0",
+    "gulp-util": "~3.0.2",
+    "gulp-watch": "~4.1.0",
+    "l": "~0.0.1"
   }
 }

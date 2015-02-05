@@ -1,3 +1,17 @@
+# 3.0.0 (Feb 5, 2014)
+
+- Overhauled Cardinal (huzzah!) to function as a CSS framework only.
+  - Removed all "boilerplate" files and folders.
+  - Replaced Grunt with Gulp.
+  - Moved `test.html` to `index.html`.
+  - Updated dotfiles, `bower.json`, and `package.json`.
+  - Moved CSS and LESS files up a level, beginning in the root directory.
+  - Added a `.csscomb.json` file.
+  - Changed maximum line length from 72 to 80 characters.
+  - Added a bunch of useful utility classes.
+  - Added a simple `debug.less` file to use while developing.
+- Updated `README.md`.
+
 # 2.4.5 (November 7, 2014)
 - Removed `@viewport` CSS rules because they break Google Chrome’s "device mode" tool. They will be added back when they are needed, or when the bug has been fixed (whichever comes first).
 

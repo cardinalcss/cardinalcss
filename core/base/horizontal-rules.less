@@ -1,0 +1,10 @@
+/* ========================================================================== *\
+   Core -> Base -> Horizontal Rules ($core-base-horizontal-rules)
+\* ========================================================================== */
+
+hr {
+  display: block;
+  padding: 0;
+  border: 0;
+  .to-rem(border-top, @hr-border-width, @hr-border-style @hr-border-color);
+}

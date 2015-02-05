@@ -1,0 +1,18 @@
+/* ========================================================================== *\
+   Core -> Base -> Anchors ($core-base-anchors)
+\* ========================================================================== */
+
+a {
+  text-decoration: underline;
+  color: @anchor-text-color;
+
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: 1px dotted @color-gray-darkest;
+  }
+}
