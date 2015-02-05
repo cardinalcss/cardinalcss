@@ -37,7 +37,7 @@ function updateVersion() {
         timeout: 60 * 1000,
         success: function(results) {
             var tag = results.data;
-            $(".version").each(function() {
+            $(".js-version").each(function() {
                 $(this).append("&nbsp;<span class=\"version\">" + tag[0]["name"] + "</span>");
             });
         }

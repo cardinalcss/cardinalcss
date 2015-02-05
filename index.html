@@ -32,11 +32,74 @@
     <![endif]-->
 
     <div role="document">
-      <header role="banner"></header>
-      <nav role="navigation"></nav>
-      <main role="main"></main>
-      <aside role="complementary"></aside>
-      <footer role="contentinfo"></footer>
+      <div class="wrapper">
+        <div class="header tc">
+          <a href="/" class="logo dib mt+ mb-" role="banner">
+            <img class="logo-img" src="img/logo.min.svg" alt="Cardinal Logo">
+          </a>
+          <h1 class="logo-heading mb0">Cardinal</h1>
+          <p class="h3 mt0">Build more with less.</p>
+        </div>
+        <div class="nav tc" role="navigation">
+          <div class="btn-group">
+            <a id="header-download" href="https://github.com/cbracco/cardinal/archive/master.zip" title="Download from GitHub" class="js-version btn btn-primary md-one-third">Download</a>
+            <a id="header-view" href="https://github.com/cbracco/cardinal" title="View & contribute on GitHub" class="btn btn-secondary md-one-third">View on GitHub</a>
+          </div>
+          <p class="fz- mt-"><a id="header-changelog" href="https://github.com/cbracco/cardinal/blob/master/CHANGELOG.md">Changelog</a> &bull; <a id="header-readme" href="https://github.com/cbracco/cardinal/blob/master/README.md">Readme</a></p>
+          <hr>
+        </div>
+        <div role="main">
+          <h1>What is Cardinal?</h1>
+          <p>Cardinal is a modular, “mobile-first” CSS framework built with performance and scalability in mind.</p>
+          <p>The purpose of this framework is to make it easier for front-end web developers to prototype, build, scale, and maintain CSS for responsive websites, user interfaces, and applications. Cardinal omits many aesthetic design decisions that often bog down other CSS frameworks (which are often UI toolkits, not frameworks), leaving the design and creativity up to you.</p>
+          <hr>
+          <h1>Features</h1>
+          <ul>
+            <li>“Mobile-first” CSS written for the <a href="http://lesscss.org">LESS preprocessor</a>.</li>
+            <li><a href="https://github.com/necolas/normalize.css">normalize.css</a> baked-in.</li>
+            <li>Sensible <a href="https://github.com/cbracco/cardinal/tree/master/core">global styles</a>, <a href="https://github.com/cbracco/cardinal/tree/master/core/variables.less">variables</a>, and useful <a href="https://github.com/cbracco/cardinal/tree/master/core/mixins/">mixins</a>.</li>
+            <li>A flexible grid system and encapsulated styles for common UI objects (buttons, forms, tables, etc.)</li>
+            <li>A collection of utility classes optimized for great <a href="http://davidtheclark.com/on-utility-classes/">gzip compression</a>.</li>
+            <li>The entire framework, minified and gzipped, clocks in at a mere **11.13kB**.</li>
+          </ul>
+          <hr>
+          <h1>Getting Started</h1>
+          <p>The fastest way to get up-and-running with Cardinal is by using a package manager, like so:</p>
+          <h2>Bower</h2>
+          <pre><code>cd your-project-directory
+bower install --save cardinal</code></pre>
+          <h2>npm</h2>
+          <pre><code>cd your-project-directory
+bower install --save cardinal</code></pre>
+          <h2>Direct Download</h2>
+          <p>If you do not want to use a package manager to integrate Cardinal into your project, you can also download it directly:</p>
+          <h3>Build from Source</h3>
+          <p>To do so, you need to already have Node.js and npm installed on your machine. Cardinal uses Gulp to build and watch the CSS files.</p>
+          <pre><code>git clone git@github.com:cbracco/cardinal.git
+cd cardinal
+npm install
+gulp</code></pre>
+          <h3>Download the Zip</h3>
+          <p>You can also download the <code>.zip</code> file and proceed however you wish. Include the minified CSS file in the <code>&lt;head&gt;</code> of your project, or modify the LESS files directly (not recommended, since it will be difficult to update to future versions). It’s your world!</p>
+          <p><a href="https://github.com/cbracco/cardinal/archive/master.zip" class="btn btn-primary">Download the zip</a></p>
+          <hr>
+          <h1>Browser support</h1>
+          <p>Cardinal supports most modern browsers:</p>
+          <ul>
+            <li>Google Chrome 25+</li>
+            <li>Mozilla Firefox 19+</li>
+            <li>Safari 6.0+</li>
+            <li>iOS Safari 4.0+</li>
+            <li>Opera 12.1+</li>
+            <li>Android 4.2+</li>
+            <li>Internet Explorer 9+</li>
+          </ul>
+          <hr>
+        </div>
+        <div class="footer" role="contentinfo">
+          <p>Cardinal is a project by <a id="footer-cbracco" href="http://twitter.com/cbracco">@cbracco</a>.</p>
+        </div>
+      </div>
     </div>
 
     <!-- jQuery -->
