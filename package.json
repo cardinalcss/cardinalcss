@@ -1,11 +1,12 @@
 {
   "name": "Cardinal",
-  "description": "a small, \"mobile first\" CSS framework by Chris Bracco",
   "version": "2.4.5",
   "homepage": "http://cardinalcss.com",
+  "main": "cardinal.css",
   "author": {
     "name": "Chris Bracco"
   },
+  "description": "Cardinal is a modular, 'mobile-first' CSS framework built with performance and scalability in mind.",
   "repository": {
     "type": "git",
     "url": "https://github.com/cbracco/cardinal.git"
@@ -14,7 +15,6 @@
     "url": "https://github.com/cbracco/cardinal/issues"
   },
   "license": "MIT",
-  "private": true,
   "devDependencies": {
     "browser-sync": "~2.0.0-rc3",
     "del": "~1.1.1",
