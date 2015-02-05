@@ -43,7 +43,7 @@ Cardinal adheres to the following principles whenever possible:
 - Sensible global styles, variables, and useful mixins
 - A flexible grid system and encapsulated styles for common UI objects (buttons, forms, tables, etc.)
 - A collections of utility classes optimized for great gzip compression
-- The entire framework, minified and gzipped, clocks in at a mere **11.13kB**.
+- The entire framework, minified and gzipped, clocks in at a mere **11.13kB**
 
 # Dependencies
 
