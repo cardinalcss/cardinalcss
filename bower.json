@@ -20,10 +20,6 @@
   "ignore": [
     "**/.*",
     "package.json",
-    "index.html",
-    "gulpfile.js",
-    "*.css",
-    "*.map",
     "CONTRIBUTING.md"
   ]
 }
