@@ -47,7 +47,7 @@ Cardinal adheres to the following principles whenever possible:
 
 # Dependencies
 
-If you would like to install Cardinal the [Bower](http://bower.io/) package manager tool, you will first need to install [Node.js](http://nodejs.org/) on your machine or server. Once you have Node.js installed, make sure npm is installed ([info here](http://blog.npmjs.org/post/85484771375/how-to-install-npm)), and use it to install Bower, like so:
+If you would like to install Cardinal with the [Bower](http://bower.io/) package manager tool, you will first need to install [Node.js](http://nodejs.org/) on your machine or server. Once you have Node.js installed, make sure npm is installed ([info here](http://blog.npmjs.org/post/85484771375/how-to-install-npm)), and use it to install Bower, like so:
 
 ```
 npm install -g bower
@@ -76,7 +76,7 @@ Once installed, you can find Cardinal here:
 ```
 your-project-directory
 │
-└───node_modules
+└───bower_components
     │
     └───cardinal
 ```
