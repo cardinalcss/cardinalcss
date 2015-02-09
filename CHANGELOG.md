@@ -1,3 +1,8 @@
+# 3.0.2 (Feb 5, 2014)
+
+- Update `README.md`.
+- Comment out `core/debug.less` by default.
+
 # 3.0.1 (Feb 5, 2014)
 
 - Update `bower.json` and `README.md`.
