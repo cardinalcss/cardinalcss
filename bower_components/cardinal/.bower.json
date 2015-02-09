@@ -1,6 +1,6 @@
 {
   "name": "cardinal",
-  "version": "3.0.1",
+  "version": "3.0.3",
   "homepage": "http://cardinalcss.com",
   "main": "cardinal.css",
   "authors": [
@@ -22,14 +22,13 @@
     "package.json",
     "CONTRIBUTING.md"
   ],
-  "_release": "3.0.1",
+  "_release": "3.0.3",
   "_resolution": {
     "type": "version",
-    "tag": "3.0.1",
-    "commit": "214ca53a35a843bf6157ffb74a5464377505bf11"
+    "tag": "3.0.3",
+    "commit": "e9be504dcbea5519f46bd5620f4b4a6c28fb3362"
   },
   "_source": "git://github.com/cbracco/cardinal.git",
   "_target": "~3.0.1",
-  "_originalSource": "cardinal",
-  "_direct": true
+  "_originalSource": "cardinal"
 }
