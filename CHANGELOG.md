@@ -1,4 +1,8 @@
-# 3.0.2 (Feb 5, 2014)
+# 3.0.3 (Feb 9, 2014)
+
+- Add `:disabled` to disabled button styles.
+
+# 3.0.2 (Feb 9, 2014)
 
 - Update `README.md`.
 - Comment out `core/debug.less` by default.
