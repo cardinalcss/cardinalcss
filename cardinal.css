@@ -1862,6 +1862,7 @@ td {
 .btn:focus {
   outline: thin dotted #222222;
 }
+.btn:disabled,
 .btn[disabled],
 .btn.is-disabled {
   cursor: not-allowed;
