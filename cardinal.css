@@ -1,4 +1,4 @@
-/*! Cardinal v3.0.0 | MIT License | http://cardinalcss.com */
+/*! Cardinal v3.0.2 | MIT License | http://cardinalcss.com */
 @charset "UTF-8";
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
@@ -483,100 +483,6 @@ iframe {
  */
 [tabindex="-1"]:focus {
   outline: none !important;
-}
-/* ========================================================================== *\
-   Core -> Debug ($core-debug)
-\* ========================================================================== */
-/**
- * Images require `alt` attributes, empty `alt` is fine but should be
- * double-checked, no `alt` is bad.
- */
-img {
-  outline: 5px solid red !important;
-}
-img[alt] {
-  outline: none !important;
-}
-img[alt=""] {
-  outline: 5px solid yellow !important;
-}
-/**
- * Double-check any links whose `href` is something questionable.
- */
-a[href=""],
-a[href="#"],
-a[href*="javascript"] {
-  outline: 5px solid yellow !important;
-}
-/**
- * Try to avoid using the `target` attribute.
- */
-a[target] {
-  outline: 5px solid yellow !important;
-}
-/**
- * Ensure any lists only contain <li> as children.
- */
-ul > *:not(li),
-ol > *:not(li) {
-  outline: 5px solid red !important;
-}
-/**
- * It's always nice to give <th> the `scope` attribute.
- */
-th {
-  outline: 5px solid yellow !important;
-}
-th[scope] {
-  outline: none !important;
-}
-/**
- * <tr> as child of <table> ain't great, did you need a <thead> or <tbody>?
- */
-table > tr {
-  outline: 5px solid yellow !important;
-}
-/**
- * `tfoot` needs to come *before* `tbody`.
- */
-tbody + tfoot {
-  outline: 5px solid yellow !important;
-}
-/**
- * Forms require `action` attributes.
- */
-form {
-  outline: 5px solid red !important;
-}
-form[action] {
-  outline: none !important;
-}
-/**
- * Various form-field types have required attributes. <input> needs a `type`
- * attribute, <textarea> needs `rows` and `cols` attributes, and submit buttons
- * need a `value` attribute.
- */
-textarea,
-input {
-  outline: 5px solid red !important;
-}
-input[type] {
-  outline: none !important;
-}
-textarea[rows][cols] {
-  outline: none !important;
-}
-input[type=submit] {
-  outline: 5px solid red !important;
-}
-input[type=submit][value] {
-  outline: none !important;
-}
-/**
- * Avoid inline styles wherever possible.
- */
-[style] {
-  outline: 5px solid yellow !important;
 }
 /* ========================================================================== *\
    Core -> Base -> Root ($core-base-root)
