@@ -1,4 +1,4 @@
-/*! Cardinal v3.0.2 | MIT License | http://cardinalcss.com */
+/*! Cardinal v3.0.3 | MIT License | http://cardinalcss.com */
 @charset "UTF-8";
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
@@ -1209,8 +1209,10 @@ td {
   /*rem*/ max-width: 64rem;
   margin: 0 auto;
 }
-@print {
-  width: auto;
+@media print {
+  .wrapper {
+    width: auto;
+  }
 }
 /**
  * Force `.wrapper` to sit flush with its parent.
