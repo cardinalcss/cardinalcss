@@ -1,3 +1,7 @@
+# 3.0.4 (Feb 16, 2014)
+
+- Fix `@print` typo in `layout/wrappers.less`.
+
 # 3.0.3 (Feb 9, 2014)
 
 - Add `:disabled` to disabled button styles.
