@@ -1,3 +1,7 @@
+# 3.0.5 (Feb 18, 2014)
+
+- Add `!important` to utility classes.
+
 # 3.0.4 (Feb 16, 2014)
 
 - Fix `@print` typo in `layout/wrappers.less`.
