@@ -21,18 +21,20 @@
 
 /**
  * Grid items
- * 1. `.grid-item` elements are 100% width by default.
- * 2. Default gutter width = @grid-gutter-base.
- * 3. Ensure `.grid-item` is aligned to the top of its container.
- * 4. Reset font size to the global default.
+ * 1. Remove default styles in case `.grid` is on a <ul> or <ol> element.
+ * 2. `.grid-item` elements are 100% width by default.
+ * 3. Default gutter width = @grid-gutter-base.
+ * 4. Ensure `.grid-item` is aligned to the top of its container.
+ * 5. Reset font size to the global default.
  */
 
 .grid-item {
   display: inline-block;
-  width: 100%;                              /* 1 */
-  .to-rem(padding-left, @grid-gutter-base); /* 2 */
-  vertical-align: top;                      /* 3 */
-  .to-rem(font-size, @font-size);           /* 4 */
+  margin: 0;                                /* 1 */
+  width: 100%;                              /* 2 */
+  .to-rem(padding-left, @grid-gutter-base); /* 3 */
+  vertical-align: top;                      /* 4 */
+  .to-rem(font-size, @font-size);           /* 5 */
 }
 
 /**
