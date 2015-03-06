@@ -14,6 +14,7 @@ Build more with less.
 - [Getting Started](#getting-started)
   - [Package Managers](#package-managers)
     - [Updating Cardinal](#updating-cardinal)
+  - [LESS Plugin](#less-plugin)
   - [Direct Download](#direct-download)
 - [Browser Support](#browser-support)
 - [Contributing](#contributing)
@@ -90,6 +91,23 @@ bower update cardinal
 ```
 
 **NOTE:** This is the recommended way to use Cardinal. It should never be edited directly so you can keep it updated. Instead of modifying Cardinal’s source, you are encouraged `@import` Cardinal into your own `your-project.less` file and create your own `.less` files where you can override default variables and extend styles.
+
+## LESS Plugin
+
+There is also a [LESS.js plugin available](https://github.com/bassjobsen/less-plugin-cardinal) for Cardinal, created and maintained by [@bassjobsen](https://github.com/bassjobsen). You can use this plugin to include Cardinal in your project before your custom project code.
+
+**Installation**
+
+```
+npm install less
+npm install less-plugin-cardinal
+```
+
+**Usage**
+
+```
+lessc custom.less --cardinal
+```
 
 ## Direct Download
 
