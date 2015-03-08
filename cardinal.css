@@ -1879,7 +1879,9 @@ td {
 /**
  * Shapes
  */
-.btn-round {
+.btn-round,
+input[type="button"].btn-round,
+input[type="submit"].btn-round {
   /*px*/ border-radius: 3px;
   /*rem*/ border-radius: 0.1875rem;
 }
