@@ -1,3 +1,8 @@
+# 3.1.0 (March 8, 2015)
+
+- Remove `@root-font-family`, `@root-font-size`, and `@root-line-height` variables because they were causing problems. Using `@font-family-*`, `@font-size`, and `@line-height` variables instead as root.
+- Use `@font-size-0` variable in `layout/grids.less` instead of `font-size: 0;`
+
 # 3.0.7 (March 8, 2015)
 
 - Fix `.btn-round` bug for `input[type="button"]` and `input[type="submit"]` elements.
