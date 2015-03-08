@@ -1,29 +1,33 @@
-# 3.0.6 (Feb 25, 2015)
+# 3.0.7 (March 8, 2015)
+
+- Fix `.btn-round` bug for `input[type="button"]` and `input[type="submit"]` elements.
+
+# 3.0.6 (February 25, 2015)
 
 - Remove default margin for `.grid-item` elements on `li` elements (thanks, @bassjobsen!).
 
-# 3.0.5 (Feb 18, 2015)
+# 3.0.5 (February 18, 2015)
 
 - Add `!important` to utility classes.
 
-# 3.0.4 (Feb 16, 2015)
+# 3.0.4 (February 16, 2015)
 
 - Fix `@print` typo in `layout/wrappers.less`.
 
-# 3.0.3 (Feb 9, 2015)
+# 3.0.3 (February 9, 2015)
 
 - Add `:disabled` to disabled button styles.
 
-# 3.0.2 (Feb 9, 2015)
+# 3.0.2 (February 9, 2015)
 
 - Update `README.md`.
 - Comment out `core/debug.less` by default.
 
-# 3.0.1 (Feb 5, 2015)
+# 3.0.1 (February 5, 2015)
 
 - Update `bower.json` and `README.md`.
 
-# 3.0.0 (Feb 5, 2015)
+# 3.0.0 (February 5, 2015)
 
 - Overhauled Cardinal (huzzah!) to function as a CSS framework only.
   - Removed all "boilerplate" files and folders.
