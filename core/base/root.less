@@ -26,11 +26,11 @@
  */
 
 html {
-  font-family: @root-font-family;
-  .to-rem(font-size, @root-font-size); /* 1 */
-  line-height: @root-line-height;      /* 1 */
-  overflow-y: scroll;                  /* 2 */
-  height: 100%;                        /* 3 */
+  font-family: @font-family-sans-serif;
+  .to-rem(font-size, @font-size);  /* 1 */
+  line-height: @line-height-ratio; /* 1 */
+  overflow-y: scroll;              /* 2 */
+  height: 100%;                    /* 3 */
   background-color: @root-background-color;
   color: @root-text-color;
 }
