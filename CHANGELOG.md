@@ -1,3 +1,9 @@
+# 3.2.0 (May 11, 2015)
+
+- Remove `::selection` styles because they cause iOS 8 to crash in certain scenarios.
+- Simplify directory structure for LESS partials
+- Add `.list-reset` component modifier.
+
 # 3.1.0 (March 8, 2015)
 
 - Remove `@root-font-family`, `@root-font-size`, and `@root-line-height` variables because they were causing problems. Using `@font-family-*`, `@font-size`, and `@line-height` variables instead as root.
