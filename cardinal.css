@@ -359,7 +359,7 @@ th {
   padding: 0;
 }
 /* ========================================================================== *\
-   Core -> Reset ($core-reset)
+   Base -> Reset ($base-reset)
 \* ========================================================================== */
 /**
  * `border-box`... ALL THE THINGS!
@@ -485,7 +485,7 @@ iframe {
   outline: none !important;
 }
 /* ========================================================================== *\
-   Core -> Base -> Root ($core-base-root)
+   Base -> Root ($base-root)
 \* ========================================================================== */
 /**
  * The <html> element.
@@ -577,51 +577,7 @@ th {
           hyphens: auto;
 }
 /* ========================================================================== *\
-   Core -> Base -> Selections ($core-base-selections)
-\* ========================================================================== */
-/**
- * 1. Customize `background` for text selections.
- * 2. Remove `text-shadow` selection highlight.
- *    @link http://cbrac.co/Q6swON
- */
-::-moz-selection {
-  background: #b3d4fc;
-  /* 1 */
-  text-shadow: none;
-  /* 2 */
-  /**
-   * Change `background` for text selections when browser is unfocused
-   */
-  /**
-   * Remove `background` on images when selected
-   */
-}
-::selection {
-  background: #b3d4fc;
-  /* 1 */
-  text-shadow: none;
-  /* 2 */
-  /**
-   * Change `background` for text selections when browser is unfocused
-   */
-  /**
-   * Remove `background` on images when selected
-   */
-}
-::-moz-selection:window-inactive {
-  background: #dedede;
-}
-::selection:window-inactive {
-  background: #dedede;
-}
-img::-moz-selection {
-  background: transparent;
-}
-img::selection {
-  background: transparent;
-}
-/* ========================================================================== *\
-   Core -> Base -> Anchors ($core-base-anchors)
+   Base -> Anchors ($base-anchors)
 \* ========================================================================== */
 a {
   text-decoration: underline;
@@ -636,7 +592,7 @@ a:focus {
   outline: 1px dotted #222222;
 }
 /* ========================================================================== *\
-   Core -> Base -> Text Elements ($core-base-text-elements)
+   Base -> Text Elements ($base-text-elements)
 \* ========================================================================== */
 /**
  * Add a help cursor to elements that need one.
@@ -701,7 +657,7 @@ mark {
   background: #ffff99;
 }
 /* ========================================================================== *\
-   Core -> Base -> Headings ($core-base-headings)
+   Base -> Headings ($base-headings)
 \* ========================================================================== */
 /**
  * 1. Use the `text-rendering` property with caution.
@@ -750,51 +706,7 @@ h6,
   /*rem*/ font-size: 0.875rem;
 }
 /* ========================================================================== *\
-   Objects -> Blockquotes ($objects-blockquotes)
-\* ========================================================================== */
-blockquote {
-  color: #777777;
-  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
-  font-style: italic;
-  /*px*/ font-size: 24px;
-  /*rem*/ font-size: 1.5rem;
-  /*px*/ margin-left: 24px;
-  /*rem*/ margin-left: 1.5rem;
-  /*px*/ padding-left: 24px;
-  /*rem*/ padding-left: 1.5rem;
-  /*px*/ border-left: 6px solid #dedede;
-  /*rem*/ border-left: 0.375rem solid #dedede;
-  /**
-   * Use <cite> inside blockquotes.
-   *
-   * @link http://cbrac.co/18LWCOw
-   */
-}
-blockquote p {
-  margin: 0;
-}
-blockquote p + p {
-  /*px*/ margin-top: 24px;
-  /*rem*/ margin-top: 1.5rem;
-}
-blockquote cite {
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-  font-style: normal;
-  /*px*/ font-size: 14px;
-  /*rem*/ font-size: 0.875rem;
-  color: #777777;
-  /**
-     * Add an m-dash character before the <cite> tag.
-     */
-}
-blockquote cite:before {
-  content: "\2014 \0020";
-}
-blockquote cite a {
-  color: #777777;
-}
-/* ========================================================================== *\
-   Core -> Base -> Lists ($core-base-lists)
+   Base -> Lists ($base-lists)
 \* ========================================================================== */
 /**
  * Set some basic styles for definition lists.
@@ -839,7 +751,7 @@ ul ul {
   margin-bottom: 0;
 }
 /* ========================================================================== *\
-   Core -> Base -> Horizontal Rules ($core-base-horizontal-rules)
+   Base -> Horizontal Rules ($base-horizontal-rules)
 \* ========================================================================== */
 hr {
   display: block;
@@ -849,7 +761,51 @@ hr {
   /*rem*/ border-top: 0.0625rem solid #dedede;
 }
 /* ========================================================================== *\
-   Objects -> Code ($objects-code)
+   Base -> Blockquotes ($base-blockquotes)
+\* ========================================================================== */
+blockquote {
+  color: #777777;
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  font-style: italic;
+  /*px*/ font-size: 24px;
+  /*rem*/ font-size: 1.5rem;
+  /*px*/ margin-left: 24px;
+  /*rem*/ margin-left: 1.5rem;
+  /*px*/ padding-left: 24px;
+  /*rem*/ padding-left: 1.5rem;
+  /*px*/ border-left: 6px solid #dedede;
+  /*rem*/ border-left: 0.375rem solid #dedede;
+  /**
+   * Use <cite> inside blockquotes.
+   *
+   * @link http://cbrac.co/18LWCOw
+   */
+}
+blockquote p {
+  margin: 0;
+}
+blockquote p + p {
+  /*px*/ margin-top: 24px;
+  /*rem*/ margin-top: 1.5rem;
+}
+blockquote cite {
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-style: normal;
+  /*px*/ font-size: 14px;
+  /*rem*/ font-size: 0.875rem;
+  color: #777777;
+  /**
+     * Add an m-dash character before the <cite> tag.
+     */
+}
+blockquote cite:before {
+  content: "\2014 \0020";
+}
+blockquote cite a {
+  color: #777777;
+}
+/* ========================================================================== *\
+   Base -> Code ($base-code)
 \* ========================================================================== */
 /**
  * 1. Correct `font-family` set oddly in Safari 5 and Chrome.
@@ -924,7 +880,7 @@ pre code {
   background: transparent;
 }
 /* ========================================================================== *\
-   Core -> Base -> Embedded Content ($core-base-embedded-content)
+   Base -> Embedded Content ($base-embedded-content)
 \* ========================================================================== */
 /**
  * Remove the gap between audio, canvas, iframes, images, videos and the bottom
@@ -1004,7 +960,7 @@ img {
   /* 2 */
 }
 /* ========================================================================== *\
-   Core -> Base -> Form Elements ($core-base-form-elements)
+   Base -> Form Elements ($base-form-elements)
 \* ========================================================================== */
 /**
  * 1. Avoid the WebKit bug in Android 4.0.* where [2] destroys native
@@ -1128,7 +1084,7 @@ textarea {
   /* 3 */
 }
 /* ========================================================================== *\
-   Core -> Base -> Tables ($core-base-tables)
+   Base -> Tables ($base-tables)
 \* ========================================================================== */
 table {
   width: 100%;
@@ -1143,7 +1099,7 @@ td {
   overflow: visible;
 }
 /* ========================================================================== *\
-   Core -> Base -> Print ($core-base-print)
+   Base -> Print ($base-print)
 \* ========================================================================== */
 @media print {
   /* 1. Black prints faster - http://cbrac.co/XvusCs */
@@ -1201,6 +1157,392 @@ td {
   }
 }
 /* ========================================================================== *\
+   Layout -> Boxes ($layout-boxes)
+\* ========================================================================== */
+.box {
+  display: block;
+  /*px*/ padding: 24px;
+  /*rem*/ padding: 1.5rem;
+  background-color: #efefef;
+}
+.box > *:last-child {
+  margin-bottom: 0;
+}
+/**
+ * Give `.box` a border style.
+ */
+.box-border {
+  /*px*/ border: 1px solid #dedede;
+  /*rem*/ border: 0.0625rem solid #dedede;
+}
+/**
+ * Give `.box` rounded edges.
+ */
+.box-round {
+  /*px*/ border-radius: 3px;
+  /*rem*/ border-radius: 0.1875rem;
+}
+/**
+ * Remove padding from default `.box`.
+ */
+.box-flush {
+  padding: 0;
+}
+/**
+ * Give `.box` the appearance of being raised above its surrounding area.
+ */
+.box-raise {
+  /*px*/ box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+  /*rem*/ box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.15);
+}
+/**
+ * Give `.box` the appearance of being sunken beneath its surrounding area.
+ */
+.box-sink {
+  /*px*/ box-shadow: 0 0 8px rgba(0, 0, 0, 0.15) inset;
+  /*rem*/ box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.15) inset;
+}
+/* ========================================================================== *\
+   Objects -> Buttons ($objects-buttons)
+\* ========================================================================== */
+.btn {
+  font-family: inherit;
+  font-weight: 700;
+  line-height: 1.5;
+  display: inline-block;
+  margin: 0;
+  /*px*/ padding: 10px 14px;
+  /*rem*/ padding: 0.625rem 0.875rem;
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  text-decoration: none;
+  color: #444444;
+  border: 0 none;
+  background-color: #dedede;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /**
+   * States
+   */
+  /**
+   * Provide a consistent button focus style across browsers.
+   */
+}
+.btn:hover {
+  background-color: #e3e3e3;
+}
+.btn:active,
+.btn.is-active {
+  background-color: #d9d9d9;
+  /*px*/ box-shadow: 0 0 8px rgba(0, 0, 0, 0.25) inset;
+  /*rem*/ box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25) inset;
+}
+.btn:active:focus {
+  outline: 0 none;
+}
+.btn:focus {
+  outline: thin dotted #222222;
+}
+.btn:disabled,
+.btn[disabled],
+.btn.is-disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.50;
+  box-shadow: none;
+  text-shadow: none;
+}
+/**
+ * Shapes
+ */
+.btn-round,
+input[type="button"].btn-round,
+input[type="submit"].btn-round {
+  /*px*/ border-radius: 3px;
+  /*rem*/ border-radius: 0.1875rem;
+}
+/**
+ * Sizes
+ */
+.btn-xs {
+  /*px*/ font-size: 12px;
+  /*rem*/ font-size: 0.75rem;
+  /*px*/ padding: 4px 8px;
+  /*rem*/ padding: 0.25rem 0.5rem;
+}
+.btn-sm {
+  /*px*/ font-size: 13px;
+  /*rem*/ font-size: 0.8125rem;
+  /*px*/ padding: 6px 10px;
+  /*rem*/ padding: 0.375rem 0.625rem;
+}
+.btn-block {
+  display: block;
+}
+@media (min-width: 960px) {
+  .btn-lg,
+  .btn-block {
+    /*px*/ font-size: 20px;
+    /*rem*/ font-size: 1.25rem;
+    /*px*/ padding: 16px 24px;
+    /*rem*/ padding: 1rem 1.5rem;
+  }
+}
+/**
+ * Colors
+ */
+.btn-primary {
+  color: #ffffff;
+  background-color: #1fa3ec;
+}
+.btn-primary:hover {
+  background-color: #32abee;
+}
+.btn-primary:active,
+.btn-primary.is-active {
+  background-color: #1399e3;
+}
+/**
+ * Groups
+ */
+.btn-group .btn {
+  /*px*/ margin: 0 2px;
+  /*rem*/ margin: 0 0.125rem;
+}
+.btn-group .btn.btn-lg {
+  /*px*/ margin: 0 4px;
+  /*rem*/ margin: 0 0.25rem;
+}
+.btn-group .btn:first-child {
+  margin-left: 0;
+}
+.btn-group .btn:last-child {
+  margin-right: 0;
+}
+/* ========================================================================== *\
+   Objects -> Forms ($objects-forms)
+\* ========================================================================== */
+.form-label {
+  display: inline-block;
+}
+.form-label + .form-input,
+.form-label + .form-select,
+.form-label + .form-textarea {
+  /*px*/ margin-top: 4px;
+  /*rem*/ margin-top: 0.25rem;
+}
+/**
+ * Give certain <input>, <select>, and <textarea> elements some default
+ * styles
+ */
+.form-input[type="date"],
+.form-input[type="datetime"],
+.form-input[type="datetime-local"],
+.form-input[type="email"],
+.form-input[type="month"],
+.form-input[type="number"],
+.form-input[type="password"],
+.form-input[type="search"],
+.form-input[type="tel"],
+.form-input[type="text"],
+.form-input[type="time"],
+.form-input[type="url"],
+.form-input[type="week"],
+.form-select,
+.form-textarea {
+  line-height: 1.5;
+  display: block;
+  width: 100%;
+  /*px*/ height: 44px;
+  /*rem*/ height: 2.75rem;
+  /*px*/ padding: 8px;
+  /*rem*/ padding: 0.5rem;
+  color: #222222;
+  /*px*/ border: 1px solid #dedede;
+  /*rem*/ border: 0.0625rem solid #dedede;
+  outline: 0 none;
+}
+.form-input[type="date"]:focus,
+.form-input[type="datetime"]:focus,
+.form-input[type="datetime-local"]:focus,
+.form-input[type="email"]:focus,
+.form-input[type="month"]:focus,
+.form-input[type="number"]:focus,
+.form-input[type="password"]:focus,
+.form-input[type="search"]:focus,
+.form-input[type="tel"]:focus,
+.form-input[type="text"]:focus,
+.form-input[type="time"]:focus,
+.form-input[type="url"]:focus,
+.form-input[type="week"]:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-color: #1fa3ec;
+  outline: 0 none;
+}
+/**
+ * 1. Increase padding to correct line-height in Firefox
+ * 2. Give <select> menus a solid background color
+ */
+.form-select {
+  /*px*/ padding: 10px;
+  /*rem*/ padding: 0.625rem;
+  /* 1 */
+  background: #f8f8f8;
+  /* 2 */
+}
+.form-input-round {
+  /*px*/ border-radius: 3px;
+  /*rem*/ border-radius: 0.1875rem;
+}
+/* ========================================================================== *\
+   Objects -> Lists ($objects-lists)
+\* ========================================================================== */
+/**
+ * Bare Lists
+ *
+ * Use to remove default list styles from <ol> and <ul> elements.
+ */
+.list-bare {
+  list-style: none;
+}
+.list-bare li {
+  margin-left: 0;
+}
+/**
+ * Reset Lists
+ *
+ * Use to remove all list styles from <ol> and <ul> elements.
+ */
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.list-reset li {
+  margin-left: 0;
+}
+/**
+ * Inline Lists
+ *
+ * Create inline-style list items with <ol> and <ul> elements.
+ */
+.list-inline {
+  list-style: none;
+  padding: 0;
+}
+.list-inline li {
+  display: inline;
+  margin-left: 0;
+}
+/**
+ * Delimited lists
+ */
+.list-inline-delimited > li + li:before {
+  content: ",\00A0";
+}
+/* ========================================================================== *\
+   Objects -> Tables ($objects-tables)
+\* ========================================================================== */
+/**
+ * Wrap a <table> with a `.table-container` element to add horizontal scrolling
+ * if the <table> contents overflow its grandparent.
+ */
+.table-container {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+/* Default, borderless */
+.table {
+  width: 100%;
+  max-width: 100%;
+}
+.table caption {
+  font-weight: 700;
+  font-style: italic;
+  /*px*/ padding-bottom: 4px;
+  /*rem*/ padding-bottom: 0.25rem;
+}
+.table th,
+.table tfoot td {
+  font-weight: 700;
+  text-align: left;
+  color: #222222;
+}
+.table thead th,
+.table tfoot td {
+  background-color: #efefef;
+}
+.table th,
+.table td {
+  /*px*/ padding: 8px;
+  /*rem*/ padding: 0.5rem;
+  vertical-align: top;
+}
+/**
+ * Give the <table> element an outer border.
+ */
+.table-border {
+  /*px*/ border: 1px solid #dedede;
+  /*rem*/ border: 0.0625rem solid #dedede;
+}
+/**
+ * Give the <table> element inner cell borders.
+ */
+.table-border-cells th,
+.table-border-cells td {
+  /*px*/ border-top: 1px solid #dedede;
+  /*rem*/ border-top: 0.0625rem solid #dedede;
+  /*px*/ border-left: 1px solid #dedede;
+  /*rem*/ border-left: 0.0625rem solid #dedede;
+}
+/**
+ * Give Give the <table> inner row borders.
+ */
+.table-border-rows th,
+.table-border-rows td {
+  /*px*/ border-top: 1px solid #dedede;
+  /*rem*/ border-top: 0.0625rem solid #dedede;
+}
+/**
+ * Remove border on 1st-row cells to avoid a double border.
+ */
+.table-border.table-border-cells thead:first-child tr:first-child th,
+.table-border.table-border-cells thead:first-child tr:first-child td,
+.table-border.table-border-rows thead:first-child tr:first-child th,
+.table-border.table-border-rows thead:first-child tr:first-child td {
+  border-top: 0;
+}
+/**
+ * Remove border on 1st cells in every row to create a grid effect.
+ */
+.table-border-cells tr th:first-child,
+.table-border-cells tr td:first-child {
+  border-left: 0;
+}
+/**
+ * Remove border on 1st-row cells to create a grid effect.
+ */
+.table-border-cells tr:first-child th,
+.table-border-cells thead:first-child tr:first-child th {
+  border-top: 0;
+}
+/**
+ * Add a bottom border to the last row in the table.
+ */
+.table-border-rows tr:last-child td {
+  /*px*/ border-bottom: 1px solid #dedede;
+  /*rem*/ border-bottom: 0.0625rem solid #dedede;
+}
+/**
+ * Alternate `background-color` for all table rows.
+ */
+.table-striped tbody > tr:nth-child(odd) > td {
+  background-color: #f8f8f8;
+}
+/* ========================================================================== *\
    Layout -> Wrappers ($layout-wrappers)
 \* ========================================================================== */
 .wrapper {
@@ -1253,7 +1595,7 @@ td {
 }
 /**
  * Grid items
- * 1. Remove default styles in case `.grid` is on a <ul> or <ol> element.
+ * 1. Remove default styles in case `.grid-item` is on an <li> element.
  * 2. `.grid-item` elements are 100% width by default.
  * 3. Default gutter width = @grid-gutter-base.
  * 4. Ensure `.grid-item` is aligned to the top of its container.
@@ -1261,7 +1603,7 @@ td {
  */
 .grid-item {
   display: inline-block;
-  margin: 0;
+  margin-left: 0;
   /* 1 */
   width: 100%;
   /* 2 */
@@ -1777,379 +2119,6 @@ td {
  */
 .grid-shrink-wrap > .grid-item {
   width: auto;
-}
-/* ========================================================================== *\
-   Layout -> Boxes ($layout-boxes)
-\* ========================================================================== */
-.box {
-  display: block;
-  /*px*/ padding: 24px;
-  /*rem*/ padding: 1.5rem;
-  background-color: #efefef;
-}
-.box > *:last-child {
-  margin-bottom: 0;
-}
-/**
- * Give `.box` a border style.
- */
-.box-border {
-  /*px*/ border: 1px solid #dedede;
-  /*rem*/ border: 0.0625rem solid #dedede;
-}
-/**
- * Give `.box` rounded edges.
- */
-.box-round {
-  /*px*/ border-radius: 3px;
-  /*rem*/ border-radius: 0.1875rem;
-}
-/**
- * Remove padding from default `.box`.
- */
-.box-flush {
-  padding: 0;
-}
-/**
- * Give `.box` the appearance of being raised above its surrounding area.
- */
-.box-raise {
-  /*px*/ box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
-  /*rem*/ box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.15);
-}
-/**
- * Give `.box` the appearance of being sunken beneath its surrounding area.
- */
-.box-sink {
-  /*px*/ box-shadow: 0 0 8px rgba(0, 0, 0, 0.15) inset;
-  /*rem*/ box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.15) inset;
-}
-/* ========================================================================== *\
-   Objects -> Buttons ($objects-buttons)
-\* ========================================================================== */
-.btn {
-  font-family: inherit;
-  font-weight: 700;
-  line-height: 1.5;
-  display: inline-block;
-  margin: 0;
-  /*px*/ padding: 10px 14px;
-  /*rem*/ padding: 0.625rem 0.875rem;
-  cursor: pointer;
-  text-align: center;
-  vertical-align: middle;
-  white-space: nowrap;
-  text-decoration: none;
-  color: #444444;
-  border: 0 none;
-  background-color: #dedede;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  /**
-   * States
-   */
-  /**
-   * Provide a consistent button focus style across browsers.
-   */
-}
-.btn:hover {
-  background-color: #e3e3e3;
-}
-.btn:active,
-.btn.is-active {
-  background-color: #d9d9d9;
-  /*px*/ box-shadow: 0 0 8px rgba(0, 0, 0, 0.25) inset;
-  /*rem*/ box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25) inset;
-}
-.btn:active:focus {
-  outline: 0 none;
-}
-.btn:focus {
-  outline: thin dotted #222222;
-}
-.btn:disabled,
-.btn[disabled],
-.btn.is-disabled {
-  cursor: not-allowed;
-  pointer-events: none;
-  opacity: 0.50;
-  box-shadow: none;
-  text-shadow: none;
-}
-/**
- * Shapes
- */
-.btn-round,
-input[type="button"].btn-round,
-input[type="submit"].btn-round {
-  /*px*/ border-radius: 3px;
-  /*rem*/ border-radius: 0.1875rem;
-}
-/**
- * Sizes
- */
-.btn-xs {
-  /*px*/ font-size: 12px;
-  /*rem*/ font-size: 0.75rem;
-  /*px*/ padding: 4px 8px;
-  /*rem*/ padding: 0.25rem 0.5rem;
-}
-.btn-sm {
-  /*px*/ font-size: 13px;
-  /*rem*/ font-size: 0.8125rem;
-  /*px*/ padding: 6px 10px;
-  /*rem*/ padding: 0.375rem 0.625rem;
-}
-.btn-block {
-  display: block;
-}
-@media (min-width: 960px) {
-  .btn-lg,
-  .btn-block {
-    /*px*/ font-size: 20px;
-    /*rem*/ font-size: 1.25rem;
-    /*px*/ padding: 16px 24px;
-    /*rem*/ padding: 1rem 1.5rem;
-  }
-}
-/**
- * Colors
- */
-.btn-primary {
-  color: #ffffff;
-  background-color: #1fa3ec;
-}
-.btn-primary:hover {
-  background-color: #32abee;
-}
-.btn-primary:active,
-.btn-primary.is-active {
-  background-color: #1399e3;
-}
-/**
- * Groups
- */
-.btn-group .btn {
-  /*px*/ margin: 0 2px;
-  /*rem*/ margin: 0 0.125rem;
-}
-.btn-group .btn.btn-lg {
-  /*px*/ margin: 0 4px;
-  /*rem*/ margin: 0 0.25rem;
-}
-.btn-group .btn:first-child {
-  margin-left: 0;
-}
-.btn-group .btn:last-child {
-  margin-right: 0;
-}
-/* ========================================================================== *\
-   Objects -> Forms ($objects-forms)
-\* ========================================================================== */
-.form-label {
-  display: inline-block;
-}
-.form-label + .form-input,
-.form-label + .form-select,
-.form-label + .form-textarea {
-  /*px*/ margin-top: 4px;
-  /*rem*/ margin-top: 0.25rem;
-}
-/**
- * Give certain <input>, <select>, and <textarea> elements some default
- * styles
- */
-.form-input[type="date"],
-.form-input[type="datetime"],
-.form-input[type="datetime-local"],
-.form-input[type="email"],
-.form-input[type="month"],
-.form-input[type="number"],
-.form-input[type="password"],
-.form-input[type="search"],
-.form-input[type="tel"],
-.form-input[type="text"],
-.form-input[type="time"],
-.form-input[type="url"],
-.form-input[type="week"],
-.form-select,
-.form-textarea {
-  line-height: 1.5;
-  display: block;
-  width: 100%;
-  /*px*/ height: 44px;
-  /*rem*/ height: 2.75rem;
-  /*px*/ padding: 8px;
-  /*rem*/ padding: 0.5rem;
-  color: #222222;
-  /*px*/ border: 1px solid #dedede;
-  /*rem*/ border: 0.0625rem solid #dedede;
-  outline: 0 none;
-}
-.form-input[type="date"]:focus,
-.form-input[type="datetime"]:focus,
-.form-input[type="datetime-local"]:focus,
-.form-input[type="email"]:focus,
-.form-input[type="month"]:focus,
-.form-input[type="number"]:focus,
-.form-input[type="password"]:focus,
-.form-input[type="search"]:focus,
-.form-input[type="tel"]:focus,
-.form-input[type="text"]:focus,
-.form-input[type="time"]:focus,
-.form-input[type="url"]:focus,
-.form-input[type="week"]:focus,
-.form-select:focus,
-.form-textarea:focus {
-  border-color: #1fa3ec;
-  outline: 0 none;
-}
-/**
- * 1. Increase padding to correct line-height in Firefox
- * 2. Give <select> menus a solid background color
- */
-.form-select {
-  /*px*/ padding: 10px;
-  /*rem*/ padding: 0.625rem;
-  /* 1 */
-  background: #f8f8f8;
-  /* 2 */
-}
-.form-input-round {
-  /*px*/ border-radius: 3px;
-  /*rem*/ border-radius: 0.1875rem;
-}
-/* ========================================================================== *\
-   Objects -> Lists ($objects-lists)
-\* ========================================================================== */
-/**
- * Bare Lists
- *
- * Use to remove default list styles from <ol> and <ul> elements.
- */
-.list-bare {
-  list-style: none;
-}
-.list-bare li {
-  margin-left: 0;
-}
-/**
- * Inline Lists
- *
- * Create inline-style list items with <ol> and <ul> elements.
- */
-.list-inline {
-  list-style: none;
-  padding: 0;
-}
-.list-inline li {
-  display: inline;
-  margin-left: 0;
-}
-/**
- * Delimited lists
- */
-.list-inline-delimited > li + li:before {
-  content: ",\00A0";
-}
-/* ========================================================================== *\
-   Objects -> Tables ($objects-tables)
-\* ========================================================================== */
-/**
- * Wrap a <table> with a `.table-container` element to add horizontal scrolling
- * if the <table> contents overflow its grandparent.
- */
-.table-container {
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
-}
-/* Default, borderless */
-.table {
-  width: 100%;
-  max-width: 100%;
-}
-.table caption {
-  font-weight: 700;
-  font-style: italic;
-  /*px*/ padding-bottom: 4px;
-  /*rem*/ padding-bottom: 0.25rem;
-}
-.table th,
-.table tfoot td {
-  font-weight: 700;
-  text-align: left;
-  color: #222222;
-}
-.table thead th,
-.table tfoot td {
-  background-color: #efefef;
-}
-.table th,
-.table td {
-  /*px*/ padding: 8px;
-  /*rem*/ padding: 0.5rem;
-  vertical-align: top;
-}
-/**
- * Give the <table> element an outer border.
- */
-.table-border {
-  /*px*/ border: 1px solid #dedede;
-  /*rem*/ border: 0.0625rem solid #dedede;
-}
-/**
- * Give the <table> element inner cell borders.
- */
-.table-border-cells th,
-.table-border-cells td {
-  /*px*/ border-top: 1px solid #dedede;
-  /*rem*/ border-top: 0.0625rem solid #dedede;
-  /*px*/ border-left: 1px solid #dedede;
-  /*rem*/ border-left: 0.0625rem solid #dedede;
-}
-/**
- * Give Give the <table> inner row borders.
- */
-.table-border-rows th,
-.table-border-rows td {
-  /*px*/ border-top: 1px solid #dedede;
-  /*rem*/ border-top: 0.0625rem solid #dedede;
-}
-/**
- * Remove border on 1st-row cells to avoid a double border.
- */
-.table-border.table-border-cells thead:first-child tr:first-child th,
-.table-border.table-border-cells thead:first-child tr:first-child td,
-.table-border.table-border-rows thead:first-child tr:first-child th,
-.table-border.table-border-rows thead:first-child tr:first-child td {
-  border-top: 0;
-}
-/**
- * Remove border on 1st cells in every row to create a grid effect.
- */
-.table-border-cells tr th:first-child,
-.table-border-cells tr td:first-child {
-  border-left: 0;
-}
-/**
- * Remove border on 1st-row cells to create a grid effect.
- */
-.table-border-cells tr:first-child th,
-.table-border-cells thead:first-child tr:first-child th {
-  border-top: 0;
-}
-/**
- * Add a bottom border to the last row in the table.
- */
-.table-border-rows tr:last-child td {
-  /*px*/ border-bottom: 1px solid #dedede;
-  /*rem*/ border-bottom: 0.0625rem solid #dedede;
-}
-/**
- * Alternate `background-color` for all table rows.
- */
-.table-striped tbody > tr:nth-child(odd) > td {
-  background-color: #f8f8f8;
 }
 /* ========================================================================== *\
    Utilities -> Display ($utilities-display)
