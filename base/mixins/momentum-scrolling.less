@@ -1,9 +1,8 @@
 // =============================================================================
-// Core -> Mixins -> Text Truncate
+// Base -> Mixins -> Momentum Scrolling
 // =============================================================================
 
-.text-truncate() {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+.momentum-scrolling() {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
 }

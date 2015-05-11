@@ -1,9 +1,8 @@
 // =============================================================================
-// Core -> Mixins -> Vertically Centered
+// Base -> Mixins -> Antialiasing
 // =============================================================================
 
-.vertically-centered() {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+.antialiasing() {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }

@@ -1,54 +1,63 @@
 @charset "UTF-8";
 
 //
-// Core
+// Base
 //
 // These variables, mixins, and styles are required if you want to use this
 // framework, and they should be included in the following order.
 //
 
-// Core -> Variables
+// Base -> Variables
 
-@import url("core/variables.less");
+@import url("base/variables.less");
 
-// Core -> Mixins
+// Base -> Mixins
 
-@import url("core/mixins/to-rem.less");
-@import url("core/mixins/media-queries.less");
-@import url("core/mixins/antialiasing.less");
-@import url("core/mixins/clearing.less");
-@import url("core/mixins/font-face.less");
-@import url("core/mixins/momentum-scrolling.less");
-@import url("core/mixins/text-truncate.less");
-@import url("core/mixins/vertically-centered.less");
+@import url("base/mixins/to-rem.less");
+@import url("base/mixins/media-queries.less");
+@import url("base/mixins/antialiasing.less");
+@import url("base/mixins/clearing.less");
+@import url("base/mixins/font-face.less");
+@import url("base/mixins/momentum-scrolling.less");
+@import url("base/mixins/text-truncate.less");
+@import url("base/mixins/vertically-centered.less");
 
-// Core -> Normalize
+// Base -> Normalize
 
-@import url("core/normalize.less");
+@import url("base/normalize.less");
 
-// Core -> Reset
+// Base -> Reset
 
-@import url("core/reset.less");
+@import url("base/reset.less");
 
-// Core -> Debug (DO NOT USE THIS STYLESHEET IN PRODUCTION!)
+// Base -> Debug (DO NOT USE THIS STYLESHEET IN PRODUCTION!)
 
-//@import url("core/debug.less");
+//@import url("base/debug.less");
 
-// Core -> Base
+// Base -> Default Styles
 
-@import url("core/base/root.less");
-@import url("core/base/selections.less");
-@import url("core/base/anchors.less");
-@import url("core/base/text-elements.less");
-@import url("core/base/headings.less");
-@import url("core/base/blockquotes.less");
-@import url("core/base/lists.less");
-@import url("core/base/horizontal-rules.less");
-@import url("core/base/code.less");
-@import url("core/base/embedded-content.less");
-@import url("core/base/form-elements.less");
-@import url("core/base/tables.less");
-@import url("core/base/print.less");
+@import url("base/root.less");
+@import url("base/anchors.less");
+@import url("base/text-elements.less");
+@import url("base/headings.less");
+@import url("base/lists.less");
+@import url("base/horizontal-rules.less");
+@import url("base/blockquotes.less");
+@import url("base/code.less");
+@import url("base/embedded-content.less");
+@import url("base/form-elements.less");
+@import url("base/tables.less");
+@import url("base/print.less");
+
+//
+// Components
+//
+
+@import url("components/boxes.less");
+@import url("components/buttons.less");
+@import url("components/forms.less");
+@import url("components/lists.less");
+@import url("components/tables.less");
 
 //
 // Layout
@@ -56,16 +65,6 @@
 
 @import url("layout/wrappers.less");
 @import url("layout/grids.less");
-@import url("layout/boxes.less");
-
-//
-// Objects
-//
-
-@import url("objects/buttons.less");
-@import url("objects/forms.less");
-@import url("objects/lists.less");
-@import url("objects/tables.less");
 
 //
 // Utilities

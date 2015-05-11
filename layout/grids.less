@@ -21,7 +21,7 @@
 
 /**
  * Grid items
- * 1. Remove default styles in case `.grid` is on a <ul> or <ol> element.
+ * 1. Remove default styles in case `.grid-item` is on an <li> element.
  * 2. `.grid-item` elements are 100% width by default.
  * 3. Default gutter width = @grid-gutter-base.
  * 4. Ensure `.grid-item` is aligned to the top of its container.
@@ -30,7 +30,7 @@
 
 .grid-item {
   display: inline-block;
-  margin: 0;                                /* 1 */
+  margin-left: 0;                           /* 1 */
   width: 100%;                              /* 2 */
   .to-rem(padding-left, @grid-gutter-base); /* 3 */
   vertical-align: top;                      /* 4 */
