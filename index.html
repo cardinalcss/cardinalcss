@@ -48,20 +48,29 @@
         <div role="main">
           <h1>What is Cardinal?</h1>
           <p>Cardinal is a modular, “mobile-first” CSS framework built with performance and scalability in mind.</p>
-          <p>The purpose of this framework is to make it easier for front-end web developers to prototype, build, scale, and maintain CSS for responsive websites, user interfaces, and applications. Cardinal omits many aesthetic design decisions that often bog down other CSS frameworks (which are often UI toolkits, not frameworks), leaving the design and creativity up to you.</p>
+          <p>The purpose of this framework is to make it easier for front-end web developers to prototype, build, scale, and maintain CSS for responsive websites, user interfaces, and applications. Cardinal omits many aesthetic design decisions that often bog down other CSS frameworks (which are often <a href="https://speakerdeck.com/csswizardry/what-is-a-css-framework-anyway">UI toolkits, not frameworks</a>), leaving the design and creativity up to you.</p>
+          <hr>
+          <h1>Principles</h1>
+          <p>Cardinal adheres to the following principles whenever possible:</p>
+          <ul>
+            <li><strong><a href="http://en.wikipedia.org/wiki/Open/closed_principle">Open / Closed</a>:</strong> Styles should be open for extension, but closed for modification. Avoid styles that are highly specific to context.</li>
+            <li><strong>Reuse:</strong> Content-agnostic, modular styles allow for design flexibility and will have a longer lifespan.</li>
+            <li><strong>Don’t Make Assumptions:</strong> Try not to make too many assumptions too early, because design and development are both iterative processes.</li>
+            <li><strong>Clarity Over Cleverness:</strong> Avoid creating styles that have ambiguous applications, or are rarely used. Obvious styles are easier for humans to internalize, and will be more widely adopted.</li>
+          </ul>
           <hr>
           <h1>Features</h1>
           <ul>
             <li>“Mobile-first” CSS written for the <a href="http://lesscss.org">LESS preprocessor</a>.</li>
-            <li><a href="https://github.com/necolas/normalize.css">normalize.css</a> baked-in.</li>
-            <li>Sensible <a href="https://github.com/cbracco/cardinal/tree/master/core">global styles</a>, <a href="https://github.com/cbracco/cardinal/tree/master/core/variables.less">variables</a>, and useful <a href="https://github.com/cbracco/cardinal/tree/master/core/mixins/">mixins</a>.</li>
+            <li><a href="https://github.com/necolas/normalize.css">normalize.css</a></li>
+            <li>Sensible global styles, variables, and useful mixins.</li>
             <li>A flexible grid system and encapsulated styles for common UI objects (buttons, forms, tables, etc.)</li>
             <li>A collection of utility classes optimized for great <a href="http://davidtheclark.com/on-utility-classes/">gzip compression</a>.</li>
             <li>The entire framework, minified and gzipped, clocks in at a mere <strong>11.27kB</strong>.</li>
           </ul>
           <hr>
           <h1>Getting Started</h1>
-          <p>The fastest way to get up-and-running with Cardinal is by using the Bower package manager, like so:</p>
+          <p>The fastest way to get up-and-running with Cardinal is by using the <a href="http://bower.io">Bower package manager</a>, like so:</p>
           <h2>Bower</h2>
           <pre><code>cd your-project-directory
 bower install --save cardinal</code></pre>
@@ -77,6 +86,15 @@ gulp</code></pre>
           <p>You can also download the <code>.zip</code> file and proceed however you wish. Include the minified CSS file in the <code>&lt;head&gt;</code> of your project, or modify the LESS files directly (not recommended, since it will be difficult to update to future versions). It’s your world!</p>
           <p><a href="https://github.com/cbracco/cardinal/archive/master.zip" class="btn btn-primary">Download the zip</a></p>
           <hr>
+          <h1>Documentation</h1>
+          <p>There is a <code>README.md</code> file included in each major directory of this project that further details the code located in those directories.</p>
+          <ul>
+            <li><a href="https://github.com/cbracco/cardinal/tree/master/base">Base</a></li>
+            <li><a href="https://github.com/cbracco/cardinal/tree/master/components">Components</a></li>
+            <li><a href="https://github.com/cbracco/cardinal/tree/master/layout">Layout</a></li>
+            <li><a href="https://github.com/cbracco/cardinal/tree/master/utilities">Utilities</a></li>
+          </ul>
+          <hr>
           <h1>Browser support</h1>
           <p>Cardinal supports most modern browsers:</p>
           <ul>
@@ -88,6 +106,9 @@ gulp</code></pre>
             <li>Android 4.2+</li>
             <li>Internet Explorer 9+</li>
           </ul>
+          <hr>
+          <h1>License</h1>
+          <p>Cardinal is licensed under the MIT Open Source license. For more information, see the <a href="https://github.com/cbracco/cardinal/blob/master/LICENSE.md">LICENSE.md</a> file in this repository.</p>
           <hr>
         </div>
         <div class="footer" role="contentinfo">
