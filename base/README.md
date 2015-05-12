@@ -1,6 +1,6 @@
 # Cardinal Base
 
-The `base/` directory houses all of the essential styles that build the foundation for this framework. 
+The `base/` directory houses all of the essential styles that build the foundation for this framework.
 
 Without `base/`, this framework **will not work correctly.** It is the only required part of Cardinal.
 
@@ -38,7 +38,7 @@ Cardinal Base provides a solid foundation for the framework, including things li
 
 # Variables
 
-Carindal stores all of its LESS variables in a single file aptly named `variables.less`. These variables provide some good default settings for any project, but you can easily customize them to suit your needs.
+Cardinal stores all of its LESS variables in a single file aptly named `variables.less`. These variables provide some good default settings for any project, but you can easily customize them to suit your needs.
 
 The recommended way to include Cardinal in your project is by using the [Bower package manager](http://bower.io/). In doing so, you will never have to modify Cardinal directly (which makes updating the project as simple as `bower update --save cardinal`).
 
@@ -96,7 +96,7 @@ There are mixins for both `min-width` and `max-width` query scenarios, as well a
 
 ```
 // Small only
-// @media (min-width: @screen-sm-min) 
+// @media (min-width: @screen-sm-min)
 // and (max-width: @screen-sm-max)
 
 .screen-sm({
@@ -106,7 +106,7 @@ There are mixins for both `min-width` and `max-width` query scenarios, as well a
 });
 
 // Medium and up
-// @media (min-width: @screen-md-min) 
+// @media (min-width: @screen-md-min)
 
 .screen-md-min({
   .selector {
