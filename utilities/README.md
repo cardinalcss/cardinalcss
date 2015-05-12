@@ -23,7 +23,7 @@ Utilities are typically used for rapid prototyping, or a last resort when needin
 
 # Overview
 
-Utilities apply common CSS styles either as a single declaration or a very simple, common pattern of styles. 
+Utilities apply common CSS styles either as a single declaration or a very simple, common pattern of styles.
 
 In Cardinal, all utilities are **optional** except for [width utility classes](https://github.com/cbracco/cardinal/blob/master/utilities/widths.less), but that is only if you plan on also using Cardinal’s [grid layout tools](https://github.com/cbracco/cardinal/blob/master/layout/grids.less), which depend on those utilities.
 
@@ -39,6 +39,8 @@ Many utilities also include breakpoint-specific modifer classes e.g. `.lg-dn`, `
 
 ## Display
 
+[View Demo](http://codepen.io/cbracco/pen/Xbdbqy)
+
 Display utilities allow you to manipulate the `display` property of a given element.
 
 ### Usage
@@ -49,6 +51,8 @@ Display utilities allow you to manipulate the `display` property of a given elem
 ```
 
 ## Floats
+
+[View Demo](http://codepen.io/cbracco/pen/doMojy)
 
 Display utilities allow you to manipulate the `float` property of a given element.
 
@@ -61,6 +65,8 @@ Display utilities allow you to manipulate the `float` property of a given elemen
 
 ## Font Sizes
 
+[View Demo](http://codepen.io/cbracco/pen/WvwvKZ)
+
 Font Size utilities allow you to manipulate the `font-size` property of a given element.
 
 ### Usage
@@ -71,6 +77,8 @@ Font Size utilities allow you to manipulate the `font-size` property of a given 
 ```
 
 ## Margins
+
+[View Demo](http://codepen.io/cbracco/pen/qdZdye)
 
 Margin utilities allow you to manipulate the `margin` property of a given element.
 
@@ -83,6 +91,8 @@ Margin utilities allow you to manipulate the `margin` property of a given elemen
 
 ## Paddings
 
+[View Demo](http://codepen.io/cbracco/pen/QbNbVa)
+
 Padding utilities allow you to manipulate the `padding` property of a given element.
 
 ### Usage
@@ -93,6 +103,8 @@ Padding utilities allow you to manipulate the `padding` property of a given elem
 ```
 
 ## Positions
+
+[View Demo](http://codepen.io/cbracco/pen/EjKjeM)
 
 Position utilities allow you to manipulate the `position` property of a given element.
 
@@ -105,6 +117,8 @@ Position utilities allow you to manipulate the `position` property of a given el
 
 ## Text Alignment
 
+[View Demo](http://codepen.io/cbracco/pen/KpzpGo)
+
 Text Alignment utilities allow you to manipulate the `text-align` property of a given element.
 
 ### Usage
@@ -116,6 +130,8 @@ Text Alignment utilities allow you to manipulate the `text-align` property of a 
 
 ## Vertical Alignment
 
+[View Demo](http://codepen.io/cbracco/pen/aONORx)
+
 Vertical Alignment utilities allow you to manipulate the `vertical-align` property of a given element.
 
 ### Usage
@@ -126,6 +142,8 @@ Vertical Alignment utilities allow you to manipulate the `vertical-align` proper
 ```
 
 ## Visually Hidden
+
+[View Demo](http://codepen.io/cbracco/pen/RPaPqa)
 
 Visually Hidden utilities allow you to manipulate the visibility of a given element.
 
@@ -140,6 +158,8 @@ Visually Hidden utilities allow you to manipulate the visibility of a given elem
 
 ## Widths
 
+[View Demo](http://codepen.io/cbracco/pen/MwywzB)
+
 Width utilities allow you to manipulate the `width` property of a given element.
 
 ### Usage
@@ -150,6 +170,8 @@ Width utilities allow you to manipulate the `width` property of a given element.
 ```
 
 ## Z-Index
+
+[View Demo](http://codepen.io/cbracco/pen/waGaRq)
 
 Z-Index utilities allow you to manipulate the `z-index` property of a given element.
 

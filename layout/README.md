@@ -9,13 +9,15 @@ The `layout/` directory is where all the style tools for creating UI layouts exi
   - [Wrappers](#wrappers)
   - [Grids](#grids)
 
-# Overview 
+# Overview
 
 Using a combination of `.wrapper` and `.grid` elements, you can create some very interesting and complex layouts. Each of these tools also include modifier classes to change their behavior, even across different device sizes using prefixed class names like `.lg-2/3`, which sets the width of the element to 2/3, or 66.667% for devices “large” and up.
 
 # Included Layout Tools
 
 ## Wrappers
+
+[View Demo](http://codepen.io/cbracco/pen/eNZNML)
 
 The `.wrapper` class is a common CSS layout tool that sets a maximum width and centers the element inside its parent.
 
@@ -33,6 +35,8 @@ It also includes a few modifier classes to force wrappers to either sit flush wi
 ```
 
 ## Grids
+
+[View Demo](http://codepen.io/cbracco/pen/LVNVdw)
 
 The `.grid` classes are used to create both simple and complex UI layouts. There are several modifier classes available for changing the order and alignment of `.grid-item` elements across various device sizes.
 

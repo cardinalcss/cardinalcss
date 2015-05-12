@@ -190,21 +190,31 @@ It also ensures the `<body>` element is at least the viewport height, sets a con
 
 ## Anchors
 
+[View Demo](http://codepen.io/cbracco/pen/BNKNBo)
+
 Default anchor link styles for this framework reside here.
 
 ## Text Elements
+
+[View Demo](http://codepen.io/cbracco/pen/jPqPqm)
 
 This file adds some opinionated default styles for inline text elements, such as adding the appropriate `cursor` styles to `<abbr>` elements, and adding `text-decoration: line-through` styles to `<del>` elements.
 
 ## Headings
 
+[View Demo](http://codepen.io/cbracco/pen/PqNqzP)
+
 Headings help break up blocks of text and visual content into consumable chunks, and Cardinal includes some default headings styles to facilitate better readability from the get-go.
 
 ## Lists
 
+[View Demo](http://codepen.io/cbracco/pen/vOGOXB)
+
 List elements like `<dl>`, `<ul>`, and `<ol>` also get their own default styles to provide a more consistent experience across browsers.
 
 ## Horizontal Rules
+
+[View Demo](http://codepen.io/cbracco/pen/yNONaP)
 
 `<hr>` elements also help break up text and visual content into consumable chunks, and Cardinal normalizes the styling of this element so it displays consistently across browsers.
 
@@ -218,6 +228,8 @@ hr {
 ```
 
 ## Blockquotes
+
+[View Demo](http://codepen.io/cbracco/pen/doMopE)
 
 Depending on the type of project, you may never have a use for the `<blockquote>` element, but Cardinal provides some light styling to this element just in case.
 
@@ -237,11 +249,15 @@ The styles are set up for the preferred use case for the `<blockquote>` element,
 
 ## Code
 
+[View Demo](http://codepen.io/cbracco/pen/gprpLa)
+
 Again, depending on your project, you may never have a use for basic code styles, but they are included just in case.
 
 Cardinal provides some simple styling to common HTML elements that are used to display programming language code, such as `<kbd>`, `<code>`, and `<pre>`.
 
 ## Embedded Content
+
+[View Demo](http://codepen.io/cbracco/pen/pJyJNW)
 
 Cardinal also includes some basic fixes and styles for embedded content (e.g. images, HTML5 audio & video, iframe, canvas, and SVG).
 
@@ -266,9 +282,13 @@ Some basic styles are also given to `<figure>` and `<figcaption>` elements, just
 
 ## Form Elements
 
+[View Demo](http://codepen.io/cbracco/pen/xGVGqm)
+
 Forms are notoriously finicky, so this base file aims to remove and normalize the form experience before any major aesthetic design decisions are made.
 
 ## Tables
+
+[View Demo](http://codepen.io/cbracco/pen/QbNbvg)
 
 Similarly to forms, tables can be difficult to style correctly. This file corrects some table oddities to make the basic table element behave more consistently across browsers.
 
