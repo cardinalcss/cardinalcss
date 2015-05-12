@@ -1,4 +1,4 @@
-/*! Cardinal v3.2.0 | MIT License | http://cardinalcss.com */
+/*! Cardinal v3.2.1 | MIT License | http://cardinalcss.com */
 @charset "UTF-8";
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
@@ -530,7 +530,7 @@ html {
  */
 body {
   min-height: 100%;
-  /* [1] */
+  /* 1 */
 }
 /**
  * Set a consistent margin for common elements to maintain vertical rhythm.
@@ -576,6 +576,14 @@ th {
       -ms-hyphens: auto;
           hyphens: auto;
 }
+/**
+ * NOTE: Do not remove :focus styles! It’s an accessibility no-no.
+ * @link http://cbrac.co/1cNYD2l
+ */
+:focus {
+  /*px*/ outline: 1px dotted #222222 5px auto -webkit-focus-ring-color;
+  /*rem*/ outline: 0.0625rem dotted #222222 0.3125rem auto -webkit-focus-ring-color;
+}
 /* ========================================================================== *\
    Base -> Anchors ($base-anchors)
 \* ========================================================================== */
@@ -587,9 +595,6 @@ a:hover,
 a:active,
 a:focus {
   text-decoration: none;
-}
-a:focus {
-  outline: 1px dotted #222222;
 }
 /* ========================================================================== *\
    Base -> Text Elements ($base-text-elements)
@@ -982,16 +987,6 @@ select {
   /* 2 */
 }
 /**
- * Work around a Firefox/IE bug where the transparent `button` background
- * results in a loss of the default `button` focus styles.
- *
- * @link http://cbrac.co/1CVyNTj
- */
-button:focus {
-  outline: 1px dotted;
-  outline: 5px auto -webkit-focus-ring-color;
-}
-/**
  * Fix vertical alignment inconsistencies with certain form inputs.
  */
 input[type="color"],
@@ -1226,9 +1221,6 @@ td {
   /**
    * States
    */
-  /**
-   * Provide a consistent button focus style across browsers.
-   */
 }
 .btn:hover {
   background-color: #e3e3e3;
@@ -1241,9 +1233,6 @@ td {
 }
 .btn:active:focus {
   outline: 0 none;
-}
-.btn:focus {
-  outline: thin dotted #222222;
 }
 .btn:disabled,
 .btn[disabled],

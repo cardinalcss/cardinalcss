@@ -1,3 +1,8 @@
+# 3.2.1 (May 12, 2015)
+
+- Add more documentation in the form of `README.md` files.
+- Clean up `:focus` styles, move declarations to `root.less`.
+
 # 3.2.0 (May 11, 2015)
 
 - Remove `::selection` styles because they cause iOS 8 to crash in certain scenarios.
