@@ -16,11 +16,12 @@ Build more with less.
     - [Updating Cardinal](#updating-cardinal)
   - [LESS Plugin](#less-plugin)
   - [Direct Download](#direct-download)
+- [Documentation](#documentation)
 - [Browser Support](#browser-support)
 - [Contributing](#contributing)
 - [Versioning](#versioning)
 - [License](#license)
-- [Colophon](#colophon)
+- [Credits](#credits)
 
 # What is Cardinal?
 
@@ -32,7 +33,7 @@ The purpose of this framework is to make it easier for front-end web developers 
 
 Cardinal adheres to the following principles whenever possible:
 
-- [**Open / Closed](http://en.wikipedia.org/wiki/Open/closed_principle):** Styles should be open for extension, but closed for modification. Avoid styles that are highly specific to context.
+- **[Open / Closed](http://en.wikipedia.org/wiki/Open/closed_principle):** Styles should be open for extension, but closed for modification. Avoid styles that are highly specific to context.
 - **Reuse:** Content-agnostic, modular styles allow for design flexibility and will have a longer lifespan.
 - **Don’t Make Assumptions:** Try not to make too many assumptions too early, because design and development are both iterative processes.
 - **Clarity Over Cleverness:** Avoid creating styles that have ambiguous applications, or are rarely used. Obvious styles are easier for humans to internalize, and will be more widely adopted.
@@ -130,6 +131,15 @@ You can also download the `.zip` file and proceed however you wish. Include the 
 
 - [Download the zip](https://github.com/cbracco/cardinal/archive/master.zip)
 
+# Documentation
+
+There is a `README.md` file included in each major directory of this project that further details the code located in those directories.
+
+- [Base](https://github.com/cbracco/cardinal/tree/master/base)
+- [Components](https://github.com/cbracco/cardinal/tree/master/components)
+- [Layout](https://github.com/cbracco/cardinal/tree/master/layout)
+- [Utilities](https://github.com/cbracco/cardinal/tree/master/utilities)
+
 # Browser support
 
 Cardinal supports most modern browsers:
@@ -162,6 +172,6 @@ Cardinal will be maintained using the [Semantic Versioning](http://semver.org/) 
 
 Cardinal is licensed under the MIT Open Source license. For more information, see the [LICENSE.md](https://github.com/cbracco/cardinal/blob/master/LICENSE.md) file in this repository.
 
-## Colophon
+## Credits
 
 Cardinal is a project by [@cbracco](http://twitter.com/cbracco).
