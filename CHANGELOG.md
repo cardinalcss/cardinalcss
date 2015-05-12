@@ -1,3 +1,8 @@
+# 3.2.2 (May 12, 2015)
+
+- Add [Codepen demos](http://codepen.io/collection/nmrWQR/) to documentation.
+- Fix typos in `index.html`.
+
 # 3.2.1 (May 12, 2015)
 
 - Add more documentation in the form of `README.md` files.
