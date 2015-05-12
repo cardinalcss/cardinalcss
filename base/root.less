@@ -42,7 +42,7 @@ html {
  */
 
 body {
-  min-height: 100%; /* [1] */
+  min-height: 100%; /* 1 */
 }
 
 /**
@@ -87,4 +87,14 @@ textarea,
 th {
   word-wrap: break-word;
   hyphens: auto;
+}
+
+/**
+ * NOTE: Do not remove :focus styles! It’s an accessibility no-no.
+ * @link http://cbrac.co/1cNYD2l
+ */
+
+:focus {
+  .to-rem(outline, @root-focus-outline-fallback-width, @root-focus-outline-fallback-style @root-focus-outline-fallback-color);
+  .to-rem(outline, @root-focus-outline-width, @root-focus-outline-style @root-focus-outline-color);
 }
