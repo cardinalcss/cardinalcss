@@ -134,7 +134,7 @@ You can also download the `.zip` file and proceed however you wish. Include the 
 
 - [Download the zip](https://github.com/cbracco/cardinal/archive/master.zip)
 
-# Customization
+# Customizing
 
 ## Including Partials
 
