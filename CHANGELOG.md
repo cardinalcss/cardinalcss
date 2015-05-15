@@ -1,3 +1,7 @@
+# 3.2.3 (May 15, 2015)
+
+- Update `README.md` to include customization docs.
+
 # 3.2.2 (May 12, 2015)
 
 - Add [Codepen demos](http://codepen.io/collection/nmrWQR/) to documentation.
