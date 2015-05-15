@@ -86,7 +86,89 @@ gulp</code></pre>
           <p>You can also download the <code>.zip</code> file and proceed however you wish. Include the minified CSS file in the <code>&lt;head&gt;</code> of your project, or modify the LESS files directly (not recommended, since it will be difficult to update to future versions). It’s your world!</p>
           <p><a href="https://github.com/cbracco/cardinal/archive/master.zip" class="btn btn-primary">Download the zip</a></p>
           <hr>
-          <h1>Documentation</h1>
+          <h1>Customizing</h1>
+          <h2>Including Partials</h2>
+          <p>The easiest way to include Cardinal in your project is to include the entire thing before your project files, like so:</p>
+          <pre><code>//
+// Vendor
+//
+
+@import url("../../path/to/bower_components/cardinal/cardinal.less");
+
+//
+// Project
+//
+
+@import url("project-file.less");</code></pre>
+          <p>However, you don’t have to use the entire Cardinal framework. The only required partials are located in the <code>base/</code> directory:</p>
+          <pre><code>//
+// Vendor
+//
+
+//
+// Base
+//
+// These variables, mixins, and styles are required if you want to use this
+// framework, and they should be included in the following order.
+//
+
+// Base -> Variables
+
+@import url("base/variables.less");
+
+// Base -> Mixins
+
+@import url("base/mixins/to-rem.less");
+@import url("base/mixins/media-queries.less");
+@import url("base/mixins/antialiasing.less");
+@import url("base/mixins/clearing.less");
+@import url("base/mixins/font-face.less");
+@import url("base/mixins/momentum-scrolling.less");
+@import url("base/mixins/text-truncate.less");
+@import url("base/mixins/vertically-centered.less");
+
+// Base -> Normalize
+
+@import url("base/normalize.less");
+
+// Base -> Reset
+
+@import url("base/reset.less");
+
+// Base -> Debug (DO NOT USE THIS STYLESHEET IN PRODUCTION!)
+
+//@import url("base/debug.less");
+
+// Base -> Default Styles
+
+@import url("base/root.less");
+@import url("base/anchors.less");
+@import url("base/text-elements.less");
+@import url("base/headings.less");
+@import url("base/lists.less");
+@import url("base/horizontal-rules.less");
+@import url("base/blockquotes.less");
+@import url("base/code.less");
+@import url("base/embedded-content.less");
+@import url("base/form-elements.less");
+@import url("base/tables.less");
+@import url("base/print.less");</code></pre>
+          <p>Beyond that, you can use whatever grid system, components, and utilities you would like. The <code>base/</code> directory just sets some good base styles for the framework.</p>
+          <h2>Modifying Variables</h2>
+          <p>After getting started and including Cardinal, you will probably want to begin customizing it to suit your project. Cardinal has a bunch of LESS variables located in the <code>base/variables.less</code> file that can be tweaked to your needs. <strong></strong>>These variables should not be edited directly.</strong> The recommended way to make changes to Cardinal LESS variables is to create your own project-specific variables file (e.g. <code>project-variables.less</code>), and override the default variables in this file, like so:</p>
+          <pre><code>// project-variables.less
+
+// Typography -> Font Sizes -> Base
+
+$font-size: 17;
+
+//
+// Typography -> Line height
+//
+
+$line-height: 26;</code></pre>
+          <p>This file should be included in your main LESS file after you’ve included Cardinal.</p>
+          <h1>Further Documentation</h1>
           <p>There is a <code>README.md</code> file included in each major directory of this project that further details the code located in those directories.</p>
           <ul>
             <li><a href="https://github.com/cbracco/cardinal/tree/master/base">Base</a></li>
