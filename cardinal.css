@@ -1,4 +1,4 @@
-/*! Cardinal v3.2.3 | MIT License | http://cardinalcss.com */
+/*! Cardinal v3.2.4 | MIT License | http://cardinalcss.com */
 @charset "UTF-8";
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
@@ -665,8 +665,9 @@ mark {
    Base -> Headings ($base-headings)
 \* ========================================================================== */
 /**
- * 1. Use the `text-rendering` property with caution.
+ * NOTE: Use the `text-rendering` property with caution.
  *    @link http://cbrac.co/SJt8p1
+ *    @link http://cbrac.co/1Fjv7IR
  */
 h1,
 h2,
@@ -677,8 +678,6 @@ h6 {
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-weight: 700;
   color: #222222;
-  text-rendering: optimizeLegibility;
-  /* 1 */
 }
 h1,
 .h1 {

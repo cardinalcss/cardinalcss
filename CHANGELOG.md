@@ -1,3 +1,8 @@
+# 3.2.4 (May 28, 2015)
+
+- Remove `text-rendering` property from headings ([more info](http://cbrac.co/1Fjv7IR)).
+- Update `.gitignore` (exclude sourcemaps from repo).
+
 # 3.2.3 (May 15, 2015)
 
 - Update `README.md` to include customization docs.
