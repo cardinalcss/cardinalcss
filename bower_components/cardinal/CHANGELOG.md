@@ -1,8 +1,63 @@
-# 3.0.1 (Feb 5, 2014)
+# 3.2.4 (May 28, 2015)
+
+- Remove `text-rendering` property from headings ([more info](http://cbrac.co/1Fjv7IR)).
+- Update `.gitignore` (exclude sourcemaps from repo).
+
+# 3.2.3 (May 15, 2015)
+
+- Update `README.md` to include customization docs.
+
+# 3.2.2 (May 12, 2015)
+
+- Add [Codepen demos](http://codepen.io/collection/nmrWQR/) to documentation.
+- Fix typos in `index.html`.
+
+# 3.2.1 (May 12, 2015)
+
+- Add more documentation in the form of `README.md` files.
+- Clean up `:focus` styles, move declarations to `root.less`.
+
+# 3.2.0 (May 11, 2015)
+
+- Remove `::selection` styles because they cause iOS 8 to crash in certain scenarios.
+- Simplify directory structure for LESS partials
+- Add `.list-reset` component modifier.
+
+# 3.1.0 (March 8, 2015)
+
+- Remove `@root-font-family`, `@root-font-size`, and `@root-line-height` variables because they were causing problems. Using `@font-family-*`, `@font-size`, and `@line-height` variables instead as root.
+- Use `@font-size-0` variable in `layout/grids.less` instead of `font-size: 0;`
+
+# 3.0.7 (March 8, 2015)
+
+- Fix `.btn-round` bug for `input[type="button"]` and `input[type="submit"]` elements.
+
+# 3.0.6 (February 25, 2015)
+
+- Remove default margin for `.grid-item` elements on `li` elements (thanks, @bassjobsen!).
+
+# 3.0.5 (February 18, 2015)
+
+- Add `!important` to utility classes.
+
+# 3.0.4 (February 16, 2015)
+
+- Fix `@print` typo in `layout/wrappers.less`.
+
+# 3.0.3 (February 9, 2015)
+
+- Add `:disabled` to disabled button styles.
+
+# 3.0.2 (February 9, 2015)
+
+- Update `README.md`.
+- Comment out `core/debug.less` by default.
+
+# 3.0.1 (February 5, 2015)
 
 - Update `bower.json` and `README.md`.
 
-# 3.0.0 (Feb 5, 2014)
+# 3.0.0 (February 5, 2015)
 
 - Overhauled Cardinal (huzzah!) to function as a CSS framework only.
   - Removed all "boilerplate" files and folders.

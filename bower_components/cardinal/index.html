@@ -154,20 +154,20 @@
             </ul>
           </li>
           <li>
+            <a href="#components">Components</a>
+            <ul>
+              <li><a href="#components__boxes">Boxes</a></li>
+              <li><a href="#components__buttons">Buttons</a></li>
+              <li><a href="#components__forms">Forms</a></li>
+              <li><a href="#components__lists">Lists</a></li>
+              <li><a href="#components__tables">Tables</a></li>
+            </ul>
+          </li>
+          <li>
             <a href="#layout">Layout</a>
             <ul>
               <li><a href="#layout__wrappers">Wrappers</a></li>
               <li><a href="#layout__grids">Grids</a></li>
-              <li><a href="#layout__boxes">Boxes</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="#objects">Objects</a>
-            <ul>
-              <li><a href="#objects__buttons">Buttons</a></li>
-              <li><a href="#objects__forms">Forms</a></li>
-              <li><a href="#objects__lists">Lists</a></li>
-              <li><a href="#objects__tables">Tables</a></li>
             </ul>
           </li>
           <li>
@@ -276,41 +276,6 @@
                     <li>Child List Item 3</li>
                   </ul>
                 </li>
-                <li>List Item 3</li>
-              </ul>
-              <h3>Bare List</h3>
-              <p><code>.list-bare</code></p>
-              <ul class="list-bare">
-                <li>List Item 1</li>
-                <li>
-                  List Item 2
-                  <ul>
-                    <li>Child List Item 1</li>
-                    <li>
-                      Child List Item 2
-                      <ul>
-                        <li>Grandchild List Item 1</li>
-                        <li>Grandchild List Item 2</li>
-                        <li>Grandchild List Item 3</li>
-                      </ul>
-                    </li>
-                    <li>Child List Item 3</li>
-                  </ul>
-                </li>
-                <li>List Item 3</li>
-              </ul>
-              <h3>Inline List</h3>
-              <p><code>.list-inline</code></p>
-              <ul class="list-inline">
-                <li>List Item 1</li>
-                <li>List Item 2</li>
-                <li>List Item 3</li>
-              </ul>
-              <h3>Inline, Delimited List</h3>
-              <p><code>.list-inline.list-inline-delimited</code></p>
-              <ul class="list-inline list-inline-delimited">
-                <li>List Item 1</li>
-                <li>List Item 2</li>
                 <li>List Item 3</li>
               </ul>
             </div>
@@ -429,12 +394,12 @@ p q r s t u v w x y z { | } ~ </pre>
             <header><h1>Images</h1></header>
             <div>
               <h3>No <code>&lt;figure&gt;</code> element</h3>
-              <p><img src="http://placekitten.com/480/480" alt="Image alt text"></p>
+              <p><img src="http://placekitten.com/420/420" alt="Image alt text"></p>
               <h3>Wrapped in a <code>&lt;figure&gt;</code> element, no <code>&lt;figcaption&gt;</code></h3>
               <figure><img src="http://placekitten.com/420/420" alt="Image alt text"></figure>
               <h3>Wrapped in a <code>&lt;figure&gt;</code> element, with a <code>&lt;figcaption&gt;</code></h3>
               <figure>
-                <img src="http://placekitten.com/360/360" alt="Image alt text">
+                <img src="http://placekitten.com/420/420" alt="Image alt text">
                 <figcaption>Here is a caption for this image.</figcaption>
               </figure>
             </div>
@@ -619,6 +584,21 @@ p q r s t u v w x y z { | } ~ </pre>
                 <div class="grid-item 1/12"><div class="box tc">11</div></div>
                 <div class="grid-item 1/12"><div class="box tc">12</div></div>
               </div>
+              <h2>Basic, using <code>&lt;ul&gt;</code></h2>
+              <ul class="grid mb">
+                <li class="grid-item 1/12"><div class="box tc">1</div></li>
+                <li class="grid-item 1/12"><div class="box tc">2</div></li>
+                <li class="grid-item 1/12"><div class="box tc">3</div></li>
+                <li class="grid-item 1/12"><div class="box tc">4</div></li>
+                <li class="grid-item 1/12"><div class="box tc">5</div></li>
+                <li class="grid-item 1/12"><div class="box tc">6</div></li>
+                <li class="grid-item 1/12"><div class="box tc">7</div></li>
+                <li class="grid-item 1/12"><div class="box tc">8</div></li>
+                <li class="grid-item 1/12"><div class="box tc">9</div></li>
+                <li class="grid-item 1/12"><div class="box tc">10</div></li>
+                <li class="grid-item 1/12"><div class="box tc">11</div></li>
+                <li class="grid-item 1/12"><div class="box tc">12</div></li>
+              </ul>
               <h2>RTL</h2>
               <div class="grid grid-rtl mb">
                 <div class="grid-item 1/12"><div class="box tc">1</div></div>
@@ -735,7 +715,10 @@ p q r s t u v w x y z { | } ~ </pre>
             </div>
             <footer><p><a href="#top">[Top]</a></p></footer>
           </article>
-          <article id="layout__boxes">
+        </section>
+        <section id="components">
+          <header><h1>Components</h1></header>
+          <article id="components__boxes">
             <header>
               <h1>Boxes</h1>
             </header>
@@ -749,14 +732,31 @@ p q r s t u v w x y z { | } ~ </pre>
             </div>
             <footer><p><a href="#top">[Top]</a></p></footer>
           </article>
-        </section>
-        <section id="objects">
-          <header><h1>Objects</h1></header>
-          <article id="objects__buttons">
+          <article id="components__buttons">
             <header>
               <h1>Buttons</h1>
             </header>
             <div>
+              <p class="btn-group">
+                <a href="#!" class="btn btn-xs">I’m a button</a>
+                <a href="#!" class="btn btn-sm">I’m a button</a>
+                <a href="#!" class="btn">I’m a button</a>
+                <a href="#!" class="btn btn-lg">I’m a button</a>
+                <a href="#!" class="btn btn-primary">I’m a button</a>
+                <a href="#!" class="btn btn-sm">I’m a button</a>
+                <a href="#!" class="btn btn-xs">I’m a button</a>
+              </p>
+
+              <p class="btn-group">
+                <a href="#!" class="btn btn-round btn-xs">I’m a button</a>
+                <a href="#!" class="btn btn-round btn-sm">I’m a button</a>
+                <a href="#!" class="btn btn-round">I’m a button</a>
+                <a href="#!" class="btn btn-round btn-lg">I’m a button</a>
+                <a href="#!" class="btn btn-round btn-primary">I’m a button</a>
+                <a href="#!" class="btn btn-round btn-sm">I’m a button</a>
+                <a href="#!" class="btn btn-round btn-xs">I’m a button</a>
+              </p>
+
               <p class="btn-group">
                 <button class="btn btn-xs">I’m a button</button>
                 <button class="btn btn-sm">I’m a button</button>
@@ -776,10 +776,30 @@ p q r s t u v w x y z { | } ~ </pre>
                 <button class="btn btn-round btn-sm">I’m a button</button>
                 <button class="btn btn-round btn-xs">I’m a button</button>
               </p>
+
+              <p class="btn-group">
+                <input type="submit" class="btn btn-xs" value="I’m a button">
+                <input type="submit" class="btn btn-sm" value="I’m a button">
+                <input type="submit" class="btn" value="I’m a button">
+                <input type="submit" class="btn btn-lg" value="I’m a button">
+                <input type="submit" class="btn btn-primary" value="I’m a button">
+                <input type="submit" class="btn btn-sm" value="I’m a button">
+                <input type="submit" class="btn btn-xs" value="I’m a button">
+              </p>
+
+              <p class="btn-group">
+                <input type="submit" class="btn btn-round btn-xs" value="I’m a button">
+                <input type="submit" class="btn btn-round btn-sm" value="I’m a button">
+                <input type="submit" class="btn btn-round" value="I’m a button">
+                <input type="submit" class="btn btn-round btn-lg" value="I’m a button">
+                <input type="submit" class="btn btn-round btn-primary" value="I’m a button">
+                <input type="submit" class="btn btn-round btn-sm" value="I’m a button">
+                <input type="submit" class="btn btn-round btn-xs" value="I’m a button">
+              </p>
             </div>
             <footer><p><a href="#top">[Top]</a></p></footer>
           </article>
-          <article id="objects__forms">
+          <article id="components__forms">
             <header>
               <h1>Forms</h1>
             </header>
@@ -833,7 +853,70 @@ p q r s t u v w x y z { | } ~ </pre>
             </div>
             <footer><p><a href="#top">[Top]</a></p></footer>
           </article>
-          <article id="objects__tables">
+          <article id="components__lists">
+            <header><h1>Lists</h1></header>
+            <div>
+              <h3>Bare List</h3>
+              <p><code>.list-bare</code></p>
+              <ul class="list-bare">
+                <li>List Item 1</li>
+                <li>
+                  List Item 2
+                  <ul>
+                    <li>Child List Item 1</li>
+                    <li>
+                      Child List Item 2
+                      <ul>
+                        <li>Grandchild List Item 1</li>
+                        <li>Grandchild List Item 2</li>
+                        <li>Grandchild List Item 3</li>
+                      </ul>
+                    </li>
+                    <li>Child List Item 3</li>
+                  </ul>
+                </li>
+                <li>List Item 3</li>
+              </ul>
+              <h3>Reset List</h3>
+              <p><code>.list-reset</code></p>
+              <ul class="list-reset">
+                <li>List Item 1</li>
+                <li>
+                  List Item 2
+                  <ul>
+                    <li>Child List Item 1</li>
+                    <li>
+                      Child List Item 2
+                      <ul>
+                        <li>Grandchild List Item 1</li>
+                        <li>Grandchild List Item 2</li>
+                        <li>Grandchild List Item 3</li>
+                      </ul>
+                    </li>
+                    <li>Child List Item 3</li>
+                  </ul>
+                </li>
+                <li>List Item 3</li>
+              </ul>
+              <br>
+              <h3>Inline List</h3>
+              <p><code>.list-inline</code></p>
+              <ul class="list-inline">
+                <li>List Item 1</li>
+                <li>List Item 2</li>
+                <li>List Item 3</li>
+              </ul>
+              <h3>Inline, Delimited List</h3>
+              <p><code>.list-inline.list-inline-delimited</code></p>
+              <ul class="list-inline list-inline-delimited">
+                <li>List Item 1</li>
+                <li>List Item 2</li>
+                <li>List Item 3</li>
+              </ul>
+            </div>
+            <footer><p><a href="#top">[Top]</a></p></footer>
+          </article>
+          <article id="components__tables">
             <header>
               <h1>Tables</h1>
             </header>
@@ -1074,14 +1157,14 @@ p q r s t u v w x y z { | } ~ </pre>
               <div class="box dib mb">This box is displayed inline-block.</div>
 
               <div class="dt mb">
-                <div class="dtc one-half"><div class="box mr-">These boxes are displayed as table cells inside a parent table.</div></div>
-                <div class="dtc one-half"><div class="box ml-">These boxes are displayed as table cells inside a parent table.</div></div>
+                <div class="dtc one-half"><div class="box mr-">This box is displayed as  a table cell inside a parent table.</div></div>
+                <div class="dtc one-half"><div class="box ml-">This box is displayed as  a table cell inside a parent table.</div></div>
               </div>
 
               <div class="dt mb">
-                <div class="dtr"><div class="box">These are displayed as table rows inside a parent table.</div></div>
-                <div class="dtr"><div class="box">These are displayed as table rows inside a parent table.</div></div>
-                <div class="dtr"><div class="box">These are displayed as table rows inside a parent table.</div></div>
+                <div class="dtr"><div class="box">This is displayed as a table row inside a parent table.</div></div>
+                <div class="dtr"><div class="box">This is displayed as a table row inside a parent table.</div></div>
+                <div class="dtr"><div class="box">This is displayed as a table row inside a parent table.</div></div>
               </div>
             </div>
             <footer><p><a href="#top">[Top]</a></p></footer>
@@ -1092,9 +1175,9 @@ p q r s t u v w x y z { | } ~ </pre>
             </header>
             <div>
               <div class="cf">
-                <div class="fl one-half mb"><div class="box">This boxed is floated to the left.</div></div>
+                <div class="fl one-half mb"><div class="box">This box is floated to the left.</div></div>
                 <div class="clear"></div>
-                <div class="fr one-half mb"><div class="box">This boxed is floated to the right.</div></div>
+                <div class="fr one-half mb"><div class="box">This box is floated to the right.</div></div>
               </div>
             </div>
             <footer><p><a href="#top">[Top]</a></p></footer>
@@ -1160,7 +1243,7 @@ p q r s t u v w x y z { | } ~ </pre>
               <div class="pv-"><code>.pv-</code></div>
               <div class="pv"><code>.pv</code></div>
               <div class="pv+"><code>.pv+</code></div>
-              <div class="pv++"><code>.pv+</code></div>
+              <div class="pv++"><code>.pv++</code></div>
             </div>
             <footer><p><a href="#top">[Top]</a></p></footer>
           </article>

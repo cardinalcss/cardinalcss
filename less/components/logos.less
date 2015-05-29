@@ -1,0 +1,41 @@
+/* ========================================================================== *\
+   Components -> Logos ($components-logos)
+\* ========================================================================== */
+
+.logo {
+  text-decoration: none;
+}
+
+.logo-img {
+  .to-rem(width, @logo-img-width-sm);
+}
+
+.screen-md-min({
+  .logo-img {
+    .to-rem(width, @logo-img-width-lg);
+  }
+});
+
+#bird {
+  overflow: visible;
+  animation-name: zoomBounce;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(.87,-.41,.19,1.44);
+}
+
+.wing {
+  animation-name: wingFlap;
+  animation-duration: 0.75s;
+  animation-fill-mode: both;
+  animation-delay: 1.5s;
+  animation-timing-function: ease;
+}
+
+.eyeball {
+  animation-name: eyeballBlink;
+  animation-duration: 0.35s;
+  animation-fill-mode: both;
+  animation-delay: 2s;
+  animation-timing-function: ease;
+}

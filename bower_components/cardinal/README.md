@@ -14,12 +14,17 @@ Build more with less.
 - [Getting Started](#getting-started)
   - [Package Managers](#package-managers)
     - [Updating Cardinal](#updating-cardinal)
+  - [LESS Plugin](#less-plugin)
   - [Direct Download](#direct-download)
+- [Customizing](#customizing)
+  - [Including Partials](#including-partials)
+  - [Modifying Variables](#modifying-variables)
+- [Further Documentation](#further-documentation)
 - [Browser Support](#browser-support)
 - [Contributing](#contributing)
 - [Versioning](#versioning)
 - [License](#license)
-- [Colophon](#colophon)
+- [Credits](#credits)
 
 # What is Cardinal?
 
@@ -31,7 +36,7 @@ The purpose of this framework is to make it easier for front-end web developers 
 
 Cardinal adheres to the following principles whenever possible:
 
-- [**Open / Closed](http://en.wikipedia.org/wiki/Open/closed_principle):** Styles should be open for extension, but closed for modification. Avoid styles that are highly specific to context.
+- **[Open / Closed](http://en.wikipedia.org/wiki/Open/closed_principle):** Styles should be open for extension, but closed for modification. Avoid styles that are highly specific to context.
 - **Reuse:** Content-agnostic, modular styles allow for design flexibility and will have a longer lifespan.
 - **Don’t Make Assumptions:** Try not to make too many assumptions too early, because design and development are both iterative processes.
 - **Clarity Over Cleverness:** Avoid creating styles that have ambiguous applications, or are rarely used. Obvious styles are easier for humans to internalize, and will be more widely adopted.
@@ -43,7 +48,7 @@ Cardinal adheres to the following principles whenever possible:
 - Sensible global styles, variables, and useful mixins
 - A flexible grid system and encapsulated styles for common UI objects (buttons, forms, tables, etc.)
 - A collection of utility classes optimized for great gzip compression
-- The entire framework, minified and gzipped, clocks in at a mere **11.13kB**
+- The entire framework, minified and gzipped, clocks in at a mere **11.27kB**
 
 # Dependencies
 
@@ -91,6 +96,23 @@ bower update cardinal
 
 **NOTE:** This is the recommended way to use Cardinal. It should never be edited directly so you can keep it updated. Instead of modifying Cardinal’s source, you are encouraged `@import` Cardinal into your own `your-project.less` file and create your own `.less` files where you can override default variables and extend styles.
 
+## LESS Plugin
+
+There is also a [LESS.js plugin available](https://github.com/bassjobsen/less-plugin-cardinal) for Cardinal, created and maintained by [@bassjobsen](https://github.com/bassjobsen). You can use this plugin to include Cardinal in your project before your custom project code.
+
+**Installation**
+
+```
+npm install less
+npm install less-plugin-cardinal
+```
+
+**Usage**
+
+```
+lessc custom.less --cardinal
+```
+
 ## Direct Download
 
 If you do not want to use a package manager to integrate Cardinal into your project, you can also download it directly:
@@ -111,6 +133,114 @@ gulp
 You can also download the `.zip` file and proceed however you wish. Include the minified CSS file in the `<head>` of your project, or modify the LESS files directly (not recommended, since it will be difficult to update to future versions). It’s your world!
 
 - [Download the zip](https://github.com/cbracco/cardinal/archive/master.zip)
+
+# Customizing
+
+## Including Partials
+
+The easiest way to include Cardinal in your project is to include the entire thing before your project files, like so:
+
+```
+//
+// Vendor
+//
+
+@import url("../../path/to/bower_components/cardinal/cardinal.less");
+
+//
+// Project
+//
+
+@import url("project-file.less");
+```
+
+However, you don’t have to use the entire Cardinal framework. The only required partials are located in the `base/` directory:
+
+```
+//
+// Vendor
+//
+
+//
+// Base
+//
+// These variables, mixins, and styles are required if you want to use this
+// framework, and they should be included in the following order.
+//
+
+// Base -> Variables
+
+@import url("base/variables.less");
+
+// Base -> Mixins
+
+@import url("base/mixins/to-rem.less");
+@import url("base/mixins/media-queries.less");
+@import url("base/mixins/antialiasing.less");
+@import url("base/mixins/clearing.less");
+@import url("base/mixins/font-face.less");
+@import url("base/mixins/momentum-scrolling.less");
+@import url("base/mixins/text-truncate.less");
+@import url("base/mixins/vertically-centered.less");
+
+// Base -> Normalize
+
+@import url("base/normalize.less");
+
+// Base -> Reset
+
+@import url("base/reset.less");
+
+// Base -> Debug (DO NOT USE THIS STYLESHEET IN PRODUCTION!)
+
+//@import url("base/debug.less");
+
+// Base -> Default Styles
+
+@import url("base/root.less");
+@import url("base/anchors.less");
+@import url("base/text-elements.less");
+@import url("base/headings.less");
+@import url("base/lists.less");
+@import url("base/horizontal-rules.less");
+@import url("base/blockquotes.less");
+@import url("base/code.less");
+@import url("base/embedded-content.less");
+@import url("base/form-elements.less");
+@import url("base/tables.less");
+@import url("base/print.less");
+```
+
+Beyond that, you can use whatever grid system, components, and utilities you would like. The `base/` directory just sets some good base styles for the framework.
+
+## Modifying Variables
+
+After getting started and including Cardinal, you will probably want to begin customizing it to suit your project. Cardinal has a bunch of LESS variables located in the `base/variables.less` file that can be tweaked to your needs. **These variables should not be edited directly.** The recommended way to make changes to Cardinal LESS variables is to create your own project-specific variables file (e.g. `project-variables.less`), and override the default variables in this file, like so:
+
+```
+// project-variables.less
+
+// Typography -> Font Sizes -> Base
+
+$font-size: 17;
+
+//
+// Typography -> Line height
+//
+
+$line-height: 26;
+```
+
+This file should be included in your main LESS file after you’ve included Cardinal.
+
+# Further Documentation
+
+There is a `README.md` file included in each major directory of this project that further details the code located in those directories.
+
+- [Base](https://github.com/cbracco/cardinal/tree/master/base)
+- [Components](https://github.com/cbracco/cardinal/tree/master/components)
+- [Layout](https://github.com/cbracco/cardinal/tree/master/layout)
+- [Utilities](https://github.com/cbracco/cardinal/tree/master/utilities)
 
 # Browser support
 
@@ -144,6 +274,6 @@ Cardinal will be maintained using the [Semantic Versioning](http://semver.org/) 
 
 Cardinal is licensed under the MIT Open Source license. For more information, see the [LICENSE.md](https://github.com/cbracco/cardinal/blob/master/LICENSE.md) file in this repository.
 
-## Colophon
+## Credits
 
 Cardinal is a project by [@cbracco](http://twitter.com/cbracco).

@@ -1,0 +1,60 @@
+/* ========================================================================== *\
+   Components -> Animations ($components-animations)
+\* ========================================================================== */
+
+@keyframes zoomBounce {
+  0% {
+    opacity: 0;
+    transform: translate3d(-250px, -100px, 0) rotateZ(14deg) rotateY(60deg) scale(0.25);
+  }
+  
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@keyframes wingFlap {
+  0% {
+    transform: none;
+  }
+  
+  25% {
+    transform: translate3d(75px, -90px, 0) rotate(6deg);
+  }
+  
+  50% {
+    transform: none;
+  }
+  
+  75% {
+    transform: translate3d(75px, -90px, 0) rotate(6deg);
+  }
+  
+  100% {
+    transform: none;
+  }
+}
+
+@keyframes eyeballBlink {
+  0% {
+    transform: none;
+    transform-origin: 50% 50%;
+  }
+  25% {
+    transform: scale(1, 0);
+    transform-origin: 50% 50%;
+  }
+  50% {
+    transform: none;
+    transform-origin: 50% 50%;
+  }
+  75% {
+    transform: scale(1, 0);
+    transform-origin: 50% 50%;
+  }
+  100% {
+    transform: none;
+    transform-origin: 50% 50%;
+  }
+}
