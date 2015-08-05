@@ -121,7 +121,7 @@
 @spacing-three-fifths: (@spacing-fifth * 3);
 @spacing-four-fifths: (@spacing-fifth * 4);
 
-// Spacing -> Sixth
+// Spacing -> Sixths
 @spacing-sixth: (@spacing-base / 6);
 @spacing-five-sixths: (@spacing-sixth * 5);
 
@@ -153,7 +153,7 @@
 @spacing-base-plus-three-fifths: (@spacing-base + (@spacing-fifth * 3));
 @spacing-base-plus-four-fifths: (@spacing-base + (@spacing-fifth * 4));
 
-// Spacing -> + Sixth
+// Spacing -> + Sixths
 @spacing-base-plus-sixth: (@spacing-base + @spacing-sixth);
 @spacing-base-plus-five-sixths: (@spacing-base + (@spacing-sixth * 5));
 
@@ -237,7 +237,7 @@
 
 @root-background-color: @color-white;
 @root-text-color: @color-gray-darker;
-@root-focus-outline-fallback-width: 1;
+@root-focus-outline-fallback-width: @spacing-1px;
 @root-focus-outline-fallback-style: dotted;
 @root-focus-outline-fallback-color: @color-gray-darkest;
 @root-focus-outline-width: 5;
@@ -371,12 +371,12 @@
 
 @box-padding: @spacing-base;
 @box-bg-color: @color-gray-lighter;
-@box-border-width: 1;
+@box-border-width: @spacing-1px;
 @box-border-style: solid;
 @box-border-color: @color-gray-light;
 @box-border-radius: @border-radius-base;
-@box-raise-box-shadow-blur: 8;
-@box-sink-box-shadow-blur: 8;
+@box-raise-box-shadow-blur: @spacing-third;
+@box-sink-box-shadow-blur: @spacing-third;
 
 //
 // Objects -> Buttons
@@ -393,15 +393,15 @@
 @btn-focus-outline-style: dotted;
 @btn-focus-outline-color: @color-gray-darkest;
 @btn-xs-font-size: @font-size-xxx-small;
-@btn-xs-padding: 4 8;
+@btn-xs-padding: @spacing-sixth @spacing-third;
 @btn-sm-font-size: @font-size-xx-small;
-@btn-sm-padding: 6 10;
+@btn-sm-padding: @spacing-fourth 10;
 @btn-lg-font-size: @font-size-xxx-large;
-@btn-lg-padding: 16 24;
+@btn-lg-padding: @spacing-two-thirds @spacing-base;
 @btn-primary-text-color: @color-white;
 @btn-primary-bg-color: @color-primary;
-@btn-group-margin: 0 @spacing-micro;
-@btn-lg-group-margin: 0 @spacing-sixth;
+@btn-group-margin: @spacing-none @spacing-micro;
+@btn-lg-group-margin: @spacing-none @spacing-sixth;
 
 //
 // Objects -> Forms
@@ -410,9 +410,9 @@
 @form-label-margin: @spacing-sixth;
 @form-input-line-height: @line-height-ratio;
 @form-input-height: 44;
-@form-input-padding: 8;
+@form-input-padding: @spacing-third;
 @form-input-text-color: @color-gray-darkest;
-@form-input-border-width: 1;
+@form-input-border-width: @spacing-1px;
 @form-input-border-style: solid;
 @form-input-border-color: @color-gray-light;
 @form-input-border-radius: @border-radius-base;
