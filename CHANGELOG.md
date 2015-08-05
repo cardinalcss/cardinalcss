@@ -1,3 +1,7 @@
+# 3.2.5 (August 5, 2015)
+
+- Update some variables to use the `@spacing-*` equivalent value set previously, instead of hard-coded integers.
+
 # 3.2.4 (May 28, 2015)
 
 - Remove `text-rendering` property from headings ([more info](http://cbrac.co/1Fjv7IR)).
