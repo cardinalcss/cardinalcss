@@ -78,7 +78,8 @@ gulp.task('styles', function() {
     title:'unminified css'
   }))
   .pipe(plugins.minifyCss({
-    shorthandCompacting: false
+    shorthandCompacting: false,
+    processImport: false
   }))
   .pipe(plugins.size({
     gzip: false,
