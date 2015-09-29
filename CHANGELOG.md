@@ -1,3 +1,8 @@
+# 3.2.6 (September 29, 2015)
+
+- Update `gulp-less` to latest version.
+- Update `gulpfile.js`.
+
 # 3.2.5 (August 5, 2015)
 
 - Update some variables to use the `@spacing-*` equivalent value set previously, instead of hard-coded integers.

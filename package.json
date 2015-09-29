@@ -1,6 +1,6 @@
 {
   "name": "cardinalcss",
-  "version": "3.2.5",
+  "version": "3.2.6",
   "homepage": "http://cardinalcss.com",
   "main": "cardinal.css",
   "author": {
@@ -23,7 +23,7 @@
     "gulp-csscomb": "~3.0.3",
     "gulp-csslint": "~0.1.5",
     "gulp-header": "~1.2.2",
-    "gulp-less": "~2.0.1",
+    "gulp-less": "~3.0.3",
     "gulp-load-plugins": "~0.8.0",
     "gulp-minify-css": "~0.4.3",
     "gulp-plumber": "~0.6.6",
