@@ -1,4 +1,4 @@
-/*! cardinalcss v3.2.5 | MIT License | http://cardinalcss.com */
+/*! cardinalcss v3.2.6 | MIT License | http://cardinalcss.com */
 @charset "UTF-8";
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
@@ -589,7 +589,7 @@ th {
 \* ========================================================================== */
 a {
   text-decoration: underline;
-  color: #006699;
+  color: #069;
 }
 a:hover,
 a:active,
@@ -659,7 +659,7 @@ ins,
 mark {
   text-decoration: none;
   color: #222222;
-  background: #ffff99;
+  background: #ff9;
 }
 /* ========================================================================== *\
    Base -> Headings ($base-headings)
@@ -1035,7 +1035,9 @@ input[type="search"] {
   -moz-box-sizing: border-box;
        box-sizing: border-box;
   /* 1 */
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   /* 2 */
 }
 /**
