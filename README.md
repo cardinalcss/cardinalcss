@@ -70,7 +70,7 @@ The fastest way to get up-and-running with Cardinal is by using a package manage
 
 **Bower**
 
-Run the following commands from your terminal:
+To install Cardinal with [Bower](http://bower.io/), run the following command(s) from your terminal:
 
 ```
 cd your-project-directory
@@ -86,15 +86,39 @@ your-project-directory
     └───cardinal
 ```
 
+**npm**
+
+To install Cardinal with [npm](https://www.npmjs.com), run the following command(s) from your terminal:
+
+```
+cd your-project-directory
+npm install --save cardinalcss
+```
+Once installed, you can find Cardinal here:
+
+```
+your-project-directory
+│
+└───node_modules
+    │
+    └───cardinalcss
+```
+
 ### Updating Cardinal
 
-With Bower, you can easily grab the latest version of Cardinal by running the following command:
+You can grab the latest version of Cardinal by running the following command(s):
+
+**Bower**
 
 ```
 bower update cardinal
 ```
 
-**NOTE:** This is the recommended way to use Cardinal. It should never be edited directly so you can keep it updated. Instead of modifying Cardinal’s source, you are encouraged `@import` Cardinal into your own `your-project.less` file and create your own `.less` files where you can override default variables and extend styles.
+**npm**
+
+```
+npm update cardinal
+```
 
 ## LESS Plugin
 
