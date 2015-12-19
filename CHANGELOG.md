@@ -1,3 +1,7 @@
+# 3.2.9 (December 19, 2015)
+
+- fix incorrect URL (typo) in `README.md`.
+
 # 3.2.8 (December 19, 2015)
 
 - Had to bump version number because I pushed 3.2.7 to npm too soon, and had to unpublish it since version numbers in the CSS files were incorrect.
