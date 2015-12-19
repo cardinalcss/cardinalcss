@@ -1,5 +1,8 @@
 # Cardinal
 
+[![npm version](https://badge.fury.io/js/cardinalcss.svg)](https://badge.fury.io/js/cardinalcss)
+[![Bower version](https://badge.fury.io/bo/cardinal.svg)](https://badge.fury.io/bo/cardinal)
+
 Build more with less.
 
 - [Go to Website](http://cardinalcss.com)
@@ -8,7 +11,6 @@ Build more with less.
 # Table of Contents
 
 - [What is Cardinal?](#what-is-cardinal)
-- [Principles](#principles)
 - [Features](#features)
 - [Dependencies](#dependencies)
 - [Getting Started](#getting-started)
@@ -23,23 +25,14 @@ Build more with less.
 - [Browser Support](#browser-support)
 - [Contributing](#contributing)
 - [Versioning](#versioning)
-- [License](#license)
 - [Credits](#credits)
+- [License](#license)
 
 # What is Cardinal?
 
 Cardinal is a modular, “mobile-first” CSS framework built with performance and scalability in mind.
 
 The purpose of this framework is to make it easier for front-end web developers to prototype, build, scale, and maintain CSS for responsive websites, user interfaces, and applications. Cardinal omits many aesthetic design decisions that often bog down other CSS frameworks (which are often [UI toolkits, not frameworks](https://speakerdeck.com/csswizardry/what-is-a-css-framework-anyway)), leaving the design and creativity up to you.
-
-# Principles
-
-Cardinal adheres to the following principles whenever possible:
-
-- **[Open / Closed](http://en.wikipedia.org/wiki/Open/closed_principle):** Styles should be open for extension, but closed for modification. Avoid styles that are highly specific to context.
-- **Reuse:** Content-agnostic, modular styles allow for design flexibility and will have a longer lifespan.
-- **Don’t Make Assumptions:** Try not to make too many assumptions too early, because design and development are both iterative processes.
-- **Clarity Over Cleverness:** Avoid creating styles that have ambiguous applications, or are rarely used. Obvious styles are easier for humans to internalize, and will be more widely adopted.
 
 # Features
 
@@ -278,13 +271,13 @@ Cardinal supports most modern browsers:
 * Android 4.2+
 * Internet Explorer 9+
 
-## Contributing
+# Contributing
 
 Is something broken? Do you have ideas or feature requests? Please [submit an issue](https://github.com/cbracco/cardinal/issues/new) here on GitHub. Or, if you are feeling especially motivated, write some code and submit a pull request!
 
 **IMPORTANT**: Before doing a bunch of work, please consult the [CONTRIBUTING.md document](https://github.com/cbracco/cardinal/blob/master/CONTRIBUTING.md), which gives detailed instructions on how to contribute to this project. If you do not follow the instructions, your code will probably not make it into this project.
 
-## Versioning
+# Versioning
 
 Cardinal will be maintained using the [Semantic Versioning](http://semver.org/) guidelines. From here on out, releases will be numbered using the following format:
 
@@ -294,10 +287,24 @@ Cardinal will be maintained using the [Semantic Versioning](http://semver.org/) 
 * New code that does not break backwards compatibility increments `minor`, while resetting `patch`.
 * Bug fixes and other small changes increment `patch`.
 
-## License
+# Credits
+
+Cardinal is a project by [@cbracco](http://twitter.com/cbracco). Its principles and techniques are very influenced by the following projects, organizations, and individuals:
+
+- [OOCSS](http://oocss.org/in) ([@stubbornella](https://github.com/stubbornella/))
+- [inuit.css](https://github.com/inuitcss/) ([@csswizardry](https://github.com/csswizardry/))
+- [SUIT CSS](https://suitcss.github.io/) ([@necolas](https://github.com/necolas/))
+- [TACHYONS](http://tachyons.io/) ([@mrmrs](https://github.com/mrmrs/))
+- [Basscss](http://www.basscss.com/) ([@jxnblk](https://github.com/jxnblk/))
+- [Scally](https://github.com/chris-pearce/scally/) ([@chris-pearce](https://github.com/chris-pearce/))
+- [Atomic CSS](http://acss.io/) ([@yahoo](https://github.com/yahoo/))
+- [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate/) ([@h5bp](https://github.com/h5bp/))
+- [Kraken](https://github.com/cferdinandi/kraken/) ([@cferdinandi](https://github.com/cferdinandi/))
+
+...and any others I may have forgotten &mdash; let me know if I have, and I will certainly add them. 
+
+Many thanks for your hard work and great ideas!
+
+# License
 
 Cardinal is licensed under the MIT Open Source license. For more information, see the [LICENSE.md](https://github.com/cbracco/cardinal/blob/master/LICENSE.md) file in this repository.
-
-## Credits
-
-Cardinal is a project by [@cbracco](http://twitter.com/cbracco).
