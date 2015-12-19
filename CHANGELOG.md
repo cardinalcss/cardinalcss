@@ -1,3 +1,10 @@
+# 3.2.7 (December 19, 2015)
+
+- Adding credit where credit is due. I cannot believe I forgot to do this (thank you @mrmrs for calling me out).
+- Updated code comments.
+- Removed some commented-out code.
+- Add npm/Bower badges to `README.md`.
+
 # 3.2.6 (September 29, 2015)
 
 - Update `gulp-less` to latest version.
