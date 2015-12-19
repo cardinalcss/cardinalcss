@@ -291,7 +291,7 @@ Cardinal will be maintained using the [Semantic Versioning](http://semver.org/) 
 
 Cardinal is a project by [@cbracco](http://twitter.com/cbracco). Its principles and techniques are very influenced by the following projects, organizations, and individuals:
 
-- [OOCSS](http://oocss.org/in) ([@stubbornella](https://github.com/stubbornella/))
+- [OOCSS](http://oocss.org/) ([@stubbornella](https://github.com/stubbornella/))
 - [inuit.css](https://github.com/inuitcss/) ([@csswizardry](https://github.com/csswizardry/))
 - [SUIT CSS](https://suitcss.github.io/) ([@necolas](https://github.com/necolas/))
 - [TACHYONS](http://tachyons.io/) ([@mrmrs](https://github.com/mrmrs/))
