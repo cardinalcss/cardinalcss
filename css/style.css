@@ -492,21 +492,27 @@ iframe {
  * 1. Set the default `font-size` and `line-height` for the project based on
       variables set previously. The `font-size` is represented in `rem`s, and
       the `line-height` is represented as a unitless value.
+*
  * 2. Force a vertical scrollbar.
+ *
  *    @link http://cbrac.co/163MspB
+ *
  * 3. Ensure the <html> element's `height` is at least the viewport height.
  *
  * NOTES:
  *
- * Use `text-rendering` with caution.
- * @link http://cbrac.co/SJt8p1
+ * - Use `text-rendering` with caution.
  *
- * Avoid the webkit anti-aliasing trap.
- * @link http://cbrac.co/TAdhbH
+ *   @link http://cbrac.co/SJt8p1
  *
- * IE for Windows Phone 8 ignores `-ms-text-size-adjust` if the viewport <meta>
- * tag is used.
- * @link http://cbrac.co/1cFrAvl
+ * - Avoid the webkit anti-aliasing trap.
+ *
+ *   @link http://cbrac.co/TAdhbH
+ *
+ * - IE for Windows Phone 8 ignores `-ms-text-size-adjust` if the viewport 
+ *   <meta> tag is used.
+ *
+ *   @link http://cbrac.co/1cFrAvl
  */
 html {
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
@@ -577,6 +583,7 @@ th {
 }
 /**
  * NOTE: Do not remove :focus styles! It’s an accessibility no-no.
+ * 
  * @link http://cbrac.co/1cNYD2l
  */
 :focus {
@@ -665,8 +672,9 @@ mark {
 \* ========================================================================== */
 /**
  * NOTE: Use the `text-rendering` property with caution.
- *    @link http://cbrac.co/SJt8p1
- *    @link http://cbrac.co/1Fjv7IR
+ *
+ * @link http://cbrac.co/SJt8p1
+ * @link http://cbrac.co/1Fjv7IR
  */
 h1,
 h2,
@@ -954,6 +962,7 @@ figcaption {
  * 1. If images do not load, the `alt` text will be visually offset and more
  *    noticeable.
  * 2. Improve image resize rendering in IE6/7.
+ *
  *    @link http://cbrac.co/11ciIZL
  */
 img {
@@ -1028,6 +1037,7 @@ input[type="file"] {
  *    `content-box` value set by normalize.css.
  * 2. Remove rounded corners from iOS search inputs by overriding `appearance:
  *    textfield` from normalize.css.
+ *
  *    @link http://cbrac.co/1xgTke2
  */
 input[type="search"] {
@@ -1096,6 +1106,11 @@ td {
 /* ========================================================================== *\
    Base -> Print ($base-print)
 \* ========================================================================== */
+/**
+ * Print styles extracted from HTML5-Boilerplate
+ *
+ * @link http://cbrac.co/1RvNULl
+ */
 @media print {
   /* 1. Black prints faster - http://cbrac.co/XvusCs */
   * {
@@ -1428,6 +1443,9 @@ input[type="submit"].btn-round {
 }
 /**
  * Delimited lists
+ * Hat tip to @csswizardry for the technique.
+ *
+ * @link http://cbrac.co/1RvOzMU
  */
 .list-inline-delimited > li + li:before {
   content: ",\00A0";
@@ -1562,12 +1580,20 @@ input[type="submit"].btn-round {
    Layout -> Grids ($layout-grids)
 \* ========================================================================== */
 /**
+ * Grid System
+ * Hat tip to @csswizardry for the `display: inline-block` grid technique.
+ *
+ * @link http://cbrac.co/1RvPb53
+ */
+/**
  * Grid containers
  * 1. Remove default styles in case `.grid` is on a <ul> or <ol> element.
  * 2. Default gutter width.
  * 3. Hack to remove `inline-block` whitespace. This causes some issues on pre-
- *    Jellybean and Jellybean versions of Android (http://cbrac.co/1xh3hs0).
-      @link http://cbrac.co/16xcjcl
+ *    Jellybean and Jellybean versions of Android
+ *
+ *    @link http://cbrac.co/1xh3hs0
+ *    @link http://cbrac.co/16xcjcl
  */
 .grid {
   margin: 0;
@@ -2385,6 +2411,11 @@ input[type="submit"].btn-round {
 /* ========================================================================== *\
    Utilities -> Font Sizes ($utilities-font-sizes)
 \* ========================================================================== */
+/**
+ * Hat tip to @csswizardry for the +/- technique.
+ *
+ * @link http://cbrac.co/1Pd1ZKl
+ */
 .fz--- {
   /*px*/ font-size: 12px !important;
   /*rem*/ font-size: 0.75rem !important;
@@ -2734,7 +2765,7 @@ input[type="submit"].btn-round {
   clear: both;
 }
 /**
- * Clear floats with an extra markup element
+ * Clear floats with an extra markup element.
  *
  * @link http://cbrac.co/SFv1Ua
  */
@@ -2749,6 +2780,11 @@ input[type="submit"].btn-round {
 /* ========================================================================== *\
    Utilities -> Margins ($utilities-margins)
 \* ========================================================================== */
+/**
+ * Hat tip to @csswizardry for the +/- technique.
+ *
+ * @link http://cbrac.co/1Pd1ZKl
+ */
 .m {
   /*px*/ margin: 24px !important;
   /*rem*/ margin: 1.5rem !important;
@@ -4108,6 +4144,11 @@ input[type="submit"].btn-round {
 /* ========================================================================== *\
    Utilities -> Paddings ($utilities-paddings)
 \* ========================================================================== */
+/**
+ * Hat tip to @csswizardry for the +/- technique.
+ *
+ * @link http://cbrac.co/1Pd1ZKl
+ */
 .p {
   /*px*/ padding: 24px !important;
   /*rem*/ padding: 1.5rem !important;
@@ -5776,6 +5817,11 @@ input[type="submit"].btn-round {
 /* ========================================================================== *\
    Utilities -> Widths ($utilities-widths)
 \* ========================================================================== */
+/**
+ * Hat tip to @csswizardry for the fraction classes technique.
+ * 
+ * @link http://cbrac.co/1RvQXmS
+ */
 /* Auto */
 .width-auto {
   width: auto !important;
