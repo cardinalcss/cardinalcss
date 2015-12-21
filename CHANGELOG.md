@@ -1,3 +1,7 @@
+# 3.3.0 (December 21, 2015)
+
+- Remove mixins that are not aligned with the “mobile-first” methodology (thanks @mrmrs for calling me out).
+
 # 3.2.9 (December 19, 2015)
 
 - fix incorrect URL (typo) in `README.md`.
