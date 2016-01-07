@@ -32,7 +32,7 @@
 function updateVersion() {
 
     $.ajax({
-        url: "https://api.github.com/repos/cbracco/cardinal/tags",
+        url: "https://api.github.com/repos/cardinalcss/cardinalcss/tags",
         dataType: "jsonp",
         timeout: 60 * 1000,
         success: function(results) {
