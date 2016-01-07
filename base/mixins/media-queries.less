@@ -15,6 +15,13 @@
   }
 }
 
+// Extra-small and down
+.screen-xs-max(@rules) {
+  @media (max-width: @screen-xs-max) {
+    @rules();
+  }
+}
+
 // Extra-small only
 .screen-xs(@rules) {
   @media (min-width: @screen-xs-min) and (max-width: @screen-xs-max) {
@@ -25,6 +32,13 @@
 // Small and up
 .screen-sm-min(@rules) {
   @media (min-width: @screen-sm-min) {
+    @rules();
+  }
+}
+
+// Small and down
+.screen-sm-max(@rules) {
+  @media (max-width: @screen-sm-max) {
     @rules();
   }
 }
@@ -43,6 +57,13 @@
   }
 }
 
+// Medium and down
+.screen-md-max(@rules) {
+  @media (max-width: @screen-md-max) {
+    @rules();
+  }
+}
+
 // Medium only
 .screen-md(@rules) {
   @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
@@ -57,6 +78,13 @@
   }
 }
 
+// Large and down
+.screen-lg-max(@rules) {
+  @media (max-width: @screen-lg-max) {
+    @rules();
+  }
+}
+
 // Large only
 .screen-lg(@rules) {
   @media (min-width: @screen-lg-min) and (max-width: @screen-lg-max) {
@@ -67,6 +95,13 @@
 // Extra-large and up
 .screen-xl-min(@rules) {
   @media (min-width: @screen-xl-min) {
+    @rules();
+  }
+}
+
+// Extra-large and down
+.screen-xl-max(@rules) {
+  @media (max-width: @screen-xl-max) {
     @rules();
   }
 }
