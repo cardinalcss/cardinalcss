@@ -1,3 +1,9 @@
+# 3.3.1 (January 7, 2016)
+
+- Add back `max-width` mixins removed in 3.3.0 because they caused major breaking changes.
+- Add deprecation messages to `max-width` mixins (thanks @lukechilds).
+- Deprecate v3.3.0.
+
 # 3.3.0 (December 21, 2015)
 
 - Remove mixins that are not aligned with the “mobile-first” methodology (thanks @mrmrs for calling me out).
