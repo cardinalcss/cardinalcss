@@ -92,7 +92,7 @@ These mixins correspond to the screen sizes declared in `variables.less`. Overri
 
 ### Usage
 
-There are mixins for both `min-width and up` query scenarios and specific intervals (e.g. "Small only"). `max-width` mixins exist for backwards compatibility but are deprecated and will be removed in the future.
+There are mixins for both `min-width and up` query scenarios and specific intervals (e.g. "Small only"). `max-width` mixins exist for backwards compatibility, but they have been **deprecated** and will be removed in the next major version.
 
 ```
 // Small only
