@@ -1,3 +1,8 @@
+# 3.4.1 (January 11, 2016)
+
+- Fix incorrect variable used in the grid system.
+- Fix `height: auto !important;` from preventing `<textarea>` resizing in latest Chrome, Safari, and Firefox.
+
 # 3.3.1 (January 7, 2016)
 
 - Add back `max-width` mixins removed in 3.3.0 because they caused major breaking changes.
