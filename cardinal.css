@@ -1,4 +1,4 @@
-/*! cardinalcss v3.3.1 | MIT License | http://cardinalcss.com */
+/*! cardinalcss v3.4.1 | MIT License | http://cardinalcss.com */
 @charset "UTF-8";
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
@@ -1084,7 +1084,7 @@ legend {
 textarea {
   max-width: 100%;
   /* 1 */
-  height: auto !important;
+  height: auto;
   /* 2 */
   resize: vertical;
   /* 3 */
@@ -1797,8 +1797,8 @@ input[type="submit"].btn-round {
 }
 .gutter-1 > .grid-item,
 .gutter-whole > .grid-item {
-  /*px*/ padding-left: 12px;
-  /*rem*/ padding-left: 0.75rem;
+  /*px*/ padding-left: 24px;
+  /*rem*/ padding-left: 1.5rem;
 }
 .gutter-2,
 .gutter-double {
