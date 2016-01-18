@@ -1,3 +1,7 @@
+# 3.5.1 (Jannuary 18, 2016)
+
+- Remove `outline: 0 none;` from form components.
+
 # 3.5.0 (Jannuary 18, 2016)
 
 - Hardcode the value of `@to-rem-font-size` to 16 so that `@font-size` can be overridden.
