@@ -1,4 +1,4 @@
-/*! cardinalcss v3.4.1 | MIT License | http://cardinalcss.com */
+/*! cardinalcss v3.5.0 | MIT License | http://cardinalcss.com */
 @charset "UTF-8";
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
@@ -510,7 +510,7 @@ iframe {
  *
  *   @link http://cbrac.co/TAdhbH
  *
- * - IE for Windows Phone 8 ignores `-ms-text-size-adjust` if the viewport 
+ * - IE for Windows Phone 8 ignores `-ms-text-size-adjust` if the viewport
  *   <meta> tag is used.
  *
  *   @link http://cbrac.co/1cFrAvl
@@ -584,7 +584,7 @@ th {
 }
 /**
  * NOTE: Do not remove :focus styles! It’s an accessibility no-no.
- * 
+ *
  * @link http://cbrac.co/1cNYD2l
  */
 :focus {
