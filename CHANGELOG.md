@@ -1,3 +1,7 @@
+# 3.5.0 (Jannuary 18, 2016)
+
+- Hardcode the value of `@to-rem-font-size` to 16 so that `@font-size` can be overridden.
+
 # 3.4.1 (January 11, 2016)
 
 - Fix incorrect variable used in the grid system.
