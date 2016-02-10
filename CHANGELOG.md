@@ -1,8 +1,12 @@
-# 3.5.1 (Jannuary 18, 2016)
+# 3.6.1 (February 10, 2016)
+
+- Fix `@font-face` mixin.
+
+# 3.5.1 (January 18, 2016)
 
 - Remove `outline: 0 none;` from form components.
 
-# 3.5.0 (Jannuary 18, 2016)
+# 3.5.0 (January 18, 2016)
 
 - Hardcode the value of `@to-rem-font-size` to 16 so that `@font-size` can be overridden.
 
