@@ -52,28 +52,8 @@
  * .grid-rtl = right-to-left
  */
 
-.grid-ltr {
-  direction: ltr;
-  text-align: left;
-
-  > .grid-item {
-    direction: rtl;
-    text-align: left;
-  }
-}
-
-.grid-rtl {
-  direction: rtl;
-  text-align: left;
-
-  > .grid-item {
-    direction: ltr;
-    text-align: left;
-  }
-}
-
-.screens({
-  .xs-grid-ltr {
+.breakpoint-prefixes({
+  .@{breakpoint-prefix}grid-ltr {
     direction: ltr;
     text-align: left;
 
@@ -83,107 +63,7 @@
     }
   }
 
-  .xs-grid-rtl {
-    direction: rtl;
-    text-align: left;
-
-    > .grid-item {
-      direction: ltr;
-      text-align: left;
-    }
-  }
-},{
-  .sm-grid-ltr {
-    direction: ltr;
-    text-align: left;
-
-    > .grid-item {
-      direction: rtl;
-      text-align: left;
-    }
-  }
-
-  .sm-grid-rtl {
-    direction: rtl;
-    text-align: left;
-
-    > .grid-item {
-      direction: ltr;
-      text-align: left;
-    }
-  }
-},{
-  .md-grid-ltr {
-    direction: ltr;
-    text-align: left;
-
-    > .grid-item {
-      direction: rtl;
-      text-align: left;
-    }
-  }
-
-  .md-grid-rtl {
-    direction: rtl;
-    text-align: left;
-
-    > .grid-item {
-      direction: ltr;
-      text-align: left;
-    }
-  }
-},{
-  .lg-grid-ltr {
-    direction: ltr;
-    text-align: left;
-
-    > .grid-item {
-      direction: rtl;
-      text-align: left;
-    }
-  }
-
-  .lg-grid-rtl {
-    direction: rtl;
-    text-align: left;
-
-    > .grid-item {
-      direction: ltr;
-      text-align: left;
-    }
-  }
-},{
-  .xl-grid-ltr {
-    direction: ltr;
-    text-align: left;
-
-    > .grid-item {
-      direction: rtl;
-      text-align: left;
-    }
-  }
-
-  .xl-grid-rtl {
-    direction: rtl;
-    text-align: left;
-
-    > .grid-item {
-      direction: ltr;
-      text-align: left;
-    }
-  }
-},{
-  .xxl-grid-ltr {
-    direction: ltr;
-    text-align: left;
-
-    > .grid-item {
-      direction: rtl;
-      text-align: left;
-    }
-  }
-
-  .xxl-grid-rtl {
+  .@{breakpoint-prefix}grid-rtl {
     direction: rtl;
     text-align: left;
 
