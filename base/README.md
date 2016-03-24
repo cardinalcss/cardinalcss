@@ -9,23 +9,23 @@ Without `base/`, this framework **will not work correctly.** It is the only requ
 - [Overview](#overview)
 - [Variables](#variables)
 - [Mixins](#mixins)
-  - [.to-rem()](#to-rem)
-  - [Media Queries](#media-queries)
+    - [.to-rem()](#to-rem)
+    - [Media Queries](#media-queries)
 - [normalize.css](#normalize-css)
 - [Reset](#reset)
 - [Debug](#debug)
 - [Default Styles](#default-styles)
-  - [Root](#root)
-  - [Anchors](#anchors)
-  - [Text Elements](#text-elements)
-  - [Headings](#headings)
-  - [Lists](#lists)
-  - [Horizontal Rules](#horizontal-rules)
-  - [Code](#code)
-  - [Embedded Content](#embedded-content)
-  - [Form Elements](#form-elements)
-  - [Tables](#tables)
-  - [Print](#print)
+    - [Root](#root)
+    - [Anchors](#anchors)
+    - [Text Elements](#text-elements)
+    - [Headings](#headings)
+    - [Lists](#lists)
+    - [Horizontal Rules](#horizontal-rules)
+    - [Code](#code)
+    - [Embedded Content](#embedded-content)
+    - [Form Elements](#form-elements)
+    - [Tables](#tables)
+    - [Print](#print)
 
 # Overview
 
@@ -44,7 +44,7 @@ The recommended way to include Cardinal in your project is by using the [Bower p
 
 Instead, you should create your own `variables.less` file in your project’s LESS directory which includes the variables you would like to modify, and include it in your main LESS stylesheet **after** you include Cardinal, like so:
 
-```
+```css
 // your-project.less
 
 //
@@ -66,17 +66,17 @@ A handful of useful LESS mixins are included with Cardinal, several of which are
 
 ## .to-rem()
 
-The `.to-rem()` mixin is a simple yet powerful function that converts all unitless pixel values to REM units, with a pixel fallback version.
+The `.to-rem()` mixin is a simple yet powerful function that converts all unitless pixel values to REM units, with a pixel fallback version. The [base value](./mixins/to-rem.less#L5) used to calculate REM values from unitless values is 16. This mixin is used to convert unitless pixel values stored in `variables.less` to REM units.
 
-This mixin is used to convert unitless pixel values  stored in `variables.less` to REM units.
+**It’s strongly encouraged to use this mixin in your own CSS that you write on top of Cardinal.**
 
 ### Usage
 
-```
-$unitless-pixel-value: 45;
+```css
+@unitless-pixel-value: 45;
 
 .selector {
-  .to-rem(left, $unitless-pixel-value);
+  .to-rem(left, @unitless-pixel-value);
   .to-rem(padding, 10 5 12);
   .to-rem(border, 1, solid green);
   .to-rem(box-shadow, 1 1 0 -1, rgba(0, 0, 0, 0.3));
@@ -84,40 +84,78 @@ $unitless-pixel-value: 45;
 }
 ```
 
+### Output
+
+```css
+.selector {
+  /*px*/  left: 45px;
+  /*rem*/ left: 2.8125rem;
+  /*px*/ padding: 10px 5px 12px 5px;
+  /*rem*/ padding: 0.625rem 0.3125rem 0.75rem 0.3125rem;
+  /*px*/ border: 1px solid green;
+  /*rem*/ border: 0.0625rem solid green;
+  /*px*/ box-shadow: 1px 1px 0 -1px rgba(0, 0, 0, 0.3);
+  /*rem*/ box-shadow: 0.0625rem 0.0625rem 0 -0.0625rem rgba(0, 0, 0, 0.3);
+  /*px*/ margin: 30px auto 0;
+  /*rem*/ margin: 1.875rem auto 0;
+}
+```
+
 ## Media Queries
 
 The `media-queries.less` file includes a handful of useful mixins that speed up the writing and usage of `@media` queries in your project.
 
+### .screen-\*()
+
 These mixins correspond to the screen sizes declared in `variables.less`. Overriding those variables in your project will also change the values for these mixins.
 
-### Usage
+There are mixins for both `min-width and up` query scenarios and specific intervals (e.g. "Small only").
 
-There are mixins for both `min-width and up` query scenarios and specific intervals (e.g. "Small only"). `max-width` mixins exist for backwards compatibility, but they have been **deprecated** and will be removed in the next major version.
+**NOTE**: `max-width and down` mixins are still available for backwards compatibility, but they have been deprecated and will be removed in the next major version.
 
-```
-// Small only
-// @media (min-width: @screen-sm-min)
-// and (max-width: @screen-sm-max)
+#### Usage
 
+```css
+/* Small only */
 .screen-sm({
   .selector {
     color: blue;
   }
 });
 
-// Medium and up
-// @media (min-width: @screen-md-min)
-
+/* Medium and up */
 .screen-md-min({
   .selector {
-    color: blue;
+    color: red;
   }
 });
 ```
 
+#### Output
+
+```css
+/* Small only */
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+  .selector {
+    color: blue;
+  }
+}
+
+/* Medium and up */
+@media (min-width: @screen-md-min) {
+  .selector {
+    color: red;
+  }
+}
+```
+
+### .screen()
+
 If you want to change the styles for a selector at all of the declared screen sizes, you can use the `.screen()` mixin to chain these `@media` queries together, like so:
 
-```
+#### Usage
+
+```css
 .my-element {
   .screen({
     color: red;    // xs and up
@@ -135,12 +173,90 @@ If you want to change the styles for a selector at all of the declared screen si
 }
 ```
 
-To generate breakpoint classes for your styles, use the `.breakpoint-prefixes()` mixin. It will generate classes prepended with `xs-`, `sm-`, `md-`, `lg-`, `xl-` and `xxl-` that will only be active at the appropriate screen widths. It will also generate a class with no prefix that can be used at any screen width. It can be used like this:
+#### Output
 
+```css
+@media (min-width: @screen-xs-min) {
+  .my-element {
+    color: red;
+  }
+}
+
+@media (min-width: @screen-sm-min) {
+  .my-element {
+    color: green;
+  }
+}
+
+@media (min-width: @screen-md-min) {
+  .my-element {
+    color: yellow;
+  }
+}
+
+@media (min-width: @screen-lg-min) {
+  .my-element {
+    color: purple;
+  }
+}
+
+@media (min-width: @screen-xl-min) {
+  .my-element {
+    color: blue;
+  }
+}
+
+@media (min-width: @screen-xxl-min) {
+  .my-element {
+    color: orange;
+  }
+}
 ```
+
+### .breakpoint-prefixes()
+
+To generate classes prefixed with breakpoint names for your styles, use the `.breakpoint-prefixes()` mixin. It will generate classes prefixed with `xs-`, `sm-`, `md-`, `lg-`, `xl-` and `xxl-`, and any styles applied to those classes will only be applied at the corresponding @media queries. It will also generate a class with no prefix that can be used at any screen width.
+
+#### Usage
+
+```css
 .breakpoint-prefixes({
-  .@{breakpoint-prefix}my-class{ background: red; }
+  .@{breakpoint-prefix}my-class {
+    background: red;
+  }
 });
+```
+
+#### Output
+
+```css
+.my-class {
+  background: red;
+}
+
+.xs-my-class {
+  background: red;
+}
+
+.sm-my-class {
+  background: red;
+}
+
+.md-my-class {
+  background: red;
+}
+
+.lg-my-class {
+  background: red;
+}
+
+.xl-my-class {
+  background: red;
+}
+
+.xxl-my-class {
+  background: red;
+}
 ```
 
 # normalize.css
