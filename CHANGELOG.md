@@ -1,3 +1,7 @@
+# 3.7.0 (March 24, 2016)
+
+- Add `.breakpoint-prefixes()` mixin (thanks @lukechilds!).
+
 # 3.6.1 (February 10, 2016)
 
 - Fix `@font-face` mixin.
