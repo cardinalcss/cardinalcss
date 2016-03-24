@@ -9,88 +9,16 @@
 // n = none
 //
 
-.fl {
-  float: left !important;
-}
-
-.fr {
-  float: right !important;
-}
-
-.fn {
-  float: none !important;
-}
-
-.screens({
-  .xs-fl {
+.breakpoint-prefixes({
+  .@{breakpoint-prefix}fl {
     float: left !important;
   }
 
-  .xs-fr {
+  .@{breakpoint-prefix}fr {
     float: right !important;
   }
 
-  .xs-fn {
-    float: none !important;
-  }
-},{
-  .sm-fl {
-    float: left !important;
-  }
-
-  .sm-fr {
-    float: right !important;
-  }
-
-  .sm-fn {
-    float: none !important;
-  }
-},{
-  .md-fl {
-    float: left !important;
-  }
-
-  .md-fr {
-    float: right !important;
-  }
-
-  .md-fn {
-    float: none !important;
-  }
-},{
-  .lg-fl {
-    float: left !important;
-  }
-
-  .lg-fr {
-    float: right !important;
-  }
-
-  .lg-fn {
-    float: none !important;
-  }
-},{
-  .xl-fl {
-    float: left !important;
-  }
-
-  .xl-fr {
-    float: right !important;
-  }
-
-  .xl-fn {
-    float: none !important;
-  }
-},{
-  .xxl-fl {
-    float: left !important;
-  }
-
-  .xxl-fr {
-    float: right !important;
-  }
-
-  .xxl-fn {
+  .@{breakpoint-prefix}fn {
     float: none !important;
   }
 });

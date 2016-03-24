@@ -1,4 +1,4 @@
-/*! cardinalcss v3.6.1 | MIT License | http://cardinalcss.com */
+/*! cardinalcss v3.7.0 | MIT License | http://cardinalcss.com */
 @charset "UTF-8";
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
@@ -2147,10 +2147,10 @@ input[type="submit"].btn-round {
   display: block !important;
 }
 /**
- * 1. Fix Firefox bug where an <img> styled with `max-width: 100%` inside a
- *    parent styled `inline-block` displays at its default size, not 100% of the
- *    parent container.
- */
+  * 1. Fix Firefox bug where an <img> styled with `max-width: 100%` inside a
+  *    parent styled `inline-block` displays at its default size, not 100% of the
+  *    parent container.
+  */
 .dib {
   display: inline-block !important;
   max-width: 100% !important;
@@ -2189,9 +2189,15 @@ input[type="submit"].btn-round {
   .xs-db {
     display: block !important;
   }
+  /**
+  * 1. Fix Firefox bug where an <img> styled with `max-width: 100%` inside a
+  *    parent styled `inline-block` displays at its default size, not 100% of the
+  *    parent container.
+  */
   .xs-dib {
     display: inline-block !important;
     max-width: 100% !important;
+    /* 1 */
   }
   .xs-dit {
     display: inline-table !important;
@@ -2227,9 +2233,15 @@ input[type="submit"].btn-round {
   .sm-db {
     display: block !important;
   }
+  /**
+  * 1. Fix Firefox bug where an <img> styled with `max-width: 100%` inside a
+  *    parent styled `inline-block` displays at its default size, not 100% of the
+  *    parent container.
+  */
   .sm-dib {
     display: inline-block !important;
     max-width: 100% !important;
+    /* 1 */
   }
   .sm-dit {
     display: inline-table !important;
@@ -2265,9 +2277,15 @@ input[type="submit"].btn-round {
   .md-db {
     display: block !important;
   }
+  /**
+  * 1. Fix Firefox bug where an <img> styled with `max-width: 100%` inside a
+  *    parent styled `inline-block` displays at its default size, not 100% of the
+  *    parent container.
+  */
   .md-dib {
     display: inline-block !important;
     max-width: 100% !important;
+    /* 1 */
   }
   .md-dit {
     display: inline-table !important;
@@ -2303,9 +2321,15 @@ input[type="submit"].btn-round {
   .lg-db {
     display: block !important;
   }
+  /**
+  * 1. Fix Firefox bug where an <img> styled with `max-width: 100%` inside a
+  *    parent styled `inline-block` displays at its default size, not 100% of the
+  *    parent container.
+  */
   .lg-dib {
     display: inline-block !important;
     max-width: 100% !important;
+    /* 1 */
   }
   .lg-dit {
     display: inline-table !important;
@@ -2341,9 +2365,15 @@ input[type="submit"].btn-round {
   .xl-db {
     display: block !important;
   }
+  /**
+  * 1. Fix Firefox bug where an <img> styled with `max-width: 100%` inside a
+  *    parent styled `inline-block` displays at its default size, not 100% of the
+  *    parent container.
+  */
   .xl-dib {
     display: inline-block !important;
     max-width: 100% !important;
+    /* 1 */
   }
   .xl-dit {
     display: inline-table !important;
@@ -2379,9 +2409,15 @@ input[type="submit"].btn-round {
   .xxl-db {
     display: block !important;
   }
+  /**
+  * 1. Fix Firefox bug where an <img> styled with `max-width: 100%` inside a
+  *    parent styled `inline-block` displays at its default size, not 100% of the
+  *    parent container.
+  */
   .xxl-dib {
     display: inline-block !important;
     max-width: 100% !important;
+    /* 1 */
   }
   .xxl-dit {
     display: inline-table !important;
@@ -5818,19 +5854,16 @@ input[type="submit"].btn-round {
 \* ========================================================================== */
 /**
  * Hat tip to @csswizardry for the fraction classes technique.
- * 
+ *
  * @link http://cbrac.co/1RvQXmS
  */
-/* Auto */
 .width-auto {
   width: auto !important;
 }
-/* Whole */
 [class~="1/1"],
 .one-whole {
   width: 100% !important;
 }
-/* Halves */
 [class~="1/2"],
 .one-half,
 [class~="2/4"],
@@ -5845,7 +5878,6 @@ input[type="submit"].btn-round {
 .six-twelfths {
   width: 50% !important;
 }
-/* Thirds */
 [class~="1/3"],
 .one-third,
 [class~="2/6"],
@@ -5866,7 +5898,6 @@ input[type="submit"].btn-round {
 .eight-twelfths {
   width: 66.6666666% !important;
 }
-/* Fourths */
 [class~="1/4"],
 .one-fourth,
 [class~="2/8"],
@@ -5883,7 +5914,6 @@ input[type="submit"].btn-round {
 .nine-twelfths {
   width: 75% !important;
 }
-/* Fifths */
 [class~="1/5"],
 .one-fifth,
 [class~="2/10"],
@@ -5908,7 +5938,6 @@ input[type="submit"].btn-round {
 .eight-tenths {
   width: 80% !important;
 }
-/* Sixths */
 [class~="1/6"],
 .one-sixth,
 [class~="2/12"],
@@ -5921,7 +5950,6 @@ input[type="submit"].btn-round {
 .ten-twelfths {
   width: 83.3333333% !important;
 }
-/* Eighths */
 [class~="1/8"],
 .one-eighth {
   width: 12.5% !important;
@@ -5938,7 +5966,6 @@ input[type="submit"].btn-round {
 .seven-eighths {
   width: 87.5% !important;
 }
-/* Ninths */
 [class~="1/9"],
 .one-ninth {
   width: 11.1111111% !important;
@@ -5963,7 +5990,6 @@ input[type="submit"].btn-round {
 .eight-ninths {
   width: 88.8888888% !important;
 }
-/* Tenths */
 [class~="1/10"],
 .one-tenth {
   width: 10% !important;
@@ -5980,7 +6006,6 @@ input[type="submit"].btn-round {
 .nine-tenths {
   width: 90% !important;
 }
-/* Twelfths */
 [class~="1/12"],
 .one-twelfth {
   width: 8.3333333% !important;
