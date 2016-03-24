@@ -12,116 +12,20 @@
 // j = justify
 //
 
-.tl {
-  text-align: left !important;
-}
-
-.tr {
-  text-align: right !important;
-}
-
-.tc {
-  text-align: center !important;
-}
-
-.tj {
-  text-align: justify !important;
-}
-
-.screens({
-  .xs-tl {
+.breakpoint-prefixes({
+  .@{breakpoint-prefix}tl {
     text-align: left !important;
   }
 
-  .xs-tr {
+  .@{breakpoint-prefix}tr {
     text-align: right !important;
   }
 
-  .xs-tc {
+  .@{breakpoint-prefix}tc {
     text-align: center !important;
   }
 
-  .xs-tj {
-    text-align: justify !important;
-  }
-},{
-  .sm-tl {
-    text-align: left !important;
-  }
-
-  .sm-tr {
-    text-align: right !important;
-  }
-
-  .sm-tc {
-    text-align: center !important;
-  }
-
-  .sm-tj {
-    text-align: justify !important;
-  }
-},{
-  .md-tl {
-    text-align: left !important;
-  }
-
-  .md-tr {
-    text-align: right !important;
-  }
-
-  .md-tc {
-    text-align: center !important;
-  }
-
-  .md-tj {
-    text-align: justify !important;
-  }
-},{
-  .lg-tl {
-    text-align: left !important;
-  }
-
-  .lg-tr {
-    text-align: right !important;
-  }
-
-  .lg-tc {
-    text-align: center !important;
-  }
-
-  .lg-tj {
-    text-align: justify !important;
-  }
-},{
-  .xl-tl {
-    text-align: left !important;
-  }
-
-  .xl-tr {
-    text-align: right !important;
-  }
-
-  .xl-tc {
-    text-align: center !important;
-  }
-
-  .xl-tj {
-    text-align: justify !important;
-  }
-},{
-  .xxl-tl {
-    text-align: left !important;
-  }
-
-  .xxl-tr {
-    text-align: right !important;
-  }
-
-  .xxl-tc {
-    text-align: center !important;
-  }
-
-  .xxl-tj {
+  .@{breakpoint-prefix}tj {
     text-align: justify !important;
   }
 });

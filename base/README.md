@@ -135,6 +135,14 @@ If you want to change the styles for a selector at all of the declared screen si
 }
 ```
 
+To generate breakpoint classes for your styles, use the `.breakpoint-prefixes()` mixin. It will generate classes prepended with `xs-`, `sm-`, `md-`, `lg-`, `xl-` and `xxl-` that will only be active at the appropriate screen widths. It will also generate a class with no prefix that can be used at any screen width. It can be used like this:
+
+```
+.breakpoint-prefixes({
+  .@{breakpoint-prefix}my-class{ background: red; }
+});
+```
+
 # normalize.css
 
 Cardinal includes the 3rd-party library [normalize.css](https://github.com/necolas/normalize.css), which makes browsers render all elements more consistently and in line with modern web standards.
