@@ -149,15 +149,15 @@ There are mixins for both `min-width and up` query scenarios and specific interv
 }
 ```
 
-### .screen()
+### .screens()
 
-If you want to change the styles for a selector at all of the declared screen sizes, you can use the `.screen()` mixin to chain these `@media` queries together, like so:
+If you want to change the styles for a selector at all of the declared screen sizes, you can use the `.screens()` mixin to chain these `@media` queries together, like so:
 
 #### Usage
 
 ```css
 .my-element {
-  .screen({
+  .screens({
     color: red;    // xs and up
   },{
     color: green;  // sm and up
