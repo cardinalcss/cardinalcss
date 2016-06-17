@@ -234,28 +234,40 @@ To generate classes prefixed with breakpoint names for your styles, use the `.br
   background: red;
 }
 
-.xs-my-class {
-  background: red;
+@media (min-width: @screen-xs-min) {
+  .xs-my-class {
+    background: red;
+  }
 }
 
-.sm-my-class {
-  background: red;
+@media (min-width: @screen-sm-min) {
+  .sm-my-class {
+    background: red;
+  }
 }
 
-.md-my-class {
-  background: red;
+@media (min-width: @screen-md-min) {
+  .md-my-class {
+    background: red;
+  }
 }
 
-.lg-my-class {
-  background: red;
+@media (min-width: @screen-lg-min) {
+  .lg-my-class {
+    background: red;
+  }
 }
 
-.xl-my-class {
-  background: red;
+@media (min-width: @screen-xl-min) {
+  .xl-my-class {
+    background: red;
+  }
 }
 
-.xxl-my-class {
-  background: red;
+@media (min-width: @screen-xxl-min) {
+  .xxl-my-class {
+    background: red;
+  }
 }
 ```
 
