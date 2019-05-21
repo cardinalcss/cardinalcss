@@ -5,6 +5,8 @@
 
 Build more with less.
 
+⚠️ THIS REPO IS NO LONGER BEING ACTIVELY MAINTAINED. USE AT YOUR OWN RISK! ⚠️
+
 - [Go to Website](http://cardinalcss.com)
 - [Review the CHANGELOG](https://github.com/cbracco/cardinal/blob/master/CHANGELOG.md)
 
